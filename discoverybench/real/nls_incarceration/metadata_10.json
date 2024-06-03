@@ -1,0 +1,76 @@
+{
+    "datasets": [
+        {
+            "columns": {
+                "raw": [
+                    {
+                        "depth": 0,
+                        "description": "Race of the respondent (hispanic, black or white)",
+                        "name": "race"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Sex of the respondent (male or female)",
+                        "name": "sex"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "A boolean variable that equals 1 if the respondent was jailed between 1985 to 1994",
+                        "name": "ever_jailed"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "A composite variable creating by summing five wealth variables from the NLS data for the year 1985",
+                        "name": "composite_wealth_1985"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "A composite variable creating by summing five wealth variables from the NLS data for the year 1990",
+                        "name": "composite_wealth_1990"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "A composite variable creating by summing five wealth variables from the NLS data for the year 1996",
+                        "name": "composite_wealth_1996"
+                    }
+                ]
+            },
+            "description": "This dataset was created from the National Longitudinal Study of Youth's 1979 cohort to about the race, wealth, and incarceration status of the participants.",
+            "domain_knowledge": "",
+            "max_depth": 0,
+            "name": "nls_incarceration_processed.csv"
+        }
+    ],
+    "domain": "sociology",
+    "hypotheses": {
+        "intermediate": [],
+        "main": [
+            {
+                "depth": 0,
+                "expr": "",
+                "expr_ind": "",
+                "target": "",
+                "text": ""
+            }
+        ]
+    },
+    "id": 0,
+    "intermediate": [],
+    "queries": [
+        [
+            {
+                "prior_findings": "",
+                "qid": 0,
+                "question": "How does the median wealth of white individuals compare to black and Hispanic individuals from 1985 onwards?",
+                "question_specificity": null,
+                "question_type": "relationship",
+                "relevant_cols": [],
+                "target_col": "",
+                "true_hypothesis": "",
+                "true_hypothesis_expr": ""
+            }
+        ]
+    ],
+    "workflow": "",
+    "workflow_tags": "statistical analysis, data selection"
+}

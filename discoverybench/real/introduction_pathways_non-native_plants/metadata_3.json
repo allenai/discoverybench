@@ -1,0 +1,287 @@
+{
+    "datasets": [
+        {
+            "columns": {
+                "raw": [
+                    {
+                        "depth": 0,
+                        "description": "This column represents different time periods, related to when non-native plant species were introduced into the region.",
+                        "name": "introduction.period"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This column represents different modes or routes through which non-native plant species were introduced, such as \"AgriForest\" (agriculture and forestry - plants introduced for cultivation to provide food or timber), \"Gardening\" (plants introduced for cultivation as ornamentals or for medicinal use), and \"Unintentional\" (plants introduced accidentally with the sowing of contaminated seed lots, global trade and tourism).",
+                        "name": "pathway"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This column represents the frequency or count of non-native plant species introductions for each combination of introduction period and pathway.",
+                        "name": "n"
+                    }
+                ]
+            },
+            "description": "Dataset contains temporal trends in the introduction pathways of non-native flora (plants) in the region of Catalonia.",
+            "domain_knowledge": "",
+            "max_depth": 0,
+            "name": "temporal_trends_contingency_table.csv"
+        },
+        {
+            "columns": {
+                "raw": [
+                    {
+                        "depth": 0,
+                        "description": "The count or frequency of non-native plant species introduced through the \"Gardening\" pathway.",
+                        "name": "n.gard"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The count or frequency of non-native plant species introduced through the \"Unintentional\" pathway",
+                        "name": "n.unint"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The count or frequency of non-native plant species introduced through the \"AgriForest\" (Agriculture and Forestry) pathway",
+                        "name": "n.agfo"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The total count or frequency of non-native plant species across all introduction pathways.",
+                        "name": "n.total"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "A categorical variable representing the habitat type, selected from the ten most widespread habitat types in the Barcelona province",
+                        "name": "habitat"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The elevation (in meters) of the sampled plot or location",
+                        "name": "elevation"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represent the percentage of cropland in a buffer of 50 meters (within a 50-meter radius) around the sampled plot or location for the year 1956",
+                        "name": "cropland.1956.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represent the percentage of urban land cover in a buffer (within a 50-meter radius) of 50 meters around the sampled plot or location for the year 1956",
+                        "name": "urban.1956.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represent the percentage of cropland in a buffer of 50 meters (within a 50-meter radius)  around the sampled plot or location for the year 1993",
+                        "name": "cropland.1993.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represent the percentage of urban land cover in a buffer of 50 meters (within a 50-meter radius) around the sampled plot or location for the year 1993",
+                        "name": "urban.1993.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represent the percentage of cropland in a buffer of 50 meters (within a 50-meter radius) around the sampled plot or location for the year 2009",
+                        "name": "cropland.2009.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represent the percentage of urban land cover in a buffer of 50 meters (within a 50-meter radius) around the sampled plot or location for the year 2009",
+                        "name": "urban.2009.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represent the percentage of cropland in a buffer of 500 meters (within a 50-meter radius) around the sampled plot or location for the year 1956",
+                        "name": "cropland.1956.500m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represent the percentage of urban land cover in a buffer of 50 meters (within a 50-meter radius) around the sampled plot or location for the year 1956",
+                        "name": "urban.1956.500m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represent the percentage of cropland in a buffer of 500 meters (within a 50-meter radius) around the sampled plot or location for the year 1993",
+                        "name": "cropland.1993.500m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the percentage of urban land cover in a buffer of 500 meters (within a 50-meter radius) around the sampled plot or location for the year 1993.",
+                        "name": "urban.1993.500m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the percentage of cropland in a buffer of 500 meters (within a 50-meter radius) around the sampled plot or location for the year 2009.",
+                        "name": "cropland.2009.500m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the percentage of urban land cover in a buffer of 500 meters (within a 50-meter radius) around the sampled plot or location for the year 2009.",
+                        "name": "urban.2009.500m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the percentage of cropland in a buffer of 1000 meters (within a 50-meter radius) around the sampled plot or location for the year 1956.",
+                        "name": "cropland.1956.1000m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the percentage of urban land cover in a buffer of 1000 meters (within a 50-meter radius) around the sampled plot or location for the year 1956.",
+                        "name": "urban.1956.1000m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the percentage of cropland in a buffer of 1000 meters (within a 50-meter radius) around the sampled plot or location for the year 1993.",
+                        "name": "cropland.1993.1000m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the percentage of urban land cover in a buffer of 1000 meters (within a 50-meter radius) around the sampled plot or location for the year 1993.",
+                        "name": "urban.1993.1000m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the percentage of cropland in a buffer of 1000 meters (within a 50-meter radius) around the sampled plot or location for the year 2009.",
+                        "name": "cropland.2009.1000m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the percentage of urban land cover in a buffer of 1000 meters (within a 50-meter radius) around the sampled plot or location for the year 2009.",
+                        "name": "urban.2009.1000m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the historical landscape changes in a 50-meter buffer around the sampled plot or location between 1956 and 2009. It categorizes changes as progressive, indicating an increase in urban or cropland areas over this period.",
+                        "name": "progressive.1956.2009.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the historical landscape changes in a 50-meter buffer around the sampled plot or location between 1956 and 2009. It categorizes changes as regressive, indicating a decrease in urban or cropland areas over this period.",
+                        "name": "regressive.1956.2009.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "his variable represents the historical landscape changes in a 50-meter buffer around the sampled plot or location between 1956 and 2009. It categorizes areas where there have been no significant changes in urban or cropland cover over this period.",
+                        "name": "no.changes.1956.2009.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the historical landscape changes in a 50-meter buffer around the sampled plot or location between 1993 and 2009. It categorizes changes as progressive, indicating an increase in urban or cropland areas over this period.",
+                        "name": "progressive.1993.2009.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This variable represents the historical landscape changes in a 50-meter buffer around the sampled plot or location between 1993 and 2009. It categorizes changes as regressive, indicating a decrease in urban or cropland areas over this period.",
+                        "name": "regressive.1993.2009.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "his variable represents the historical landscape changes in a 50-meter buffer around the sampled plot or location between 1993 and 2009. It categorizes areas where there have been no significant changes in urban or cropland cover over this period.",
+                        "name": "no.changes.1993.2009.50m"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The distance (in meters) from the sampled plot or location to the nearest main stream or waterway.",
+                        "name": "distance.stream"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The distance (in meters) from the sampled plot or location to the nearest main road.",
+                        "name": "distance.road"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The geographic coordinates of the sampled plot or location.",
+                        "name": "longitude"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The geographic coordinates of the sampled plot or location.",
+                        "name": "latitude"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The mean annual temperature of the sampled plot or location.",
+                        "name": "annual.temperature"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The annual precipitation or rainfall of the sampled plot or location.",
+                        "name": "annual.rainfall"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The mean annual solar radiation (in kJ/m\u00c2\u00b2/day) of the sampled plot or location.",
+                        "name": "annual.radiation"
+                    }
+                ]
+            },
+            "description": "The data for the analysis of pathway-specific differences in the invaded niche.",
+            "domain_knowledge": "",
+            "max_depth": 0,
+            "name": "invaded_niche_pathways.csv"
+        }
+    ],
+    "domain": "biology",
+    "hypotheses": {
+        "intermediate": [],
+        "main": [
+            {
+                "depth": 0,
+                "expr": "",
+                "expr_ind": "",
+                "target": "",
+                "text": ""
+            }
+        ]
+    },
+    "id": 0,
+    "intermediate": [],
+    "queries": [
+        [
+            {
+                "prior_findings": "",
+                "qid": 0,
+                "question": "What factors interact significantly to affect the proportion of gardening-introduced non-native plants?",
+                "question_specificity": null,
+                "question_type": "context",
+                "relevant_cols": [
+                    "pathway",
+                    "n"
+                ],
+                "target_col": "n",
+                "true_hypothesis": "",
+                "true_hypothesis_expr": ""
+            },
+            {
+                "prior_findings": "",
+                "qid": 1,
+                "question": "What is interacting significantly to affect the proportion of non-native plants introduced through gardening?",
+                "question_specificity": null,
+                "question_type": "variables",
+                "relevant_cols": [
+                    "pathway",
+                    "n"
+                ],
+                "target_col": "",
+                "true_hypothesis": "",
+                "true_hypothesis_expr": ""
+            },
+            {
+                "prior_findings": "",
+                "qid": 2,
+                "question": "How do urban land use and elevation interact in relation to the proportion of non-native plants introduced through gardening?",
+                "question_specificity": null,
+                "question_type": "relationship",
+                "relevant_cols": [
+                    "pathway",
+                    "n"
+                ],
+                "target_col": "",
+                "true_hypothesis": "",
+                "true_hypothesis_expr": ""
+            }
+        ]
+    ],
+    "workflow": "",
+    "workflow_tags": "statistical analysis, Interaction Analysis, Regression"
+}

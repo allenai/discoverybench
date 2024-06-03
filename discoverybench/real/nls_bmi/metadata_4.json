@@ -1,0 +1,94 @@
+{
+    "datasets": [
+        {
+            "columns": {
+                "raw": [
+                    {
+                        "depth": 0,
+                        "description": "Gender of the Respondent (MALE or FEMALE)",
+                        "name": "GENDER"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The age of the respondent in the year 1989",
+                        "name": "AGE"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Square of the age of the Respondent",
+                        "name": "AGE_2"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The income of the respondent in the year 1989",
+                        "name": "INCOME"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "A boolean variable that equals 1 if the respondent took more money out of than put into savings and equals 0 otherwise",
+                        "name": "DISSAVED"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "A boolean variable that equals 1 if the respondent's savings level did not change or the respondent had no savings, and is 0 otherwise",
+                        "name": "SAMESAVE"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Body mass index of the respondent calculated using the standard formula using the height and weight of the respondent using the height of 1985 and weight of 1989",
+                        "name": "BMI"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "A boolean variable that indicated if the respondent belongs to the black race or not",
+                        "name": "BLACK"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "A boolean variable that indicated if the respondent belongs to the hispanic race or not",
+                        "name": "HISPANIC"
+                    }
+                ]
+            },
+            "description": "This dataset is from the National Longitudinal Survey of Youth (NLSY79) includes variables such as gender, age, income, savings behavior, BMI, and racial background.",
+            "domain_knowledge": "",
+            "max_depth": 0,
+            "name": "nls_bmi_processed.csv"
+        }
+    ],
+    "domain": "sociology",
+    "hypotheses": {
+        "intermediate": [],
+        "main": [
+            {
+                "depth": 0,
+                "expr": "",
+                "expr_ind": "",
+                "target": "",
+                "text": ""
+            }
+        ]
+    },
+    "id": 0,
+    "intermediate": [],
+    "queries": [
+        [
+            {
+                "prior_findings": "",
+                "qid": 0,
+                "question": "How does an increase in income impact the likelihood of maintaining the same level of savings?",
+                "question_specificity": null,
+                "question_type": "relationship",
+                "relevant_cols": [
+                    "INCOME",
+                    "SAMESAVE"
+                ],
+                "target_col": "SAMESAVE",
+                "true_hypothesis": "",
+                "true_hypothesis_expr": ""
+            }
+        ]
+    ],
+    "workflow": "",
+    "workflow_tags": "regression"
+}

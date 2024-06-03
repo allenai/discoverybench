@@ -1,0 +1,103 @@
+{
+    "datasets": [
+        {
+            "columns": {
+                "raw": [
+                    {
+                        "depth": 0,
+                        "description": "Unique ID of each respondent",
+                        "name": "CASE ID"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Race of the respondent (Hispanic, Black or White)",
+                        "name": "SAMPLE_RACE"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Sex of the respondent (Male or Female)",
+                        "name": "SAMPLE_SEX"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Family size of the respondent",
+                        "name": "FAMILY SIZE OF SAMPLE"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Composite variable created by summing following variables:\n\nASVAB - Arithmetic Reasoning Z Score (rounded), 1981\nASVAB - Word Knowledge Z Score (rounded), 1981\nASVAB - Paragraph Comprehension Z Score (rounded), 1981\nASVAB - Mathematics Knowledge Z Score (rounded), 1981",
+                        "name": "ABILITY: COMPOSITE OF ASVAB SCORE"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Boolean variable that equals 1 if the BA Degree was completed by the respondent else 0",
+                        "name": "BA DEGREE COMPLETED"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Respondent's percentile in the class that he attended in school last year",
+                        "name": "PERCENTILE IN CLASS"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Socioeconomic Status of the respondent",
+                        "name": "SES"
+                    }
+                ]
+            },
+            "description": "This dataset contains social background factors (race, gender, and socioeconomic status) and academic resources at the time of secondary school graduation (standardized test scores, class rank, and curriculum) for the participants of the NLS.",
+            "domain_knowledge": "Armed Services Vocational Aptitude Battery (ASVAB) measures the respondent's knowledge and skills in the topical areas such as mathematical reasoning, science, and reading comprehension.",
+            "max_depth": 0,
+            "name": "nls_ses_processed.csv"
+        }
+    ],
+    "domain": "sociology",
+    "hypotheses": {
+        "intermediate": [],
+        "main": [
+            {
+                "depth": 0,
+                "expr": "",
+                "expr_ind": "",
+                "target": "",
+                "text": ""
+            }
+        ]
+    },
+    "id": 0,
+    "intermediate": [],
+    "queries": [
+        [
+            {
+                "prior_findings": "",
+                "qid": 0,
+                "question": "Between which two races is the factor of BA degree completion -0.9568 when compared to the other?",
+                "question_specificity": null,
+                "question_type": "variables",
+                "relevant_cols": [
+                    "BA DEGREE COMPLETED",
+                    "SAMPLE_RACE"
+                ],
+                "target_col": "BA DEGREE COMPLETED",
+                "true_hypothesis": "",
+                "true_hypothesis_expr": ""
+            },
+            {
+                "prior_findings": "",
+                "qid": 1,
+                "question": "What is the degree of racial differential in BA degree completion rates between Black and White students?",
+                "question_specificity": null,
+                "question_type": "relationship",
+                "relevant_cols": [
+                    "BA DEGREE COMPLETED",
+                    "SAMPLE_RACE"
+                ],
+                "target_col": "BA DEGREE COMPLETED",
+                "true_hypothesis": "",
+                "true_hypothesis_expr": ""
+            }
+        ]
+    ],
+    "workflow": "",
+    "workflow_tags": "regression, interaction analysis"
+}

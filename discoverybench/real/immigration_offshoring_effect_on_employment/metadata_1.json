@@ -1,0 +1,101 @@
+{
+    "datasets": [
+        {
+            "columns": {
+                "raw": [
+                    {
+                        "depth": 0,
+                        "description": "The year of the observation",
+                        "name": "year"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Beaurau of Economic (BEA) Industry Code",
+                        "name": "beaind"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "The key instrumental variable capturing exogenous variation in the ease/costs of offshoring for that industry-year.",
+                        "name": "iv_offshoring_1"
+                    }
+                ]
+            },
+            "description": "This dataset contains measures aimed at capturing exogenous variation in the ease or costs of offshoring across industries and years. It is constructed using variation in offshoring across countries to the U.S., interacting with each industry's initial distribution of offshoring across those countries. This offshoring measure is intended to be used as an explanatory variable when examining impacts on domestic employment patterns.",
+            "domain_knowledge": "",
+            "max_depth": 0,
+            "name": "offshoring_iv_mar2.dta"
+        },
+        {
+            "columns": {
+                "raw": [
+                    {
+                        "depth": 0,
+                        "description": "The year of the observation",
+                        "name": "year"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "Beaurau of Economic (BEA) Industry Code",
+                        "name": "beaind"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This column represents the imputed share or proportion of immigrant employment within total employment for each industry-year observation. The share of immigrant employment indicates the proportion of total employment within each industry that is comprised of immigrant workers.",
+                        "name": "share_immi_imputed"
+                    },
+                    {
+                        "depth": 0,
+                        "description": "This column represents the imputed level of immigrant employment for each industry-year observation. This refers to the estimated number of immigrant workers employed within each industry-year.",
+                        "name": "empl_immi_imputed"
+                    }
+                ]
+            },
+            "description": "This dataset provides imputed measures of immigrant employment aimed at capturing exogenous variation in immigration costs and push-factors across industries and years",
+            "domain_knowledge": "",
+            "max_depth": 0,
+            "name": "immi_popimputed_00_07.dta"
+        }
+    ],
+    "domain": "economics",
+    "hypotheses": {
+        "intermediate": [],
+        "main": [
+            {
+                "depth": 0,
+                "expr": "",
+                "expr_ind": "",
+                "target": "",
+                "text": ""
+            }
+        ]
+    },
+    "id": 0,
+    "intermediate": [],
+    "queries": [
+        [
+            {
+                "prior_findings": "",
+                "qid": 0,
+                "question": "What is the effect of increased ease of immigration on the local job market for native workers?",
+                "question_specificity": null,
+                "question_type": "variables",
+                "relevant_cols": [],
+                "target_col": "",
+                "true_hypothesis": "",
+                "true_hypothesis_expr": ""
+            },
+            {
+                "prior_findings": "",
+                "qid": 1,
+                "question": "How does increased ease of immigration impact the share of native employment?",
+                "question_specificity": null,
+                "question_type": "relationship",
+                "relevant_cols": [],
+                "target_col": "",
+                "true_hypothesis": "",
+                "true_hypothesis_expr": ""
+            }
+        ]
+    ],
+    "workflow": ""
+}
