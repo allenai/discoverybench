@@ -1,2 +1,2 @@
 # 🔭 DiscoveryBench
-Discovering Data-driven Hypotheses in the Wild
+Towards Data-Driven Discovery with Large Language Models
