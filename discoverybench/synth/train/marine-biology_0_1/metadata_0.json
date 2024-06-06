@@ -1,0 +1,97 @@
+{
+  "id": 0,
+  "domain": "marine biology",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
+      "columns": [
+        {
+          "name": "reef_location",
+          "description": "Generalized location of the coral reef"
+        },
+        {
+          "name": "water_temperature",
+          "description": "Average water temperature near the coral reef in Celsius"
+        },
+        {
+          "name": "cloud_cover",
+          "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
+        },
+        {
+          "name": "human_activity_score",
+          "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
+        },
+        {
+          "name": "marine_predator_density",
+          "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
+        },
+        {
+          "name": "pollution_level",
+          "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
+        },
+        {
+          "name": "reef_is_protected",
+          "description": "Binary indicator of whether the reef is in a legally protected conservation area"
+        },
+        {
+          "name": "coral_biodiversity_percentile",
+          "description": "Percentile rank of coral reefs based on biodiversity"
+        },
+        {
+          "name": "salinity_variation",
+          "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
+        },
+        {
+          "name": "shipping_route_presence",
+          "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
+        },
+        {
+          "name": "seasonal_current_variation",
+          "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
+        },
+        {
+          "name": "ocean_depth",
+          "description": "Depth of the ocean at the reef location, measured in meters"
+        },
+        {
+          "name": "fishing_activity",
+          "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
+        },
+        {
+          "name": "water_clarity",
+          "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
+        },
+        {
+          "name": "coral_species_count",
+          "description": "Number of different coral species present"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 566,
+      "question": "How does the level of pollution impact the coral biodiversity percentile, considering various environmental factors in marine biology datasets?",
+      "question_type": "general",
+      "difficulty": 3,
+      "target_col": "coral_biodiversity_percentile",
+      "true_hypothesis": "Coral reefs located in areas with low pollution levels are likely to have a coral biodiversity percentile calculated based on the level of pollution, seasonal current variation, ocean depth, human activity score, reef protection status, marine predator density, salinity variation, shipping route presence, water clarity, cloud cover, fishing activity, and several other environmental factors.",
+      "true_hypothesis_expr": "np.where(df['pollution_level']=='low', (np.where(df['seasonal_current_variation'] == 'low', 200 / (1 + np.exp(-(30 - 0.015 * df['ocean_depth'] - 0.8 * df['human_activity_score'] + 2 * (df['reef_is_protected'].astype(int)) - 15) / 10)), 120 / (1 + np.exp(-(30 - 0.015 * df['ocean_depth'] - 0.8 * df['human_activity_score'] + 2 * (df['reef_is_protected'].astype(int)) - 15) / 10))) + 10 * np.exp((-10*df['marine_predator_density'] + df['salinity_variation']**3 - 50*np.where(df['shipping_route_presence'], 1, 0)) / 100)*0.3 + ((24 * (df['water_clarity']/100) * (1 - df['cloud_cover']/100) * 3) + ((df['fishing_activity'].map({'none': 4, 'low': 3, 'moderate': 2, 'high': 1}) * 2) * 2))*2), 50)",
+      "relevant_cols": [
+        "fishing_activity",
+        "pollution_level",
+        "seasonal_current_variation",
+        "ocean_depth",
+        "human_activity_score",
+        "reef_is_protected",
+        "marine_predator_density",
+        "salinity_variation",
+        "shipping_route_presence",
+        "water_clarity",
+        "cloud_cover",
+        "coral_biodiversity_percentile"
+      ]
+    }
+  ]
+}

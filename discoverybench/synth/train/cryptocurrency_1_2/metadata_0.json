@@ -1,0 +1,136 @@
+{
+  "id": 0,
+  "domain": "cryptocurrency",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to digital currencies, blockchain technology, and decentralized finance.",
+      "columns": [
+        {
+          "name": "uses_defi_services",
+          "description": "Whether the individual uses any decentralized financial services"
+        },
+        {
+          "name": "online_course_enrollment_frequency",
+          "description": "Number of online courses related to digital skills enrolled in per year"
+        },
+        {
+          "name": "digital_literacy_score",
+          "description": "Score assessing the individual's digital literacy, on a scale from 0 to 100"
+        },
+        {
+          "name": "investment_in_crypto",
+          "description": "Amount of money invested in cryptocurrency"
+        },
+        {
+          "name": "number_of_trading_platforms",
+          "description": "The count of different platforms on which the individual actively trades cryptocurrencies"
+        },
+        {
+          "name": "holds_multiple_currencies",
+          "description": "Whether the individual holds more than one type of cryptocurrency"
+        },
+        {
+          "name": "trading_frequency_per_month",
+          "description": "The average number of times an individual makes crypto trades per month"
+        },
+        {
+          "name": "education_level",
+          "description": "Highest educational degree obtained by the individual"
+        },
+        {
+          "name": "crypto_portfolio_diversity",
+          "description": "The number of different cryptocurrencies the individual invests in"
+        },
+        {
+          "name": "has_regular_access_to_internet",
+          "description": "Indicates whether the individual has regular access to the internet"
+        },
+        {
+          "name": "risk_tolerance",
+          "description": "The individual's tolerance level for investment risks, expressed as a score"
+        },
+        {
+          "name": "has_crypto_certifications",
+          "description": "Whether the individual has any formal certifications related to cryptocurrencies"
+        },
+        {
+          "name": "types_of_cryptocurrencies_invested",
+          "description": "The count of different types of cryptocurrencies the individual has invested in"
+        },
+        {
+          "name": "age",
+          "description": "Age of the individual participating in decentralized finance"
+        },
+        {
+          "name": "investment_likelihood",
+          "description": "Likelihood of the individual to invest in cryptocurrency based on unspecified factors"
+        },
+        {
+          "name": "job_sector",
+          "description": "Sector of employment of the individual"
+        },
+        {
+          "name": "decentralized_finance_participation",
+          "description": "Whether the individual participates in decentralized finance platforms"
+        },
+        {
+          "name": "follows_crypto_news",
+          "description": "Indicates whether the individual regularly follows news related to cryptocurrencies"
+        },
+        {
+          "name": "number_of_cryptocurrencies_owned",
+          "description": "The number of different cryptocurrencies owned by the individual"
+        },
+        {
+          "name": "investment_experience_years",
+          "description": "The number of years the individual has been investing in cryptocurrencies"
+        },
+        {
+          "name": "blockchain_conference_attendances",
+          "description": "The number of blockchain-related conferences the individual has attended in the past year"
+        },
+        {
+          "name": "monthly_blockchain_transactions",
+          "description": "The average number of blockchain transactions made by the individual per month"
+        },
+        {
+          "name": "research_hours_per_week",
+          "description": "Average number of hours per week the individual spends researching cryptocurrency markets"
+        },
+        {
+          "name": "tech_workshops_attended",
+          "description": "Number of technology-focused workshops or webinars attended per year"
+        },
+        {
+          "name": "economic_condition",
+          "description": "Current economic condition expressed as normal, upturn, or downturn"
+        },
+        {
+          "name": "forum_participation_level",
+          "description": "The degree of participation the individual has in online forums discussing cryptocurrencies, rated from 1 to 5"
+        },
+        {
+          "name": "uses_blockchain_technology",
+          "description": "Whether the individual uses blockchain technology actively in other domains than cryptocurrency trading"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 241,
+      "question": "What is the relationship between the number of blockchain conference attendances, possession of crypto certifications, and education level in individuals within the cryptocurrency domain?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "education_level",
+      "true_hypothesis": "Individuals who have attended more than 5 blockchain-related conferences and have crypto certifications tend to hold PhD degrees.",
+      "true_hypothesis_expr": "np.where((df['blockchain_conference_attendances'] > 5) & (df['has_crypto_certifications']), 'PhD', 'Bachelors')",
+      "relevant_cols": [
+        "has_crypto_certifications",
+        "blockchain_conference_attendances",
+        "education_level"
+      ]
+    }
+  ]
+}

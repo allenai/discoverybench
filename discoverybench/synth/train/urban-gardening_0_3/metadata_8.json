@@ -1,0 +1,249 @@
+{
+  "id": 8,
+  "domain": "urban gardening",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to planting in cities, community gardens, and sustainable urban landscapes.",
+      "columns": [
+        {
+          "name": "focus_on_drought_resistant",
+          "description": "Indicates if the garden primarily focuses on drought-resistant plants."
+        },
+        {
+          "name": "public_transit_access",
+          "description": "Indicates if the garden has access to public transit within a 0.5-mile radius."
+        },
+        {
+          "name": "daily_pedestrian_traffic",
+          "description": "Average number of pedestrians passing near the garden daily."
+        },
+        {
+          "name": "garden_space_per_capita",
+          "description": "The amount of garden space available per capita in square meters."
+        },
+        {
+          "name": "percentage_native_plants",
+          "description": "Percentage of the garden area covered with native plants."
+        },
+        {
+          "name": "average_plant_age_years",
+          "description": "Average age of the plants in the garden measured in years."
+        },
+        {
+          "name": "number_of_staff",
+          "description": "Number of full-time staff members who work in the garden."
+        },
+        {
+          "name": "high_density_residential_area",
+          "description": "Indicates if the garden is located in a high density residential area."
+        },
+        {
+          "name": "frequent_gardening_workshops",
+          "description": "Indicates if the city holds gardening workshops more than twice a month"
+        },
+        {
+          "name": "garden_type_regulation",
+          "description": "A binary indicator of whether local regulations favor food-producing over ornamental types."
+        },
+        {
+          "name": "average_income_level",
+          "description": "Average yearly income in the city, categorized as 'low', 'medium', or 'high'."
+        },
+        {
+          "name": "has_school_affiliation",
+          "description": "Indicates if the garden is officially affiliated with a local school or educational institution."
+        },
+        {
+          "name": "number_of_local_food_markets",
+          "description": "The number of local food markets within a 5 km radius of the garden"
+        },
+        {
+          "name": "private_funding",
+          "description": "The amount of funding received from private sources annually."
+        },
+        {
+          "name": "garden_accessibility_index",
+          "description": "A numeric score representing how accessible the garden is, considering factors like public transportation access and physical ease of entry."
+        },
+        {
+          "name": "rare_plant_species_ratio",
+          "description": "Proportion of rare plant species in the garden."
+        },
+        {
+          "name": "annual_rainfall",
+          "description": "Annual rainfall measured in millimeters."
+        },
+        {
+          "name": "sunlight_hours_per_day",
+          "description": "Average number of sunlight hours the garden receives per day"
+        },
+        {
+          "name": "population_density",
+          "description": "Number of people per square kilometer in the city."
+        },
+        {
+          "name": "funding_from_local_businesses",
+          "description": "Annual funding received from local businesses, in US dollars."
+        },
+        {
+          "name": "green_jobs_available",
+          "description": "Number of job openings in green industries within the city."
+        },
+        {
+          "name": "historical_visitation",
+          "description": "Average number of visitors per year over the past 5 years."
+        },
+        {
+          "name": "number_of_sustainability_workshops",
+          "description": "Total number of workshops held on sustainability practices in the garden."
+        },
+        {
+          "name": "specializes_in_ornamentals",
+          "description": "Indicates if the garden primarily focuses on ornamental plants."
+        },
+        {
+          "name": "is_residential_area",
+          "description": "Indicates if the garden is located in a residential area, potentially influencing the types of plants cultivated due to community involvement."
+        },
+        {
+          "name": "public_green_space_area",
+          "description": "Total area of public green spaces in the city measured in square kilometers."
+        },
+        {
+          "name": "is_community_driven",
+          "description": "Indicates whether the garden is primarily managed and maintained by the community."
+        },
+        {
+          "name": "local_funding_amount",
+          "description": "Financial contributions from local entities or individuals, expressed in thousands of dollars."
+        },
+        {
+          "name": "frequency_of_community_events",
+          "description": "Number of community events held in the garden per month"
+        },
+        {
+          "name": "number_of_plant_types",
+          "description": "The count of different types of plants in the garden."
+        },
+        {
+          "name": "average_annual_temperature",
+          "description": "The average annual temperature in degrees Celsius of the city where the garden is located."
+        },
+        {
+          "name": "irrigation_system_quality",
+          "description": "Quality level of the garden's irrigation system, rated from low to high."
+        },
+        {
+          "name": "number_of_local_volunteers",
+          "description": "The quantity of unpaid local individuals who help maintain the garden."
+        },
+        {
+          "name": "has_local_partnerships",
+          "description": "Indicates whether the garden has partnerships with local businesses or organizations."
+        },
+        {
+          "name": "residential_land_percentage",
+          "description": "Percentage of total land used for residential purposes in the city."
+        },
+        {
+          "name": "number_of_community_events",
+          "description": "Annual number of community events held in the garden."
+        },
+        {
+          "name": "sustainable_composting",
+          "description": "Whether sustainable composting methods are used in the garden. 'Yes' for gardens using sustainable composting, 'No' otherwise."
+        },
+        {
+          "name": "square_footage",
+          "description": "Total area of the garden dedicated to planting, measured in square feet."
+        },
+        {
+          "name": "land_availability",
+          "description": "Indicates whether the area has ample available land for gardening."
+        },
+        {
+          "name": "total_city_area",
+          "description": "Total area of the city in square kilometers."
+        },
+        {
+          "name": "public_transport_accessibility",
+          "description": "Accessibility of public transport on a scale from 1 to 10."
+        },
+        {
+          "name": "tourist_attraction_rating",
+          "description": "Rating of city as a tourist destination on a scale from 1 to 10."
+        },
+        {
+          "name": "late_night_business_count",
+          "description": "Number of businesses open until 9 PM or later in the area."
+        },
+        {
+          "name": "green_space_per_1000_residents",
+          "description": "Amount of green space in square meters available per 1000 residents."
+        },
+        {
+          "name": "has_educational_programs",
+          "description": "Indicates whether the garden has any educational programs about gardening or sustainability."
+        },
+        {
+          "name": "number_of_workshops",
+          "description": "The count of workshops and training sessions conducted in the garden."
+        },
+        {
+          "name": "average_rainfall_mm",
+          "description": "Average rainfall in millimeters the location of the garden receives annually."
+        },
+        {
+          "name": "guest_expert_visits",
+          "description": "The number of times experts visited the garden for educational events in a year."
+        },
+        {
+          "name": "public_funding",
+          "description": "The amount of funding received from governmental or public sources annually."
+        },
+        {
+          "name": "green_space_area",
+          "description": "Total area of parks and green spaces within the city in square kilometers."
+        },
+        {
+          "name": "residential_area_percentage",
+          "description": "Percentage of the city area that is residential."
+        },
+        {
+          "name": "city_population",
+          "description": "Total population of the city."
+        },
+        {
+          "name": "average_growth_time",
+          "description": "Average number of months required for plants in the garden to reach maturity."
+        },
+        {
+          "name": "sunlight_exposure_hours",
+          "description": "Average number of hours the garden receives direct sunlight per day."
+        },
+        {
+          "name": "volunteer_participation_rate",
+          "description": "Percentage of volunteers participating in garden activities compared to total volunteer pool."
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 893,
+      "question": "Is there a relationship between the level of sunlight exposure, average rainfall, and the focus on drought-resistant plants in community gardens that might impact the average growth time of plants?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "average_growth_time",
+      "true_hypothesis": "The average growth time of plants in community gardens is affected by the level of sunlight exposure, average rainfall, and the focus on drought-resistant plants. Gardens focusing on drought-resistant plants could exhibit a different growth pattern than those that do not.",
+      "true_hypothesis_expr": "np.where(df['focus_on_drought_resistant'], np.maximum(3, 24 - 2 * df['sunlight_exposure_hours']), 24 - df['average_rainfall_mm'] // 100)",
+      "relevant_cols": [
+        "sunlight_exposure_hours",
+        "average_rainfall_mm",
+        "focus_on_drought_resistant",
+        "average_growth_time"
+      ]
+    }
+  ]
+}

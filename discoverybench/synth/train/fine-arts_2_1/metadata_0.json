@@ -1,0 +1,237 @@
+{
+  "id": 0,
+  "domain": "fine arts",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to painting, sculpture, and visual arts.",
+      "columns": [
+        {
+          "name": "art_exhibits_attended",
+          "description": "Number of art exhibits the artist has attended"
+        },
+        {
+          "name": "education_in_modern_art",
+          "description": "Indicates if the artist has formal education in modern art"
+        },
+        {
+          "name": "specialization",
+          "description": "The primary artistic specialization of the artist"
+        },
+        {
+          "name": "international_exhibitions_count",
+          "description": "The number of international exhibitions an artist has participated in"
+        },
+        {
+          "name": "participates_in_international_exhibitions",
+          "description": "Indicates if the artist participates in international exhibitions"
+        },
+        {
+          "name": "art_style_diversity",
+          "description": "The number of different art styles the artist has worked in"
+        },
+        {
+          "name": "outdoor_festival_count",
+          "description": "Number of outdoor festivals in which the artist has participated"
+        },
+        {
+          "name": "primary_medium",
+          "description": "The primary medium used by the artist"
+        },
+        {
+          "name": "number_of_online_followers",
+          "description": "Total number of followers the artist has on online social platforms"
+        },
+        {
+          "name": "primarily_creates_digital_art",
+          "description": "Indicates if the artist mainly creates digital art"
+        },
+        {
+          "name": "countries_artworks_sold",
+          "description": "Number of different countries where the artist has sold their artworks"
+        },
+        {
+          "name": "international_awards_prediction",
+          "description": "Prediction related to international awards"
+        },
+        {
+          "name": "well_known_collaborators",
+          "description": "Number of collaborations with artists who are recognized worldwide"
+        },
+        {
+          "name": "theme_surrealism",
+          "description": "Number of surrealism themed artworks"
+        },
+        {
+          "name": "gallery_exhibitions_count",
+          "description": "Total number of exhibitions held in galleries worldwide"
+        },
+        {
+          "name": "positive_reviews_percentage",
+          "description": "Percentage of positive reviews received for the artist's work"
+        },
+        {
+          "name": "artist_id",
+          "description": "Unique identifier for each artist"
+        },
+        {
+          "name": "gallery_representation",
+          "description": "Indicates whether the artist is represented by one or more art galleries"
+        },
+        {
+          "name": "art_in_public_spaces",
+          "description": "Indicates if the artist's work has been featured in public spaces"
+        },
+        {
+          "name": "popularity_score",
+          "description": "Score on a scale from 1 to 10 based on fan following and critic reviews"
+        },
+        {
+          "name": "local_exhibitions_count",
+          "description": "Number of exhibitions the artist has held in local galleries"
+        },
+        {
+          "name": "theme_landscape",
+          "description": "Number of landscape themed artworks"
+        },
+        {
+          "name": "media_coverage",
+          "description": "The level of media coverage the artist has received, rated from low to high"
+        },
+        {
+          "name": "international_audience",
+          "description": "Percentage of the artist\u2019s social media followers who are from outside the artist\u2019s home country"
+        },
+        {
+          "name": "education_level",
+          "description": "Highest level of education in fine arts achieved by the artist"
+        },
+        {
+          "name": "media_appearances_count",
+          "description": "Number of times the artist has appeared in media related to visual arts"
+        },
+        {
+          "name": "years_of_experience",
+          "description": "Number of years the artist has been active"
+        },
+        {
+          "name": "number_of_awards",
+          "description": "The total number of awards received by the artist"
+        },
+        {
+          "name": "innovative_technique",
+          "description": "Indicates whether the artist is known for using innovative techniques; 1 for yes, 0 for no"
+        },
+        {
+          "name": "collaborative_projects_count",
+          "description": "Number of collaborative art projects the artist has participated in"
+        },
+        {
+          "name": "art_exhibition_visits",
+          "description": "Number of art exhibitions or galleries visited by the artist in the last year"
+        },
+        {
+          "name": "solo_exhibitions_count",
+          "description": "Number of solo exhibitions held by the artist"
+        },
+        {
+          "name": "abstract_art_ratio",
+          "description": "Ratio of abstract themed artworks to total artworks"
+        },
+        {
+          "name": "primary_material",
+          "description": "Primary material used by the artist for creating artworks"
+        },
+        {
+          "name": "collaboration_score",
+          "description": "Quantitative score based on the number and quality of collaborations with other painters"
+        },
+        {
+          "name": "exhibition_size",
+          "description": "Number of visitors at the largest exhibition where the artist has displayed their work."
+        },
+        {
+          "name": "art_pieces_sold_per_year",
+          "description": "The average number of art pieces sold by the artist per year"
+        },
+        {
+          "name": "art_discussions_engaged",
+          "description": "Number of discussions engaged about art topics in the last year"
+        },
+        {
+          "name": "total_artworks",
+          "description": "Total artworks produced by the artist"
+        },
+        {
+          "name": "gallery_prestige_level",
+          "description": "Score representing how prestigious the galleries are that have acquired the artist's works"
+        },
+        {
+          "name": "social_media_following",
+          "description": "Number of followers the artist has on major social media platforms."
+        },
+        {
+          "name": "mixed_media_usage",
+          "description": "Indicates if the artist uses mixed media in their artwork"
+        },
+        {
+          "name": "techniques_mastered",
+          "description": "Number of different art techniques the artist has mastered"
+        },
+        {
+          "name": "awards_count",
+          "description": "Total number of prestigious awards won by the artist"
+        },
+        {
+          "name": "year_first_artwork",
+          "description": "Year when the artist created their first artwork"
+        },
+        {
+          "name": "participation_in_international_exhibitions",
+          "description": "Whether the artist has participated in international exhibitions"
+        },
+        {
+          "name": "percentage_sold",
+          "description": "Percentage of the artist's total artworks that have been sold"
+        },
+        {
+          "name": "peer_recognition_score",
+          "description": "Score representing recognition from other artists in the community"
+        },
+        {
+          "name": "featured_in_top_magazines",
+          "description": "Indicates if the artist has been featured in top art magazines"
+        },
+        {
+          "name": "focuses_on_contemporary_art",
+          "description": "Whether the artist primarily focuses on contemporary art"
+        },
+        {
+          "name": "international_exhibitions",
+          "description": "Number of international exhibitions the artist has participated in"
+        },
+        {
+          "name": "social_media_followers",
+          "description": "Number of followers the artist has on major social media platforms combined"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 424,
+      "question": "Is there a relationship between an artist's number of awards won and the order in which they created their first artwork?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "artist_id",
+      "true_hypothesis": "Artists who have received more awards and have participated in international exhibitions and created their first artwork earlier are more likely to have a higher unique identifier.",
+      "true_hypothesis_expr": "df['number_of_awards'] * 100 + df['participation_in_international_exhibitions'] * 1000 + (2023 - df['year_first_artwork'])",
+      "relevant_cols": [
+        "participation_in_international_exhibitions",
+        "year_first_artwork",
+        "number_of_awards",
+        "artist_id"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": 0,
+  "domain": "marine biology",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
+      "columns": [
+        {
+          "name": "marine_predator_density",
+          "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
+        },
+        {
+          "name": "fishing_activity",
+          "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
+        },
+        {
+          "name": "water_clarity",
+          "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
+        },
+        {
+          "name": "seasonal_current_variation",
+          "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
+        },
+        {
+          "name": "reef_location",
+          "description": "Generalized location of the coral reef"
+        },
+        {
+          "name": "cloud_cover",
+          "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
+        },
+        {
+          "name": "water_temperature",
+          "description": "Average water temperature near the coral reef in Celsius"
+        },
+        {
+          "name": "shipping_route_presence",
+          "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
+        },
+        {
+          "name": "nutrient_upwelling_frequency",
+          "description": "Frequency of nutrient-rich water upwelling near the reef, measured in number of events per year"
+        },
+        {
+          "name": "pollution_level",
+          "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
+        },
+        {
+          "name": "salinity_variation",
+          "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
+        },
+        {
+          "name": "reef_is_protected",
+          "description": "Binary indicator of whether the reef is in a legally protected conservation area"
+        },
+        {
+          "name": "coral_species_count",
+          "description": "Number of different coral species present"
+        },
+        {
+          "name": "ocean_depth",
+          "description": "Depth of the ocean at the reef location, measured in meters"
+        },
+        {
+          "name": "plankton_density",
+          "description": "Average density of plankton in parts per million near the reef"
+        },
+        {
+          "name": "human_activity_score",
+          "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 560,
+      "question": "Is there a relationship between the frequency of nutrient upwelling near reefs and the T variable calculated from seasonal current variation, ocean depth, human activity score, reef protection, marine predator density, salinity variation, and presence of major shipping routes?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "nutrient_upwelling_frequency",
+      "true_hypothesis": "The frequency of nutrient upwelling near reefs is likely influenced by the T variable derived from the Pandas expression, relating to seasonal current variation, ocean depth, human activity score, reef protection, marine predator density, salinity variation, and presence of major shipping routes.",
+      "true_hypothesis_expr": "np.where(df['seasonal_current_variation'] == 'low', 200 / (1 + np.exp(-(30 - 0.015 * df['ocean_depth'] - 0.8 * df['human_activity_score'] + 2 * (df['reef_is_protected'].astype(int)) - 15) / 10)), 120 / (1 + np.exp(-(30 - 0.015 * df['ocean_depth'] - 0.8 * df['human_activity_score'] + 2 * (df['reef_is_protected'].astype(int)) - 15) / 10))) + 10 * np.exp(-(df['marine_predator_density']*(-10) + df['salinity_variation']**3 - 50*np.where(df['shipping_route_presence'], 1, 0)) / 100)",
+      "relevant_cols": [
+        "seasonal_current_variation",
+        "ocean_depth",
+        "human_activity_score",
+        "reef_is_protected",
+        "marine_predator_density",
+        "salinity_variation",
+        "shipping_route_presence",
+        "nutrient_upwelling_frequency"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": 0,
+  "domain": "cryptocurrency",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to digital currencies, blockchain technology, and decentralized finance.",
+      "columns": [
+        {
+          "name": "job_sector",
+          "description": "Sector of employment of the individual"
+        },
+        {
+          "name": "has_regular_access_to_internet",
+          "description": "Indicates whether the individual has regular access to the internet"
+        },
+        {
+          "name": "investment_in_crypto",
+          "description": "Amount of money invested in cryptocurrency"
+        },
+        {
+          "name": "uses_defi_services",
+          "description": "Whether the individual uses any decentralized financial services"
+        },
+        {
+          "name": "decentralized_finance_participation",
+          "description": "Whether the individual participates in decentralized finance platforms"
+        },
+        {
+          "name": "age",
+          "description": "Age of the individual participating in decentralized finance"
+        },
+        {
+          "name": "tech_workshops_attended",
+          "description": "Number of technology-focused workshops or webinars attended per year"
+        },
+        {
+          "name": "economic_condition",
+          "description": "Current economic condition expressed as normal, upturn, or downturn"
+        },
+        {
+          "name": "annual_income",
+          "description": "The annual income of the individual in US dollars"
+        },
+        {
+          "name": "uses_blockchain_technology",
+          "description": "Whether the individual uses blockchain technology actively in other domains than cryptocurrency trading"
+        },
+        {
+          "name": "online_course_enrollment_frequency",
+          "description": "Number of online courses related to digital skills enrolled in per year"
+        },
+        {
+          "name": "follows_crypto_news",
+          "description": "Indicates whether the individual regularly follows news related to cryptocurrencies"
+        },
+        {
+          "name": "number_of_cryptocurrencies_owned",
+          "description": "The number of different cryptocurrencies owned by the individual"
+        },
+        {
+          "name": "has_crypto_certifications",
+          "description": "Whether the individual has any formal certifications related to cryptocurrencies"
+        },
+        {
+          "name": "forum_participation_level",
+          "description": "The degree of participation the individual has in online forums discussing cryptocurrencies, rated from 1 to 5"
+        },
+        {
+          "name": "types_of_cryptocurrencies_invested",
+          "description": "The count of different types of cryptocurrencies the individual has invested in"
+        },
+        {
+          "name": "number_of_trading_platforms",
+          "description": "The count of different platforms on which the individual actively trades cryptocurrencies"
+        },
+        {
+          "name": "holds_multiple_currencies",
+          "description": "Whether the individual holds more than one type of cryptocurrency"
+        },
+        {
+          "name": "monthly_blockchain_transactions",
+          "description": "The average number of blockchain transactions made by the individual per month"
+        },
+        {
+          "name": "research_hours_per_week",
+          "description": "Average number of hours per week the individual spends researching cryptocurrency markets"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 252,
+      "question": "Is there a relationship between the level of engagement in cryptocurrency-related activities and annual income?",
+      "question_type": "general",
+      "difficulty": 3,
+      "target_col": "annual_income",
+      "true_hypothesis": "Individuals with high research hours per week, frequent enrollment in online courses for digital skills, active use of blockchain technology, and engagement in various cryptocurrency-related activities such as having crypto certifications, high forum participation levels, following crypto news, and using decentralized financial services are predicted to have higher annual incomes.",
+      "true_hypothesis_expr": "((df['research_hours_per_week']*2 + ((df['online_course_enrollment_frequency'] * 2) + (df['tech_workshops_attended'] * 3)) * df['has_regular_access_to_internet'].astype(int)//2 + 10*df['uses_blockchain_technology'].astype(int)) * 1000 + np.where(((np.floor(0.4 * (df['number_of_trading_platforms']**2 + df['types_of_cryptocurrencies_invested']) + 0.05 * df['monthly_blockchain_transactions']) > 5) & (df['has_crypto_certifications']), 70000, 50000) + (((df['number_of_trading_platforms']**2 + df['types_of_cryptocurrencies_invested'])**2 + 0.1 * (5 * df['forum_participation_level']**3 + 50 * df['follows_crypto_news'] + 30 * df['holds_multiple_currencies']) + 3 * df['uses_defi_services'].astype(int)) * 5000)",
+      "relevant_cols": [
+        "has_crypto_certifications",
+        "monthly_blockchain_transactions",
+        "research_hours_per_week",
+        "uses_blockchain_technology",
+        "online_course_enrollment_frequency",
+        "tech_workshops_attended",
+        "has_regular_access_to_internet",
+        "uses_defi_services",
+        "follows_crypto_news",
+        "forum_participation_level",
+        "holds_multiple_currencies",
+        "number_of_trading_platforms",
+        "types_of_cryptocurrencies_invested",
+        "annual_income"
+      ]
+    }
+  ]
+}

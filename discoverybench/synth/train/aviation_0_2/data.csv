@@ -1,0 +1,501 @@
+employs_active_breaks,advanced_aerodynamics_training_hours,aircraft_type_size,advanced_navigation_system_training,international_flight_experience,stress_management_type,aviation_incident_awareness_score,social_media_followers,international_flight_hours,education_level,average_flight_altitude,age,monthly_flight_simulation_hours,has_advanced_navigation_training,airline_fleet_technology_level,flies_multi_engine_aircraft,flight_hours_per_year_of_experience,international_flights_frequency,pilot_id,frequency_of_simulation_training,years_with_current_airline,mental_calculation_frequency,has_regular_flight_reviews
+False,240.9222,Large,True,False,,93,219365,15907,Associate,38205,29,200,False,Medium,True,35.4985,482,unique alphanumeric strings,2,5,7,True
+True,353.0794,Medium,True,False,Therapy,89,186475,16338,Master,17817,39,200,False,Medium,,36.4205,459,unique alphanumeric strings,2,9,2,True
+True,156.0359,Small,False,True,Exercise,100,320629,15345,Master,7979,42,200,True,High,False,40.6089,424,unique alphanumeric strings,2,8,9,True
+True,219.4613,Medium,True,True,Yoga,100,165427,16046,Associate,20341,38,200,False,Low,False,37.994,457,unique alphanumeric strings,3,15,9,True
+True,218.4899,Medium,False,True,Therapy,100,275811,15429,Bachelor,7169,35,200,True,High,False,38.5878,474,unique alphanumeric strings,2,14,7,True
+False,392.4411,Medium,True,True,Therapy,97,115936,15150,Master,17704,44,200,False,Low,True,59.871,500,unique alphanumeric strings,2,14,0,True
+False,465.6029,Small,True,False,Yoga,93,166067,15774,High School,3945,33,200,False,Medium,True,34.8759,500,unique alphanumeric strings,2,11,13,True
+False,31.8451,Small,True,True,Therapy,95,187715,15602,Bachelor,31146,28,200,False,Medium,True,54.7372,500,unique alphanumeric strings,2,11,8,True
+False,325.1093,Medium,True,True,Exercise,86,227049,15527,PhD,34912,31,200,False,Medium,True,40.2746,476,unique alphanumeric strings,2,14,4,True
+True,84.4467,Medium,True,True,Therapy,99,293405,16368,Master,39543,40,200,False,Medium,True,33.2513,473,unique alphanumeric strings,3,14,6,True
+True,128.6886,Medium,False,False,Yoga,93,227624,14399,High School,35034,44,200,False,Medium,True,51.2007,500,unique alphanumeric strings,2,11,12,True
+False,233.4832,Small,True,False,Meditation,100,234609,15126,Associate,18981,40,200,False,Low,False,46.3841,500,unique alphanumeric strings,2,14,1,True
+False,141.164,Large,True,False,Yoga,97,216824,14819,Master,25775,42,200,True,High,False,45.7374,500,unique alphanumeric strings,2,14,5,True
+False,0.0,Large,True,True,Exercise,98,201306,16663,Bachelor,40651,30,200,False,Medium,False,32.1646,450,unique alphanumeric strings,2,12,11,False
+True,469.3638,Small,False,True,,96,292738,14852,PhD,20206,41,200,False,Low,True,52.8337,454,unique alphanumeric strings,2,12,7,True
+False,421.1383,Medium,False,False,,98,188596,14892,Master,25263,33,200,False,Medium,,53.4414,489,unique alphanumeric strings,1,15,3,True
+True,395.5028,Large,False,False,Yoga,89,210607,14399,Master,22704,28,200,False,Low,True,42.1451,490,unique alphanumeric strings,1,9,2,True
+False,186.5581,Medium,False,True,,100,307645,15231,High School,6992,36,200,True,High,False,61.8123,474,unique alphanumeric strings,2,13,12,True
+True,162.9617,Medium,True,True,Therapy,99,272664,15809,Associate,18380,33,200,False,Low,False,50.4977,500,unique alphanumeric strings,2,7,7,True
+True,408.6421,,True,False,Exercise,91,271008,15636,Associate,23029,32,200,False,Low,True,45.4978,473,unique alphanumeric strings,2,13,4,True
+True,276.689,Medium,False,False,Therapy,99,258953,16548,PhD,16738,33,200,True,High,True,39.2375,490,unique alphanumeric strings,2,15,5,True
+True,444.472,Large,False,True,Yoga,91,220545,17018,Master,24245,39,200,True,High,False,40.0173,467,unique alphanumeric strings,2,8,2,True
+True,382.9668,,True,False,Yoga,100,321618,16634,PhD,28459,36,200,False,Medium,False,40.2886,480,unique alphanumeric strings,2,5,8,True
+True,72.8504,Small,True,False,Yoga,93,170747,15219,Bachelor,24406,35,200,False,Medium,False,41.8365,434,unique alphanumeric strings,1,9,5,True
+True,41.65,Large,False,True,Therapy,100,380288,14353,Bachelor,6431,31,200,True,,True,54.446,500,unique alphanumeric strings,2,10,2,True
+True,494.2134,Small,True,False,Exercise,88,436269,14070,Bachelor,16436,36,200,True,High,True,54.5489,500,unique alphanumeric strings,2,15,7,True
+False,377.7427,Medium,False,True,Yoga,97,184641,15482,Master,4502,36,200,False,Low,False,47.4189,500,unique alphanumeric strings,2,13,12,True
+True,355.4813,Large,True,False,Exercise,100,248522,15107,High School,1011,28,200,False,Medium,False,39.8583,481,unique alphanumeric strings,2,15,2,True
+True,288.03,Large,True,False,Meditation,96,244392,14270,Master,39772,41,200,True,High,True,35.0847,454,unique alphanumeric strings,1,10,4,True
+False,180.0121,Medium,False,True,,90,384005,14100,High School,42039,33,200,True,High,False,53.1108,486,unique alphanumeric strings,2,16,8,True
+False,445.9022,,True,False,Therapy,96,137525,15473,Bachelor,30701,29,200,False,Low,True,40.5923,467,unique alphanumeric strings,2,11,3,True
+False,167.9555,Large,False,True,Therapy,98,350186,16013,PhD,36580,47,200,False,Medium,False,44.0449,500,unique alphanumeric strings,3,10,10,True
+True,180.0077,Large,False,True,Yoga,97,297276,15102,Associate,10395,39,200,False,Medium,,55.8611,428,unique alphanumeric strings,2,7,12,True
+False,90.1304,Small,False,True,Therapy,93,287680,14690,Master,18825,36,200,True,High,True,35.6077,468,unique alphanumeric strings,3,16,2,True
+False,164.8037,Large,True,False,Yoga,92,147438,17447,Master,17439,35,200,False,,True,54.369,500,unique alphanumeric strings,1,7,11,True
+False,49.5058,,False,True,Therapy,100,298484,15028,Bachelor,13893,35,200,False,,True,47.5622,478,unique alphanumeric strings,2,10,8,True
+True,471.763,Medium,False,True,Therapy,100,165428,16057,PhD,26764,40,200,True,High,True,45.3275,449,unique alphanumeric strings,1,16,0,True
+True,226.9458,,False,False,Therapy,90,230190,14191,Bachelor,30895,41,200,True,,False,62.1583,449,unique alphanumeric strings,2,12,10,True
+False,324.6154,Small,True,True,Exercise,100,208837,14221,PhD,9134,39,200,False,Medium,True,36.3144,500,unique alphanumeric strings,2,11,11,True
+True,265.2215,Small,True,False,Therapy,100,256531,15938,High School,20988,33,200,True,,False,51.4072,470,unique alphanumeric strings,1,11,5,True
+True,183.2662,Medium,False,True,Yoga,100,234561,14780,Master,13420,39,200,False,Low,True,59.2153,493,unique alphanumeric strings,2,3,2,True
+False,247.453,Large,False,True,Yoga,95,224240,15038,Master,33571,30,200,False,Low,False,40.1379,498,unique alphanumeric strings,2,9,8,True
+True,0.0,Large,True,True,Yoga,90,191256,15153,High School,40082,35,200,True,High,,45.2547,499,unique alphanumeric strings,2,13,11,False
+True,228.3001,Small,True,True,Therapy,99,212722,15745,PhD,35080,38,200,True,High,True,44.0715,448,unique alphanumeric strings,3,14,13,True
+True,282.1986,Small,True,True,Meditation,90,281204,17113,Associate,38160,38,200,False,Medium,True,44.9875,500,unique alphanumeric strings,1,10,5,True
+True,7.0402,Large,True,False,Therapy,93,325305,15891,Master,29614,33,200,False,Medium,True,48.9172,484,unique alphanumeric strings,2,10,1,False
+False,0.0,Large,True,False,Yoga,97,244814,14956,PhD,32977,29,200,True,High,False,32.7982,431,unique alphanumeric strings,2,10,3,False
+False,402.2689,Large,False,False,,100,260335,15329,Master,20783,36,200,False,Medium,,47.9636,500,unique alphanumeric strings,2,10,3,True
+False,401.0221,Small,True,True,Therapy,96,96673,15101,PhD,11656,32,200,False,Low,False,32.9135,484,unique alphanumeric strings,1,5,11,True
+False,135.7894,Small,True,True,Exercise,98,167257,15478,Bachelor,2345,42,200,True,High,False,43.7456,443,unique alphanumeric strings,2,14,8,True
+True,9.3282,Small,True,True,Therapy,98,294927,14879,PhD,3827,42,200,True,High,False,47.337,482,unique alphanumeric strings,1,10,10,False
+True,318.7145,Medium,False,False,,92,201102,15841,PhD,32097,36,200,False,Medium,True,47.7292,460,unique alphanumeric strings,1,12,0,True
+True,90.1951,Small,False,True,Yoga,95,221186,15833,Associate,16533,35,200,True,High,True,37.9021,458,unique alphanumeric strings,2,8,0,True
+True,160.4905,Small,False,False,Exercise,94,366881,13876,PhD,45000,39,200,False,Low,False,32.9537,459,unique alphanumeric strings,2,11,5,True
+True,375.0406,Small,True,True,Exercise,99,199240,14308,PhD,23545,39,200,False,Medium,False,50.8818,436,unique alphanumeric strings,3,9,12,True
+False,147.0169,Large,True,True,Therapy,89,259817,14914,Master,30905,43,200,True,High,False,34.2671,477,unique alphanumeric strings,1,10,10,True
+False,492.3931,Large,False,False,Yoga,100,182924,15920,Associate,9789,42,200,False,Medium,False,50.2839,449,unique alphanumeric strings,2,4,4,True
+True,172.2569,Large,False,False,,93,177562,15328,Bachelor,37049,47,200,True,High,True,40.7122,480,unique alphanumeric strings,2,12,6,True
+True,72.6055,Large,False,True,Yoga,97,250549,16587,Associate,19598,44,200,True,High,,34.6517,466,unique alphanumeric strings,3,9,3,True
+True,124.5049,,True,True,,90,254163,16310,Bachelor,35481,26,200,True,High,True,65.2152,467,unique alphanumeric strings,2,19,0,True
+True,160.2133,Small,False,True,,100,184279,14261,Master,43323,31,200,False,Low,True,43.1292,500,unique alphanumeric strings,3,11,10,True
+True,338.7597,Medium,False,True,Meditation,100,196228,15221,Bachelor,30468,32,200,False,Low,False,27.9357,500,unique alphanumeric strings,2,3,6,True
+False,91.9983,Large,True,False,Therapy,100,336142,14712,Associate,38760,26,200,False,Medium,True,29.46,490,unique alphanumeric strings,1,11,9,True
+False,198.0334,Small,True,True,Yoga,93,241682,14290,High School,27814,32,200,False,Low,True,37.0638,442,unique alphanumeric strings,1,14,2,True
+False,380.3618,Medium,False,True,,95,188609,14564,PhD,26625,37,200,True,High,True,41.6875,444,unique alphanumeric strings,3,7,0,True
+True,145.8279,Small,False,True,Yoga,98,171169,15023,PhD,27551,36,200,False,Low,False,42.6102,459,unique alphanumeric strings,2,9,5,True
+False,150.0175,Small,False,True,Meditation,100,304839,14525,High School,13680,28,200,False,Low,False,32.7154,452,unique alphanumeric strings,3,11,1,True
+False,98.1326,Small,False,True,Therapy,91,278559,16188,Bachelor,25655,28,200,False,Medium,True,44.2841,495,unique alphanumeric strings,3,6,8,True
+False,329.8466,Large,True,True,Yoga,97,245300,16278,PhD,13667,32,200,False,Low,False,44.7029,476,unique alphanumeric strings,1,12,4,True
+True,218.2939,Medium,False,False,Meditation,96,142716,15505,High School,37812,42,200,True,High,True,40.3083,500,unique alphanumeric strings,3,15,13,True
+False,464.4737,Large,False,True,,95,251008,14360,Bachelor,2793,33,200,False,Low,True,47.5059,460,unique alphanumeric strings,2,15,8,True
+True,417.8606,Large,False,False,Yoga,100,146908,14459,High School,20949,31,200,False,Low,False,44.4648,479,unique alphanumeric strings,3,11,13,True
+False,380.4919,Large,False,False,Meditation,96,333860,15436,High School,18274,32,200,True,High,True,43.2518,423,unique alphanumeric strings,3,8,2,True
+True,455.7726,Small,False,False,,98,275025,15479,Bachelor,10638,28,200,True,High,True,42.8615,448,unique alphanumeric strings,1,12,11,True
+True,418.8125,Medium,False,False,Meditation,98,185957,15294,Bachelor,40077,39,200,False,,,40.171,474,unique alphanumeric strings,3,14,1,True
+False,338.7006,Large,True,False,Yoga,93,185319,16281,High School,23082,48,200,False,Medium,False,34.8859,484,unique alphanumeric strings,2,9,6,True
+False,378.9653,Large,True,False,,99,251217,15316,Bachelor,13074,38,200,False,Medium,False,50.046,500,unique alphanumeric strings,2,8,14,True
+True,343.3617,,True,True,Therapy,99,392340,15179,Bachelor,42866,42,200,True,High,True,38.2486,500,unique alphanumeric strings,3,12,12,True
+True,199.4235,Large,True,False,Meditation,100,216886,15815,High School,33829,31,200,False,Low,True,51.7802,477,unique alphanumeric strings,0,15,10,True
+False,247.1678,Small,False,True,Exercise,99,112401,16403,High School,44044,42,200,False,Low,,48.7895,466,unique alphanumeric strings,1,8,7,True
+True,139.9073,,True,True,,100,49305,16787,PhD,33307,42,200,False,Low,False,36.3483,500,unique alphanumeric strings,1,10,2,True
+False,490.2341,Small,True,False,Meditation,98,318557,16366,Associate,33821,40,200,True,High,True,47.6991,462,unique alphanumeric strings,2,7,5,True
+True,200.7707,Medium,True,True,Exercise,96,166067,16209,PhD,29739,29,200,False,Medium,False,36.5874,500,unique alphanumeric strings,3,7,4,True
+True,208.654,Small,True,True,Exercise,100,440220,15761,Master,13215,40,200,False,Medium,False,39.8168,489,unique alphanumeric strings,2,10,9,True
+True,332.945,Large,False,True,,100,300073,15317,High School,22848,41,200,False,Low,True,47.224,500,unique alphanumeric strings,2,12,5,True
+False,262.3144,Large,True,True,Meditation,95,266214,15912,Master,12009,36,200,False,Low,False,39.5882,423,unique alphanumeric strings,2,11,1,True
+False,40.1161,Small,True,False,Exercise,94,198260,16674,High School,18275,29,200,False,High,True,42.0565,474,unique alphanumeric strings,3,4,0,True
+True,356.0069,Medium,True,True,Meditation,100,162514,15966,Bachelor,25250,41,200,False,Low,False,37.9134,500,unique alphanumeric strings,3,15,13,True
+True,207.0678,Large,True,True,Meditation,90,301755,13928,Master,21673,41,200,True,High,True,50.4365,471,unique alphanumeric strings,2,12,7,True
+False,82.5746,,True,False,,100,275110,18160,High School,14219,41,200,False,Low,True,45.0733,500,unique alphanumeric strings,1,10,7,True
+False,401.6411,Medium,True,True,Therapy,100,225953,14619,Master,6494,23,200,False,Low,True,57.7509,495,unique alphanumeric strings,2,9,3,True
+False,462.1942,Small,True,True,,93,98020,16092,Associate,43981,36,200,True,High,True,54.9387,490,unique alphanumeric strings,2,13,4,True
+False,337.3952,Small,False,True,Meditation,88,182451,14692,PhD,30339,43,200,False,,False,35.0887,500,unique alphanumeric strings,0,14,8,True
+False,107.7785,Small,False,True,Therapy,94,245562,15048,Bachelor,23009,35,200,True,High,,44.7862,472,unique alphanumeric strings,2,15,14,True
+False,285.7558,Large,True,False,Meditation,93,147765,15378,PhD,5372,31,200,False,Medium,False,44.1423,448,unique alphanumeric strings,2,10,9,True
+True,404.1583,Medium,True,True,Yoga,95,178458,14935,Associate,14915,32,200,False,Low,True,49.5623,496,unique alphanumeric strings,2,4,14,True
+False,470.5025,Small,False,False,Yoga,90,275670,14944,High School,21549,30,200,False,,False,42.7227,471,unique alphanumeric strings,3,7,10,True
+False,175.3762,Medium,True,False,Exercise,97,289970,15787,PhD,21195,29,200,False,Low,False,53.6247,469,unique alphanumeric strings,2,5,10,True
+True,177.2949,Medium,True,True,Exercise,95,225220,15329,High School,30471,38,200,False,Low,True,49.1849,486,unique alphanumeric strings,2,14,4,True
+True,183.0497,,True,True,,90,383595,14957,Master,28959,43,200,False,Low,True,47.7686,497,unique alphanumeric strings,2,11,13,True
+False,338.7508,Large,False,False,Therapy,90,239272,16756,Associate,43729,31,200,False,Low,True,47.0182,484,unique alphanumeric strings,0,11,6,True
+False,383.9634,Small,False,True,Meditation,98,257289,16422,Master,15883,36,200,True,High,,44.7944,480,unique alphanumeric strings,2,13,13,True
+True,434.6108,Small,True,False,,95,131654,15929,Master,40460,34,200,False,High,True,47.6722,479,unique alphanumeric strings,2,4,1,True
+True,81.1617,Large,False,True,Therapy,100,272325,16224,Bachelor,3918,40,200,False,Medium,True,52.9682,491,unique alphanumeric strings,3,8,5,True
+False,152.6948,Medium,True,True,Yoga,100,271978,17084,Associate,21513,42,200,True,High,,58.9403,457,unique alphanumeric strings,3,11,8,True
+False,223.6516,Large,True,True,Meditation,97,146046,16323,Master,31283,44,200,False,Medium,False,44.9373,463,unique alphanumeric strings,0,14,4,True
+False,374.1012,Medium,True,True,Therapy,95,177688,14741,Associate,35962,38,200,False,Medium,False,37.1877,500,unique alphanumeric strings,2,9,9,True
+False,461.7898,,True,True,,100,282411,15295,High School,27065,33,200,False,Medium,False,45.3102,494,unique alphanumeric strings,2,7,8,True
+False,69.1161,Large,False,True,,93,203614,14836,Master,29146,43,200,False,,True,50.3893,474,unique alphanumeric strings,2,8,8,True
+False,199.6549,Small,False,True,Therapy,100,331523,14787,Associate,32619,33,200,False,High,True,45.5643,455,unique alphanumeric strings,4,13,0,True
+False,327.4183,Small,False,True,,94,461996,15466,Bachelor,21865,42,200,True,High,False,52.7431,462,unique alphanumeric strings,2,12,0,True
+True,27.387,Medium,True,False,,97,378808,14493,Master,18755,28,200,False,,True,45.4817,500,unique alphanumeric strings,3,11,1,True
+False,182.9712,,True,False,,89,248115,15631,Associate,23555,37,200,True,High,False,47.3349,473,unique alphanumeric strings,2,6,11,True
+False,124.5478,Small,True,True,Exercise,96,294102,14688,High School,20038,41,200,False,Medium,False,36.666,462,unique alphanumeric strings,2,11,2,True
+False,201.5008,Medium,False,False,Therapy,100,263423,16651,PhD,4906,42,200,True,High,False,39.8785,482,unique alphanumeric strings,4,7,7,True
+True,406.5703,Medium,True,True,Exercise,85,190618,16461,PhD,9248,46,200,False,Medium,False,47.0645,475,unique alphanumeric strings,2,13,13,True
+False,383.8727,Small,False,False,Therapy,99,309276,16477,Associate,20554,37,200,False,,,46.3992,466,unique alphanumeric strings,2,12,0,True
+False,487.9652,Small,False,True,Meditation,91,320309,15963,PhD,24606,33,200,False,Medium,,37.7156,500,unique alphanumeric strings,1,7,15,True
+True,192.6395,,False,False,,85,255721,13794,High School,16456,31,200,False,Low,True,46.2964,460,unique alphanumeric strings,1,8,5,True
+True,9.8534,Small,True,False,Yoga,95,129597,15770,PhD,25165,34,200,False,,False,50.7326,498,unique alphanumeric strings,3,9,9,False
+True,315.0811,Medium,True,True,,95,296722,14209,High School,36451,51,200,True,,False,33.4274,495,unique alphanumeric strings,2,8,12,True
+True,494.5698,,False,False,Exercise,98,115093,15591,Bachelor,6977,39,200,False,Medium,True,35.1976,428,unique alphanumeric strings,2,10,7,True
+True,401.6789,Small,False,True,Yoga,96,303579,17020,Bachelor,31041,38,200,False,,True,56.2528,492,unique alphanumeric strings,2,11,10,True
+True,59.4233,,False,True,Meditation,88,264106,16167,Master,23120,36,200,True,High,,34.4115,438,unique alphanumeric strings,1,11,9,True
+False,26.9653,Large,False,True,,99,193970,16248,Master,37110,40,200,False,Medium,False,40.9187,457,unique alphanumeric strings,2,14,5,True
+False,349.0108,Small,True,False,Therapy,92,151248,16100,High School,37465,36,200,True,,,51.0913,465,unique alphanumeric strings,2,11,4,True
+True,122.8969,Medium,False,False,Therapy,93,173229,15452,Associate,45000,29,200,False,Medium,True,40.0265,462,unique alphanumeric strings,2,10,0,True
+False,138.2006,,True,True,Therapy,96,74092,15724,Associate,17390,35,200,False,Medium,False,42.6683,492,unique alphanumeric strings,2,15,2,True
+False,161.4751,Small,True,False,,98,216395,15090,Bachelor,37703,38,200,False,Low,,48.9419,467,unique alphanumeric strings,2,8,13,True
+True,97.5104,Large,False,True,,100,262878,15272,High School,41827,32,200,True,High,True,39.7461,473,unique alphanumeric strings,2,12,14,True
+True,359.9086,Medium,True,True,Meditation,97,115321,16036,PhD,30558,39,200,True,High,True,34.1032,479,unique alphanumeric strings,1,10,11,True
+False,347.8884,Large,False,True,,91,311038,14597,PhD,18174,32,200,True,High,False,35.0527,500,unique alphanumeric strings,2,12,13,True
+False,373.5172,Small,False,True,Exercise,100,336916,15613,Master,37310,34,200,True,High,True,42.1639,500,unique alphanumeric strings,3,14,13,True
+True,271.5752,Large,False,False,,90,121035,14763,Master,43726,34,200,True,High,True,48.4193,500,unique alphanumeric strings,3,13,10,True
+False,251.6189,Medium,True,False,Yoga,100,359607,14711,Associate,30580,42,200,True,High,False,40.5063,462,unique alphanumeric strings,1,17,9,True
+True,248.8022,Large,True,False,Meditation,89,232068,15427,Bachelor,4546,43,200,False,Medium,False,50.0849,481,unique alphanumeric strings,2,6,14,True
+True,299.1946,Large,True,False,Therapy,89,81433,16163,Master,23402,34,200,False,,False,41.5701,500,unique alphanumeric strings,3,4,4,True
+True,183.6655,Medium,True,False,Yoga,100,194602,16591,PhD,24626,25,200,True,High,False,46.8991,458,unique alphanumeric strings,2,8,0,True
+True,172.2224,Large,False,True,Meditation,91,10903,15324,Bachelor,13268,30,200,False,Medium,False,48.9923,473,unique alphanumeric strings,2,14,13,True
+False,362.5048,Large,True,True,Therapy,87,243494,14837,Associate,13661,33,200,True,High,False,40.8835,492,unique alphanumeric strings,3,10,9,True
+True,328.8182,Small,True,False,Exercise,93,184212,16582,PhD,500,27,200,False,Medium,True,57.8296,492,unique alphanumeric strings,2,7,13,True
+False,293.1627,Medium,False,False,Exercise,90,344246,16034,High School,40779,31,200,False,Low,True,54.4956,465,unique alphanumeric strings,2,11,6,True
+True,389.2666,Large,False,False,Meditation,91,175440,15192,Bachelor,817,38,200,False,Low,False,52.0332,500,unique alphanumeric strings,3,16,10,True
+True,286.5834,Small,False,True,Therapy,95,101811,16355,Associate,24338,43,200,True,High,False,46.3353,497,unique alphanumeric strings,3,11,13,True
+True,3.9371,Small,False,False,Exercise,88,197174,15517,PhD,35010,35,200,True,High,True,54.0943,482,unique alphanumeric strings,2,14,6,False
+False,153.351,Medium,False,False,Meditation,98,294337,13909,Associate,13911,28,200,False,Low,True,55.1455,431,unique alphanumeric strings,1,12,7,True
+False,398.5331,Small,False,False,,100,296134,16006,Master,500,43,200,True,High,False,46.7725,485,unique alphanumeric strings,2,12,5,True
+False,386.4916,,True,False,Meditation,99,218718,16149,Associate,44961,37,200,False,,False,57.8699,492,unique alphanumeric strings,3,7,9,True
+False,388.38,Small,True,True,,100,186462,15904,PhD,38459,36,200,False,Medium,True,47.6186,499,unique alphanumeric strings,3,11,0,True
+True,476.4887,Small,True,True,Yoga,97,111120,14255,High School,27853,33,200,False,Medium,True,57.7253,474,unique alphanumeric strings,2,9,0,True
+True,287.2155,Large,False,False,,97,304214,14838,Bachelor,15490,42,200,True,High,False,54.444,472,unique alphanumeric strings,2,13,2,True
+False,268.4915,Large,False,False,Yoga,86,207870,17085,Master,1881,33,200,False,Low,False,48.9512,469,unique alphanumeric strings,2,8,10,True
+False,211.3034,Medium,False,True,Therapy,100,165422,14234,Associate,38996,33,200,True,High,,47.5137,487,unique alphanumeric strings,3,9,3,True
+True,80.9269,Small,True,False,Therapy,99,165190,17803,Master,16793,39,200,False,Low,False,43.6635,500,unique alphanumeric strings,3,8,5,True
+True,120.975,Medium,False,True,Yoga,100,258305,16667,PhD,6115,30,200,False,Medium,False,59.4235,488,unique alphanumeric strings,1,13,2,True
+True,485.8254,Small,False,True,Exercise,87,213309,14978,High School,44226,30,200,False,,False,50.3639,480,unique alphanumeric strings,2,9,0,True
+False,72.0118,,False,False,Meditation,97,292541,15431,Associate,2381,39,200,False,,False,25.9289,469,unique alphanumeric strings,2,15,0,True
+False,263.3911,Small,False,False,,99,203653,16032,High School,14416,36,200,True,High,,43.7848,466,unique alphanumeric strings,2,10,12,True
+False,242.6648,Small,False,False,Yoga,100,160009,14362,PhD,4838,40,200,False,Low,True,44.1367,463,unique alphanumeric strings,2,7,11,True
+True,67.9114,Small,True,True,Therapy,94,187029,15406,Bachelor,7472,32,200,True,High,False,39.1229,455,unique alphanumeric strings,2,9,1,True
+False,343.4653,,False,False,Meditation,97,118525,15142,Master,35449,47,200,False,Medium,False,45.4759,444,unique alphanumeric strings,2,12,4,True
+False,285.4703,Large,True,True,Yoga,100,202231,13160,High School,16006,43,200,False,Medium,True,62.0809,500,unique alphanumeric strings,2,13,13,True
+True,348.5265,Large,True,False,Exercise,96,163559,16439,PhD,45000,32,200,False,Low,True,34.2441,469,unique alphanumeric strings,2,12,13,True
+False,119.0616,Medium,False,True,Therapy,93,261204,14477,Associate,16966,34,200,True,,False,45.7368,500,unique alphanumeric strings,3,12,3,True
+True,245.3629,Medium,True,True,Yoga,93,318069,15452,High School,21725,33,200,True,High,True,45.7502,464,unique alphanumeric strings,3,9,10,True
+True,356.4724,Small,False,True,,91,343146,14103,Master,6984,28,200,False,Medium,False,36.9334,490,unique alphanumeric strings,2,16,11,True
+False,236.933,Medium,True,True,Meditation,100,354883,15729,Bachelor,41052,32,200,False,Medium,True,47.4353,441,unique alphanumeric strings,3,14,14,True
+False,372.4855,,True,True,Yoga,94,236336,15389,High School,13785,40,200,False,Medium,True,53.0239,487,unique alphanumeric strings,2,11,7,True
+True,203.4093,,True,True,Yoga,96,295461,15035,Associate,26999,29,200,False,Low,False,38.4508,483,unique alphanumeric strings,2,10,0,True
+False,78.3777,,False,False,Therapy,100,114034,16160,Bachelor,17799,35,200,True,High,False,47.7006,453,unique alphanumeric strings,2,9,13,True
+True,116.1608,Small,True,True,Exercise,98,413837,14621,High School,13627,41,200,False,High,False,39.8396,484,unique alphanumeric strings,3,4,0,True
+False,437.5526,Large,False,False,Yoga,94,152664,15189,Master,28982,40,200,False,Medium,True,38.0975,500,unique alphanumeric strings,1,11,10,True
+True,194.317,Medium,False,True,Yoga,100,143891,16833,High School,30492,30,200,False,Medium,True,46.4525,484,unique alphanumeric strings,1,15,1,True
+True,250.1679,Large,True,False,Yoga,93,345767,14062,Associate,3588,33,200,True,High,False,39.6358,479,unique alphanumeric strings,1,8,0,True
+False,106.0065,Small,True,False,Exercise,94,139425,16258,High School,43032,40,200,False,Low,False,41.207,478,unique alphanumeric strings,2,11,9,True
+True,66.8182,Small,True,False,,100,341189,16959,High School,11885,42,200,True,High,False,46.6637,492,unique alphanumeric strings,1,9,5,True
+False,265.4423,,True,True,Therapy,98,225088,15544,Master,11057,38,200,False,,False,39.6439,479,unique alphanumeric strings,4,13,7,True
+True,196.6075,Large,False,False,Yoga,93,302196,14786,Master,16175,36,200,False,Low,False,48.8886,493,unique alphanumeric strings,3,7,0,True
+False,25.5387,,False,False,,100,211560,14739,PhD,33398,29,200,True,High,False,36.4536,496,unique alphanumeric strings,1,11,2,True
+True,280.8432,Large,True,True,Meditation,98,192770,15286,PhD,45000,34,200,False,Medium,False,53.9713,445,unique alphanumeric strings,3,13,7,True
+True,396.8392,,True,False,,92,309608,17665,Master,27600,35,200,False,Medium,,41.6549,484,unique alphanumeric strings,2,9,9,True
+False,434.8538,Medium,False,True,Therapy,94,279382,13697,Associate,18403,43,200,False,Low,False,48.2505,477,unique alphanumeric strings,1,10,6,True
+True,125.2947,Medium,True,False,Meditation,97,206734,16021,PhD,25283,47,200,True,High,False,49.5516,450,unique alphanumeric strings,3,12,14,True
+False,98.294,Large,False,True,,93,239016,16269,PhD,4244,36,200,True,High,False,33.945,421,unique alphanumeric strings,2,9,2,True
+True,436.2944,Large,False,False,,91,222058,16709,PhD,42526,37,200,False,High,False,48.379,485,unique alphanumeric strings,3,4,11,True
+True,95.1351,Large,True,False,Therapy,88,299325,15539,High School,22913,31,200,False,Medium,False,57.8506,450,unique alphanumeric strings,2,16,0,True
+False,141.5198,Small,False,False,Meditation,100,257408,16511,PhD,27564,36,200,False,Medium,True,26.7917,476,unique alphanumeric strings,2,16,8,True
+True,269.2841,Small,False,True,Exercise,98,157089,13378,Associate,26012,45,200,False,Medium,True,42.9616,488,unique alphanumeric strings,2,14,5,True
+False,192.4308,Medium,True,False,Exercise,94,186764,13935,Master,500,29,200,False,,False,55.4503,500,unique alphanumeric strings,4,6,3,True
+False,332.4708,Small,True,True,Yoga,98,195661,14489,Master,26453,39,200,False,Medium,True,30.3374,490,unique alphanumeric strings,1,7,11,True
+False,378.1043,Small,False,False,,100,210127,14950,PhD,9549,35,200,False,High,True,48.9177,476,unique alphanumeric strings,4,9,12,True
+False,212.5027,Small,True,False,Therapy,100,223427,14746,Master,34098,48,200,False,Medium,True,44.504,483,unique alphanumeric strings,2,15,2,True
+True,204.7715,Medium,True,False,Meditation,100,280335,16628,PhD,4250,37,200,False,Medium,False,39.6138,441,unique alphanumeric strings,2,9,0,True
+True,271.4578,,True,False,Exercise,100,189548,14244,Master,3775,27,200,False,Medium,True,42.0773,494,unique alphanumeric strings,2,16,3,True
+False,417.568,Small,True,False,Exercise,100,158581,16506,Associate,37897,36,200,False,Low,False,37.6748,485,unique alphanumeric strings,3,8,7,True
+True,476.1985,Medium,False,True,Yoga,91,163118,17231,High School,1220,43,200,False,,True,37.5009,454,unique alphanumeric strings,2,10,5,True
+True,165.4949,Medium,True,False,Yoga,100,366642,15586,PhD,23561,32,200,False,Low,True,52.327,481,unique alphanumeric strings,0,11,6,True
+True,357.6157,Large,False,False,Exercise,95,397695,15645,Bachelor,8340,44,200,False,Low,True,44.6481,459,unique alphanumeric strings,2,11,2,True
+False,197.2349,Large,True,True,Exercise,97,222611,16574,Associate,43105,34,200,True,High,True,35.9076,476,unique alphanumeric strings,1,10,14,True
+True,440.5082,Large,False,True,Exercise,99,175409,14911,Master,26519,40,200,False,Low,False,53.8691,500,unique alphanumeric strings,1,13,3,True
+False,485.3703,Medium,True,False,Therapy,87,195624,16298,Associate,22640,49,200,True,High,True,43.7459,494,unique alphanumeric strings,2,7,0,True
+True,444.8497,Medium,True,False,,95,214622,15042,PhD,8508,27,200,False,Medium,False,35.1328,500,unique alphanumeric strings,2,13,13,True
+False,152.3105,Small,True,False,Therapy,100,195164,15401,Master,29867,35,200,False,Low,True,26.9424,463,unique alphanumeric strings,3,12,6,True
+True,237.6719,Small,False,False,Exercise,99,304205,15870,High School,24515,28,200,False,Medium,False,42.1484,469,unique alphanumeric strings,2,12,11,True
+False,378.3562,Small,False,False,Exercise,94,247444,15769,High School,500,35,200,False,High,True,45.6482,469,unique alphanumeric strings,3,4,11,True
+False,76.6467,Small,False,False,Yoga,97,262230,15886,PhD,27427,35,200,False,Low,True,54.4849,466,unique alphanumeric strings,2,4,12,True
+True,323.3207,Medium,True,True,Yoga,100,387485,16497,High School,10418,36,200,True,,True,38.31,485,unique alphanumeric strings,2,11,11,True
+False,239.7861,Large,True,True,,96,301432,15220,PhD,11225,39,200,False,Low,False,46.6154,439,unique alphanumeric strings,1,7,7,True
+True,215.7296,Medium,False,True,Yoga,92,298645,15806,Master,36607,37,200,True,High,True,39.0267,451,unique alphanumeric strings,2,10,8,True
+False,37.3507,Medium,True,False,Exercise,100,301142,15843,Master,41560,39,200,False,Low,False,45.4487,421,unique alphanumeric strings,2,14,3,True
+False,500.0,Small,False,True,Meditation,93,354353,14384,Associate,25273,27,200,False,Low,False,41.9163,450,unique alphanumeric strings,1,7,6,True
+True,364.1086,Large,True,True,Therapy,92,338091,16036,Bachelor,21376,40,200,False,Low,False,45.8663,485,unique alphanumeric strings,3,7,0,True
+True,39.6212,Large,False,True,Meditation,89,258484,15000,High School,44796,37,200,False,Low,True,27.7946,500,unique alphanumeric strings,2,14,6,True
+False,35.519,Medium,True,True,Therapy,93,195167,15715,PhD,2194,41,200,False,Low,False,40.4535,481,unique alphanumeric strings,1,10,13,True
+True,399.7422,Medium,False,False,Therapy,98,142472,14489,Master,38683,34,200,False,Medium,False,27.5367,456,unique alphanumeric strings,3,8,4,True
+False,232.5787,Medium,True,False,Meditation,88,243014,15636,PhD,35628,28,200,True,High,False,44.1914,486,unique alphanumeric strings,2,8,9,True
+False,278.0926,Large,True,False,Exercise,100,333756,15366,Master,6048,39,200,True,High,,44.9488,443,unique alphanumeric strings,2,15,4,True
+True,350.252,Small,True,True,Exercise,100,253884,14504,Associate,43523,39,200,True,High,False,27.8909,487,unique alphanumeric strings,2,12,9,True
+False,346.0533,Medium,True,True,Meditation,93,229082,17097,Master,23338,37,200,False,Low,False,45.6635,457,unique alphanumeric strings,3,9,4,True
+True,246.3012,Medium,False,True,,88,249483,15078,PhD,42512,38,200,False,Medium,False,33.2346,473,unique alphanumeric strings,2,11,1,True
+False,57.4202,Large,False,False,Meditation,87,303605,13976,High School,18505,44,200,True,High,False,44.2389,500,unique alphanumeric strings,3,9,12,True
+False,495.7496,Large,False,True,Therapy,100,127418,16576,Bachelor,42232,35,200,False,High,False,43.919,450,unique alphanumeric strings,2,4,11,True
+False,171.606,Large,True,True,Meditation,100,175217,14171,High School,21467,37,200,True,High,True,44.1591,490,unique alphanumeric strings,2,9,5,True
+False,253.81,Small,False,True,Meditation,91,401894,16338,PhD,20250,35,200,False,Medium,,42.27,487,unique alphanumeric strings,2,5,0,True
+False,395.549,,True,False,,100,246866,16218,Associate,20937,30,200,False,Low,True,30.5385,491,unique alphanumeric strings,2,8,1,True
+False,478.7947,Small,False,False,Exercise,92,426432,15282,Master,29410,42,200,False,Medium,True,41.1085,449,unique alphanumeric strings,2,11,5,True
+True,197.5297,Large,False,True,Exercise,89,362279,13960,Master,14313,26,200,False,Medium,True,38.4539,487,unique alphanumeric strings,1,14,1,True
+False,176.7529,Large,False,True,Yoga,98,131846,13533,High School,29879,42,200,False,,True,39.4977,426,unique alphanumeric strings,2,14,0,True
+True,5.1065,Medium,True,False,Therapy,100,244523,13935,Master,44236,36,200,False,Medium,,43.4063,448,unique alphanumeric strings,3,10,7,False
+True,194.3533,Medium,True,False,Therapy,93,334823,15357,Bachelor,1054,37,200,False,Low,True,52.9576,500,unique alphanumeric strings,2,12,7,True
+False,301.2197,Medium,True,True,Meditation,92,288957,14667,Master,5918,32,200,False,Medium,False,51.7885,482,unique alphanumeric strings,2,13,10,True
+False,320.5724,Medium,False,True,,91,264168,15514,Associate,31361,45,200,False,Medium,True,29.5084,500,unique alphanumeric strings,2,13,10,True
+False,279.9096,Small,True,True,,98,279452,14698,Master,33123,43,200,False,,True,40.2018,465,unique alphanumeric strings,2,13,15,True
+False,196.5737,,False,False,Exercise,96,200919,16925,PhD,29061,38,200,False,,True,33.4911,500,unique alphanumeric strings,3,9,12,True
+True,259.2281,Large,True,True,,97,166203,15386,Associate,45000,33,200,True,High,True,40.024,500,unique alphanumeric strings,2,14,4,True
+True,101.7464,Large,True,False,,100,301840,13802,Master,34816,25,200,True,High,,43.6337,500,unique alphanumeric strings,0,9,0,True
+True,338.4236,Large,False,True,,100,264340,15015,Master,12415,31,200,False,Medium,True,40.9065,464,unique alphanumeric strings,0,14,8,True
+False,500.0,Medium,True,False,Therapy,100,208919,15399,PhD,34129,32,200,False,Low,True,41.2087,494,unique alphanumeric strings,2,8,7,True
+False,19.4651,Small,False,False,Therapy,91,259153,15161,Bachelor,29739,38,200,True,High,True,47.8254,500,unique alphanumeric strings,3,9,8,True
+True,231.6123,Large,True,True,Exercise,98,158297,15493,Associate,5849,33,200,False,Low,True,43.3433,500,unique alphanumeric strings,3,12,1,True
+False,344.0218,Medium,False,False,Meditation,90,194837,16187,High School,18680,26,200,True,High,False,41.1961,482,unique alphanumeric strings,2,9,3,True
+True,283.1,Large,False,True,Exercise,100,300869,13726,Master,40938,46,200,True,High,True,35.4176,482,unique alphanumeric strings,2,14,12,True
+True,453.0007,,True,True,Exercise,94,249564,15929,Associate,30514,40,200,True,High,False,27.3733,492,unique alphanumeric strings,3,8,0,True
+True,0.0,,False,False,Therapy,98,208280,14963,High School,40697,41,200,True,High,False,43.2367,437,unique alphanumeric strings,1,10,8,False
+True,6.064,,True,False,Exercise,99,282287,14024,PhD,35120,34,200,False,Medium,False,64.5914,456,unique alphanumeric strings,1,11,0,False
+False,389.3102,Large,True,True,Meditation,85,119575,16286,Master,9528,26,200,False,Medium,True,39.0184,500,unique alphanumeric strings,2,8,13,True
+True,252.9957,Large,True,True,Yoga,92,248375,15152,PhD,19453,35,200,True,High,,53.0324,484,unique alphanumeric strings,2,10,8,True
+True,410.5383,,True,False,Meditation,93,102600,14550,Bachelor,22910,34,200,True,High,False,31.5394,474,unique alphanumeric strings,1,11,14,True
+False,193.8275,Medium,True,False,Exercise,95,133625,13779,Associate,18226,32,200,False,,False,32.7227,483,unique alphanumeric strings,3,12,1,True
+False,163.1278,Large,False,False,Yoga,97,311233,16513,Master,4442,40,200,True,High,False,42.7354,474,unique alphanumeric strings,0,11,11,True
+False,263.0228,Large,False,False,Therapy,97,208874,15734,High School,32709,38,200,False,Low,True,39.2802,493,unique alphanumeric strings,2,10,3,True
+True,165.3113,,False,True,,95,131538,14280,Master,9725,43,200,False,Medium,,43.8,483,unique alphanumeric strings,2,12,3,True
+True,472.2279,Large,False,False,Meditation,96,192687,14941,Master,11372,25,200,True,,False,35.2833,500,unique alphanumeric strings,2,10,2,True
+False,125.0676,Small,False,False,Therapy,89,291857,15523,Master,23895,46,200,False,Medium,True,54.524,470,unique alphanumeric strings,1,11,5,True
+True,9.8378,Small,False,False,Therapy,95,119606,14016,Bachelor,33331,42,200,True,High,False,49.8723,498,unique alphanumeric strings,2,8,9,False
+True,276.8004,Medium,False,True,Therapy,95,268201,17051,High School,2319,35,200,False,Low,True,23.874,448,unique alphanumeric strings,3,7,9,True
+True,321.328,Medium,True,True,Exercise,100,220067,14060,Master,41921,36,200,False,Low,False,29.8238,498,unique alphanumeric strings,2,9,3,True
+False,52.9981,Medium,False,True,Exercise,94,207298,14860,Master,19815,35,200,False,Medium,False,44.4663,449,unique alphanumeric strings,2,13,1,True
+False,269.5919,Large,True,True,Yoga,100,389495,14572,Bachelor,19997,35,200,False,Medium,False,35.353,443,unique alphanumeric strings,3,10,10,True
+True,443.7013,Medium,True,True,,100,252832,14293,Bachelor,858,44,200,False,Medium,True,37.068,481,unique alphanumeric strings,2,9,2,True
+False,112.7494,Medium,True,True,,93,284715,16848,Bachelor,25213,37,200,False,Low,False,56.1219,455,unique alphanumeric strings,3,16,12,True
+False,323.9369,Large,True,False,Yoga,96,218127,15960,Master,30504,34,200,False,Medium,False,42.0654,450,unique alphanumeric strings,2,4,11,True
+False,0.0,Small,False,False,Meditation,98,416506,16602,Master,29563,33,200,True,High,True,35.1329,500,unique alphanumeric strings,2,10,8,False
+True,386.8274,Medium,True,True,Exercise,91,241119,14545,High School,37313,34,200,False,Low,True,36.5114,476,unique alphanumeric strings,1,16,13,True
+True,466.1895,Small,True,False,Yoga,100,341383,13029,PhD,24025,30,200,False,Low,False,51.644,467,unique alphanumeric strings,1,8,13,True
+False,123.7812,Medium,True,True,Therapy,97,135896,15695,Master,11777,39,200,True,High,False,26.1868,454,unique alphanumeric strings,3,13,11,True
+False,69.3356,Medium,False,True,Meditation,93,360249,16044,Master,7710,39,200,False,Medium,False,48.8707,481,unique alphanumeric strings,1,13,11,True
+True,379.7382,,False,False,Yoga,92,361433,16288,High School,41338,33,200,False,Medium,True,54.2967,456,unique alphanumeric strings,2,9,10,True
+True,307.5082,Small,True,True,Meditation,99,178974,14436,High School,15834,36,200,True,High,False,35.7732,495,unique alphanumeric strings,2,6,0,True
+True,332.6893,Small,True,True,Meditation,100,336867,15084,Master,33901,45,200,False,Low,False,51.6159,470,unique alphanumeric strings,3,8,7,True
+False,444.7316,Large,True,True,,97,298863,14625,Master,7380,43,200,False,,False,48.3608,500,unique alphanumeric strings,2,2,0,True
+False,414.6777,Medium,False,True,,94,104738,16035,High School,23053,37,200,False,Medium,False,36.5066,474,unique alphanumeric strings,2,12,2,True
+False,450.1701,Large,False,True,Therapy,100,150253,13013,Bachelor,19089,40,200,False,Low,False,52.5952,479,unique alphanumeric strings,3,16,10,True
+False,417.2603,Small,False,False,Yoga,96,140943,15847,Associate,8787,30,200,True,,False,53.6595,460,unique alphanumeric strings,2,8,14,True
+False,471.2065,Large,False,False,Meditation,100,436655,16002,Bachelor,14204,39,200,True,High,False,46.036,452,unique alphanumeric strings,3,8,9,True
+False,500.0,Small,True,False,Meditation,97,260474,14859,High School,42442,33,200,False,Medium,False,36.059,497,unique alphanumeric strings,3,13,11,True
+True,417.3804,,True,True,Therapy,99,203972,15348,High School,6531,39,200,True,,True,50.6352,500,unique alphanumeric strings,2,14,5,True
+True,368.2888,Large,False,False,Yoga,94,253572,17548,Master,2071,27,200,False,Medium,True,50.567,500,unique alphanumeric strings,3,12,3,True
+True,136.9874,Large,False,True,Exercise,97,330498,15011,Bachelor,6594,42,200,True,,False,52.9506,471,unique alphanumeric strings,3,8,0,True
+False,201.9856,Small,False,False,Exercise,100,77412,14146,High School,31707,26,200,False,Medium,True,42.47,494,unique alphanumeric strings,1,12,7,True
+True,89.1871,,False,False,Exercise,100,325700,14452,Associate,21035,31,200,True,High,True,42.3145,497,unique alphanumeric strings,2,18,11,True
+True,288.9458,Medium,True,False,Exercise,100,187778,15549,Associate,7516,33,200,False,Medium,False,64.9801,492,unique alphanumeric strings,1,12,4,True
+True,262.2345,Small,True,False,Meditation,100,192611,13732,PhD,2164,38,200,False,Low,False,45.7255,461,unique alphanumeric strings,2,9,1,True
+True,223.1661,Large,True,False,Therapy,89,204447,16041,PhD,43865,41,200,False,Low,,52.9171,500,unique alphanumeric strings,2,7,2,True
+True,440.6231,Small,True,True,Exercise,91,199117,15534,Associate,42624,35,200,False,Low,True,38.0318,472,unique alphanumeric strings,3,10,2,True
+False,217.8621,Large,True,False,Yoga,98,323846,14008,Associate,21367,37,200,False,Medium,True,32.4546,474,unique alphanumeric strings,2,14,8,True
+True,367.0595,Small,False,True,,95,241716,15265,PhD,30107,41,200,True,High,False,37.6834,456,unique alphanumeric strings,2,10,7,True
+True,82.2241,Large,False,False,Meditation,99,200306,14429,Master,17120,38,200,False,Medium,False,45.8903,481,unique alphanumeric strings,2,10,5,True
+True,95.3446,Large,True,False,Exercise,94,181209,13739,PhD,29227,38,200,False,Low,True,47.6685,474,unique alphanumeric strings,2,12,0,True
+False,383.7857,Large,False,True,Meditation,99,283718,14406,High School,27183,24,200,False,,False,45.0815,500,unique alphanumeric strings,2,7,14,True
+False,154.1565,Small,False,False,Exercise,100,100582,14614,Bachelor,32159,43,200,False,Low,False,45.2147,482,unique alphanumeric strings,2,13,2,True
+True,428.1917,Large,False,False,Meditation,100,341860,16246,Master,5857,41,200,False,Low,False,41.5517,445,unique alphanumeric strings,3,10,1,True
+False,463.747,Large,False,True,Meditation,100,240362,12960,PhD,29764,36,200,True,,,56.4277,500,unique alphanumeric strings,2,12,3,True
+False,243.1874,Large,True,False,Therapy,100,138158,15944,Bachelor,9887,54,200,False,Medium,False,32.8409,476,unique alphanumeric strings,2,10,11,True
+True,35.2853,Medium,True,True,Meditation,97,350258,14823,PhD,21262,50,200,False,Low,True,67.8658,457,unique alphanumeric strings,2,7,3,True
+True,263.6915,Large,True,True,Therapy,99,212079,15653,Associate,36476,42,200,False,,True,40.4159,430,unique alphanumeric strings,2,19,2,True
+True,164.969,Large,False,True,Therapy,93,251630,16159,Bachelor,36898,41,200,False,Low,True,38.6676,452,unique alphanumeric strings,1,7,10,True
+False,350.458,Large,False,True,Exercise,98,278549,15031,PhD,23506,33,200,False,Medium,False,48.5341,455,unique alphanumeric strings,2,10,9,True
+True,244.6666,,True,False,Therapy,100,270973,16321,Bachelor,36432,37,200,True,High,True,35.8172,447,unique alphanumeric strings,1,12,2,True
+True,8.8017,Large,True,True,,97,234965,14452,High School,12242,30,200,True,High,False,41.9909,492,unique alphanumeric strings,2,9,9,False
+True,197.6198,Large,True,True,Yoga,97,196671,16990,PhD,26454,31,200,False,Medium,False,52.3456,459,unique alphanumeric strings,2,6,4,True
+False,442.607,Small,True,True,Meditation,100,316039,15305,PhD,4981,37,200,True,High,True,53.325,445,unique alphanumeric strings,1,10,6,True
+False,98.2111,Large,True,True,Yoga,96,170922,14287,Master,32940,39,200,False,Medium,True,41.0027,445,unique alphanumeric strings,2,8,8,True
+True,81.8109,Large,True,False,Yoga,91,190031,14863,Bachelor,5078,28,200,False,Low,False,52.8679,466,unique alphanumeric strings,2,8,5,True
+True,395.0307,Small,False,False,Meditation,99,128154,15439,Associate,34285,33,200,False,Low,,36.3476,445,unique alphanumeric strings,1,16,7,True
+False,130.0413,Small,False,True,Therapy,94,185407,15036,Associate,19841,45,200,True,High,False,28.2829,434,unique alphanumeric strings,3,13,0,True
+False,435.4993,Large,True,True,Therapy,100,261282,16081,Bachelor,2092,36,200,False,Medium,False,44.7603,500,unique alphanumeric strings,2,14,0,True
+False,243.4214,Medium,True,False,Exercise,99,343883,14633,Bachelor,35707,36,200,False,Medium,True,40.7954,496,unique alphanumeric strings,1,11,11,True
+True,96.5834,,False,True,Yoga,92,321289,16867,PhD,16855,42,200,False,Medium,False,26.1576,488,unique alphanumeric strings,4,14,4,True
+False,367.3018,Medium,False,True,,100,145898,14775,Master,18813,41,200,True,High,False,48.2408,496,unique alphanumeric strings,2,8,10,True
+False,117.6679,Large,True,True,Exercise,100,22218,14198,PhD,39612,35,200,False,Medium,False,62.7693,445,unique alphanumeric strings,2,10,8,True
+False,22.7161,Small,False,True,Exercise,95,319115,15355,PhD,18950,30,200,True,High,True,44.5777,486,unique alphanumeric strings,2,15,3,True
+True,459.0858,Medium,True,True,Yoga,96,142778,15563,Master,34738,45,200,False,,True,34.9451,471,unique alphanumeric strings,2,15,11,True
+True,195.1426,Small,False,True,Yoga,100,104093,13556,Bachelor,38175,32,200,True,High,True,37.6538,500,unique alphanumeric strings,3,12,11,True
+False,170.0879,Small,True,False,Yoga,100,318385,15292,Associate,16700,43,200,False,Low,True,36.5625,489,unique alphanumeric strings,3,9,6,True
+True,125.0246,Small,True,False,Meditation,94,371139,14880,Master,29718,38,200,False,Medium,True,49.245,500,unique alphanumeric strings,2,11,1,True
+True,346.5809,Large,False,True,Yoga,97,274928,16858,Associate,4259,39,200,True,High,True,52.5352,458,unique alphanumeric strings,2,8,6,True
+True,361.188,Small,False,True,Exercise,90,204984,15504,PhD,14344,44,200,False,,False,31.703,500,unique alphanumeric strings,3,10,11,True
+False,158.3981,Large,False,False,Yoga,97,87349,15604,Master,21815,39,200,True,High,False,41.2923,436,unique alphanumeric strings,3,12,14,True
+True,428.7435,Medium,True,True,Yoga,99,229521,14205,Associate,23464,38,200,False,Medium,True,28.781,437,unique alphanumeric strings,0,21,9,True
+False,435.9795,Small,False,True,Yoga,98,301260,14827,High School,8942,34,200,False,Medium,True,53.096,479,unique alphanumeric strings,2,16,7,True
+True,87.5277,Small,True,True,Yoga,97,304480,15084,High School,31003,44,200,True,High,False,49.4481,466,unique alphanumeric strings,3,8,1,True
+False,271.6555,Large,True,False,,100,234798,14701,PhD,6911,25,200,True,High,False,41.164,440,unique alphanumeric strings,2,11,5,True
+False,389.9117,Medium,False,False,,96,200540,13894,PhD,4468,46,200,False,Low,True,43.8413,478,unique alphanumeric strings,3,7,6,True
+False,63.5042,Medium,True,True,Yoga,92,190702,14939,PhD,38869,40,200,True,,True,41.9712,480,unique alphanumeric strings,2,12,7,True
+False,482.3167,Small,False,False,Meditation,94,160640,15455,Associate,32585,29,200,False,Medium,False,36.7868,447,unique alphanumeric strings,2,17,5,True
+False,48.7792,Medium,False,False,Yoga,96,187828,14051,High School,28119,32,200,False,,False,61.8767,472,unique alphanumeric strings,3,8,8,True
+True,382.0913,Large,True,False,Exercise,88,278145,16561,PhD,7739,49,200,True,High,False,43.7225,500,unique alphanumeric strings,2,15,6,True
+False,474.4512,Medium,False,False,Exercise,96,329578,14454,PhD,11358,36,200,False,High,False,50.9458,491,unique alphanumeric strings,2,3,15,True
+True,344.5358,Small,True,True,Exercise,99,233235,15326,Master,19648,32,200,False,Low,True,37.2449,468,unique alphanumeric strings,3,12,7,True
+False,434.1006,,True,False,Yoga,95,430619,15825,Master,44002,37,200,False,Low,False,37.0029,467,unique alphanumeric strings,2,12,5,True
+False,127.7482,Large,False,False,Therapy,100,285833,15358,Bachelor,24589,31,200,True,High,True,40.8172,469,unique alphanumeric strings,3,15,1,True
+True,268.6209,Large,True,True,,99,230070,15100,Master,9362,33,200,False,Low,True,43.6845,500,unique alphanumeric strings,3,11,2,True
+False,478.6314,Large,False,False,Therapy,91,183657,15660,Master,23782,33,200,False,Low,True,43.6494,453,unique alphanumeric strings,3,6,9,True
+False,41.9633,Large,False,False,,99,325043,15676,Master,36241,41,200,True,High,True,35.2831,491,unique alphanumeric strings,2,14,0,True
+True,463.6031,Large,True,True,Meditation,100,216952,14939,High School,20719,32,200,True,High,,41.1513,444,unique alphanumeric strings,2,11,12,True
+False,472.7508,Medium,False,False,Yoga,100,260037,16395,Bachelor,28497,36,200,False,Low,,52.6398,500,unique alphanumeric strings,3,12,1,True
+False,71.5269,Large,False,True,Exercise,95,113678,17299,Bachelor,34208,42,200,True,High,True,40.3436,446,unique alphanumeric strings,2,8,5,True
+True,6.3631,Small,False,True,Yoga,96,221812,15839,PhD,27680,31,200,False,,,30.2897,465,unique alphanumeric strings,2,8,8,False
+False,496.8794,Large,True,True,Meditation,95,225639,15617,Master,37985,26,200,True,High,False,25.7278,477,unique alphanumeric strings,2,13,12,True
+True,397.6797,Large,True,True,,94,217035,15169,Master,4037,37,200,False,Medium,True,48.3058,500,unique alphanumeric strings,1,15,13,True
+False,465.6869,Small,False,False,Meditation,98,239269,13757,Associate,12504,25,200,True,High,True,50.342,500,unique alphanumeric strings,2,10,9,True
+False,416.306,Large,False,True,Exercise,100,181484,15882,Bachelor,34196,37,200,False,Medium,True,37.0868,432,unique alphanumeric strings,3,16,12,True
+False,88.3306,Large,False,True,Therapy,100,305118,15077,High School,34913,46,200,False,Medium,True,41.4691,495,unique alphanumeric strings,2,8,4,True
+False,109.6373,Large,True,False,Exercise,100,147186,14637,Bachelor,31358,43,200,True,High,True,55.809,495,unique alphanumeric strings,2,10,1,True
+False,413.9406,Large,True,False,Meditation,92,327795,15122,PhD,34801,38,200,False,Medium,True,39.5146,494,unique alphanumeric strings,3,11,5,True
+False,288.9429,Large,True,False,Meditation,100,175825,15496,Master,16673,40,200,False,Medium,True,31.7002,488,unique alphanumeric strings,1,10,0,True
+True,46.0931,Small,False,False,Exercise,95,322829,16246,Master,15203,35,200,False,Low,True,51.5779,500,unique alphanumeric strings,3,8,9,True
+False,48.2293,Large,False,True,,97,345324,14358,PhD,29315,31,200,False,Low,,39.8622,487,unique alphanumeric strings,3,8,12,True
+True,42.7938,Small,True,False,,86,56905,15851,Associate,32210,39,200,False,Low,True,36.2415,500,unique alphanumeric strings,2,11,10,True
+True,387.8091,Large,True,False,Meditation,96,263834,15247,Associate,4188,37,200,False,Medium,True,44.4658,471,unique alphanumeric strings,2,13,14,True
+True,231.4613,Small,False,False,Therapy,95,117818,14343,Associate,45000,35,200,False,Medium,True,46.2027,431,unique alphanumeric strings,2,14,11,True
+True,427.3498,Medium,True,True,Therapy,91,237354,14513,PhD,23029,36,200,False,Low,False,24.9928,500,unique alphanumeric strings,1,6,1,True
+False,368.118,Small,True,False,Therapy,93,151482,16038,Master,43989,43,200,False,Medium,True,51.262,460,unique alphanumeric strings,1,16,3,True
+False,50.1743,Medium,False,False,Exercise,98,235267,15410,Bachelor,24403,33,200,False,Medium,True,25.5596,456,unique alphanumeric strings,2,15,5,True
+True,481.5056,Medium,True,True,Therapy,99,275630,15361,High School,13994,49,200,False,Low,False,39.5157,495,unique alphanumeric strings,1,5,7,True
+True,280.3183,Medium,False,False,Exercise,99,338566,15010,Bachelor,36309,36,200,False,Medium,False,49.1161,500,unique alphanumeric strings,3,9,0,True
+False,174.3782,Medium,False,False,,92,256337,14264,PhD,6644,34,200,False,Low,False,41.2759,441,unique alphanumeric strings,2,10,0,True
+False,450.3464,Large,True,False,Therapy,100,196183,16765,Associate,35391,45,200,False,Medium,True,47.3533,459,unique alphanumeric strings,2,13,11,True
+False,138.8804,,True,False,Therapy,86,216108,16886,Bachelor,16227,32,200,False,Medium,False,35.7037,500,unique alphanumeric strings,3,15,4,True
+True,335.1776,Medium,True,False,Meditation,100,268233,15257,Associate,20913,44,200,False,Low,True,49.5574,457,unique alphanumeric strings,1,8,7,True
+True,470.3622,Small,False,False,Therapy,100,200990,14254,Master,21171,36,200,False,High,False,39.422,471,unique alphanumeric strings,2,1,9,True
+True,111.6236,Small,False,False,,92,256546,15432,Bachelor,34965,43,200,False,Low,True,38.8688,453,unique alphanumeric strings,1,7,5,True
+True,315.3383,Small,True,True,Meditation,91,124150,15038,Associate,41474,31,200,False,Medium,True,35.717,500,unique alphanumeric strings,1,8,13,True
+True,119.2028,,True,True,Therapy,97,188910,16688,Associate,13561,32,200,False,Medium,True,49.9693,469,unique alphanumeric strings,3,9,13,True
+False,179.8095,Small,False,True,Exercise,92,384899,15622,PhD,5850,24,200,False,Low,True,24.3692,481,unique alphanumeric strings,2,8,0,True
+True,228.7112,Medium,False,False,Exercise,91,257342,16646,PhD,7760,44,200,False,Medium,True,38.8447,457,unique alphanumeric strings,2,10,6,True
+False,173.0163,Large,False,True,Meditation,93,170572,14909,Bachelor,14482,27,200,False,Low,True,43.0424,500,unique alphanumeric strings,3,16,6,True
+False,247.6541,,True,True,,100,255136,15222,PhD,43137,43,200,False,,False,33.5144,470,unique alphanumeric strings,2,14,8,True
+True,482.5364,Small,True,False,Yoga,98,226653,14862,High School,38122,40,200,False,Medium,True,32.4722,456,unique alphanumeric strings,2,15,7,True
+False,157.1226,,True,False,,97,295124,14724,Bachelor,27118,37,200,True,High,False,38.9941,468,unique alphanumeric strings,2,14,10,True
+False,332.769,Large,False,False,Yoga,91,71712,14181,High School,23093,33,200,False,Low,,48.9671,465,unique alphanumeric strings,2,15,0,True
+False,58.2785,Small,True,True,Therapy,92,199470,14962,PhD,18150,44,200,True,High,True,30.9543,486,unique alphanumeric strings,1,16,0,True
+True,242.8941,Small,False,True,,91,205932,15578,Associate,39313,34,200,False,Low,False,41.6993,492,unique alphanumeric strings,1,12,6,True
+True,443.1256,Large,True,True,Meditation,96,199108,15854,PhD,32141,39,200,False,Low,False,28.945,458,unique alphanumeric strings,2,10,4,True
+False,279.2883,Large,True,False,Yoga,91,276526,15066,Associate,6159,42,200,True,High,True,43.5041,500,unique alphanumeric strings,3,8,15,True
+True,405.9897,Large,True,True,Yoga,99,119892,16604,High School,44292,27,200,False,Low,,42.7085,478,unique alphanumeric strings,2,8,8,True
+True,264.455,Small,True,True,Meditation,95,242712,16322,Associate,10945,46,200,False,Low,True,56.2203,444,unique alphanumeric strings,1,8,11,True
+True,215.2495,Medium,False,True,,100,263678,15552,Associate,16109,36,200,True,High,True,38.485,482,unique alphanumeric strings,2,9,8,True
+True,270.3943,Large,True,False,,97,232621,15861,High School,25678,32,200,False,,True,54.2696,480,unique alphanumeric strings,3,15,9,True
+False,165.9197,,True,False,Meditation,100,288430,14693,Master,20332,33,200,True,High,True,48.9151,492,unique alphanumeric strings,2,6,0,True
+False,253.0241,Large,False,True,Yoga,96,195591,15041,Bachelor,19327,32,200,True,High,False,42.5965,451,unique alphanumeric strings,3,9,5,True
+False,255.8129,Medium,True,False,Therapy,95,256010,14457,PhD,20816,34,200,False,Low,False,44.85,470,unique alphanumeric strings,2,13,4,True
+False,331.1754,,True,False,Yoga,89,364153,15214,PhD,22401,37,200,True,High,False,40.3421,455,unique alphanumeric strings,2,10,14,True
+False,36.2115,Large,True,True,Yoga,95,311279,15443,PhD,24890,32,200,False,Medium,,38.3895,475,unique alphanumeric strings,2,7,6,True
+False,398.3412,Large,False,False,Exercise,93,242146,14814,Associate,19409,38,200,False,Medium,True,44.4928,431,unique alphanumeric strings,3,15,2,True
+True,187.368,Small,True,False,,96,243331,16080,Associate,19985,35,200,False,Medium,True,42.7477,460,unique alphanumeric strings,3,9,9,True
+True,184.7598,Medium,False,True,Yoga,94,292233,14693,Master,8949,42,200,False,Medium,False,40.2384,491,unique alphanumeric strings,2,14,2,True
+False,443.0342,Large,False,False,Exercise,100,131099,15121,High School,35285,40,200,False,Low,False,47.2346,472,unique alphanumeric strings,2,12,3,True
+True,479.1737,Medium,False,True,Meditation,90,71028,14910,Bachelor,41757,35,200,False,Low,False,33.2809,472,unique alphanumeric strings,2,5,4,True
+False,430.7421,Small,False,False,Exercise,95,315328,16853,PhD,40643,31,200,False,Medium,True,44.3963,462,unique alphanumeric strings,3,13,9,True
+False,80.3284,Medium,True,False,Meditation,94,189308,16405,PhD,27103,38,200,False,Low,False,43.0559,473,unique alphanumeric strings,2,16,1,True
+False,229.5384,Medium,False,True,Meditation,92,197751,14920,Associate,36657,35,200,True,High,False,31.2869,500,unique alphanumeric strings,1,7,7,True
+False,481.4734,Medium,True,True,Exercise,84,289495,14534,High School,22652,37,200,True,High,False,40.1748,487,unique alphanumeric strings,3,13,1,True
+False,217.9698,Medium,False,True,Yoga,94,171095,15911,Master,25790,41,200,True,High,True,47.3798,468,unique alphanumeric strings,1,11,15,True
+True,98.6337,Large,True,False,Exercise,100,305993,16206,Master,28965,34,200,False,Medium,True,38.17,498,unique alphanumeric strings,1,7,1,True
+True,158.8284,Medium,True,False,Exercise,99,259524,15683,High School,9742,32,200,False,Low,,46.1725,500,unique alphanumeric strings,1,8,9,True
+False,289.52,Medium,False,True,Therapy,96,290357,13352,PhD,33757,43,200,False,,True,48.4417,479,unique alphanumeric strings,2,13,13,True
+True,282.7012,Small,False,True,Therapy,89,245145,16515,Master,28356,37,200,True,High,True,43.9109,500,unique alphanumeric strings,2,21,1,True
+True,180.8049,Medium,False,True,Yoga,97,285662,15027,High School,5531,30,200,False,,False,31.5123,500,unique alphanumeric strings,3,6,7,True
+True,455.2565,Medium,False,False,Yoga,99,189970,16167,High School,16826,32,200,False,Low,False,42.6274,483,unique alphanumeric strings,2,12,9,True
+False,363.7423,Small,True,False,Exercise,100,240237,16108,Associate,34613,27,200,False,Low,True,54.364,497,unique alphanumeric strings,4,12,13,True
+False,171.6097,Large,False,False,Yoga,100,337150,16087,Associate,33890,29,200,False,Low,True,49.6157,499,unique alphanumeric strings,1,12,0,True
+True,324.8304,Large,True,True,Therapy,90,155065,14272,High School,38142,32,200,True,High,False,49.7228,472,unique alphanumeric strings,1,9,9,True
+True,195.1283,Small,False,True,Therapy,100,305046,15838,High School,3471,40,200,True,High,False,43.2878,434,unique alphanumeric strings,2,16,3,True
+True,22.5295,Small,True,True,Meditation,98,224753,16367,Master,22039,41,200,False,Low,,38.0719,475,unique alphanumeric strings,2,8,12,True
+True,228.067,Large,True,True,,100,167479,16209,Master,15697,25,200,False,Low,False,27.9181,482,unique alphanumeric strings,2,14,1,True
+False,290.214,Small,False,True,Therapy,93,329146,16815,Associate,27953,38,200,False,Low,True,41.299,481,unique alphanumeric strings,4,15,2,True
+True,488.0684,Large,True,False,Therapy,100,310301,15889,High School,32932,35,200,False,Low,False,45.139,432,unique alphanumeric strings,2,9,0,True
+True,294.2829,,True,True,Exercise,100,250522,14015,Associate,5342,31,200,False,Medium,True,54.3244,408,unique alphanumeric strings,3,11,1,True
+True,37.7712,Medium,False,False,,100,210276,14443,High School,13994,37,200,True,High,False,37.5395,497,unique alphanumeric strings,3,12,0,True
+False,165.2078,Small,False,True,Exercise,100,228675,16928,High School,12366,32,200,False,Medium,True,46.5939,448,unique alphanumeric strings,2,9,3,True
+True,286.2615,Medium,False,True,Exercise,100,103304,17163,Master,26174,38,200,False,,False,39.041,496,unique alphanumeric strings,2,11,11,True
+True,115.931,Small,True,True,Meditation,100,158442,16321,PhD,5717,47,200,False,Medium,,44.2356,500,unique alphanumeric strings,2,11,0,True
+True,305.3059,Small,True,False,Meditation,97,260885,14560,Associate,34136,39,200,True,,,43.0133,423,unique alphanumeric strings,1,7,6,True
+True,147.6221,Large,True,True,Yoga,94,287619,14312,High School,39985,30,200,True,High,False,35.9649,464,unique alphanumeric strings,3,10,3,True
+False,427.7778,Large,False,True,Meditation,97,285628,13808,PhD,22669,42,200,True,High,False,48.0173,465,unique alphanumeric strings,2,9,5,True
+True,59.2566,Small,False,True,Exercise,98,296368,13343,High School,20880,45,200,False,Medium,False,36.6285,487,unique alphanumeric strings,3,4,8,True
+True,304.5225,Large,True,True,Exercise,94,206290,16160,PhD,12422,40,200,False,High,True,44.3759,500,unique alphanumeric strings,2,5,2,True
+False,268.2757,Small,True,True,,100,460126,15444,Associate,9482,34,200,True,High,True,48.4883,475,unique alphanumeric strings,2,6,7,True
+False,500.0,,False,False,Meditation,91,194982,14532,Associate,38229,39,200,True,High,True,34.2433,468,unique alphanumeric strings,2,10,8,True
+True,269.2667,Large,False,False,Meditation,93,156763,13667,Associate,2658,34,200,True,High,,31.0027,489,unique alphanumeric strings,2,11,2,True
+False,403.6852,Medium,True,True,Yoga,100,373885,13779,PhD,20491,36,200,False,High,True,44.895,446,unique alphanumeric strings,4,8,13,True
+True,310.1985,Small,True,False,Meditation,95,306515,15008,PhD,11742,39,200,False,Low,,38.2444,489,unique alphanumeric strings,3,13,6,True
+True,231.7425,Small,True,False,Therapy,93,380455,15473,Master,15835,33,200,True,High,,42.6742,500,unique alphanumeric strings,3,11,8,True
+False,328.5994,Small,True,True,,100,257907,16393,Bachelor,38178,33,200,False,High,True,35.075,500,unique alphanumeric strings,2,1,7,True
+True,108.4329,Small,False,False,Yoga,89,295927,15674,High School,44597,39,200,False,,False,42.2459,500,unique alphanumeric strings,1,6,1,True
+True,391.1289,Large,False,False,Meditation,95,189429,15386,PhD,24686,38,200,False,Medium,,33.6917,467,unique alphanumeric strings,3,7,10,True
+False,458.045,Medium,True,True,Meditation,88,312857,15251,High School,23914,36,200,False,Low,False,50.5493,469,unique alphanumeric strings,2,11,8,True
+False,244.8864,Small,True,True,Exercise,99,183789,14703,High School,27418,38,200,False,Medium,False,52.3768,453,unique alphanumeric strings,2,7,2,True
+False,473.7629,,True,True,Exercise,100,330447,13922,Associate,38658,26,200,False,Medium,True,41.5411,466,unique alphanumeric strings,1,13,0,True
+False,500.0,Medium,True,True,Therapy,100,137059,15497,High School,10244,35,200,False,Low,False,41.2752,474,unique alphanumeric strings,2,14,10,True
+True,451.3558,Small,False,True,Exercise,96,297404,13877,High School,32002,32,200,False,Low,False,52.6333,428,unique alphanumeric strings,2,14,14,True
+True,228.2542,Medium,True,True,Therapy,97,222142,16523,High School,14635,31,200,True,High,True,36.9566,392,unique alphanumeric strings,3,11,12,True
+False,318.6708,Small,True,True,,96,274829,15763,Master,4761,39,200,False,Low,False,34.717,483,unique alphanumeric strings,3,9,4,True
+True,102.0372,Small,False,False,Meditation,92,306852,15532,Bachelor,28665,34,200,False,Medium,True,52.2606,494,unique alphanumeric strings,1,16,10,True
+False,296.4528,Large,True,True,Therapy,99,234832,15648,High School,22156,36,200,True,High,False,40.8593,498,unique alphanumeric strings,2,9,4,True
+True,114.5286,Small,True,False,Yoga,91,225411,16018,Master,29661,42,200,True,High,False,41.2346,466,unique alphanumeric strings,2,14,11,True
+False,212.8651,Medium,False,False,Exercise,100,271521,16885,High School,22319,32,200,False,Medium,True,38.1257,461,unique alphanumeric strings,2,9,12,True
+False,492.4401,Medium,True,True,Meditation,100,127246,14881,Bachelor,6553,40,200,False,Low,False,48.6601,461,unique alphanumeric strings,2,11,5,True
+True,373.0244,Medium,True,True,Therapy,97,211676,16155,Associate,17090,32,200,True,High,False,37.7395,456,unique alphanumeric strings,2,10,13,True
+True,172.5964,Small,True,False,Therapy,100,207450,15438,Associate,18323,36,200,True,High,True,44.2967,463,unique alphanumeric strings,4,11,8,True
+True,32.5996,Large,False,True,Meditation,100,251722,16591,High School,7665,46,200,True,,,32.7572,474,unique alphanumeric strings,3,16,5,True
+False,323.774,Small,False,False,Exercise,93,205325,15256,High School,26338,35,200,False,,True,47.7072,500,unique alphanumeric strings,1,6,6,True
+True,53.9595,Small,True,False,Therapy,100,292581,15100,High School,44050,33,200,True,High,True,40.214,498,unique alphanumeric strings,2,11,12,True
+False,500.0,Medium,True,False,Exercise,100,190036,14516,Associate,26643,33,200,False,Medium,True,63.8406,469,unique alphanumeric strings,3,7,4,True
+True,404.595,Medium,False,False,Exercise,93,189180,16076,PhD,44624,33,200,False,,,52.3401,464,unique alphanumeric strings,2,10,7,True
+True,238.2931,Medium,True,False,,100,136869,14768,PhD,7941,40,200,False,Medium,False,41.9834,459,unique alphanumeric strings,1,9,6,True
+False,442.2953,Medium,True,True,,100,104578,13080,Associate,9688,40,200,False,Low,False,36.6784,472,unique alphanumeric strings,2,7,1,True
+False,39.5591,Large,True,False,Therapy,100,301019,13965,Associate,43816,41,200,False,Medium,False,35.8868,474,unique alphanumeric strings,3,15,2,True
+True,413.5006,Large,False,True,Exercise,100,247335,15078,Master,34008,29,200,True,High,False,44.3148,461,unique alphanumeric strings,2,6,2,True
+False,339.4169,Small,False,True,Therapy,95,294574,15380,Master,6302,40,200,True,High,True,54.7207,472,unique alphanumeric strings,2,8,5,True
+True,154.7596,Large,False,False,Meditation,100,392267,15895,Associate,9749,40,200,True,High,True,45.5386,469,unique alphanumeric strings,3,13,2,True
+False,129.0072,Large,False,True,Exercise,94,320251,14674,High School,8701,43,200,False,Medium,True,45.0243,496,unique alphanumeric strings,2,7,2,True
+False,307.2211,Large,False,True,Therapy,92,305366,15314,PhD,15571,33,200,True,,,30.9272,488,unique alphanumeric strings,2,15,12,True
+True,427.4429,Large,False,True,Meditation,100,205854,14796,PhD,15413,36,200,False,Low,,39.6889,484,unique alphanumeric strings,2,5,3,True
+False,223.7222,Medium,True,True,Therapy,92,220982,16501,Associate,27813,27,200,True,High,True,35.3461,475,unique alphanumeric strings,2,11,14,True
+False,233.3736,Small,False,False,,100,168639,15785,Bachelor,17802,35,200,False,Medium,True,50.1623,482,unique alphanumeric strings,2,12,5,True
+False,286.946,Medium,False,False,Meditation,98,235988,16274,PhD,33974,38,200,False,Medium,True,51.9522,473,unique alphanumeric strings,1,8,8,True
+True,250.9023,Medium,True,False,Therapy,90,134428,14970,PhD,1349,28,200,False,Low,True,48.2679,500,unique alphanumeric strings,2,9,9,True
+False,207.069,Large,False,False,Exercise,100,60320,14996,Bachelor,28104,41,200,False,Low,True,45.0785,461,unique alphanumeric strings,3,7,10,True
+False,216.8202,Large,False,True,,97,317077,14616,Master,38981,39,200,True,High,False,47.636,482,unique alphanumeric strings,2,6,12,True
+True,50.8635,Medium,True,True,,98,127546,15421,Associate,36567,35,200,False,Medium,True,45.1185,500,unique alphanumeric strings,3,13,1,True
+False,53.857,Large,False,True,Yoga,100,322549,13849,Bachelor,8380,35,200,False,Medium,False,41.6137,471,unique alphanumeric strings,1,11,13,True
+False,445.4477,Large,False,False,,96,188016,14478,Master,14840,38,200,False,Low,True,39.8841,469,unique alphanumeric strings,3,14,0,True
+True,105.0833,Medium,False,True,Yoga,97,262304,16357,PhD,23468,30,200,True,High,False,46.0939,469,unique alphanumeric strings,2,15,1,True
+False,198.7444,Medium,False,True,Therapy,100,284143,14963,Bachelor,30515,48,200,True,High,True,31.9723,455,unique alphanumeric strings,2,12,6,True
+True,478.8994,Medium,False,False,Therapy,100,141090,15330,Associate,16124,40,200,False,Low,,32.3627,497,unique alphanumeric strings,1,14,11,True
+False,115.9674,,False,True,Therapy,90,207160,17085,Master,6876,36,200,True,High,False,49.9639,471,unique alphanumeric strings,2,10,10,True
+True,5.1368,Small,False,True,Therapy,93,276930,14304,Bachelor,6731,25,200,True,High,False,44.4117,500,unique alphanumeric strings,3,9,1,False
+False,381.3184,Large,False,False,Therapy,96,229202,15735,Associate,26348,38,200,False,Low,True,32.3213,487,unique alphanumeric strings,1,12,5,True
+True,7.5941,Medium,False,False,Exercise,86,149079,16527,Associate,10174,39,200,False,Medium,True,35.567,428,unique alphanumeric strings,3,21,13,False
+True,6.1613,Small,False,True,Meditation,92,161996,15349,Bachelor,33491,26,200,False,Medium,False,39.8233,500,unique alphanumeric strings,1,13,0,False
+True,468.4952,Small,False,False,Exercise,98,400931,15677,Associate,36610,33,200,True,,True,49.6649,500,unique alphanumeric strings,2,10,11,True
+False,419.5389,Medium,True,True,Exercise,97,128713,15938,Bachelor,4443,35,200,False,Medium,False,48.0305,500,unique alphanumeric strings,2,8,12,True
+False,205.2086,,False,False,Yoga,100,169959,14785,Bachelor,18319,34,200,False,Low,False,55.5901,496,unique alphanumeric strings,1,1,5,True
+True,244.5746,Large,True,False,Meditation,98,253251,14430,Master,5821,44,200,False,Low,False,38.2783,490,unique alphanumeric strings,3,10,14,True
+False,145.8911,Small,True,True,Therapy,95,53314,14694,Master,32332,44,200,False,Low,False,48.1733,464,unique alphanumeric strings,1,7,4,True
+True,16.4506,Small,False,True,,99,215129,15348,High School,4167,29,200,False,Low,True,37.7626,487,unique alphanumeric strings,1,13,4,False
+True,393.6987,Large,True,False,Therapy,92,125282,15537,Bachelor,625,38,200,False,Low,False,48.5303,500,unique alphanumeric strings,2,2,6,True
+True,302.2966,Medium,True,False,Yoga,100,281385,14536,Master,23233,40,200,False,Medium,False,57.0502,500,unique alphanumeric strings,1,14,1,True
+True,279.5499,Large,True,True,Yoga,96,171224,15143,Master,29058,42,200,False,Medium,False,34.7387,486,unique alphanumeric strings,1,18,8,True
+False,363.1664,Small,False,False,,100,288065,16159,High School,33697,30,200,False,Medium,True,43.16,482,unique alphanumeric strings,1,8,6,True
+False,212.6618,Large,True,True,Exercise,94,307016,17187,Master,24648,41,200,False,Low,True,46.3384,500,unique alphanumeric strings,2,16,0,True
+False,390.2517,Medium,False,False,Exercise,90,95183,15587,Associate,33249,35,200,False,Medium,True,43.6841,500,unique alphanumeric strings,4,8,0,True
+False,0.0,Large,False,True,Meditation,95,84649,14214,Associate,34327,36,200,False,Medium,True,55.9154,490,unique alphanumeric strings,3,10,5,False
+True,391.1148,Medium,False,True,Exercise,100,152741,15148,Associate,13052,34,200,True,High,False,48.2758,485,unique alphanumeric strings,1,10,0,True
+True,181.407,Large,True,True,Exercise,97,176768,16691,PhD,7737,43,200,False,Low,True,47.1583,456,unique alphanumeric strings,1,14,9,True
+True,128.6082,,False,False,Yoga,100,320195,15391,High School,13590,43,200,False,High,True,38.4217,494,unique alphanumeric strings,2,3,0,True
+False,354.7552,Medium,True,True,Therapy,93,185117,15283,Associate,10816,30,200,False,Medium,False,31.7937,481,unique alphanumeric strings,2,10,9,True
+True,294.3733,Large,False,True,Meditation,98,328785,14813,High School,11817,31,200,False,Low,False,45.4163,487,unique alphanumeric strings,3,10,11,True
+True,449.2813,Medium,True,True,Meditation,94,293493,14096,High School,39244,42,200,True,High,True,49.1425,487,unique alphanumeric strings,2,17,3,True
+False,328.3577,,True,True,,100,204179,14892,Bachelor,2334,34,200,False,Low,False,40.8034,474,unique alphanumeric strings,2,16,9,True
+False,80.2409,Medium,False,False,Yoga,91,261062,14825,PhD,26988,37,200,False,Medium,,46.9003,500,unique alphanumeric strings,2,12,3,True
+False,128.5498,Large,True,False,Yoga,94,259609,16217,High School,17118,38,200,False,Low,True,44.6875,464,unique alphanumeric strings,2,11,9,True
+False,112.7085,Small,True,True,Yoga,94,180931,14891,Bachelor,11008,35,200,False,High,False,68.0612,500,unique alphanumeric strings,1,5,11,True
+True,178.7107,Small,False,True,Therapy,96,136082,14613,High School,42063,41,200,True,,True,57.2103,500,unique alphanumeric strings,3,11,9,True
+False,180.8554,Large,False,True,,94,288556,15555,Master,29536,30,200,False,Medium,False,50.3504,500,unique alphanumeric strings,2,14,0,True
+False,214.4145,Medium,False,True,Therapy,98,208286,15676,Associate,8016,31,200,False,Low,True,47.4835,481,unique alphanumeric strings,1,10,7,True
+False,467.7229,Small,False,True,,97,254795,15006,Master,33047,28,200,False,High,False,35.9159,479,unique alphanumeric strings,2,3,11,True

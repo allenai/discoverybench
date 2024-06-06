@@ -1,0 +1,162 @@
+{
+  "id": 1,
+  "domain": "ancient architecture",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to historic buildings, architectural marvels, and ancient construction techniques.",
+      "columns": [
+        {
+          "name": "structure_id",
+          "description": "Unique identifier for each structure"
+        },
+        {
+          "name": "modern_infrastructure",
+          "description": "Indicates whether the building is equipped with modern infrastructure such as electricity and plumbing."
+        },
+        {
+          "name": "site_location_region",
+          "description": "The geographical region the site is located in, like 'Tropical', 'Temperate', or 'Arid'"
+        },
+        {
+          "name": "has_stone_foundation",
+          "description": "Indicates whether the building has a stone foundation or not"
+        },
+        {
+          "name": "construction_year",
+          "description": "Year the structure was constructed"
+        },
+        {
+          "name": "ceremonial_use",
+          "description": "Indicates if the structure was used for ceremonial purposes"
+        },
+        {
+          "name": "material_origin",
+          "description": "Indicates if the building materials were locally sourced"
+        },
+        {
+          "name": "preventive_measures",
+          "description": "Indicates if routine preventive measures against erosion and material degradation are applied"
+        },
+        {
+          "name": "average_age_of_neighbors",
+          "description": "Average age in years of the nearby structures."
+        },
+        {
+          "name": "restoration_presence",
+          "description": "Binary indicator of whether the nearby area has ongoing or recent restoration efforts."
+        },
+        {
+          "name": "construction_method",
+          "description": "Indicates the predominant technology used in construction, such as 'Stone masonry', 'Adobe', or 'Wood'."
+        },
+        {
+          "name": "building_material_reflectivity",
+          "description": "Measure of how much sunlight the building's primary exterior materials can reflect"
+        },
+        {
+          "name": "urban_shadowing",
+          "description": "Binary indicator if the building is in an urban area with significant shadowing by other tall buildings"
+        },
+        {
+          "name": "structural_complexity",
+          "description": "A numerical score representing the complexity of the building's architecture."
+        },
+        {
+          "name": "height_meters",
+          "description": "Height of the structure in meters"
+        },
+        {
+          "name": "architectural_style",
+          "description": "Style of architecture of the structure"
+        },
+        {
+          "name": "average_daily_sunlight_hours",
+          "description": "Average number of hours per day the location receives sunlight"
+        },
+        {
+          "name": "durability_material_percentage",
+          "description": "Percentage of nearby ancient structures that utilize highly durable construction materials."
+        },
+        {
+          "name": "latitude",
+          "description": "Latitude of the building location, indicating distance from the equator"
+        },
+        {
+          "name": "preservation_score",
+          "description": "A numeric score representing the state of the building's degradation, with lower scores indicating more erosion and higher scores indicating better preservation."
+        },
+        {
+          "name": "average_tourist_visits_per_year",
+          "description": "Average number of tourists visiting the structure per year"
+        },
+        {
+          "name": "daily_visitor_count",
+          "description": "Average number of visitors per day"
+        },
+        {
+          "name": "facade_complexity_index",
+          "description": "Score representing the complexity of geometric patterns and ornamental design on the structure's facade"
+        },
+        {
+          "name": "average_wall_thickness",
+          "description": "Average thickness of the walls measured in centimeters"
+        },
+        {
+          "name": "neighbor_inscription_percentage",
+          "description": "Percentage of nearby ancient structures that have foundational inscriptions."
+        },
+        {
+          "name": "base_width_meters",
+          "description": "Width of the base of the structure in meters"
+        },
+        {
+          "name": "structure_age",
+          "description": "Age of the structure in years"
+        },
+        {
+          "name": "local_construction_materials",
+          "description": "The primary material used in the building's construction, categorized by local availability."
+        },
+        {
+          "name": "climate_harshness_score",
+          "description": "A numerical representation of the harshness of the climate where the structure is located, with higher values indicating more severe weather conditions"
+        },
+        {
+          "name": "in_historical_conservation_area",
+          "description": "Whether the structure is within a legally protected historical conservation area"
+        },
+        {
+          "name": "ratio_of_clear_to_cloudy_days",
+          "description": "The ratio of clear days to cloudy days annually at the building's location"
+        },
+        {
+          "name": "material_durability_score",
+          "description": "Score representing the durability of the primary construction material, higher values indicate stronger materials"
+        },
+        {
+          "name": "reliance_on_natural_lighting",
+          "description": "Whether the building design primarily relies on natural lighting for illumination and temperature regulation"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 128,
+      "question": "Is there a relationship between the architectural style of buildings and the combined factors of latitude, average daily sunlight hours, reliance on natural lighting, and facade complexity index?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "architectural_style",
+      "true_hypothesis": "Buildings with a calculated value based on latitude, average daily sunlight hours, reliance on natural lighting, and facade complexity index are classified as Gothic architectural style if the value is over a certain threshold, and as Classical otherwise.",
+      "true_hypothesis_expr": "np.where(((10 * np.abs(df['latitude'])/90 + 5 * df['average_daily_sunlight_hours']/24 + 15 * df['reliance_on_natural_lighting']) > 50) & (df['facade_complexity_index'] > 7), 'Gothic', 'Classical')",
+      "relevant_cols": [
+        "facade_complexity_index",
+        "reliance_on_natural_lighting",
+        "latitude",
+        "average_daily_sunlight_hours",
+        "architectural_style"
+      ]
+    }
+  ]
+}

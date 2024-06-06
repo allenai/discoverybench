@@ -1,0 +1,102 @@
+{
+  "id": 0,
+  "domain": "medieval literature",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to knights, epic poems, and medieval storytelling.",
+      "columns": [
+        {
+          "name": "region_of_origin",
+          "description": "The geographical region where the knight originated"
+        },
+        {
+          "name": "regions_with_epic_centers",
+          "description": "Indicates whether the knight originates from a region known for significant epic literature and storytelling (true) or not (false)."
+        },
+        {
+          "name": "knightly_vows",
+          "description": "Binary indicator of whether the knight has taken any specific knightly vows, reflecting adherence to chivalric codes."
+        },
+        {
+          "name": "accolade_count",
+          "description": "Total number of accolades received by the knight from tourneys and royal acknowledgments."
+        },
+        {
+          "name": "epic_poem_citations",
+          "description": "Number of times the knight is cited in different epic poems"
+        },
+        {
+          "name": "number_of_battles",
+          "description": "The number of battles the knight participated in"
+        },
+        {
+          "name": "castle_residencies",
+          "description": "Counts the number of castles a knight has resided in, reflecting their status and access to resources."
+        },
+        {
+          "name": "literacy_level",
+          "description": "Estimates the ability of the knight to read and write based on references in literature, on a scale from 1 to 10."
+        },
+        {
+          "name": "roles_of_distinction",
+          "description": "Whether the knight has been depicted in roles of high distinction or not (e.g., kingdom leaders, quest leaders)"
+        },
+        {
+          "name": "jousting_tournaments",
+          "description": "Indicates the number of jousting tournaments the knight has participated in, showing their active participation in knightly culture."
+        },
+        {
+          "name": "can_recite_verses",
+          "description": "Whether the knight can recite verses from epic poems (true) or not (false)."
+        },
+        {
+          "name": "troubadour_friendships",
+          "description": "Indicates the number of troubadours the knight is closely associated with, reflecting exposure to lyrical and oral storytelling traditions."
+        },
+        {
+          "name": "literacy_rates",
+          "description": "Percentage representing the literacy rate of the knight's originating region"
+        },
+        {
+          "name": "handedness",
+          "description": "Whether the knight is left-handed or right-handed"
+        },
+        {
+          "name": "region_epic_tradition_score",
+          "description": "Score rating the richness of the knight's region in terms of epic poetry tradition."
+        },
+        {
+          "name": "knight_tournaments",
+          "description": "Count of tournaments a knight has participated in"
+        },
+        {
+          "name": "regions_with_epic_traditions",
+          "description": "Whether the knight hails from a region known for strong traditions in epic poetry"
+        },
+        {
+          "name": "forest_coverage_percent",
+          "description": "Percentage of forest coverage in the knight's region of origin"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 630,
+      "question": "Is there a relationship between jousting tournaments and knightly vows that could potentially impact the knight's 'literacy_level'? Explore the dataset to verify.",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "literacy_level",
+      "true_hypothesis": "Knights with a higher number of 'castle_residencies', reflecting status and access to resources, and 'troubadour_friendships', indicating exposure to lyrical and oral storytelling traditions, have a higher 'literacy_level'.",
+      "true_hypothesis_expr": "df['castle_residencies'] * 5 + df['jousting_tournaments'] * 2 + 10 * df['knightly_vows'].astype(int)*0.2 + df['troubadour_friendships']*0.8",
+      "relevant_cols": [
+        "troubadour_friendships",
+        "castle_residencies",
+        "jousting_tournaments",
+        "knightly_vows",
+        "literacy_level"
+      ]
+    }
+  ]
+}

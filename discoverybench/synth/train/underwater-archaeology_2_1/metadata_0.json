@@ -1,0 +1,100 @@
+{
+  "id": 0,
+  "domain": "underwater archaeology",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to submerged artifacts, shipwrecks, and sunken cities.",
+      "columns": [
+        {
+          "name": "preserved_road_layout",
+          "description": "Indicates if the archaeological site has preserved road layouts"
+        },
+        {
+          "name": "sediment_concentration",
+          "description": "Amount of sediment in the water measured in grams per liter"
+        },
+        {
+          "name": "protected_marine_area",
+          "description": "Indicates whether the site is within a legally protected marine conservation area"
+        },
+        {
+          "name": "light_penetration",
+          "description": "Percentage of light that penetrates to the site, measured as a percentage"
+        },
+        {
+          "name": "underwater_visibility",
+          "description": "Visibility underwater at the site in meters"
+        },
+        {
+          "name": "number_of_artifacts",
+          "description": "Number of artifacts recovered from the site"
+        },
+        {
+          "name": "site_id",
+          "description": "Unique identifier for each archaeological site"
+        },
+        {
+          "name": "sediment_accumulation_rate",
+          "description": "Rate of sediment accumulation at the site in kilograms per square meter per year"
+        },
+        {
+          "name": "stone_structures_present",
+          "description": "Indicates whether stone structures are present at the site"
+        },
+        {
+          "name": "coral_reefs_present",
+          "description": "Indicates whether coral reefs are present at the site"
+        },
+        {
+          "name": "water_depth",
+          "description": "Depth of water at the site in meters"
+        },
+        {
+          "name": "visible_anchor_remains",
+          "description": "Count of anchor remains visible at the site"
+        },
+        {
+          "name": "permit_year",
+          "description": "Year when the excavation permit for the site was issued"
+        },
+        {
+          "name": "ocean_current_strength",
+          "description": "Measurement of ocean current strength at the site in knots"
+        },
+        {
+          "name": "site_depth",
+          "description": "Depth of the underwater site in meters"
+        },
+        {
+          "name": "depth_of_site",
+          "description": "Measure of depth at which the archaeological site is located, in meters"
+        },
+        {
+          "name": "site_discovery_date",
+          "description": "Date when the archaeological site was discovered"
+        },
+        {
+          "name": "current_speed",
+          "description": "Speed of the water current at the site, measured in meters per second"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 180,
+      "question": "What is the relationship between the presence of visible anchor remains and stone structures in underwater archaeological sites, and the indication of preserved road layouts?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "preserved_road_layout",
+      "true_hypothesis": "In locations with more than 10 visible anchor remains and stone structures present, preserved road layouts are indicated with 'yes' at underwater archaeological sites.",
+      "true_hypothesis_expr": "np.where((df['visible_anchor_remains'] > 10) & (df['stone_structures_present']), 'yes', 'no')",
+      "relevant_cols": [
+        "stone_structures_present",
+        "visible_anchor_remains",
+        "preserved_road_layout"
+      ]
+    }
+  ]
+}

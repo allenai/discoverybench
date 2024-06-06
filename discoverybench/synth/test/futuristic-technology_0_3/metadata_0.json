@@ -1,0 +1,105 @@
+{
+  "id": 0,
+  "domain": "futuristic technology",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to cutting-edge inventions, future gadgets, and sci-fi concepts.",
+      "columns": [
+        {
+          "name": "households_with_internet_percent",
+          "description": "Percentage of households in the area that have internet access."
+        },
+        {
+          "name": "digital_infrastructure_index",
+          "description": "An index from 0 to 10 measuring the quality and accessibility of digital infrastructure such as internet speed, public Wi-Fi access points, and digital education tools."
+        },
+        {
+          "name": "public_interest_in_tech",
+          "description": "Binary indicator of public interest in technology, where 1 represents high interest and 0 represents low interest, based on surveys and media analysis."
+        },
+        {
+          "name": "government_investment",
+          "description": "Amount of funds invested by the government in futuristic technology per year in millions."
+        },
+        {
+          "name": "urban_area",
+          "description": "Whether the household is in an urban area"
+        },
+        {
+          "name": "household_income",
+          "description": "Categorical income levels of the household"
+        },
+        {
+          "name": "stem_graduate_percentage",
+          "description": "Percentage of the total population that graduates each year with a degree in science, technology, engineering, or mathematics."
+        },
+        {
+          "name": "regulatory_change_rate",
+          "description": "The count of significant technology-related regulatory updates made per year."
+        },
+        {
+          "name": "smart_home_ownership",
+          "description": "Indicates if the household has smart home systems installed"
+        },
+        {
+          "name": "VR_training_facility_present",
+          "description": "Indicates whether the household has a virtual reality setup for technical training"
+        },
+        {
+          "name": "tech_patent_applications_per_1000",
+          "description": "Number of technological patent applications filed per 1000 residents in the area annually."
+        },
+        {
+          "name": "public_interest",
+          "description": "A rating from 0 to 100 reflecting public interest in adopting futuristic technologies in the area"
+        },
+        {
+          "name": "tech_workshops_frequency",
+          "description": "Number of technology-based workshops conducted in the region per year."
+        },
+        {
+          "name": "decision_making_robots",
+          "description": "Whether robots used can perform tasks requiring human decision-making"
+        },
+        {
+          "name": "investment_in_tech_sector_percentage",
+          "description": "Percentage of the family's total investments that are allocated to technology sectors"
+        },
+        {
+          "name": "number_of_robots",
+          "description": "Number of robot assistants used in the household"
+        },
+        {
+          "name": "annual_tech_expos",
+          "description": "Counts the number of technology exhibitions held annually in the area"
+        },
+        {
+          "name": "flagship_tech_company_presence",
+          "description": "Indicates if there is at least one flagship technology company (e.g., major corporations in innovation) in the area"
+        },
+        {
+          "name": "tech_openness_score",
+          "description": "Score rating the household's openness to technology on a scale from 1 to 10"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 648,
+      "question": "Is there a relationship between the level of public interest in technology and the count of significant technology-related regulatory updates made per year?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "regulatory_change_rate",
+      "true_hypothesis": "The count of significant technology-related regulatory updates made per year can be predicted by a combination of the percentage of the total population that graduates each year with a degree in science, technology, engineering, or mathematics, the level of public interest in technology indicated by surveys and media analysis, and the quality and accessibility of digital infrastructure measured by an index. A higher percentage of STEM graduates, increased public interest, and better digital infrastructure are associated with a higher count of annual regulatory changes related to technology.",
+      "true_hypothesis_expr": "round(5 * df['stem_graduate_percentage']/100 + 5 * df['public_interest_in_tech'] + df['digital_infrastructure_index'])",
+      "relevant_cols": [
+        "stem_graduate_percentage",
+        "public_interest_in_tech",
+        "digital_infrastructure_index",
+        "regulatory_change_rate"
+      ]
+    }
+  ]
+}

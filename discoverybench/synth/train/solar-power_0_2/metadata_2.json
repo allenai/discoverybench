@@ -1,0 +1,147 @@
+{
+  "id": 2,
+  "domain": "solar power",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to harnessing solar energy, photovoltaic technology, and sustainable power systems.",
+      "columns": [
+        {
+          "name": "industrial_area_presence",
+          "description": "Indicator if the area has significant industrial activity."
+        },
+        {
+          "name": "wind_speed",
+          "description": "Average wind speed in km/h."
+        },
+        {
+          "name": "altitude",
+          "description": "The elevation of the location of the house in meters"
+        },
+        {
+          "name": "season",
+          "description": "The season of the year"
+        },
+        {
+          "name": "solar_panel_efficiency",
+          "description": "The efficiency rating of solar panels commonly used in the region, expressed as a percentage."
+        },
+        {
+          "name": "hours_of_sunlight",
+          "description": "Average daily hours of sunlight"
+        },
+        {
+          "name": "sunlight_hours",
+          "description": "Total hours of sunlight received per day."
+        },
+        {
+          "name": "home_energy_storage_capacity",
+          "description": "Home's energy storage system capacity in kilowatt-hours"
+        },
+        {
+          "name": "region",
+          "description": "Geographic region of the solar paneled home"
+        },
+        {
+          "name": "roof_orientation",
+          "description": "Orientation of the roof primarily installed with solar panels"
+        },
+        {
+          "name": "temperature",
+          "description": "Average temperature during the month"
+        },
+        {
+          "name": "daylight_to_night_ratio",
+          "description": "The ratio of daylight hours to night hours"
+        },
+        {
+          "name": "cell_color",
+          "description": "Color of the photovoltaic cells in the solar panels"
+        },
+        {
+          "name": "inverter_type",
+          "description": "Type of inverter used in the solar panel system"
+        },
+        {
+          "name": "insolation_level",
+          "description": "Measured solar radiation incident on the solar panel"
+        },
+        {
+          "name": "number_of_clear_days",
+          "description": "Annual count of days classified as clear with minimal cloud cover"
+        },
+        {
+          "name": "average_daily_temperature_variation",
+          "description": "The average daily temperature fluctuation in degrees Celsius."
+        },
+        {
+          "name": "electricity_generated",
+          "description": "Amount of electricity generated in kilowatt-hours"
+        },
+        {
+          "name": "month",
+          "description": "Month during which the electricity generation data was recorded"
+        },
+        {
+          "name": "average_wind_speed",
+          "description": "Average wind speed in km/h during the month"
+        },
+        {
+          "name": "high_efficiency_appliances",
+          "description": "Indicates whether the household uses high-efficiency appliances (true or false)"
+        },
+        {
+          "name": "average_temperature",
+          "description": "The annual average temperature in degrees Celsius where the house is located"
+        },
+        {
+          "name": "locality_solar_energy_usage_percentile",
+          "description": "Percentile ranking of solar energy usage in the locality"
+        },
+        {
+          "name": "day_length",
+          "description": "Total day length in hours."
+        },
+        {
+          "name": "average_daylight_duration",
+          "description": "The average number of sunlight hours per day in the region."
+        },
+        {
+          "name": "cloud_cover_ratio",
+          "description": "Ratio of days with significant cloud cover to clear days annually"
+        },
+        {
+          "name": "has_solar_panels",
+          "description": "Whether the location has solar panels installed."
+        },
+        {
+          "name": "annual_snowfall",
+          "description": "Annual snowfall measured in centimeters"
+        },
+        {
+          "name": "region_type",
+          "description": "The classification of the region where the house is located"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 83,
+      "question": "What is the relationship between the average wind speed and the combination of high-efficiency appliance usage, locality solar energy usage, region type, average temperature, and altitude in the context of solar power systems?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "average_wind_speed",
+      "true_hypothesis": "The average wind speed is calculated based on a combination of high-efficiency appliance usage, locality solar energy usage, region type, average temperature, and altitude. Specifically, the formula considers the presence of high-efficiency appliances, locality solar energy usage, region being semi-urban, average temperature below 10 degrees Celsius, and altitude above 1500 meters.",
+      "true_hypothesis_expr": "((5 + 20 * df['high_efficiency_appliances'] + 0.3 * df['locality_solar_energy_usage_percentile']) * 2) + 10 * (np.where((df['average_temperature'] < 10) & (df['altitude'] > 1500), True, False) * 2) + 20 * (df['region_type'] == 'semi-urban')",
+      "relevant_cols": [
+        "region_type",
+        "high_efficiency_appliances",
+        "locality_solar_energy_usage_percentile",
+        "average_temperature",
+        "altitude",
+        "average_wind_speed"
+      ]
+    }
+  ]
+}

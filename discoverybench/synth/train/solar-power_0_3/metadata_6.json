@@ -1,0 +1,161 @@
+{
+  "id": 6,
+  "domain": "solar power",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to harnessing solar energy, photovoltaic technology, and sustainable power systems.",
+      "columns": [
+        {
+          "name": "day_length",
+          "description": "Total day length in hours."
+        },
+        {
+          "name": "month",
+          "description": "Month during which the electricity generation data was recorded"
+        },
+        {
+          "name": "wind_speed",
+          "description": "Average wind speed in km/h."
+        },
+        {
+          "name": "annual_snowfall",
+          "description": "Annual snowfall measured in centimeters"
+        },
+        {
+          "name": "number_of_clear_days",
+          "description": "Annual count of days classified as clear with minimal cloud cover"
+        },
+        {
+          "name": "season",
+          "description": "The season of the year"
+        },
+        {
+          "name": "average_daylight_hours",
+          "description": "Average number of sunlight hours the home receives per day"
+        },
+        {
+          "name": "inverter_type",
+          "description": "Type of inverter used in the solar panel system"
+        },
+        {
+          "name": "solar_panel_efficiency",
+          "description": "The efficiency rating of solar panels commonly used in the region, expressed as a percentage."
+        },
+        {
+          "name": "solar_panel_age",
+          "description": "Age of the solar panels in years"
+        },
+        {
+          "name": "electricity_generated",
+          "description": "Amount of electricity generated in kilowatt-hours"
+        },
+        {
+          "name": "daylight_to_night_ratio",
+          "description": "The ratio of daylight hours to night hours"
+        },
+        {
+          "name": "cell_color",
+          "description": "Color of the photovoltaic cells in the solar panels"
+        },
+        {
+          "name": "altitude",
+          "description": "The elevation of the location of the house in meters"
+        },
+        {
+          "name": "high_efficiency_appliances",
+          "description": "Indicates whether the household uses high-efficiency appliances (true or false)"
+        },
+        {
+          "name": "solar_intensity_zone",
+          "description": "Categorical classification of regions based on average annual solar radiation received."
+        },
+        {
+          "name": "cloud_cover_rate",
+          "description": "Percentage of the sky covered by clouds."
+        },
+        {
+          "name": "has_solar_panels",
+          "description": "Whether the location has solar panels installed."
+        },
+        {
+          "name": "hours_of_sunlight",
+          "description": "Average daily hours of sunlight"
+        },
+        {
+          "name": "region_type",
+          "description": "The classification of the region where the house is located"
+        },
+        {
+          "name": "average_daylight_duration",
+          "description": "The average number of sunlight hours per day in the region."
+        },
+        {
+          "name": "locality_solar_energy_usage_percentile",
+          "description": "Percentile ranking of solar energy usage in the locality"
+        },
+        {
+          "name": "tree_coverage",
+          "description": "Indicates presence of trees near the house (true or false)"
+        },
+        {
+          "name": "surface_temperature",
+          "description": "Average daily surface temperature in degrees Celsius."
+        },
+        {
+          "name": "home_energy_storage_capacity",
+          "description": "Home's energy storage system capacity in kilowatt-hours"
+        },
+        {
+          "name": "is_winter",
+          "description": "Indicates whether the record is during winter months (December to February)"
+        },
+        {
+          "name": "average_daily_temperature_variation",
+          "description": "The average daily temperature fluctuation in degrees Celsius."
+        },
+        {
+          "name": "region",
+          "description": "Geographic region of the solar paneled home"
+        },
+        {
+          "name": "average_temperature",
+          "description": "The annual average temperature in degrees Celsius where the house is located"
+        },
+        {
+          "name": "temperature",
+          "description": "Average temperature during the month"
+        },
+        {
+          "name": "sunlight_hours",
+          "description": "Total hours of sunlight received per day."
+        },
+        {
+          "name": "industrial_area_presence",
+          "description": "Indicator if the area has significant industrial activity."
+        },
+        {
+          "name": "roof_orientation",
+          "description": "Orientation of the roof primarily installed with solar panels"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 85,
+      "question": "What is the relationship between the average temperature, annual snowfall, hours of sunlight, and the classification as winter for homes in the dataset related to solar power?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "is_winter",
+      "true_hypothesis": "A home is recorded as being in winter if the average temperature is below 5 degrees Celsius, annual snowfall is above 40 cm, and the hours of sunlight are below 8.",
+      "true_hypothesis_expr": "np.where((df['average_temperature'] < 5) & (df['annual_snowfall'] > 40) & (df['hours_of_sunlight'] < 8), True, False)",
+      "relevant_cols": [
+        "average_temperature",
+        "annual_snowfall",
+        "hours_of_sunlight",
+        "is_winter"
+      ]
+    }
+  ]
+}

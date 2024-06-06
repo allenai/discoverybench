@@ -1,0 +1,109 @@
+{
+  "id": 0,
+  "domain": "cryptocurrency",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to digital currencies, blockchain technology, and decentralized finance.",
+      "columns": [
+        {
+          "name": "number_of_trading_platforms",
+          "description": "The count of different platforms on which the individual actively trades cryptocurrencies"
+        },
+        {
+          "name": "has_regular_access_to_internet",
+          "description": "Indicates whether the individual has regular access to the internet"
+        },
+        {
+          "name": "holds_multiple_currencies",
+          "description": "Whether the individual holds more than one type of cryptocurrency"
+        },
+        {
+          "name": "has_crypto_certifications",
+          "description": "Whether the individual has any formal certifications related to cryptocurrencies"
+        },
+        {
+          "name": "follows_crypto_news",
+          "description": "Indicates whether the individual regularly follows news related to cryptocurrencies"
+        },
+        {
+          "name": "uses_blockchain_technology",
+          "description": "Whether the individual uses blockchain technology actively in other domains than cryptocurrency trading"
+        },
+        {
+          "name": "age",
+          "description": "Age of the individual participating in decentralized finance"
+        },
+        {
+          "name": "investment_in_crypto",
+          "description": "Amount of money invested in cryptocurrency"
+        },
+        {
+          "name": "uses_defi_services",
+          "description": "Whether the individual uses any decentralized financial services"
+        },
+        {
+          "name": "online_course_enrollment_frequency",
+          "description": "Number of online courses related to digital skills enrolled in per year"
+        },
+        {
+          "name": "investment_likelihood",
+          "description": "Likelihood of the individual to invest in cryptocurrency based on unspecified factors"
+        },
+        {
+          "name": "types_of_cryptocurrencies_invested",
+          "description": "The count of different types of cryptocurrencies the individual has invested in"
+        },
+        {
+          "name": "monthly_blockchain_transactions",
+          "description": "The average number of blockchain transactions made by the individual per month"
+        },
+        {
+          "name": "number_of_cryptocurrencies_owned",
+          "description": "The number of different cryptocurrencies owned by the individual"
+        },
+        {
+          "name": "forum_participation_level",
+          "description": "The degree of participation the individual has in online forums discussing cryptocurrencies, rated from 1 to 5"
+        },
+        {
+          "name": "economic_condition",
+          "description": "Current economic condition expressed as normal, upturn, or downturn"
+        },
+        {
+          "name": "job_sector",
+          "description": "Sector of employment of the individual"
+        },
+        {
+          "name": "decentralized_finance_participation",
+          "description": "Whether the individual participates in decentralized finance platforms"
+        },
+        {
+          "name": "research_hours_per_week",
+          "description": "Average number of hours per week the individual spends researching cryptocurrency markets"
+        },
+        {
+          "name": "tech_workshops_attended",
+          "description": "Number of technology-focused workshops or webinars attended per year"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 239,
+      "question": "Is there a relationship between age, participation in decentralized finance platforms, and the likelihood of investing in cryptocurrency during economic downturns?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "investment_likelihood",
+      "true_hypothesis": "Individuals aged between 25-35 years, who participate in decentralized finance platforms, are more likely to invest in cryptocurrency during economic downturns compared to those outside the age range or not participating in decentralized finance, indicating a higher risk tolerance or different investment strategy among this specific group.",
+      "true_hypothesis_expr": "np.where((df['age'] >= 25) & (df['age'] <= 35) & (df['economic_condition'] == 'downturn') & df['decentralized_finance_participation'], 'High', 'Low')",
+      "relevant_cols": [
+        "age",
+        "economic_condition",
+        "decentralized_finance_participation",
+        "investment_likelihood"
+      ]
+    }
+  ]
+}

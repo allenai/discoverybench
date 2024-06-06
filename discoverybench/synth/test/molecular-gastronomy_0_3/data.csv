@@ -1,0 +1,501 @@
+peak_ingredient_availability,presentation_novelty,ingredient_rarity,special_equipment,is_special_event,microbial_population_optimal,number_of_cooking_techniques,cultural_significance,year_of_data_collection,culinary_patents_count,customer_satisfaction_rating,online_courses_count,preparation_steps,culinary_technique_cost,cooking_method,soil_richness_level,culinary_technique_heat,local_competitions_presence,celebrity_chef_presence,ingredient_origin,cooking_technology_level,predicted_variety_of_ingredient_types,sensory_impact_score,production_volume,temperature_suitability,beverage_pairing,chef_experience_level,media_exposures_count,seasonal_availability,exotic_ingredients,local_ingredient_usage,guest_preferences_variation,ingredient_matching_score
+False,1,1.0,True,False,False,7,False,2023,37,7.2684,7,5,125.6145,traditional,12,4,True,False,Asia,low-tech,5,6,82.6305,1.2,beer,Expert,95,True,False,75.7288,1,10
+True,1,1.0,False,False,True,8,False,2023,192,3.5586,7,5,104.4959,molecular,93,5,False,False,North America,low-tech,5,5,83.9792,10.0,cocktail,Beginner,83,True,False,71.3779,1,5
+True,1,1.0,False,False,False,10,True,2023,129,4.5976,7,5,97.7932,traditional,97,5,False,True,South America,high-tech,5,6,80.3586,9.7,cocktail,Beginner,91,True,False,88.2804,4,6
+True,1,1.0,True,True,False,8,True,2006,1,7.8248,8,5,116.3795,traditional,50,4,True,True,Europe,high-tech,9,6,83.7645,5.0,beer,Beginner,89,,False,86.1931,4,10
+True,1,1.0,False,False,False,7,False,2023,57,5.5628,6,4,117.3927,molecular,86,5,,False,South America,high-tech,5,6,72.9222,8.6,cocktail,Expert,79,True,False,83.7344,5,4
+True,1,1.0,False,False,True,7,True,2023,106,9.5687,8,4,102.6862,molecular,52,4,False,False,Asia,low-tech,5,6,82.6065,10.0,wine,Expert,90,,False,87.4742,1,4
+False,1,1.0,False,False,True,5,False,2023,9,9.6042,7,5,111.4329,molecular,65,4,True,True,Europe,high-tech,5,6,83.7827,10.0,wine,Expert,83,,False,81.1845,4,5
+,1,1.0,False,False,True,1,False,2023,200,9.4619,6,4,104.7776,traditional,91,4,True,False,Asia,high-tech,5,5,79.3448,10.0,cocktail,Expert,88,True,False,72.4722,4,5
+True,1,1.0,True,True,False,4,True,2023,117,2.9831,8,5,115.8423,molecular,94,4,True,False,Africa,high-tech,9,6,82.1999,9.4,none,Expert,78,False,False,73.9993,4,10
+True,1,1.0,False,False,False,9,True,2023,105,2.8559,9,4,112.7283,molecular,60,5,False,True,Asia,high-tech,3,6,80.6086,6.0,none,Intermediate,86,True,False,70.9258,4,5
+False,1,1.0,False,False,False,3,True,2023,100,8.5073,5,4,118.4871,traditional,78,4,True,True,Asia,low-tech,5,6,81.7573,7.8,beer,Expert,79,False,False,82.9967,3,4
+,1,1.0,False,True,False,2,False,2023,135,9.6531,7,4,99.9829,traditional,22,4,True,True,Asia,high-tech,7,5,82.6931,2.2,wine,Expert,79,False,False,70.0807,2,5
+True,1,1.0,True,False,False,3,True,2023,21,9.2135,6,5,100.5239,traditional,56,4,True,False,Europe,high-tech,5,5,82.0849,5.6,wine,Expert,91,True,False,82.44,1,10
+False,1,1.0,True,False,True,8,True,2023,158,2.0188,7,5,111.2285,molecular,43,4,True,False,Africa,high-tech,5,6,80.0034,9.3,cocktail,Expert,87,False,False,87.4645,2,10
+True,1,1.0,False,True,True,3,True,2023,104,8.6375,7,4,113.0415,traditional,61,4,True,True,Asia,high-tech,9,7,78.0824,10.0,wine,Beginner,79,False,False,87.2962,4,5
+False,1,1.0,False,False,False,13,False,2023,107,9.9073,9,6,117.1726,traditional,56,4,False,False,Europe,high-tech,3,5,88.3904,5.6,none,Expert,77,False,False,91.1143,1,6
+False,1,1.0,True,False,True,14,False,2023,101,7.1521,6,6,118.7357,molecular,28,4,False,False,Europe,low-tech,5,3,80.721,7.8,cocktail,Intermediate,86,True,False,68.6987,3,10
+True,1,1.0,True,False,False,7,True,2023,137,1.7715,9,6,100.4195,molecular,22,4,False,True,Asia,low-tech,5,4,74.6032,2.2,cocktail,Expert,79,True,False,80.1861,3,10
+,1,1.0,True,False,False,6,False,2023,95,1.8525,7,4,105.1716,molecular,25,5,True,False,Asia,high-tech,3,6,80.2577,2.5,none,Intermediate,89,True,False,74.5206,1,8
+False,1,1.0,True,False,False,10,False,2023,125,6.4726,6,5,119.3439,traditional,18,4,True,False,North America,low-tech,5,4,78.5894,1.8,beer,Intermediate,79,True,False,90.1591,2,10
+False,1,1.0,True,False,True,2,False,2023,91,2.7856,8,5,107.9899,molecular,8,4,True,False,Africa,high-tech,3,5,81.1478,5.8,none,Intermediate,93,False,False,68.8567,3,10
+,1,1.0,False,True,True,2,False,2023,181,8.6809,7,4,110.3374,traditional,30,4,False,True,Europe,high-tech,9,7,88.4187,8.0,wine,Beginner,84,True,False,81.579,4,5
+False,1,1.0,False,True,True,3,True,2023,122,3.9634,7,6,120.8363,molecular,37,5,,True,North America,high-tech,7,7,73.2114,8.7,wine,Expert,86,True,False,80.6852,2,6
+True,1,1.0,False,True,True,3,False,2023,23,5.2235,7,6,108.1484,traditional,60,4,False,True,South America,high-tech,8,7,80.478,10.0,cocktail,Intermediate,91,True,False,92.0512,3,6
+True,1,1.0,False,True,False,2,True,2023,48,4.8049,9,4,107.2639,molecular,35,4,False,True,Europe,high-tech,7,6,83.5593,3.5,cocktail,Intermediate,85,True,False,78.6969,2,4
+True,1,1.0,True,False,True,6,True,2023,35,8.67,7,5,118.341,molecular,79,4,True,True,North America,low-tech,3,5,86.4345,10.0,none,Intermediate,95,True,False,86.9349,2,10
+,1,1.0,False,False,False,13,False,2023,89,4.9102,6,5,122.5529,molecular,24,4,True,True,South America,low-tech,5,4,76.7627,2.4,cocktail,Expert,85,False,False,82.8546,2,5
+False,1,1.0,True,False,True,11,False,2023,18,7.6782,7,4,109.7677,traditional,37,4,True,True,Asia,low-tech,3,4,71.3218,8.7,none,Expert,91,False,False,75.0807,1,8
+False,1,1.0,True,False,True,12,True,2023,140,4.8286,9,4,108.7003,molecular,59,4,True,True,South America,high-tech,5,6,84.473,10.0,cocktail,Intermediate,85,False,False,79.3394,2,10
+True,1,1.0,False,False,True,5,False,2023,131,9.4039,8,4,118.0986,molecular,29,5,,True,Asia,low-tech,3,6,85.5637,7.9,none,Intermediate,88,True,False,81.7233,4,4
+True,1,1.0,True,True,True,1,True,2023,156,4.4026,7,4,115.2173,molecular,9,4,,True,South America,low-tech,6,6,82.2952,5.9,beer,Intermediate,80,True,False,77.7407,1,8
+False,1,1.0,True,True,False,12,False,2020,8,6.3507,8,4,109.8519,traditional,75,5,True,True,North America,high-tech,6,5,80.1045,7.5,wine,Intermediate,90,False,False,83.9713,1,8
+,1,1.0,True,True,True,2,True,2023,21,7.4191,7,5,111.5285,molecular,32,4,True,False,North America,low-tech,6,6,81.4534,8.2,beer,Beginner,81,True,False,80.4344,1,10
+False,1,1.0,True,True,True,5,True,2023,44,3.2924,8,4,113.0581,traditional,39,4,False,False,North America,low-tech,7,4,87.5863,8.9,none,Beginner,90,False,False,67.0413,2,10
+False,1,1.0,True,False,True,11,False,2023,51,8.3378,7,5,97.9667,molecular,22,4,False,True,Africa,low-tech,5,5,84.0881,7.2,cocktail,Expert,77,,False,82.6595,3,10
+,1,1.0,False,True,False,2,False,2023,128,8.9594,9,4,129.2013,traditional,98,4,True,True,Africa,high-tech,9,6,77.7061,9.8,none,Expert,81,False,False,82.6391,4,4
+True,1,1.0,False,True,True,1,False,2023,41,6.0299,8,6,122.8422,traditional,47,5,False,True,North America,low-tech,7,6,89.6799,9.7,wine,Expert,89,True,False,89.5571,2,6
+False,1,1.0,False,True,False,6,False,2003,5,5.3333,5,5,116.0849,traditional,28,4,True,False,South America,high-tech,7,5,77.1732,2.8,wine,Expert,88,True,False,78.1483,2,5
+True,1,1.0,True,True,True,12,False,2023,160,1.4438,7,5,117.3058,molecular,41,4,False,False,South America,low-tech,8,7,81.5073,9.1,wine,Intermediate,76,True,False,80.315,3,10
+False,1,1.0,False,False,False,8,True,2023,62,1.8136,7,6,121.141,molecular,16,4,False,True,North America,low-tech,3,6,89.5921,1.6,none,Expert,80,False,False,84.3409,2,6
+False,1,1.0,False,True,False,9,False,2023,48,3.9112,5,4,111.9515,molecular,85,5,True,False,North America,low-tech,6,6,85.7292,8.5,beer,Beginner,95,False,False,92.7681,1,4
+True,1,1.0,False,False,True,8,True,2023,58,4.2688,6,4,107.9528,traditional,6,5,True,False,Africa,low-tech,5,6,82.6477,5.6,beer,Intermediate,96,True,False,71.8948,3,4
+,1,1.0,False,True,False,10,True,2023,46,6.2979,7,4,114.5518,molecular,60,4,True,False,North America,low-tech,6,6,81.4945,6.0,beer,Intermediate,90,False,False,81.5814,1,5
+True,1,1.0,False,True,True,13,True,2023,174,8.0086,9,6,112.9327,molecular,75,5,False,True,South America,high-tech,8,6,80.06,10.0,none,Beginner,82,True,False,81.1547,3,6
+False,1,1.0,False,False,False,4,False,2023,64,6.5855,7,4,109.4478,molecular,32,4,False,False,Europe,low-tech,5,5,79.3694,3.2,beer,Intermediate,88,False,False,75.797,3,5
+True,1,1.0,False,False,True,14,True,2023,79,3.8919,6,5,113.7501,molecular,93,4,True,False,Asia,low-tech,5,6,76.8594,10.0,beer,Intermediate,83,True,False,69.3661,4,6
+False,1,1.0,False,True,False,6,True,2023,59,4.7993,8,6,122.6186,molecular,82,4,False,False,Africa,high-tech,7,5,83.0496,8.2,cocktail,Intermediate,79,False,False,82.3432,2,6
+False,1,1.0,True,False,False,2,False,2023,199,9.1686,7,5,110.7657,molecular,86,4,False,False,Europe,high-tech,5,7,87.9679,8.6,beer,Beginner,97,True,False,88.7098,3,10
+True,1,1.0,True,False,True,3,False,2000,0,7.8374,7,4,119.2251,traditional,62,4,True,True,South America,low-tech,5,5,87.4622,10.0,cocktail,Beginner,86,True,False,84.6153,2,10
+False,1,1.0,True,True,True,6,False,2023,82,3.568,7,4,110.5598,molecular,86,5,True,False,Africa,high-tech,8,6,73.0251,10.0,wine,Expert,81,False,False,75.7461,3,10
+True,1,1.0,False,False,False,6,True,2023,194,7.6759,6,5,102.7508,traditional,66,5,True,True,Africa,low-tech,5,6,85.772,6.6,cocktail,Expert,86,,False,67.6865,3,5
+False,1,1.0,False,False,True,8,True,2023,97,2.2369,7,4,109.6311,molecular,73,4,False,False,Europe,high-tech,5,5,80.9931,10.0,beer,Intermediate,93,True,False,82.9935,3,5
+False,1,1.0,False,True,True,12,True,2016,5,4.3652,6,5,110.4115,molecular,57,4,False,False,Asia,high-tech,9,5,81.9639,10.0,cocktail,Beginner,87,False,False,79.579,4,5
+True,1,1.0,False,True,True,12,False,2023,104,8.3757,7,5,114.8979,molecular,77,5,True,True,Asia,high-tech,6,5,84.6181,10.0,cocktail,Expert,91,False,False,83.1872,1,5
+False,1,1.0,True,False,True,8,False,2023,123,6.6618,10,4,113.6618,traditional,57,4,True,False,South America,high-tech,5,6,80.3179,10.0,wine,Beginner,87,False,False,70.6118,3,10
+True,1,1.0,True,True,True,4,True,2023,83,5.4603,8,5,118.9976,traditional,51,4,True,False,Europe,low-tech,8,5,78.6215,10.0,beer,Expert,92,True,False,77.4723,3,10
+True,1,1.0,False,False,True,7,True,2023,196,8.9323,8,4,106.7744,molecular,27,4,False,False,South America,high-tech,3,5,87.5527,7.7,none,Intermediate,84,,False,76.4931,4,5
+True,1,1.0,True,True,True,6,False,2023,19,2.8986,6,6,127.7998,molecular,18,5,True,True,South America,low-tech,6,6,72.7499,6.8,cocktail,Beginner,76,True,False,87.6857,1,10
+False,1,1.0,False,True,False,10,False,2023,137,3.6167,7,5,121.2558,traditional,23,4,True,False,Africa,low-tech,7,4,86.6103,2.3,wine,Beginner,92,True,False,82.569,2,6
+False,1,1.0,True,True,False,8,False,2023,109,9.7071,7,5,110.9673,traditional,13,4,True,False,Asia,high-tech,7,5,75.4124,1.3,cocktail,Beginner,76,False,False,74.863,2,10
+False,1,1.0,True,True,True,11,False,2023,149,8.7024,7,4,111.4122,molecular,55,4,True,False,Europe,high-tech,8,6,82.5651,10.0,none,Beginner,85,False,False,90.5085,3,8
+False,1,1.0,False,False,True,5,True,2023,176,6.631,8,4,104.4757,traditional,75,4,False,True,South America,high-tech,5,6,79.8255,10.0,wine,Beginner,84,False,False,73.2374,1,5
+True,1,1.0,True,True,True,7,True,2023,12,2.7184,7,4,109.8772,molecular,88,5,False,False,South America,high-tech,9,5,74.8124,10.0,wine,Intermediate,83,True,False,87.8714,4,8
+False,1,1.0,False,True,True,12,False,2023,30,4.0829,6,6,121.0907,traditional,76,5,True,True,Asia,low-tech,8,5,79.0983,10.0,beer,Intermediate,86,True,False,79.0822,3,6
+False,1,1.0,False,True,False,3,False,2023,152,7.0115,6,5,107.7535,traditional,28,4,False,False,Africa,low-tech,9,6,79.696,2.8,wine,Intermediate,81,True,False,75.5671,4,6
+False,1,1.0,True,True,True,10,True,2023,31,7.745,10,5,114.7417,traditional,65,4,True,True,Africa,high-tech,8,6,84.4641,10.0,cocktail,Intermediate,89,False,False,81.5366,3,10
+True,1,1.0,True,True,True,4,True,2023,24,1.427,8,4,120.7143,traditional,79,4,False,True,North America,high-tech,8,6,86.4186,10.0,beer,Expert,82,True,False,79.5567,3,10
+False,1,1.0,False,False,True,1,False,2023,190,5.6055,6,5,107.2872,traditional,74,5,,True,Europe,high-tech,5,5,81.291,10.0,beer,Intermediate,86,True,False,85.7457,1,5
+,1,1.0,True,False,True,6,False,2023,126,1.6251,7,5,118.5874,molecular,92,4,True,True,Asia,low-tech,5,5,83.308,10.0,beer,Expert,88,,False,84.9433,3,10
+True,1,1.0,True,True,True,12,True,2023,133,2.7309,6,5,111.4597,molecular,82,4,False,True,Europe,low-tech,9,5,80.1668,10.0,none,Intermediate,76,False,False,85.0417,4,10
+False,1,1.0,False,False,False,10,True,2023,73,3.3386,4,5,113.3512,molecular,4,5,,False,Africa,low-tech,3,6,76.2014,1.0,none,Intermediate,77,False,False,70.7023,2,5
+False,1,1.0,True,False,False,7,True,2023,17,9.1986,7,6,107.0825,molecular,88,4,False,False,Asia,low-tech,5,7,84.097,8.8,beer,Expert,82,True,False,81.9877,4,10
+False,1,1.0,True,True,False,2,False,2023,49,1.9382,8,4,109.9024,traditional,11,4,True,True,South America,low-tech,9,6,79.2046,1.1,beer,Intermediate,81,False,False,91.8709,4,10
+,1,1.0,True,False,True,11,False,2023,104,1.256,7,5,98.462,molecular,33,4,True,False,South America,high-tech,5,5,86.5693,8.3,cocktail,Intermediate,92,True,False,89.0524,5,10
+True,1,1.0,False,False,True,7,False,2023,131,8.7712,8,5,124.4431,molecular,72,4,True,False,North America,high-tech,3,5,82.7722,10.0,none,Beginner,87,True,False,75.4033,2,5
+True,1,1.0,False,False,True,11,True,2023,113,8.4214,7,4,109.6857,molecular,65,4,True,False,South America,low-tech,3,5,79.7363,10.0,none,Intermediate,82,True,False,73.4815,1,5
+True,1,1.0,True,True,False,2,False,2023,124,4.8884,6,4,111.8996,molecular,7,4,True,True,South America,low-tech,7,5,79.0286,1.0,wine,Expert,94,True,False,87.7317,2,8
+False,1,1.0,True,True,True,11,True,2023,195,7.8993,6,5,105.9427,molecular,69,5,False,False,Europe,high-tech,9,5,82.558,10.0,wine,Beginner,100,False,False,73.2308,4,10
+,1,1.0,False,True,True,9,False,2023,128,5.428,6,5,120.7207,traditional,73,4,True,True,North America,high-tech,7,6,84.3937,10.0,wine,Beginner,92,False,False,83.6846,2,5
+True,1,1.0,False,True,False,1,False,2023,7,4.149,7,4,112.4129,traditional,95,4,False,True,South America,low-tech,9,5,85.5922,9.5,beer,Expert,89,False,False,86.2659,4,5
+False,1,1.0,False,True,True,3,True,2023,151,5.6443,7,4,122.5136,molecular,54,5,False,False,Asia,high-tech,9,4,83.6292,10.0,beer,Intermediate,79,False,False,92.1473,4,4
+False,1,1.0,False,False,True,2,True,2023,153,1.6825,7,4,102.9698,molecular,9,5,False,False,Asia,low-tech,5,5,81.0933,5.9,beer,Beginner,87,True,False,93.6314,2,5
+True,1,1.0,True,False,False,5,True,2023,56,6.8055,5,4,115.596,molecular,2,5,False,False,Africa,low-tech,3,6,82.3181,1.0,none,Intermediate,83,True,False,87.9798,4,8
+True,1,1.0,False,True,True,7,False,2021,12,6.7919,7,4,119.625,molecular,86,4,True,True,North America,low-tech,7,7,80.2887,10.0,beer,Beginner,88,True,False,75.7198,2,5
+True,1,1.0,True,True,True,1,False,2014,5,5.2527,8,5,116.2682,traditional,51,4,False,False,Europe,low-tech,7,5,77.6433,10.0,cocktail,Beginner,88,False,False,92.8605,2,10
+False,1,1.0,False,True,True,7,True,2023,15,8.7631,7,5,124.7768,molecular,7,4,True,True,Europe,high-tech,9,6,85.2502,5.7,none,Intermediate,91,True,False,86.9242,4,6
+False,1,1.0,True,True,False,12,False,2023,83,7.9433,8,5,112.3996,molecular,81,5,False,False,Europe,high-tech,6,7,82.401,8.1,none,Beginner,82,,False,71.3008,1,10
+True,1,1.0,False,False,False,9,False,2023,148,5.829,8,4,114.3488,traditional,52,4,True,False,North America,low-tech,5,6,81.6349,5.2,beer,Expert,78,False,False,83.2166,1,5
+True,1,1.0,True,False,True,9,False,2023,191,7.4155,9,4,120.1098,molecular,100,4,True,False,Europe,low-tech,5,6,83.1467,10.0,wine,Beginner,90,False,False,83.6548,4,10
+False,1,1.0,True,False,False,8,True,2023,125,10.0,6,4,113.4852,molecular,35,4,False,True,Asia,high-tech,5,6,87.3311,3.5,cocktail,Expert,85,True,False,85.7178,1,10
+True,1,1.0,False,True,False,4,True,2023,62,9.0607,7,4,120.2988,molecular,41,5,True,True,Asia,high-tech,9,6,79.1321,4.1,cocktail,Expert,80,True,False,86.4363,4,5
+False,1,1.0,True,False,True,4,False,2023,186,3.5319,6,6,109.0414,traditional,40,4,False,False,Asia,high-tech,5,5,80.0862,9.0,cocktail,Expert,87,False,False,86.2572,1,10
+True,1,1.0,False,True,False,3,False,2023,87,7.0055,6,4,110.6469,traditional,28,4,True,True,Europe,high-tech,7,7,77.43,2.8,wine,Intermediate,83,True,False,80.3502,2,5
+False,1,1.0,False,False,False,9,True,2023,172,5.3784,6,4,110.8116,traditional,30,5,False,False,Africa,high-tech,5,6,80.1214,3.0,wine,Intermediate,85,True,False,78.015,1,4
+True,1,1.0,True,False,True,3,True,2023,124,6.2626,6,4,120.5896,molecular,73,4,False,False,South America,high-tech,5,7,74.929,10.0,wine,Intermediate,78,False,False,79.0468,3,8
+True,1,1.0,False,False,True,1,True,2023,173,3.3503,9,4,110.363,traditional,54,4,True,False,Europe,high-tech,5,6,78.78,10.0,cocktail,Expert,89,False,False,74.1943,2,4
+True,1,1.0,False,False,True,11,False,2023,174,2.0864,9,4,117.9865,molecular,24,4,True,True,North America,high-tech,3,5,70.004,7.4,none,Intermediate,93,False,False,79.5224,3,4
+False,1,1.0,False,False,True,8,True,2023,116,8.1545,7,5,108.2106,traditional,14,4,True,False,Asia,high-tech,3,6,77.8032,6.4,none,Expert,87,True,False,76.1644,3,5
+True,1,1.0,True,True,True,3,False,2023,19,5.7766,7,4,115.6039,traditional,59,4,,True,Asia,low-tech,8,7,81.8116,10.0,cocktail,Intermediate,93,True,False,73.5227,3,8
+True,1,1.0,False,False,True,2,False,2023,118,5.2915,9,4,124.3116,traditional,59,4,True,False,Africa,high-tech,5,5,81.5863,10.0,wine,Intermediate,86,False,False,77.3568,3,4
+False,1,1.0,False,True,False,14,False,2023,173,5.5763,7,4,116.7833,traditional,52,4,False,True,North America,low-tech,6,5,87.2812,5.2,cocktail,Beginner,91,True,False,70.9529,1,4
+True,1,1.0,True,False,False,3,False,2023,92,5.1196,6,5,117.672,molecular,11,5,True,False,Asia,high-tech,5,6,85.8285,1.1,beer,Expert,94,True,False,84.1139,1,10
+False,1,1.0,True,True,True,1,False,2023,100,7.4739,8,5,104.7529,molecular,47,4,False,True,Europe,high-tech,8,4,82.8568,9.7,cocktail,Expert,91,True,False,80.3168,3,10
+True,1,1.0,False,False,True,10,False,2023,93,9.1751,9,4,111.1969,molecular,26,5,False,True,Africa,low-tech,3,8,81.0897,7.6,none,Expert,86,False,True,71.4273,3,4
+False,1,1.0,True,True,True,9,False,2023,181,3.2787,6,6,128.2761,molecular,27,5,False,True,North America,low-tech,7,6,72.4441,7.7,wine,Expert,88,True,False,76.6039,2,10
+False,1,1.0,True,True,False,9,False,2023,35,4.403,7,4,118.6362,molecular,16,4,True,False,Asia,low-tech,7,5,79.7464,1.6,wine,Expert,85,True,False,76.7779,2,10
+False,1,1.0,True,False,False,7,False,2023,183,6.1025,7,4,105.4477,traditional,71,4,False,True,Africa,high-tech,5,6,86.1986,7.1,wine,Beginner,92,,False,84.5227,1,10
+True,1,1.0,True,True,False,11,False,2023,119,7.3207,8,6,120.8157,traditional,87,5,,True,Europe,low-tech,9,4,84.7816,8.7,wine,Intermediate,82,False,False,67.7042,4,10
+False,1,1.0,True,True,True,3,True,2023,46,8.9502,6,4,107.019,traditional,12,5,True,True,Asia,high-tech,8,5,82.4921,6.2,cocktail,Expert,77,False,False,81.3447,3,8
+False,1,1.0,False,False,True,5,True,2023,63,5.6691,8,5,143.0466,molecular,31,5,,True,Europe,high-tech,5,6,72.7154,8.1,wine,Beginner,74,False,False,77.0466,3,6
+True,1,1.0,False,True,True,10,True,2023,17,1.8715,6,4,124.5787,traditional,62,4,False,True,Africa,low-tech,10,6,88.5032,10.0,cocktail,Intermediate,82,False,False,84.7198,5,5
+False,1,1.0,True,True,True,9,True,2023,41,7.0353,10,6,112.2155,traditional,49,4,True,True,Europe,low-tech,7,5,77.3699,9.9,cocktail,Intermediate,91,False,False,88.0064,2,10
+False,1,1.0,True,False,True,2,True,2023,72,7.5755,9,6,102.2829,traditional,31,4,True,True,Asia,high-tech,5,4,89.1501,8.1,wine,Expert,79,False,False,84.9862,2,10
+False,1,1.0,False,False,True,3,False,2023,31,9.299,7,5,105.7042,traditional,58,4,True,True,Europe,high-tech,5,6,75.7534,10.0,beer,Beginner,81,False,False,92.1385,3,6
+True,1,1.0,False,False,False,10,False,2023,163,8.9744,9,4,114.3361,traditional,77,4,True,False,Asia,high-tech,5,7,80.9253,7.7,cocktail,Expert,86,True,False,93.1972,3,4
+False,1,1.0,False,False,True,3,True,2023,186,4.7031,6,5,109.5258,traditional,16,4,False,True,Europe,high-tech,5,4,85.7998,6.6,cocktail,Expert,75,,False,71.5048,4,5
+False,1,1.0,True,False,True,14,True,2023,24,3.6288,5,4,107.7802,traditional,8,4,True,False,North America,low-tech,5,6,74.4801,5.8,wine,Intermediate,87,False,False,79.5992,2,10
+False,1,1.0,True,False,False,1,True,2023,154,2.8444,8,4,118.9873,molecular,77,5,True,True,South America,low-tech,5,4,89.3592,7.7,wine,Beginner,78,True,False,91.8468,3,10
+False,1,1.0,False,False,True,12,True,2023,16,2.0599,7,5,118.7358,molecular,72,4,False,False,Asia,low-tech,5,5,88.9582,10.0,cocktail,Beginner,80,False,False,77.212,1,5
+True,1,1.0,False,False,False,2,False,2023,169,3.1664,6,4,109.8008,traditional,70,5,False,False,South America,high-tech,5,6,85.5967,7.0,wine,Expert,93,True,False,58.8955,4,4
+True,1,1.0,False,True,False,8,True,2023,42,4.3727,9,4,124.1091,traditional,24,5,False,False,North America,low-tech,9,7,79.8814,2.4,beer,Intermediate,71,,False,84.3306,4,4
+,1,1.0,False,False,True,1,False,2019,9,9.4196,7,4,110.5625,molecular,49,4,,False,North America,low-tech,5,6,90.4169,9.9,wine,Beginner,79,False,False,76.9963,4,4
+False,1,1.0,False,True,True,11,True,2023,80,2.6033,8,6,120.5966,traditional,18,4,False,True,Europe,low-tech,9,5,81.932,6.8,none,Beginner,86,False,False,90.9821,4,6
+,1,1.0,False,False,False,7,True,2023,68,6.9407,5,5,111.3167,molecular,29,5,True,True,Europe,low-tech,5,7,83.9941,2.9,beer,Intermediate,87,True,False,79.0114,2,5
+False,1,1.0,True,True,True,5,False,2023,108,3.3927,8,4,115.4747,traditional,14,4,True,True,South America,low-tech,6,6,86.0945,6.4,wine,Intermediate,97,True,False,72.7625,1,8
+,1,1.0,True,False,False,5,False,2023,43,2.4143,6,5,120.9318,traditional,45,4,True,False,North America,low-tech,3,7,77.1314,4.5,none,Beginner,80,False,False,68.8694,3,10
+True,1,1.0,False,False,True,13,True,2023,158,1.3173,5,5,104.6464,traditional,20,4,True,False,Africa,low-tech,3,5,72.8907,7.0,none,Expert,88,False,False,93.3041,1,5
+True,1,1.0,True,True,True,6,True,2023,168,8.5952,8,4,125.2032,molecular,33,4,True,False,South America,low-tech,9,5,84.3789,8.3,none,Expert,81,False,False,78.9431,4,8
+True,1,1.0,True,False,True,13,False,2023,19,5.4967,5,5,118.9,traditional,71,5,False,True,Africa,high-tech,5,6,72.3735,10.0,wine,Intermediate,87,,False,77.1009,3,10
+False,1,1.0,True,True,True,2,False,2023,167,1.0,10,4,100.0829,traditional,14,4,True,False,Africa,low-tech,6,4,85.3416,6.4,wine,Expert,85,False,False,80.7591,1,10
+False,1,1.0,False,False,False,4,True,2005,7,3.1986,5,5,112.7498,traditional,2,4,True,False,Europe,low-tech,5,4,79.7537,1.0,cocktail,Intermediate,93,False,False,82.1476,3,5
+True,1,1.0,False,False,True,3,False,2023,61,8.9951,7,5,123.2228,traditional,26,4,False,True,Europe,low-tech,5,6,78.1079,7.6,wine,Expert,95,True,False,67.2293,1,5
+False,1,1.0,False,True,False,3,True,2023,164,8.4658,7,5,110.9626,molecular,26,4,False,True,Europe,high-tech,9,5,84.1048,2.6,cocktail,Intermediate,86,True,False,90.1121,4,6
+False,1,1.0,True,True,False,7,False,2023,186,7.9288,8,4,110.987,traditional,23,4,False,False,North America,low-tech,7,6,83.3378,2.3,none,Intermediate,86,False,False,78.5466,2,8
+True,1,1.0,False,True,True,2,True,2023,158,8.1719,7,5,98.4688,traditional,70,5,,True,Europe,high-tech,7,7,93.072,10.0,cocktail,Beginner,89,False,False,75.7631,2,6
+False,1,1.0,False,False,False,2,False,2023,126,2.2646,4,5,121.3579,traditional,17,4,False,True,South America,high-tech,3,6,89.4966,1.7,none,Expert,82,False,False,82.0803,2,5
+False,1,1.0,True,False,False,12,False,2023,200,1.5857,5,5,124.548,traditional,87,5,False,True,North America,low-tech,5,5,83.7442,8.7,beer,Expert,91,False,False,95.2545,2,10
+True,1,1.0,False,True,False,12,False,2023,61,6.8299,7,5,114.2788,molecular,92,4,True,False,North America,low-tech,8,6,78.8018,9.2,cocktail,Beginner,75,False,False,76.0636,3,5
+True,1,1.0,False,False,False,8,True,2023,56,9.9826,7,5,105.9553,molecular,77,5,True,True,South America,high-tech,5,4,86.4195,7.7,wine,Beginner,86,True,False,91.3839,3,6
+False,1,1.0,False,False,False,8,False,2023,39,9.572,8,4,115.496,molecular,60,4,False,True,North America,high-tech,3,4,76.112,6.0,none,Expert,80,,False,80.7959,1,5
+True,1,1.0,False,False,False,6,True,2023,160,2.9101,7,4,116.4998,traditional,67,5,False,False,South America,low-tech,5,5,79.5893,6.7,wine,Expert,79,True,False,74.3289,3,5
+True,1,1.0,False,False,False,13,True,2023,160,1.0,6,5,115.1699,traditional,24,4,True,True,South America,low-tech,5,7,80.6758,2.4,wine,Intermediate,80,True,False,75.1099,1,5
+True,1,1.0,False,True,False,7,False,2000,4,8.351,6,6,120.5071,traditional,100,4,True,True,North America,low-tech,7,6,82.5568,10.0,beer,Expert,90,,False,85.7648,2,6
+False,1,1.0,True,True,False,4,True,2023,162,6.5321,9,4,113.4392,molecular,92,5,False,False,Europe,high-tech,9,6,83.8926,9.2,beer,Expert,84,False,False,82.028,4,8
+True,1,1.0,True,True,True,1,False,2023,130,1.3969,6,5,130.724,molecular,64,4,False,False,Europe,high-tech,9,4,86.1647,10.0,cocktail,Intermediate,82,True,False,82.6233,4,10
+False,1,1.0,True,True,True,7,False,2023,43,7.7043,8,4,128.6682,traditional,79,4,True,True,Africa,high-tech,7,6,80.8316,10.0,none,Expert,86,False,False,83.3215,2,8
+True,1,1.0,True,False,False,1,False,2023,110,1.0,8,5,109.6753,traditional,15,4,False,True,South America,low-tech,5,6,79.3103,1.5,beer,Intermediate,80,False,False,75.7685,4,10
+True,1,1.0,True,True,False,6,True,2023,163,4.8896,6,6,87.3684,traditional,38,5,False,True,South America,high-tech,8,6,81.137,3.8,beer,Beginner,84,False,False,88.8523,3,10
+False,1,1.0,True,True,True,12,False,2023,170,7.7933,7,5,130.8492,traditional,33,4,,True,South America,low-tech,7,6,87.3083,8.3,cocktail,Expert,79,True,False,81.5238,2,10
+True,1,1.0,True,True,False,10,False,2023,66,3.5958,5,4,120.7302,molecular,34,4,False,True,Africa,low-tech,7,5,78.3261,3.4,beer,Expert,94,True,False,84.9655,2,10
+True,1,1.0,False,True,False,7,True,2023,17,7.5195,7,4,115.6733,molecular,51,4,False,False,Europe,low-tech,9,6,76.2066,5.1,beer,Beginner,90,False,False,80.0353,4,5
+True,1,1.0,False,True,True,4,True,2023,151,1.8678,7,5,119.1836,traditional,33,4,False,True,South America,low-tech,6,5,78.5718,8.3,cocktail,Intermediate,90,True,False,87.3126,1,5
+False,1,1.0,False,True,True,6,False,2023,189,2.5678,8,4,113.3607,molecular,50,4,,True,South America,low-tech,6,4,76.4797,10.0,none,Expert,86,True,False,93.5626,1,4
+False,1,1.0,False,True,False,9,False,2023,40,1.2158,9,4,108.5692,molecular,8,4,False,False,Europe,high-tech,6,4,81.1698,1.0,cocktail,Intermediate,97,True,False,94.8356,1,5
+False,1,1.0,True,True,True,7,False,2023,164,8.9615,7,5,122.5055,molecular,37,4,True,False,Africa,low-tech,8,7,75.7829,8.7,none,Expert,87,,False,86.473,3,10
+,1,1.0,False,True,True,4,True,2023,29,9.439,8,5,104.8776,molecular,9,4,True,True,Africa,low-tech,7,6,89.4567,5.9,wine,Intermediate,69,False,False,86.9212,2,5
+False,1,1.0,False,True,False,8,False,2023,89,7.6091,7,5,107.9878,traditional,74,5,False,False,Africa,high-tech,6,5,80.1217,7.4,wine,Beginner,88,True,False,76.1923,1,6
+True,1,1.0,False,False,True,3,True,2023,126,1.2048,9,4,121.0279,traditional,55,4,True,False,North America,low-tech,3,5,84.8415,10.0,none,Expert,86,True,False,72.9023,4,5
+True,1,1.0,True,False,False,5,False,2023,109,9.5699,6,4,106.1784,molecular,7,4,False,False,Asia,low-tech,5,5,80.7602,1.0,cocktail,Beginner,84,,False,77.809,1,8
+False,1,1.0,True,False,True,10,True,2023,91,2.6524,9,5,106.2637,molecular,25,4,,False,Asia,high-tech,5,5,83.927,7.5,wine,Beginner,92,False,False,85.7263,3,10
+False,1,1.0,False,False,False,13,True,2023,81,1.7407,8,4,122.512,molecular,3,4,False,True,Africa,low-tech,3,4,85.6375,1.0,none,Beginner,83,True,False,81.0848,2,5
+False,1,1.0,False,False,True,3,False,2023,180,5.6025,7,5,115.6612,molecular,82,4,False,True,Europe,high-tech,5,6,86.8662,10.0,wine,Expert,90,False,False,79.2333,1,5
+True,1,1.0,True,True,False,9,False,2023,129,8.476,6,5,114.6603,traditional,44,4,True,True,South America,high-tech,7,5,85.6694,4.4,beer,Intermediate,87,False,False,75.6345,2,10
+False,1,1.0,False,False,True,2,False,2023,70,7.9746,8,4,117.2718,molecular,47,4,True,True,Asia,high-tech,3,6,86.3584,9.7,none,Beginner,76,,False,73.496,1,5
+True,1,1.0,False,True,False,3,False,2023,48,8.1409,6,4,102.5625,molecular,0,4,True,False,Asia,low-tech,9,6,81.7695,1.0,beer,Beginner,89,True,False,80.7631,4,4
+False,1,1.0,True,False,False,6,False,2023,185,9.4249,6,4,112.4699,traditional,88,5,False,True,South America,low-tech,5,7,81.029,8.8,cocktail,Expert,80,False,False,97.2331,1,10
+False,1,1.0,False,True,False,7,True,2023,113,3.5284,7,5,109.6376,molecular,100,5,True,True,North America,high-tech,8,5,88.2774,10.0,beer,Beginner,87,True,False,75.1244,3,5
+True,1,1.0,False,False,False,11,False,2023,72,7.6855,5,5,115.0543,molecular,35,5,,False,Europe,high-tech,3,6,79.2926,3.5,none,Beginner,89,True,False,87.6044,2,5
+,1,1.0,True,False,True,5,True,2023,171,1.7192,4,5,108.9763,traditional,40,4,True,True,Africa,high-tech,5,6,77.6347,9.0,beer,Beginner,98,True,False,75.1153,1,10
+True,1,1.0,False,True,False,1,False,2023,136,7.3068,6,5,114.292,molecular,27,4,False,False,North America,low-tech,9,6,77.4725,2.7,none,Expert,83,False,False,84.06,4,5
+,1,1.0,False,True,False,4,False,2023,182,4.539,4,5,120.9334,traditional,52,5,False,False,North America,high-tech,6,6,83.2157,5.2,cocktail,Intermediate,83,True,False,79.9071,1,5
+True,1,1.0,True,False,False,6,False,2023,63,8.9905,7,6,99.4638,molecular,3,4,True,False,Africa,high-tech,3,6,80.0138,1.0,none,Beginner,83,True,False,76.4573,2,10
+False,1,1.0,False,True,True,1,True,2023,85,8.1055,7,5,117.3279,molecular,24,4,False,False,North America,high-tech,7,5,83.0406,7.4,wine,Beginner,81,,False,81.5632,2,5
+True,1,1.0,False,False,True,8,False,2023,77,6.0438,8,5,123.6933,molecular,12,4,False,True,Africa,low-tech,3,7,76.9375,6.2,none,Beginner,83,True,False,82.4704,3,5
+False,1,1.0,False,False,True,9,True,2023,129,4.1942,8,4,121.4557,molecular,79,5,True,True,North America,low-tech,3,6,83.361,10.0,none,Expert,81,False,False,72.278,1,5
+False,1,1.0,False,False,False,10,True,2023,87,1.8734,6,5,106.3908,molecular,94,4,False,True,Africa,low-tech,5,7,79.9926,9.4,cocktail,Beginner,85,True,False,82.1325,4,5
+False,1,1.0,False,True,False,10,False,2023,31,2.6941,8,4,107.1521,molecular,5,5,True,True,Europe,low-tech,6,6,80.1049,1.0,wine,Beginner,77,True,False,79.783,1,5
+True,1,1.0,False,True,True,14,False,2023,27,6.972,8,5,126.685,traditional,64,4,False,True,North America,low-tech,9,4,77.1886,10.0,cocktail,Beginner,83,False,False,90.8913,4,5
+True,1,1.0,False,False,True,8,True,2023,77,9.0918,7,5,124.99,traditional,46,4,False,False,Europe,high-tech,5,5,78.6791,9.6,beer,Intermediate,88,False,False,84.2208,4,5
+True,1,1.0,True,True,False,1,True,2023,19,7.2266,6,5,103.07,molecular,63,5,False,True,Europe,high-tech,7,5,74.7699,6.3,cocktail,Beginner,73,,False,97.6091,2,10
+False,1,1.0,False,False,False,8,False,2023,12,1.2551,8,4,107.8571,molecular,47,4,False,True,Europe,high-tech,5,5,82.2426,4.7,cocktail,Beginner,92,True,False,82.3457,2,5
+True,1,1.0,False,False,True,4,False,2023,14,3.8082,6,4,124.299,traditional,89,4,False,True,Africa,low-tech,5,6,86.1314,10.0,cocktail,Beginner,85,,False,89.6752,2,4
+False,1,1.0,False,True,False,4,False,2023,94,7.6841,6,4,116.4394,molecular,1,5,True,False,Europe,high-tech,7,6,83.9014,1.0,beer,Beginner,89,True,False,89.8235,2,4
+True,1,1.0,True,True,False,14,False,2023,49,8.077,8,5,123.2914,traditional,70,5,True,True,Africa,high-tech,8,5,90.7099,7.0,none,Intermediate,85,True,False,78.5364,3,10
+False,1,1.0,True,True,True,10,True,2023,38,7.8863,5,4,119.7322,molecular,96,4,True,False,Africa,low-tech,9,6,81.213,10.0,wine,Expert,95,False,False,75.2824,4,10
+False,1,1.0,False,True,True,1,False,2023,70,3.4285,5,5,114.8177,traditional,5,4,True,True,Europe,high-tech,9,6,77.4373,5.5,beer,Expert,83,False,False,84.1989,4,5
+False,1,1.0,False,True,False,10,True,2023,191,5.3011,6,4,113.8688,traditional,46,5,True,True,North America,high-tech,9,6,81.255,4.6,cocktail,Intermediate,80,True,False,86.2569,4,5
+False,1,1.0,False,False,False,7,True,2023,170,2.3719,8,6,110.7412,traditional,94,5,True,True,Europe,low-tech,5,6,84.1697,9.4,beer,Intermediate,78,,False,79.8619,2,6
+False,1,1.0,True,True,False,4,True,2023,22,8.2352,5,4,117.9437,traditional,100,4,True,False,South America,low-tech,9,5,80.2871,10.0,beer,Expert,85,,False,83.841,4,10
+True,1,1.0,False,False,True,3,False,2023,188,6.4462,7,5,113.3046,traditional,46,4,False,False,South America,low-tech,5,6,89.6671,9.6,beer,Beginner,79,False,False,78.3193,2,5
+,1,1.0,True,False,True,2,True,2023,130,3.7805,6,5,120.8672,traditional,3,5,False,True,Asia,low-tech,5,6,83.3381,5.3,cocktail,Expert,79,True,False,90.915,2,10
+False,1,1.0,True,True,True,7,False,2023,73,9.5724,7,5,119.8008,traditional,64,4,False,True,South America,low-tech,8,6,77.7378,10.0,wine,Expert,86,True,False,85.805,3,10
+False,1,1.0,False,False,False,13,True,2023,18,3.8707,6,5,111.501,traditional,71,4,,True,North America,low-tech,5,5,79.7838,7.1,wine,Expert,75,True,False,77.7135,4,6
+True,1,1.0,False,True,False,7,False,2023,153,3.9237,9,4,104.539,molecular,22,4,True,True,Africa,low-tech,9,5,87.1534,2.2,cocktail,Beginner,78,True,False,92.0667,4,4
+False,1,1.0,False,True,False,8,True,2023,14,7.1452,6,5,121.5615,traditional,18,4,False,True,Africa,high-tech,8,7,85.6973,1.8,beer,Beginner,87,False,False,89.9039,3,5
+False,1,1.0,True,True,False,4,False,2023,178,10.0,6,4,123.936,traditional,17,4,False,False,Europe,high-tech,8,5,80.6466,1.7,cocktail,Expert,92,True,False,83.1973,3,10
+False,1,1.0,True,True,False,9,True,2023,174,3.9274,8,4,107.1561,traditional,82,4,False,False,North America,low-tech,7,7,81.0183,8.2,beer,Expert,80,True,False,87.1944,2,8
+False,1,1.0,False,False,False,10,False,2023,200,2.0104,6,4,122.9437,molecular,32,4,True,False,Europe,high-tech,3,6,85.2457,3.2,none,Intermediate,82,False,False,89.2058,2,4
+False,1,1.0,False,True,False,1,True,2023,53,7.1632,6,5,121.7633,molecular,72,4,False,False,Africa,low-tech,6,6,79.6715,7.2,cocktail,Beginner,81,True,False,84.1946,1,5
+True,1,1.0,False,True,False,8,True,2023,77,7.1454,9,5,127.3566,molecular,84,4,True,False,Asia,low-tech,6,6,75.3181,8.4,none,Expert,72,True,False,82.6241,1,5
+True,1,1.0,True,False,True,9,True,2023,161,8.6121,8,4,118.7969,traditional,23,4,False,True,South America,low-tech,3,4,81.5572,7.3,none,Intermediate,75,False,False,80.2924,3,10
+True,1,1.0,False,False,True,12,True,2023,142,5.1826,6,4,103.5024,traditional,12,4,False,True,South America,high-tech,3,5,80.0268,6.2,none,Expert,86,True,False,76.9777,3,5
+False,1,1.0,True,True,True,8,False,2023,64,1.4141,6,5,116.9469,molecular,11,4,False,True,South America,low-tech,8,5,74.5755,6.1,none,Beginner,83,False,False,84.2667,3,10
+False,1,1.0,False,False,False,4,True,2023,123,1.7084,5,4,130.0166,traditional,3,4,,False,Europe,low-tech,5,6,77.7869,1.0,beer,Intermediate,81,True,False,80.616,1,5
+True,1,1.0,True,False,False,12,False,2023,154,8.044,8,4,121.0209,molecular,74,4,True,True,Africa,low-tech,5,7,82.1314,7.4,cocktail,Expert,85,False,False,72.2574,1,8
+False,1,1.0,True,True,True,7,False,2023,90,5.6377,5,6,126.8276,traditional,72,4,True,True,South America,high-tech,6,7,87.8602,10.0,cocktail,Expert,81,,False,79.3628,1,10
+,1,1.0,True,True,False,13,True,2023,54,5.5908,6,5,105.9773,traditional,10,4,,False,Africa,high-tech,9,7,87.0856,1.0,wine,Expert,94,False,False,76.1076,4,10
+True,1,1.0,True,True,True,6,True,2023,53,3.7763,7,4,129.1829,traditional,20,4,True,True,South America,low-tech,7,5,87.2434,7.0,none,Intermediate,83,False,False,84.5073,2,8
+True,1,1.0,True,True,False,13,True,2023,74,6.1263,7,4,120.61,molecular,42,4,False,False,Africa,high-tech,8,5,78.3965,4.2,wine,Intermediate,85,True,False,87.4593,3,8
+True,1,1.0,False,True,True,3,False,2023,147,2.8809,8,4,117.5227,molecular,42,5,True,True,Africa,low-tech,8,5,77.7094,9.2,beer,Expert,78,True,False,80.1152,3,4
+False,1,1.0,True,True,False,13,False,2023,82,9.8218,6,6,105.7556,traditional,42,5,False,False,South America,high-tech,8,5,78.1866,4.2,wine,Expert,77,True,False,81.3725,3,10
+True,1,1.0,True,False,True,2,True,2023,122,4.3399,5,4,109.6073,molecular,87,4,False,False,Africa,low-tech,5,4,84.7987,10.0,beer,Beginner,89,True,False,73.8168,1,10
+True,1,1.0,True,False,False,8,True,2023,94,7.6888,6,5,107.4356,traditional,5,4,False,False,Asia,high-tech,3,7,87.4261,1.0,none,Expert,90,False,False,83.5211,3,10
+True,1,1.0,False,True,True,4,False,2023,54,3.7944,6,5,110.5302,molecular,81,5,False,False,Asia,low-tech,7,6,81.4943,10.0,cocktail,Expert,79,False,False,85.2548,2,5
+True,1,1.0,True,True,True,12,False,2023,52,5.9039,7,5,111.0081,molecular,89,4,True,True,South America,high-tech,8,5,78.7762,10.0,beer,Beginner,80,,False,79.0091,3,10
+True,1,1.0,False,False,True,6,False,2023,194,8.8669,7,6,127.9444,molecular,13,4,True,True,Europe,high-tech,5,5,85.8417,6.3,cocktail,Intermediate,99,False,False,74.2981,1,6
+True,1,1.0,True,True,False,8,False,2023,172,3.4236,7,4,109.9419,molecular,65,4,False,False,Asia,high-tech,6,5,83.3811,6.5,wine,Expert,90,True,False,84.5965,1,8
+False,1,1.0,True,True,False,10,False,2023,156,1.9197,5,4,125.2039,molecular,16,4,False,False,North America,high-tech,7,6,77.7094,1.6,cocktail,Intermediate,85,True,False,79.2483,2,10
+True,1,1.0,True,False,True,12,True,2020,11,5.486,8,5,126.3539,traditional,71,4,True,True,South America,high-tech,5,7,84.2605,10.0,wine,Beginner,90,False,False,98.7296,3,10
+True,1,1.0,True,False,True,8,True,2023,191,4.0262,6,5,118.4826,traditional,25,4,True,False,Africa,low-tech,5,5,88.8596,7.5,cocktail,Expert,90,,False,91.4233,4,10
+True,1,1.0,True,False,False,8,False,2023,116,1.7163,8,4,119.8234,traditional,61,5,False,False,Asia,high-tech,5,6,80.6805,6.1,cocktail,Beginner,83,True,False,79.1335,3,8
+False,1,1.0,True,False,False,1,False,2023,54,1.0,8,5,101.6392,traditional,72,5,False,True,South America,low-tech,5,5,83.8818,7.2,beer,Beginner,89,True,False,77.5751,2,10
+True,1,1.0,False,False,False,7,True,2023,188,3.7564,7,5,103.4477,molecular,66,5,True,True,Asia,high-tech,5,4,81.0144,6.6,wine,Intermediate,86,True,False,82.392,2,6
+False,1,1.0,False,False,True,7,False,2023,174,7.163,8,4,118.8638,traditional,47,5,False,True,Europe,high-tech,3,8,80.9878,9.7,none,Intermediate,86,False,True,87.0306,2,5
+True,1,1.0,False,True,False,10,True,2023,18,6.9668,6,5,116.108,traditional,36,4,True,True,Africa,high-tech,8,6,81.5978,3.6,cocktail,Expert,74,True,False,76.6917,3,6
+True,1,1.0,False,False,True,4,True,2023,25,9.5391,9,4,119.7097,molecular,50,4,True,True,Asia,high-tech,5,5,81.0556,10.0,wine,Expert,85,True,False,68.3787,4,5
+False,1,1.0,True,True,True,7,False,2023,34,1.4224,8,5,107.5637,traditional,21,5,True,False,South America,high-tech,7,5,77.1892,7.1,none,Beginner,93,True,False,77.823,2,10
+True,1,1.0,False,False,False,5,False,2023,21,1.576,7,4,113.8017,traditional,34,5,,True,Asia,low-tech,5,6,85.9742,3.4,beer,Intermediate,89,True,False,77.2618,4,5
+False,1,1.0,False,True,False,2,False,2000,0,2.6055,8,6,124.7462,traditional,68,4,True,True,South America,high-tech,8,6,88.343,6.8,beer,Beginner,77,,False,83.8777,3,6
+True,1,1.0,True,True,False,5,True,2023,58,10.0,7,5,125.4061,traditional,68,5,True,False,Asia,low-tech,6,5,81.5892,6.8,wine,Beginner,82,False,False,71.4657,1,10
+False,1,1.0,False,True,False,12,True,2023,149,9.1963,4,4,114.8165,traditional,90,4,False,True,Europe,low-tech,8,6,79.4447,9.0,none,Expert,84,True,False,75.4577,3,4
+False,1,1.0,False,False,False,7,True,2023,110,3.7316,7,5,108.2069,molecular,39,4,True,True,South America,high-tech,3,7,85.4881,3.9,none,Expert,72,False,False,79.3081,1,6
+False,1,1.0,True,True,False,11,True,2023,176,4.6027,8,5,128.3371,traditional,42,4,True,True,Europe,high-tech,6,5,77.0746,4.2,none,Expert,87,,False,74.7702,1,10
+False,1,1.0,False,False,False,3,True,2023,132,4.3246,7,5,114.9928,traditional,26,4,True,True,Europe,high-tech,5,5,82.4585,2.6,cocktail,Beginner,87,False,False,83.7238,5,5
+False,1,1.0,False,False,True,2,False,2023,172,7.2326,7,4,117.6194,molecular,89,4,False,True,Asia,low-tech,5,6,76.1432,10.0,wine,Intermediate,74,True,False,81.8291,4,5
+False,1,1.0,False,False,False,12,True,2023,98,9.7483,7,5,129.5689,molecular,94,4,False,True,North America,low-tech,5,6,87.5027,9.4,beer,Beginner,96,False,False,75.7664,2,6
+True,1,1.0,False,False,True,3,True,2023,39,6.2004,5,5,113.0721,molecular,90,4,True,True,North America,high-tech,5,6,75.8967,10.0,cocktail,Expert,87,False,False,88.6806,3,5
+False,1,1.0,True,True,False,11,True,2023,97,2.4336,7,4,115.3459,molecular,75,4,True,True,Europe,low-tech,6,5,77.1841,7.5,wine,Beginner,84,False,False,73.6882,1,8
+True,1,1.0,False,True,False,13,False,2023,109,7.2531,8,4,106.5422,molecular,1,4,True,True,Asia,low-tech,8,6,77.2507,1.0,cocktail,Beginner,88,False,False,87.3882,3,5
+True,1,1.0,False,True,False,3,False,2023,172,8.1456,7,4,107.746,molecular,76,5,True,False,Asia,high-tech,8,6,79.5143,7.6,wine,Beginner,79,False,False,83.8168,3,5
+True,1,1.0,False,True,True,4,True,2023,191,6.0269,9,4,112.1981,traditional,12,4,,True,North America,low-tech,7,6,76.3228,6.2,cocktail,Beginner,80,True,False,92.8091,2,4
+True,1,1.0,False,True,True,10,False,2023,148,9.7239,7,5,123.6922,traditional,6,4,False,False,North America,high-tech,6,6,83.6205,5.6,cocktail,Expert,83,True,False,79.3415,1,5
+False,1,1.0,False,False,True,8,True,2023,199,8.8399,8,4,111.1229,traditional,21,4,False,True,Africa,low-tech,5,7,76.4833,7.1,beer,Beginner,84,True,False,62.3127,1,5
+False,1,1.0,True,True,True,9,False,2023,83,3.0973,7,5,115.2848,traditional,85,5,,False,South America,high-tech,7,6,83.7715,10.0,beer,Expert,70,True,False,87.3491,2,10
+False,1,1.0,True,True,False,7,False,2023,53,5.4806,7,5,111.3185,molecular,36,4,True,True,South America,low-tech,8,6,85.3765,3.6,cocktail,Beginner,91,True,False,81.9868,3,10
+True,1,1.0,False,False,False,9,False,2023,156,4.3629,8,4,122.5242,molecular,40,4,False,False,Europe,low-tech,5,6,88.8263,4.0,beer,Beginner,91,True,False,83.5962,3,5
+True,1,1.0,True,False,False,4,True,2023,112,7.4341,8,6,113.1555,molecular,78,5,,False,North America,high-tech,5,6,82.6165,7.8,cocktail,Intermediate,77,True,False,83.6436,3,10
+False,1,1.0,False,False,True,6,False,2023,141,2.1526,6,4,122.3526,traditional,79,4,,True,Europe,high-tech,3,6,80.1891,10.0,none,Intermediate,91,False,False,81.976,1,5
+True,1,1.0,True,True,True,10,True,2023,37,1.4318,7,4,104.3735,traditional,92,4,True,False,Africa,low-tech,9,5,73.451,10.0,cocktail,Beginner,83,False,False,85.6135,4,10
+True,1,1.0,False,True,False,13,False,2023,103,3.8717,7,5,120.6811,molecular,16,4,False,False,North America,low-tech,9,6,86.5658,1.6,none,Beginner,77,False,False,86.2973,4,6
+True,1,1.0,True,True,False,12,False,2023,28,2.203,7,5,124.9272,molecular,56,4,False,False,Africa,high-tech,8,7,75.915,5.6,wine,Expert,93,True,False,96.6058,3,10
+True,1,1.0,False,False,True,11,True,2023,160,2.929,8,5,107.991,traditional,48,4,True,False,Africa,low-tech,5,6,80.5025,9.8,wine,Intermediate,79,True,False,82.9687,1,5
+False,1,1.0,True,True,True,8,False,2023,38,7.1906,6,4,110.0091,traditional,67,4,True,False,Asia,high-tech,7,6,92.1178,10.0,beer,Beginner,88,False,False,74.3701,2,8
+,1,1.0,True,True,True,6,True,2023,171,9.0521,6,6,130.3102,molecular,9,4,True,False,Europe,low-tech,6,6,78.2563,5.9,beer,Intermediate,86,,False,77.1733,1,10
+False,1,1.0,True,False,True,2,False,2023,164,7.5072,5,5,115.3408,traditional,86,4,True,True,Asia,high-tech,5,5,76.4776,10.0,wine,Expert,79,True,False,84.0383,2,10
+True,1,1.0,False,False,False,4,True,2023,141,3.4134,5,5,109.7809,traditional,99,4,True,False,Asia,high-tech,5,6,83.9939,9.9,beer,Beginner,84,False,False,78.3658,1,6
+False,1,1.0,False,True,False,9,True,2023,111,5.8601,6,5,105.7012,traditional,6,4,True,False,South America,high-tech,9,7,77.4272,1.0,wine,Intermediate,93,False,False,80.8297,4,5
+False,1,1.0,False,True,True,11,False,2023,86,9.386,7,5,114.4495,molecular,40,4,,True,North America,high-tech,8,5,82.8278,9.0,none,Beginner,88,True,False,83.161,3,6
+,1,1.0,True,False,False,9,False,2023,54,3.0041,7,5,95.0161,molecular,43,4,True,False,South America,high-tech,3,6,84.3777,4.3,none,Beginner,76,True,False,83.7347,2,10
+False,1,1.0,True,True,True,4,True,2023,60,8.1422,6,5,130.2455,traditional,72,5,False,False,Europe,high-tech,9,6,86.7247,10.0,cocktail,Expert,83,,False,83.5097,4,10
+False,1,1.0,True,False,False,1,True,2023,34,8.7612,8,4,112.634,traditional,53,4,False,False,Europe,high-tech,5,6,92.052,5.3,cocktail,Beginner,92,False,False,83.5482,3,8
+False,1,1.0,False,False,True,8,True,2023,15,7.4825,7,5,131.2581,molecular,69,4,False,False,South America,low-tech,3,7,85.2828,10.0,none,Intermediate,82,False,False,81.1942,2,5
+,1,1.0,True,True,False,11,False,2023,177,3.3451,8,4,108.6585,molecular,50,5,False,True,Africa,high-tech,9,7,81.2563,5.0,cocktail,Beginner,80,True,False,92.7749,4,8
+,1,1.0,False,False,True,1,False,2023,82,6.8673,6,4,101.556,molecular,32,4,,True,South America,high-tech,5,5,73.5911,8.2,beer,Intermediate,89,False,False,84.2905,3,5
+True,1,1.0,False,True,True,9,False,2023,87,10.0,9,5,112.3378,traditional,50,4,True,False,Asia,high-tech,9,6,81.572,10.0,beer,Beginner,80,True,False,60.1609,4,5
+True,1,1.0,True,True,True,5,True,2023,67,8.1941,6,4,108.011,molecular,45,5,False,False,Europe,low-tech,6,4,90.6916,9.5,wine,Intermediate,91,True,False,73.5734,1,10
+True,1,1.0,True,False,True,1,False,2023,175,4.7303,7,4,112.626,molecular,75,5,True,False,North America,low-tech,5,5,82.7342,10.0,wine,Beginner,91,True,False,77.4673,4,10
+False,1,1.0,False,True,True,9,False,2023,5,6.1501,8,5,108.2777,traditional,100,4,False,True,South America,high-tech,6,4,81.7135,10.0,beer,Expert,88,False,False,86.5138,1,6
+True,1,1.0,True,True,False,1,True,2023,200,3.2445,4,5,117.6849,molecular,37,4,False,True,Africa,low-tech,7,5,76.174,3.7,none,Intermediate,87,True,False,64.3415,2,10
+False,1,1.0,False,True,True,10,False,2023,32,8.7529,5,4,114.9837,traditional,5,4,True,False,Asia,high-tech,8,7,81.8144,5.5,cocktail,Expert,87,False,False,76.4044,3,5
+True,1,1.0,False,True,True,1,True,2023,16,6.4194,7,5,123.1211,molecular,36,4,,False,Africa,high-tech,10,6,80.1545,8.6,none,Beginner,96,False,False,85.8631,5,6
+True,1,1.0,True,True,True,4,False,2023,175,6.3196,7,4,127.2037,molecular,66,4,False,True,Europe,low-tech,8,4,82.1698,10.0,none,Intermediate,85,True,False,83.7702,3,8
+,1,1.0,True,False,True,11,False,2023,22,8.1547,5,4,108.0616,traditional,77,4,True,True,North America,low-tech,5,5,86.7861,10.0,cocktail,Beginner,86,False,False,94.6623,2,8
+True,1,1.0,False,False,False,1,False,2023,144,9.4268,7,6,118.9628,molecular,37,4,False,True,South America,low-tech,5,5,80.8141,3.7,wine,Beginner,83,True,False,77.487,3,6
+True,1,1.0,True,False,True,7,False,2023,167,3.2353,7,4,114.4568,traditional,77,5,False,False,North America,low-tech,3,6,82.5161,10.0,none,Intermediate,79,True,False,76.1831,4,8
+False,1,1.0,True,False,False,14,False,2023,18,4.8585,7,5,122.9124,traditional,100,4,False,True,Asia,high-tech,5,6,82.3076,10.0,wine,Expert,91,False,False,83.3755,4,10
+True,1,1.0,False,True,False,8,False,2023,19,2.7804,10,6,117.1212,traditional,58,4,False,False,South America,low-tech,8,4,78.5336,5.8,beer,Intermediate,87,False,False,78.0687,3,6
+True,1,1.0,True,False,False,6,True,2023,105,8.9013,8,5,107.2734,molecular,71,4,False,True,South America,low-tech,5,7,74.8542,7.1,wine,Intermediate,94,False,False,80.1785,3,10
+False,1,1.0,True,False,True,1,False,2000,0,3.1713,6,5,98.2466,molecular,45,4,True,True,Asia,high-tech,5,6,77.1807,9.5,beer,Beginner,85,True,False,70.7518,4,10
+False,1,1.0,True,True,False,6,True,2023,170,3.4211,7,4,128.4592,traditional,58,4,False,False,South America,low-tech,8,6,85.6206,5.8,wine,Intermediate,96,False,False,89.6273,3,8
+True,1,1.0,False,True,False,11,True,2023,82,2.222,7,4,117.3792,traditional,78,4,True,False,North America,low-tech,7,5,81.9499,7.8,none,Expert,83,False,False,83.443,2,5
+True,1,1.0,False,False,False,2,False,2023,159,9.9061,6,5,110.3856,molecular,34,4,True,False,Europe,high-tech,3,5,85.8046,3.4,none,Intermediate,78,True,False,86.3754,1,5
+True,1,1.0,True,True,True,4,False,2023,91,6.9484,8,5,113.8456,traditional,39,5,True,False,South America,high-tech,7,5,77.6109,8.9,wine,Beginner,88,,False,85.2974,2,10
+False,1,1.0,True,True,True,9,False,2023,140,6.2518,5,6,116.4324,traditional,94,5,False,False,South America,low-tech,6,5,79.8126,10.0,beer,Beginner,81,,False,85.5298,1,10
+,1,1.0,True,True,True,13,False,2023,131,9.7342,6,5,113.1775,traditional,8,4,False,False,Asia,high-tech,6,5,76.7896,5.8,none,Beginner,88,True,False,78.5198,1,10
+,1,1.0,True,False,True,13,False,2023,197,2.4158,6,4,112.1039,molecular,15,4,True,True,Europe,low-tech,3,6,80.6171,6.5,none,Expert,83,True,False,90.9782,2,10
+True,1,1.0,False,True,False,1,False,2023,73,3.4103,6,7,119.9414,traditional,69,5,False,False,North America,high-tech,7,5,82.6447,6.9,beer,Expert,86,True,False,84.0257,2,7
+True,1,1.0,False,True,False,5,True,2023,59,7.6011,9,5,117.2687,molecular,47,4,True,True,Africa,low-tech,7,6,84.9481,4.7,cocktail,Beginner,79,False,False,90.5673,2,6
+False,1,1.0,False,True,False,7,True,2023,73,6.9029,6,4,112.6081,molecular,83,4,False,False,South America,high-tech,6,6,76.5888,8.3,beer,Intermediate,79,False,False,78.4645,1,4
+True,1,1.0,False,True,False,2,True,2023,84,8.9494,7,6,122.3256,molecular,45,5,False,False,South America,low-tech,6,6,75.3306,4.5,cocktail,Intermediate,76,True,False,86.8698,1,6
+True,1,1.0,False,True,False,10,True,2023,20,7.7133,8,4,120.2878,molecular,4,5,True,False,Asia,high-tech,9,5,80.8178,1.0,beer,Intermediate,82,True,False,82.6958,4,4
+,1,1.0,False,True,True,14,True,2023,52,4.1498,7,5,118.5548,molecular,29,5,True,False,South America,high-tech,8,6,86.1337,7.9,cocktail,Expert,93,False,False,72.8792,3,6
+True,1,1.0,True,True,False,4,False,2023,80,1.3281,8,4,108.936,molecular,14,4,True,True,North America,low-tech,6,8,83.3566,1.4,beer,Expert,91,True,True,95.75,1,8
+False,1,1.0,False,True,False,15,False,2023,138,4.1709,8,6,116.3454,traditional,65,4,True,True,Africa,high-tech,7,7,82.7474,6.5,beer,Intermediate,78,True,False,77.037,2,6
+False,1,1.0,True,False,True,1,False,2023,57,4.7648,5,4,113.3039,molecular,66,4,True,True,Europe,high-tech,5,5,85.7782,10.0,wine,Expert,91,True,False,88.0396,1,10
+True,1,1.0,False,True,True,14,False,2023,76,8.7357,7,5,113.0223,molecular,87,4,True,True,Asia,low-tech,7,4,76.1958,10.0,cocktail,Intermediate,91,False,False,75.8677,2,5
+False,1,1.0,False,True,False,5,False,2023,194,7.3869,6,5,103.5329,molecular,33,4,False,False,Europe,low-tech,7,5,80.3338,3.3,beer,Expert,87,False,False,82.8971,2,6
+False,1,1.0,False,True,True,6,True,2023,146,6.8623,7,5,127.0822,traditional,32,5,False,False,Asia,high-tech,7,7,80.9555,8.2,beer,Expert,84,True,False,88.7408,2,5
+True,1,1.0,True,True,True,11,False,2023,154,3.937,6,6,131.9217,traditional,80,4,True,False,Asia,high-tech,7,6,77.8076,10.0,wine,Expert,78,,False,90.4726,2,10
+True,1,1.0,False,True,False,1,True,2023,57,7.8525,4,5,121.3998,traditional,49,4,,False,South America,high-tech,9,5,81.3147,4.9,beer,Expert,86,True,False,70.5667,4,5
+False,1,1.0,True,True,False,12,True,2023,52,5.7951,5,4,108.2547,traditional,33,4,False,False,North America,low-tech,8,7,84.4723,3.3,none,Intermediate,96,False,False,77.3314,3,8
+False,1,1.0,False,False,False,6,False,2023,67,1.5377,6,4,114.3109,traditional,98,5,False,True,North America,high-tech,5,5,87.3461,9.8,beer,Beginner,85,True,False,79.4166,3,5
+False,1,1.0,False,True,True,12,False,2023,104,3.8537,8,4,112.3626,traditional,9,5,True,True,Africa,high-tech,9,5,73.9335,5.9,wine,Intermediate,87,False,False,75.2842,4,5
+True,1,1.0,True,False,True,12,True,2023,140,2.8444,7,5,112.2622,molecular,52,4,False,False,Africa,high-tech,5,6,78.3772,10.0,cocktail,Beginner,87,True,False,88.5668,1,10
+True,1,1.0,False,False,True,4,False,2023,119,6.341,4,5,112.7587,traditional,45,4,,False,South America,high-tech,3,6,75.4633,9.5,none,Expert,91,True,False,87.7178,4,5
+False,1,1.0,True,False,True,9,True,2023,39,7.1579,6,6,121.5812,molecular,81,5,True,False,North America,high-tech,5,6,77.1469,10.0,beer,Beginner,92,False,False,86.0384,1,10
+,1,1.0,False,True,False,8,True,2023,35,4.4477,5,5,120.5701,traditional,32,5,True,True,Africa,high-tech,8,4,78.1484,3.2,cocktail,Expert,82,False,False,86.983,3,5
+True,1,1.0,True,False,False,8,True,2023,11,6.0848,5,6,106.7367,traditional,97,5,False,True,Asia,low-tech,5,5,78.8133,9.7,beer,Expert,92,True,False,87.5527,2,10
+,1,1.0,False,True,True,1,False,2023,37,8.5655,8,5,108.1784,traditional,59,4,True,True,Africa,high-tech,7,6,86.0545,10.0,wine,Beginner,72,False,False,78.0384,2,5
+False,1,1.0,True,True,True,12,False,2023,97,5.7622,7,5,119.2327,molecular,59,4,False,False,Africa,low-tech,8,4,85.0258,10.0,wine,Intermediate,83,True,False,83.1863,3,10
+True,1,1.0,False,True,False,4,True,2023,119,9.1049,8,5,120.1809,molecular,77,5,False,True,North America,high-tech,6,3,77.7916,7.7,wine,Beginner,94,False,False,82.8574,1,5
+True,1,1.0,False,True,False,5,False,2003,0,3.5768,9,4,116.7691,traditional,67,4,,False,North America,low-tech,8,6,85.8453,6.7,wine,Beginner,91,,False,87.0086,3,5
+True,1,1.0,True,True,True,11,False,2023,163,3.2242,7,4,113.6889,traditional,24,5,True,False,Africa,low-tech,8,6,76.4864,7.4,wine,Intermediate,85,True,False,73.6506,3,10
+False,1,1.0,True,False,True,11,False,2023,70,4.9347,7,5,119.681,traditional,62,5,True,True,North America,low-tech,5,6,84.1384,10.0,cocktail,Intermediate,79,False,False,85.4722,3,10
+False,1,1.0,True,False,True,2,True,2020,13,1.8737,6,4,101.1191,traditional,38,5,True,False,Africa,low-tech,5,7,85.0298,8.8,wine,Beginner,84,True,False,86.3024,4,10
+,1,1.0,False,False,True,10,False,2023,157,6.8858,7,4,121.3803,molecular,35,4,False,True,Europe,high-tech,5,7,75.2833,8.5,cocktail,Intermediate,81,True,False,86.7592,1,5
+False,1,1.0,True,False,True,10,False,2023,171,5.8845,8,4,105.5382,molecular,54,4,False,True,North America,high-tech,5,6,80.7826,10.0,beer,Beginner,85,False,False,78.8192,2,8
+True,1,1.0,True,True,True,10,True,2023,162,3.0572,6,5,115.9151,molecular,0,4,True,False,South America,high-tech,8,6,81.279,5.0,none,Beginner,78,True,False,88.5951,3,10
+True,1,1.0,False,True,False,3,False,2023,74,6.9581,8,4,116.674,traditional,23,4,True,False,South America,high-tech,7,5,78.8606,2.3,none,Expert,85,,False,79.6784,2,4
+False,1,1.0,False,True,True,3,False,2023,54,2.9187,10,5,126.1676,traditional,23,4,False,False,North America,low-tech,7,6,82.7924,7.3,none,Beginner,85,False,False,77.2137,2,5
+,1,1.0,False,True,True,1,False,2023,74,2.3822,6,4,114.9115,molecular,0,5,False,True,Africa,high-tech,6,5,86.5013,5.0,beer,Beginner,84,False,False,87.3765,1,5
+False,1,1.0,True,False,False,8,False,2023,127,4.4678,8,5,115.6049,traditional,73,4,True,True,South America,high-tech,5,5,86.3473,7.3,cocktail,Expert,93,,False,73.8672,2,10
+True,1,1.0,False,False,False,5,False,2023,121,2.6851,9,4,118.9691,traditional,56,4,True,True,North America,high-tech,3,5,79.9875,5.6,none,Expert,82,True,False,92.1761,4,5
+True,1,1.0,True,True,True,6,True,2023,72,5.2467,7,4,102.2117,traditional,25,4,False,True,South America,high-tech,9,6,83.474,7.5,none,Beginner,86,False,False,92.5625,4,10
+True,1,1.0,True,False,False,12,False,2023,61,5.1495,5,4,111.2294,molecular,17,4,,True,Europe,low-tech,5,7,79.9182,1.7,beer,Expert,94,True,False,86.6138,4,8
+False,1,1.0,False,True,False,7,True,2023,82,6.6669,7,5,117.6996,molecular,84,4,True,False,Africa,high-tech,8,5,84.8365,8.4,wine,Intermediate,82,False,False,84.9889,3,6
+True,1,1.0,True,True,True,12,True,2023,152,7.9956,7,6,122.739,traditional,61,4,False,True,North America,high-tech,7,5,77.4852,10.0,cocktail,Beginner,83,True,False,94.3263,2,10
+,1,1.0,True,False,True,1,True,2023,41,4.4297,6,4,106.5318,molecular,56,4,False,True,South America,high-tech,3,6,86.2572,10.0,none,Intermediate,81,False,False,86.4651,4,10
+True,1,1.0,False,True,False,4,False,2023,75,7.065,8,5,122.7882,molecular,37,5,,False,Africa,low-tech,7,6,74.7101,3.7,beer,Beginner,77,True,False,74.0534,2,5
+True,1,1.0,True,False,False,2,False,2023,22,8.5996,8,4,120.696,molecular,100,4,False,True,South America,high-tech,5,6,93.1043,10.0,wine,Expert,82,False,False,79.7953,2,8
+False,1,1.0,True,True,True,8,False,2023,41,4.9796,5,4,123.199,traditional,26,4,True,True,South America,low-tech,6,6,87.1635,7.6,beer,Intermediate,95,False,False,81.1482,1,10
+False,1,1.0,True,False,True,10,False,2023,147,5.4176,8,6,110.1074,molecular,5,4,False,False,South America,high-tech,5,7,86.6666,5.5,cocktail,Intermediate,83,False,False,89.8158,3,10
+,1,1.0,True,True,True,12,True,2023,113,8.58,7,5,129.2306,molecular,89,4,False,True,South America,low-tech,8,6,87.1984,10.0,cocktail,Intermediate,98,False,False,71.8213,3,10
+True,1,1.0,False,True,False,10,True,2023,39,6.1312,9,4,102.1116,traditional,9,4,True,True,Europe,low-tech,9,4,82.541,1.0,beer,Expert,93,False,False,87.3139,4,4
+False,1,1.0,False,False,False,1,False,2023,63,4.5265,6,4,120.8076,molecular,40,5,False,True,Africa,low-tech,5,7,81.2569,4.0,wine,Intermediate,82,False,False,79.3617,3,5
+False,1,1.0,True,False,True,1,True,2023,113,1.8241,8,5,123.5816,molecular,93,4,False,True,North America,low-tech,5,5,88.1294,10.0,wine,Intermediate,85,False,False,82.8991,4,10
+False,1,1.0,True,True,True,2,False,2023,159,4.1479,7,4,118.3848,traditional,78,5,,False,Africa,low-tech,8,6,85.2438,10.0,wine,Intermediate,78,False,False,74.9362,3,10
+False,1,1.0,False,True,True,4,False,2023,173,7.9383,7,4,122.6017,traditional,31,4,True,True,Asia,high-tech,9,6,81.1797,8.1,wine,Beginner,82,True,False,78.9271,4,4
+,1,1.0,False,False,False,1,True,2023,197,4.0763,8,4,115.1072,traditional,95,4,False,False,Asia,high-tech,3,5,88.884,9.5,none,Expert,81,True,False,85.5263,3,5
+False,1,1.0,False,True,False,11,False,2023,199,8.5134,5,5,113.9287,molecular,91,4,True,False,South America,low-tech,8,6,79.5421,9.1,beer,Intermediate,81,False,False,79.126,3,5
+True,1,1.0,True,True,True,9,False,2023,152,8.8305,6,6,122.7829,traditional,9,4,False,False,Europe,high-tech,6,6,84.2484,5.9,none,Expert,84,,False,75.1216,1,10
+False,1,1.0,False,True,False,12,False,2023,37,4.416,8,5,108.0573,traditional,39,5,False,True,North America,low-tech,9,6,75.4294,3.9,cocktail,Expert,77,True,False,81.9038,4,6
+False,1,1.0,False,True,True,3,True,2023,31,7.6627,7,5,121.9542,molecular,62,5,False,False,Europe,high-tech,6,6,81.9416,10.0,none,Intermediate,83,True,False,69.5301,1,5
+False,1,1.0,True,False,True,7,False,2023,99,1.1743,6,4,122.4952,molecular,84,5,,True,Africa,high-tech,5,5,81.8327,10.0,wine,Beginner,81,False,False,78.3505,4,8
+True,1,1.0,False,False,False,14,False,2023,65,7.0515,6,5,99.6117,molecular,35,5,True,True,Africa,high-tech,3,5,77.0309,3.5,none,Beginner,91,False,False,77.8403,2,6
+False,1,1.0,False,True,True,2,False,2023,177,7.7777,8,5,114.8213,molecular,86,4,True,True,Europe,high-tech,6,6,74.7116,10.0,none,Intermediate,85,,False,87.0291,1,5
+False,1,1.0,True,True,False,8,True,2023,87,6.6262,5,4,119.3347,traditional,1,5,True,True,Europe,low-tech,8,6,78.3343,1.0,none,Beginner,92,True,False,76.1098,3,10
+False,1,1.0,True,True,False,14,True,2023,48,4.638,7,4,121.8975,molecular,2,4,False,True,North America,high-tech,9,6,79.1973,1.0,cocktail,Intermediate,88,False,False,79.5188,4,8
+False,1,1.0,True,False,False,10,True,2023,145,8.7898,8,5,113.8705,traditional,92,4,False,False,Asia,low-tech,3,7,88.0464,9.2,none,Intermediate,86,True,False,93.1975,3,10
+True,1,1.0,False,False,False,5,True,2023,44,5.7517,7,5,100.4918,molecular,60,4,False,True,South America,high-tech,5,5,78.2048,6.0,cocktail,Expert,86,False,False,77.1103,4,5
+True,1,1.0,False,False,False,7,False,2023,59,2.7025,7,4,100.0201,traditional,22,4,True,True,Europe,high-tech,5,5,89.9727,2.2,beer,Intermediate,85,False,False,77.9141,4,5
+False,1,1.0,True,False,True,2,False,2023,182,7.537,8,6,109.6925,molecular,76,5,True,True,Africa,low-tech,5,5,84.2157,10.0,cocktail,Intermediate,87,False,False,87.4195,3,10
+True,1,1.0,False,True,True,9,False,2023,145,9.8112,6,4,100.9096,molecular,95,4,False,False,South America,high-tech,8,6,79.9798,10.0,beer,Intermediate,92,False,False,78.4558,3,4
+True,1,1.0,False,False,True,6,False,2016,8,4.3839,8,5,126.6628,molecular,29,4,True,True,North America,high-tech,5,7,85.3592,7.9,wine,Intermediate,90,True,False,70.349,5,5
+,1,1.0,False,False,True,4,False,2022,6,4.638,8,4,134.3089,molecular,12,4,False,True,Europe,high-tech,5,5,80.7508,6.2,wine,Intermediate,82,False,False,72.4819,1,5
+False,1,1.0,True,False,True,2,True,2023,40,6.9212,7,6,124.8782,molecular,78,5,False,True,Africa,low-tech,3,6,79.753,10.0,none,Expert,85,False,False,87.8448,2,10
+True,1,1.0,True,False,True,8,True,2023,127,6.5053,8,6,117.4358,traditional,73,5,False,False,Africa,low-tech,5,5,76.6632,10.0,cocktail,Expert,77,False,False,69.8578,1,10
+False,1,1.0,True,False,False,7,True,2023,136,1.4283,6,5,129.652,traditional,51,4,True,False,South America,low-tech,5,5,77.824,5.1,beer,Expert,98,False,False,73.6285,4,10
+False,1,1.0,True,False,True,4,False,2023,129,4.5708,8,4,116.5676,traditional,97,4,False,True,Africa,high-tech,5,6,85.8437,10.0,beer,Expert,81,True,False,79.3856,3,10
+True,1,1.0,True,True,True,13,False,2023,90,4.5129,6,6,119.1646,molecular,62,4,False,False,Africa,high-tech,9,5,88.8934,10.0,beer,Expert,86,True,False,79.3088,4,10
+False,1,1.0,False,False,False,2,False,2023,21,1.3661,5,4,122.7209,traditional,28,5,False,False,Europe,high-tech,5,5,84.2508,2.8,wine,Intermediate,85,False,False,74.6162,4,5
+,1,1.0,False,True,False,8,True,2023,169,8.9517,7,5,110.0129,traditional,32,4,False,False,Asia,low-tech,6,7,82.285,3.2,beer,Beginner,87,False,False,81.6925,1,5
+True,1,1.0,True,True,False,8,True,2023,80,4.9566,7,5,99.0144,molecular,19,5,True,True,South America,high-tech,7,7,83.902,1.9,cocktail,Expert,87,False,False,84.5185,2,10
+True,1,1.0,False,True,False,10,True,2023,101,2.4375,7,6,108.8892,molecular,42,4,True,False,Asia,low-tech,6,5,83.0896,4.2,cocktail,Beginner,94,True,False,67.6074,1,6
+True,1,1.0,False,True,True,6,True,2023,124,9.5093,8,5,108.4615,traditional,3,4,True,True,Africa,low-tech,9,7,84.0082,5.3,cocktail,Expert,95,False,False,85.4163,4,6
+True,1,1.0,False,False,True,12,True,2023,18,2.8873,9,5,105.3945,molecular,94,4,False,False,Africa,low-tech,3,7,84.18,10.0,none,Beginner,91,True,False,81.6817,2,5
+True,1,1.0,False,False,False,2,True,2023,36,4.9406,8,5,108.416,traditional,32,4,False,True,Europe,low-tech,3,4,79.4438,3.2,none,Intermediate,83,False,False,78.3652,3,5
+False,1,1.0,False,False,True,10,False,2023,106,4.3494,7,5,114.5462,traditional,67,4,False,False,Europe,low-tech,3,7,75.7249,10.0,none,Expert,87,False,False,76.6157,1,5
+True,1,1.0,True,False,False,8,False,2023,88,8.4776,6,5,104.8295,molecular,0,5,True,True,South America,low-tech,5,6,89.0944,1.0,wine,Expert,85,,False,83.7316,4,10
+False,1,1.0,False,True,True,10,False,2023,22,1.0,8,5,124.6509,molecular,59,4,True,False,Africa,high-tech,8,5,76.715,10.0,none,Expert,80,False,False,86.3756,3,5
+True,1,1.0,False,False,False,4,False,2023,164,8.8922,8,4,106.4612,molecular,29,4,True,True,Asia,high-tech,5,7,88.0241,2.9,beer,Beginner,93,True,False,70.526,2,5
+False,1,1.0,False,False,True,6,True,2023,70,8.8117,8,5,111.646,molecular,13,4,True,True,Asia,high-tech,3,5,84.2983,6.3,none,Beginner,84,False,False,71.4432,3,5
+True,1,1.0,False,True,True,3,False,2023,177,5.4469,7,5,113.025,traditional,40,4,True,False,South America,high-tech,9,4,81.0686,9.0,none,Intermediate,86,False,False,89.0621,4,5
+False,1,1.0,False,True,True,3,True,2023,145,9.7677,6,4,123.3791,traditional,38,4,True,True,Africa,high-tech,6,5,81.8655,8.8,none,Beginner,87,False,False,79.747,1,5
+False,1,1.0,True,True,True,1,False,2023,20,8.1334,6,4,110.2283,molecular,82,4,True,True,South America,high-tech,9,5,80.5883,10.0,none,Intermediate,84,,False,84.3103,4,8
+True,1,1.0,False,True,False,7,True,2023,60,2.6874,8,4,105.2897,molecular,94,4,False,True,Europe,high-tech,7,6,79.7954,9.4,beer,Expert,76,False,False,78.9688,2,4
+False,1,1.0,True,False,False,8,True,2023,20,1.7166,9,4,141.2255,traditional,83,4,True,True,Asia,low-tech,3,5,90.686,8.3,none,Intermediate,81,True,False,85.5772,4,10
+False,1,1.0,False,False,False,2,False,2023,26,3.47,8,5,113.7132,traditional,7,4,False,True,North America,high-tech,5,5,74.9663,1.0,cocktail,Intermediate,82,False,False,80.1741,2,5
+True,1,1.0,True,True,False,11,True,2023,190,6.5272,6,5,108.5849,traditional,19,5,False,False,North America,low-tech,7,5,82.3492,1.9,wine,Beginner,88,False,False,85.3067,2,10
+False,1,1.0,True,False,False,8,True,2023,76,3.717,7,5,113.4262,molecular,30,4,,True,South America,high-tech,5,6,84.808,3.0,beer,Intermediate,84,False,False,77.2463,4,10
+True,1,1.0,False,False,True,7,True,2023,135,7.5359,7,5,109.0804,traditional,88,4,False,False,South America,high-tech,5,6,80.749,10.0,cocktail,Beginner,79,False,False,96.0416,4,6
+False,1,1.0,True,False,False,2,False,2023,110,1.5548,6,5,105.9298,molecular,79,4,True,False,South America,high-tech,5,5,75.2255,7.9,beer,Expert,90,True,False,85.4082,2,10
+False,1,1.0,True,True,False,3,False,2023,63,3.732,6,4,105.1184,traditional,78,4,True,False,North America,low-tech,7,6,80.3745,7.8,wine,Expert,86,,False,80.7273,2,10
+False,1,1.0,False,True,True,4,True,2023,34,1.2652,7,4,102.9911,molecular,62,4,False,False,South America,high-tech,9,6,65.0745,10.0,wine,Beginner,86,False,False,76.709,4,5
+False,1,1.0,False,True,True,9,False,2023,184,8.4832,7,5,112.9296,molecular,65,5,,False,Europe,low-tech,8,6,77.9687,10.0,cocktail,Intermediate,84,True,False,86.0996,3,5
+False,1,1.0,False,True,False,12,False,2023,156,1.6254,7,6,98.6299,traditional,14,4,True,False,North America,high-tech,7,7,90.6527,1.4,cocktail,Intermediate,87,True,False,75.254,2,6
+False,1,1.0,False,True,True,6,True,2023,200,1.8036,7,4,106.2462,traditional,14,4,False,True,North America,low-tech,7,5,88.2905,6.4,none,Expert,78,False,False,87.1271,2,5
+False,1,1.0,True,False,False,12,True,2023,40,1.2023,7,5,114.9303,traditional,4,5,True,True,South America,low-tech,5,6,83.2813,1.0,cocktail,Expert,79,,False,89.4323,1,10
+False,1,1.0,False,True,False,5,True,2023,157,3.5329,7,5,116.553,molecular,58,4,True,True,South America,low-tech,6,6,86.8654,5.8,beer,Intermediate,83,,False,84.2496,1,5
+False,1,1.0,True,False,False,7,True,2023,66,2.2635,7,4,130.7703,molecular,64,4,False,True,Europe,low-tech,5,6,77.3585,6.4,cocktail,Beginner,81,,False,77.1903,4,8
+,1,1.0,True,True,False,2,False,2023,167,4.0121,8,5,99.3971,traditional,91,4,False,False,North America,low-tech,8,6,76.5175,9.1,none,Expert,84,False,False,76.2565,3,10
+False,1,1.0,True,True,False,11,False,2023,179,5.2179,6,4,112.4142,traditional,50,5,False,True,South America,low-tech,9,6,78.6102,5.0,wine,Intermediate,81,False,False,77.1834,4,10
+False,1,1.0,False,False,False,12,True,2023,104,6.1833,6,6,116.6131,traditional,71,5,True,True,Europe,low-tech,3,4,82.0732,7.1,none,Intermediate,88,True,False,80.3543,3,6
+False,1,1.0,False,True,False,6,True,2023,24,7.8658,9,4,85.6969,molecular,4,4,False,False,North America,high-tech,6,6,85.769,1.0,wine,Intermediate,76,False,False,88.6194,1,5
+True,1,1.0,True,False,False,2,False,2023,187,3.8364,6,4,104.8642,molecular,10,5,False,True,Africa,high-tech,5,6,78.6388,1.0,cocktail,Beginner,85,False,False,80.4948,1,10
+False,1,1.0,False,True,True,10,True,2023,108,5.5102,6,6,101.1221,traditional,7,5,False,False,Europe,low-tech,7,5,83.1501,5.7,cocktail,Intermediate,77,True,False,90.4854,2,6
+,1,1.0,True,False,True,4,False,2023,57,1.3006,8,5,110.2796,traditional,100,5,,True,South America,high-tech,3,5,81.7777,10.0,none,Intermediate,82,False,False,78.7003,3,10
+,1,1.0,True,True,True,10,False,2023,64,6.2054,6,4,109.9721,molecular,57,4,False,False,South America,low-tech,7,6,82.1927,10.0,none,Intermediate,81,True,False,81.3712,2,8
+False,1,1.0,False,True,True,2,True,2023,189,7.4846,6,5,111.5396,molecular,2,4,False,True,North America,high-tech,9,7,82.4124,5.2,beer,Intermediate,100,True,False,63.5667,4,5
+False,1,1.0,False,True,False,6,False,2023,115,9.3149,6,4,113.1231,molecular,38,5,True,False,Africa,high-tech,6,5,86.167,3.8,none,Intermediate,92,True,False,89.5568,1,5
+True,1,1.0,True,True,False,13,False,2023,13,4.8197,8,5,118.9981,traditional,69,4,False,False,Asia,high-tech,6,7,75.6809,6.9,none,Beginner,80,True,False,81.453,1,10
+False,1,1.0,False,False,True,12,True,2023,122,4.0158,7,4,109.2406,molecular,40,5,True,False,Asia,low-tech,5,5,89.4,9.0,cocktail,Beginner,77,False,False,86.2817,2,5
+False,1,1.0,False,True,True,7,False,2023,137,6.0816,5,6,122.7996,traditional,35,4,True,True,South America,low-tech,6,6,74.3007,8.5,cocktail,Expert,86,False,False,85.9598,1,6
+True,1,1.0,False,True,False,11,False,2023,65,6.4092,7,5,113.4956,molecular,72,4,True,True,Asia,high-tech,7,6,75.0337,7.2,wine,Expert,78,True,False,86.7137,2,5
+False,1,1.0,True,True,True,1,True,2023,25,1.4091,8,4,114.7409,traditional,17,4,True,True,Africa,low-tech,7,6,74.8173,6.7,beer,Beginner,92,False,False,80.3387,2,8
+,1,1.0,False,True,True,4,False,2023,30,1.0633,8,4,115.0999,traditional,71,4,True,True,North America,low-tech,7,7,82.0233,10.0,beer,Beginner,86,True,False,90.9913,2,5
+True,1,1.0,False,True,True,7,False,2023,78,9.0238,7,5,101.7138,molecular,73,4,False,True,North America,high-tech,7,5,84.2347,10.0,beer,Intermediate,91,True,False,85.5944,2,5
+False,1,1.0,True,False,False,9,True,2023,179,6.4627,8,4,108.5406,molecular,0,5,True,False,Asia,low-tech,5,6,80.4587,1.0,beer,Beginner,90,False,False,84.5268,4,8
+,1,1.0,False,False,False,5,True,2023,140,6.458,6,6,105.7914,traditional,31,4,False,False,Asia,low-tech,5,6,78.3828,3.1,wine,Expert,84,,False,87.486,1,6
+True,1,1.0,False,True,False,14,True,2023,31,7.5637,7,4,110.3087,molecular,49,4,True,False,North America,high-tech,8,6,83.4463,4.9,wine,Intermediate,93,True,False,73.9201,3,5
+True,1,1.0,True,True,False,5,False,2023,175,5.9911,8,4,126.2156,traditional,42,4,True,False,South America,high-tech,8,5,77.4026,4.2,cocktail,Expert,68,True,False,76.7822,3,10
+False,1,1.0,False,True,True,5,True,2023,11,6.1686,5,4,113.4161,traditional,32,4,True,True,Asia,low-tech,6,7,91.1887,8.2,cocktail,Expert,75,False,False,90.3378,1,4
+False,1,1.0,False,True,False,8,True,2023,175,6.1574,9,4,96.4051,molecular,96,4,True,False,Europe,high-tech,6,5,82.8664,9.6,none,Intermediate,78,False,False,83.7661,1,5
+,1,1.0,False,True,True,6,False,2023,148,7.6152,7,5,123.6348,traditional,67,4,True,True,Asia,low-tech,8,7,81.5687,10.0,none,Expert,72,False,False,87.7562,3,5
+,1,1.0,False,True,False,7,False,2004,0,4.833,8,4,117.4854,traditional,88,4,True,False,Africa,low-tech,8,6,88.418,8.8,beer,Beginner,95,False,False,90.8185,3,5
+False,1,1.0,False,False,True,12,False,2023,80,7.2201,9,4,119.0928,molecular,80,5,True,False,South America,low-tech,5,5,83.1904,10.0,beer,Intermediate,87,True,False,80.9096,4,5
+True,1,1.0,False,True,True,1,False,2023,18,6.7757,8,5,113.499,traditional,86,5,True,False,North America,low-tech,6,4,85.3204,10.0,none,Intermediate,86,False,False,78.4377,1,5
+True,1,1.0,True,True,True,9,True,2023,77,3.7229,8,5,136.201,molecular,30,5,True,True,North America,low-tech,7,6,82.7472,8.0,cocktail,Beginner,83,True,False,75.6059,2,10
+False,1,1.0,True,False,True,13,False,2023,33,6.6865,6,4,110.5203,molecular,13,4,True,True,North America,high-tech,5,7,82.1198,6.3,cocktail,Expert,90,True,False,88.345,2,10
+False,1,1.0,True,True,True,9,False,2023,41,6.6582,5,4,108.8096,traditional,1,4,True,False,North America,low-tech,7,7,87.691,5.1,none,Intermediate,85,True,False,83.0313,2,8
+False,1,1.0,False,True,False,11,False,2023,188,6.1851,7,4,120.7816,traditional,85,4,False,False,Europe,low-tech,9,5,79.8402,8.5,beer,Beginner,84,True,False,70.8535,4,5
+,1,1.0,True,False,True,11,True,2023,151,5.6616,7,6,112.6909,traditional,6,5,True,True,Europe,low-tech,5,6,86.1715,5.6,beer,Intermediate,83,True,False,86.2741,2,10
+False,1,1.0,True,True,False,12,True,2023,174,4.5567,8,5,129.4569,traditional,79,4,False,False,Africa,low-tech,8,6,88.9798,7.9,cocktail,Expert,85,False,False,86.338,3,10
+False,1,1.0,False,True,True,6,False,2023,111,6.3223,6,6,123.2231,traditional,67,4,False,False,Europe,low-tech,7,7,78.7468,10.0,none,Beginner,83,,False,86.7106,2,6
+False,1,1.0,False,True,False,4,False,2005,0,5.456,7,5,119.7328,molecular,9,4,True,True,Africa,high-tech,6,6,79.6989,1.0,cocktail,Beginner,87,True,False,89.5585,1,5
+True,1,1.0,False,True,True,3,False,2023,137,5.311,9,4,122.8566,traditional,72,5,False,True,North America,low-tech,6,7,90.9291,10.0,cocktail,Beginner,82,False,False,99.3549,1,5
+True,1,1.0,False,True,False,2,False,2023,65,8.6382,8,4,106.6179,traditional,4,4,True,False,Europe,high-tech,9,5,71.6386,1.0,none,Beginner,87,False,False,77.2746,4,4
+True,1,1.0,True,True,True,1,False,2013,5,7.4445,5,6,93.4139,traditional,37,4,True,False,South America,high-tech,7,6,73.8489,8.7,beer,Beginner,87,False,False,77.2728,2,10
+False,1,1.0,True,True,False,10,False,2023,30,2.1218,9,5,113.9211,traditional,53,4,False,True,Africa,low-tech,7,6,86.4621,5.3,wine,Expert,77,False,False,74.6372,2,10
+True,1,1.0,True,True,False,13,False,2023,132,7.4679,6,5,121.6725,molecular,55,4,True,True,Asia,high-tech,7,6,85.5663,5.5,beer,Beginner,87,False,False,75.3976,2,10
+True,1,1.0,True,False,False,5,True,2023,108,8.7058,8,4,105.2346,traditional,63,4,False,False,North America,high-tech,3,5,80.5729,6.3,none,Expert,84,False,False,77.6135,4,10
+,1,1.0,True,True,False,6,True,2023,32,8.0391,5,4,118.982,molecular,23,5,True,False,North America,high-tech,6,5,82.5103,2.3,beer,Expert,85,True,False,82.503,1,10
+True,1,1.0,False,True,True,12,False,2023,22,6.5001,7,5,130.7671,molecular,94,4,False,True,North America,high-tech,6,4,82.9913,10.0,wine,Beginner,92,True,False,77.605,1,5
+,1,1.0,False,False,False,6,True,2023,19,1.896,7,5,120.0576,traditional,65,4,False,True,Africa,low-tech,3,5,83.6488,6.5,none,Intermediate,95,True,False,78.1837,2,5
+True,1,1.0,False,False,False,9,False,2023,92,6.6751,6,5,120.3368,molecular,46,4,False,True,Asia,high-tech,5,6,75.375,4.6,wine,Intermediate,83,False,False,86.5309,3,5
+True,1,1.0,False,False,False,14,False,2023,127,1.5311,7,6,110.7212,traditional,62,4,True,True,North America,low-tech,5,6,84.0553,6.2,wine,Intermediate,88,True,False,98.7236,2,6
+False,1,1.0,False,True,True,8,True,2023,39,8.789,8,4,100.6822,traditional,70,4,False,True,North America,high-tech,7,6,87.3914,10.0,none,Intermediate,94,True,False,81.0736,2,5
+False,1,1.0,True,True,False,13,False,2023,32,9.7651,7,5,126.6355,molecular,97,5,True,False,North America,low-tech,6,7,80.1805,9.7,beer,Expert,75,False,False,89.9132,1,10
+False,1,1.0,True,False,True,9,True,2023,55,6.8314,8,4,117.9888,molecular,76,4,True,False,Africa,high-tech,3,6,77.5148,10.0,none,Expert,82,False,False,81.4356,2,10
+True,1,1.0,False,False,False,3,False,2023,174,7.474,6,5,121.6379,traditional,58,4,,False,South America,high-tech,5,5,87.4391,5.8,wine,Beginner,83,True,False,85.3668,4,6
+False,1,1.0,True,True,False,8,True,2023,47,9.3854,8,4,113.8079,traditional,7,5,True,False,Asia,high-tech,7,5,80.0031,1.0,wine,Intermediate,92,True,False,72.5642,2,10
+True,1,1.0,False,True,False,8,True,2023,150,3.8404,6,4,118.4292,traditional,20,4,True,True,Africa,high-tech,6,6,88.0866,2.0,beer,Intermediate,84,True,False,90.5363,1,4
+False,1,1.0,False,True,True,11,True,2023,112,7.7463,8,5,103.5925,molecular,34,5,True,False,Europe,low-tech,9,5,79.6901,8.4,beer,Beginner,89,False,False,76.1479,4,6
+False,1,1.0,False,False,False,2,True,2023,54,6.1036,6,6,119.3493,molecular,16,4,False,False,Africa,low-tech,5,6,82.4469,1.6,cocktail,Beginner,93,,False,73.3556,1,6
+,1,1.0,True,False,True,7,False,2023,147,2.8446,4,5,120.1749,molecular,50,4,True,False,Africa,high-tech,3,6,80.8076,10.0,none,Expert,78,True,False,75.1108,3,10
+True,1,1.0,True,True,False,11,True,2023,50,5.306,6,6,107.3997,traditional,69,4,True,True,North America,high-tech,9,4,78.356,6.9,none,Expert,81,False,False,96.1472,4,10
+True,1,1.0,False,True,True,2,True,2007,0,6.8767,7,4,98.4403,molecular,8,4,False,False,Africa,low-tech,9,6,79.231,5.8,beer,Expert,83,False,False,83.9622,4,4
+False,1,1.0,True,True,False,7,True,2023,56,5.0068,6,5,117.8446,molecular,0,4,True,True,Asia,high-tech,9,4,75.1721,1.0,beer,Expert,81,False,False,91.0275,4,10
+True,1,1.0,True,True,True,6,True,2023,87,8.0272,8,4,102.3882,traditional,68,5,True,True,Africa,high-tech,9,7,76.2264,10.0,none,Intermediate,81,False,False,85.5714,4,10
+True,1,1.0,False,True,False,8,False,2023,86,2.239,7,5,131.3103,molecular,3,4,,True,Europe,low-tech,8,5,82.5792,1.0,beer,Intermediate,85,True,False,78.2167,3,5
+True,1,1.0,False,False,True,9,False,2023,82,2.5604,7,5,119.9353,molecular,85,5,False,True,Africa,high-tech,3,5,81.0567,10.0,none,Intermediate,83,False,False,71.243,1,5
+False,1,1.0,False,False,False,8,False,2023,171,6.6075,6,6,114.6792,molecular,43,4,True,False,Europe,low-tech,5,5,81.6846,4.3,cocktail,Expert,81,True,False,80.7271,4,6
+False,1,1.0,True,False,True,1,False,2013,0,1.0,9,4,103.3203,molecular,75,4,False,False,South America,high-tech,5,6,84.9005,10.0,beer,Intermediate,79,False,False,77.7788,3,10
+True,1,1.0,False,True,False,13,True,2023,125,7.9141,7,4,112.6091,molecular,42,5,,False,North America,high-tech,7,6,85.4344,4.2,none,Beginner,72,True,False,84.0352,2,4
+True,1,1.0,True,True,False,8,True,2023,65,4.4776,6,4,106.9486,traditional,59,5,False,False,North America,high-tech,8,7,85.5562,5.9,wine,Expert,86,True,False,84.5634,3,8
+False,1,1.0,True,False,True,6,True,2023,52,8.4987,6,4,112.2125,traditional,17,4,True,True,Asia,high-tech,3,5,79.2259,6.7,none,Expert,99,True,False,69.5894,1,10
+False,1,1.0,True,False,False,14,True,2023,179,1.7147,6,6,103.6797,molecular,11,4,False,False,South America,high-tech,3,6,81.8193,1.1,none,Beginner,95,True,False,83.1978,4,10
+False,1,1.0,False,True,False,2,True,2023,13,9.5159,6,6,103.5996,molecular,17,4,True,True,Africa,low-tech,7,6,78.898,1.7,cocktail,Expert,83,False,False,77.2421,2,6
+True,1,1.0,True,False,True,2,True,2023,159,1.7772,6,4,115.0884,traditional,4,4,False,True,South America,low-tech,5,6,89.2508,5.4,wine,Expert,75,False,False,84.8685,3,8
+False,1,1.0,False,False,False,1,True,2023,147,1.2908,5,4,124.1541,traditional,5,4,True,True,Africa,high-tech,5,5,85.514,1.0,wine,Intermediate,74,False,False,77.0109,4,5
+,1,1.0,True,True,False,12,False,2023,25,5.3764,8,4,102.884,traditional,48,4,True,False,Africa,low-tech,9,5,76.8626,4.8,beer,Intermediate,82,False,False,83.6215,4,10
+True,1,1.0,False,False,False,11,False,2023,179,8.8111,8,4,128.1432,traditional,95,5,False,True,North America,high-tech,5,6,85.3157,9.5,wine,Expert,87,False,False,70.4441,1,4
+False,1,1.0,True,True,True,7,True,2023,119,3.3702,6,4,110.3924,molecular,66,4,False,True,South America,high-tech,8,5,78.8139,10.0,none,Beginner,86,False,False,86.0655,3,10
+False,1,1.0,False,False,False,8,True,2023,81,9.6498,7,4,118.9195,traditional,18,5,True,True,Europe,low-tech,3,6,84.351,1.8,none,Intermediate,80,False,False,81.9199,4,5
+True,1,1.0,True,False,True,12,True,2023,18,2.0272,9,4,122.0247,traditional,59,4,False,False,North America,high-tech,5,6,89.7759,10.0,wine,Intermediate,78,False,False,75.0273,3,10
+True,1,1.0,False,True,True,4,True,2023,82,9.7034,6,4,113.5269,molecular,3,5,True,False,North America,low-tech,7,4,75.3621,5.3,none,Beginner,87,True,False,73.8659,2,5
+False,1,1.0,False,True,True,6,False,2023,133,9.3136,7,5,113.9896,molecular,66,5,False,True,Europe,low-tech,9,6,84.1183,10.0,beer,Beginner,89,False,False,89.4091,4,5
+False,1,1.0,True,False,False,6,True,2023,74,2.2926,7,6,113.7861,molecular,5,4,False,False,Africa,low-tech,5,6,83.4497,1.0,beer,Beginner,86,False,False,74.1177,2,10
+,1,1.0,False,True,False,6,True,2023,77,7.1726,8,4,109.7456,traditional,74,5,True,True,Asia,high-tech,7,5,86.0819,7.4,wine,Beginner,79,False,False,86.706,2,5
+True,1,1.0,True,True,False,3,True,2023,38,7.3744,8,6,118.7225,traditional,26,5,True,True,Africa,high-tech,8,6,86.1448,2.6,none,Intermediate,89,,False,75.9368,3,10
+False,1,1.0,False,False,True,13,False,2023,187,2.3229,8,5,107.2956,molecular,50,5,True,False,Africa,low-tech,5,5,83.3915,10.0,beer,Beginner,86,False,False,88.7174,4,5
+True,1,1.0,False,True,True,8,True,2023,137,4.9761,5,4,121.2942,traditional,62,4,True,False,South America,high-tech,9,6,82.5735,10.0,wine,Expert,92,,False,84.9487,4,5
+True,1,1.0,False,True,True,3,True,2023,200,8.0633,6,6,121.1341,traditional,36,5,,True,Africa,low-tech,9,6,83.3322,8.6,cocktail,Expert,83,True,False,81.4554,4,6
+,1,1.0,True,False,True,12,False,2023,44,4.8656,7,4,120.0291,molecular,80,5,True,False,North America,low-tech,5,7,85.935,10.0,wine,Intermediate,84,,False,82.3918,3,10
+True,1,1.0,True,False,False,8,True,2023,144,5.9387,9,4,130.4288,molecular,68,5,False,False,South America,low-tech,5,7,76.1039,6.8,cocktail,Intermediate,90,True,False,98.5371,2,10
+True,1,1.0,False,False,False,3,True,2023,29,7.6391,7,5,116.7423,molecular,41,4,False,True,Asia,high-tech,5,6,77.4342,4.1,beer,Intermediate,82,True,False,90.5869,2,6
+True,1,1.0,True,True,False,9,True,2023,36,5.7209,5,4,116.9733,traditional,51,4,,True,North America,low-tech,6,6,81.8427,5.1,beer,Intermediate,85,True,False,82.8421,1,8
+False,1,1.0,True,False,True,8,False,2023,27,1.5217,8,4,111.761,traditional,52,4,True,False,Europe,low-tech,5,6,80.8058,10.0,beer,Intermediate,88,True,False,95.5146,2,10
+False,1,1.0,True,True,False,6,True,2023,168,6.0241,7,4,119.6819,traditional,1,4,True,False,North America,low-tech,6,6,82.8958,1.0,cocktail,Expert,85,,False,72.2387,1,8
+False,1,1.0,True,False,True,11,False,2023,105,8.2999,6,5,102.9204,traditional,49,4,False,True,Africa,high-tech,5,5,81.8886,9.9,beer,Expert,79,False,False,86.4005,3,10
+False,1,1.0,True,True,True,1,False,2023,170,2.646,8,4,109.5271,traditional,58,5,False,True,Africa,low-tech,8,6,80.429,10.0,wine,Expert,81,True,False,78.6116,3,10
+True,1,1.0,False,False,True,15,False,2023,158,1.8528,8,6,124.9209,molecular,65,5,True,True,Asia,high-tech,5,5,86.6192,10.0,wine,Beginner,86,False,False,85.4555,3,6
+True,1,1.0,False,False,True,1,False,2023,176,2.7274,8,5,108.0644,traditional,4,5,True,False,Asia,low-tech,5,5,76.6106,5.4,wine,Expert,80,True,False,91.4847,3,6
+False,1,1.0,True,True,True,5,False,2023,30,2.682,6,4,113.9326,molecular,14,4,True,True,Asia,low-tech,8,7,76.8295,6.4,beer,Intermediate,92,False,False,95.0509,3,10
+False,1,1.0,False,True,False,10,False,2023,157,5.7842,6,4,102.2942,traditional,82,4,True,False,Europe,low-tech,7,5,89.4836,8.2,none,Beginner,80,True,False,80.7452,2,4
+,1,1.0,False,True,False,4,True,2023,198,10.0,4,4,125.4519,molecular,57,5,,False,North America,high-tech,6,6,79.7984,5.7,cocktail,Beginner,86,True,False,88.6106,1,5
+,1,1.0,True,False,True,12,False,2023,42,8.3466,6,5,95.51,traditional,35,4,True,False,Europe,high-tech,3,6,78.6694,8.5,none,Intermediate,85,True,False,91.0024,4,10
+False,1,1.0,True,False,True,4,False,2023,121,5.5635,3,5,123.3622,traditional,37,5,True,False,North America,high-tech,5,6,75.4946,8.7,wine,Intermediate,85,True,False,79.8528,4,10
+False,1,1.0,False,True,False,3,True,2023,13,6.8106,7,4,117.5211,molecular,31,5,False,True,South America,high-tech,7,5,86.7165,3.1,none,Beginner,82,True,False,71.4917,2,4
+True,1,1.0,True,True,True,4,True,2023,164,5.3735,6,5,118.6144,molecular,79,5,False,True,North America,low-tech,8,6,85.7494,10.0,wine,Intermediate,89,False,False,86.1514,3,10
+False,1,1.0,False,True,False,9,True,2023,80,3.3091,7,4,118.0513,molecular,66,4,False,True,North America,high-tech,6,5,83.2762,6.6,cocktail,Beginner,80,True,False,79.1906,1,5
+False,1,1.0,False,False,True,14,True,2023,38,3.0783,6,4,115.0212,traditional,22,4,True,True,Europe,high-tech,3,5,77.4952,7.2,none,Expert,84,True,False,82.856,2,4
+True,1,1.0,False,True,True,7,False,2023,200,7.1718,8,4,101.3995,molecular,35,4,,False,Asia,low-tech,7,7,75.1178,8.5,cocktail,Expert,87,True,False,90.9328,2,4
+True,1,1.0,False,True,False,1,True,2023,62,5.3386,5,4,121.4645,traditional,93,4,,True,North America,high-tech,9,6,76.1194,9.3,wine,Expert,81,False,False,83.4268,4,4
+False,1,1.0,False,True,True,8,False,2018,12,5.3869,8,4,109.6695,molecular,9,4,True,False,North America,high-tech,6,5,86.3954,5.9,wine,Expert,73,False,False,77.6661,1,4
+,1,1.0,False,False,False,12,True,2023,25,2.0901,8,4,120.7629,traditional,28,4,True,False,Europe,high-tech,5,6,77.2945,2.8,beer,Intermediate,81,False,False,82.1291,2,5
+True,1,1.0,False,False,True,5,False,2023,63,2.6968,6,5,125.4681,traditional,3,4,True,True,Asia,high-tech,5,6,77.2156,5.3,beer,Intermediate,82,True,False,78.5605,1,5
+False,1,1.0,False,False,False,10,False,2023,119,8.7224,5,4,114.5255,molecular,72,4,True,False,Europe,high-tech,5,5,81.4468,7.2,wine,Expert,93,True,False,84.7972,4,4
+False,1,1.0,False,True,False,9,False,2018,6,7.8557,6,4,120.7701,molecular,83,5,False,False,North America,low-tech,6,5,78.8642,8.3,none,Intermediate,76,,False,80.0493,1,5
+False,1,1.0,True,True,False,2,False,2023,112,9.7766,6,4,119.0509,molecular,19,4,,False,Asia,high-tech,6,7,86.9064,1.9,none,Intermediate,79,False,False,82.7653,1,8

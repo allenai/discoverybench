@@ -1,0 +1,48 @@
+{
+  "id": 0,
+  "domain": "adventure travel",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to exploring remote places, thrill-seeking trips, and backpacking adventures.",
+      "columns": [
+        {
+          "name": "age",
+          "description": "Age of the traveler"
+        },
+        {
+          "name": "number_of_trips",
+          "description": "Number of adventure trips taken to remote areas per year"
+        },
+        {
+          "name": "stress_tolerance",
+          "description": "Ability to handle stress, rated from low to high"
+        },
+        {
+          "name": "travel_style",
+          "description": "Type of travel usually preferred"
+        },
+        {
+          "name": "creativity_score",
+          "description": "Measured creativity and problem-solving abilities under stress"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 910,
+      "question": "What is the relationship between stress tolerance and creativity score for travelers with different numbers of adventure travel trips per year?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "creativity_score",
+      "true_hypothesis": "Travelers who engage in adventure travel to remote areas more than twice a year have a creativity score that is computed as 3 + 2 * (stress_tolerance)^2  + 1.5 * stress_tolerance if their number of trips is greater than 2; otherwise, it is computed as 3 + 1.75 * stress_tolerance. Stress tolerance plays a significant role in determining creativity scores under stress.",
+      "true_hypothesis_expr": "np.where(df['number_of_trips'] > 2, 3 + 2 * df['stress_tolerance']**2 + 1.5 * df['stress_tolerance'], 3 + 1.75 * df['stress_tolerance'])",
+      "relevant_cols": [
+        "number_of_trips",
+        "stress_tolerance",
+        "creativity_score"
+      ]
+    }
+  ]
+}

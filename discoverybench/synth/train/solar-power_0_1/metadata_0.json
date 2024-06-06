@@ -1,0 +1,142 @@
+{
+  "id": 0,
+  "domain": "solar power",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to harnessing solar energy, photovoltaic technology, and sustainable power systems.",
+      "columns": [
+        {
+          "name": "high_efficiency_appliances",
+          "description": "Indicates whether the household uses high-efficiency appliances (true or false)"
+        },
+        {
+          "name": "altitude",
+          "description": "The elevation of the location of the house in meters"
+        },
+        {
+          "name": "industrial_area_presence",
+          "description": "Indicator if the area has significant industrial activity."
+        },
+        {
+          "name": "season",
+          "description": "The season of the year"
+        },
+        {
+          "name": "temperature",
+          "description": "Average temperature during the month"
+        },
+        {
+          "name": "electricity_generated",
+          "description": "Amount of electricity generated in kilowatt-hours"
+        },
+        {
+          "name": "annual_snowfall",
+          "description": "Annual snowfall measured in centimeters"
+        },
+        {
+          "name": "predicted_snowfall",
+          "description": "Anticipated annual snowfall estimation"
+        },
+        {
+          "name": "has_solar_panels",
+          "description": "Whether the location has solar panels installed."
+        },
+        {
+          "name": "solar_panel_efficiency",
+          "description": "The efficiency rating of solar panels commonly used in the region, expressed as a percentage."
+        },
+        {
+          "name": "cell_color",
+          "description": "Color of the photovoltaic cells in the solar panels"
+        },
+        {
+          "name": "daylight_to_night_ratio",
+          "description": "The ratio of daylight hours to night hours"
+        },
+        {
+          "name": "home_energy_storage_capacity",
+          "description": "Home's energy storage system capacity in kilowatt-hours"
+        },
+        {
+          "name": "hours_of_sunlight",
+          "description": "Average daily hours of sunlight"
+        },
+        {
+          "name": "average_daily_sunlight",
+          "description": "Average daily hours of sunlight in the region"
+        },
+        {
+          "name": "number_of_clear_days",
+          "description": "Annual count of days classified as clear with minimal cloud cover"
+        },
+        {
+          "name": "average_daily_temperature_variation",
+          "description": "The average daily temperature fluctuation in degrees Celsius."
+        },
+        {
+          "name": "day_length",
+          "description": "Total day length in hours."
+        },
+        {
+          "name": "month",
+          "description": "Month during which the electricity generation data was recorded"
+        },
+        {
+          "name": "region",
+          "description": "Geographic region of the solar paneled home"
+        },
+        {
+          "name": "locality_solar_energy_usage_percentile",
+          "description": "Percentile ranking of solar energy usage in the locality"
+        },
+        {
+          "name": "roof_orientation",
+          "description": "Orientation of the roof primarily installed with solar panels"
+        },
+        {
+          "name": "wind_speed",
+          "description": "Average wind speed in km/h."
+        },
+        {
+          "name": "average_daylight_duration",
+          "description": "The average number of sunlight hours per day in the region."
+        },
+        {
+          "name": "inverter_type",
+          "description": "Type of inverter used in the solar panel system"
+        },
+        {
+          "name": "average_temperature",
+          "description": "The annual average temperature in degrees Celsius where the house is located"
+        },
+        {
+          "name": "region_type",
+          "description": "The classification of the region where the house is located"
+        },
+        {
+          "name": "sunlight_hours",
+          "description": "Total hours of sunlight received per day."
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 79,
+      "question": "What formula can be derived to estimate the average daily sunlight in the region based on the provided dataset columns?",
+      "question_type": "general",
+      "difficulty": 3,
+      "target_col": "average_daily_sunlight",
+      "true_hypothesis": "The average daily sunlight in the region can be calculated by multiplying the number of clear days by the complement of the high, medium, or low sunlight availability zone based on daylight duration and temperature variation adjusted for solar panel efficiency, dividing by 365, and then multiplying by 12.",
+      "true_hypothesis_expr": "(df['number_of_clear_days'] * (1 - np.where(np.where((df['average_daylight_duration'] ** 2 - df['average_daily_temperature_variation']) >= 50, 'high', np.where((df['average_daylight_duration'] ** 2 - df['average_daily_temperature_variation']) >= 20, 'medium', 'low')) == 'high', 1 - df['solar_panel_efficiency'] / 40, 1))) / 365 * 12",
+      "relevant_cols": [
+        "number_of_clear_days",
+        "solar_panel_efficiency",
+        "average_daylight_duration",
+        "average_daily_temperature_variation",
+        "average_daily_sunlight"
+      ]
+    }
+  ]
+}

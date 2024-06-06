@@ -1,0 +1,128 @@
+{
+  "id": 0,
+  "domain": "medieval literature",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to knights, epic poems, and medieval storytelling.",
+      "columns": [
+        {
+          "name": "number_of_battles",
+          "description": "The number of battles the knight participated in"
+        },
+        {
+          "name": "roles_of_distinction",
+          "description": "Whether the knight has been depicted in roles of high distinction or not (e.g., kingdom leaders, quest leaders)"
+        },
+        {
+          "name": "castle_residencies",
+          "description": "Counts the number of castles a knight has resided in, reflecting their status and access to resources."
+        },
+        {
+          "name": "literacy_rates",
+          "description": "Percentage representing the literacy rate of the knight's originating region"
+        },
+        {
+          "name": "forest_coverage_percent",
+          "description": "Percentage of forest coverage in the knight's region of origin"
+        },
+        {
+          "name": "troubadour_friendships",
+          "description": "Indicates the number of troubadours the knight is closely associated with, reflecting exposure to lyrical and oral storytelling traditions."
+        },
+        {
+          "name": "knight_tournaments",
+          "description": "Count of tournaments a knight has participated in"
+        },
+        {
+          "name": "manuscripts_collected",
+          "description": "Counts the number of medieval manuscripts collected by the knight, suggesting direct engagement with written material."
+        },
+        {
+          "name": "regions_with_epic_traditions",
+          "description": "Whether the knight hails from a region known for strong traditions in epic poetry"
+        },
+        {
+          "name": "region_of_origin",
+          "description": "The geographical region where the knight originated"
+        },
+        {
+          "name": "region_epic_tradition_score",
+          "description": "Score rating the richness of the knight's region in terms of epic poetry tradition."
+        },
+        {
+          "name": "jousting_tournaments",
+          "description": "Indicates the number of jousting tournaments the knight has participated in, showing their active participation in knightly culture."
+        },
+        {
+          "name": "accolade_count",
+          "description": "Total number of accolades received by the knight from tourneys and royal acknowledgments."
+        },
+        {
+          "name": "handedness",
+          "description": "Whether the knight is left-handed or right-handed"
+        },
+        {
+          "name": "can_recite_verses",
+          "description": "Whether the knight can recite verses from epic poems (true) or not (false)."
+        },
+        {
+          "name": "knightly_vows",
+          "description": "Binary indicator of whether the knight has taken any specific knightly vows, reflecting adherence to chivalric codes."
+        },
+        {
+          "name": "regions_with_epic_centers",
+          "description": "Indicates whether the knight originates from a region known for significant epic literature and storytelling (true) or not (false)."
+        },
+        {
+          "name": "manuscript_contributions",
+          "description": "Number of contributions the knight has made to medieval manuscripts, either as stories or illustrations"
+        },
+        {
+          "name": "weapon_type",
+          "description": "Primary weapon used by the knight"
+        },
+        {
+          "name": "knight_name_survivability_score",
+          "description": "Score indicating the survivability measure associated with the knight's name"
+        },
+        {
+          "name": "literacy_level",
+          "description": "Estimates the ability of the knight to read and write based on references in literature, on a scale from 1 to 10."
+        },
+        {
+          "name": "epic_poem_citations",
+          "description": "Number of times the knight is cited in different epic poems"
+        },
+        {
+          "name": "battles_survived",
+          "description": "The number of battles survived by the knight"
+        },
+        {
+          "name": "era_of_legend",
+          "description": "Era in which the knight's stories were popular, corresponds to a specific century"
+        },
+        {
+          "name": "number_of_tourneys",
+          "description": "The number of tournaments in which the knight has participated."
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 634,
+      "question": "Is there a relationship between the 'literacy_level' of knights and their 'knight_name_survivability_score', considering the regions they come from known for epic literature?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "knight_name_survivability_score",
+      "true_hypothesis": "Knights with a higher 'literacy_level' who originate from regions known for significant epic literature and storytelling tend to have higher survivability scores based on the correlation between their literacy level and the number of regions with epic centers they come from.",
+      "true_hypothesis_expr": "df['literacy_level'] * (df['regions_with_epic_centers'] + df['literacy_level']) / 2.0",
+      "relevant_cols": [
+        "literacy_level",
+        "regions_with_epic_centers",
+        "knight_name_survivability_score"
+      ]
+    }
+  ]
+}

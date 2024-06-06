@@ -1,0 +1,88 @@
+{
+  "id": 0,
+  "domain": "neuroscience",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to brain functions, neural pathways, and cognitive research.",
+      "columns": [
+        {
+          "name": "digital_resource_access",
+          "description": "Access level to digital resources like internet and educational software (scale 1-10)"
+        },
+        {
+          "name": "age",
+          "description": "Age of the participant"
+        },
+        {
+          "name": "daily_meditation",
+          "description": "Whether the participant meditates daily"
+        },
+        {
+          "name": "smart_device_ownership",
+          "description": "Whether the participant owns a smart device such as a smartphone, tablet, or smartwatch"
+        },
+        {
+          "name": "hours_spent_on_cognitive_apps",
+          "description": "Number of hours per week the participant spends on apps designed for cognitive training"
+        },
+        {
+          "name": "degree_level",
+          "description": "Highest level of education degree obtained by the participant"
+        },
+        {
+          "name": "social_media_for_academia",
+          "description": "Average hours per week the participant uses social media to share or gather academic content"
+        },
+        {
+          "name": "problem_solving_response_time",
+          "description": "Time taken to activate neural pathways during a problem-solving task (in milliseconds)"
+        },
+        {
+          "name": "omega_3_intake_level",
+          "description": "Level of omega-3 fatty acids intake measured in grams per day"
+        },
+        {
+          "name": "occupation",
+          "description": "Occupation of the participant categorized into types such as student, professional, unemployed, etc."
+        },
+        {
+          "name": "participation_in_cognitive_research",
+          "description": "Number of cognitive research studies the participant has taken part in over the past year"
+        },
+        {
+          "name": "cognitive_games_frequency",
+          "description": "Number of times per week the participant engages in cognitive enhancing games"
+        },
+        {
+          "name": "memory_task_performance",
+          "description": "Score on standardized memory tasks, scaled between 0 and 10"
+        },
+        {
+          "name": "gender",
+          "description": "Gender of the participant"
+        },
+        {
+          "name": "internet_usage_for_education",
+          "description": "Average hours per week the internet is used for educational purposes"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 392,
+      "question": "Is there a relationship between the frequency of cognitive games engagement, using social media for academia, and utilizing the internet for educational purposes in the context of neuroscience research?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "internet_usage_for_education",
+      "true_hypothesis": "Participants who engage more frequently in cognitive games and use social media for academia are likely to use the internet more for educational purposes.",
+      "true_hypothesis_expr": "df['cognitive_games_frequency'] * 2 + df['social_media_for_academia'] * 1.5",
+      "relevant_cols": [
+        "cognitive_games_frequency",
+        "social_media_for_academia",
+        "internet_usage_for_education"
+      ]
+    }
+  ]
+}

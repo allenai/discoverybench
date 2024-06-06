@@ -1,0 +1,139 @@
+{
+  "id": 0,
+  "domain": "molecular gastronomy",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to science of cooking, food chemistry, and avant-garde cuisine.",
+      "columns": [
+        {
+          "name": "cooking_method",
+          "description": "Type of cooking method used"
+        },
+        {
+          "name": "cooking_technology_level",
+          "description": "Assessment of the level of technology used in cooking, high-tech or low-tech"
+        },
+        {
+          "name": "online_courses_count",
+          "description": "Number of online courses on molecular gastronomy available from institutions within the region"
+        },
+        {
+          "name": "number_of_cooking_techniques",
+          "description": "Count of distinct cooking techniques used in the preparation of the dish"
+        },
+        {
+          "name": "guest_preferences_variation",
+          "description": "Numerical rating from 1 to 5 indicating variation in guest preferences"
+        },
+        {
+          "name": "is_special_event",
+          "description": "Indicates whether the dish is prepared for a special culinary event"
+        },
+        {
+          "name": "ingredient_origin",
+          "description": "Country or region where the main ingredient originates"
+        },
+        {
+          "name": "presentation_novelty",
+          "description": "Quantifies the novelty of dish presentation on a scale"
+        },
+        {
+          "name": "culinary_patents_count",
+          "description": "Number of patents registered for culinary devices and technologies in the region"
+        },
+        {
+          "name": "local_competitions_presence",
+          "description": "Indicates whether there are any local molecular gastronomy competitions in the region"
+        },
+        {
+          "name": "cultural_significance",
+          "description": "Binary indicator of whether the ingredient is considered significant in any cultural cuisine (1 if yes, 0 if no)"
+        },
+        {
+          "name": "beverage_pairing",
+          "description": "Type of beverage, if any, that the dish is paired with"
+        },
+        {
+          "name": "celebrity_chef_presence",
+          "description": "Indicates whether a celebrity chef is involved in the molecular gastronomy offerings in the region"
+        },
+        {
+          "name": "culinary_technique_cost",
+          "description": "The cumulative cost associated with applying advanced culinary techniques to the main ingredient"
+        },
+        {
+          "name": "local_ingredient_usage",
+          "description": "Percentage of ingredients in the dish that are locally sourced"
+        },
+        {
+          "name": "special_equipment",
+          "description": "Indicates if the dish requires specialized culinary equipment"
+        },
+        {
+          "name": "microbial_population_optimal",
+          "description": "Boolean indicating if the microbial population in the soil is at an optimal level for ingredient growth."
+        },
+        {
+          "name": "sensory_impact_score",
+          "description": "Scores the intended sensory impact of the dish, focusing on aroma, flavor intensity, and visual presentation"
+        },
+        {
+          "name": "seasonal_availability",
+          "description": "Binary indicator of whether the ingredient is seasonally available (1 if yes, 0 if no)"
+        },
+        {
+          "name": "soil_richness_level",
+          "description": "Numeric score representing the richness of the soil where the ingredient is grown, higher scores indicate richer soil."
+        },
+        {
+          "name": "production_volume",
+          "description": "Annual production volume of the ingredient in metric tons"
+        },
+        {
+          "name": "culinary_technique_heat",
+          "description": "Represents the level of heat required, on a scale, for cooking techniques"
+        },
+        {
+          "name": "peak_ingredient_availability",
+          "description": "Boolean indicating whether the ingredient is at its peak availability in the local markets or not."
+        },
+        {
+          "name": "customer_satisfaction_rating",
+          "description": "Average satisfaction rating for the dish on a scale from 1 to 10"
+        },
+        {
+          "name": "preparation_steps",
+          "description": "Counts the total number of steps required to prepare the dish"
+        },
+        {
+          "name": "predicted_satisfaction_increase",
+          "description": "The predicted increase in satisfaction"
+        },
+        {
+          "name": "media_exposures_count",
+          "description": "Number of times molecular gastronomy featured in media such as television or significant publications in a year"
+        },
+        {
+          "name": "chef_experience_level",
+          "description": "Experience level of the chef"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 808,
+      "question": "What is the relationship between the customer satisfaction rating and the predicted satisfaction increase in the dataset?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "predicted_satisfaction_increase",
+      "true_hypothesis": "The predicted satisfaction increase is calculated as the cube of the difference between the customer satisfaction rating and 1, divided by 729.",
+      "true_hypothesis_expr": "(df['customer_satisfaction_rating'] - 1)**3 / 729",
+      "relevant_cols": [
+        "customer_satisfaction_rating",
+        "predicted_satisfaction_increase"
+      ]
+    }
+  ]
+}

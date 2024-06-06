@@ -1,0 +1,154 @@
+{
+  "id": 0,
+  "domain": "molecular gastronomy",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to science of cooking, food chemistry, and avant-garde cuisine.",
+      "columns": [
+        {
+          "name": "preparation_steps",
+          "description": "Counts the total number of steps required to prepare the dish"
+        },
+        {
+          "name": "local_competitions_presence",
+          "description": "Indicates whether there are any local molecular gastronomy competitions in the region"
+        },
+        {
+          "name": "number_of_cooking_techniques",
+          "description": "Count of distinct cooking techniques used in the preparation of the dish"
+        },
+        {
+          "name": "local_ingredient_usage",
+          "description": "Percentage of ingredients in the dish that are locally sourced"
+        },
+        {
+          "name": "region_popularity_score",
+          "description": "Numeric score indicating the popularity of molecular gastronomy in the restaurant's region on a scale from 1 to 5"
+        },
+        {
+          "name": "presentation_novelty",
+          "description": "Quantifies the novelty of dish presentation on a scale"
+        },
+        {
+          "name": "seasonal_availability",
+          "description": "Binary indicator of whether the ingredient is seasonally available (1 if yes, 0 if no)"
+        },
+        {
+          "name": "culinary_technique_heat",
+          "description": "Represents the level of heat required, on a scale, for cooking techniques"
+        },
+        {
+          "name": "chef_experience_level",
+          "description": "Experience level of the chef"
+        },
+        {
+          "name": "cooking_technology_level",
+          "description": "Assessment of the level of technology used in cooking, high-tech or low-tech"
+        },
+        {
+          "name": "soil_richness_level",
+          "description": "Numeric score representing the richness of the soil where the ingredient is grown, higher scores indicate richer soil."
+        },
+        {
+          "name": "is_special_event",
+          "description": "Indicates whether the dish is prepared for a special culinary event"
+        },
+        {
+          "name": "sensory_impact_score",
+          "description": "Scores the intended sensory impact of the dish, focusing on aroma, flavor intensity, and visual presentation"
+        },
+        {
+          "name": "culinary_patents_count",
+          "description": "Number of patents registered for culinary devices and technologies in the region"
+        },
+        {
+          "name": "cooking_method",
+          "description": "Type of cooking method used"
+        },
+        {
+          "name": "preparation_complexity",
+          "description": "Quantifies the complexity of dish preparation on a scale"
+        },
+        {
+          "name": "online_courses_count",
+          "description": "Number of online courses on molecular gastronomy available from institutions within the region"
+        },
+        {
+          "name": "special_equipment",
+          "description": "Indicates if the dish requires specialized culinary equipment"
+        },
+        {
+          "name": "ingredient_origin",
+          "description": "Country or region where the main ingredient originates"
+        },
+        {
+          "name": "guest_preferences_variation",
+          "description": "Numerical rating from 1 to 5 indicating variation in guest preferences"
+        },
+        {
+          "name": "customer_satisfaction_rating",
+          "description": "Average satisfaction rating for the dish on a scale from 1 to 10"
+        },
+        {
+          "name": "cultural_significance",
+          "description": "Binary indicator of whether the ingredient is considered significant in any cultural cuisine (1 if yes, 0 if no)"
+        },
+        {
+          "name": "peak_ingredient_availability",
+          "description": "Boolean indicating whether the ingredient is at its peak availability in the local markets or not."
+        },
+        {
+          "name": "media_exposures_count",
+          "description": "Number of times molecular gastronomy featured in media such as television or significant publications in a year"
+        },
+        {
+          "name": "microbial_population_optimal",
+          "description": "Boolean indicating if the microbial population in the soil is at an optimal level for ingredient growth."
+        },
+        {
+          "name": "celebrity_chef_presence",
+          "description": "Indicates whether a celebrity chef is involved in the molecular gastronomy offerings in the region"
+        },
+        {
+          "name": "beverage_pairing",
+          "description": "Type of beverage, if any, that the dish is paired with"
+        },
+        {
+          "name": "culinary_technique_cost",
+          "description": "The cumulative cost associated with applying advanced culinary techniques to the main ingredient"
+        },
+        {
+          "name": "ingredient_price_fluctuation",
+          "description": "Percentage price increase or decrease of the main ingredient from average yearly price"
+        },
+        {
+          "name": "predicted_harvest_season",
+          "description": "Categorizes the harvest season of an ingredient as Summer, Winter, or Fall based on specific criteria."
+        },
+        {
+          "name": "production_volume",
+          "description": "Annual production volume of the ingredient in metric tons"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 812,
+      "question": "Is there a relationship between the number of preparation steps and the preparation complexity score in the context of molecular gastronomy?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "preparation_complexity",
+      "true_hypothesis": "In the context of dish preparation complexity, the preparation complexity score is determined by multiplying the number of preparation steps by the presence of special equipment, then adding a score based on culinary technique heat level and sensory impact.",
+      "true_hypothesis_expr": "df['preparation_steps'] * (df['special_equipment'] + 1) + 5 * np.where((df['culinary_technique_heat'] >= 4) & (df['sensory_impact_score'] > 7), True, False).astype(int)",
+      "relevant_cols": [
+        "culinary_technique_heat",
+        "sensory_impact_score",
+        "preparation_steps",
+        "special_equipment",
+        "preparation_complexity"
+      ]
+    }
+  ]
+}

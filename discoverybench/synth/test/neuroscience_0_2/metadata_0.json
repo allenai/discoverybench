@@ -1,0 +1,89 @@
+{
+  "id": 0,
+  "domain": "neuroscience",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to brain functions, neural pathways, and cognitive research.",
+      "columns": [
+        {
+          "name": "annual_income",
+          "description": "Annual income of the participant in USD"
+        },
+        {
+          "name": "age",
+          "description": "Age of the participant"
+        },
+        {
+          "name": "gender",
+          "description": "Gender of the participant"
+        },
+        {
+          "name": "digital_resource_access",
+          "description": "Access level to digital resources like internet and educational software (scale 1-10)"
+        },
+        {
+          "name": "participation_in_cognitive_research",
+          "description": "Number of cognitive research studies the participant has taken part in over the past year"
+        },
+        {
+          "name": "hours_spent_on_cognitive_apps",
+          "description": "Number of hours per week the participant spends on apps designed for cognitive training"
+        },
+        {
+          "name": "degree_level",
+          "description": "Highest level of education degree obtained by the participant"
+        },
+        {
+          "name": "smart_device_ownership",
+          "description": "Whether the participant owns a smart device such as a smartphone, tablet, or smartwatch"
+        },
+        {
+          "name": "problem_solving_response_time",
+          "description": "Time taken to activate neural pathways during a problem-solving task (in milliseconds)"
+        },
+        {
+          "name": "daily_meditation",
+          "description": "Whether the participant meditates daily"
+        },
+        {
+          "name": "social_media_for_academia",
+          "description": "Average hours per week the participant uses social media to share or gather academic content"
+        },
+        {
+          "name": "cognitive_games_frequency",
+          "description": "Number of times per week the participant engages in cognitive enhancing games"
+        },
+        {
+          "name": "omega_3_intake_level",
+          "description": "Level of omega-3 fatty acids intake measured in grams per day"
+        },
+        {
+          "name": "occupation",
+          "description": "Occupation of the participant categorized into types such as student, professional, unemployed, etc."
+        },
+        {
+          "name": "memory_task_performance",
+          "description": "Score on standardized memory tasks, scaled between 0 and 10"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 394,
+      "question": "Is there a relationship between participants who have a Master's or PhD degree, engage in cognitive games at least 20 times a week, spend 1.5 hours or more per week on social media for academic purposes, and their annual income? Please provide statistical analysis to support your answer.",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "annual_income",
+      "true_hypothesis": "Participants with Master's or PhD degrees, and who engage in cognitive enhancing games more than or equal to 20 times a week, along with spending 1.5 or more hours per week on social media to share or gather academic content, are likely to have annual incomes of $150,000 or $120,000 respectively.",
+      "true_hypothesis_expr": "np.select([df['degree_level'].isin(['Master', 'PhD']), (df['cognitive_games_frequency'] * 2 + df['social_media_for_academia'] * 1.5) >= 20], [150000, 120000], default=50000)",
+      "relevant_cols": [
+        "degree_level",
+        "cognitive_games_frequency",
+        "social_media_for_academia",
+        "annual_income"
+      ]
+    }
+  ]
+}

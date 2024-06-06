@@ -1,0 +1,100 @@
+{
+  "id": 0,
+  "domain": "culinary arts",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to cooking techniques, gastronomy, and culinary traditions.",
+      "columns": [
+        {
+          "name": "local_supplier_partnerships",
+          "description": "Number of local suppliers from which the chef sources ingredients"
+        },
+        {
+          "name": "menu_items_count",
+          "description": "Total number of different dishes available on the chef's menu"
+        },
+        {
+          "name": "gastronomic_techniques_count",
+          "description": "The count of different gastronomic techniques used by the chef"
+        },
+        {
+          "name": "chef_experience",
+          "description": "Number of years of professional cooking experience the chef has"
+        },
+        {
+          "name": "cuisine_specialty",
+          "description": "Type of cuisine the chef specializes in"
+        },
+        {
+          "name": "culinary_competition_participation",
+          "description": "Number of culinary competitions the chef participates in annually"
+        },
+        {
+          "name": "chef_innovation_score",
+          "description": "A numerical score from 1 to 100 representing the chef's tendency to innovate and try new culinary methods"
+        },
+        {
+          "name": "number_of_signature_dishes",
+          "description": "Total number of signature dishes a chef has developed"
+        },
+        {
+          "name": "preferred_cooking_method",
+          "description": "Primary cooking method preferred by the chef"
+        },
+        {
+          "name": "years_of_experience",
+          "description": "Number of years the chef has been professionally cooking"
+        },
+        {
+          "name": "participation_in_culinary_innovation_programs",
+          "description": "Binary indicator of the chef's involvement in any culinary innovation programs focused on modern cooking techniques and ingredients"
+        },
+        {
+          "name": "number_of_awards",
+          "description": "Total number of culinary awards won by the chef"
+        },
+        {
+          "name": "international_competitions_attended",
+          "description": "Number of international culinary competitions the chef has attended"
+        },
+        {
+          "name": "ingredients_diversity_score",
+          "description": "A score representing the diversity of ingredients used by the chef"
+        },
+        {
+          "name": "has_formal_culinary_education",
+          "description": "Indicates whether the chef has formal culinary education"
+        },
+        {
+          "name": "region_climate",
+          "description": "Climatic condition of the region the chef works in"
+        },
+        {
+          "name": "chef_id",
+          "description": "Unique identifier for each chef"
+        },
+        {
+          "name": "uses_international_flavors",
+          "description": "Indicates whether the chef incorporates international flavors into their cuisine"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 1039,
+      "question": "What is the relationship between the number of culinary awards, participation in international culinary competitions, and years of experience in the field?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "years_of_experience",
+      "true_hypothesis": "Chefs with more culinary awards and who frequently participate in international culinary competitions have experience calculated by multiplying their number of awards by 0.5 and their international competitions attended by 1.5, then summing these values.",
+      "true_hypothesis_expr": "df['number_of_awards'] * 0.5 + df['international_competitions_attended'] * 1.5",
+      "relevant_cols": [
+        "number_of_awards",
+        "international_competitions_attended",
+        "years_of_experience"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "id": 0,
+  "domain": "cryptic puzzles",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to riddles, brain teasers, and mystery challenges.",
+      "columns": [
+        {
+          "name": "number_of_puzzles_solved",
+          "description": "Total number of puzzles solved by the participant"
+        },
+        {
+          "name": "linguistic_interest",
+          "description": "Indicates whether the participant has a higher interest in linguistic activities"
+        },
+        {
+          "name": "daily_puzzle_time_percentage",
+          "description": "Percentage of daily free time the participant devotes to solving puzzles"
+        },
+        {
+          "name": "logical_preference_score",
+          "description": "Score that reflects the participant's preference for logical reasoning, between 1 to 10"
+        },
+        {
+          "name": "active_in_puzzle_community",
+          "description": "Whether the participant is active in online or local puzzle-solving communities"
+        },
+        {
+          "name": "education_level",
+          "description": "Highest level of education attained by the participant"
+        },
+        {
+          "name": "problem_solving_score",
+          "description": "Score obtained in problem-solving games, scaled from 0 to 100"
+        },
+        {
+          "name": "country_of_participant",
+          "description": "Country from which the participant is"
+        },
+        {
+          "name": "days_since_last_puzzle",
+          "description": "Number of days since the participant last solved a puzzle"
+        },
+        {
+          "name": "prefers_puzzle_themes",
+          "description": "The types of puzzle themes preferred by the participant, ranging from logical, abstract, to sequential."
+        },
+        {
+          "name": "average_solve_time",
+          "description": "Average time taken by the participant to solve puzzles, in minutes"
+        },
+        {
+          "name": "uses_guided_help",
+          "description": "Indicates whether the participant prefers using guided help while solving puzzles."
+        },
+        {
+          "name": "brain_training_frequency",
+          "description": "Number of times per week the participant engages in brain training activities"
+        },
+        {
+          "name": "participant_age",
+          "description": "Age of the participant."
+        },
+        {
+          "name": "creative_preference_score",
+          "description": "Score that reflects the participant's preference for creative thinking, between 1 to 10"
+        },
+        {
+          "name": "time_dedication",
+          "description": "Estimated time in minutes the participant is willing to dedicate to solving a single puzzle session."
+        },
+        {
+          "name": "prefers_quick_tasks",
+          "description": "Indicates if the participant prefers quick tasks over detailed ones"
+        },
+        {
+          "name": "puzzle_solving_frequency",
+          "description": "How often the participant engages in solving puzzles per week"
+        },
+        {
+          "name": "logical_thinking_activity",
+          "description": "Indicates if the participant engages in activities that involve logical thinking."
+        },
+        {
+          "name": "participation_in_puzzle_competitions",
+          "description": "Whether the participant regularly competes in puzzle competitions"
+        },
+        {
+          "name": "english_fluency_level",
+          "description": "Fluency level of English language of the participant, on a scale of 1 to 10"
+        },
+        {
+          "name": "puzzle_complexity_preference",
+          "description": "Participant's preference for puzzle complexity on a scale from 1 (simple) to 10 (most complex)."
+        },
+        {
+          "name": "difficulty_levels_encountered",
+          "description": "Number of different difficulty levels encountered by the participant"
+        },
+        {
+          "name": "previous_experience",
+          "description": "Whether the participant has solved similar puzzles in the past"
+        },
+        {
+          "name": "leisure_preference",
+          "description": "Type of leisure activity the participant prefers, categorized as puzzles or others"
+        },
+        {
+          "name": "puzzle_pieces",
+          "description": "Number of pieces the puzzle contains"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 404,
+      "question": "What is the relationship between average solve time, number of puzzles solved, difficulty levels encountered, and creative preference score in the cryptic puzzles domain?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "creative_preference_score",
+      "true_hypothesis": "Participants who quickly solve time-bound puzzles after solving more than 50 puzzles and encountering more than 3 difficulty levels have a creative preference score of 3, indicating a moderate inclination towards creative thinking.",
+      "true_hypothesis_expr": "np.where((df['average_solve_time'] <= 10) & (np.where((df['number_of_puzzles_solved'] > 50) & (df['difficulty_levels_encountered'] > 3), True, False)), 3, 7)",
+      "relevant_cols": [
+        "average_solve_time",
+        "number_of_puzzles_solved",
+        "difficulty_levels_encountered",
+        "creative_preference_score"
+      ]
+    }
+  ]
+}

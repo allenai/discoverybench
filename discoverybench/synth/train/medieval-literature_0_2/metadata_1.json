@@ -1,0 +1,101 @@
+{
+  "id": 1,
+  "domain": "medieval literature",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to knights, epic poems, and medieval storytelling.",
+      "columns": [
+        {
+          "name": "region_of_origin",
+          "description": "The geographical region where the knight originated"
+        },
+        {
+          "name": "regions_with_epic_centers",
+          "description": "Indicates whether the knight originates from a region known for significant epic literature and storytelling (true) or not (false)."
+        },
+        {
+          "name": "knightly_vows",
+          "description": "Binary indicator of whether the knight has taken any specific knightly vows, reflecting adherence to chivalric codes."
+        },
+        {
+          "name": "accolade_count",
+          "description": "Total number of accolades received by the knight from tourneys and royal acknowledgments."
+        },
+        {
+          "name": "epic_poem_citations",
+          "description": "Number of times the knight is cited in different epic poems"
+        },
+        {
+          "name": "number_of_battles",
+          "description": "The number of battles the knight participated in"
+        },
+        {
+          "name": "castle_residencies",
+          "description": "Counts the number of castles a knight has resided in, reflecting their status and access to resources."
+        },
+        {
+          "name": "literacy_level",
+          "description": "Estimates the ability of the knight to read and write based on references in literature, on a scale from 1 to 10."
+        },
+        {
+          "name": "roles_of_distinction",
+          "description": "Whether the knight has been depicted in roles of high distinction or not (e.g., kingdom leaders, quest leaders)"
+        },
+        {
+          "name": "jousting_tournaments",
+          "description": "Indicates the number of jousting tournaments the knight has participated in, showing their active participation in knightly culture."
+        },
+        {
+          "name": "can_recite_verses",
+          "description": "Whether the knight can recite verses from epic poems (true) or not (false)."
+        },
+        {
+          "name": "troubadour_friendships",
+          "description": "Indicates the number of troubadours the knight is closely associated with, reflecting exposure to lyrical and oral storytelling traditions."
+        },
+        {
+          "name": "literacy_rates",
+          "description": "Percentage representing the literacy rate of the knight's originating region"
+        },
+        {
+          "name": "handedness",
+          "description": "Whether the knight is left-handed or right-handed"
+        },
+        {
+          "name": "region_epic_tradition_score",
+          "description": "Score rating the richness of the knight's region in terms of epic poetry tradition."
+        },
+        {
+          "name": "knight_tournaments",
+          "description": "Count of tournaments a knight has participated in"
+        },
+        {
+          "name": "regions_with_epic_traditions",
+          "description": "Whether the knight hails from a region known for strong traditions in epic poetry"
+        },
+        {
+          "name": "forest_coverage_percent",
+          "description": "Percentage of forest coverage in the knight's region of origin"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 633,
+      "question": "What is the relationship between accolade count, region epic tradition score, and the ability to recite verses from epic poems that may indicate a connection to regions recognized for significant epic literature and storytelling?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "regions_with_epic_centers",
+      "true_hypothesis": "Knights who have a high region epic tradition score and can recite verses from epic poems are classified as originating from regions known for significant epic literature and storytelling when the product of 3 times the region epic tradition score squared plus 15 times the can recite verses value, multiplied by the accolade count, exceeds 25.",
+      "true_hypothesis_expr": "np.where((3*df['region_epic_tradition_score']**2 + 15*df['can_recite_verses']) * df['accolade_count'] > 25, True, False)",
+      "relevant_cols": [
+        "accolade_count",
+        "region_epic_tradition_score",
+        "can_recite_verses",
+        "regions_with_epic_centers"
+      ]
+    }
+  ]
+}

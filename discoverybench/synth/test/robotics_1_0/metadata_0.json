@@ -1,0 +1,124 @@
+{
+  "id": 0,
+  "domain": "robotics",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to automated machines, artificial intelligence, and industrial applications.",
+      "columns": [
+        {
+          "name": "task_success_rate",
+          "description": "Percentage of tasks successfully completed by the robot"
+        },
+        {
+          "name": "ambient_temperature",
+          "description": "The average operating temperature of the environment where the robot operates, measured in degrees Celsius"
+        },
+        {
+          "name": "primary_operational_focus",
+          "description": "The primary field of task the robot is designed for, e.g., industrial, service, research"
+        },
+        {
+          "name": "training_complexity",
+          "description": "Rating of training complexity based on required skills and tasks"
+        },
+        {
+          "name": "has_advanced_cooling",
+          "description": "Indicates whether the robot has advanced cooling mechanisms"
+        },
+        {
+          "name": "spatial_recognition_efficiency",
+          "description": "Measure of a robot's efficiency at spatial recognition tasks"
+        },
+        {
+          "name": "continuous_operation_need",
+          "description": "Indicates if the robot needs to operate continuously, with true requiring continuous operation."
+        },
+        {
+          "name": "sensor_input_count",
+          "description": "The number of sensors from which the robot receives input"
+        },
+        {
+          "name": "energy_efficiency",
+          "description": "Energy efficiency rating of the robot on a scale from 1 to 10, where 10 is the most efficient"
+        },
+        {
+          "name": "tool_complexity_level",
+          "description": "Categorical rating of the tooling complexity on the robot, ranked from 1 to 5, where 5 indicates highly complex mechanisms."
+        },
+        {
+          "name": "system_update_received",
+          "description": "Whether the robot has received a system update before the training commenced"
+        },
+        {
+          "name": "has_dual_core_processor",
+          "description": "Indicates whether the robot's system uses a dual-core processor"
+        },
+        {
+          "name": "continuous_operation_capable",
+          "description": "Indicates whether the robot is designed to operate without breaks or not"
+        },
+        {
+          "name": "robot_id",
+          "description": "Unique identifier for each robot"
+        },
+        {
+          "name": "market_sector",
+          "description": "The primary market sector where the robot is deployed, e.g., consumer, industrial, research."
+        },
+        {
+          "name": "task_designation",
+          "description": "Indicates if the robot is designed for light-duty tasks, where true means light-duty."
+        },
+        {
+          "name": "system_updates",
+          "description": "Number of system updates the robot has received in the last year"
+        },
+        {
+          "name": "operational_uptime_percent",
+          "description": "The percentage of time the robot is operational in a given period, measures how long the robot works as compared to how long it could have worked, measured as a percentage."
+        },
+        {
+          "name": "training_schedule_frequency",
+          "description": "Number of training sessions per month"
+        },
+        {
+          "name": "number_of_sensors",
+          "description": "Number of sensors installed on the robot"
+        },
+        {
+          "name": "processing_speed_GHz",
+          "description": "The clock speed of the robot's central processing unit in gigahertz"
+        },
+        {
+          "name": "AI_model_complexity_index",
+          "description": "A numerical value representing the complexity of the AI model used by the robot, where a higher value indicates a more complex model"
+        },
+        {
+          "name": "training_duration",
+          "description": "Duration of training in months"
+        },
+        {
+          "name": "timed_task_sequence_count",
+          "description": "Number of tasks a robot is programmed to perform in a specific time order"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 317,
+      "question": "Is there a relationship between the spatial recognition efficiency and the task success rate of robots in relation to the duration of their training?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "spatial_recognition_efficiency",
+      "true_hypothesis": "Robots equipped with AI are more efficient at spatial recognition tasks when the training duration is cubed, added to half of the task success rate squared, and with a constant value added.",
+      "true_hypothesis_expr": "df['training_duration']**3 + 0.5 * df['task_success_rate']**2 + 10",
+      "relevant_cols": [
+        "task_success_rate",
+        "spatial_recognition_efficiency",
+        "training_duration"
+      ]
+    }
+  ]
+}

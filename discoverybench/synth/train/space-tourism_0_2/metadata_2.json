@@ -1,0 +1,196 @@
+{
+  "id": 2,
+  "domain": "space tourism",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to commercial space travel, space hotels, and cosmic vacations.",
+      "columns": [
+        {
+          "name": "luxury_level",
+          "description": "Represents the luxury level of the trip, higher numbers indicate more luxurious."
+        },
+        {
+          "name": "personal_interest_in_space",
+          "description": "Rating of personal interest in space exploration on a scale from 1 to 10"
+        },
+        {
+          "name": "interest_in_celestial_events",
+          "description": "Whether the tourist booked the trip because of interest in celestial events, such as meteor showers or solar eclipses."
+        },
+        {
+          "name": "average_tourist_age",
+          "description": "Average age of the tourists in years."
+        },
+        {
+          "name": "has_children",
+          "description": "Indicates whether the tourist has children, true or false"
+        },
+        {
+          "name": "participated_in_promotional_events",
+          "description": "Indicates whether the tourist participated in any promotional events related to space tourism"
+        },
+        {
+          "name": "age_bracket",
+          "description": "The age range of the tourist."
+        },
+        {
+          "name": "booking_source",
+          "description": "Source of the booking, either direct or agency"
+        },
+        {
+          "name": "tourist_wealth",
+          "description": "Estimated total wealth of the tourist."
+        },
+        {
+          "name": "length_of_stay_days",
+          "description": "The number of days the tourist has booked for their stay in a space hotel"
+        },
+        {
+          "name": "government_space_budget_percent_gdp",
+          "description": "Percentage of the country's GDP allocated to space research and development"
+        },
+        {
+          "name": "preferred_view",
+          "description": "Preferred cabin view of the tourist, either Earth-facing or star-facing"
+        },
+        {
+          "name": "frequent_flyer_status",
+          "description": "Indicates if the tourist has traveled more than 3 times"
+        },
+        {
+          "name": "average_age_of_group",
+          "description": "Average age of passengers in the travel group"
+        },
+        {
+          "name": "pre_trip_training",
+          "description": "Indicates whether tourists attended a space simulation training before their trip"
+        },
+        {
+          "name": "socioeconomic_status",
+          "description": "Socioeconomic status of the tourist rated on a scale from 1 to 10"
+        },
+        {
+          "name": "personal_items_count",
+          "description": "Number of personal items tourists are allowed to take with them"
+        },
+        {
+          "name": "home_country_aerospace_investment_percentage",
+          "description": "Percentage of GDP invested in aerospace and related high-tech industries in the tourist's home country"
+        },
+        {
+          "name": "meal_preference",
+          "description": "Meal preference of the tourist, either vegetarian or non-vegetarian"
+        },
+        {
+          "name": "primary_travel_purpose",
+          "description": "Main reason for the tourist's space travel: leisure, research, or education"
+        },
+        {
+          "name": "daylight_hours_at_launch",
+          "description": "Average number of daylight hours at the launch site on the day of departure."
+        },
+        {
+          "name": "solar_activity_index",
+          "description": "Index representing solar activity, including sunspots and solar flares, which could impact energy availability for launches."
+        },
+        {
+          "name": "proportion_income_spent_on_tech",
+          "description": "The percentage of a tourist's income spent on technological gadgets and subscriptions."
+        },
+        {
+          "name": "ratio_space_trips_to_earth_vacations",
+          "description": "The ratio of space trips to earth vacations taken by a tourist"
+        },
+        {
+          "name": "marital_status",
+          "description": "Marital status of the tourist, categorized as single, married, or divorced"
+        },
+        {
+          "name": "spacewalk_participation",
+          "description": "Indicates whether a tourist participated in a spacewalk, true or false"
+        },
+        {
+          "name": "age_category",
+          "description": "Age group of the tourist, categorized into young, middle-aged, or senior"
+        },
+        {
+          "name": "completed_space_travel_training",
+          "description": "Indicates whether the tourist has completed any formal training courses for space travel"
+        },
+        {
+          "name": "nutritional_awareness_program",
+          "description": "Indicates if a nutritional awareness program is available on the spacecraft"
+        },
+        {
+          "name": "home_country_GDP",
+          "description": "Gross Domestic Product of the tourist's home country, expressed in trillions of US dollars"
+        },
+        {
+          "name": "space_membership",
+          "description": "Whether the tourist holds any membership with a space exploration organization"
+        },
+        {
+          "name": "percent_population_with_space_education",
+          "description": "Percentage of the population that has received formal education relating to space or astronomy"
+        },
+        {
+          "name": "number_of_companions",
+          "description": "Total number of travel companions accompanying the tourist"
+        },
+        {
+          "name": "age_group",
+          "description": "Age group of the tourist categorized as youth, adult, or senior"
+        },
+        {
+          "name": "satisfaction_rating",
+          "description": "Satisfaction rating on a scale from 1 to 10"
+        },
+        {
+          "name": "previous_space_travel",
+          "description": "Indicates if the tourist has traveled to space before."
+        },
+        {
+          "name": "crew_size",
+          "description": "Total number of crew and passengers scheduled for a journey, influencing the preparation time for departure."
+        },
+        {
+          "name": "is_weekend",
+          "description": "Boolean flag indicating whether the departure is scheduled on a weekend."
+        },
+        {
+          "name": "international_travel_experience",
+          "description": "If the tourist has prior international travel experience, true or false"
+        },
+        {
+          "name": "interest_in_space_missions",
+          "description": "Score based on the interest level in historical and future space missions, measured through a survey"
+        },
+        {
+          "name": "booking_language_english",
+          "description": "Indicates whether English was the primary language used during booking"
+        },
+        {
+          "name": "has_travel_insurance",
+          "description": "Indicates whether the tourist has purchased travel insurance for space travel"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 348,
+      "question": "Is there a relationship between the meal preference of space tourists and their average age, as well as the presence of a nutritional awareness program during travel?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "meal_preference",
+      "true_hypothesis": "The meal preference of a tourist depends on a combination of the average age of the travel group and the availability of a nutritional awareness program on the spacecraft, classifying them as either vegetarian or non-vegetarian based on specific calculations.",
+      "true_hypothesis_expr": "np.where(50 * (df['average_age_of_group'] / 80) + 50 * df['nutritional_awareness_program'].astype(int) > 50, 'vegetarian', 'non-vegetarian')",
+      "relevant_cols": [
+        "average_age_of_group",
+        "nutritional_awareness_program",
+        "meal_preference"
+      ]
+    }
+  ]
+}

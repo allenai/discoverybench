@@ -1,0 +1,501 @@
+social_media_trend_popularity,venue_type,fashion_show_location,external_temperature,number_of_models,number_of_fashion_design_schools,month_of_year,design_innovation_score,count_international_designers,local_fashion_magazine_circulation,num_designer_runway_appearances,ensemble_type,is_in_europe,average_profit_margin_previous_collections,percentage_new_designers,has_sponsorship
+82.1,indoor,,-24,38,175,4,22,33,336378,17,mixed,False,45.8715,89,True
+37.98,outdoor,Europe,-26,36,123,5,63,0,421324,21,traditional,True,70.5349,88,True
+63.02,indoor,Europe,-26,24,132,7,35,8,223603,21,mixed,False,33.0443,86,True
+42.84,outdoor,Europe,-27,48,78,10,78,16,376974,30,mixed,False,22.8372,92,True
+91.28,indoor,Africa,-26,40,149,4,92,45,18290,27,mixed,True,56.4364,88,False
+43.38,outdoor,Australia,-24,25,25,2,18,3,442046,12,traditional,False,4.0386,87,False
+65.0,indoor,Europe,-23,38,79,3,13,2,366542,13,traditional,False,33.1362,81,True
+51.84,outdoor,,-23,30,10,11,31,26,431168,26,modern,True,51.7112,87,False
+66.08,indoor,Africa,-24,38,20,3,47,11,363557,15,traditional,False,30.5775,91,False
+45.0,outdoor,Africa,-26,23,14,4,32,10,130545,19,modern,False,32.3466,90,
+62.12,indoor,Asia,-25,26,88,6,91,7,148212,25,modern,True,88.7237,88,False
+84.8,indoor,Australia,-23,39,136,6,75,28,405977,19,traditional,True,93.8854,74,True
+57.08,indoor,,-26,21,67,9,95,3,81834,22,traditional,True,81.2721,87,True
+95.96,indoor,Africa,-25,36,7,2,38,46,32324,17,mixed,False,11.3626,84,False
+66.98,indoor,Australia,-23,31,139,2,30,5,3862,18,mixed,False,27.8778,83,True
+72.54,outdoor,South America,-26,29,45,4,47,46,164537,7,traditional,False,68.5198,87,
+67.5,outdoor,South America,-23,42,151,5,49,41,49148,18,modern,True,96.0472,88,True
+88.58,indoor,Australia,-24,59,3,5,75,41,396698,15,traditional,False,20.8492,86,True
+64.28,indoor,Africa,-24,38,55,4,90,9,229371,25,mixed,True,93.6293,90,False
+59.94,outdoor,Africa,-26,33,132,10,49,36,123051,4,modern,False,75.3997,87,True
+66.96,outdoor,South America,-24,53,182,9,28,43,307940,16,mixed,True,99.8254,85,True
+75.26,indoor,South America,-24,40,157,9,28,26,33773,24,traditional,False,8.0709,84,
+54.9,outdoor,North America,-23,50,93,9,71,27,361271,28,traditional,False,39.3323,86,False
+46.26,outdoor,South America,-25,39,146,1,57,8,264876,25,traditional,False,46.6254,90,False
+72.92,,North America,-23,43,108,2,50,20,1000,20,mixed,False,63.8317,92,
+38.7,outdoor,Africa,-25,33,163,9,23,6,166022,8,traditional,False,67.5499,88,True
+86.42,indoor,Europe,-27,35,148,7,86,45,373427,12,traditional,False,92.5318,92,True
+59.94,outdoor,Australia,-25,37,189,8,75,35,114881,21,traditional,True,84.8168,89,
+39.24,outdoor,,-24,39,17,8,15,4,491539,11,mixed,False,5.602,86,False
+73.46,indoor,Australia,-26,34,58,10,37,24,464740,16,mixed,False,46.5383,83,False
+77.6,indoor,Europe,-27,46,32,8,53,31,396845,15,traditional,False,41.5018,88,False
+57.98,indoor,Asia,-27,40,126,4,43,4,34203,21,mixed,True,97.39,95,True
+83.18,indoor,Australia,-24,37,121,1,40,33,194847,22,modern,False,40.7285,92,True
+43.02,outdoor,North America,-26,35,36,5,73,10,154189,4,modern,False,65.9552,92,True
+53.82,,South America,-25,27,83,9,1,21,72420,20,modern,False,26.882,80,True
+84.44,indoor,North America,-24,24,116,4,47,28,490146,13,modern,False,59.6694,78,False
+56.16,outdoor,Asia,-24,41,130,2,27,20,83483,20,traditional,False,22.4046,86,False
+66.8,indoor,Asia,-25,46,22,11,12,19,153139,7,modern,False,57.9416,87,False
+68.94,outdoor,North America,-25,22,189,5,46,40,433740,24,traditional,True,86.7879,84,True
+53.46,outdoor,South America,-22,24,4,3,20,16,76692,13,traditional,False,3.3744,84,False
+88.22,indoor,Africa,-24,39,193,2,27,33,227744,15,mixed,False,53.3562,81,False
+66.96,outdoor,Africa,-26,30,52,10,52,42,478598,25,modern,True,99.1515,82,False
+61.4,indoor,,-24,26,66,9,95,6,112963,17,traditional,False,11.3803,83,True
+60.14,indoor,Australia,-26,21,85,7,74,1,364381,23,mixed,False,17.7926,82,False
+87.86,indoor,Asia,-24,31,141,6,28,39,58414,18,traditional,False,48.7879,83,False
+76.7,indoor,Australia,-25,37,31,11,38,29,324173,26,traditional,True,84.7508,82,True
+94.52,indoor,,-24,30,63,3,40,40,181593,19,mixed,True,59.4489,77,True
+42.3,outdoor,Asia,-27,20,200,5,18,12,321847,21,traditional,True,53.9909,96,False
+91.28,indoor,South America,-23,27,178,1,20,42,220921,18,mixed,False,9.8768,89,
+42.48,outdoor,Australia,-24,40,45,5,16,4,147188,18,modern,True,98.4793,85,False
+70.56,,Europe,-26,50,116,5,51,43,302615,23,traditional,False,37.5995,85,True
+82.1,indoor,Asia,-25,32,39,11,71,41,75498,13,traditional,False,25.331,88,True
+59.94,outdoor,South America,-23,43,106,5,56,29,397262,23,modern,False,43.2727,86,False
+59.04,outdoor,South America,-26,40,69,10,96,31,366741,24,traditional,False,38.665,82,
+47.34,outdoor,South America,-22,27,69,9,9,18,251617,20,mixed,False,47.5857,88,True
+69.32,indoor,Europe,-22,43,129,2,97,9,183305,15,mixed,False,69.7966,84,True
+50.22,outdoor,Africa,-24,46,49,11,49,23,438530,21,mixed,True,92.7474,86,False
+53.1,outdoor,North America,-24,34,71,8,21,30,292951,22,traditional,False,4.8098,95,True
+67.86,outdoor,Asia,-25,37,198,7,94,50,131747,10,modern,False,52.1231,96,True
+89.3,indoor,Europe,-23,30,150,1,47,40,391044,7,traditional,False,43.6673,90,False
+52.38,outdoor,South America,-23,21,88,8,34,20,318750,21,modern,False,0.8314,83,
+68.58,outdoor,Europe,-25,44,44,1,18,36,69112,17,modern,True,77.3192,86,
+69.5,indoor,Asia,-23,45,130,2,22,7,58054,23,traditional,False,9.4774,81,True
+58.32,outdoor,North America,-23,34,166,1,100,21,467751,25,modern,False,11.2078,85,False
+54.18,outdoor,Asia,-23,30,170,4,28,22,149444,9,traditional,False,7.1091,89,
+75.06,outdoor,Australia,-27,44,115,9,96,49,346150,9,traditional,False,20.7082,78,True
+70.94,indoor,Europe,-26,43,102,9,29,17,7019,24,traditional,False,17.763,80,True
+65.0,indoor,Australia,-25,27,141,2,22,6,282701,22,traditional,False,36.7541,88,True
+35.82,outdoor,South America,-25,33,43,9,19,2,116642,26,mixed,True,67.776,88,False
+64.26,outdoor,Australia,-24,54,164,6,40,34,75659,21,traditional,False,7.7439,83,True
+56.7,outdoor,South America,-23,52,13,1,24,12,384635,16,mixed,True,83.9953,76,True
+92.72,indoor,Africa,-25,26,130,3,64,45,394109,18,traditional,False,34.9759,87,True
+53.82,outdoor,Africa,-29,19,116,9,24,24,356191,20,modern,True,63.7699,84,False
+70.76,indoor,North America,-24,36,55,9,82,16,1000,26,mixed,False,7.5807,79,True
+89.84,indoor,North America,-24,38,11,3,79,38,131099,19,traditional,False,37.7657,83,True
+56.16,outdoor,Australia,-21,42,143,2,24,20,195589,13,traditional,False,2.8092,86,True
+64.8,outdoor,,-26,39,8,4,73,36,347583,18,modern,False,17.6436,88,False
+57.24,outdoor,Africa,-26,35,37,9,82,34,353910,9,modern,False,46.2958,91,True
+80.3,indoor,Africa,-25,30,103,11,59,34,274077,15,traditional,False,56.1157,82,False
+70.02,outdoor,Asia,-24,30,189,7,37,44,392901,14,modern,False,11.4282,84,True
+95.06,indoor,Asia,-25,39,20,2,44,44,206504,15,modern,False,75.2243,83,True
+59.94,outdoor,Australia,-23,27,113,6,79,31,271668,8,mixed,False,19.6791,87,False
+67.5,,South America,-25,16,61,11,25,47,36020,11,modern,False,10.1376,86,True
+37.62,outdoor,Australia,-24,33,133,11,34,1,213999,17,modern,False,29.6764,80,False
+64.44,outdoor,,-24,36,189,11,17,45,207356,20,mixed,True,54.0356,89,False
+41.76,outdoor,Africa,-22,53,52,8,40,6,318003,16,traditional,True,99.6451,84,False
+65.72,indoor,,-24,35,197,5,8,10,175356,18,mixed,False,41.3655,87,True
+61.56,outdoor,Africa,-23,23,175,10,30,39,134839,25,modern,False,43.2779,88,True
+70.04,indoor,,-25,46,130,10,38,20,126672,32,mixed,False,3.7098,84,False
+53.82,outdoor,North America,-24,32,153,2,24,19,59782,16,modern,True,76.9468,89,True
+44.1,outdoor,Africa,-25,35,174,9,12,12,356181,12,mixed,False,18.9963,86,False
+40.32,outdoor,South America,-24,24,171,11,52,10,307311,21,mixed,True,71.4684,87,True
+37.44,outdoor,,-23,42,67,10,86,4,306722,23,traditional,True,87.7936,86,False
+42.12,outdoor,Asia,-24,38,161,8,32,11,258213,10,modern,False,78.7332,90,
+75.44,,South America,-27,34,58,6,23,27,194220,11,mixed,False,64.5617,90,True
+62.46,outdoor,,-24,42,169,9,28,36,369135,12,mixed,False,57.9597,84,False
+60.84,outdoor,Asia,-25,40,49,6,86,33,465214,14,modern,False,44.3738,88,False
+74.0,indoor,Australia,-24,37,113,4,49,18,224198,23,mixed,False,15.5833,84,
+91.28,indoor,Europe,-27,39,128,3,13,43,212888,19,traditional,True,75.6874,87,
+48.42,outdoor,South America,-22,36,85,6,71,18,88223,19,modern,True,51.4193,91,True
+66.62,indoor,Asia,-22,48,143,6,12,8,331967,12,traditional,False,63.9029,81,False
+68.22,outdoor,Europe,-27,26,191,6,6,47,255808,13,modern,False,39.3828,93,True
+78.5,indoor,Europe,-25,21,28,3,25,29,477627,17,traditional,False,20.4825,92,False
+72.72,,,-25,25,8,7,14,47,267389,19,modern,True,82.1053,83,True
+51.84,outdoor,Africa,-23,40,126,8,61,20,141741,21,mixed,False,39.2923,84,True
+65.52,outdoor,South America,-25,32,127,9,51,38,295732,25,modern,True,85.6173,81,True
+42.48,,South America,-24,24,69,7,71,5,483322,13,mixed,False,95.6474,83,False
+61.38,outdoor,North America,-24,33,156,9,51,42,357110,17,traditional,True,88.0275,94,True
+44.82,outdoor,Asia,-24,55,166,2,44,8,57938,20,mixed,False,15.9193,91,False
+61.76,indoor,South America,-27,41,64,2,47,3,175274,17,traditional,True,85.0905,90,
+45.9,outdoor,Europe,-26,46,134,2,47,5,152161,18,mixed,True,50.0624,85,True
+76.7,indoor,Asia,-23,24,129,10,3,30,423436,18,traditional,False,23.1492,85,True
+50.4,outdoor,Australia,-23,36,67,6,69,17,294127,18,modern,False,14.172,86,True
+75.06,outdoor,Europe,-27,38,197,6,92,49,412886,21,modern,False,28.0664,83,True
+87.32,indoor,Asia,-25,40,65,9,38,45,102311,15,mixed,False,16.2594,87,True
+87.5,indoor,Europe,-23,33,129,2,40,38,463905,20,modern,False,3.1392,89,False
+87.32,indoor,Europe,-23,42,79,1,2,41,16115,21,mixed,True,99.5451,95,False
+70.74,outdoor,Asia,-24,38,3,4,83,45,160269,19,traditional,True,84.5736,89,
+70.02,outdoor,North America,-23,34,11,3,90,42,5147,26,traditional,True,73.6087,88,False
+95.24,indoor,Europe,-26,29,51,4,79,49,109755,19,modern,False,18.6915,86,False
+86.6,indoor,Asia,-24,23,172,11,7,48,456858,20,modern,False,6.5515,89,False
+46.26,outdoor,,-25,16,86,6,93,15,35147,13,mixed,False,48.0034,91,True
+42.3,outdoor,Australia,-25,26,122,7,3,10,93198,23,mixed,True,75.4251,90,
+64.8,,Africa,-25,32,188,7,42,30,474470,29,traditional,True,98.8546,75,True
+59.6,indoor,Australia,-23,28,24,4,51,4,358198,19,traditional,True,85.7534,92,
+44.46,outdoor,North America,-25,37,168,11,84,12,189510,6,mixed,False,91.1691,82,False
+64.8,outdoor,,-23,41,75,11,70,38,53525,23,modern,False,19.9727,79,True
+59.22,outdoor,Australia,-25,22,70,9,80,33,390467,26,modern,False,16.0926,86,False
+83.54,indoor,North America,-23,41,118,3,85,33,219426,17,mixed,False,27.8527,88,
+68.94,outdoor,Australia,-23,35,176,10,49,44,179832,14,mixed,False,19.2469,81,True
+88.04,indoor,Europe,-24,18,70,1,75,33,168356,24,modern,True,82.6348,83,False
+68.6,indoor,Australia,-23,42,146,8,8,20,291958,23,modern,True,90.9246,90,
+46.8,outdoor,Australia,-26,24,6,6,46,15,273831,18,modern,False,32.1405,90,True
+55.62,outdoor,Africa,-24,57,133,1,3,18,414398,23,modern,True,89.4325,86,True
+41.4,outdoor,North America,-26,43,125,11,87,13,387215,13,mixed,False,0.6407,89,True
+53.12,indoor,Europe,-26,33,115,11,100,3,380519,23,traditional,True,64.9804,91,False
+44.64,outdoor,,-25,34,181,10,9,14,374601,19,modern,True,53.0927,86,False
+90.2,indoor,North America,-24,21,184,2,52,41,381587,17,traditional,False,27.489,88,False
+88.76,indoor,Europe,-24,50,74,4,34,37,339867,19,traditional,True,75.9246,82,False
+55.8,outdoor,Australia,-24,27,84,11,39,30,421575,22,modern,False,22.1322,85,True
+78.3,outdoor,South America,-25,36,155,2,41,44,277350,19,mixed,False,42.8185,77,True
+64.28,indoor,,-24,29,174,6,15,13,246557,26,traditional,True,67.3228,92,False
+57.24,outdoor,Europe,-22,40,81,6,17,28,355896,23,traditional,False,30.5431,88,True
+59.6,indoor,South America,-28,33,60,2,56,0,87983,11,mixed,False,84.5456,90,False
+60.48,outdoor,North America,-28,29,161,10,1,45,390852,22,modern,True,87.8871,98,True
+50.94,,South America,-24,41,84,2,54,21,483308,25,modern,False,19.7623,97,True
+39.06,outdoor,Australia,-27,47,88,7,33,7,158628,21,mixed,False,42.7468,92,False
+47.7,,Africa,-26,34,27,4,77,10,331358,13,mixed,False,46.6147,85,False
+66.06,,Asia,-24,14,107,5,58,42,29294,24,traditional,False,42.5972,92,False
+43.92,outdoor,North America,-25,37,77,3,69,5,385056,18,modern,False,49.7789,87,False
+71.28,outdoor,South America,-23,22,113,7,10,45,276645,12,modern,False,11.7501,83,False
+48.42,outdoor,Europe,-24,20,86,11,21,19,319922,20,mixed,True,87.2465,84,True
+62.66,indoor,,-24,22,155,10,100,12,89136,24,mixed,False,31.2727,87,True
+46.98,outdoor,Asia,-25,42,51,8,38,17,411879,13,modern,False,0.0,89,True
+67.16,,North America,-24,20,37,9,33,20,123187,13,modern,False,65.1726,91,False
+72.56,indoor,South America,-26,42,134,10,86,25,346491,21,modern,True,63.1227,86,False
+77.06,indoor,Africa,-28,41,84,6,2,27,298630,18,traditional,True,99.5966,87,False
+56.16,outdoor,South America,-28,28,110,7,54,21,326124,23,traditional,True,71.6196,79,True
+54.9,outdoor,,-22,40,184,10,21,23,37363,17,traditional,False,32.8625,79,True
+66.8,indoor,North America,-24,46,93,8,41,13,352286,30,modern,True,95.8236,84,False
+58.14,outdoor,North America,-27,28,25,2,20,19,408236,15,modern,False,36.8983,81,False
+74.18,indoor,Europe,-23,45,84,9,4,23,254025,21,modern,True,85.0598,82,True
+63.36,,Africa,-22,36,84,1,40,28,191445,14,modern,False,32.2418,85,False
+54.02,indoor,North America,-23,27,147,10,79,6,148043,11,modern,False,1.474,95,False
+64.08,,Europe,-25,43,39,10,94,38,469689,18,mixed,True,77.2848,82,True
+82.64,indoor,Australia,-25,27,70,10,61,33,389565,16,traditional,False,33.905,78,False
+74.0,indoor,Asia,-25,48,10,1,46,15,338864,26,modern,False,36.765,85,False
+67.52,indoor,Europe,-24,21,136,11,80,23,445804,21,mixed,True,72.5478,91,False
+73.8,outdoor,Africa,-25,45,156,7,48,47,152087,14,traditional,False,35.7124,81,False
+53.84,indoor,,-25,35,96,10,38,2,328657,17,mixed,False,10.3149,90,False
+80.12,indoor,Australia,-25,41,107,7,18,40,342061,13,modern,False,42.5313,97,True
+56.52,outdoor,Europe,-27,30,149,5,78,25,500000,16,mixed,True,81.7142,87,True
+61.74,outdoor,North America,-22,41,51,4,55,31,180281,24,mixed,False,11.4234,87,False
+63.54,outdoor,Africa,-25,8,118,1,95,32,201707,20,mixed,True,59.4621,90,False
+73.64,,Europe,-26,38,192,6,83,23,56756,8,traditional,False,11.4443,88,True
+65.36,indoor,South America,-23,24,136,2,40,8,38664,16,mixed,False,3.0296,90,
+68.04,outdoor,,-27,42,14,7,76,45,265409,13,traditional,False,35.2019,89,False
+64.62,outdoor,Asia,-26,28,65,8,48,37,73544,13,modern,False,64.7198,83,False
+63.0,outdoor,Asia,-26,29,101,5,5,28,25820,19,modern,False,27.8771,79,True
+75.62,indoor,Europe,-24,25,23,2,50,20,483345,25,traditional,False,44.1838,87,False
+55.62,outdoor,Australia,-25,33,134,5,86,23,468366,15,modern,False,50.0612,86,False
+86.42,,Europe,-24,25,134,10,89,39,180029,13,traditional,False,80.3559,79,True
+37.98,outdoor,South America,-26,32,186,5,61,0,395252,22,traditional,True,81.8046,88,False
+91.64,indoor,Europe,-25,32,112,4,37,44,453568,19,mixed,False,0.0,86,True
+36.9,,North America,-24,26,131,7,0,1,241129,16,traditional,False,40.3409,88,True
+74.54,indoor,Africa,-23,34,42,8,31,29,101501,17,modern,True,65.0411,91,False
+74.72,indoor,Australia,-25,25,1,2,95,15,68491,16,traditional,True,85.1646,82,True
+89.12,indoor,South America,-27,41,37,3,75,34,61101,24,traditional,False,5.7473,79,False
+42.84,outdoor,Europe,-27,44,15,6,69,5,412754,20,traditional,True,59.8114,84,True
+79.4,indoor,Australia,-25,23,90,5,76,29,210609,27,mixed,True,83.1308,87,False
+66.78,outdoor,North America,-24,37,87,4,65,41,325965,22,traditional,False,30.9647,91,True
+75.08,indoor,Australia,-24,29,123,6,59,22,276717,14,modern,False,20.3386,84,True
+62.3,indoor,Europe,-22,26,24,4,44,4,212718,9,mixed,False,46.3244,87,False
+64.82,indoor,South America,-25,31,46,4,41,3,73684,13,modern,False,91.6634,81,True
+57.96,outdoor,South America,-24,39,161,10,86,31,166133,8,mixed,False,69.6883,84,False
+65.9,indoor,,-27,9,117,6,38,1,453745,14,mixed,False,38.657,73,True
+56.18,indoor,Asia,-22,43,1,10,90,3,408768,19,modern,False,0.0,87,False
+46.8,outdoor,Europe,-25,40,170,11,81,19,1000,11,modern,False,56.7229,87,True
+42.84,,Africa,-25,33,122,10,75,10,79455,23,mixed,False,35.9157,84,False
+68.24,indoor,North America,-25,26,35,4,1,10,391526,15,mixed,False,14.7172,84,True
+75.08,indoor,Asia,-22,41,50,5,14,23,175746,21,modern,False,46.6593,87,False
+61.76,indoor,Asia,-21,26,103,7,32,13,324663,13,mixed,False,32.2707,95,True
+65.18,indoor,Africa,-26,45,115,10,82,11,264810,20,mixed,False,8.5102,81,False
+78.68,indoor,Australia,-24,43,153,6,88,27,306209,14,mixed,False,73.2175,84,
+51.3,outdoor,South America,-25,34,70,3,1,16,15974,17,mixed,True,74.635,88,True
+56.9,indoor,Europe,-23,27,114,7,34,4,436260,12,mixed,False,64.8184,92,False
+71.1,outdoor,Europe,-24,37,109,1,83,35,30126,15,traditional,False,87.7191,80,True
+76.7,,North America,-24,42,105,10,24,27,5870,21,traditional,False,20.6631,81,False
+41.22,outdoor,Africa,-22,27,20,7,100,10,109752,9,mixed,False,29.7111,92,False
+79.58,indoor,Australia,-26,36,77,8,47,27,479205,29,traditional,False,45.9057,79,False
+76.86,outdoor,Africa,-23,33,73,3,94,47,21515,28,mixed,False,1.3017,82,False
+68.04,outdoor,Africa,-24,16,200,6,44,46,437618,15,mixed,False,89.0446,92,True
+55.08,,South America,-26,17,86,6,35,28,76853,24,mixed,False,47.7588,92,False
+38.52,outdoor,Africa,-25,34,88,7,37,4,57049,10,traditional,False,25.4787,89,False
+49.86,outdoor,South America,-25,47,99,10,87,22,373491,9,mixed,False,45.9359,87,False
+36.54,outdoor,Europe,-24,25,176,9,31,0,428169,28,traditional,False,31.3326,84,False
+70.58,indoor,South America,-27,28,122,6,67,18,411927,22,mixed,False,30.8129,87,True
+90.2,indoor,Europe,-24,37,82,11,45,47,117783,20,traditional,False,44.424,81,False
+72.74,indoor,North America,-23,34,182,4,95,23,449610,21,traditional,False,46.4055,93,True
+59.76,outdoor,Africa,-23,39,186,6,16,30,34748,15,modern,False,40.1766,86,True
+62.3,indoor,North America,-26,38,52,7,40,7,166950,20,mixed,True,54.2402,86,False
+57.62,indoor,Africa,-23,34,84,6,9,0,237364,17,traditional,True,78.679,87,False
+95.96,,Australia,-23,35,192,5,58,49,29103,11,modern,False,7.0438,83,False
+71.3,indoor,North America,-24,25,105,2,39,17,282685,23,mixed,True,83.0953,91,False
+48.06,outdoor,,-27,28,85,8,8,14,293334,16,traditional,False,19.4314,83,False
+75.98,indoor,Asia,-24,44,31,2,82,28,473908,10,modern,False,25.7955,97,True
+87.5,indoor,South America,-23,40,62,2,39,35,312310,26,modern,True,59.5326,85,
+45.18,,Australia,-27,39,122,2,51,10,186469,24,modern,True,96.9386,93,False
+72.02,indoor,North America,-21,25,16,8,37,27,417348,15,traditional,False,2.2125,93,False
+61.92,outdoor,Africa,-26,24,22,2,48,19,179216,11,mixed,False,71.3836,74,True
+70.22,indoor,Europe,-23,22,1,11,4,23,282507,21,mixed,True,68.9745,86,False
+34.74,outdoor,South America,-23,19,39,9,82,5,31083,18,modern,True,57.6064,94,True
+82.82,indoor,Australia,-24,28,34,5,32,27,169718,29,mixed,False,0.0,78,True
+54.38,indoor,South America,-22,30,169,8,74,1,267096,25,modern,True,57.9873,91,True
+91.82,indoor,Australia,-23,35,32,1,5,42,344580,15,traditional,False,8.7363,88,True
+72.38,,Asia,-26,42,129,10,51,30,72032,25,traditional,False,3.9872,93,True
+73.44,outdoor,,-24,27,29,3,91,46,407381,24,mixed,True,67.996,87,
+82.28,indoor,North America,-23,46,114,1,43,28,440121,9,modern,False,74.229,87,False
+64.28,indoor,North America,-27,40,90,9,17,10,122130,21,traditional,True,87.0788,83,False
+77.78,indoor,Australia,-22,49,86,4,11,24,370499,25,mixed,False,0.0,85,True
+62.64,outdoor,South America,-23,24,183,7,84,33,91680,13,modern,False,34.4856,83,False
+48.6,outdoor,Asia,-24,45,30,10,26,18,254233,12,traditional,False,0.6921,84,False
+55.08,outdoor,,-23,28,113,9,99,28,410412,35,mixed,False,33.8623,87,False
+65.9,indoor,Asia,-23,28,155,4,24,6,197263,27,modern,False,48.3399,83,True
+67.5,outdoor,North America,-25,30,146,10,49,39,11080,18,modern,True,52.1301,77,False
+73.44,outdoor,Europe,-26,27,198,5,44,47,270461,6,traditional,False,35.3056,85,True
+69.14,indoor,South America,-25,37,1,6,4,16,421002,15,mixed,False,75.1727,87,True
+62.82,outdoor,Europe,-25,42,178,7,59,40,52201,29,mixed,False,45.8176,92,False
+46.62,outdoor,South America,-26,37,123,1,66,4,20493,27,modern,True,55.9471,84,True
+48.6,outdoor,Asia,-25,35,1,7,74,12,398440,16,traditional,True,80.2664,81,False
+49.86,outdoor,Europe,-25,46,91,7,51,22,120051,16,traditional,False,17.8428,92,False
+67.34,indoor,Africa,-24,36,153,10,78,17,191934,27,mixed,False,32.3133,85,False
+62.28,outdoor,North America,-23,32,49,5,72,30,34693,17,modern,True,53.9796,83,True
+57.96,outdoor,South America,-24,32,140,3,20,29,64350,17,mixed,True,75.1159,93,True
+37.8,,Europe,-25,26,22,5,36,2,305644,21,mixed,False,40.1056,91,False
+49.68,outdoor,,-27,28,162,8,12,8,271111,20,modern,False,2.4895,72,True
+61.76,indoor,Australia,-23,26,114,7,14,1,135503,12,traditional,False,100.0,79,False
+96.86,indoor,,-24,25,16,2,71,48,223142,23,mixed,True,71.3259,85,False
+84.98,indoor,Australia,-21,24,25,4,52,34,198980,12,modern,False,70.3119,85,
+94.16,indoor,,-23,24,172,2,59,45,338195,25,traditional,True,50.344,86,True
+70.94,indoor,Australia,-25,41,7,9,70,29,440169,17,modern,True,53.1246,96,False
+43.02,outdoor,Asia,-26,26,54,10,33,8,369276,19,modern,True,100.0,81,True
+65.16,outdoor,Africa,-26,39,117,1,37,32,14365,5,modern,False,57.4297,87,False
+57.78,outdoor,Europe,-25,29,49,7,63,24,52020,21,traditional,False,22.3261,80,False
+70.4,indoor,North America,-26,33,46,7,4,19,209763,21,traditional,True,97.4883,87,False
+65.54,indoor,Europe,-24,26,156,6,85,17,430732,16,traditional,True,52.5072,95,False
+89.12,indoor,Europe,-25,34,57,6,36,34,138812,10,mixed,False,0.0,74,False
+60.66,,,-25,57,13,8,63,30,453670,10,mixed,False,57.4102,81,
+60.86,indoor,Australia,-22,30,137,6,98,6,60344,18,traditional,False,5.1933,89,False
+82.28,indoor,Africa,-24,30,185,11,50,42,48654,12,mixed,False,48.9777,89,True
+61.74,outdoor,Africa,-24,21,171,7,18,31,451628,16,modern,True,78.1999,82,False
+79.94,indoor,South America,-24,47,103,1,22,27,74139,18,modern,True,54.3322,90,False
+55.8,outdoor,South America,-23,45,82,11,4,36,241111,20,modern,False,31.8522,93,False
+63.74,indoor,Australia,-25,26,183,3,78,7,166554,25,mixed,True,87.5621,90,False
+83.54,indoor,Australia,-22,32,155,9,33,45,71129,25,traditional,True,94.5664,94,False
+44.82,outdoor,South America,-25,37,115,7,14,12,326268,18,mixed,False,31.1361,88,False
+46.8,outdoor,Europe,-26,34,160,8,72,13,482407,22,mixed,False,46.6657,84,False
+63.0,outdoor,South America,-24,22,123,6,33,39,345071,20,traditional,True,99.0415,92,False
+73.1,indoor,South America,-26,28,193,1,55,16,151686,27,modern,False,11.4668,88,True
+72.54,outdoor,Asia,-25,23,177,5,44,42,350014,18,traditional,False,29.644,80,False
+64.1,,Australia,-28,43,105,7,34,14,83751,21,modern,False,41.6625,92,True
+55.26,outdoor,Australia,-24,41,192,8,50,27,310593,29,traditional,False,13.5238,87,True
+61.58,indoor,,-25,48,63,12,27,10,251458,21,mixed,False,31.014,83,True
+64.08,,South America,-25,25,138,7,88,35,172907,14,traditional,False,55.248,83,True
+51.84,outdoor,Africa,-24,35,41,3,6,10,385511,14,traditional,False,21.1628,79,False
+97.4,indoor,North America,-24,34,190,1,0,46,38009,14,modern,False,68.8087,83,False
+48.78,outdoor,Australia,-25,38,44,9,42,17,255635,24,traditional,False,36.8482,84,True
+47.52,outdoor,Asia,-24,40,200,10,19,21,424190,22,traditional,False,10.6409,90,False
+56.72,indoor,North America,-22,63,1,7,74,3,107193,16,traditional,True,70.8136,91,True
+95.06,indoor,,-24,64,140,6,36,49,121031,23,traditional,True,53.2151,83,True
+83.72,,Africa,-23,36,39,10,25,39,328990,15,mixed,False,84.2753,84,True
+76.52,indoor,,-24,47,149,3,32,21,403150,19,traditional,False,32.9378,85,True
+70.02,outdoor,North America,-21,25,105,5,21,46,128045,13,traditional,False,2.7293,90,True
+73.8,outdoor,South America,-26,32,179,6,32,48,165293,17,modern,False,6.6069,84,False
+76.52,indoor,Asia,-26,26,139,1,59,26,360574,14,traditional,False,80.9567,95,True
+63.92,indoor,Africa,-26,35,147,8,84,12,172515,18,mixed,False,42.1992,88,False
+77.78,indoor,Europe,-23,40,24,2,37,23,338573,11,modern,False,96.4552,87,True
+52.56,,Asia,-22,57,20,4,32,16,69790,16,modern,True,79.7203,84,True
+51.66,outdoor,North America,-26,25,164,4,79,20,217464,15,traditional,False,5.8874,91,True
+87.86,indoor,Africa,-26,47,53,8,2,46,322240,14,modern,False,82.3497,89,False
+52.2,outdoor,Africa,-25,29,170,1,31,14,228894,14,modern,False,21.5541,87,False
+89.48,indoor,Australia,-24,29,29,5,44,40,12240,17,traditional,False,47.2627,83,False
+67.5,outdoor,North America,-27,32,63,4,62,42,217355,6,mixed,False,53.7656,91,True
+73.98,outdoor,Europe,-22,50,200,1,14,42,127302,23,mixed,False,6.0367,84,False
+52.02,outdoor,Australia,-23,17,174,8,43,24,67212,18,traditional,False,10.4645,89,True
+83.9,,Europe,-27,37,15,3,58,29,18080,20,modern,False,41.1663,82,False
+92.0,indoor,Africa,-21,46,87,2,51,39,40019,17,traditional,True,66.3661,82,True
+57.8,indoor,South America,-22,26,183,8,51,2,460023,25,traditional,False,28.9774,86,False
+69.3,outdoor,Europe,-29,41,6,1,66,37,396330,14,modern,False,54.173,86,True
+57.96,outdoor,Europe,-27,29,22,10,39,28,446969,9,modern,False,38.1548,80,False
+70.94,indoor,South America,-24,55,134,8,7,18,42996,19,traditional,True,60.703,83,True
+91.28,indoor,Australia,-22,23,37,2,7,38,287858,27,modern,False,40.6852,82,True
+66.62,indoor,Europe,-24,37,84,5,88,12,37951,26,modern,True,86.2487,88,False
+61.56,outdoor,South America,-24,30,104,12,66,43,1000,23,mixed,False,100.0,90,False
+61.74,outdoor,North America,-23,32,174,7,72,34,262519,30,mixed,True,87.7473,86,False
+60.66,outdoor,,-24,29,190,7,90,31,302815,15,traditional,False,12.7651,84,False
+56.7,outdoor,Asia,-22,46,99,8,75,29,11530,15,traditional,False,45.2065,87,True
+66.26,indoor,Asia,-25,35,98,5,70,10,187139,17,traditional,False,46.4182,86,True
+62.28,outdoor,North America,-25,18,156,2,65,30,45329,3,mixed,False,84.4244,88,False
+88.22,indoor,Europe,-26,36,40,2,22,36,163842,25,modern,False,36.9779,85,True
+31.86,,,-24,40,193,7,96,0,263027,17,traditional,True,53.6615,96,False
+69.68,indoor,,-25,46,1,10,54,18,170690,14,mixed,False,63.8581,82,False
+87.68,indoor,Asia,-23,38,3,4,22,40,281603,16,traditional,False,14.7501,88,True
+58.32,outdoor,Europe,-24,21,128,6,25,28,292700,14,mixed,False,57.0468,86,False
+53.64,outdoor,Australia,-25,43,67,11,83,30,147939,18,mixed,False,23.4415,89,False
+49.68,outdoor,South America,-27,43,81,3,24,13,208688,15,modern,False,13.9796,87,True
+55.8,outdoor,North America,-24,40,51,4,0,31,224273,15,mixed,False,23.4176,98,False
+88.04,indoor,Australia,-25,39,76,4,46,39,185420,13,modern,False,10.2386,86,True
+54.36,outdoor,Asia,-23,36,166,1,77,20,380545,16,traditional,False,8.4762,91,False
+44.46,outdoor,Europe,-26,44,143,6,40,8,59999,15,modern,False,63.8216,85,True
+42.48,outdoor,Australia,-24,47,23,3,77,3,442520,25,traditional,True,93.8226,87,False
+60.3,outdoor,Asia,-24,38,17,2,81,25,158320,21,traditional,True,72.8154,85,True
+60.84,outdoor,Europe,-24,39,105,8,85,34,355470,9,modern,False,28.5417,86,False
+46.62,,Europe,-25,34,152,9,55,8,444430,21,traditional,False,29.5046,76,True
+68.24,indoor,Europe,-27,57,131,11,64,21,419360,20,traditional,False,48.3935,87,False
+75.44,indoor,Europe,-22,16,180,11,23,28,233451,18,traditional,True,88.8907,83,False
+54.74,indoor,North America,-24,29,28,11,6,9,128699,16,traditional,False,17.0296,96,False
+54.18,outdoor,Australia,-23,26,125,2,50,15,309765,24,mixed,False,45.9869,83,True
+83.72,indoor,,-21,54,146,3,0,28,89851,11,mixed,False,51.8308,81,True
+68.94,outdoor,North America,-24,33,190,1,50,35,385230,17,modern,True,96.7937,84,True
+78.5,indoor,Asia,-23,18,21,4,8,28,357357,9,mixed,False,53.7151,89,False
+88.76,indoor,North America,-24,26,47,2,9,36,410140,21,mixed,True,75.6656,84,False
+57.96,outdoor,North America,-21,41,78,8,86,30,210430,17,mixed,False,9.5912,86,
+79.94,indoor,Asia,-24,34,109,8,65,41,289285,13,mixed,False,30.1409,97,True
+70.38,outdoor,South America,-25,34,83,3,65,41,48617,20,mixed,True,60.9544,86,True
+61.74,outdoor,North America,-24,38,165,8,35,39,338562,24,mixed,True,64.4042,91,True
+81.92,indoor,Europe,-25,46,186,1,38,29,254740,20,modern,True,86.5026,89,False
+95.06,indoor,North America,-27,42,15,6,32,49,259338,8,modern,False,64.3974,83,
+63.74,indoor,Asia,-23,26,136,4,42,3,406934,18,modern,False,31.508,83,False
+64.64,indoor,South America,-25,38,31,12,61,12,383933,19,mixed,True,52.2835,80,
+85.52,indoor,North America,-25,47,178,11,20,42,253884,14,mixed,False,70.0834,83,True
+72.0,outdoor,North America,-24,38,24,3,20,44,184635,28,mixed,True,80.1436,87,True
+82.1,indoor,,-22,26,192,11,45,41,212665,8,traditional,False,93.4582,88,False
+71.28,outdoor,Africa,-26,24,85,5,37,44,177993,3,mixed,False,21.9678,85,True
+50.76,outdoor,Africa,-25,35,81,7,82,21,82986,12,modern,False,62.333,89,True
+72.54,outdoor,Australia,-25,29,112,6,81,47,329701,7,traditional,False,19.8573,85,True
+59.78,indoor,,-25,30,74,8,33,10,339387,24,traditional,False,29.8646,93,False
+96.68,indoor,Australia,-26,35,44,4,45,48,486230,21,mixed,False,14.8822,82,True
+80.48,,,-25,31,125,1,97,27,219882,8,mixed,False,77.5799,89,False
+42.3,outdoor,North America,-26,40,140,5,82,6,493475,11,modern,False,91.4524,88,
+89.12,indoor,Australia,-24,33,189,7,15,36,82785,10,modern,False,4.0037,75,False
+71.48,indoor,Africa,-24,51,90,7,27,13,329340,17,mixed,True,81.9993,77,False
+65.9,indoor,North America,-23,42,141,9,7,10,500000,19,modern,False,21.4481,80,True
+45.36,outdoor,Europe,-26,32,164,1,65,6,310228,26,modern,False,48.4241,89,True
+38.16,outdoor,South America,-24,22,172,11,29,1,216502,22,mixed,True,74.5565,79,True
+78.14,,North America,-25,39,1,11,49,37,277581,15,modern,False,50.5609,90,True
+81.74,indoor,Asia,-25,39,74,1,77,25,412657,16,traditional,False,28.3697,84,True
+93.98,,Europe,-22,30,3,4,80,48,478390,20,traditional,True,90.68,87,False
+54.54,outdoor,North America,-26,23,120,6,32,19,239800,18,modern,True,63.2655,81,
+87.5,indoor,Africa,-21,32,179,5,22,41,389887,19,traditional,True,88.4572,88,False
+72.18,outdoor,Australia,-23,36,153,6,84,48,471362,17,modern,True,83.2609,87,True
+42.3,,North America,-24,35,163,4,40,1,142652,18,traditional,True,87.0513,83,False
+40.14,outdoor,Australia,-24,36,63,9,80,5,230434,9,modern,False,39.8501,84,False
+53.64,outdoor,Africa,-21,44,15,4,14,16,500000,17,mixed,True,93.4976,82,True
+68.22,outdoor,Asia,-25,29,30,5,92,42,171934,14,modern,False,87.5516,88,True
+68.4,outdoor,South America,-25,52,138,7,48,41,320385,19,mixed,False,35.0347,83,True
+60.14,indoor,Africa,-24,19,33,11,15,18,328582,20,modern,True,90.9233,98,True
+41.22,outdoor,North America,-26,25,16,7,49,10,83762,22,modern,True,75.0385,92,True
+71.28,outdoor,Asia,-23,22,78,2,85,41,406821,18,mixed,True,72.8824,86,True
+60.66,outdoor,,-25,35,25,5,39,27,201339,15,traditional,False,0.4961,82,False
+59.96,indoor,North America,-24,35,61,5,17,2,260318,20,mixed,False,0.6298,87,True
+61.56,outdoor,Australia,-21,48,199,8,59,41,305475,18,traditional,True,71.6239,94,False
+68.76,outdoor,Australia,-21,35,1,5,82,48,220846,29,modern,False,28.0581,95,False
+41.4,outdoor,Australia,-23,42,170,8,10,1,176668,9,traditional,False,3.9748,78,
+40.86,outdoor,Europe,-23,26,198,10,0,14,270431,15,modern,False,29.5719,93,False
+92.9,indoor,,-23,22,80,2,2,41,177112,16,mixed,True,83.2861,83,False
+57.78,outdoor,Australia,-23,46,196,9,20,28,214542,28,traditional,False,45.989,82,True
+68.76,outdoor,Africa,-23,43,60,9,3,50,44966,21,modern,True,57.5054,91,True
+67.32,outdoor,Australia,-23,35,197,10,40,44,421481,8,traditional,False,78.7989,84,False
+55.82,indoor,Asia,-22,26,172,11,66,9,209771,7,mixed,False,30.9646,94,True
+80.12,indoor,,-25,57,175,4,69,34,58553,23,modern,False,1.8395,94,True
+60.84,outdoor,North America,-21,43,29,5,66,34,392789,10,mixed,False,31.4128,91,True
+63.02,indoor,Asia,-24,23,176,4,30,8,10915,17,modern,True,100.0,91,False
+62.3,indoor,,-24,36,196,4,72,4,316009,16,traditional,False,44.5619,87,False
+64.26,outdoor,South America,-25,20,165,4,53,30,357827,28,traditional,True,54.0046,81,True
+44.1,outdoor,Australia,-24,36,26,10,85,20,79368,15,traditional,False,74.7532,95,False
+63.18,outdoor,Africa,-24,30,8,1,49,27,66128,15,traditional,False,12.3628,84,False
+69.32,indoor,Australia,-23,55,76,2,20,12,68038,20,mixed,True,72.6118,88,True
+79.22,indoor,Australia,-24,42,142,7,57,26,500000,25,modern,False,28.3132,80,True
+70.4,indoor,,-25,11,5,9,12,20,380051,18,traditional,False,35.9612,85,True
+87.14,indoor,South America,-28,51,199,8,96,42,131629,6,traditional,False,27.9734,85,True
+56.16,outdoor,South America,-27,37,111,1,72,15,146221,22,traditional,False,21.8844,81,
+69.66,outdoor,Australia,-24,46,70,6,72,40,316280,11,traditional,False,33.6166,81,True
+78.68,indoor,Europe,-24,36,108,2,64,19,217806,7,modern,False,10.8361,80,False
+53.28,,Australia,-25,32,133,11,8,28,146502,14,traditional,False,88.2249,87,True
+41.94,outdoor,North America,-24,27,57,12,42,15,52319,19,modern,False,30.9312,89,True
+69.12,outdoor,South America,-25,41,65,1,60,42,401608,25,mixed,True,66.1693,93,False
+79.58,indoor,North America,-24,41,100,8,27,42,455292,6,traditional,False,29.477,99,
+62.28,outdoor,,-25,17,132,9,66,38,111847,16,traditional,False,25.3446,87,True
+62.82,outdoor,,-27,29,147,4,80,31,37067,25,mixed,True,73.2714,85,True
+73.1,indoor,South America,-26,26,71,8,24,15,50910,16,mixed,True,65.1179,75,True
+63.72,outdoor,Africa,-23,50,70,2,19,32,217338,21,traditional,False,21.4998,88,
+74.16,outdoor,Africa,-26,44,98,2,86,45,145919,21,traditional,True,62.8313,86,True
+75.44,indoor,South America,-24,30,108,11,1,31,47755,14,mixed,False,0.3223,87,
+71.28,outdoor,Asia,-24,44,132,8,22,47,233262,20,modern,False,19.5349,84,False
+46.62,outdoor,North America,-25,23,127,9,40,14,102756,19,modern,True,71.8053,84,True
+88.58,indoor,Africa,-26,37,72,6,66,43,25339,15,mixed,False,43.8063,87,False
+66.78,outdoor,Europe,-24,40,58,2,100,34,328435,26,traditional,False,21.6635,85,True
+69.3,outdoor,Asia,-24,29,63,5,36,42,279577,15,traditional,False,49.4977,86,False
+78.86,indoor,Africa,-24,33,126,10,95,36,392319,27,traditional,False,48.6118,89,
+75.62,indoor,Asia,-27,36,84,1,36,21,138303,15,mixed,False,62.6407,90,False
+84.08,indoor,Australia,-24,42,18,3,71,33,72351,15,mixed,False,4.3058,87,True
+90.2,indoor,North America,-23,20,1,3,17,46,148942,15,modern,False,81.2654,93,True
+79.4,indoor,Australia,-25,33,10,3,45,22,418574,23,mixed,False,5.1791,81,False
+93.8,indoor,Australia,-23,26,178,2,90,46,115481,13,traditional,False,42.6212,88,False
+55.1,indoor,Asia,-25,41,91,10,30,0,138718,20,mixed,True,72.2389,85,True
+59.6,indoor,Europe,-24,30,135,2,13,0,48263,20,mixed,False,35.4875,90,False
+55.44,outdoor,Asia,-25,41,174,10,54,23,481314,19,traditional,True,90.9753,78,False
+86.42,indoor,Australia,-24,23,28,4,45,42,496636,29,traditional,True,77.4753,93,True
+66.98,indoor,Africa,-24,31,82,5,22,11,334461,16,mixed,False,41.7329,86,False
+62.64,outdoor,Europe,-23,51,104,5,88,35,103366,33,mixed,False,14.8312,89,False
+77.6,indoor,Australia,-25,31,171,8,60,28,407769,24,traditional,False,2.7918,84,
+58.88,indoor,North America,-24,45,200,9,34,13,275143,9,traditional,False,78.18,97,False
+68.24,indoor,,-24,26,132,7,99,16,388400,9,mixed,False,18.5538,87,True
+58.7,indoor,North America,-25,20,120,9,14,3,425104,24,mixed,False,27.2109,84,True
+67.5,outdoor,Australia,-25,47,180,1,86,27,149573,13,modern,False,5.8694,76,False
+74.36,indoor,South America,-23,41,158,6,20,21,432936,19,traditional,False,0.0,84,True
+71.84,indoor,Africa,-24,29,171,6,22,13,427129,14,mixed,False,25.1633,78,False
+96.86,indoor,Asia,-25,50,5,3,46,50,275724,13,traditional,False,84.8914,86,True
+85.52,,,-26,28,95,6,66,41,343530,16,traditional,True,79.1783,90,True
+54.18,outdoor,Asia,-26,23,166,6,72,26,196825,23,traditional,True,75.4664,91,True
+77.24,indoor,Australia,-26,33,35,6,0,25,325404,16,traditional,True,83.2571,84,True
+48.96,outdoor,Europe,-27,27,152,2,26,10,273116,27,mixed,False,22.5582,86,True
+80.66,indoor,North America,-24,28,1,6,62,32,156346,12,modern,False,94.3657,87,True
+69.84,outdoor,North America,-26,35,120,9,87,47,149879,22,modern,False,23.9604,85,False
+97.22,indoor,Europe,-25,34,171,5,61,47,332625,18,mixed,False,15.8359,78,True
+63.74,indoor,Europe,-27,40,88,6,29,4,493558,10,modern,False,31.9083,81,False
+33.84,outdoor,Europe,-26,59,150,11,52,1,106149,14,traditional,False,53.2171,87,False
+89.66,indoor,Australia,-23,48,100,10,65,48,202194,17,mixed,False,20.667,85,True
+59.6,indoor,,-26,25,131,11,15,9,412275,24,mixed,True,76.69,87,
+61.38,outdoor,South America,-23,59,107,1,56,26,59539,17,mixed,False,38.6605,86,False
+52.76,indoor,North America,-22,33,87,7,47,2,489245,29,traditional,True,57.7219,97,True
+90.2,indoor,Australia,-24,38,167,3,30,43,315104,16,traditional,True,74.8373,89,True
+60.86,indoor,Australia,-24,28,17,5,60,4,448741,19,traditional,True,90.5163,88,True
+59.04,outdoor,South America,-24,34,117,8,63,30,411494,24,mixed,True,82.2787,84,False
+36.72,outdoor,South America,-22,33,27,8,95,2,375951,11,traditional,False,50.122,88,False
+63.2,indoor,Asia,-26,39,117,6,46,7,20281,23,mixed,True,100.0,86,False
+57.06,outdoor,North America,-24,44,192,9,53,24,201484,15,traditional,False,54.346,78,True
+35.28,outdoor,North America,-25,27,17,8,15,3,106938,16,traditional,True,54.4444,92,False
+41.58,outdoor,Australia,-23,45,78,10,57,9,422069,19,traditional,False,16.7558,85,False
+35.1,outdoor,,-23,29,161,11,4,5,321859,12,traditional,False,16.6878,90,True
+58.34,indoor,North America,-25,41,64,8,14,2,62584,32,modern,False,17.9718,85,False
+94.7,indoor,Europe,-24,27,102,4,20,49,190516,18,traditional,True,59.3913,87,False
+56.34,outdoor,Africa,-24,22,26,3,64,23,25318,18,modern,False,42.3074,88,True
+75.06,outdoor,Asia,-26,29,49,3,55,43,365902,13,mixed,False,41.5276,80,False
+71.48,indoor,Asia,-25,30,139,5,80,18,213084,11,mixed,False,16.2592,87,False
+36.72,outdoor,,-22,27,173,9,45,1,125028,24,modern,False,35.761,85,True
+89.84,indoor,South America,-24,30,130,1,45,34,237889,16,mixed,False,36.8618,81,True
+51.86,indoor,Africa,-25,30,158,9,18,1,33995,19,traditional,True,64.3558,94,True
+76.52,,,-25,32,110,9,73,27,113175,13,modern,False,40.1761,83,True
+60.5,indoor,,-24,38,157,6,0,4,71352,21,modern,False,40.3555,87,True
+86.24,indoor,North America,-25,32,191,4,42,32,460343,15,mixed,False,27.4054,80,True
+97.4,indoor,Australia,-23,25,17,1,21,46,183890,9,mixed,False,15.031,83,False
+92.18,indoor,Africa,-25,31,93,3,72,48,292995,16,modern,False,34.5824,92,True
+81.92,indoor,Africa,-23,43,33,1,65,26,253881,22,mixed,False,9.8977,85,
+51.48,outdoor,Australia,-25,26,90,10,65,28,350640,23,modern,False,16.033,92,
+59.06,indoor,North America,-26,26,98,6,6,2,129146,20,modern,False,34.5281,87,False
+70.74,outdoor,Asia,-24,19,120,2,66,38,74260,17,modern,False,13.07,83,False
+77.94,outdoor,Africa,-27,28,88,1,65,46,23612,17,traditional,True,69.2519,82,False
+54.0,,Europe,-23,39,70,7,2,21,82408,12,traditional,False,24.8031,83,True
+62.64,outdoor,Europe,-27,27,6,9,28,40,230456,24,mixed,True,59.9208,89,False
+64.26,outdoor,Europe,-28,34,8,9,10,40,95221,18,modern,True,63.9723,86,True
+91.82,indoor,Australia,-24,29,46,2,68,41,223030,14,mixed,False,46.3297,85,False
+78.14,indoor,Africa,-24,27,91,11,18,37,30505,28,traditional,False,44.026,90,True
+59.6,indoor,Asia,-24,47,89,7,25,7,325215,23,mixed,True,56.4072,91,True
+67.32,outdoor,Australia,-25,31,36,4,8,38,420383,17,modern,False,22.1625,86,True
+58.16,indoor,South America,-27,19,170,5,49,4,52570,15,modern,False,0.5375,93,True
+71.1,outdoor,Asia,-24,22,132,1,6,35,111163,14,traditional,False,66.1172,80,True
+59.42,indoor,South America,-24,22,72,6,85,1,178421,13,modern,False,64.4058,85,True
+70.02,outdoor,Africa,-24,24,165,9,2,48,142631,23,mixed,False,45.1475,86,True
+67.32,outdoor,North America,-25,41,200,5,6,40,19581,28,modern,True,85.3097,87,True
+59.04,outdoor,South America,-24,33,50,10,63,34,49595,20,traditional,False,49.1031,86,True
+61.94,indoor,South America,-25,33,71,6,90,6,481527,27,modern,False,30.0693,87,False
+67.32,outdoor,,-25,33,191,10,86,41,372906,22,traditional,True,71.8159,80,True
+86.24,indoor,Africa,-25,31,28,9,9,42,478548,9,modern,False,95.508,85,True
+85.88,indoor,Asia,-25,42,20,1,26,36,216870,26,traditional,True,69.9135,91,False
+79.74,,Africa,-23,39,108,1,52,50,448729,15,traditional,False,86.0332,84,True
+35.64,outdoor,South America,-26,47,94,9,2,4,385710,18,modern,False,10.0935,91,False
+81.74,indoor,North America,-23,27,18,5,54,33,411068,11,mixed,False,13.3694,88,False
+59.76,outdoor,Australia,-25,29,67,2,45,25,7895,8,traditional,False,15.4767,86,True

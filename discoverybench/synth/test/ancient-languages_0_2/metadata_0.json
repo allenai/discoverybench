@@ -1,0 +1,192 @@
+{
+  "id": 0,
+  "domain": "ancient languages",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to hieroglyphs, Sanskrit, Latin, and deciphering old scripts.",
+      "columns": [
+        {
+          "name": "digital_resources_availability",
+          "description": "Indicates the amount of digital resources available, rated from 1 (least) to 5 (most)."
+        },
+        {
+          "name": "language_family_rank",
+          "description": "Ranking of language families based on the commonality of study, where a smaller number indicates a more commonly studied language family."
+        },
+        {
+          "name": "geopolitical_tension",
+          "description": "A measure of current geopolitical tensions in the region from where the script originated, on a scale from 1 to 10."
+        },
+        {
+          "name": "deciphering_tools_count",
+          "description": "Number of tools available specifically for deciphering scripts of each ancient language family."
+        },
+        {
+          "name": "year_of_discovery",
+          "description": "The year in which the script was discovered."
+        },
+        {
+          "name": "use_of_ml",
+          "description": "Indicates if machine learning methods were used in the deciphering process."
+        },
+        {
+          "name": "artifact_density",
+          "description": "Count of artifacts found per square kilometer in the immediate area of the script discovery"
+        },
+        {
+          "name": "script_complexity",
+          "description": "Complexity rating of the ancient script on a scale from 1 to 10, with 10 being the most complex."
+        },
+        {
+          "name": "script_complexity_level",
+          "description": "The complexity level of the script to be translated, rated from 1 (least complex) to 5 (most complex)."
+        },
+        {
+          "name": "is_currently_used",
+          "description": "Indicates whether the script is still in use today."
+        },
+        {
+          "name": "material_complexity",
+          "description": "The complexity of the material found in the scripts based on linguistic and symbolic features."
+        },
+        {
+          "name": "preservation_quality",
+          "description": "Assessment of the script's condition on a scale from 1 (poor) to 10 (excellent)"
+        },
+        {
+          "name": "script_distinctiveness",
+          "description": "A measure of how unique the script is compared to others, on a scale from 1 to 10."
+        },
+        {
+          "name": "script_characteristic_importance",
+          "description": "Importance of the script's characteristics on a scale from 1 (low) to 5 (high), e.g., uniqueness or historical significance"
+        },
+        {
+          "name": "technological_support",
+          "description": "Indicates if advanced technological support (machine learning tools) is used (1) or not (0)."
+        },
+        {
+          "name": "high_accuracy_requirement_percentage",
+          "description": "The percentage of translation projects that need very high accuracy."
+        },
+        {
+          "name": "recognized_in_cultural_practices",
+          "description": "Whether elements of the ancient language are recognized and used in current cultural or societal practices."
+        },
+        {
+          "name": "accuracy_percentage",
+          "description": "The percentage of accuracy in the translations achieved by the method."
+        },
+        {
+          "name": "deciphering_method",
+          "description": "The method used for deciphering scripts: traditional or machine learning."
+        },
+        {
+          "name": "included_in_academic_curriculum",
+          "description": "Indicates whether the language is part of the academic curriculum in significant number of higher education institutions (more than 50% globally)."
+        },
+        {
+          "name": "government_endorsement",
+          "description": "Whether the language receives official recognition and support from the government."
+        },
+        {
+          "name": "media_representation",
+          "description": "The number of appearances or features in mainstream media outlets over the past year."
+        },
+        {
+          "name": "estimated_origin_year",
+          "description": "Estimated year when the language first originated."
+        },
+        {
+          "name": "specialized_researchers_count",
+          "description": "Number of researchers that specialize in each ancient language family."
+        },
+        {
+          "name": "sediment_accumulation_rate",
+          "description": "Average rate of sediment accumulation at the discovery site, in millimeters per year."
+        },
+        {
+          "name": "has_modern_derivative",
+          "description": "Indicates if the ancient language has a modern derivative that is still in use."
+        },
+        {
+          "name": "international_collaboration",
+          "description": "Indicates if there is any international collaboration in the translation project."
+        },
+        {
+          "name": "academic_conferences_count",
+          "description": "Number of academic conferences held annually dedicated to the language."
+        },
+        {
+          "name": "vocabulary_size",
+          "description": "The estimated number of unique words used in the ancient language."
+        },
+        {
+          "name": "expert_translators_available",
+          "description": "The number of expert translators available for the project."
+        },
+        {
+          "name": "language_family",
+          "description": "The family to which the ancient language belongs."
+        },
+        {
+          "name": "educational_program_availability",
+          "description": "Indicates if structured educational programs are available for the language."
+        },
+        {
+          "name": "has_dedicated_funding",
+          "description": "Indicates whether there is dedicated funding available for the translation efforts of each language family."
+        },
+        {
+          "name": "collaborative_effort",
+          "description": "Indicates whether the deciphering was a collaborative effort between multiple experts or not."
+        },
+        {
+          "name": "recent_publications",
+          "description": "Indicates if there has been a recent publication in the field of ancient languages within the last month."
+        },
+        {
+          "name": "archaeology_technology_index",
+          "description": "A quantitative index of the technological advancement of archaeological tools used in the excavation, on a scale from 1 to 100."
+        },
+        {
+          "name": "foundational_for_modern_languages",
+          "description": "The count of modern languages that are directly descended from or heavily influenced by the ancient language."
+        },
+        {
+          "name": "digitized_artifacts_count",
+          "description": "The number of digitized artifacts available for each language family."
+        },
+        {
+          "name": "international_experts_involved",
+          "description": "Whether international experts were involved in the translation process, true for involved, false for not involved."
+        },
+        {
+          "name": "active_researchers_count",
+          "description": "Number of active researchers (academic and amateurs) dedicated to studying the language."
+        },
+        {
+          "name": "percentage_of_deciphered_texts",
+          "description": "The percentage of known texts that have been successfully deciphered."
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 190,
+      "question": "Is there a relationship between the number of digitized artifacts available for each ancient language family, the number of deciphering tools specifically for deciphering scripts of each language family, and the number of specialized researchers dedicated to each language family?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "specialized_researchers_count",
+      "true_hypothesis": "The quotient of the number of digitized artifacts available for each language family divided by the number of deciphering tools available specifically for deciphering scripts of each ancient language family, multiplied by the square of the number of deciphering tools, is likely indicative of the number of specialized researchers dedicated to the research of each ancient language family.",
+      "true_hypothesis_expr": "df['digitized_artifacts_count'] / df['deciphering_tools_count'] * df['deciphering_tools_count']**2",
+      "relevant_cols": [
+        "digitized_artifacts_count",
+        "deciphering_tools_count",
+        "specialized_researchers_count"
+      ]
+    }
+  ]
+}

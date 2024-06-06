@@ -1,0 +1,136 @@
+{
+  "id": 1,
+  "domain": "philosophical debates",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to ethics, metaphysics, and philosophical arguments.",
+      "columns": [
+        {
+          "name": "digital_platform_used",
+          "description": "Indicates whether the debate session was held using a digital platform"
+        },
+        {
+          "name": "debate_day_of_week",
+          "description": "Day of the week the debate is held"
+        },
+        {
+          "name": "keynote_speaker_present",
+          "description": "Indicates whether a keynote speaker is present during the debate session"
+        },
+        {
+          "name": "is_annual_conference_month",
+          "description": "Indicates whether the debate occurred in a month typically hosting annual philosophical conferences"
+        },
+        {
+          "name": "month_of_debate",
+          "description": "Month when the debate occurred extracted from the full date"
+        },
+        {
+          "name": "external_temperature",
+          "description": "The outdoor temperature in degrees Celsius during the debate"
+        },
+        {
+          "name": "audience_interest_level",
+          "description": "Numerical value representing audience's interest in philosophical topics, scaled 1 to 10."
+        },
+        {
+          "name": "philosophical_topic",
+          "description": "Type of philosophical topic being discussed in the debate"
+        },
+        {
+          "name": "special_guest_present",
+          "description": "Binary flag indicating whether a special guest relevant to the philosophical topic was present during the debate."
+        },
+        {
+          "name": "average_audience_questions",
+          "description": "Average number of questions asked by the audience during a session"
+        },
+        {
+          "name": "date_of_debate",
+          "description": "Date when the debate occurred"
+        },
+        {
+          "name": "ethics_philosopher_present",
+          "description": "Indicates whether a professional ethics philosopher is present as a speaker"
+        },
+        {
+          "name": "participants_for_utilitarianism",
+          "description": "Number of participants advocating for utilitarianism"
+        },
+        {
+          "name": "monthly_attendance_rate",
+          "description": "Percentage of seats filled at philosophical debate seminars each month."
+        },
+        {
+          "name": "philosophical_background_score",
+          "description": "Numerical score representing the philosophical alignment of participants, where higher values indicate stronger inclination towards utilitarian principles."
+        },
+        {
+          "name": "critical_event_occurred",
+          "description": "Binary flag indicating whether a critical event that could sway participants' opinions occurred during the debate."
+        },
+        {
+          "name": "number_of_philosophical_articles",
+          "description": "The count of philosophical articles published in the month before the debate."
+        },
+        {
+          "name": "presence_of_recognized_philosophers",
+          "description": "Indicates whether any internationally recognized philosophers participated in debates held in that month."
+        },
+        {
+          "name": "number_of_participants",
+          "description": "Total number of participants in the debate"
+        },
+        {
+          "name": "day_of_week",
+          "description": "The day of the week on which the debate is scheduled"
+        },
+        {
+          "name": "argument_intensity",
+          "description": "Numerical value representing the intensity of arguments used during the debate, where higher values indicate more intense debates."
+        },
+        {
+          "name": "moderator_ethical_stance",
+          "description": "Categorical value reflecting the ethical stance of the debate moderator, such as 'utilitarian', 'deontological', or 'virtue_ethics'."
+        },
+        {
+          "name": "debate_format",
+          "description": "Indicates whether the debate was structured with a moderator or unmoderated"
+        },
+        {
+          "name": "topic_of_debate",
+          "description": "The main ethical topic discussed during the debate"
+        },
+        {
+          "name": "number_of_philosophical_books_sold",
+          "description": "Count of philosophical books sold in the month prior to the debate."
+        },
+        {
+          "name": "number_of_sessions",
+          "description": "The total number of debate sessions."
+        },
+        {
+          "name": "average_debate_duration",
+          "description": "Average duration of debates in minutes."
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 295,
+      "question": "What mathematical operation(s) could be applied to the given columns in the dataset to estimate the number of participants advocating for utilitarianism?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "participants_for_utilitarianism",
+      "true_hypothesis": "The number of participants advocating for utilitarianism can be estimated by performing a square operation on the 'philosophical_background_score' column and adding the product of 10 times 'critical_event_occurred' and 'philosophical_background_score'.",
+      "true_hypothesis_expr": "df['philosophical_background_score']**2 + 10 * (df['critical_event_occurred'] * df['philosophical_background_score'])",
+      "relevant_cols": [
+        "critical_event_occurred",
+        "philosophical_background_score",
+        "participants_for_utilitarianism"
+      ]
+    }
+  ]
+}

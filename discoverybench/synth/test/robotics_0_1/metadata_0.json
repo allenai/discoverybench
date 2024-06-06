@@ -1,0 +1,121 @@
+{
+  "id": 0,
+  "domain": "robotics",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to automated machines, artificial intelligence, and industrial applications.",
+      "columns": [
+        {
+          "name": "AI_model_version",
+          "description": "Version of the AI model installed in the robot"
+        },
+        {
+          "name": "has_dual_core_processor",
+          "description": "Indicates whether the robot's system uses a dual-core processor"
+        },
+        {
+          "name": "task_designation",
+          "description": "Indicates if the robot is designed for light-duty tasks, where true means light-duty."
+        },
+        {
+          "name": "training_complexity",
+          "description": "Rating of training complexity based on required skills and tasks"
+        },
+        {
+          "name": "system_update_received",
+          "description": "Whether the robot has received a system update before the training commenced"
+        },
+        {
+          "name": "task_success_rate",
+          "description": "Percentage of tasks successfully completed by the robot"
+        },
+        {
+          "name": "training_duration",
+          "description": "Duration of training in months"
+        },
+        {
+          "name": "has_advanced_cooling",
+          "description": "Indicates whether the robot has advanced cooling mechanisms"
+        },
+        {
+          "name": "processing_speed_GHz",
+          "description": "The clock speed of the robot's central processing unit in gigahertz"
+        },
+        {
+          "name": "continuous_operation_need",
+          "description": "Indicates if the robot needs to operate continuously, with true requiring continuous operation."
+        },
+        {
+          "name": "energy_efficiency",
+          "description": "Energy efficiency rating of the robot on a scale from 1 to 10, where 10 is the most efficient"
+        },
+        {
+          "name": "system_updates",
+          "description": "Number of system updates the robot has received in the last year"
+        },
+        {
+          "name": "continuous_operation_capable",
+          "description": "Indicates whether the robot is designed to operate without breaks or not"
+        },
+        {
+          "name": "robot_id",
+          "description": "Unique identifier for each robot"
+        },
+        {
+          "name": "timed_task_sequence_count",
+          "description": "Number of tasks a robot is programmed to perform in a specific time order"
+        },
+        {
+          "name": "number_of_sensors",
+          "description": "Number of sensors installed on the robot"
+        },
+        {
+          "name": "market_sector",
+          "description": "The primary market sector where the robot is deployed, e.g., consumer, industrial, research."
+        },
+        {
+          "name": "primary_operational_focus",
+          "description": "The primary field of task the robot is designed for, e.g., industrial, service, research"
+        },
+        {
+          "name": "training_type",
+          "description": "Type of training the robot underwent"
+        },
+        {
+          "name": "training_schedule_frequency",
+          "description": "Number of training sessions per month"
+        },
+        {
+          "name": "operational_uptime_percent",
+          "description": "The percentage of time the robot is operational in a given period, measures how long the robot works as compared to how long it could have worked, measured as a percentage."
+        },
+        {
+          "name": "tool_complexity_level",
+          "description": "Categorical rating of the tooling complexity on the robot, ranked from 1 to 5, where 5 indicates highly complex mechanisms."
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 325,
+      "question": "What is the relationship between the primary_operational_focus, continuous_operation_capable, timed_task_sequence_count, and processing_speed_GHz columns with the training_type column in the dataset?",
+      "question_type": "general",
+      "difficulty": 3,
+      "target_col": "training_type",
+      "true_hypothesis": "Robots with an industrial primary operational focus, capable of continuous operation with more than 5 timed tasks, and exhibiting specific performance metrics are classified as 'musical' in the training_type column, otherwise classified as 'traditional'.",
+      "true_hypothesis_expr": "np.where((np.where((df['primary_operational_focus'] == 'industrial') & df['continuous_operation_capable'] & (df['timed_task_sequence_count'] > 5), np.random.randint(15, 50), np.random.randint(5, 15))**3 + 10*(4 - 2 * df['task_designation'] + df['market_sector'].apply(lambda x: {'consumer': -1, 'industrial': 1, 'research': 2}[x]) - 3 * df['continuous_operation_need'])**2 > 500) & (df['processing_speed_GHz'] > 1.5) & (df['processing_speed_GHz'] < 2.5), 'musical', 'traditional')",
+      "relevant_cols": [
+        "processing_speed_GHz",
+        "timed_task_sequence_count",
+        "primary_operational_focus",
+        "continuous_operation_capable",
+        "task_designation",
+        "market_sector",
+        "continuous_operation_need",
+        "training_type"
+      ]
+    }
+  ]
+}

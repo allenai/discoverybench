@@ -1,0 +1,204 @@
+{
+  "id": 2,
+  "domain": "photography",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to capturing images, equipment, and techniques.",
+      "columns": [
+        {
+          "name": "social_media_popularity_percentile",
+          "description": "Indicates the percentile of the photographer's photos in terms of likes compared to others"
+        },
+        {
+          "name": "camera_megapixels",
+          "description": "The number of megapixels of the photographer's primary camera"
+        },
+        {
+          "name": "technique_manual_white_balance",
+          "description": "Indicates whether the photographer uses manual white balance setting"
+        },
+        {
+          "name": "frequent_tripod_use",
+          "description": "Indicates how often the photographer uses a tripod, rated on a scale from 1 to 10"
+        },
+        {
+          "name": "post_processing_skill",
+          "description": "Rating of the photographer's skill in post-processing images on a scale from 1 to 10"
+        },
+        {
+          "name": "investment_in_equipment",
+          "description": "The total amount of money the photographer spent on photography equipment in the last year."
+        },
+        {
+          "name": "annual_travel_count",
+          "description": "Number of times a photographer travels per year specifically for photography"
+        },
+        {
+          "name": "camera_resolution_megapixels",
+          "description": "The maximum image resolution of the photographer's primary camera, measured in megapixels"
+        },
+        {
+          "name": "active_in_online_forums",
+          "description": "Whether the photographer is active in online photography forums"
+        },
+        {
+          "name": "hours_spent_photography_weekly",
+          "description": "Number of hours spent on photography per week"
+        },
+        {
+          "name": "posts_on_social_media",
+          "description": "Indicates whether the photographer posts their work on social media"
+        },
+        {
+          "name": "equipment_budget",
+          "description": "Annual budget of the photographer for purchasing photography equipment in thousands of dollars"
+        },
+        {
+          "name": "photography_experience_years",
+          "description": "The number of years of experience the photographer has"
+        },
+        {
+          "name": "technique_HDR",
+          "description": "Indicates whether the photographer uses High Dynamic Range techniques"
+        },
+        {
+          "name": "average_lens_cost",
+          "description": "The average cost of camera lenses the photographer owns"
+        },
+        {
+          "name": "indoor_shoots_count",
+          "description": "The number of indoor photography sessions the photographer has completed"
+        },
+        {
+          "name": "evening_shoots_count",
+          "description": "Number of photo shoots conducted in the evening hours"
+        },
+        {
+          "name": "outdoor_shoots_count",
+          "description": "The number of outdoor photography sessions the photographer has completed"
+        },
+        {
+          "name": "uses_smartphone_secondary",
+          "description": "Indicates whether the photographer uses a smartphone as a secondary device"
+        },
+        {
+          "name": "camera_weight_grams",
+          "description": "The weight of the primary camera used by the photographer in grams"
+        },
+        {
+          "name": "wildlife_photography_frequency",
+          "description": "Frequency of engaging in wildlife photography"
+        },
+        {
+          "name": "workshops_attended",
+          "description": "Number of photography related workshops the photographer attends annually"
+        },
+        {
+          "name": "frequency_long_exposure",
+          "description": "The number of times the photographer uses long exposure techniques in a month."
+        },
+        {
+          "name": "sponsored_shoots",
+          "description": "Binary indicator if the photographer has participated in shoots sponsored by major brands"
+        },
+        {
+          "name": "photo_editing_software_use",
+          "description": "Indicates whether the photographer uses photo editing software"
+        },
+        {
+          "name": "participation_in_outdoor_workshops",
+          "description": "Indicates the number of outdoor photography workshops the photographer has attended in the last year"
+        },
+        {
+          "name": "client_rating",
+          "description": "Average client rating for the photographer on a scale of 1.0 to 5.0"
+        },
+        {
+          "name": "frequent_photo_editing",
+          "description": "Indicates whether the photographer frequently edits photos (more than 3 times a week)."
+        },
+        {
+          "name": "specialized_lenses_count",
+          "description": "Number of specialized lenses a photographer owns"
+        },
+        {
+          "name": "awards_won",
+          "description": "The number of photography awards the photographer has won"
+        },
+        {
+          "name": "competitions_participated",
+          "description": "Number of photography competitions a photographer participates in per year"
+        },
+        {
+          "name": "prefers_manual_settings",
+          "description": "Indicates whether the photographer prefers to use manual settings over automatic."
+        },
+        {
+          "name": "weekly_editing_hours",
+          "description": "Average number of hours a photographer spends on editing photos per week"
+        },
+        {
+          "name": "is_professional",
+          "description": "Indicates if the photographer is a professional"
+        },
+        {
+          "name": "photography_focus",
+          "description": "Primary focus of the photographer, categorized by subject matter"
+        },
+        {
+          "name": "photography_contests_won",
+          "description": "The number of photography contests the photographer has won"
+        },
+        {
+          "name": "specializes_in_wildlife",
+          "description": "Indicates if the photographer specializes in wildlife photography"
+        },
+        {
+          "name": "percentage_nature_photos",
+          "description": "The percentage of photos in the photographer's portfolio that are nature-themed"
+        },
+        {
+          "name": "participates_online_contests",
+          "description": "Indicates whether the photographer participates in online contests"
+        },
+        {
+          "name": "primary_shooting_condition",
+          "description": "Primary lighting condition the photographer usually shoots in"
+        },
+        {
+          "name": "prefers_landscape_photography",
+          "description": "Indicates whether the photographer prefers landscape photography"
+        },
+        {
+          "name": "follows_industry_news",
+          "description": "Whether the photographer regularly follows photography related industry news"
+        },
+        {
+          "name": "number_of_outdoor_shoots",
+          "description": "The total number of outdoor photography sessions conducted by the photographer per month"
+        },
+        {
+          "name": "percentage_of_studio_work",
+          "description": "The percentage of total photography work that is done in a studio setting"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 591,
+      "question": "Is there a relationship between preferring landscape photography, frequent tripod use, and technique preference for white balance in photography?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "technique_manual_white_balance",
+      "true_hypothesis": "Photographers who prefer landscape photography and use tripods frequently are more likely to use manual white balance for their photography.",
+      "true_hypothesis_expr": "np.where((df['prefers_landscape_photography'] == True) & (df['frequent_tripod_use'] >= 7), True, False)",
+      "relevant_cols": [
+        "prefers_landscape_photography",
+        "frequent_tripod_use",
+        "technique_manual_white_balance"
+      ]
+    }
+  ]
+}

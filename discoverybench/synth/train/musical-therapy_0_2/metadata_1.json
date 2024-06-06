@@ -1,0 +1,153 @@
+{
+  "id": 1,
+  "domain": "musical therapy",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to using music for healing, relaxation, and emotional well-being.",
+      "columns": [
+        {
+          "name": "self_reported_wellness_score",
+          "description": "Average self-reported wellness score after the sessions"
+        },
+        {
+          "name": "genres_experienced",
+          "description": "Number of different music genres the patient is exposed to during the therapy"
+        },
+        {
+          "name": "relaxation_during_music",
+          "description": "Scale from 1 to 10 measuring how relaxed the patient feels during the music therapy session"
+        },
+        {
+          "name": "live_classical_concert_attendance",
+          "description": "Number of live classical music concerts the patient attends per year."
+        },
+        {
+          "name": "frequency_of_sadness",
+          "description": "Average number of times the participant felt sadness during the sessions per month"
+        },
+        {
+          "name": "preference_for_popular_music",
+          "description": "Binary indicator if the participant prefers popular music genres (1 = yes, 0 = no)"
+        },
+        {
+          "name": "heart_rate_variability_percentage",
+          "description": "Percentage of change in heart rate variability during the music therapy session compared to baseline"
+        },
+        {
+          "name": "session_enjoyment_rating",
+          "description": "Patient's self-rated enjoyment of the therapy sessions on a scale of 1 to 10"
+        },
+        {
+          "name": "non_work_hour_access",
+          "description": "Whether the patient has access to therapy sessions outside of standard working hours"
+        },
+        {
+          "name": "predicted_relaxation_level",
+          "description": "Anticipated level of relaxation experienced during the session"
+        },
+        {
+          "name": "initial_emotional_state_rating",
+          "description": "Patient's self-reported emotional state before starting the therapy sessions"
+        },
+        {
+          "name": "music_genre_preference_match",
+          "description": "Whether the music genre played matches the patient's preference (1: Yes, 0: No)"
+        },
+        {
+          "name": "feelings_of_calmness",
+          "description": "Self-reported rating of calmness after the session on a scale of 1 to 10"
+        },
+        {
+          "name": "emotional_stability_score",
+          "description": "Score measuring the patient's emotional stability on a scale from 1 to 10, related to how music affects their emotional state."
+        },
+        {
+          "name": "structured_activity_preference",
+          "description": "Patient's preference for structured vs. unstructured activities, rated from 1 to 10."
+        },
+        {
+          "name": "music_genre_variety",
+          "description": "Number of different music genres used during therapy sessions"
+        },
+        {
+          "name": "emotional_status_positive",
+          "description": "Boolean representation of whether the patient reported a positive emotional status post-session"
+        },
+        {
+          "name": "harmonic_music_presence",
+          "description": "Indicates whether the music used during therapy sessions has a harmonic structure (yes/no)"
+        },
+        {
+          "name": "session_time_of_day",
+          "description": "Categorical indicator of when the therapy session is held (morning, afternoon, evening)"
+        },
+        {
+          "name": "patient_care_unit",
+          "description": "Type of care unit the patient is in (ICU, general ward)"
+        },
+        {
+          "name": "program_length_weeks",
+          "description": "Total length of the musical therapy program in weeks"
+        },
+        {
+          "name": "session_duration",
+          "description": "Duration of each musical therapy session in minutes"
+        },
+        {
+          "name": "session_frequency_per_week",
+          "description": "Number of therapy sessions attended by the patient per week."
+        },
+        {
+          "name": "stress_level_pre_session",
+          "description": "Patient's self-reported stress level before the therapy session, on a scale from 1 to 10."
+        },
+        {
+          "name": "disturbance_after_music",
+          "description": "Scale from 1 to 10 measuring any negative effects or disturbances felt by the patient after the music therapy session"
+        },
+        {
+          "name": "mood_improvement_post_session",
+          "description": "Change in patient's mood rated on a scale from -5 to 5, where a positive number indicates an improvement."
+        },
+        {
+          "name": "patient_stress_level",
+          "description": "Self-reported stress level of the patient before starting the therapy program, on a scale from 1 to 10"
+        },
+        {
+          "name": "musical_interest_diversity",
+          "description": "Number of different musical genres the patient expresses interest in"
+        },
+        {
+          "name": "relaxation_level",
+          "description": "Score indicating the level of relaxation the patient feels during the session, on a scale from 1 to 10"
+        },
+        {
+          "name": "preference_for_live_music",
+          "description": "Binary indicator if the participant prefers live music performances (1 = yes, 0 = no)"
+        },
+        {
+          "name": "therapy_session_frequency",
+          "description": "Number of therapy sessions attended per month"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 496,
+      "question": "What is the relationship between session enjoyment ratings, non-work hour access, musical interest diversity, and music genre preference match in the context of musical therapy?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "music_genre_preference_match",
+      "true_hypothesis": "Patients who rate their session enjoyment above 3 and have access to therapy sessions outside of standard working hours, and express interest in at least five different musical genres are more likely to have their genre preferences matched in therapy sessions.",
+      "true_hypothesis_expr": "np.where(((df['session_enjoyment_rating'] + 5 * df['non_work_hour_access'].astype(int)) > 3) & (df['musical_interest_diversity'] >= 5), 1, 0)",
+      "relevant_cols": [
+        "musical_interest_diversity",
+        "session_enjoyment_rating",
+        "non_work_hour_access",
+        "music_genre_preference_match"
+      ]
+    }
+  ]
+}

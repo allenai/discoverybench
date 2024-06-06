@@ -1,0 +1,94 @@
+{
+  "id": 1,
+  "domain": "neuroscience",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to brain functions, neural pathways, and cognitive research.",
+      "columns": [
+        {
+          "name": "degree_level",
+          "description": "Highest level of education degree obtained by the participant"
+        },
+        {
+          "name": "prefrontal_cortex_activity",
+          "description": "Level of activity in the prefrontal cortex during tasks"
+        },
+        {
+          "name": "occupation",
+          "description": "Occupation of the participant categorized into types such as student, professional, unemployed, etc."
+        },
+        {
+          "name": "age",
+          "description": "Age of the participant"
+        },
+        {
+          "name": "social_media_for_academia",
+          "description": "Average hours per week the participant uses social media to share or gather academic content"
+        },
+        {
+          "name": "participation_in_cognitive_research",
+          "description": "Number of cognitive research studies the participant has taken part in over the past year"
+        },
+        {
+          "name": "problem_solving_response_time",
+          "description": "Time taken to activate neural pathways during a problem-solving task (in milliseconds)"
+        },
+        {
+          "name": "memory_task_performance",
+          "description": "Score on standardized memory tasks, scaled between 0 and 10"
+        },
+        {
+          "name": "cognitive_games_frequency",
+          "description": "Number of times per week the participant engages in cognitive enhancing games"
+        },
+        {
+          "name": "education_level",
+          "description": "Highest education level achieved by the participant"
+        },
+        {
+          "name": "gender",
+          "description": "Gender of the participant"
+        },
+        {
+          "name": "digital_resource_access",
+          "description": "Access level to digital resources like internet and educational software (scale 1-10)"
+        },
+        {
+          "name": "omega_3_intake_level",
+          "description": "Level of omega-3 fatty acids intake measured in grams per day"
+        },
+        {
+          "name": "daily_meditation",
+          "description": "Whether the participant meditates daily"
+        },
+        {
+          "name": "hours_spent_on_cognitive_apps",
+          "description": "Number of hours per week the participant spends on apps designed for cognitive training"
+        },
+        {
+          "name": "smart_device_ownership",
+          "description": "Whether the participant owns a smart device such as a smartphone, tablet, or smartwatch"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 397,
+      "question": "Is there a relationship between income levels above $30,000, digital resource access level, and degree attainment?",
+      "question_type": "general",
+      "difficulty": 3,
+      "target_col": "education_level",
+      "true_hypothesis": "The analysis suggests that individuals with higher annual incomes above $30,000 and digital resource access level of 3 or above tend to have a higher likelihood of achieving a Master's degree, while those with annual incomes above $20,000 and digital resource access level of 2 or above tend to achieve a Bachelor's degree.",
+      "true_hypothesis_expr": "np.where((np.select([df['degree_level'].isin(['Master', 'PhD']), (df['cognitive_games_frequency'] * 2 + df['social_media_for_academia'] * 1.5) >= 20], [150000, 120000], default=50000) > 50000) & (df.get('digital_resource_access', 0) >= 5), 'PhD', np.where((np.select([df['degree_level'].isin(['Master', 'PhD']), (df['cognitive_games_frequency'] * 2 + df['social_media_for_academia'] * 1.5) >= 20], [150000, 120000], default=50000) > 30000) & (df.get('digital_resource_access', 0) >= 3), 'Master', np.where((np.select([df['degree_level'].isin(['Master', 'PhD']), (df['cognitive_games_frequency'] * 2 + df['social_media_for_academia'] * 1.5) >= 20], [150000, 120000], default=50000) > 20000) & (df.get('digital_resource_access', 0) >= 2), 'Bachelor', 'High School')))",
+      "relevant_cols": [
+        "degree_level",
+        "cognitive_games_frequency",
+        "social_media_for_academia",
+        "digital_resource_access",
+        "education_level"
+      ]
+    }
+  ]
+}

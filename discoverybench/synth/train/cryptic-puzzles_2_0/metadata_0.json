@@ -1,0 +1,150 @@
+{
+  "id": 0,
+  "domain": "cryptic puzzles",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to riddles, brain teasers, and mystery challenges.",
+      "columns": [
+        {
+          "name": "brain_training_frequency",
+          "description": "Number of times per week the participant engages in brain training activities"
+        },
+        {
+          "name": "logical_preference_score",
+          "description": "Score that reflects the participant's preference for logical reasoning, between 1 to 10"
+        },
+        {
+          "name": "time_dedication",
+          "description": "Estimated time in minutes the participant is willing to dedicate to solving a single puzzle session."
+        },
+        {
+          "name": "education_level",
+          "description": "Highest level of education attained by the participant"
+        },
+        {
+          "name": "logical_thinking_activity",
+          "description": "Indicates if the participant engages in activities that involve logical thinking."
+        },
+        {
+          "name": "average_solve_time",
+          "description": "Average time taken by the participant to solve puzzles, in minutes"
+        },
+        {
+          "name": "cognitive_skill_level",
+          "description": "Assessed cognitive skill level of the participant, ranging from beginner to expert."
+        },
+        {
+          "name": "number_of_puzzles_solved",
+          "description": "Total number of puzzles solved by the participant"
+        },
+        {
+          "name": "participant_age",
+          "description": "Age of the participant."
+        },
+        {
+          "name": "english_fluency_level",
+          "description": "Fluency level of English language of the participant, on a scale of 1 to 10"
+        },
+        {
+          "name": "problem_solving_score",
+          "description": "Score obtained in problem-solving games, scaled from 0 to 100"
+        },
+        {
+          "name": "puzzle_pieces",
+          "description": "Number of pieces the puzzle contains"
+        },
+        {
+          "name": "days_since_last_puzzle",
+          "description": "Number of days since the participant last solved a puzzle"
+        },
+        {
+          "name": "puzzle_solving_frequency",
+          "description": "How often the participant engages in solving puzzles per week"
+        },
+        {
+          "name": "enjoys_variety",
+          "description": "Indicates if the participant enjoys a variety of puzzles"
+        },
+        {
+          "name": "daily_puzzle_time_percentage",
+          "description": "Percentage of daily free time the participant devotes to solving puzzles"
+        },
+        {
+          "name": "difficulty_levels_encountered",
+          "description": "Number of different difficulty levels encountered by the participant"
+        },
+        {
+          "name": "leisure_preference",
+          "description": "Type of leisure activity the participant prefers, categorized as puzzles or others"
+        },
+        {
+          "name": "previous_experience",
+          "description": "Whether the participant has solved similar puzzles in the past"
+        },
+        {
+          "name": "active_in_puzzle_community",
+          "description": "Whether the participant is active in online or local puzzle-solving communities"
+        },
+        {
+          "name": "frequent_mind_games",
+          "description": "Indicates whether the participant frequently engages in mind-challenging games like chess, sudoku, etc."
+        },
+        {
+          "name": "uses_guided_help",
+          "description": "Indicates whether the participant prefers using guided help while solving puzzles."
+        },
+        {
+          "name": "puzzle_complexity_preference",
+          "description": "Participant's preference for puzzle complexity on a scale from 1 (simple) to 10 (most complex)."
+        },
+        {
+          "name": "creative_preference_score",
+          "description": "Score that reflects the participant's preference for creative thinking, between 1 to 10"
+        },
+        {
+          "name": "accuracy_rate",
+          "description": "Accuracy rate of solving puzzles by the participant"
+        },
+        {
+          "name": "prefers_quick_tasks",
+          "description": "Indicates if the participant prefers quick tasks over detailed ones"
+        },
+        {
+          "name": "linguistic_interest",
+          "description": "Indicates whether the participant has a higher interest in linguistic activities"
+        },
+        {
+          "name": "prefers_puzzle_themes",
+          "description": "The types of puzzle themes preferred by the participant, ranging from logical, abstract, to sequential."
+        },
+        {
+          "name": "country_of_participant",
+          "description": "Country from which the participant is"
+        },
+        {
+          "name": "participation_in_puzzle_competitions",
+          "description": "Whether the participant regularly competes in puzzle competitions"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 399,
+      "question": "Is there a significant relationship between the age group, preference for creative elements, preference for quick tasks, and accuracy rate in solving wordplay puzzles?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "accuracy_rate",
+      "true_hypothesis": "Participants aged between 25-34, who prefer creative elements over logical elements, and prefer quick tasks, have an accuracy rate, especially higher in wordplay puzzles compared to any other age group.",
+      "true_hypothesis_expr": "np.where((df['participant_age'] >= 25) & (df['participant_age'] <= 34) & (np.where(((df['logical_preference_score'] > df['creative_preference_score']) & df['prefers_quick_tasks']), 'numeric', np.where(df['creative_preference_score'] > df['logical_preference_score'], 'wordplay', 'visual')) == 'wordplay'), df['participant_age'], 0)",
+      "relevant_cols": [
+        "logical_preference_score",
+        "prefers_quick_tasks",
+        "participant_age",
+        "accuracy_rate",
+        "creative_preference_score"
+      ]
+    }
+  ]
+}

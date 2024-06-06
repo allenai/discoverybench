@@ -1,0 +1,268 @@
+{
+  "id": 2,
+  "domain": "artificial ecosystems",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to bio-domes, sustainable habitats, and man-made ecological systems.",
+      "columns": [
+        {
+          "name": "artificial_light_usage_hours",
+          "description": "Total hours artificial lighting is used per day"
+        },
+        {
+          "name": "mechanical_reliability_score",
+          "description": "A numeric score indicating the current reliability of the environmental control system's machinery"
+        },
+        {
+          "name": "ecosystem_size_hectares",
+          "description": "Total area of the ecosystem measured in hectares"
+        },
+        {
+          "name": "educational_programs",
+          "description": "Indicates if the ecosystem offers educational programs to visitors"
+        },
+        {
+          "name": "open_year_round",
+          "description": "Indicates whether the ecosystem operates throughout the entire year"
+        },
+        {
+          "name": "adaptive_climate_control_status",
+          "description": "Whether the adaptive climate control system is active"
+        },
+        {
+          "name": "daylight_hours",
+          "description": "Total daylight hours available per day"
+        },
+        {
+          "name": "number_of_high_energy_devices",
+          "description": "Total number of devices within the ecosystem that consume high amounts of energy, such as heating systems or artificial sunlight generators."
+        },
+        {
+          "name": "season",
+          "description": "Current season in which the ecosystem data was recorded"
+        },
+        {
+          "name": "UV_filter_installed",
+          "description": "Indicates whether UV-filter technology is installed in the dome."
+        },
+        {
+          "name": "number_of_unique_species",
+          "description": "Total number of unique species present within the ecosystem"
+        },
+        {
+          "name": "public_accessibility",
+          "description": "Indicates if the ecosystem is open for public visits"
+        },
+        {
+          "name": "foot_traffic",
+          "description": "Number of visitors per month who enter the ecosystem"
+        },
+        {
+          "name": "artificial_light_intensity",
+          "description": "Measured level of light provided by artificial sources within the ecosystem, in lumens."
+        },
+        {
+          "name": "installation_region",
+          "description": "Geographic region where the bio-dome is installed, impacting environmental adaptation needs."
+        },
+        {
+          "name": "UV_coating_presence",
+          "description": "Indicates whether the surface material has a UV protective coating."
+        },
+        {
+          "name": "plant_density",
+          "description": "Number of plants per square meter in the artificial ecosystem"
+        },
+        {
+          "name": "curated_floor_area_percentage",
+          "description": "Percentage of the bio-dome floor area specifically designed for aquatic and plant habitats"
+        },
+        {
+          "name": "light_intensity_level",
+          "description": "Measured level of ambient light inside the bio-dome, which influences plant growth and solar panel efficiency."
+        },
+        {
+          "name": "water_recycling_system_present",
+          "description": "Indicates if a water recycling system is implemented, impacting internal humidity and temperature control."
+        },
+        {
+          "name": "competitive_visitor_services",
+          "description": "A binary indicator of whether the ecosystem provides more visitor services compared to nearby attractions"
+        },
+        {
+          "name": "backup_energy_reserves",
+          "description": "Total energy stored in backup systems in kilowatt-hours."
+        },
+        {
+          "name": "average_temperature",
+          "description": "Average daily temperature inside the artificial ecosystem, measured in degrees Celsius"
+        },
+        {
+          "name": "staff_per_hectare",
+          "description": "Number of staff members per hectare responsible for maintenance and operations"
+        },
+        {
+          "name": "photosynthetic_activity_rating",
+          "description": "A numeric rating of the overall photosynthetic activity of plants within the ecosystem"
+        },
+        {
+          "name": "investment_in_infrastructure",
+          "description": "Financial investment in the ecosystem's infrastructure and facilities on an annual basis"
+        },
+        {
+          "name": "hardscape_area",
+          "description": "Total area covered by non-living, man-made materials like concrete within the ecosystem in square meters"
+        },
+        {
+          "name": "visitor_entries_per_month",
+          "description": "Average number of visitors entering the ecosystem per month"
+        },
+        {
+          "name": "relative_humidity_percentage",
+          "description": "Average relative humidity percentage in the ecosystem"
+        },
+        {
+          "name": "reflective_glass_percentage",
+          "description": "Percentage of the dome surface made up of reflective glass."
+        },
+        {
+          "name": "automated_ventilation_active",
+          "description": "Indicates whether an automated ventilation system is active to manage internal temperatures."
+        },
+        {
+          "name": "maintenance_cost_per_sq_m",
+          "description": "Average maintenance cost per square meter"
+        },
+        {
+          "name": "plant_coverage_percentile",
+          "description": "The percentile ranking of the area covered by plants within the bio-dome"
+        },
+        {
+          "name": "ecosystem_id",
+          "description": "Unique identifier for each artificial ecosystem"
+        },
+        {
+          "name": "solar_panel_coverage_percentage",
+          "description": "Percentage of the bio-dome surface covered by solar panels"
+        },
+        {
+          "name": "internal_CO2_level_ppm",
+          "description": "Concentration of CO2 inside the bio-dome measured in parts per million"
+        },
+        {
+          "name": "plant_species_diversity",
+          "description": "Number of different plant species within the bio-dome, affecting ecological balance and microclimate conditions."
+        },
+        {
+          "name": "average_daylight_hours",
+          "description": "Average number of daylight hours the ecosystem experiences."
+        },
+        {
+          "name": "percentage_native_vegetation",
+          "description": "Percentage of the area within the ecosystem covered by native plants and trees."
+        },
+        {
+          "name": "is_enclosed",
+          "description": "Whether the ecosystem is mostly enclosed from the external environment"
+        },
+        {
+          "name": "biodiversity_index",
+          "description": "A numerical index representing the diversity of species within the ecosystem"
+        },
+        {
+          "name": "real_time_shadow_tracking",
+          "description": "Indicates if a real-time shadow tracking system is active to optimize sunlight exposure."
+        },
+        {
+          "name": "number_of_species",
+          "description": "Number of different species maintained within the ecosystem"
+        },
+        {
+          "name": "energy_consumption_air_purification",
+          "description": "Total energy consumption per year for air purification systems in kilowatt-hours."
+        },
+        {
+          "name": "carbon_dioxide_levels",
+          "description": "Measured levels of carbon dioxide in parts per million"
+        },
+        {
+          "name": "natural_sunlight_hours",
+          "description": "Average daily sunlight hours the ecosystem receives"
+        },
+        {
+          "name": "thermal_regulation_level",
+          "description": "Indicates the sophistication level of the thermal regulating technology used in the ecosystem."
+        },
+        {
+          "name": "investment_in_training",
+          "description": "Financial investment in employee training programs related to ecology and visitor services annually"
+        },
+        {
+          "name": "natural_disaster_frequency",
+          "description": "Average number of natural disasters occurring per year in the area of the ecosystem"
+        },
+        {
+          "name": "average_sunlight_duration",
+          "description": "The average duration of sunlight per day in hours over a year inside the bio-dome."
+        },
+        {
+          "name": "air_quality_index",
+          "description": "Measure of the air quality within the ecosystem, scaled from good to hazardous"
+        },
+        {
+          "name": "insulation_type",
+          "description": "Type of insulation installed inside the bio-dome, affecting internal temperature regulation."
+        },
+        {
+          "name": "has_geothermal_heating",
+          "description": "Indicates whether the bio-dome incorporates geothermal heating, which could reduce reliance on solar panels by providing alternative energy."
+        },
+        {
+          "name": "system_check_frequency_per_year",
+          "description": "The number of times the system's functionality is checked per year"
+        },
+        {
+          "name": "water_body_count",
+          "description": "The number of significant water bodies within the ecosystem"
+        },
+        {
+          "name": "educational_facilities",
+          "description": "Indicates if the ecosystem includes facilities for educational purposes"
+        },
+        {
+          "name": "temperature_control_efficiency",
+          "description": "Efficiency rating of the bio-dome's temperature control system, impacting energy usage and internal climate regulation."
+        },
+        {
+          "name": "occupancy_status",
+          "description": "Whether the ecosystem is at full occupancy capacity or not, impacting energy usage and internal climate control"
+        },
+        {
+          "name": "plant_cover_area",
+          "description": "Total area covered by plant life within the ecosystem in square meters"
+        },
+        {
+          "name": "external_temperature_C",
+          "description": "The temperature outside the bio-dome measured in Celsius"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 943,
+      "question": "Can you determine the season in an artificial ecosystem based on the ratio of daylight hours to artificial light usage hours?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "season",
+      "true_hypothesis": "The ratio of daylight hours to artificial light usage hours in an artificial ecosystem categorizes the season. Seasons are categorized based on the ratio being either greater than 3 indicating 'summer', less than 0.5 indicating 'winter', otherwise defaulting to 'spring'.",
+      "true_hypothesis_expr": "np.select([(df['daylight_hours']/df['artificial_light_usage_hours'] > 3), (df['daylight_hours']/df['artificial_light_usage_hours'] < 0.5)], ['summer', 'winter'], default='spring')",
+      "relevant_cols": [
+        "daylight_hours",
+        "artificial_light_usage_hours",
+        "season"
+      ]
+    }
+  ]
+}

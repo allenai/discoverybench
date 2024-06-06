@@ -1,0 +1,143 @@
+{
+  "id": 0,
+  "domain": "musical therapy",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to using music for healing, relaxation, and emotional well-being.",
+      "columns": [
+        {
+          "name": "non_work_hour_access",
+          "description": "Whether the patient has access to therapy sessions outside of standard working hours"
+        },
+        {
+          "name": "session_frequency_per_week",
+          "description": "Number of therapy sessions attended by the patient per week."
+        },
+        {
+          "name": "preference_for_live_music",
+          "description": "Binary indicator if the participant prefers live music performances (1 = yes, 0 = no)"
+        },
+        {
+          "name": "emotional_status_positive",
+          "description": "Boolean representation of whether the patient reported a positive emotional status post-session"
+        },
+        {
+          "name": "patient_care_unit",
+          "description": "Type of care unit the patient is in (ICU, general ward)"
+        },
+        {
+          "name": "preference_for_popular_music",
+          "description": "Binary indicator if the participant prefers popular music genres (1 = yes, 0 = no)"
+        },
+        {
+          "name": "patient_stress_level",
+          "description": "Self-reported stress level of the patient before starting the therapy program, on a scale from 1 to 10"
+        },
+        {
+          "name": "program_length_weeks",
+          "description": "Total length of the musical therapy program in weeks"
+        },
+        {
+          "name": "self_reported_wellness_score",
+          "description": "Average self-reported wellness score after the sessions"
+        },
+        {
+          "name": "session_time_of_day",
+          "description": "Categorical indicator of when the therapy session is held (morning, afternoon, evening)"
+        },
+        {
+          "name": "frequency_of_sadness",
+          "description": "Average number of times the participant felt sadness during the sessions per month"
+        },
+        {
+          "name": "musical_interest_diversity",
+          "description": "Number of different musical genres the patient expresses interest in"
+        },
+        {
+          "name": "initial_emotional_state_rating",
+          "description": "Patient's self-reported emotional state before starting the therapy sessions"
+        },
+        {
+          "name": "adjusted_wellness_score",
+          "description": "Adjusted score related to patient's overall well-being"
+        },
+        {
+          "name": "session_duration",
+          "description": "Duration of each musical therapy session in minutes"
+        },
+        {
+          "name": "relaxation_level",
+          "description": "Score indicating the level of relaxation the patient feels during the session, on a scale from 1 to 10"
+        },
+        {
+          "name": "session_enjoyment_rating",
+          "description": "Patient's self-rated enjoyment of the therapy sessions on a scale of 1 to 10"
+        },
+        {
+          "name": "live_classical_concert_attendance",
+          "description": "Number of live classical music concerts the patient attends per year."
+        },
+        {
+          "name": "emotional_stability_score",
+          "description": "Score measuring the patient's emotional stability on a scale from 1 to 10, related to how music affects their emotional state."
+        },
+        {
+          "name": "stress_level_pre_session",
+          "description": "Patient's self-reported stress level before the therapy session, on a scale from 1 to 10."
+        },
+        {
+          "name": "heart_rate_variability_percentage",
+          "description": "Percentage of change in heart rate variability during the music therapy session compared to baseline"
+        },
+        {
+          "name": "feelings_of_calmness",
+          "description": "Self-reported rating of calmness after the session on a scale of 1 to 10"
+        },
+        {
+          "name": "mood_improvement_post_session",
+          "description": "Change in patient's mood rated on a scale from -5 to 5, where a positive number indicates an improvement."
+        },
+        {
+          "name": "disturbance_after_music",
+          "description": "Scale from 1 to 10 measuring any negative effects or disturbances felt by the patient after the music therapy session"
+        },
+        {
+          "name": "music_genre_variety",
+          "description": "Number of different music genres used during therapy sessions"
+        },
+        {
+          "name": "therapy_session_frequency",
+          "description": "Number of therapy sessions attended per month"
+        },
+        {
+          "name": "relaxation_during_music",
+          "description": "Scale from 1 to 10 measuring how relaxed the patient feels during the music therapy session"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 489,
+      "question": "Is there a relationship between the length of the music therapy sessions, the difference in relaxation levels during and after music, and the adjusted wellness score of patients with diverse musical interests?",
+      "question_type": "general",
+      "difficulty": 4,
+      "target_col": "adjusted_wellness_score",
+      "true_hypothesis": "Patients who listen to classical music during sessions lasting at least 30 minutes, with higher relaxation during music compared to after-music disturbance by more than 25 points, an initial emotional state rating combined with session enjoyment and work hour access satisfaction, and having diverse musical interests, achieve an adjusted wellness score calculated using a formula considering their self-reported wellness score along with other session related factors.",
+      "true_hypothesis_expr": "np.where((df.get('music_type') == 'classical') & (40 + df['relaxation_during_music'] - df['disturbance_after_music'] > 65) & (df['session_duration'] >= 30) & (((df['initial_emotional_state_rating'] + (np.where((df['session_enjoyment_rating'] + 5 * df['non_work_hour_access'].astype(int) > 3) & (df['musical_interest_diversity'] >= 5), 1, 0))*2 + (df['patient_care_unit'] == 'ICU').astype(int)*3) >= 3), df['self_reported_wellness_score'] * 1.4, df['self_reported_wellness_score'])",
+      "relevant_cols": [
+        "session_duration",
+        "self_reported_wellness_score",
+        "relaxation_during_music",
+        "disturbance_after_music",
+        "initial_emotional_state_rating",
+        "patient_care_unit",
+        "musical_interest_diversity",
+        "session_enjoyment_rating",
+        "non_work_hour_access",
+        "adjusted_wellness_score"
+      ]
+    }
+  ]
+}

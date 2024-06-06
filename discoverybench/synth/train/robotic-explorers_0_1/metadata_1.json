@@ -1,0 +1,134 @@
+{
+  "id": 1,
+  "domain": "robotic explorers",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to Mars rovers, space probes, and autonomous exploration vehicles.",
+      "columns": [
+        {
+          "name": "system_update_frequency",
+          "description": "Number of critical system updates received per year"
+        },
+        {
+          "name": "power_fluctuations",
+          "description": "Count of significant power fluctuations per week detected in the vehicle."
+        },
+        {
+          "name": "communication_success_ratio",
+          "description": "Ratio of successful communications sessions to total communication attempts with mission control"
+        },
+        {
+          "name": "terrain_complexity",
+          "description": "A categorical ranking of the surveyed terrain's complexity, affecting navigation and survey capabilities."
+        },
+        {
+          "name": "AI_decision_making_capabilities",
+          "description": "Indicates whether the vehicle is equipped with artificial intelligence capabilities to make decisions independently."
+        },
+        {
+          "name": "mission_duration_days",
+          "description": "Total duration of the mission expected or experienced, measured in days."
+        },
+        {
+          "name": "ai_decision_making",
+          "description": "Whether the vehicle uses AI-based decision-making algorithms"
+        },
+        {
+          "name": "operation_time_years",
+          "description": "Number of years the vehicle has been operational on Mars"
+        },
+        {
+          "name": "average_daily_temperature",
+          "description": "Average daily temperature in Celsius degrees at the location of the vehicle."
+        },
+        {
+          "name": "seasonal_temperature_variation",
+          "description": "Categorical indication of the level of temperature changes observed over seasons"
+        },
+        {
+          "name": "communication_system_frequency",
+          "description": "Operational frequency of the vehicle's communication system, measured in GHz."
+        },
+        {
+          "name": "robotic_maintenance_sessions",
+          "description": "Number of maintenance and repair sessions performed on-site by robotic systems."
+        },
+        {
+          "name": "terrain_type",
+          "description": "Type of terrain where the vehicle is exploring"
+        },
+        {
+          "name": "optical_imaging_resolution",
+          "description": "Resolution of the optical imaging system on the vehicle, measured in megapixels"
+        },
+        {
+          "name": "number_of_sensors",
+          "description": "Total number of sensors equipped on the vehicle"
+        },
+        {
+          "name": "communication_bandwidth",
+          "description": "The maximum data transmission capacity of the vehicle's communication system, measured in Mbps, which is crucial for high-speed data transmission to and from Earth."
+        },
+        {
+          "name": "mission_duration",
+          "description": "Specifies the planned operational timeline of the vehicle in days."
+        },
+        {
+          "name": "new_geographical_features_found",
+          "description": "Number of new geographical features discovered by the vehicle"
+        },
+        {
+          "name": "max_daily_wind_speed",
+          "description": "Maximum wind speed recorded in kilometers per hour on a given day at the vehicle's location."
+        },
+        {
+          "name": "vehicle_id",
+          "description": "Unique identifier for each exploration vehicle"
+        },
+        {
+          "name": "past_turbulent_conditions",
+          "description": "Indicates if the vehicle has historically reported turbulent conditions, which include high wind speeds or extreme temperatures."
+        },
+        {
+          "name": "task_complexity_score",
+          "description": "A numerical score that rates the complexity of tasks the vehicle can perform on a scale from 1 to 10."
+        },
+        {
+          "name": "communication_delay_tolerance",
+          "description": "Vehicle's ability to operate effectively despite communication delays with Earth-based control centers, important for autonomous decision-making."
+        },
+        {
+          "name": "remote_control_capabilities",
+          "description": "Indicates the presence of remote control capabilities enabling distant manipulation and interventions."
+        },
+        {
+          "name": "habitat_markers_found",
+          "description": "Count of biological or geological markers identified by the explorer that indicate past or potential habitats."
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 765,
+      "question": "Is there a relationship between AI decision-making capabilities, communication bandwidth, mission duration, task complexity score, mission duration in days, communication system frequency, and remote control capabilities in determining the efficacy of advanced computation methods for autonomous decision-making processes for vehicles in the domain of robotic explorers?",
+      "question_type": "general",
+      "difficulty": 3,
+      "target_col": "ai_decision_making",
+      "true_hypothesis": "Vehicles with AI decision-making capabilities and high communication bandwidth performing longer missions with higher task complexity scores, mission duration, communication system frequency, and remote control capabilities are expected to leverage advanced computation methods to enhance autonomous decision-making processes.",
+      "true_hypothesis_expr": "np.where((np.where((df['AI_decision_making_capabilities'] == True) & (df['communication_bandwidth'] > 500), (df['mission_duration'] * 1.5 + df['task_complexity_score'] * 80) / 100 + (df['mission_duration_days'] / 400 + 5 * df['communication_system_frequency'] / 10 + df['remote_control_capabilities'].astype(int) * 3), df['mission_duration_days'] / 400 + 5 * df['communication_system_frequency'] / 10 + df['remote_control_capabilities'].astype(int) * 3))**3 + 2*df['communication_delay_tolerance'] > 20, True, False)",
+      "relevant_cols": [
+        "communication_delay_tolerance",
+        "mission_duration",
+        "task_complexity_score",
+        "mission_duration_days",
+        "communication_system_frequency",
+        "remote_control_capabilities",
+        "AI_decision_making_capabilities",
+        "communication_bandwidth",
+        "ai_decision_making"
+      ]
+    }
+  ]
+}

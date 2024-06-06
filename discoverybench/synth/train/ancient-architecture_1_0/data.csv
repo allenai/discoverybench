@@ -1,0 +1,501 @@
+average_age_of_neighbors,material_durability_score,facade_complexity_index,material_usage_ratio,average_tourist_visits_per_year,structure_age,in_historical_conservation_area,durability_material_percentage,daily_visitor_count,climate_harshness_score,ceremonial_use,construction_year,modern_infrastructure,urban_shadowing,material_origin,site_location_region,ratio_of_clear_to_cloudy_days,latitude,building_material_reflectivity,neighbor_inscription_percentage,height_meters,local_construction_materials,average_daily_sunlight_hours,restoration_presence,has_stone_foundation,construction_method,structural_complexity,average_wall_thickness,reliance_on_natural_lighting,structure_id,preservation_score,preventive_measures
+310.4246,6.42,9.2857,2.1355,367119,1981,True,0.0,923,4,True,1999,False,False,imported,Tropical,360.6217,-80,0.2844,46.4564,38.0919,wood,24.0,True,True,Stone masonry,2,171.0386,False,S001,0.0,False
+1433.7899,5.306,9.8876,2.0018,344857,1910,False,20.4998,2627,3,True,1609,True,False,local,Temperate,354.1339,-45,0.2345,39.6345,37.7459,stone,24.0,True,True,Wood,6,31.0689,False,S003,0.0,True
+1986.3121,5.6015,9.0085,2.5066,345409,289,True,34.8124,2215,4,True,1309,True,True,local,Tropical,363.1135,-30,0.2242,49.6491,30.6235,brick,0.0,True,False,Adobe,6,69.3522,True,S001,94.22,True
+2000.0,6.3942,8.9098,2.2197,356038,692,False,72.4263,4028,4,False,1824,True,True,local,Temperate,355.8643,-40,0.2699,14.5838,32.9454,adobe,0.0,False,,Adobe,4,63.8111,False,S003,0.0,False
+1835.728,5.2927,2.3667,3.2375,263107,1667,,36.3963,702,3,False,1261,False,False,local,Tropical,364.3461,-45,0.3256,4.0239,17.0538,concrete,24.0,False,True,Stone masonry,9,194.858,False,S001,0.0,False
+2000.0,6.3486,6.847,1.8875,357359,1024,False,94.28,997,4,False,1165,False,True,imported,Tropical,339.0578,-65,0.3034,34.4731,38.8822,adobe,0.0,True,True,Stone masonry,5,191.8863,False,S002,70.46,True
+1984.4306,5.231,3.0909,1.9723,399045,879,False,57.5203,2302,3,True,1491,True,False,local,Temperate,350.3034,-35,0.179,50.3677,43.8066,adobe,24.0,False,True,,5,87.4716,False,S003,0.0,False
+1100.3988,5.6188,6.7131,2.1566,338859,237,False,14.9375,2844,4,True,1000,True,True,local,Arid,319.3585,-55,0.1418,42.6444,34.5235,wood,0.0,True,True,Stone masonry,1,120.6317,True,S004,0.0,True
+1988.3975,5.2955,9.4709,1.2947,364019,870,True,63.3069,537,3,False,1804,True,False,local,Tropical,332.3564,-55,0.2184,80.1307,58.234,wood,24.0,True,True,,1,20.0,False,S003,0.0,False
+1695.9678,5.3067,2.5128,2.9124,353760,715,False,27.0078,583,3,True,1192,True,True,imported,Temperate,354.5344,-55,0.2536,39.0166,26.556,wood,0.0,True,False,Adobe,1,154.6544,True,S003,0.0,True
+1996.0331,6.4244,8.3043,1.8429,307711,1899,False,72.5264,2696,4,True,2000,True,False,local,Tropical,343.9402,-30,0.2593,10.9731,37.1487,adobe,24.0,True,True,Wood,6,61.6222,False,S001,100.0,True
+935.465,5.6186,4.2287,1.1831,256413,220,False,18.6819,2460,4,False,1716,True,True,local,Temperate,341.9451,-40,0.283,75.2581,44.7655,brick,0.0,False,,Adobe,4,176.3741,False,S003,0.0,True
+1547.7153,6.3827,1.4129,1.7672,330386,1081,True,31.1842,3492,4,True,1084,False,True,imported,Tropical,345.8163,-55,0.302,37.8292,41.8714,brick,0.0,False,True,Stone masonry,7,108.251,True,S003,100.0,True
+1955.6795,6.3949,1.0,1.5973,290755,1935,True,68.8169,1911,4,False,1249,True,True,local,Tropical,319.3503,-50,0.2851,37.4535,38.2337,wood,0.0,True,True,,2,72.0485,False,S002,0.0,False
+1975.2726,5.6188,7.4796,2.9891,293379,394,False,51.8567,2664,4,True,1937,True,False,imported,Tropical,364.363,-55,0.2493,91.8291,21.8649,brick,24.0,True,,Stone masonry,1,157.6572,False,S002,100.0,True
+1986.6926,5.2985,2.6758,2.4524,359355,932,True,69.0184,4356,3,,1744,False,False,imported,Temperate,362.1288,-55,0.2255,1.4921,30.3628,brick,24.0,False,False,Wood,7,25.2054,True,S004,0.0,False
+916.916,6.3833,4.3069,2.1667,308725,1581,False,11.7981,1056,4,,2000,True,True,local,Temperate,338.5303,-20,0.179,3.9779,29.3834,concrete,0.0,True,True,Stone masonry,8,108.2862,True,S004,0.0,True
+1986.1634,6.4726,8.757,2.3244,299864,1725,True,66.8199,4698,4,True,1244,True,False,local,Arid,364.7726,-55,0.2929,72.9523,29.2082,stone,24.0,True,False,Adobe,4,90.8837,True,S004,0.0,True
+2000.0,5.2561,3.9459,2.5312,340081,587,True,52.438,5000,3,,1318,,False,local,Temperate,365.0,-35,0.1735,82.6713,29.8697,wood,24.0,True,True,Stone masonry,5,128.4973,True,S003,0.0,False
+1807.1921,5.2923,7.1265,2.0646,388573,961,,28.0053,526,3,False,1384,True,True,local,Tropical,354.7448,-15,0.2224,70.2844,38.412,wood,0.0,True,True,Stone masonry,9,188.2377,True,S004,0.0,False
+1657.1353,6.397,2.7391,1.8037,355057,1547,True,26.4943,3508,4,,1624,False,False,imported,Arid,359.5314,-65,0.2704,33.9107,40.9879,concrete,24.0,True,True,Stone masonry,5,131.4933,True,S001,0.0,True
+1850.5726,6.4011,7.4525,4.0712,429872,535,False,37.2707,4296,4,True,1142,,False,local,Tropical,343.154,-80,0.2105,13.4808,22.8176,concrete,24.0,False,False,Adobe,2,146.1459,False,S004,100.0,True
+2000.0,6.3488,4.426,2.37,373973,1504,True,92.4782,4823,4,False,1837,False,False,imported,Tropical,332.0071,-80,0.2421,59.6993,32.7905,adobe,24.0,False,False,Wood,2,47.2674,True,S001,100.0,True
+1974.3996,5.2518,7.9509,2.2306,365537,1472,True,73.1287,3693,3,True,1756,,True,imported,Temperate,352.9324,-70,0.1986,11.5635,36.1771,adobe,0.0,False,False,Adobe,4,127.3404,True,S002,0.0,False
+1508.1506,5.3191,1.921,2.2104,378353,1635,True,30.2081,959,3,True,1889,,False,local,Temperate,352.1873,-55,0.2686,8.0373,37.6675,brick,24.0,False,False,Wood,7,35.6447,True,S001,0.0,False
+396.9002,6.4002,6.8163,1.9999,315645,1274,True,7.4487,3326,4,,1919,False,True,local,Tropical,342.5863,-80,0.3136,99.657,33.0266,wood,0.0,False,False,Adobe,2,175.9407,True,S003,100.0,True
+2000.0,6.4078,8.4874,1.6559,263721,1928,False,85.6882,1265,4,True,1464,True,False,imported,Temperate,349.2976,-45,0.1666,42.3402,36.0306,adobe,24.0,True,True,Wood,3,82.8403,False,S004,0.0,True
+1960.6905,6.3939,8.2571,2.8046,325013,1376,False,72.2406,2837,4,True,1226,False,True,imported,Temperate,333.5913,-70,0.2703,54.0461,25.6445,stone,0.0,True,True,Stone masonry,7,132.4015,True,S002,0.0,True
+2000.0,6.4104,9.2477,2.5735,283609,1541,,56.3774,2895,4,True,1651,True,False,imported,Arid,344.7418,-50,0.1741,72.134,24.7292,stone,24.0,True,True,Stone masonry,5,107.0538,True,S004,0.0,True
+690.0462,6.3392,2.793,1.4712,379526,1358,False,5.9516,3605,4,True,1731,False,True,local,Arid,353.7195,-60,0.263,47.9665,56.2962,stone,0.0,True,True,Wood,9,73.8425,True,S002,0.0,False
+2000.0,4.7069,3.7851,2.3543,329396,393,False,67.5256,3114,3,True,1044,False,True,imported,Arid,358.6402,-85,0.1802,91.1085,30.7046,brick,0.0,False,False,,1,124.6326,True,S001,0.0,True
+972.9904,5.552,4.755,1.8239,318475,450,True,11.7888,1513,4,False,1593,False,True,local,Temperate,359.2175,-55,0.1746,50.4469,36.3912,adobe,0.0,True,True,Stone masonry,7,137.5034,True,S002,0.0,True
+2000.0,6.3615,6.2252,2.1551,249217,1101,False,70.2687,1876,4,True,1773,True,True,local,Arid,365.0,-30,0.3952,95.7374,26.3395,adobe,0.0,True,True,Wood,6,84.7747,False,S001,0.0,True
+1962.5037,6.4531,10.0,2.6868,400416,1407,True,60.6551,2844,4,False,1400,,False,imported,Temperate,356.1414,-55,0.4395,21.0217,30.8933,adobe,24.0,False,True,Stone masonry,7,135.2078,False,S002,0.0,False
+983.6575,4.7096,9.5488,1.6514,391022,400,True,19.9973,2336,3,False,1819,True,True,local,Temperate,354.7186,-55,0.3661,49.5844,48.8154,wood,0.0,False,False,,1,65.9955,False,S004,0.0,False
+2000.0,6.3722,3.8807,2.1386,309090,972,True,83.0768,4302,4,True,1095,False,False,imported,Temperate,355.353,-55,0.2774,40.5456,32.6089,brick,24.0,False,True,Stone masonry,7,114.1169,False,S001,0.0,False
+2000.0,4.7158,9.0666,2.1635,385500,324,True,43.1838,1401,3,False,1130,False,False,imported,Tropical,334.0113,-45,0.2884,84.4138,36.7502,concrete,24.0,False,False,,9,146.6532,True,S002,0.0,False
+2000.0,5.6363,6.2517,2.4551,347997,274,False,72.685,2297,4,False,1513,False,True,local,Temperate,341.4462,-75,0.1661,94.0867,29.0337,brick,0.0,False,False,,3,172.4807,True,S001,0.0,True
+2000.0,5.5887,7.4589,2.5758,272910,151,False,34.0761,15,4,True,1868,False,False,local,Arid,302.4225,-70,0.158,54.6466,23.7838,wood,24.0,True,,Adobe,4,61.0158,False,S001,0.0,False
+1225.8709,6.3628,1.0495,2.7108,417700,776,True,24.2303,3150,4,True,2000,False,True,imported,Temperate,346.339,-75,0.194,29.4993,33.7394,adobe,0.0,False,False,Adobe,3,168.5331,True,S002,0.0,True
+1996.7111,6.418,2.6939,2.1211,391182,1226,False,89.8095,4010,4,True,1347,True,True,imported,Tropical,338.1472,-20,0.2173,98.279,40.1473,adobe,0.0,False,False,Adobe,8,94.5207,False,S004,100.0,True
+1715.1435,5.316,7.3892,1.8039,347878,2000,,26.2528,4736,3,True,1493,False,False,imported,Temperate,357.1855,-70,0.1832,34.8306,42.2231,concrete,24.0,True,,Adobe,4,132.6096,True,S001,0.0,False
+2000.0,6.4156,5.2869,1.3533,289517,1311,False,36.2646,3284,4,False,1404,False,True,imported,Temperate,328.4331,-60,0.2445,63.3218,44.2056,concrete,0.0,True,,Adobe,6,178.691,True,S002,0.0,False
+1403.8027,5.5396,4.0068,2.3774,382639,100,False,28.2034,4761,4,False,1668,True,True,imported,Tropical,322.9885,-45,0.1523,46.6213,32.8964,stone,0.0,False,True,Wood,6,79.0159,False,S001,100.0,True
+715.1305,5.3066,8.6518,2.7455,320630,1389,False,7.1992,3475,3,True,1756,False,True,imported,Temperate,349.7355,-80,0.2639,80.8845,25.7569,wood,0.0,True,False,Adobe,2,176.5152,True,S004,0.0,False
+1965.5975,5.5994,3.6349,2.0063,344942,209,True,72.2493,2641,4,False,1379,False,False,imported,Tropical,342.3495,-40,0.2617,26.4805,35.7221,adobe,24.0,False,True,,10,124.2761,True,S002,0.0,False
+1988.3136,5.6184,10.0,2.6655,349250,241,False,68.1843,311,4,True,1734,False,True,local,Temperate,353.5383,-75,0.2836,74.5396,28.7115,wood,0.0,True,,Wood,3,56.6052,False,S001,0.0,False
+1956.3637,6.4151,1.2164,1.7904,413641,688,False,38.6691,3012,4,False,1937,True,False,imported,Arid,329.0638,-40,0.2118,12.2521,47.2797,stone,24.0,False,False,Wood,7,38.1265,False,S004,0.0,True
+1306.5113,5.3065,5.2637,2.4013,341030,1746,True,26.3261,4863,3,False,1869,True,False,imported,Arid,330.3536,-50,0.3304,31.1817,29.4824,brick,24.0,False,True,Wood,2,58.3519,False,S003,0.0,False
+796.0257,5.618,5.822,1.2807,181098,160,True,15.34,2569,4,,1158,,True,imported,Tropical,361.4732,-45,0.3814,16.9123,30.3746,wood,0.0,False,False,Adobe,9,88.8451,False,S002,0.0,False
+2000.0,5.6131,2.8437,2.3707,337573,276,False,95.4497,1432,4,False,2000,False,False,local,Temperate,350.8715,-60,0.2812,22.9777,29.1877,brick,24.0,True,True,,6,64.2794,True,S004,0.0,False
+829.6661,5.6198,2.0752,1.6695,271790,418,True,17.1427,2356,4,False,1289,True,False,imported,Temperate,350.0488,-40,0.1934,31.7498,34.1651,adobe,24.0,False,False,Adobe,4,62.5836,False,S003,0.0,True
+2000.0,5.5827,3.6689,2.1195,368683,357,,62.9247,2693,4,False,1754,True,False,imported,Tropical,345.1662,-50,0.3127,17.1154,35.5823,concrete,24.0,False,False,Wood,2,35.0721,False,S004,0.0,False
+767.4393,4.7127,6.5133,1.4744,348573,319,True,15.9722,4467,3,False,1413,True,False,local,Arid,345.5065,-30,0.2579,32.3791,48.917,adobe,24.0,False,True,Wood,6,83.1442,True,S001,0.0,True
+2000.0,6.3903,7.7576,2.8565,359377,1811,True,95.3086,3963,4,False,1564,False,False,imported,Arid,354.2173,-55,0.1982,71.4041,26.1841,wood,24.0,True,,Stone masonry,7,121.5538,True,S003,0.0,True
+2000.0,5.3314,7.0662,3.2278,397175,1751,False,80.4067,2503,3,False,2000,True,True,local,Temperate,328.5339,-10,0.2176,38.0993,25.1026,adobe,0.0,False,False,Adobe,10,184.6202,False,S001,0.0,True
+1983.3682,6.3718,6.4584,2.5589,386331,1743,True,85.8373,577,4,True,1963,,False,imported,Arid,355.2216,-45,0.2013,76.9378,33.2902,brick,24.0,True,False,Adobe,9,138.8231,False,S001,0.0,True
+2000.0,7.4826,2.1662,2.772,368200,1929,False,85.11,4822,5,True,1113,True,False,local,Temperate,350.0947,-55,0.1425,81.0966,29.1809,brick,24.0,True,False,Adobe,1,155.0113,False,S004,0.0,False
+2000.0,6.4542,3.6055,1.6785,306968,960,False,78.6751,651,4,False,1808,True,True,imported,Tropical,329.6322,-45,0.2755,86.8991,37.7196,adobe,0.0,True,False,Adobe,3,62.6554,True,S002,65.02,True
+1758.4201,6.424,7.8713,1.6831,329548,1758,True,34.2265,422,4,False,1362,True,True,local,Arid,352.593,-50,0.2115,53.4774,40.8934,concrete,0.0,False,False,Adobe,2,77.0925,True,S002,0.0,True
+1972.0669,5.5862,4.507,4.9609,344243,330,False,48.9868,1274,4,True,1588,True,True,imported,Temperate,307.0024,-25,0.2342,19.3854,15.2247,brick,0.0,True,True,Stone masonry,7,113.4868,True,S004,0.0,True
+2000.0,5.5763,9.8348,1.2495,281795,280,False,96.573,2176,4,True,1817,False,True,imported,Tropical,358.3273,-90,0.2413,94.2161,50.4511,stone,0.0,True,True,Wood,3,79.7928,True,S003,0.0,False
+1245.2109,6.3917,6.4544,4.2338,312423,1306,False,18.0886,4008,4,False,1320,False,True,local,Tropical,348.6289,-85,0.2133,18.5571,15.2119,concrete,0.0,True,True,Wood,1,45.9441,False,S003,100.0,True
+1969.4287,5.6156,1.4186,1.842,325174,115,False,40.5743,3114,4,False,1210,True,True,imported,Arid,342.6636,-35,0.2096,31.5209,36.2189,adobe,0.0,False,False,Adobe,5,125.9897,True,S003,0.0,True
+2000.0,6.4288,9.378,1.7073,343705,1880,True,75.8511,1555,4,False,1868,False,False,imported,Tropical,345.2379,-65,0.2677,45.1276,41.9736,concrete,24.0,True,False,Adobe,5,96.2703,True,S002,81.8,True
+2000.0,5.5886,5.2864,2.1542,344359,314,True,81.66,680,4,True,1688,False,True,local,Arid,346.2867,-75,0.0663,12.1444,35.5357,wood,0.0,False,False,Adobe,3,76.3903,True,S003,0.0,False
+2000.0,6.3779,9.2512,1.9793,336489,916,False,44.5933,2842,4,True,2000,False,False,imported,Temperate,361.1173,-70,0.1315,74.7633,37.4977,adobe,24.0,True,True,Stone masonry,4,156.2687,False,S004,0.0,False
+2000.0,6.3455,3.2934,2.749,367851,558,True,100.0,1306,4,False,1830,True,True,imported,Temperate,328.3336,-40,0.3242,13.2311,27.8251,brick,0.0,False,False,Adobe,4,126.546,False,S002,0.0,True
+1597.0583,6.3689,3.4547,2.6919,311567,1902,True,31.6156,3547,4,True,1087,True,True,imported,Tropical,322.2381,-40,0.2495,52.9646,26.0906,brick,0.0,False,True,Wood,4,81.2387,True,S004,100.0,True
+712.2622,5.2934,2.8594,2.439,284559,1391,True,14.4718,896,3,False,1141,False,False,local,Tropical,363.2051,-40,0.055,77.8083,24.3961,wood,24.0,False,False,Wood,10,25.3584,True,S001,0.0,False
+1965.7412,4.7309,9.0986,2.2516,372542,155,False,61.0233,4602,3,False,1891,True,False,local,Tropical,344.3509,-60,0.2078,13.5141,33.7174,stone,24.0,True,True,Stone masonry,3,173.7372,True,S003,100.0,True
+1979.9292,5.3184,7.3706,2.8406,376844,1720,False,66.6341,4387,3,False,1328,False,False,imported,Tropical,344.1174,-80,0.2436,99.6278,27.0924,wood,24.0,False,False,Adobe,2,86.9452,False,S001,0.0,False
+1982.6532,6.4493,10.0,1.8636,294918,1609,True,36.1278,2654,4,False,1599,False,True,local,Temperate,336.965,-85,0.1784,51.6029,33.2164,stone,0.0,True,False,Adobe,4,92.6837,True,S004,0.0,False
+1977.0289,5.3261,6.7398,3.5008,483254,749,,40.499,3543,3,True,1781,False,False,imported,Arid,321.1764,-50,0.2674,25.0037,28.5647,brick,24.0,True,True,Stone masonry,8,162.6256,False,S004,0.0,True
+1993.4532,6.4311,10.0,2.1508,263645,1367,False,92.3604,4504,4,False,1040,False,True,imported,Arid,316.228,-60,0.1427,36.9278,25.4081,stone,0.0,False,False,Adobe,9,148.3398,False,S001,0.0,False
+555.095,5.2819,7.9129,1.5275,231453,568,False,4.5014,1959,3,False,1763,,False,local,Tropical,354.4129,-35,0.1625,76.439,31.3464,brick,24.0,True,True,Wood,5,71.3813,False,S001,0.0,False
+1977.554,5.6159,2.3835,2.2978,330589,167,True,42.3397,3717,4,,1665,True,True,imported,Temperate,365.0,-50,0.2578,37.1171,29.9402,wood,0.0,False,False,Adobe,2,199.7137,False,S002,0.0,False
+1081.3921,5.6,8.5815,1.5549,253132,416,,21.5141,3721,4,True,1512,,True,local,Arid,352.8523,-35,0.2638,37.2412,37.4986,wood,0.0,False,False,Adobe,5,178.8885,False,S003,0.0,False
+1944.1412,5.6443,4.2604,1.5519,255584,276,False,44.0882,1574,4,True,1156,,True,local,Tropical,351.9428,-30,0.1916,87.784,37.2424,wood,0.0,True,False,Adobe,6,50.2043,False,S004,0.0,False
+1991.9385,6.4176,7.5781,2.2048,371535,712,True,64.9977,2046,4,True,1572,True,False,local,Arid,321.802,-50,0.2658,85.5832,37.2952,concrete,24.0,True,False,Adobe,2,53.2782,False,S003,0.0,True
+2000.0,6.4023,2.7946,1.5187,313173,652,False,45.5014,228,4,False,1875,False,False,local,Tropical,352.9089,-70,0.1821,7.4523,42.5068,concrete,24.0,False,,Stone masonry,4,106.6913,False,S004,54.7,True
+1942.4943,6.3921,8.0006,2.0429,388373,1091,False,88.7792,4889,4,True,1298,True,True,local,Tropical,308.3181,-30,0.1424,9.8063,41.409,concrete,0.0,False,False,Adobe,6,59.0237,False,S004,100.0,True
+1552.3699,6.3296,2.0663,4.5174,366727,1770,False,30.6194,2309,4,True,1362,True,False,local,Temperate,335.2824,-70,0.2864,36.7951,17.7682,stone,24.0,False,,Adobe,1,140.6882,False,S004,0.0,True
+2000.0,5.5518,7.4215,1.9225,370496,232,False,58.6417,81,4,False,1831,True,False,imported,Tropical,364.718,-50,0.2456,92.6211,39.4175,stone,24.0,False,False,Adobe,5,77.3323,True,S003,51.64,True
+1997.6678,6.426,8.8441,3.0065,304939,947,True,98.5708,24,4,,1093,,True,imported,Tropical,316.6559,-70,0.3148,99.3772,22.9195,concrete,0.0,True,True,Stone masonry,4,181.2597,False,S002,52.06,True
+2000.0,6.3703,4.2411,1.7488,325088,1630,False,93.1064,78,4,True,1694,False,True,imported,Temperate,363.6561,-70,0.2199,18.8786,41.136,wood,0.0,True,False,Adobe,4,67.6458,False,S003,0.0,True
+2000.0,6.4189,3.4466,1.7648,304675,999,True,77.0226,822,4,True,1823,True,True,local,Arid,364.2082,-30,0.1787,51.9517,39.016,wood,0.0,False,False,Adobe,6,168.5614,False,S004,0.0,False
+1997.6571,5.5729,1.4262,2.1548,324435,127,False,89.3557,1860,4,True,1548,True,False,imported,Temperate,361.924,-45,0.1929,3.0937,33.2132,adobe,24.0,True,True,Stone masonry,3,161.9996,False,S003,0.0,False
+1999.4704,6.3991,10.0,1.6664,366976,1908,False,87.4683,1611,4,False,1471,True,False,imported,Temperate,364.7163,-55,0.2287,85.5094,45.1961,concrete,24.0,False,True,Wood,1,67.3879,False,S003,0.0,True
+2000.0,5.2507,3.0341,2.4601,314822,604,True,68.4853,398,3,False,1120,True,False,imported,Temperate,355.3931,-55,0.2876,5.452,26.6473,adobe,24.0,False,False,Adobe,1,171.7903,False,S004,0.0,True
+858.5592,5.3012,7.4179,1.8548,366155,636,True,16.2809,1051,3,True,1505,False,True,local,Arid,350.9497,-65,0.1377,49.5461,43.5731,concrete,0.0,False,True,Stone masonry,5,123.1486,False,S004,0.0,True
+1986.2396,5.2841,1.452,3.0213,329325,1095,False,88.8447,1133,3,True,1902,False,False,imported,Tropical,354.3709,-80,0.251,24.0057,23.9812,concrete,24.0,False,False,Adobe,2,163.7431,False,S004,72.92,True
+1970.0528,6.4267,7.5171,1.6376,266348,980,True,82.3024,1387,4,False,1555,True,False,imported,Arid,328.2688,-40,0.3286,93.2414,34.3122,stone,24.0,True,True,Stone masonry,7,185.7108,False,S004,0.0,False
+780.1097,6.4373,7.2244,1.5528,351052,1057,False,16.7612,2477,4,False,1158,False,True,local,Arid,340.0819,-60,0.272,45.3695,46.452,wood,0.0,False,True,Stone masonry,6,102.0369,False,S003,0.0,False
+918.4241,5.2568,8.7008,3.4313,389561,1427,True,10.671,673,3,True,1691,False,False,imported,Arid,325.8599,-50,0.1263,55.3953,24.9182,adobe,24.0,True,True,Stone masonry,8,200.0,True,S004,0.0,True
+598.4601,5.3076,4.1999,2.6717,351761,1212,False,11.029,1828,3,False,1603,True,False,local,Arid,353.1242,-45,0.2789,1.1645,26.9276,wood,24.0,False,False,Wood,3,35.1355,False,S002,0.0,True
+1962.4671,6.3722,6.9167,3.0257,304689,1450,False,87.5413,1054,4,True,1176,True,False,local,Tropical,333.1304,-45,0.2619,34.6099,22.4272,concrete,24.0,False,True,Wood,3,20.0,False,S001,0.0,False
+1206.3681,5.2811,9.3855,2.0872,288996,1520,True,23.9768,2777,3,True,1750,True,False,imported,Temperate,344.3598,-35,0.3002,46.5271,31.3287,brick,24.0,False,False,Adobe,5,123.4147,True,S002,0.0,True
+2000.0,6.4224,9.1657,1.9658,380374,1947,False,69.2807,105,4,True,1650,False,False,local,Arid,339.7413,-70,0.1818,1.8525,42.2186,wood,24.0,True,,Stone masonry,4,166.812,True,S001,0.0,True
+1964.6616,6.371,3.5041,1.676,328895,1246,True,73.4979,690,4,True,1673,True,False,local,Tropical,329.6151,-40,0.2545,5.9466,43.9723,adobe,24.0,True,True,Stone masonry,4,140.0329,False,S002,0.0,False
+1969.8681,6.4529,9.7015,1.8803,320331,1240,True,53.1004,3475,4,False,1550,True,False,imported,Arid,350.6749,-55,0.278,100.0,35.626,concrete,24.0,False,True,Stone masonry,1,107.9097,True,S002,0.0,True
+558.7253,6.4025,1.2928,2.6511,380119,653,True,4.5024,2492,4,False,1987,True,False,local,Temperate,356.0693,-40,0.1667,62.9295,29.7777,brick,24.0,True,False,Adobe,4,123.8181,False,S002,0.0,False
+2000.0,6.4144,5.4747,2.1787,302406,1292,False,45.1763,1837,4,True,1837,False,True,imported,Temperate,349.7476,-80,0.4202,63.01,30.9361,brick,0.0,True,True,Stone masonry,2,159.1313,False,S001,0.0,True
+1224.588,5.6115,9.4086,2.0578,238454,425,False,16.9459,414,4,False,1834,True,False,local,Tropical,314.1966,-45,0.2642,45.8338,23.9926,wood,24.0,True,False,Adobe,3,154.0882,True,S003,58.88,True
+1950.9772,5.3486,4.2891,1.8462,330955,608,True,98.1564,3117,3,,1457,False,True,imported,Temperate,342.9974,-80,0.1221,68.2905,37.2552,brick,0.0,False,True,Wood,2,36.7402,True,S003,0.0,False
+2000.0,6.3873,3.9458,2.1171,263816,1445,True,79.7057,2474,4,True,1697,False,True,imported,Temperate,339.9486,-85,0.2233,62.2477,28.6639,brick,0.0,True,False,Adobe,1,88.7978,True,S001,0.0,False
+638.7737,6.3703,3.2471,3.4064,351171,1489,False,12.0954,507,4,True,1090,True,False,imported,Arid,339.4206,-45,0.0917,82.6223,22.65,brick,24.0,False,False,Adobe,3,124.8224,True,S004,0.0,False
+1983.3711,6.3628,4.3931,4.0021,280450,1518,True,75.9079,1609,4,True,1807,False,False,local,Arid,337.9929,-75,0.2535,42.1612,15.9939,brick,24.0,True,True,Stone masonry,3,140.6469,True,S001,0.0,True
+1966.3125,6.4131,7.8282,2.0912,287361,1250,False,89.8795,2182,4,True,1800,False,True,imported,Arid,359.3215,-55,0.2327,49.5463,30.7922,wood,0.0,False,,Adobe,7,142.8352,False,S004,0.0,True
+1978.3537,6.4287,8.7964,1.8477,347013,1225,,57.7093,3548,4,,1913,,True,local,Temperate,355.5157,-45,0.1589,3.1296,41.8477,wood,0.0,True,True,Stone masonry,9,174.5908,True,S004,0.0,False
+1746.0047,6.4389,9.3458,2.3132,256499,808,False,35.631,1639,4,False,1627,True,False,imported,Tropical,335.7008,-30,0.178,51.6087,23.0072,stone,24.0,False,False,Adobe,9,156.3912,False,S001,81.84,True
+1983.7445,6.4518,8.275,1.5985,341692,1156,True,59.65,1730,4,True,1654,True,True,local,Tropical,350.5028,-60,0.3,14.6162,47.707,stone,0.0,True,False,Adobe,3,51.5559,False,S003,0.0,False
+1975.2218,4.7,7.5829,2.0403,376443,194,False,79.3104,1809,3,False,1315,False,True,imported,Arid,337.4737,-65,0.1384,58.5589,37.5924,wood,0.0,False,True,Wood,5,54.9358,False,S002,0.0,False
+917.0413,6.4224,8.1297,1.6241,314218,679,True,10.9582,3828,4,True,1776,False,False,imported,Temperate,362.0777,-70,0.1727,35.3139,43.5709,brick,24.0,True,True,Wood,4,22.0095,False,S003,0.0,True
+1975.1432,6.5356,6.2744,2.3517,382150,251,True,35.6868,4480,5,True,1812,True,False,imported,Temperate,356.6946,-20,0.0672,49.9902,35.8807,brick,24.0,True,False,Adobe,8,73.5945,False,S002,0.0,True
+1967.5798,5.2936,6.6933,1.1413,268103,1163,True,93.5433,2984,3,False,1647,True,False,imported,Arid,364.5956,-30,0.2659,18.4245,49.2501,wood,24.0,False,False,Adobe,6,200.0,False,S001,0.0,False
+1930.6654,6.3946,6.8631,2.0107,366619,592,True,46.7596,2090,4,False,1708,False,False,imported,Tropical,355.677,-50,0.2215,4.8127,37.9194,wood,24.0,True,True,,8,82.737,True,S003,0.0,False
+1984.1217,5.3088,5.4053,1.7407,331478,577,False,80.3051,161,3,True,1442,True,True,imported,Arid,365.0,-15,0.2829,16.9832,41.8706,brick,0.0,True,True,Wood,9,49.6626,True,S002,0.0,False
+378.5608,5.6008,8.7074,2.0585,358015,100,True,8.1408,5000,4,True,1057,False,True,imported,Temperate,364.6195,-55,0.3421,23.5427,38.5143,concrete,0.0,False,True,Stone masonry,7,166.0624,False,S001,0.0,False
+2000.0,6.3986,9.7211,1.6896,334790,1178,True,49.1745,3785,4,True,1137,True,True,local,Arid,337.8211,-45,0.175,53.8967,44.3171,concrete,0.0,True,True,Stone masonry,3,112.0583,True,S001,0.0,True
+840.9354,6.4073,5.9584,1.2892,362583,1810,False,16.7417,317,4,True,1402,True,True,local,Tropical,310.776,-25,0.2901,82.1375,61.6187,adobe,0.0,False,True,Stone masonry,7,113.9076,True,S001,0.0,False
+1967.0133,7.5,4.0835,1.841,423338,1432,,62.2293,2591,5,False,1420,False,False,imported,Arid,346.2684,-70,0.1451,80.8386,47.211,adobe,24.0,True,False,,4,47.461,False,S001,0.0,True
+2000.0,6.3229,4.621,1.7947,341395,694,,97.9932,4364,4,False,1240,True,False,local,Tropical,338.0977,-15,0.312,90.2279,39.1143,brick,24.0,False,False,Adobe,9,161.5337,False,S003,100.0,True
+2000.0,6.4255,2.3148,2.6998,319327,914,True,44.8445,3155,4,False,1251,True,True,local,Temperate,365.0,-25,0.2745,71.0474,24.7376,concrete,0.0,False,False,Adobe,7,200.0,False,S004,0.0,True
+1210.7596,6.3912,1.4108,1.6287,289648,1792,True,16.5582,2480,4,False,1494,False,True,imported,Arid,329.8619,-70,0.1859,47.7112,37.3599,wood,0.0,True,False,,4,103.268,False,S002,0.0,False
+1976.0441,6.4185,8.7544,1.8397,246346,552,True,52.858,3551,4,False,1140,False,False,imported,Temperate,355.4435,-85,0.367,43.737,28.3683,concrete,24.0,True,False,,1,58.0767,True,S004,0.0,True
+2000.0,6.3942,3.2844,2.0289,361285,1309,True,75.777,172,4,False,1560,False,True,local,Arid,358.9445,-75,0.2956,81.2798,37.0525,concrete,0.0,True,False,Wood,3,39.5582,False,S003,0.0,False
+2000.0,6.3729,9.5759,1.9918,348535,815,True,44.1857,827,4,True,1670,False,True,local,Arid,350.6956,-70,0.2928,4.8673,38.9742,stone,0.0,False,True,Wood,7,60.9749,False,S003,0.0,True
+256.9504,6.3884,9.3559,2.2466,304021,1549,False,5.2559,454,4,False,1649,True,True,imported,Arid,356.4567,-40,0.2292,25.4834,27.9194,brick,0.0,False,False,Adobe,4,199.1987,True,S004,0.0,True
+2000.0,5.5957,7.8753,3.0889,307614,495,True,93.3222,3268,4,False,1920,True,True,local,Tropical,363.8804,-45,0.2251,46.9154,20.785,brick,0.0,True,True,Stone masonry,3,194.5616,True,S001,100.0,True
+1414.0612,5.5737,5.2782,1.6401,330343,146,,28.9762,4321,4,True,1167,True,False,imported,Temperate,355.1241,-55,0.1903,31.8916,44.9665,concrete,24.0,False,True,Wood,1,74.3637,True,S003,0.0,False
+2000.0,6.3744,4.8958,2.2229,343247,1772,False,92.5142,4933,4,True,1718,True,True,local,Temperate,359.0556,-30,0.3137,12.8499,33.9966,wood,0.0,False,True,Wood,6,64.3378,False,S003,0.0,False
+2000.0,5.292,3.0367,3.1426,354809,1460,,69.4518,4215,3,True,1707,True,True,local,Tropical,365.0,-40,0.2081,61.0101,24.9957,wood,0.0,False,True,,4,109.7523,False,S004,100.0,True
+1994.9021,5.3295,9.5893,2.8368,368611,738,False,92.0408,3210,3,False,1621,False,True,imported,Arid,351.9954,-70,0.269,30.3202,26.5482,adobe,0.0,True,False,Adobe,4,63.658,True,S004,0.0,True
+2000.0,5.6049,2.8414,1.8931,280899,378,False,73.6468,952,4,True,1580,False,False,imported,Temperate,361.971,-90,0.1818,80.8643,33.2048,stone,24.0,True,True,Stone masonry,2,131.3256,False,S003,0.0,True
+2000.0,6.3766,4.8513,2.1739,292597,758,False,62.2273,162,4,False,1028,True,True,local,Tropical,360.7967,-20,0.1912,97.5515,27.8021,adobe,0.0,False,False,Adobe,8,76.9686,False,S003,0.0,False
+2000.0,5.5545,2.1784,3.2849,367965,425,False,96.9227,5000,4,False,1495,False,True,imported,Tropical,345.6349,-85,0.2383,40.9776,22.9148,concrete,0.0,True,,Adobe,1,67.3796,True,S004,0.0,False
+1991.2053,6.3734,8.3986,2.1399,379653,931,False,40.528,197,4,False,1787,False,True,local,Tropical,353.9747,-65,0.2173,61.6039,36.3805,stone,0.0,False,False,Wood,8,31.8942,False,S003,56.28,True
+2000.0,5.2941,8.2152,2.6771,307907,1168,True,55.5088,2318,3,False,1419,True,True,imported,Temperate,352.2407,-50,0.2565,76.1277,23.9703,stone,0.0,True,True,Stone masonry,5,153.1585,False,S002,0.0,False
+2000.0,4.7,6.7109,1.9228,297593,224,True,61.7083,3194,3,True,1237,,True,imported,Arid,337.9947,-85,0.2713,35.3259,34.8072,concrete,0.0,False,True,Stone masonry,1,160.5401,False,S002,0.0,False
+2000.0,6.4252,2.319,2.2996,374162,556,True,36.5111,816,4,,1532,True,True,imported,Arid,333.4226,-35,0.297,29.3309,33.8113,wood,0.0,True,False,Adobe,5,51.9037,True,S001,0.0,False
+863.9815,5.5776,3.9231,1.8139,316333,343,False,9.6672,2862,4,False,1060,True,False,imported,Arid,355.62,-55,0.1586,22.647,35.8042,adobe,24.0,True,True,Wood,1,23.0373,True,S003,0.0,False
+1833.749,6.3843,2.8322,1.8403,380108,1724,False,29.0641,3247,4,,1912,True,False,imported,Arid,334.7586,-20,0.246,69.1609,45.0699,concrete,24.0,True,False,Adobe,8,124.3924,False,S002,0.0,False
+580.342,6.3795,3.717,1.7408,403373,741,False,11.1023,4435,4,False,1402,True,False,local,Tropical,351.17,-25,0.329,20.602,47.4458,concrete,24.0,False,True,Stone masonry,7,168.97,True,S003,100.0,True
+1428.0788,5.3079,4.2912,2.3123,339397,1132,True,28.8719,1853,3,True,1586,True,True,imported,Temperate,318.9871,-25,0.3376,43.8694,32.6381,concrete,0.0,False,False,Adobe,7,181.0228,True,S003,0.0,True
+1319.3974,6.4386,2.296,2.1524,350313,1773,False,25.8915,916,4,False,1161,False,False,local,Tropical,333.7989,-85,0.1806,31.6212,33.4433,wood,24.0,False,False,Wood,1,42.7084,False,S001,0.0,False
+1974.9197,6.4089,7.5058,2.1746,400959,1514,False,82.9044,3541,4,False,1080,True,True,local,Arid,361.0364,-40,0.2216,63.7336,37.7603,brick,0.0,False,False,Adobe,4,118.7318,True,S004,0.0,True
+1966.0869,5.5682,6.3547,2.4524,369193,472,True,100.0,852,4,True,1485,False,False,local,Temperate,348.2818,-60,0.2758,9.0836,33.2404,brick,24.0,True,False,Wood,6,44.9448,True,S004,0.0,True
+1895.8855,6.4399,1.4088,1.6659,341629,1279,False,37.6762,2090,4,True,1379,False,False,imported,Temperate,344.692,-50,0.3094,14.0091,45.1681,wood,24.0,False,False,Adobe,8,122.4519,False,S002,0.0,False
+2000.0,5.5499,9.5817,1.5536,285120,473,True,89.907,4960,4,True,1317,False,True,local,Temperate,363.1365,-45,0.1983,79.2429,41.647,wood,0.0,True,True,Wood,9,77.2559,True,S003,0.0,True
+1974.9477,6.4055,9.4794,3.0107,374141,1207,True,68.4359,0,4,False,1804,False,False,local,Tropical,325.6017,-65,0.1965,49.5961,25.824,adobe,24.0,False,,Adobe,5,67.1596,False,S001,0.0,False
+2000.0,6.4118,8.4443,4.8781,376000,668,False,62.2039,4249,4,,1379,False,False,imported,Arid,363.1622,-45,0.2237,93.5112,16.8344,adobe,24.0,False,False,Adobe,9,170.3132,False,S001,0.0,False
+2000.0,6.3889,5.6214,1.6674,308585,1835,False,95.5967,2339,4,False,1777,True,True,local,Temperate,344.2802,-45,0.2621,19.8784,38.1648,wood,0.0,True,True,Stone masonry,3,159.446,False,S002,0.0,True
+1957.7862,6.4217,1.6391,2.3666,340342,1343,True,62.2901,3541,4,False,1492,True,True,local,Tropical,328.7972,-40,0.2215,59.5108,29.9954,concrete,0.0,True,True,Wood,4,48.0211,False,S002,0.0,False
+100.0,6.3658,5.1305,2.2701,311017,818,False,0.0,4605,4,False,1576,False,True,imported,Tropical,360.3891,-75,0.2713,56.504,28.2467,adobe,0.0,False,False,Wood,3,25.5738,False,S001,100.0,True
+421.5253,6.3714,10.0,1.8049,284416,818,True,8.435,2460,4,True,1150,True,False,imported,Tropical,340.5153,-45,0.2198,65.7263,35.9043,concrete,24.0,False,False,Adobe,3,73.7485,False,S002,0.0,False
+1971.4882,6.4147,1.8451,2.2455,353707,1600,,62.6777,4758,4,False,1007,True,True,imported,Temperate,344.4017,-45,0.0961,79.5409,32.8044,stone,0.0,True,False,Adobe,6,145.0852,False,S001,0.0,True
+2000.0,5.2908,9.5157,1.6927,291608,967,False,41.7795,1030,3,False,1805,False,True,imported,Temperate,351.0875,-40,0.2301,90.0886,35.3932,adobe,0.0,True,,Adobe,10,63.7741,False,S002,0.0,True
+1506.4487,6.4037,9.2547,1.6597,295194,803,True,22.7843,4367,4,,1190,False,False,imported,Temperate,335.4774,-55,0.3135,62.4927,37.3308,adobe,24.0,True,False,Adobe,7,79.1073,True,S001,0.0,True
+1996.6335,5.2763,7.851,2.1231,242524,1885,True,89.1616,3892,3,True,1691,False,True,imported,Arid,337.8383,-75,0.2025,22.7648,26.4218,adobe,0.0,True,True,Stone masonry,3,189.1499,True,S002,0.0,True
+2000.0,6.4306,3.1824,2.8963,375293,1610,True,83.1376,98,4,False,1275,,True,local,Temperate,348.1868,-80,0.2928,73.4904,26.9236,adobe,0.0,False,False,Adobe,2,74.4388,True,S002,0.0,False
+1984.9442,6.4001,2.6249,1.3601,336762,1557,True,61.6954,1807,4,,1577,True,True,imported,Temperate,337.5149,-50,0.1597,42.2255,51.6673,adobe,0.0,False,False,Adobe,2,121.9168,True,S003,0.0,True
+1977.5845,5.6383,6.8693,1.5835,311931,219,False,93.2357,3081,4,False,1085,True,False,imported,Temperate,337.9293,-40,0.2593,44.9482,40.4574,wood,24.0,True,False,Adobe,4,92.5839,False,S004,0.0,True
+2000.0,6.4098,7.5816,1.5295,289869,1838,True,47.0213,601,4,,1761,True,False,imported,Temperate,353.9028,-15,0.1276,29.9433,43.0811,wood,24.0,True,,Stone masonry,9,134.2791,False,S004,0.0,True
+2000.0,5.2644,1.1089,1.3138,346341,789,False,34.4092,352,3,False,2000,False,False,imported,Arid,343.7131,-60,0.2415,54.0044,53.9329,wood,24.0,True,True,Stone masonry,6,149.9221,True,S003,0.0,False
+912.9902,5.5815,4.0291,2.7189,306144,477,False,11.4244,3429,4,True,1388,True,True,imported,Arid,353.3874,-25,0.2929,91.7411,24.9768,brick,0.0,True,True,Stone masonry,7,193.1823,False,S003,0.0,False
+142.0333,6.4187,8.6448,1.9334,334828,1395,True,0.4427,1185,4,True,1671,True,True,local,Arid,363.4805,-40,0.3011,34.1246,38.7322,brick,0.0,False,True,Wood,4,78.2379,True,S002,0.0,True
+1957.9464,6.3983,2.4384,1.8948,284789,1170,True,97.3942,4545,4,False,1153,True,True,local,Tropical,355.4584,-25,0.3486,9.6161,31.6017,brick,0.0,True,False,Adobe,7,104.645,False,S004,100.0,True
+457.6764,6.3762,2.3097,2.801,334297,1662,False,8.516,2690,4,True,1475,True,True,local,Arid,343.3254,-15,0.1783,57.2387,26.3405,adobe,0.0,False,True,Stone masonry,9,125.5796,False,S002,0.0,False
+2000.0,6.4036,7.4839,1.9673,402804,742,False,39.3422,578,4,True,1480,True,True,imported,Temperate,348.3818,-20,0.1101,59.7683,44.4665,adobe,0.0,True,False,Adobe,8,116.5864,False,S001,0.0,True
+638.7038,6.3804,5.1572,1.3631,318443,1425,False,13.2284,4356,4,False,1398,,False,imported,Tropical,350.5151,-85,0.2274,92.8613,48.1316,adobe,24.0,False,,Stone masonry,1,118.4575,True,S002,100.0,True
+1554.3802,6.3933,3.8912,2.3802,311952,644,True,31.2263,84,4,False,1674,False,False,local,Temperate,364.0955,-75,0.2152,7.2354,27.4392,concrete,24.0,False,,Stone masonry,3,125.3542,True,S003,0.0,False
+1978.4963,5.3086,2.5823,4.6627,356604,910,,84.7659,2127,3,True,1897,True,False,local,Temperate,341.9914,-35,0.1457,66.3699,16.9239,stone,24.0,False,False,Adobe,8,175.72,True,S003,0.0,False
+1970.3115,6.4012,5.4504,1.094,251465,1675,True,56.0729,4708,4,False,1994,True,True,imported,Arid,347.5557,-15,0.2503,52.6776,48.6394,concrete,0.0,False,False,Adobe,9,108.169,True,S001,0.0,True
+1432.8097,5.605,2.5048,1.9403,277514,406,,29.0448,804,4,True,2000,False,True,local,Arid,334.1195,-75,0.2274,70.3497,32.0482,adobe,0.0,False,True,Wood,3,98.324,True,S004,0.0,True
+2000.0,6.4127,5.0704,1.8025,309829,1044,,41.4755,2736,4,True,1967,True,False,imported,Temperate,363.2965,-30,0.1302,6.873,38.2165,brick,24.0,True,True,Wood,6,88.3543,True,S002,0.0,False
+1987.5356,5.2801,5.0803,1.7662,238136,1312,True,91.45,4968,3,True,1925,False,True,local,Arid,344.2435,-85,0.2801,46.8397,31.2628,adobe,0.0,True,True,Wood,1,55.4843,False,S002,0.0,True
+2000.0,5.5873,3.9787,4.1534,343421,414,False,38.1615,3494,4,,1158,False,True,imported,Arid,354.0055,-75,0.2496,58.5104,18.1451,wood,0.0,True,True,,3,92.9913,True,S004,0.0,False
+2000.0,5.2963,8.0944,2.1985,333466,1468,True,66.4103,4864,3,False,1122,True,True,imported,Tropical,352.3419,-60,0.0354,39.4757,31.5145,stone,0.0,True,,Stone masonry,3,124.8021,True,S003,0.0,False
+457.9539,6.4194,6.7481,2.8943,377261,1641,False,2.0403,4115,4,True,1477,False,True,local,Tropical,339.5711,-60,0.1327,71.4434,28.4605,wood,0.0,True,True,Stone masonry,6,149.6449,False,S002,0.0,False
+2000.0,6.4229,3.665,2.5307,376411,1621,False,81.3883,5000,4,True,1922,False,True,local,Arid,348.0261,-70,0.1612,5.9649,32.4815,concrete,0.0,False,True,Stone masonry,4,160.0451,True,S003,0.0,False
+1991.1085,5.2838,1.8492,1.8022,302413,1710,False,71.8593,2981,3,False,1376,False,False,local,Arid,361.9672,-75,0.2406,74.0939,34.443,wood,24.0,True,True,Wood,3,72.5343,True,S003,0.0,True
+1248.8063,5.2554,7.6175,1.8393,343366,600,False,17.7101,2203,3,True,1933,True,True,local,Temperate,338.2043,-55,0.2093,45.7292,40.9194,adobe,0.0,True,False,Adobe,1,159.7488,True,S002,0.0,False
+2000.0,6.3655,1.6924,1.6854,301264,705,True,94.267,867,4,False,1117,False,False,local,Temperate,364.7033,-55,0.281,91.6503,37.4822,wood,24.0,True,True,Wood,7,27.3534,True,S004,0.0,True
+1964.5782,6.3891,7.878,1.7233,320978,1776,False,56.482,4695,4,True,1251,True,True,local,Tropical,309.5863,-25,0.3151,98.5286,41.2662,adobe,0.0,False,True,Wood,7,29.7362,False,S004,0.0,False
+1982.0374,5.6295,7.1228,2.1936,349737,424,False,84.4537,1190,4,False,1186,False,True,local,Tropical,342.096,-50,0.2076,0.0,32.6523,wood,0.0,False,,Stone masonry,8,194.2031,True,S004,74.48,True
+1967.4199,5.6461,8.2957,2.7906,341979,341,False,39.2299,3359,4,True,1285,,True,imported,Temperate,364.2552,-45,0.2226,56.372,26.9034,concrete,0.0,False,False,Wood,9,37.3478,False,S003,0.0,False
+1988.9612,4.7048,6.9517,3.1105,468485,354,True,55.0652,170,3,True,1731,True,True,imported,Tropical,344.4516,-40,0.3578,40.5167,32.1495,stone,0.0,False,,Stone masonry,7,107.2938,False,S001,0.0,False
+1551.9784,6.4222,6.3985,3.1182,340921,1354,True,23.1651,1740,4,False,1704,False,True,imported,Tropical,343.5979,-45,0.214,35.6174,22.8032,concrete,0.0,True,False,Adobe,9,186.3826,True,S002,0.0,False
+439.7841,5.2948,5.1008,2.4787,306293,773,True,8.8831,800,3,,1235,True,False,local,Tropical,321.8076,-45,0.2618,97.2204,27.7764,wood,24.0,False,,Wood,3,73.2167,False,S003,0.0,False
+308.2957,6.3773,5.6442,1.3143,268972,1269,False,7.2524,2041,4,False,1281,True,True,imported,Tropical,363.3366,-30,0.1516,77.8641,42.3915,brick,0.0,False,False,Adobe,6,143.3232,True,S001,89.9,True
+2000.0,6.374,7.4093,1.3412,307688,1700,False,53.5416,484,4,True,1916,True,True,imported,Arid,346.5036,-25,0.3273,39.7042,51.0406,wood,0.0,False,True,Stone masonry,7,200.0,False,S001,0.0,True
+2000.0,5.268,9.8893,2.1053,432951,1710,True,33.8099,2961,3,True,1777,False,True,local,Tropical,307.5597,-85,0.272,1.5106,44.735,adobe,0.0,True,False,Adobe,1,84.6949,False,S004,100.0,True
+1990.0482,5.2779,8.211,1.7775,353173,1363,False,83.2806,4892,3,True,1263,True,True,imported,Tropical,336.8046,-40,0.2315,30.4434,43.4464,adobe,0.0,False,True,Wood,4,33.8077,True,S004,0.0,False
+1981.3854,6.3373,7.4587,1.6034,279359,1490,False,79.0795,2801,4,True,1067,False,False,local,Tropical,339.6239,-70,0.2161,87.281,39.1627,concrete,24.0,False,False,Adobe,4,76.7277,True,S002,100.0,True
+2000.0,5.3028,1.3012,2.018,370974,2000,False,33.9003,1325,3,True,1458,False,False,imported,Temperate,329.4616,-70,0.3546,0.0,40.0315,wood,24.0,True,True,Stone masonry,4,121.8209,True,S003,0.0,False
+1812.3248,6.4044,3.3638,2.1923,328707,1709,True,36.7331,4696,4,True,1853,False,False,local,Tropical,345.204,-55,0.1922,46.3794,33.6004,adobe,24.0,False,True,Stone masonry,7,149.3911,True,S001,100.0,True
+2000.0,6.4186,7.1121,1.3978,314955,1450,False,65.5612,1039,4,False,1874,True,True,local,Temperate,336.0546,-55,0.3299,44.3129,46.438,wood,0.0,False,True,Stone masonry,1,122.382,True,S004,0.0,False
+668.5625,6.4303,7.0347,2.2595,338459,662,False,12.7125,3353,4,True,1706,True,True,local,Arid,345.4175,-15,0.193,97.0594,33.0208,brick,0.0,False,False,Adobe,9,163.6049,False,S003,0.0,False
+2000.0,6.3923,8.0835,3.0533,356512,1540,False,54.3358,1520,4,False,1070,False,False,local,Arid,345.1223,-70,0.4179,50.2976,23.9811,concrete,24.0,True,,Adobe,4,108.445,True,S003,0.0,False
+2000.0,6.4322,9.1944,8.0944,363729,766,False,58.4159,4879,4,True,1172,True,True,local,Arid,349.7403,-25,0.2737,17.733,9.842,wood,0.0,True,True,Wood,7,20.0,True,S003,0.0,True
+1997.7371,5.5756,9.3193,2.6819,331956,193,False,100.0,4168,4,,1964,False,False,local,Temperate,364.7792,-75,0.1989,7.2568,25.3816,stone,24.0,False,True,Wood,6,66.4353,False,S003,0.0,False
+1533.5219,6.3912,8.3752,2.7905,372328,1702,True,31.038,2888,4,True,1251,True,True,imported,Arid,365.0,-45,0.3171,72.1525,29.5231,adobe,0.0,False,True,Wood,3,97.5297,False,S004,0.0,True
+1967.6254,6.3853,2.855,1.6139,250059,760,False,47.8859,57,4,True,1214,False,True,local,Tropical,356.4523,-45,0.1441,36.9749,35.2768,wood,0.0,False,True,Stone masonry,9,141.0471,True,S001,0.0,False
+1788.902,6.387,1.4608,2.6315,368442,1959,False,35.8779,3818,4,True,1829,False,True,imported,Arid,354.8976,-55,0.1887,99.8143,30.6318,brick,0.0,False,False,,7,182.2608,True,S004,0.0,True
+2000.0,5.274,5.236,1.2154,273237,556,False,86.3972,186,3,True,1712,True,True,imported,Temperate,327.664,-15,0.311,66.4691,50.3838,adobe,0.0,True,True,,9,83.067,False,S003,0.0,False
+1345.5108,6.4055,6.742,2.0163,344394,1707,False,27.4215,1702,4,True,1392,,False,imported,Temperate,332.2944,-60,0.1301,95.6066,37.5931,adobe,24.0,False,True,Stone masonry,6,123.169,True,S002,0.0,False
+736.7852,5.3211,2.5384,4.994,410699,1490,True,8.1455,1194,3,False,1735,False,False,imported,Temperate,360.3946,-45,0.2934,61.626,16.9663,adobe,24.0,True,True,Stone masonry,9,172.4422,False,S004,0.0,False
+1989.5966,5.5963,5.4938,2.4425,432284,165,True,91.7453,725,4,False,1106,False,True,local,Tropical,346.373,-65,0.1428,52.43,36.4945,brick,0.0,True,True,,5,73.5783,True,S004,0.0,False
+1963.2994,6.3867,1.5889,1.915,336570,1313,False,45.3211,4722,4,False,1653,False,True,imported,Temperate,345.1061,-90,0.3062,90.7935,36.1537,stone,0.0,True,False,Wood,1,40.0005,True,S004,0.0,True
+1945.4418,6.3582,5.4424,2.1114,313932,786,True,54.2497,3557,4,,1005,False,False,imported,Temperate,336.8062,-80,0.1222,22.4956,33.4877,brick,24.0,True,True,,2,112.5491,False,S003,0.0,False
+714.0774,6.396,9.2566,4.1765,364922,1541,True,14.7527,441,4,False,1157,False,False,local,Arid,364.1341,-75,0.4119,58.125,18.1742,stone,24.0,False,True,Stone masonry,6,167.0778,False,S003,0.0,False
+1960.097,5.3025,1.3594,3.0476,335183,803,True,68.7126,379,3,False,1304,True,True,imported,Arid,363.8165,-60,0.2324,78.6547,22.8464,stone,0.0,True,False,Wood,3,25.2098,False,S003,0.0,False
+449.3024,5.6425,5.0506,1.7439,364536,479,False,2.3526,1663,4,True,1859,False,False,imported,Tropical,356.142,-80,0.2925,39.7559,45.6385,stone,24.0,True,True,Stone masonry,5,197.1412,True,S002,84.64,True
+1995.9253,5.5936,2.6066,3.0427,374887,121,False,38.3474,3244,4,False,1332,True,False,local,Arid,346.9766,-45,0.278,47.061,25.1936,concrete,24.0,True,False,Adobe,3,174.4685,True,S004,0.0,True
+951.1607,5.2797,8.4495,1.7289,324737,1184,True,12.5472,3041,3,False,1834,,True,local,Arid,352.4045,-55,0.1465,96.2914,39.0635,adobe,0.0,True,True,Wood,1,97.7771,True,S003,0.0,False
+874.1977,5.3881,7.6606,4.0276,292521,629,False,11.4074,2966,3,,1862,False,False,imported,Arid,364.2456,-60,0.3149,73.0938,14.9205,stone,24.0,True,True,Stone masonry,9,149.2947,True,S003,0.0,False
+2000.0,6.3984,4.0454,3.2093,296455,1912,True,62.8884,1401,4,False,1559,True,True,local,Arid,365.0,-45,0.3511,22.4559,19.3843,wood,0.0,True,True,Stone masonry,3,196.4668,False,S001,0.0,True
+1993.4015,6.404,7.1043,2.2173,285510,1729,True,85.1489,4013,4,False,1260,True,True,imported,Temperate,365.0,-30,0.2601,19.0633,27.0699,stone,0.0,True,False,Adobe,9,138.8434,True,S002,0.0,False
+2000.0,6.3663,6.3317,2.3918,341215,1425,True,55.0378,597,4,True,1913,True,False,imported,Arid,342.5371,-35,0.2115,97.825,31.8435,wood,24.0,False,True,Stone masonry,5,163.5175,True,S004,0.0,False
+923.0473,5.3293,5.3445,1.6832,298793,2000,False,19.6646,2660,3,True,1150,True,True,local,Tropical,325.3726,-50,0.1905,0.0,39.4188,brick,0.0,False,False,Adobe,2,173.1731,False,S001,100.0,True
+1198.9994,5.3508,1.9153,2.3686,394442,1024,False,17.9534,3314,3,False,1089,False,False,local,Tropical,365.0,-75,0.1937,38.4938,33.9777,stone,24.0,True,False,,6,110.4453,False,S002,0.0,False
+1605.8386,6.4031,6.2686,3.0535,391513,1947,,32.3083,5000,4,False,1043,True,False,local,Temperate,364.1578,-15,0.1841,0.5476,26.2722,wood,24.0,False,False,Adobe,9,114.2608,True,S001,0.0,True
+811.0203,6.3974,3.9037,4.3115,353413,1864,True,15.7414,3056,4,False,1212,True,True,imported,Arid,334.0291,-25,0.2658,85.9803,17.0712,adobe,0.0,False,False,Adobe,7,198.3318,True,S003,0.0,True
+622.544,5.6397,5.5593,1.7795,243021,344,False,12.5679,633,4,True,1406,True,True,imported,Tropical,331.6683,-40,0.2235,67.5339,31.0677,wood,0.0,False,False,Adobe,4,96.6458,True,S001,64.18,True
+2000.0,6.3672,7.66,2.4804,393607,1859,True,55.3848,3832,4,True,1280,True,True,imported,Arid,338.2811,-50,0.2708,8.4992,34.9301,stone,0.0,True,False,Adobe,5,133.9318,False,S004,0.0,False
+1961.161,6.4339,8.1707,2.1825,342447,227,,90.1168,1799,5,True,1231,True,False,imported,Temperate,331.3987,-55,0.2612,88.137,35.0238,stone,24.0,False,True,Wood,4,94.5707,True,S001,0.0,True
+1129.4562,6.3948,8.2856,2.5919,367672,1395,False,23.3872,963,4,False,1779,True,True,imported,Tropical,314.2858,-15,0.2617,36.1753,29.1119,adobe,0.0,False,False,Adobe,9,69.2403,False,S001,0.0,False
+1995.5346,6.4379,4.5503,1.4436,323084,1889,False,78.247,4647,4,False,1942,True,True,imported,Arid,344.032,-50,0.3093,34.1043,46.0896,brick,0.0,True,True,Stone masonry,2,105.6358,True,S002,0.0,False
+1601.6365,6.3848,2.7414,1.5287,347316,645,True,32.1422,497,4,False,1147,True,True,local,Temperate,363.478,-55,0.2766,37.0007,47.3509,stone,0.0,False,True,Stone masonry,4,146.8027,False,S003,0.0,True
+1940.7894,6.3996,1.8997,1.4058,239044,1261,True,76.1168,400,4,True,1871,False,False,imported,Arid,317.8132,-75,0.2113,0.1856,39.6432,brick,24.0,False,,Adobe,3,59.6166,True,S004,0.0,True
+1463.8225,7.5,3.7142,1.8548,342125,991,False,28.6528,2032,5,False,1678,False,False,imported,Temperate,352.3918,-70,0.1965,71.6979,38.1038,brick,24.0,False,,Adobe,4,130.9764,False,S004,0.0,True
+1967.6345,6.3892,1.7522,2.4443,302917,1616,False,51.7173,1604,4,,1597,False,True,imported,Arid,365.0,-70,0.2695,89.4847,27.6165,brick,0.0,False,True,Stone masonry,4,100.7277,True,S004,0.0,True
+1836.3949,5.5676,3.8781,1.93,261856,439,False,37.3755,2758,4,False,1877,,True,imported,Tropical,344.9415,-45,0.2438,48.6619,28.0056,wood,0.0,False,True,Stone masonry,3,156.5996,True,S004,0.0,False
+1962.9845,6.404,8.9388,1.4978,270973,1736,,98.5723,3638,4,True,1273,True,True,imported,Temperate,323.7192,-70,0.2413,12.7405,40.8022,stone,0.0,True,True,Stone masonry,1,176.8192,False,S003,0.0,True
+129.5407,5.5979,8.6205,2.0399,294820,151,False,0.0,1882,4,True,1941,False,False,local,Tropical,330.5537,-85,0.2542,89.927,32.1805,wood,24.0,False,False,,1,77.6296,True,S002,87.5,True
+2000.0,6.3692,8.9793,2.733,409292,682,True,76.6201,4325,4,True,1206,False,False,imported,Tropical,364.4208,-45,0.3127,59.6867,32.8498,adobe,24.0,False,True,Wood,9,23.1612,False,S004,100.0,True
+2000.0,6.3901,3.2067,1.7849,331371,1394,False,65.8832,1679,4,False,1046,True,True,imported,Tropical,354.5648,-15,0.1465,28.3008,38.2066,wood,0.0,True,True,Stone masonry,9,140.8112,False,S002,84.48,True
+2000.0,6.4804,5.1536,1.9899,378726,887,,57.6126,1513,4,False,1727,True,True,imported,Temperate,365.0,-35,0.162,87.9866,39.0291,adobe,0.0,True,False,Adobe,5,56.1084,False,S001,0.0,False
+1415.1126,5.2728,6.4832,1.6315,333408,767,False,27.9188,1105,3,True,1483,True,True,local,Tropical,337.3071,-45,0.245,32.5621,44.9108,wood,0.0,False,True,Stone masonry,3,175.4967,False,S002,70.44,True
+844.8228,5.6316,4.9021,1.1232,234229,103,True,16.4531,399,4,False,1433,False,True,imported,Tropical,350.3617,-65,0.1761,69.3406,44.0949,stone,0.0,False,True,Wood,8,27.6971,False,S003,57.74,True
+181.0856,5.2869,8.6195,2.0491,493765,1595,True,3.9196,4570,3,True,1739,False,False,local,Arid,320.0985,-55,0.2341,91.1529,48.8021,adobe,24.0,False,False,Adobe,7,184.0745,True,S001,0.0,False
+2000.0,6.4404,9.2605,2.0675,291397,567,True,85.4921,1906,4,True,1174,True,False,imported,Arid,316.8301,-50,0.3567,57.6301,32.0189,adobe,24.0,True,True,Wood,2,98.6583,True,S004,0.0,False
+2000.0,6.4321,6.4586,1.6039,312022,1834,False,35.6475,36,4,False,1677,,True,imported,Arid,345.017,-50,0.2154,67.5868,40.1057,brick,0.0,True,False,Adobe,2,148.2683,False,S001,0.0,False
+1988.3448,5.6246,4.1241,2.8046,331531,457,True,55.839,3820,4,,1949,True,False,local,Temperate,331.6254,-15,0.2706,79.4399,24.5972,adobe,24.0,False,True,Stone masonry,9,194.5429,False,S002,0.0,False
+1139.2076,5.5712,7.4806,0.9129,233815,356,False,16.4515,2862,4,,1041,True,False,imported,Arid,364.2603,-55,0.1197,79.7776,53.0674,stone,24.0,True,False,Adobe,4,127.0844,False,S001,0.0,True
+2000.0,6.386,7.1017,1.595,260728,1746,True,69.5912,502,4,False,1054,False,True,local,Tropical,298.3736,-55,0.262,100.0,34.5246,concrete,0.0,True,,,7,35.7302,False,S004,0.0,False
+121.8427,6.3761,4.0069,2.2403,274095,1975,False,1.1577,782,4,True,1604,True,False,imported,Temperate,341.6823,-45,0.3486,63.7293,27.5584,stone,24.0,False,False,Adobe,6,133.2985,False,S004,0.0,False
+1995.1788,6.4365,7.2641,1.6302,309404,1990,True,35.8848,2829,4,False,1022,False,True,local,Temperate,343.8014,-50,0.2332,78.0162,39.7511,brick,0.0,True,True,Wood,8,40.1545,False,S001,0.0,True
+2000.0,6.423,4.5191,2.571,388314,972,False,99.0173,1006,4,,1068,False,False,imported,Arid,323.8618,-75,0.2047,16.1793,32.8983,adobe,24.0,True,False,Adobe,3,80.3374,True,S003,0.0,True
+1996.2442,4.7122,1.8814,1.7679,297679,469,True,77.9038,3127,3,False,1613,False,False,local,Arid,346.1978,-90,0.2962,25.2811,35.0389,stone,24.0,False,True,Stone masonry,3,141.2241,True,S003,0.0,True
+647.912,5.5709,6.8117,2.3589,354683,378,False,7.0252,4264,4,False,1840,False,True,local,Tropical,364.1899,-50,0.0392,34.7152,30.7842,wood,0.0,True,False,Adobe,8,119.0412,True,S002,0.0,False
+1706.1686,6.3891,4.387,2.8335,308239,704,,34.1061,2998,4,True,1933,,False,local,Temperate,364.9216,-40,0.3035,60.6043,24.5522,stone,24.0,False,False,Adobe,7,83.3139,True,S003,0.0,True
+294.2677,6.3827,5.308,2.0507,429270,1484,True,5.5213,1408,4,False,1377,True,False,local,Tropical,361.5544,-25,0.3991,34.0443,43.2905,adobe,24.0,False,False,Adobe,7,66.5442,True,S001,0.0,False
+2000.0,5.3075,6.8659,1.9004,332838,1624,False,40.591,3729,3,False,1360,True,True,local,Arid,348.2456,-35,0.2132,71.5269,35.8641,concrete,0.0,True,False,Adobe,5,187.4641,False,S001,0.0,False
+620.9652,5.3451,4.6598,1.6237,319772,589,False,11.8538,3495,3,False,1060,False,False,imported,Temperate,364.0561,-65,0.2386,26.8896,40.3678,brick,24.0,False,False,Wood,5,24.0972,True,S001,0.0,True
+394.3668,6.4319,4.3824,1.8434,362576,886,,0.6951,1028,4,False,1309,True,True,local,Temperate,363.4843,-20,0.2709,0.4613,40.3786,brick,0.0,True,True,Wood,8,71.0771,False,S001,0.0,False
+1492.9182,6.3736,7.701,2.4932,389355,1062,False,29.3811,2255,4,True,1660,True,False,local,Temperate,361.2114,-25,0.2614,25.351,34.0084,brick,24.0,False,False,Adobe,7,105.5288,True,S001,0.0,False
+2000.0,6.399,3.4205,4.9819,302679,1682,True,96.7218,0,4,,1086,True,True,local,Temperate,365.0,-45,0.3382,29.3657,13.7408,concrete,0.0,False,True,Wood,3,24.2995,False,S003,0.0,True
+1986.3888,5.5754,1.6335,2.2,326697,454,,81.5413,3585,4,False,1508,False,False,imported,Arid,364.5622,-80,0.2669,41.4264,30.4636,stone,24.0,False,False,Adobe,5,75.3264,False,S003,0.0,True
+2000.0,5.6149,8.8727,3.074,392599,267,True,96.2078,760,4,True,1681,False,True,local,Arid,364.6398,-70,0.187,14.1381,28.0414,wood,0.0,False,True,,4,46.5371,False,S003,0.0,True
+2000.0,6.4319,7.8068,1.7385,331052,618,,58.6262,3956,4,False,1887,,False,imported,Tropical,364.1489,-15,0.2802,38.4937,39.7646,adobe,24.0,True,False,Adobe,9,84.4957,False,S001,100.0,True
+600.9241,6.3715,4.0572,3.3936,344218,752,True,4.5476,4880,4,False,1292,,False,local,Arid,360.9769,-55,0.346,63.0084,21.1468,adobe,24.0,True,True,Wood,7,69.5779,False,S001,0.0,True
+2000.0,6.3992,6.0541,2.9144,334363,1267,False,96.9423,662,4,True,1571,False,False,local,Tropical,321.7399,-85,0.274,14.171,25.3198,brick,24.0,False,True,,1,200.0,True,S002,60.52,True
+1975.518,5.3482,7.6454,3.7946,292213,1191,False,60.2563,58,3,True,1976,True,False,local,Temperate,349.338,-50,0.1919,29.5466,17.138,adobe,24.0,True,False,Adobe,2,164.7977,True,S004,0.0,True
+2000.0,4.7188,3.7739,1.5983,272557,462,False,71.0502,717,3,False,1564,False,False,imported,Tropical,363.1854,-50,0.2297,1.6606,34.9876,brick,24.0,True,False,,8,31.6692,False,S004,63.66,True
+1962.6858,6.4253,6.4503,3.062,338258,1776,True,55.8878,4872,4,False,1866,False,True,local,Arid,331.3526,-75,0.2775,30.86,23.0475,stone,0.0,False,False,Adobe,6,123.5667,True,S001,0.0,True
+1982.2218,6.4014,3.6502,4.4342,242353,1534,False,74.9227,3926,4,False,1064,False,False,imported,Tropical,349.4846,-50,0.1744,53.7845,11.3642,concrete,24.0,False,False,Adobe,8,163.8834,True,S003,0.0,False
+1932.1523,6.4182,9.8743,1.9048,334017,1416,False,80.8598,1327,4,False,1347,False,False,imported,Arid,364.6392,-60,0.1946,54.7221,36.0788,concrete,24.0,True,False,Adobe,6,119.8357,False,S001,0.0,True
+1960.3707,5.2941,9.437,2.9672,406557,1366,True,39.8728,810,3,True,1106,False,False,imported,Temperate,342.9467,-70,0.2604,37.4247,29.9611,brick,24.0,True,False,Adobe,4,84.2505,False,S003,0.0,True
+1972.6188,6.3924,3.4965,1.61,298769,693,True,64.7769,1444,4,True,1118,,False,imported,Temperate,355.0848,-80,0.1305,41.9898,42.0345,wood,24.0,False,True,Wood,2,58.7726,False,S001,0.0,False
+1972.6452,6.4069,1.5439,1.7552,275494,576,True,89.5479,2534,4,True,1299,,True,local,Tropical,344.361,-75,0.2487,90.9736,35.9043,stone,0.0,False,False,Adobe,6,183.1462,True,S001,99.9,True
+1945.9749,6.4152,8.4392,1.8065,324265,1559,,90.6657,1321,4,True,1097,True,False,local,Tropical,332.0893,-55,0.2139,47.4346,39.73,stone,24.0,False,False,Wood,4,42.7857,False,S001,0.0,False
+1495.8494,5.2711,4.3795,1.6759,331820,1279,False,29.6635,1163,3,True,1522,True,False,local,Tropical,325.4204,-55,0.158,90.8667,43.531,concrete,24.0,False,True,Stone masonry,1,188.9999,False,S001,0.0,False
+1985.759,6.3595,9.1593,2.3461,369262,1651,False,81.2035,4769,4,True,1819,False,False,imported,Arid,332.3868,-70,0.1466,81.9452,34.4285,brick,24.0,False,False,Adobe,4,57.8802,False,S002,0.0,True
+449.0671,6.3969,9.2908,1.459,332274,1872,False,0.5215,2188,4,True,1789,True,True,local,Temperate,365.0,-45,0.268,83.4704,50.2925,brick,0.0,True,False,Adobe,3,144.9522,False,S003,0.0,True
+812.2424,5.2545,3.7811,1.7527,334090,1179,True,16.7254,4944,3,False,1519,False,True,local,Temperate,350.9203,-65,0.3779,83.6224,39.6004,stone,0.0,False,True,Wood,8,58.8738,False,S001,0.0,True
+1957.5574,6.4043,6.5327,2.9122,350732,915,,98.9063,2472,4,True,1643,True,True,imported,Tropical,365.0,-55,0.3124,44.175,26.8071,concrete,0.0,False,False,Adobe,1,131.5972,False,S004,0.0,False
+1959.3791,5.3018,6.8943,4.6361,373685,594,False,70.0342,3339,3,False,1403,True,False,local,Tropical,315.3354,-40,0.1552,92.6657,16.4638,adobe,24.0,False,True,Wood,4,89.0848,True,S001,100.0,True
+1944.0644,6.4036,4.7165,2.0685,250486,673,False,30.8813,1924,4,True,1566,True,True,imported,Temperate,365.0,-30,0.2585,6.563,27.5644,stone,0.0,True,True,Wood,9,24.881,True,S004,0.0,True
+1243.9675,5.2469,1.2489,1.2481,319303,680,False,25.4925,379,3,False,1208,False,True,imported,Arid,343.7528,-60,0.1997,0.3819,52.4382,brick,0.0,False,False,Wood,6,42.6278,True,S004,0.0,False
+2000.0,6.4266,8.0591,2.7367,342768,527,False,81.9351,4553,4,True,1439,False,True,local,Tropical,346.0543,-65,0.2438,79.4186,27.5786,concrete,0.0,True,True,Wood,5,42.8002,True,S003,0.0,False
+2000.0,6.4373,5.3097,2.7967,333911,611,False,66.1273,635,4,False,1480,,False,imported,Temperate,359.4281,-80,0.2629,73.1562,24.565,wood,24.0,False,True,Wood,2,33.6335,False,S002,0.0,True
+2000.0,6.4002,6.8493,2.1694,328977,1106,False,75.1021,2055,4,True,1695,False,False,local,Arid,340.5134,-45,0.2409,42.3673,33.5184,adobe,24.0,True,True,Wood,9,87.9512,False,S001,0.0,False
+1973.4322,6.4027,4.8917,1.7698,245574,947,,71.7027,2375,4,True,1432,False,True,local,Temperate,337.994,-65,0.2675,28.136,32.227,brick,0.0,True,True,Stone masonry,5,100.4251,True,S003,0.0,True
+221.948,5.6299,2.958,1.5717,285506,364,True,4.5279,3543,4,True,1984,True,True,imported,Tropical,364.806,-55,0.3345,65.3554,41.216,concrete,0.0,False,True,Wood,1,76.7645,True,S001,100.0,True
+1347.721,6.4455,4.5039,1.5248,326307,964,False,27.1724,4175,4,True,1959,False,False,imported,Tropical,330.2015,-80,0.1598,41.7174,47.3379,brick,24.0,False,False,,2,153.0274,False,S004,0.0,False
+1992.2039,5.3246,5.219,1.7021,352080,1719,True,85.8323,1971,3,False,1345,,True,imported,Arid,349.9186,-15,0.3267,41.0592,42.8929,concrete,0.0,True,False,Adobe,9,56.9366,False,S001,0.0,True
+1986.1613,6.4318,9.3908,2.0267,354066,1425,False,60.2278,1235,4,True,1868,False,True,local,Tropical,340.9837,-75,0.1797,11.4056,38.3553,concrete,0.0,False,True,,3,82.3415,True,S003,71.58,True
+1963.6492,6.4055,3.373,1.6642,274216,1036,True,45.913,2401,4,True,1219,False,False,imported,Tropical,320.2667,-70,0.2148,5.6973,37.7144,brick,24.0,True,True,Wood,4,37.8991,True,S001,0.0,False
+995.2624,5.2896,3.0579,2.6659,327808,905,False,21.0683,3963,3,True,1513,False,True,imported,Temperate,325.2187,-45,0.2106,45.2486,27.065,brick,0.0,False,False,Adobe,9,163.742,True,S004,0.0,False
+1549.8051,6.3763,6.0544,1.3041,317242,1116,False,24.0571,2832,4,True,1149,False,True,imported,Tropical,324.1037,-75,0.2534,20.5187,53.9609,brick,0.0,True,True,Stone masonry,3,130.2928,False,S003,100.0,True
+2000.0,5.6451,9.7141,1.9737,328310,403,False,61.4274,4014,4,True,1721,False,False,local,Arid,365.0,-50,0.1135,64.4786,36.6533,concrete,24.0,False,True,Stone masonry,8,133.5395,True,S004,0.0,True
+2000.0,6.3524,8.0176,3.874,362297,852,,93.6077,899,4,False,1792,True,False,local,Arid,365.0,-60,0.1361,50.2727,19.1996,stone,24.0,False,True,Wood,3,87.0789,False,S003,0.0,False
+2000.0,5.2797,4.3046,2.4461,352285,772,False,72.167,2306,3,True,1689,True,False,local,Tropical,352.6891,-30,0.2483,59.274,31.4981,brick,24.0,True,True,Wood,6,86.5748,True,S002,96.66,True
+1987.9782,6.3746,6.4608,2.0629,295479,1396,True,51.206,4473,4,False,1125,False,True,local,Arid,346.3573,-75,0.2179,35.4377,30.0621,brick,0.0,True,False,Adobe,3,106.4024,True,S001,0.0,False
+1976.6245,6.3939,6.3165,1.164,196845,1694,True,67.7046,2703,4,True,1432,,True,imported,Arid,342.7559,-30,0.2166,62.0867,40.626,concrete,0.0,False,False,Adobe,6,59.7382,True,S001,0.0,True
+2000.0,6.3499,7.1766,1.4502,292504,1820,False,75.308,3294,4,True,1469,True,True,local,Temperate,365.0,-35,0.1952,6.9574,45.112,concrete,0.0,True,False,Adobe,5,94.8472,True,S001,0.0,False
+1967.0013,5.2527,3.4752,2.3578,292603,1715,True,91.6206,516,3,False,1000,True,True,local,Arid,321.2022,-70,0.231,54.7818,25.9179,stone,0.0,False,False,Adobe,1,152.8029,False,S003,0.0,True
+2000.0,5.5869,8.5298,2.4559,366296,186,True,53.5807,3088,4,True,1615,False,True,local,Arid,351.3931,-90,0.1664,47.9243,32.9564,stone,0.0,False,False,Wood,3,48.307,False,S001,0.0,False
+1953.9843,6.3915,5.3263,2.2237,353530,1488,True,56.0564,2569,4,False,1595,,True,imported,Arid,345.5951,-85,0.2782,76.2614,33.1099,concrete,0.0,False,False,,1,32.6433,False,S003,0.0,False
+261.9926,6.3837,3.7386,2.0794,325779,1412,False,4.7887,4434,4,,1113,True,False,local,Tropical,353.6716,-40,0.212,23.0454,32.2568,concrete,24.0,False,,Wood,4,83.7985,True,S003,100.0,True
+439.8197,5.591,2.3869,2.723,338412,360,False,1.5762,4997,4,False,1528,False,True,imported,Arid,348.45,-85,0.3092,8.4846,25.4725,concrete,0.0,True,True,Wood,1,69.0358,False,S001,0.0,True
+2000.0,6.3786,3.9424,1.4521,326118,1154,False,70.7722,5000,4,False,1793,False,False,imported,Arid,352.2162,-60,0.2371,35.6496,46.2387,concrete,24.0,True,True,Wood,6,33.7355,False,S003,0.0,True
+1987.7867,6.4034,9.6278,1.3196,272267,1190,,66.7825,2251,4,False,1623,False,True,imported,Arid,314.1813,-65,0.2169,48.6304,43.4775,brick,0.0,False,False,Adobe,5,92.7525,False,S003,0.0,False
+1986.7924,6.4187,2.2607,3.0131,325748,720,True,95.9623,1882,4,False,1807,True,True,imported,Tropical,363.7336,-65,0.1837,88.1,22.591,stone,0.0,True,False,Wood,2,21.8342,False,S002,0.0,False
+2000.0,5.2741,2.9898,1.8887,377820,1911,True,85.8282,2111,3,False,1900,False,False,imported,Arid,354.7047,-75,0.2889,69.0385,41.3789,wood,24.0,True,True,Wood,3,53.2662,True,S001,0.0,False
+2000.0,6.3822,5.2369,3.1335,428628,903,True,92.5604,4751,4,True,1276,False,False,imported,Arid,346.2941,-55,0.2081,76.5004,29.8851,concrete,24.0,True,True,Wood,7,96.2664,True,S004,0.0,True
+1989.6531,5.5912,5.6316,1.6884,310985,173,False,35.4445,148,4,False,1026,True,False,local,Arid,350.0635,-40,0.2928,7.5257,37.8332,brick,24.0,True,False,Adobe,4,160.036,True,S002,0.0,False
+1995.3327,5.5724,10.0,1.1691,314827,186,False,64.5772,1278,4,True,1560,False,False,local,Tropical,329.9278,-70,0.2568,13.0319,59.5729,concrete,24.0,True,True,Wood,4,33.9089,True,S004,0.0,False
+1978.6294,6.435,10.0,1.4325,308052,1121,False,77.6066,4237,4,False,1033,False,True,local,Arid,364.0221,-90,0.2517,77.3034,44.3498,stone,0.0,False,False,Adobe,1,135.397,True,S002,0.0,True
+1991.4077,5.642,6.4646,1.7951,390151,135,False,97.7068,4881,4,True,1105,True,True,imported,Temperate,330.6691,-30,0.251,5.4815,47.1897,adobe,0.0,False,False,Adobe,6,195.9733,False,S003,0.0,False
+1971.5845,6.4067,7.0837,5.8737,483730,621,,59.6453,2606,4,True,1910,True,False,imported,Arid,365.0,-25,0.0644,33.8061,17.0251,brick,24.0,True,False,Wood,7,44.3886,True,S001,0.0,False
+1981.5863,5.3244,4.1537,1.8111,359685,1690,False,36.8391,1694,3,False,1272,False,False,local,Arid,325.1727,-75,0.1643,47.0943,40.5985,stone,24.0,True,True,Stone masonry,6,161.5482,True,S002,0.0,True
+1963.28,5.6404,9.1994,1.7851,425496,320,,41.9951,4006,4,False,1109,,False,local,Tropical,364.9217,-75,0.1852,79.9948,49.1741,concrete,24.0,False,False,Adobe,3,113.9031,True,S003,0.0,False
+1996.7235,5.6212,1.4292,2.7251,302320,176,True,63.6209,1906,4,False,1541,True,False,local,Temperate,348.7332,-30,0.1873,97.7411,23.1712,concrete,24.0,True,False,,6,72.6709,True,S003,0.0,False
+1961.3904,6.3688,9.8354,1.7949,284576,1084,True,83.1351,1996,4,True,1865,,True,local,Arid,365.0,-50,0.2262,93.0358,36.1217,wood,0.0,False,False,Adobe,8,182.2251,False,S001,0.0,False
+1974.441,6.4336,5.4129,1.7172,282491,1609,False,100.0,795,4,True,1584,True,False,local,Temperate,348.2612,-25,0.0704,15.8408,36.9306,adobe,24.0,False,False,Adobe,7,113.8128,False,S004,0.0,True
+1984.2296,6.4198,5.4275,2.9085,367009,1374,False,40.1844,4936,4,True,1057,,False,local,Tropical,353.7811,-15,0.2882,27.3373,27.6166,wood,24.0,False,False,,9,165.5222,False,S002,0.0,False
+2000.0,6.3562,2.9747,4.2149,291003,507,False,85.3717,1139,4,False,1000,False,True,imported,Tropical,339.8712,-60,0.2948,17.962,14.2638,concrete,0.0,False,False,Adobe,6,71.0731,False,S004,71.5,True
+2000.0,6.4063,9.2491,2.4905,375329,525,False,54.8425,4547,4,True,1372,True,False,local,Arid,328.8963,-40,0.3877,50.1774,32.9192,brick,24.0,False,True,Stone masonry,4,111.3398,False,S003,0.0,True
+2000.0,5.6098,1.061,2.0247,351663,144,True,91.229,3014,4,True,1588,False,True,local,Tropical,344.8986,-60,0.1722,76.8653,38.5308,concrete,0.0,False,False,Adobe,6,189.0918,False,S001,0.0,False
+1985.9539,5.3342,7.7149,2.0857,292844,1843,True,60.526,5000,3,,1359,True,False,imported,Tropical,346.2288,-15,0.207,6.0974,31.7199,adobe,24.0,False,True,Stone masonry,9,138.5937,False,S003,0.0,False
+109.4986,6.4023,9.6442,1.7735,290774,1187,False,2.6205,2193,4,,1569,,True,imported,Arid,351.7493,-20,0.2217,59.9719,36.6937,adobe,0.0,False,,Stone masonry,8,160.334,False,S002,0.0,False
+2000.0,6.4721,6.6147,2.1926,341781,1732,,86.347,4598,4,,1965,True,False,local,Temperate,364.7819,-30,0.274,83.6145,32.508,adobe,24.0,True,False,Adobe,6,200.0,True,S002,0.0,True
+232.51,5.2555,10.0,1.2579,237727,896,False,5.35,1747,3,,1524,False,True,local,Tropical,332.6137,-75,0.1714,40.3048,39.0608,adobe,0.0,False,,Adobe,3,192.513,True,S003,86.64,True
+2000.0,5.3342,9.5078,1.5619,323023,1591,True,96.7527,2686,3,True,1805,False,False,imported,Arid,348.9194,-65,0.2167,75.4827,46.2225,wood,24.0,False,False,Adobe,5,116.7967,True,S001,0.0,False
+1987.5392,4.7,9.4817,1.3912,219521,498,True,77.1823,2118,3,True,1468,False,True,local,Tropical,364.6058,-75,0.3465,63.9737,36.8861,concrete,0.0,False,True,Wood,3,53.9224,True,S003,0.0,False
+476.7614,6.4064,4.0697,2.2033,285234,905,True,2.293,1530,4,True,1607,False,True,imported,Temperate,349.0742,-75,0.225,62.3365,29.4856,concrete,0.0,True,False,Adobe,3,62.488,False,S002,0.0,False
+2000.0,6.4017,7.8841,1.4486,250800,661,False,77.564,4180,4,True,1105,True,True,imported,Arid,353.672,-50,0.3619,80.7184,39.403,brick,0.0,False,True,Wood,2,46.3908,True,S004,0.0,False
+2000.0,6.4229,2.1632,2.0621,424830,1349,False,51.7768,831,4,True,1120,False,True,local,Arid,353.7123,-65,0.2061,22.0489,44.5588,adobe,0.0,True,True,Stone masonry,5,123.2194,False,S003,0.0,True
+271.397,6.4151,4.9201,1.9263,366006,1062,False,5.8273,3091,4,True,1391,False,False,imported,Temperate,310.1416,-45,0.2385,84.7699,41.5939,adobe,24.0,False,True,Wood,9,52.0415,True,S002,0.0,False
+1999.3646,6.3889,6.2697,2.7353,292931,687,False,38.3124,2539,4,True,1467,False,True,imported,Tropical,335.3454,-70,0.2406,5.2311,23.9481,brick,0.0,True,False,Wood,4,41.7075,False,S002,99.82,True
+2000.0,5.5772,1.615,3.109,337690,189,False,97.3376,3705,4,False,1426,False,False,imported,Arid,344.7726,-80,0.1424,83.9861,22.2639,adobe,24.0,True,True,,2,76.5012,True,S002,0.0,False
+1031.3955,6.3909,5.303,1.3352,297457,761,,12.4485,3587,4,False,1399,False,True,local,Arid,320.5026,-75,0.3467,9.3165,46.7443,brick,0.0,True,False,Adobe,3,92.1909,False,S003,0.0,False
+1952.2256,5.333,4.0787,2.7405,362272,1717,False,38.7732,4352,3,True,1238,True,True,imported,Arid,337.725,-40,0.1887,83.8127,28.8426,stone,0.0,True,True,Stone masonry,7,192.0905,False,S004,0.0,True
+2000.0,5.5707,2.0897,5.1665,215782,100,,92.0735,2231,4,True,1656,False,False,imported,Tropical,354.2316,-85,0.2741,33.9815,9.8396,brick,24.0,True,False,Adobe,1,162.736,False,S004,0.0,False
+513.5959,6.4132,8.9088,2.2075,256648,1849,False,9.9841,2927,4,False,1115,,False,local,Tropical,333.3681,-15,0.0828,27.7443,24.1226,concrete,24.0,False,False,Adobe,9,118.7969,True,S001,0.0,False
+2000.0,5.2858,6.0876,1.6576,314919,1264,True,46.9245,903,3,False,1198,True,False,imported,Temperate,347.0054,-45,0.1647,6.2007,39.5587,concrete,24.0,True,False,Adobe,3,91.2265,False,S002,0.0,False
+2000.0,6.3843,3.5071,1.9261,305443,1574,False,79.8405,2573,4,True,1363,True,False,imported,Arid,345.0206,-45,0.2188,58.5424,35.3082,brick,24.0,False,True,Wood,3,96.3304,True,S003,0.0,False
+1995.3114,6.4506,6.4925,1.6969,339924,782,True,50.0022,1984,4,True,1297,True,False,imported,Temperate,352.7602,-45,0.2904,20.644,44.7327,brick,24.0,True,True,Stone masonry,3,156.9148,True,S001,0.0,False
+1889.8993,5.3016,1.5821,3.7921,266159,980,True,39.0092,71,3,True,1176,True,True,local,Tropical,350.1799,-30,0.0918,72.113,16.039,concrete,0.0,False,False,Adobe,6,64.3481,False,S004,0.0,False
+1854.9546,5.6277,3.3763,3.0712,386030,425,False,36.5277,3861,4,False,1743,False,True,imported,Arid,362.6078,-85,0.2984,0.4985,25.6861,adobe,0.0,False,False,,1,195.1208,False,S002,0.0,False
+860.255,6.3495,4.2565,2.2168,353106,688,False,16.7388,4929,4,True,1855,True,False,imported,Tropical,333.6572,-55,0.243,10.5891,34.9784,adobe,24.0,False,True,Stone masonry,1,119.8349,True,S002,0.0,False
+1997.0545,6.4246,4.2675,2.1303,420144,1195,False,52.9011,894,4,True,1639,True,False,local,Tropical,354.0606,-40,0.1654,67.163,42.6921,concrete,24.0,True,True,Stone masonry,4,200.0,False,S002,0.0,False
+2000.0,5.5754,6.3775,3.1535,351534,463,False,77.0111,3078,4,True,1823,True,False,imported,Tropical,365.0,-45,0.2906,29.911,24.413,wood,24.0,True,True,Stone masonry,3,200.0,False,S004,100.0,True
+2000.0,5.3172,2.0407,2.8213,301566,1547,,47.9384,2300,3,False,1574,False,True,imported,Tropical,339.1849,-45,0.1693,23.477,22.2956,concrete,0.0,True,True,,9,155.0205,True,S003,95.38,True
+1083.1598,6.4105,2.0989,1.3896,285557,1352,False,21.7021,4415,4,False,1657,False,True,imported,Temperate,341.5776,-75,0.2063,41.8152,42.4808,brick,0.0,False,,Adobe,3,116.0649,False,S001,0.0,False
+1985.0436,6.4245,2.3077,2.0166,428561,1351,False,72.2415,1982,4,False,1167,True,True,imported,Temperate,356.3635,-15,0.3707,71.2453,43.4555,concrete,0.0,False,False,Adobe,9,68.2661,False,S003,0.0,True
+2000.0,5.2794,5.6052,1.3939,231250,1213,False,78.6071,286,3,False,1747,True,True,local,Tropical,364.9057,-45,0.1905,57.7423,34.3216,wood,0.0,True,True,Stone masonry,3,128.0735,True,S001,54.82,True
+1968.0704,6.4116,2.1933,1.7929,271475,1791,False,84.3256,2980,4,True,1260,False,False,imported,Temperate,359.4366,-80,0.2744,13.4414,34.1429,brick,24.0,False,True,Stone masonry,2,107.5788,True,S003,0.0,False
+2000.0,6.3899,3.6648,2.6857,240259,1790,True,35.4447,3833,4,True,1296,True,True,local,Temperate,360.8087,-60,0.2071,65.1197,20.8406,stone,0.0,True,True,Wood,3,81.7554,False,S002,0.0,True
+1985.0108,5.3127,2.567,1.9073,318694,931,False,92.7997,1617,3,False,1511,False,False,imported,Tropical,342.2858,-65,0.3328,19.3587,34.2527,wood,24.0,True,True,Stone masonry,5,196.1855,True,S004,82.84,True
+1989.4813,5.6164,2.9587,1.8493,307985,427,True,96.51,3138,4,True,1204,True,False,imported,Tropical,339.1458,-50,0.3147,6.6472,37.4612,concrete,24.0,False,False,Adobe,2,148.5998,True,S003,0.0,False
+1887.4996,5.3121,4.895,2.75,305182,708,False,36.9566,2980,3,False,1605,True,False,imported,Temperate,342.685,-55,0.0804,77.3653,22.7734,wood,24.0,False,True,Stone masonry,1,166.2331,False,S001,0.0,False
+1980.8126,6.3933,5.14,2.1737,376076,1224,False,55.9849,1051,4,False,1100,False,True,local,Arid,336.455,-90,0.2676,68.1066,35.4861,stone,0.0,True,False,Wood,3,29.6945,True,S004,0.0,False
+1941.6823,6.4146,8.0535,2.2065,327531,1541,True,98.2199,192,4,True,1799,True,False,imported,Temperate,335.3332,-40,0.2795,6.0454,33.277,stone,24.0,True,True,,7,130.9959,True,S003,0.0,False
+1983.7633,6.421,4.2287,1.9394,400225,1230,False,98.928,3207,4,False,1401,False,True,imported,Temperate,355.4087,-60,0.1566,87.4337,42.2637,adobe,0.0,False,True,Stone masonry,6,134.8487,False,S002,0.0,True
+2000.0,4.7325,7.1586,2.8342,332958,215,False,74.7282,2001,3,False,1546,False,False,local,Temperate,328.6157,-50,0.1858,6.3029,23.9935,concrete,24.0,True,False,Adobe,8,192.52,False,S001,0.0,True
+1973.0926,6.3894,8.107,1.6544,353798,1406,False,67.0461,5000,4,True,1447,False,False,local,Arid,364.8274,-55,0.113,43.2901,46.954,wood,24.0,False,False,Adobe,7,140.8064,True,S004,0.0,False
+1995.7568,6.345,3.5981,3.7251,308771,1531,False,50.7654,3938,4,False,1333,False,False,imported,Tropical,325.1241,-45,0.1733,66.1357,17.0932,concrete,24.0,True,True,Wood,9,82.47,True,S004,100.0,True
+1052.9191,6.3855,5.9543,1.2104,325796,1294,,13.628,1519,4,False,1874,True,True,local,Tropical,314.0891,-30,0.1795,90.5343,55.4174,stone,0.0,True,False,Adobe,9,185.7893,True,S002,79.78,True
+1991.8264,6.3761,6.4349,2.6662,343178,723,True,73.5425,4230,4,,1896,True,False,imported,Tropical,357.1844,-45,0.2283,74.6656,28.7131,adobe,24.0,True,True,Stone masonry,3,183.6597,False,S001,100.0,True
+2000.0,6.3718,8.749,3.0535,311004,1626,True,80.6109,2542,4,False,1734,False,False,local,Tropical,363.8292,-85,0.2049,80.1261,21.3267,wood,24.0,True,True,Stone masonry,1,197.1823,True,S001,0.0,False
+594.8548,6.3995,10.0,7.8492,350766,726,True,5.4374,3598,4,True,1393,False,False,local,Temperate,347.3091,-55,0.211,85.2621,9.9467,concrete,24.0,True,False,Adobe,7,107.4914,False,S003,0.0,True
+2000.0,6.4023,5.0189,3.1265,358952,1709,False,96.3058,2298,4,False,1731,True,False,imported,Tropical,354.024,-40,0.2869,57.5362,23.5762,stone,24.0,True,False,Adobe,7,82.6654,False,S003,0.0,False
+2000.0,5.5704,4.2695,1.6467,241547,361,False,63.1883,950,4,True,1529,False,True,local,Tropical,365.0,-50,0.3296,4.5652,33.3931,concrete,0.0,False,,Adobe,8,106.0799,True,S003,0.0,False
+247.5501,5.5876,2.083,2.3948,342648,305,True,4.3019,1401,4,False,1260,False,False,imported,Arid,364.2005,-60,0.3673,94.0022,29.7349,stone,24.0,False,,Wood,9,79.2484,False,S003,0.0,True
+2000.0,6.401,5.3469,1.6538,330497,816,True,67.8187,228,4,True,1353,True,True,imported,Arid,337.2503,-35,0.2291,84.947,44.7576,brick,0.0,True,False,Adobe,5,186.7332,False,S002,0.0,False
+1952.6176,6.4238,8.2519,4.1083,377653,729,True,82.3456,1254,4,True,1584,True,False,local,Tropical,334.4373,-15,0.1712,37.2754,20.3125,concrete,24.0,True,False,Adobe,9,114.2915,True,S002,74.26,True
+398.1813,6.4312,5.6378,2.0304,306674,1571,True,8.2163,1447,4,,1498,False,True,local,Arid,361.9286,-50,0.1641,51.9457,31.6458,wood,0.0,False,False,Adobe,8,123.0692,True,S004,0.0,True
+1991.306,6.4225,9.8585,1.8328,291603,1510,False,83.6221,2288,4,False,1536,True,True,imported,Arid,345.2778,-40,0.1441,95.509,32.8689,wood,0.0,True,False,Wood,4,29.4248,True,S002,0.0,False
+2000.0,4.7187,1.5851,3.4443,396443,153,True,99.3238,783,3,,1886,False,False,imported,Temperate,325.8597,-55,0.3157,18.7795,25.1719,wood,24.0,False,True,Wood,7,97.6836,False,S001,0.0,True
+2000.0,6.4206,6.1263,2.128,316080,549,False,60.2061,1266,4,False,1018,False,True,local,Temperate,352.7039,-80,0.3007,45.2859,30.6084,adobe,0.0,True,,Adobe,2,146.9686,False,S001,0.0,True
+2000.0,6.4276,7.5265,3.1458,323952,559,False,74.1822,4841,4,True,1508,,True,imported,Tropical,338.268,-70,0.2996,100.0,22.7959,brick,0.0,True,True,Stone masonry,4,171.7847,True,S004,0.0,False
+2000.0,6.4226,1.754,1.7501,308143,1955,True,94.2226,319,4,,1516,True,True,local,Arid,348.2544,-45,0.3563,62.4393,39.7396,adobe,0.0,False,,Wood,3,46.6921,True,S002,0.0,True
+596.4135,5.6186,4.0036,2.2276,428413,497,False,4.5945,0,4,,1480,,True,imported,Tropical,363.908,-85,0.1462,30.6467,39.2176,brick,0.0,True,False,Adobe,1,158.5313,True,S003,0.0,False
+1797.3918,6.3434,5.3104,1.4912,274923,768,True,28.2957,2320,4,True,1796,False,True,local,Temperate,332.3436,-70,0.2681,29.637,42.1829,stone,0.0,True,True,Stone masonry,7,131.5722,True,S004,0.0,False
+100.0,5.6117,4.6565,2.6934,372147,236,False,2.7385,1857,4,True,1750,True,False,imported,Temperate,318.9194,-40,0.2743,41.1159,30.1144,concrete,24.0,False,False,Wood,4,23.5712,True,S001,0.0,True
+874.4971,6.4251,2.3789,2.743,308087,536,,17.5504,3557,4,True,1335,,False,local,Temperate,340.0024,-50,0.1515,31.6584,24.9867,wood,24.0,False,True,Stone masonry,8,145.7841,False,S003,0.0,False
+667.56,6.4477,9.9667,1.6912,296216,569,True,13.2581,802,4,False,1185,True,False,imported,Temperate,356.0567,-25,0.2765,49.2631,36.7569,concrete,24.0,False,False,,7,140.6099,True,S002,0.0,True
+2000.0,6.3837,4.6343,4.8491,333303,1900,True,60.8737,955,4,False,1210,False,False,local,Temperate,315.9923,-50,0.1442,23.2086,14.3491,wood,24.0,True,True,Wood,8,82.1281,False,S003,0.0,True
+2000.0,6.3962,4.1837,2.3774,317616,1152,,41.8038,576,4,True,1189,True,False,local,Arid,340.3975,-30,0.2535,71.0426,29.631,wood,24.0,False,,Adobe,6,58.7604,True,S004,0.0,False
+1177.2895,5.6373,3.8838,2.3428,340633,445,False,16.4989,1750,4,,1868,False,False,local,Tropical,364.0693,-70,0.2632,78.2644,29.7961,brick,24.0,True,True,Stone masonry,4,165.0976,False,S002,0.0,False
+1984.5766,4.7032,9.0632,12.615,394271,230,False,89.8338,519,3,,1206,True,False,imported,Temperate,358.867,-55,0.2067,15.2246,6.3626,stone,24.0,True,True,Stone masonry,4,112.544,True,S003,0.0,True
+2000.0,5.2962,8.1248,3.4931,434919,895,False,63.8698,1294,3,,1977,False,True,local,Arid,355.6857,-90,0.2436,28.6198,25.3566,stone,0.0,False,True,Stone masonry,2,111.9066,True,S004,0.0,True
+2000.0,6.4545,5.187,1.1451,248271,1392,False,75.8799,1685,4,False,1274,True,False,local,Tropical,350.4548,-40,0.2881,38.6819,45.04,adobe,24.0,False,False,Adobe,4,96.5729,True,S004,0.0,False
+2000.0,6.3812,8.1066,3.0095,351115,1694,False,95.3027,2117,4,True,1000,,True,local,Tropical,309.57,-10,0.2311,14.5758,25.6334,wood,0.0,False,,Stone masonry,10,154.6657,True,S002,92.38,True
+940.5646,6.4222,4.1288,1.5646,288335,1591,False,19.2828,1648,4,False,1316,True,True,imported,Tropical,358.3455,-40,0.2201,80.1579,38.0842,brick,0.0,False,False,Adobe,4,162.5314,True,S003,0.0,False
+2000.0,5.6136,2.2763,2.4389,337763,418,True,40.3923,3411,4,True,1773,True,True,imported,Tropical,324.042,-55,0.2896,47.0528,30.8467,adobe,0.0,False,False,Adobe,1,114.3761,False,S002,100.0,True
+2000.0,6.4062,5.871,2.2683,292611,1006,False,46.5093,2234,4,True,1548,True,True,imported,Arid,361.1346,-35,0.1249,7.5692,28.8512,concrete,0.0,False,False,,5,73.6853,True,S003,0.0,True
+2000.0,6.3715,5.3936,1.7647,336023,1186,,46.1051,0,4,False,1155,False,False,local,Arid,364.7508,-70,0.3285,15.8093,39.1696,adobe,24.0,False,True,Wood,4,37.5946,False,S001,0.0,True
+463.7172,5.3262,7.3515,2.9561,287333,1064,False,10.0717,2323,3,False,1407,False,False,local,Tropical,363.8474,-90,0.2347,36.7544,19.9778,stone,24.0,False,,Adobe,2,147.6123,False,S001,0.0,False
+1994.8608,5.3174,2.2613,5.987,334580,621,True,58.2741,688,3,True,1181,False,False,local,Tropical,365.0,-65,0.2568,76.1169,12.4446,wood,24.0,False,False,Adobe,5,199.8961,False,S004,63.72,True
+1541.7327,6.3946,6.6568,3.7764,353253,1433,True,30.9836,3171,4,True,1400,,True,imported,Temperate,349.5024,-75,0.3482,76.7588,20.8057,wood,0.0,False,,Adobe,3,200.0,False,S001,0.0,True
+980.7468,6.4124,2.2123,1.5562,298332,858,True,11.9215,1223,4,True,2000,False,True,local,Temperate,354.9258,-75,0.228,76.4373,43.4292,adobe,0.0,True,True,Wood,3,95.8754,False,S003,0.0,True
+2000.0,4.7064,4.6497,2.5197,361945,484,False,68.7991,2394,3,True,1278,True,True,local,Temperate,338.7609,-60,0.2552,89.2525,31.273,stone,0.0,True,,Wood,3,26.7217,True,S001,0.0,True
+2000.0,6.4361,2.7696,1.6148,392606,530,False,86.6867,349,4,False,1639,,False,imported,Temperate,365.0,-20,0.2775,11.1231,49.8162,adobe,24.0,True,False,,8,194.2187,True,S001,0.0,True
+1990.0478,7.4627,6.1945,1.6745,313452,739,True,75.0204,1239,5,False,1515,True,False,imported,Arid,342.921,-45,0.1486,90.6089,39.3801,stone,24.0,False,True,Stone masonry,6,189.4028,True,S003,0.0,True
+2000.0,5.2463,2.6348,2.6678,422321,1862,False,62.9152,988,3,True,1870,False,True,local,Arid,351.3393,-60,0.2347,63.9496,34.1306,adobe,0.0,False,False,Adobe,6,109.7033,False,S004,0.0,False
+1948.8913,6.393,7.7613,1.4922,275487,899,False,41.506,4566,4,True,1231,False,False,local,Arid,348.2214,-50,0.0563,1.7002,41.5614,concrete,24.0,True,False,Adobe,8,73.1565,True,S002,0.0,True
+1360.0575,6.364,2.4415,2.1773,297855,1689,False,27.1633,3869,4,False,1159,True,True,imported,Temperate,329.3925,-50,0.2791,59.8059,28.2416,wood,0.0,False,False,Adobe,2,153.014,True,S001,0.0,False
+833.2857,6.4374,2.7243,3.9249,373280,955,True,17.2784,1068,4,True,1781,False,False,imported,Arid,350.1488,-55,0.147,90.543,21.0392,adobe,24.0,False,True,Wood,7,66.4044,True,S002,0.0,True
+2000.0,6.394,3.8666,1.67,284934,719,False,65.6693,1918,4,True,1566,True,True,imported,Tropical,357.0299,-35,0.241,33.8128,38.2686,stone,0.0,False,True,Wood,8,94.2804,True,S004,0.0,False
+2000.0,6.4002,10.0,3.2323,397464,962,False,89.7318,3812,4,False,1494,True,True,local,Tropical,365.0,-40,0.2239,57.2928,25.1874,wood,0.0,True,True,Stone masonry,4,115.432,True,S001,0.0,False
+1989.5242,6.4065,6.8377,1.4491,357463,1878,False,72.7291,3113,4,True,1745,False,True,imported,Tropical,362.8122,-90,0.1692,17.8262,54.1102,stone,0.0,False,False,Adobe,1,158.0901,True,S003,0.0,False
+2000.0,5.6203,1.3784,1.6415,414183,336,False,55.9316,2825,4,False,1488,True,True,local,Tropical,346.0333,-45,0.1954,48.7639,51.4887,wood,0.0,False,False,Adobe,3,141.5583,False,S001,0.0,False
+371.0368,6.4198,7.919,2.9422,309110,1140,True,7.2468,714,4,True,1599,True,False,imported,Temperate,365.0,-30,0.274,86.5057,23.7039,brick,24.0,False,True,Stone masonry,6,110.2162,True,S001,0.0,False
+2000.0,6.3572,5.2789,1.7987,302277,722,True,43.7145,2342,4,,1242,True,False,imported,Arid,365.0,-20,0.1687,10.0058,35.2348,wood,24.0,True,False,Adobe,8,148.7012,True,S004,0.0,False
+1474.5655,6.3808,8.4903,2.1215,332786,719,False,22.1682,1471,4,True,1836,True,False,imported,Tropical,328.5578,-40,0.2247,48.8928,34.6353,stone,24.0,True,False,Adobe,7,180.073,True,S004,0.0,False
+1958.245,6.4311,1.0,1.1781,274688,1335,True,41.8693,4251,4,False,1038,True,True,local,Tropical,350.3816,-40,0.2018,53.3423,49.1129,adobe,0.0,False,False,Adobe,4,78.0697,False,S003,0.0,False
+1999.9853,6.4208,4.8097,1.9796,274316,1544,True,51.1761,3730,4,False,1607,False,True,imported,Temperate,311.8719,-70,0.1863,96.6788,29.1895,wood,0.0,False,False,,4,194.9265,False,S001,0.0,True
+2000.0,5.2702,5.174,2.9148,349620,1158,False,47.6407,2387,3,True,1165,False,True,local,Temperate,365.0,-70,0.3985,2.197,26.2502,concrete,0.0,True,False,Wood,4,30.2157,True,S004,0.0,False
+1163.9287,5.6005,3.5545,1.8405,229239,359,False,23.0117,1353,4,,1514,False,True,local,Arid,360.8979,-75,0.2616,92.8542,25.8236,concrete,0.0,False,True,Wood,3,51.6408,True,S001,0.0,False
+1998.8975,5.3264,8.4258,1.485,298028,1470,True,100.0,2971,3,False,1894,True,False,imported,Tropical,353.0909,-40,0.2502,35.548,41.883,stone,24.0,True,False,Adobe,7,185.9601,False,S002,100.0,True
+1427.5676,7.4983,7.9167,4.0577,296919,728,False,21.7663,2224,5,False,1138,True,True,imported,Temperate,358.2516,-55,0.245,3.7928,15.1895,stone,0.0,True,False,Wood,4,27.7887,False,S002,0.0,True
+1989.9874,5.2625,8.7547,2.903,277225,1322,True,76.1705,2494,3,False,1740,True,True,local,Temperate,339.2732,-45,0.2244,67.8302,19.9914,concrete,0.0,False,True,Wood,3,62.6275,False,S002,0.0,False
+1955.8392,5.3474,9.6899,2.2335,334688,766,True,97.9218,999,3,True,1020,,False,imported,Temperate,301.6048,-35,0.1822,91.0601,33.3677,stone,24.0,False,True,Stone masonry,8,122.8552,True,S004,0.0,False
+1984.9815,7.4759,6.1727,2.5082,399765,597,False,58.3952,1390,5,True,1430,True,False,local,Arid,353.6151,-30,0.2836,30.3763,34.7676,stone,24.0,False,False,Adobe,9,63.0823,False,S003,0.0,False
+917.2127,5.3378,3.7066,3.0057,256784,1955,True,11.5086,518,3,False,1935,True,False,local,Temperate,334.9927,-15,0.2473,88.1898,17.9482,wood,24.0,True,,Stone masonry,9,109.0853,True,S004,0.0,False
+1952.9757,6.4065,9.8188,1.8128,355970,812,False,72.7852,410,4,False,1837,False,True,local,Temperate,364.3169,-60,0.176,91.2101,40.3322,brick,0.0,False,True,Stone masonry,6,117.5193,True,S003,0.0,True
+966.3791,6.3629,1.7572,2.121,359167,1949,True,18.7169,3313,4,True,1251,False,False,imported,Temperate,343.0643,-75,0.1989,66.7033,37.6011,adobe,24.0,False,False,Wood,3,42.21,True,S004,0.0,True
+948.8182,6.3758,1.954,1.6779,431707,1030,True,11.4967,4238,4,True,1842,False,False,local,Arid,339.5183,-85,0.2332,39.8334,56.178,concrete,24.0,True,False,Adobe,1,136.6709,True,S004,0.0,False
+1468.4505,6.3542,5.187,3.5106,322277,1881,True,30.7385,2238,4,True,1725,True,False,imported,Tropical,363.9989,-20,0.2641,46.7769,20.6163,adobe,24.0,False,True,Wood,8,60.86,True,S004,0.0,False
+1235.7794,6.4007,1.0,3.5959,370023,715,False,17.7318,1860,4,False,1863,False,True,local,Tropical,335.0211,-85,0.2813,29.4214,21.1144,stone,0.0,True,True,Stone masonry,4,180.0016,True,S003,89.4,True
+2000.0,6.3652,2.371,1.7644,364654,1746,True,44.7433,2732,4,True,1582,True,False,imported,Arid,351.3697,-35,0.1712,100.0,45.8241,stone,24.0,False,False,Adobe,8,149.8843,False,S004,0.0,True
+1981.8426,6.4209,6.1976,2.5279,371428,950,False,100.0,2074,4,,1634,True,True,imported,Tropical,334.0923,-25,0.1946,13.9419,30.1457,concrete,0.0,False,True,Stone masonry,7,155.4066,True,S003,0.0,False
+1482.5851,5.2763,4.0034,1.854,277945,700,False,29.5436,1221,3,True,1029,False,False,local,Temperate,354.5996,-85,0.3111,36.128,33.5372,concrete,24.0,False,False,,1,22.5445,True,S002,0.0,True
+1098.2117,5.6127,3.557,1.6011,305158,403,False,14.5188,2634,4,False,1488,False,False,imported,Arid,329.6065,-40,0.168,35.9379,39.1675,wood,24.0,True,False,Adobe,10,84.3321,True,S003,0.0,False
+1980.0298,6.3476,7.6052,5.0956,372735,1249,True,45.2877,1823,4,True,1039,True,False,local,Tropical,364.7199,-20,0.109,8.481,16.184,concrete,24.0,True,False,,8,183.953,False,S002,86.92,True
+2000.0,5.309,6.8712,2.6509,357636,1862,False,88.2187,1641,3,True,1531,,True,local,Arid,334.4616,-85,0.2736,71.3185,29.4677,adobe,0.0,True,True,,1,37.8414,False,S001,0.0,True
+1155.2881,5.3488,6.6109,1.7893,355937,811,True,17.2344,3539,3,True,1325,True,True,imported,Tropical,364.5567,-15,0.31,22.5274,44.026,brick,0.0,True,True,Stone masonry,9,105.4567,False,S004,100.0,True
+1119.8833,6.4004,5.3984,2.0675,348203,1288,True,21.9171,2679,4,False,1844,True,True,imported,Temperate,333.2045,-20,0.2752,11.4354,35.0955,concrete,0.0,False,,Stone masonry,8,114.2317,True,S003,0.0,True
+2000.0,6.4119,2.9559,2.1436,410882,980,True,63.6793,865,4,False,1674,False,False,local,Temperate,344.2754,-75,0.234,0.0,39.6973,brick,24.0,False,False,Adobe,3,174.5792,True,S004,0.0,False
+1976.6278,5.2584,5.8654,1.8582,321630,1968,False,46.8284,4967,3,False,1152,True,True,imported,Tropical,319.5459,-30,0.2996,55.9167,35.4726,brick,0.0,False,False,,6,30.4309,True,S002,0.0,False
+2000.0,6.3559,8.9711,1.856,306527,1202,False,63.0232,479,4,False,1768,,True,imported,Arid,350.7606,-75,0.2532,84.0913,34.0647,stone,0.0,True,True,Wood,6,27.0677,True,S003,0.0,False
+1987.2873,6.3717,7.4027,2.6528,345006,1572,True,39.1792,3721,4,True,1301,True,True,imported,Arid,339.3184,-15,0.1392,40.6728,28.996,wood,0.0,True,False,,9,106.2643,False,S001,0.0,True
+1981.1293,5.6351,4.66,3.3507,296665,459,True,67.8452,0,4,True,1714,False,True,imported,Arid,346.8977,-60,0.2601,70.6909,20.0,concrete,0.0,True,False,Adobe,6,193.2707,True,S004,0.0,True
+400.0197,6.3664,7.0132,2.0894,324742,1419,False,1.4475,4264,4,True,1759,True,False,local,Arid,365.0,-15,0.1367,29.2562,34.3963,wood,24.0,True,False,Wood,9,35.7054,True,S004,0.0,False
+1338.5112,7.5,6.9907,2.1673,386575,2000,True,27.686,550,5,True,1713,True,True,local,Tropical,349.5517,-35,0.1793,81.2297,39.4807,wood,0.0,False,False,Adobe,5,54.7123,True,S001,62.06,True
+1981.0121,7.4905,9.0741,1.5068,264538,1567,,38.3337,1887,5,False,1576,False,True,imported,Tropical,364.8367,-85,0.3578,4.365,36.606,stone,0.0,True,True,Stone masonry,4,130.6059,True,S002,0.0,False
+2000.0,5.5826,3.7041,1.9486,347895,415,False,85.5161,4316,4,True,1843,,True,imported,Temperate,327.4814,-75,0.2283,63.3311,39.1344,adobe,0.0,False,True,,3,144.4401,True,S001,0.0,False
+1990.3387,6.3875,5.8929,2.4341,394302,1770,,47.8003,498,4,True,1765,,True,local,Temperate,342.5232,-35,0.2896,73.4053,35.2415,stone,0.0,False,True,Stone masonry,8,180.8715,True,S002,0.0,False
+1699.1811,5.5854,6.6859,1.9064,283930,347,False,34.7614,4496,4,True,1409,False,True,local,Arid,300.1587,-50,0.1905,83.385,33.2907,wood,0.0,False,True,Stone masonry,8,122.3863,False,S003,0.0,False
+1946.7422,5.32,7.9306,1.8889,309826,1162,False,59.2682,3815,3,False,1569,False,False,local,Arid,306.8985,-75,0.2882,92.6791,33.6467,wood,24.0,False,False,Wood,3,40.5939,False,S002,0.0,True
+2000.0,5.2862,3.0548,2.9991,390094,633,False,93.2842,3516,3,False,1623,True,False,local,Temperate,365.0,-30,0.0941,54.1458,26.5445,adobe,24.0,True,False,Wood,6,32.3815,True,S004,0.0,False
+1967.3293,6.4086,1.359,1.5077,364741,1624,True,52.6025,132,4,,1621,False,False,imported,Temperate,364.227,-70,0.1683,0.4141,50.3204,stone,24.0,True,True,,7,140.4492,False,S002,0.0,False
+2000.0,5.2952,8.8389,2.28,456541,742,True,56.6863,1324,3,False,1169,False,False,local,Tropical,345.0959,-45,0.1826,1.2245,41.1826,concrete,24.0,False,,Adobe,9,80.2883,True,S001,75.14,True
+2000.0,5.6191,8.2205,2.2547,324401,243,True,66.3658,616,4,False,1778,False,False,imported,Arid,365.0,-75,0.3151,25.4732,29.964,brick,24.0,False,True,Stone masonry,3,112.5028,True,S003,0.0,True
+2000.0,6.3982,2.7571,3.3037,329304,1540,True,77.7313,4496,4,False,1911,True,False,imported,Tropical,365.0,-60,0.1729,68.2119,20.8194,stone,24.0,False,False,Adobe,3,155.0959,False,S002,0.0,False
+2000.0,6.4308,6.9846,1.0914,270371,1137,False,41.6709,117,4,False,1000,False,True,imported,Temperate,365.0,-40,0.2256,96.006,51.3031,brick,0.0,False,True,Stone masonry,10,188.8774,False,S004,0.0,False
+2000.0,5.2969,4.6923,2.0395,323951,1681,True,70.0827,1470,3,True,1399,False,True,imported,Tropical,340.7229,-80,0.3171,15.0898,35.4883,wood,0.0,True,False,Adobe,2,138.4489,True,S001,0.0,False
+2000.0,5.5431,6.9982,1.8403,346971,100,False,73.422,459,4,True,1288,False,True,imported,Arid,332.9284,-60,0.2125,95.8432,41.3381,brick,0.0,True,True,Wood,6,74.3688,False,S003,0.0,True
+1935.9633,6.4067,7.039,1.6901,275842,1707,False,84.3081,1076,4,True,1757,True,False,local,Arid,343.3969,-55,0.275,25.3515,36.7356,concrete,24.0,True,True,Wood,1,65.5341,True,S002,0.0,True
+2000.0,6.3792,8.1743,2.5626,362313,1230,False,88.8206,4780,4,False,1445,False,False,local,Temperate,365.0,-60,0.226,34.5557,29.0265,concrete,24.0,False,False,Adobe,6,76.8742,True,S001,0.0,False
+1970.7003,6.3723,3.4133,2.1999,379260,1135,False,62.3835,959,4,False,1362,True,False,imported,Tropical,341.0162,-50,0.1151,11.5976,35.3529,adobe,24.0,False,False,Adobe,2,59.5374,True,S003,0.0,False
+1969.3657,6.3889,5.3672,2.7305,373162,1824,True,41.2824,1551,4,False,1984,False,False,local,Temperate,361.4521,-90,0.2313,79.4732,28.4021,stone,24.0,False,True,Stone masonry,2,174.3258,True,S003,0.0,False
+1652.3137,5.6317,5.3545,2.7452,377204,394,True,33.3818,1167,4,True,1725,True,False,local,Arid,361.341,-15,0.2004,98.0251,30.2788,brick,24.0,False,False,Adobe,9,115.2846,False,S004,0.0,True
+1989.816,6.4088,7.3341,1.7486,311797,1845,False,58.7344,947,4,True,1878,False,True,local,Tropical,347.2817,-90,0.3478,10.6829,39.6192,stone,0.0,False,False,Adobe,3,143.5483,False,S002,0.0,False
+1950.0607,5.6447,8.1367,1.7274,307090,132,True,31.81,4889,4,False,1534,False,True,local,Tropical,332.3991,-90,0.2896,73.6704,37.1068,stone,0.0,True,True,Stone masonry,3,108.0464,True,S004,100.0,True
+2000.0,6.3811,10.0,1.3895,295508,1700,True,73.4311,1948,4,False,1234,,False,imported,Temperate,365.0,-85,0.2303,23.4548,44.6362,brick,24.0,True,False,Adobe,1,81.2499,True,S002,0.0,True
+2000.0,5.6318,9.153,2.0266,322391,301,True,94.0189,1440,4,True,1813,True,False,imported,Temperate,327.0056,-20,0.2469,38.3239,35.6058,adobe,24.0,False,,Wood,8,30.5119,False,S003,0.0,True
+2000.0,6.4118,6.1082,3.72,365526,1724,True,58.27,1604,4,False,1809,,False,imported,Arid,340.9404,-45,0.201,27.2052,20.4369,wood,24.0,False,True,Stone masonry,3,133.3218,True,S002,0.0,True
+1937.6676,7.5,7.2995,2.6342,395221,1130,True,72.963,2069,5,False,1774,True,False,local,Arid,359.6594,-60,0.2609,85.9158,31.2401,stone,24.0,False,False,Adobe,3,128.3507,False,S001,0.0,False
+1942.4099,5.5805,8.9786,2.2651,342370,100,False,86.5612,3176,4,True,1883,False,False,imported,Tropical,342.1689,-70,0.1658,39.3381,33.1796,stone,24.0,True,True,Stone masonry,7,162.4756,False,S002,100.0,True
+2000.0,6.4333,4.6838,1.9763,294026,1193,False,61.2012,1193,4,True,1727,False,True,local,Arid,364.7512,-70,0.23,47.3868,33.256,brick,0.0,True,,Wood,4,59.7417,True,S002,0.0,False
+1956.528,6.3931,6.0222,6.8305,332974,1175,True,68.283,1915,4,False,1696,True,True,imported,Arid,356.0208,-25,0.2196,69.1018,10.1771,wood,0.0,False,True,Wood,7,44.871,True,S002,0.0,True
+2000.0,6.349,6.4497,2.1785,389923,1942,True,66.762,3614,4,False,1634,False,False,local,Tropical,342.1664,-70,0.3498,83.3603,37.1376,concrete,24.0,False,False,Adobe,4,112.2811,True,S004,100.0,True
+2000.0,5.603,1.5833,2.9374,348224,288,True,66.3474,205,4,True,1009,True,True,local,Temperate,364.2607,-70,0.2393,81.9298,26.3244,stone,0.0,True,True,Stone masonry,1,130.2781,True,S003,0.0,True
+313.0165,5.6315,1.5026,2.5508,396869,394,True,0.0,542,4,False,2000,True,False,imported,Tropical,365.0,-55,0.2604,95.2361,32.1677,stone,24.0,True,True,,4,165.0086,False,S004,0.0,False
+1977.665,7.4878,8.2847,3.7047,391334,833,False,67.6311,0,5,True,1000,False,False,imported,Tropical,328.1855,-60,0.2161,57.6707,23.0833,wood,24.0,True,,Wood,6,22.846,False,S004,0.0,False
+1214.3537,6.3726,2.3526,1.9427,325976,1001,False,23.7699,2038,4,True,1783,False,False,imported,Arid,343.0524,-70,0.3727,42.0802,37.1202,adobe,24.0,False,False,Adobe,4,125.2256,True,S001,0.0,True
+1971.883,5.609,1.2699,1.5318,296527,188,True,74.481,773,4,False,1243,True,True,imported,Tropical,341.0746,-45,0.2523,92.6489,40.4653,adobe,0.0,True,False,,3,138.9057,True,S001,64.56,True
+1664.9942,6.3648,7.0725,1.9878,255875,584,,27.1981,2882,4,True,1831,False,False,local,Temperate,319.6985,-70,0.0234,42.2844,29.7284,wood,22.4863,True,True,Stone masonry,4,162.8871,False,S002,0.0,True
+1993.2324,5.5847,7.1426,2.7284,355520,143,False,42.2188,3896,4,True,1350,True,True,imported,Arid,359.3344,-35,0.1383,70.7934,28.5093,stone,0.0,False,True,Stone masonry,8,188.2425,False,S001,0.0,False
+2000.0,6.3987,2.8184,3.139,343978,1373,False,65.4061,1246,4,True,1120,False,True,local,Temperate,342.4309,-85,0.1302,53.9108,24.1207,brick,0.0,False,True,Stone masonry,1,180.7823,False,S004,0.0,True
+2000.0,5.573,3.2325,3.3221,394773,386,False,90.4471,122,4,False,1468,True,True,imported,Tropical,365.0,-45,0.3084,57.0306,24.2722,stone,0.0,False,,Adobe,6,99.0945,True,S002,53.68,True
+1989.7122,5.6597,7.3106,1.4079,298289,493,False,64.6124,1875,4,True,1768,,False,imported,Arid,361.5994,-70,0.3077,20.819,47.1198,stone,24.0,False,True,,7,44.4387,True,S002,0.0,True
+2000.0,5.3052,6.1837,4.3502,347427,1919,False,65.1904,2691,3,True,1436,False,False,imported,Temperate,347.419,-85,0.2375,39.6961,17.4876,brick,24.0,True,False,Adobe,1,125.8229,True,S002,0.0,False
+2000.0,6.3365,3.4589,3.1927,295952,744,True,73.9572,2677,4,True,1924,False,True,imported,Temperate,364.9595,-65,0.2338,63.1553,21.0198,brick,0.0,False,False,Adobe,5,160.3808,True,S004,0.0,False
+463.3793,4.7001,1.4321,3.4696,346057,369,,2.4055,1380,3,True,2000,True,True,imported,Arid,362.2365,-40,0.15,38.206,22.0836,brick,0.0,True,True,Wood,4,50.1356,True,S002,0.0,False
+1011.1421,6.4159,1.0,2.2201,232518,1621,True,13.4987,936,4,False,1785,True,True,imported,Arid,361.7466,-35,0.3306,7.9026,22.2617,concrete,0.0,True,False,Adobe,5,120.3011,False,S002,0.0,False
+2000.0,6.4017,6.335,3.1097,299835,1984,False,68.3929,3637,4,True,1783,True,False,imported,Arid,348.5002,-20,0.3449,85.1842,21.509,wood,24.0,False,False,Wood,8,23.9506,True,S002,0.0,False
+410.1346,5.5935,2.2944,3.9211,308883,392,False,1.3857,4629,4,True,1575,False,False,local,Arid,354.213,-75,0.218,97.8484,17.4585,concrete,24.0,True,,Stone masonry,3,146.1995,True,S002,0.0,True
+2000.0,6.4019,7.7909,4.0374,381795,547,False,43.8919,2062,4,True,1685,False,False,local,Temperate,353.1564,-80,0.2188,88.6951,20.6271,brick,24.0,True,False,Adobe,2,137.2391,True,S001,0.0,False
+531.7182,6.3872,9.145,2.1697,290273,1166,True,10.8972,2493,4,True,1641,False,False,local,Arid,341.6378,-75,0.2691,30.8424,30.4069,stone,24.0,False,False,Wood,6,20.0,False,S004,0.0,False
+425.5138,5.2661,1.0,1.8313,289177,1708,True,9.4362,1244,3,False,1833,True,False,local,Arid,346.0453,-70,0.2919,22.9901,32.9953,stone,24.0,False,False,Adobe,1,191.714,True,S001,0.0,True
+1994.5556,5.2881,6.2262,2.0269,342637,1142,False,40.0314,1436,3,False,1733,True,True,local,Tropical,331.3447,-25,0.1023,28.3858,34.5926,brick,0.0,True,False,Adobe,7,108.3674,True,S004,0.0,False
+1985.7237,5.3629,2.1127,3.1464,365691,665,True,38.8569,3754,3,True,1238,True,False,local,Arid,323.8119,-50,0.2329,83.039,25.657,brick,24.0,False,False,Adobe,2,94.6003,True,S003,0.0,False
+1965.3667,5.2882,3.3271,1.7803,273592,838,,54.243,348,3,False,1812,False,True,local,Temperate,353.0433,-90,0.1797,59.2063,31.6287,stone,0.0,False,True,Stone masonry,1,120.1006,False,S001,0.0,True
+837.4591,6.4017,9.6716,2.6172,453478,1741,True,16.2829,4073,4,False,1011,True,True,imported,Temperate,349.0496,-50,0.423,31.1001,35.7694,concrete,0.0,False,True,Stone masonry,2,158.8903,True,S004,0.0,True
+141.1852,6.3957,1.3904,1.6275,312552,1671,True,1.334,2492,4,True,1184,True,False,local,Arid,365.0,-50,0.2553,26.6255,43.2763,stone,24.0,False,True,Wood,5,45.6195,False,S003,0.0,False
+1993.8962,6.4397,6.9307,2.5301,300814,961,True,51.2159,3775,4,False,1874,False,True,imported,Tropical,342.6259,-60,0.2286,19.0123,24.9334,stone,0.0,True,True,Wood,9,57.9799,False,S002,100.0,True
+2000.0,6.4111,1.589,1.9569,354838,1247,,38.3569,2530,4,True,1816,True,False,local,Arid,350.0224,-30,0.2584,7.1527,40.3126,wood,24.0,True,False,Adobe,6,186.5042,True,S001,0.0,True
+1748.5454,6.4694,9.9534,2.165,279016,1938,True,28.3263,1767,4,False,1066,True,True,imported,Arid,321.5401,-30,0.3623,40.1165,27.1236,wood,0.0,True,False,Adobe,6,183.752,True,S001,0.0,True
+1952.6522,6.4246,2.719,3.943,391956,1765,False,100.0,3960,4,True,1269,False,False,local,Arid,359.9483,-50,0.3174,80.715,21.6362,adobe,24.0,False,True,Wood,8,86.2601,False,S001,0.0,True
+2000.0,6.4283,1.8396,1.8415,287106,928,True,100.0,3493,4,False,1115,False,True,imported,Tropical,344.6816,-75,0.2139,69.1761,32.7665,adobe,0.0,True,,Adobe,3,134.3311,False,S001,0.0,False
+2000.0,5.5963,2.7438,1.0673,272061,390,False,86.2291,3099,4,False,1537,True,True,imported,Temperate,365.0,-70,0.1647,28.187,52.5554,stone,0.0,False,False,Adobe,1,150.2415,True,S002,0.0,True
+2000.0,6.339,1.461,1.8672,347697,908,,72.0028,1058,4,False,1221,True,True,imported,Arid,361.5844,-50,0.2899,49.1321,38.2703,wood,0.0,True,True,Stone masonry,2,163.5652,False,S004,0.0,False
+518.1884,6.4255,2.9705,1.4848,249363,1026,False,2.9961,471,4,True,1561,True,True,imported,Temperate,339.6392,-70,0.1379,49.6207,38.2504,stone,0.0,True,True,Stone masonry,1,117.5811,True,S004,0.0,False

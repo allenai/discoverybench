@@ -1,0 +1,128 @@
+{
+  "id": 2,
+  "domain": "steampunk culture",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to retro-futuristic design, steam-powered technology, and Victorian aesthetics.",
+      "columns": [
+        {
+          "name": "attends_steampunk_convention",
+          "description": "Indicates whether the participant attends an annual steampunk convention"
+        },
+        {
+          "name": "preference_for_communication",
+          "description": "Whether the participant prefers online or in-person communication"
+        },
+        {
+          "name": "monthly_budget_spent_on_steampunk",
+          "description": "Percentage of monthly budget spent on steampunk-related items"
+        },
+        {
+          "name": "num_of_hobbies",
+          "description": "Number of hobbies the participant is actively involved in"
+        },
+        {
+          "name": "distance_to_nearest_event",
+          "description": "The participant's geographical distance in kilometers to the nearest major steampunk event"
+        },
+        {
+          "name": "technology_fair_attendance",
+          "description": "Number of technology-related fairs the participant attends annually"
+        },
+        {
+          "name": "annual_spending_on_regular_clothing",
+          "description": "Annual spending on regular, non-themed clothing"
+        },
+        {
+          "name": "has_steampunk_credit_card",
+          "description": "Indicates whether the participant has a steampunk-themed credit card"
+        },
+        {
+          "name": "participant_id",
+          "description": "Unique identifier for each participant"
+        },
+        {
+          "name": "steampunk_literature_written",
+          "description": "Number of steampunk-themed literary works written by the participant each year"
+        },
+        {
+          "name": "employment_in_creative_field",
+          "description": "Whether the participant is employed in a creative field such as art, design, or entertainment"
+        },
+        {
+          "name": "steampunk_social_media_engagement",
+          "description": "The participant's engagement percentile in steampunk-related social media groups."
+        },
+        {
+          "name": "newsletter_subscription",
+          "description": "Whether the participant is subscribed to newsletters for upcoming steampunk events."
+        },
+        {
+          "name": "steampunk_content_exposure",
+          "description": "The amount of exposure to steampunk-themed content in media, rated on a scale from 1 to 10"
+        },
+        {
+          "name": "years_in_subculture",
+          "description": "Number of years the participant has been involved in the steampunk subculture"
+        },
+        {
+          "name": "age_range",
+          "description": "The age range of the participant."
+        },
+        {
+          "name": "has_steampunk_hobby",
+          "description": "Indicates whether the participant engages in hobbies related to steampunk culture"
+        },
+        {
+          "name": "num_of_themed_events_attended",
+          "description": "Number of steampunk-themed events attended in a year"
+        },
+        {
+          "name": "online_forum_participation",
+          "description": "Number of steampunk-related online forums the participant actively uses"
+        },
+        {
+          "name": "residence_type",
+          "description": "Type of area where the participant lives"
+        },
+        {
+          "name": "steampunk_art_created",
+          "description": "Number of steampunk-themed artworks created by the participant each year"
+        },
+        {
+          "name": "age_of_participant",
+          "description": "Age of the participant in years"
+        },
+        {
+          "name": "owns_steampunk_fashion_items",
+          "description": "Indicates whether the participant owns fashion items related to steampunk"
+        },
+        {
+          "name": "subculture_involvement",
+          "description": "Type of subculture participant is involved in"
+        },
+        {
+          "name": "online_steampunk_discussion_frequency",
+          "description": "Frequency of discussions on online forums about steampunk topics per month"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 478,
+      "question": "What is the relationship between the age of participants, their exposure to steampunk content, and their preference for communication?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "preference_for_communication",
+      "true_hypothesis": "The preference for communication is mainly determined by a calculated value based on the participant's age squared minus 5 times their exposure to steampunk content, resulting in a decision between online and in-person communication.",
+      "true_hypothesis_expr": "np.where(df['age_of_participant']**2 - 5 * df['steampunk_content_exposure'] < 1000, 'online', 'in_person')",
+      "relevant_cols": [
+        "age_of_participant",
+        "steampunk_content_exposure",
+        "preference_for_communication"
+      ]
+    }
+  ]
+}

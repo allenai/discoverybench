@@ -1,0 +1,96 @@
+{
+  "id": 1,
+  "domain": "ancient astronomy",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to celestial observations, ancient star maps, and early astronomical practices.",
+      "columns": [
+        {
+          "name": "trade_activity_level",
+          "description": "Numeric score representing the level of trade activity, where higher values indicate greater activity"
+        },
+        {
+          "name": "star_map_complexity",
+          "description": "Complexity rating of the star maps used on a scale from 1 to 10"
+        },
+        {
+          "name": "frequency_of_clear_skies",
+          "description": "Measure of how often the sky is clear, on a scale from 1 (rare) to 10 (frequent)."
+        },
+        {
+          "name": "star_chart_references",
+          "description": "Number of star charts created by the civilization"
+        },
+        {
+          "name": "star_map_detail_level",
+          "description": "Detail level of star maps, rated from 10 to 100 with higher values indicating greater details"
+        },
+        {
+          "name": "percentage_of_ancient_observatories",
+          "description": "The percentage of land area that contains ancient astronomical observatories."
+        },
+        {
+          "name": "astronomic_seasons_utilized",
+          "description": "Number of seasons in which the civilization made significant celestial observations"
+        },
+        {
+          "name": "star_charts_documented_percentile",
+          "description": "Percentile ranking of civilizations based on the number of documented star charts"
+        },
+        {
+          "name": "civilization_name",
+          "description": "Name of the ancient civilization"
+        },
+        {
+          "name": "technological_advancement_level",
+          "description": "Rating of technological advancements of the civilization on a scale from 1 to 5"
+        },
+        {
+          "name": "latitude",
+          "description": "The average latitude of the predominant area of the civilization"
+        },
+        {
+          "name": "binary_star_usage",
+          "description": "Percentage of navigational practices involving binary star systems"
+        },
+        {
+          "name": "advanced_calendar_systems",
+          "description": "Indicates if the civilization has a sophisticated system for tracking time based on celestial events"
+        },
+        {
+          "name": "number_of_clear_nights_per_year",
+          "description": "The total number of nights per year that experience clear skies, conducive for astronomical observations."
+        },
+        {
+          "name": "metallic_ore_deposits",
+          "description": "Indicates the presence of significant metallic ore deposits in the region"
+        },
+        {
+          "name": "lunar_phase_records",
+          "description": "Number of documented lunar phases per century"
+        },
+        {
+          "name": "single_star_usage",
+          "description": "Percentage of navigational practices using single stars"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 860,
+      "question": "What relationship can be observed between the number of astronomic seasons utilized and the detail level of star maps, considering the presence or absence of binary star usage in navigational practices?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "binary_star_usage",
+      "true_hypothesis": "There is a complex relationship between the number of astronomic seasons utilized, the detail level of star maps, and the percentage of navigational practices involving binary star systems.",
+      "true_hypothesis_expr": "50 + 2.0 * df['astronomic_seasons_utilized'] - 0.2 * df['star_map_detail_level'] ** 2 + 0.01 * df['astronomic_seasons_utilized'] * df['star_map_detail_level'] ** 2",
+      "relevant_cols": [
+        "astronomic_seasons_utilized",
+        "star_map_detail_level",
+        "binary_star_usage"
+      ]
+    }
+  ]
+}

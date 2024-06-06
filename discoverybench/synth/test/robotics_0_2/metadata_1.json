@@ -1,0 +1,114 @@
+{
+  "id": 1,
+  "domain": "robotics",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to automated machines, artificial intelligence, and industrial applications.",
+      "columns": [
+        {
+          "name": "tool_complexity_level",
+          "description": "Categorical rating of the tooling complexity on the robot, ranked from 1 to 5, where 5 indicates highly complex mechanisms."
+        },
+        {
+          "name": "continuous_operation_need",
+          "description": "Indicates if the robot needs to operate continuously, with true requiring continuous operation."
+        },
+        {
+          "name": "processing_speed_GHz",
+          "description": "The clock speed of the robot's central processing unit in gigahertz"
+        },
+        {
+          "name": "number_of_sensors",
+          "description": "Number of sensors installed on the robot"
+        },
+        {
+          "name": "has_dual_core_processor",
+          "description": "Indicates whether the robot's system uses a dual-core processor"
+        },
+        {
+          "name": "operational_uptime_percent",
+          "description": "The percentage of time the robot is operational in a given period, measures how long the robot works as compared to how long it could have worked, measured as a percentage."
+        },
+        {
+          "name": "continuous_operation_capable",
+          "description": "Indicates whether the robot is designed to operate without breaks or not"
+        },
+        {
+          "name": "power_supply_wattage",
+          "description": "The amount of power in watts that the robot's system requires to operate"
+        },
+        {
+          "name": "processor_speed",
+          "description": "Clock speed of the robot's CPU in GHz"
+        },
+        {
+          "name": "training_complexity",
+          "description": "Rating of training complexity based on required skills and tasks"
+        },
+        {
+          "name": "has_advanced_cooling",
+          "description": "Indicates whether the robot has advanced cooling mechanisms"
+        },
+        {
+          "name": "timed_task_sequence_count",
+          "description": "Number of tasks a robot is programmed to perform in a specific time order"
+        },
+        {
+          "name": "system_update_received",
+          "description": "Whether the robot has received a system update before the training commenced"
+        },
+        {
+          "name": "system_updates",
+          "description": "Number of system updates the robot has received in the last year"
+        },
+        {
+          "name": "primary_operational_focus",
+          "description": "The primary field of task the robot is designed for, e.g., industrial, service, research"
+        },
+        {
+          "name": "robot_id",
+          "description": "Unique identifier for each robot"
+        },
+        {
+          "name": "training_schedule_frequency",
+          "description": "Number of training sessions per month"
+        },
+        {
+          "name": "market_sector",
+          "description": "The primary market sector where the robot is deployed, e.g., consumer, industrial, research."
+        },
+        {
+          "name": "energy_efficiency",
+          "description": "Energy efficiency rating of the robot on a scale from 1 to 10, where 10 is the most efficient"
+        },
+        {
+          "name": "task_success_rate",
+          "description": "Percentage of tasks successfully completed by the robot"
+        },
+        {
+          "name": "task_designation",
+          "description": "Indicates if the robot is designed for light-duty tasks, where true means light-duty."
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 329,
+      "question": "Is there a relationship between the efficiency of energy usage and the speed at which processors operate in robotics applications?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "processor_speed",
+      "true_hypothesis": "Robots with higher energy efficiency ratings, more complex tooling mechanisms, and equipped with advanced cooling mechanisms tend to have higher processor speeds due to the direct impact of energy efficiency, tool complexity level, advanced cooling, and few other factors on processor speed.",
+      "true_hypothesis_expr": "1 + 0.8 * (df['operational_uptime_percent'] * 0.3 + df['tool_complexity_level'] * 3) / 50 + 0.3 * df['energy_efficiency'] + df['has_advanced_cooling'] * 1",
+      "relevant_cols": [
+        "energy_efficiency",
+        "has_advanced_cooling",
+        "operational_uptime_percent",
+        "tool_complexity_level",
+        "processor_speed"
+      ]
+    }
+  ]
+}

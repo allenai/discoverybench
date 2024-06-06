@@ -1,0 +1,189 @@
+{
+  "id": 5,
+  "domain": "literary classics",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to timeless novels, renowned authors, and literary masterpieces.",
+      "columns": [
+        {
+          "name": "narrative_style_relative_to_genre",
+          "description": "Numeric score assessing how the author's narrative style compares to prevailing styles within the same genre."
+        },
+        {
+          "name": "current_theme_popularity",
+          "description": "Score reflecting the popularity of the book's main theme based on recent movies and TV shows, normalized on a scale from 1 to 100."
+        },
+        {
+          "name": "tragic_ending",
+          "description": "Binary indicator if the novel ends on a tragic note, arguably increasing depth and emotional engagement."
+        },
+        {
+          "name": "author_origin_western",
+          "description": "A boolean indicating whether the author originates from a Western country."
+        },
+        {
+          "name": "author_award_recognition",
+          "description": "The percentage of awards won by the author out of total nominations received throughout their career."
+        },
+        {
+          "name": "lexical_density",
+          "description": "Percentage of unique words used among total words, reflecting language complexity"
+        },
+        {
+          "name": "new_techniques_used",
+          "description": "Binary indicator of whether new literary techniques typical for the time period are used in the book."
+        },
+        {
+          "name": "dynamic_characters",
+          "description": "Numeric count of characters in the novel who experience significant development or changes."
+        },
+        {
+          "name": "symbolic_elements_index",
+          "description": "A quantitative measure, on a scale from 1 to 20, reflecting the richness of symbolic elements used in the classical novel."
+        },
+        {
+          "name": "allegory_usage",
+          "description": "Indicator if allegorical elements are used in the narrative."
+        },
+        {
+          "name": "emotional_depth_percentile",
+          "description": "A percentile rank showing the depth of emotional engagement in the narrative, as perceived by readers."
+        },
+        {
+          "name": "influential_themes_count",
+          "description": "Count of major themes associated with different literary movements identified in the book."
+        },
+        {
+          "name": "target_audience_age",
+          "description": "Defines the main age group the book is targeted at"
+        },
+        {
+          "name": "modern_slang_ratio",
+          "description": "Percentage of words categorized as modern slang per total word count in the book"
+        },
+        {
+          "name": "literary_award_status",
+          "description": "Indicates if the book received a major literary award (e.g., Pulitzer, Booker)."
+        },
+        {
+          "name": "narrative_perspectives_count",
+          "description": "The count of different narrative perspectives employed within the classical novel."
+        },
+        {
+          "name": "author_recognition_factor",
+          "description": "A composite score calculated from the frequency of author's mentions in literary magazines and academic citations, normalized on a scale from 1 to 50."
+        },
+        {
+          "name": "main_character_arc_complexity",
+          "description": "Boolean indicating if the main character has a complex development arc."
+        },
+        {
+          "name": "foreshadowing_percentage",
+          "description": "The percentage use of foreshadowing technique in the narrative of the novel."
+        },
+        {
+          "name": "literary_award_winner",
+          "description": "Whether the book has won any major literary awards"
+        },
+        {
+          "name": "narrative_complexity_score",
+          "description": "A score assessing the structural and thematic complexity of the narrative in the novel."
+        },
+        {
+          "name": "author_genre_diversity",
+          "description": "Number of different literary genres in which the author has published works."
+        },
+        {
+          "name": "critical_review_score",
+          "description": "Average score of critical reviews on a scale of 1 to 10"
+        },
+        {
+          "name": "character_complexity_index",
+          "description": "A numeric index representing the complexity of character development in the novel, rated by literary critics."
+        },
+        {
+          "name": "author_award_count",
+          "description": "Total number of literary awards received by the author up to the publication year of the book"
+        },
+        {
+          "name": "publication_century",
+          "description": "The century in which the novel was published, coded numerically (e.g., 18 for the 18th century, 19 for the 19th century, etc.)."
+        },
+        {
+          "name": "era_influence",
+          "description": "A numerical value representing the impact of the era on the novel's writing style."
+        },
+        {
+          "name": "has_illustrations",
+          "description": "Indicates whether the book contains illustrations"
+        },
+        {
+          "name": "primary_themes",
+          "description": "Categorical depiction of the main themes of the novel, e.g., love, betrayal, war, friendship."
+        },
+        {
+          "name": "is_part_of_series",
+          "description": "Indicates if the book is part of a series (1) or not (0)"
+        },
+        {
+          "name": "period_language_style_factor",
+          "description": "Numeric indicator of language complexity typical for the period the book was written"
+        },
+        {
+          "name": "total_word_count",
+          "description": "Total number of words in the book"
+        },
+        {
+          "name": "number_of_main_characters",
+          "description": "Count of main characters in the book"
+        },
+        {
+          "name": "unexpected_twists",
+          "description": "Binary indication of whether the novel contains major plot twists."
+        },
+        {
+          "name": "public_interest_score",
+          "description": "Aggregate score of public interest based on social media mentions and search engine popularity, normalized on a scale from 1 to 100."
+        },
+        {
+          "name": "number_of_central_themes",
+          "description": "Count of central themes covered in the book"
+        },
+        {
+          "name": "symbol_richness_score",
+          "description": "A score reflecting the usage and depth of symbols in the novel."
+        },
+        {
+          "name": "average_age_of_main_characters",
+          "description": "Numeric average age of the main characters in the novel."
+        },
+        {
+          "name": "battles",
+          "description": "Numerical representation of complexity and depth of life challenges addressed in the novel."
+        },
+        {
+          "name": "historical_context_integration",
+          "description": "A boolean value indicating whether the novel directly incorporates actual historical events or settings."
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 161,
+      "question": "Can you identify the specific combination of narrative perspectives count, symbolic elements index, and main character arc complexity that most strongly correlates with the emotional depth percentile in literary classics?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "emotional_depth_percentile",
+      "true_hypothesis": "The emotional depth percentile of a literary classic can be influenced by the presence of multiple narrative perspectives, the richness of symbolic elements, and the complexity of the main character's development arc within the text.",
+      "true_hypothesis_expr": "10 * df['narrative_perspectives_count'] + 5 * df['symbolic_elements_index'] + 20 * df['main_character_arc_complexity'].astype(int)",
+      "relevant_cols": [
+        "narrative_perspectives_count",
+        "symbolic_elements_index",
+        "main_character_arc_complexity",
+        "emotional_depth_percentile"
+      ]
+    }
+  ]
+}

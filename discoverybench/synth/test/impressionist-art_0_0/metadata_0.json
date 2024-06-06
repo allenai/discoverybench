@@ -1,0 +1,195 @@
+{
+  "id": 0,
+  "domain": "impressionist art",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to the impressionist movement, Monet, Renoir, and landscape paintings.",
+      "columns": [
+        {
+          "name": "brush_stroke_type",
+          "description": "Categorical descriptor of the brush stroke type used predominantly in the painting (fine, broad, dabbed, etc.)."
+        },
+        {
+          "name": "diversity_of_works",
+          "description": "A measure from 0 to 1 representing the diversity of types of paintings the artist has produced, calculated as the ratio of unique painting types to total works."
+        },
+        {
+          "name": "volcanic_activity",
+          "description": "Level of volcanic activity during the year of painting"
+        },
+        {
+          "name": "is_international",
+          "description": "Indicates if the painting is sourced from an international location."
+        },
+        {
+          "name": "artist_popularity",
+          "description": "Popularity level of the artist on a scale from 1 to 10"
+        },
+        {
+          "name": "light_source",
+          "description": "Type of light source used in the painting, either natural or artificial"
+        },
+        {
+          "name": "industrial_elements_presence",
+          "description": "Presence of industrial elements such as factories and smokestacks in the painting"
+        },
+        {
+          "name": "style_popularity_index",
+          "description": "A numerical index representing the popularity of the impressionist art style"
+        },
+        {
+          "name": "average_sale_price",
+          "description": "The average sale price of the artist's paintings in thousands of dollars."
+        },
+        {
+          "name": "elevation",
+          "description": "Elevation of the location where the painting was created in meters"
+        },
+        {
+          "name": "exhibitions_count",
+          "description": "Total number of exhibitions where the artist's works have been shown."
+        },
+        {
+          "name": "non_prestigious_gallery_displays",
+          "description": "Count of how many times the painting has been displayed in non-prestigious galleries"
+        },
+        {
+          "name": "awards_count",
+          "description": "Number of prestigious art awards received by the artist."
+        },
+        {
+          "name": "painting_year_estimation",
+          "description": "Estimated year in which the painting was created"
+        },
+        {
+          "name": "symposium_exposures",
+          "description": "Number of times the artist's works have been exposed at major art symposiums"
+        },
+        {
+          "name": "associated_art_movements_count",
+          "description": "The count of major art movements that the artist was a part of."
+        },
+        {
+          "name": "period_of_impressionism",
+          "description": "Categorizes the period of the impressionist movement when the painting was created"
+        },
+        {
+          "name": "artist_name",
+          "description": "Name of the artist"
+        },
+        {
+          "name": "brush_stroke_detail_level",
+          "description": "Score representing the level of detail in the brush strokes, higher scores indicate more detailed brushwork."
+        },
+        {
+          "name": "artist_notoriety",
+          "description": "A numerical value representing the overall fame and recognition of the artist"
+        },
+        {
+          "name": "exhibition_frequency",
+          "description": "Number of times the painting has been exhibited in the last decade"
+        },
+        {
+          "name": "artworks_sold",
+          "description": "Number of artworks sold during the artist's lifetime."
+        },
+        {
+          "name": "season_created",
+          "description": "The season in which the painting was created"
+        },
+        {
+          "name": "count_natural_elements",
+          "description": "Number of recognizably natural elements such as trees, water, or flowers depicted in the painting"
+        },
+        {
+          "name": "contains_landscape",
+          "description": "Indicates whether the painting features a landscape"
+        },
+        {
+          "name": "is_temporary_exhibition",
+          "description": "Indicates if the painting is on temporary exhibition."
+        },
+        {
+          "name": "tourist_season",
+          "description": "Represents whether the count was done during the high tourist season."
+        },
+        {
+          "name": "technique_popularity",
+          "description": "Popularity of the painting technique during the era measured on a scale"
+        },
+        {
+          "name": "time_period",
+          "description": "The period when the painting was created, categorized as before or after 1890"
+        },
+        {
+          "name": "blue_hue_range",
+          "description": "Indicator of the range of blue hues used in the painting"
+        },
+        {
+          "name": "part_of_series",
+          "description": "Boolean flag indicating if the painting is part of a recognized series."
+        },
+        {
+          "name": "painting_style",
+          "description": "Artistic style of the painting"
+        },
+        {
+          "name": "artist_period",
+          "description": "Categorical label of the artistic period the artist was most active in"
+        },
+        {
+          "name": "number_of_exhibitions",
+          "description": "The total number of exhibitions featuring the artist's paintings."
+        },
+        {
+          "name": "year_of_creation",
+          "description": "The year the painting was created."
+        },
+        {
+          "name": "modern_elements_count",
+          "description": "Number of modern elements such as buildings, vehicles, and roads identified in the painting"
+        },
+        {
+          "name": "landscape_elements_count",
+          "description": "Number of landscape elements such as trees, water bodies, and fields identified in the painting"
+        },
+        {
+          "name": "active_in_paris",
+          "description": "Binary flag indicating whether the artist was primarily active in Paris during the Impressionist period."
+        },
+        {
+          "name": "painting_age",
+          "description": "Age of the painting calculated from the current year minus the year the painting was created."
+        },
+        {
+          "name": "spring_exhibition_day",
+          "description": "Day of the year when painting was first exhibited in spring"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 999,
+      "question": "Is there a relationship between the presence of modern elements in impressionist art paintings and the number of artworks sold by the artist?",
+      "question_type": "general",
+      "difficulty": 4,
+      "target_col": "blue_hue_range",
+      "true_hypothesis": "Landscape paintings by Monet and Renoir from the impressionist movement between 1870 and 1890 were more likely to use additional blue hues, enhancing atmospheric clarity, during periods of heightened volcanic activity. The likelihood of using additional blue hues increased by 60% for every unit increase in volcanic activity levels, suggesting a strong correlation between volcanic activity and the usage of blue hues.",
+      "true_hypothesis_expr": "np.where(((df['volcanic_activity'] > 5) & ((1870 + ((1890 - 1870) * (100 - (df['landscape_elements_count'] * 0.5 - np.ceil(df['modern_elements_count'] / 10 + (df['painting_year_estimation'] - 1870) / 12.5 + df['industrial_elements_presence']*1) ** 2 + (df['exhibitions_count']**3 + df['artworks_sold']**2 * df['awards_count'] + 2.5) * 10)/100.0)) >= 1870) & ((1870 + ((1890 - 1870) * (100 - (df['landscape_elements_count'] * 0.5 - np.ceil(df['modern_elements_count'] / 10 + (df['painting_year_estimation'] - 1870) / 12.5 + df['industrial_elements_presence']*1) ** 2 + (df['exhibitions_count']**3 + df['artworks_sold']**2 * df['awards_count'] + 2.5) * 10)/100.0)) <= 1890) & ((df['artist_name'] == 'Monet') | (df['artist_name'] == 'Renoir'))), 60 + df['volcanic_activity'] * 2, 30 + df['volcanic_activity'])",
+      "relevant_cols": [
+        "artist_name",
+        "volcanic_activity",
+        "landscape_elements_count",
+        "modern_elements_count",
+        "painting_year_estimation",
+        "industrial_elements_presence",
+        "exhibitions_count",
+        "artworks_sold",
+        "awards_count",
+        "blue_hue_range"
+      ]
+    }
+  ]
+}

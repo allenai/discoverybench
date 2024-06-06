@@ -1,0 +1,148 @@
+{
+  "id": 0,
+  "domain": "ancient architecture",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to historic buildings, architectural marvels, and ancient construction techniques.",
+      "columns": [
+        {
+          "name": "ceremonial_use",
+          "description": "Indicates if the structure was used for ceremonial purposes"
+        },
+        {
+          "name": "climate_harshness_score",
+          "description": "A numerical representation of the harshness of the climate where the structure is located, with higher values indicating more severe weather conditions"
+        },
+        {
+          "name": "structural_complexity",
+          "description": "A numerical score representing the complexity of the building's architecture."
+        },
+        {
+          "name": "shape_index",
+          "description": "Metric combining the width and height of the structure to assess its shape, calculated as height divided by width plus width divided by height."
+        },
+        {
+          "name": "preventive_measures",
+          "description": "Indicates if routine preventive measures against erosion and material degradation are applied"
+        },
+        {
+          "name": "structure_age",
+          "description": "Age of the structure in years"
+        },
+        {
+          "name": "height_meters",
+          "description": "Height of the structure in meters"
+        },
+        {
+          "name": "modern_infrastructure",
+          "description": "Indicates whether the building is equipped with modern infrastructure such as electricity and plumbing."
+        },
+        {
+          "name": "neighbor_inscription_percentage",
+          "description": "Percentage of nearby ancient structures that have foundational inscriptions."
+        },
+        {
+          "name": "site_location_region",
+          "description": "The geographical region the site is located in, like 'Tropical', 'Temperate', or 'Arid'"
+        },
+        {
+          "name": "building_material_reflectivity",
+          "description": "Measure of how much sunlight the building's primary exterior materials can reflect"
+        },
+        {
+          "name": "reliance_on_natural_lighting",
+          "description": "Whether the building design primarily relies on natural lighting for illumination and temperature regulation"
+        },
+        {
+          "name": "has_stone_foundation",
+          "description": "Indicates whether the building has a stone foundation or not"
+        },
+        {
+          "name": "restoration_presence",
+          "description": "Binary indicator of whether the nearby area has ongoing or recent restoration efforts."
+        },
+        {
+          "name": "construction_year",
+          "description": "Year the structure was constructed"
+        },
+        {
+          "name": "average_wall_thickness",
+          "description": "Average thickness of the walls measured in centimeters"
+        },
+        {
+          "name": "facade_complexity_index",
+          "description": "Score representing the complexity of geometric patterns and ornamental design on the structure's facade"
+        },
+        {
+          "name": "daily_visitor_count",
+          "description": "Average number of visitors per day"
+        },
+        {
+          "name": "distance_to_nearest_village_km",
+          "description": "Distance in kilometers to the nearest village"
+        },
+        {
+          "name": "has_foundational_inscription",
+          "description": "Indicates whether the structure has historical inscriptions on its foundation."
+        },
+        {
+          "name": "local_construction_materials",
+          "description": "The primary material used in the building's construction, categorized by local availability."
+        },
+        {
+          "name": "durability_material_percentage",
+          "description": "Percentage of nearby ancient structures that utilize highly durable construction materials."
+        },
+        {
+          "name": "material_origin",
+          "description": "Indicates if the building materials were locally sourced"
+        },
+        {
+          "name": "urban_shadowing",
+          "description": "Binary indicator if the building is in an urban area with significant shadowing by other tall buildings"
+        },
+        {
+          "name": "opening_area_percentage",
+          "description": "Percentage of total wall area devoted to windows and other openings"
+        },
+        {
+          "name": "structure_id",
+          "description": "Unique identifier for each structure"
+        },
+        {
+          "name": "ratio_of_clear_to_cloudy_days",
+          "description": "The ratio of clear days to cloudy days annually at the building's location"
+        },
+        {
+          "name": "average_tourist_visits_per_year",
+          "description": "Average number of tourists visiting the structure per year"
+        },
+        {
+          "name": "in_historical_conservation_area",
+          "description": "Whether the structure is within a legally protected historical conservation area"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 113,
+      "question": "What factors influence the shape index of ancient structures in relation to their geographical region, preventive measures taken, and structural characteristics?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "shape_index",
+      "true_hypothesis": "The geographical region of the site, application of preventive measures, and the structure's dimensions impact the shape index of ancient structures.",
+      "true_hypothesis_expr": "np.where((df['site_location_region'] == 'Tropical') & df['preventive_measures'], df['daily_visitor_count'] * 0.02 + 50, df.get('preservation_score', 0)) * 0.5 + (np.where((df['average_wall_thickness'] > 100) & (df['has_stone_foundation'] == True), 20, np.where((df['average_wall_thickness'] > 50) & (df['has_stone_foundation'] == False), 15, 10)))",
+      "relevant_cols": [
+        "daily_visitor_count",
+        "preventive_measures",
+        "site_location_region",
+        "average_wall_thickness",
+        "has_stone_foundation",
+        "preservation_score",
+        "shape_index"
+      ]
+    }
+  ]
+}

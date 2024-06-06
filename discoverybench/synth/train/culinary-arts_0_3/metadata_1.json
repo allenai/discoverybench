@@ -1,0 +1,105 @@
+{
+  "id": 1,
+  "domain": "culinary arts",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to cooking techniques, gastronomy, and culinary traditions.",
+      "columns": [
+        {
+          "name": "participation_in_culinary_innovation_programs",
+          "description": "Binary indicator of the chef's involvement in any culinary innovation programs focused on modern cooking techniques and ingredients"
+        },
+        {
+          "name": "culinary_competition_participation",
+          "description": "Number of culinary competitions the chef participates in annually"
+        },
+        {
+          "name": "number_of_awards",
+          "description": "Total number of culinary awards won by the chef"
+        },
+        {
+          "name": "international_competitions_attended",
+          "description": "Number of international culinary competitions the chef has attended"
+        },
+        {
+          "name": "chef_id",
+          "description": "Unique identifier for each chef"
+        },
+        {
+          "name": "has_formal_culinary_education",
+          "description": "Indicates whether the chef has formal culinary education"
+        },
+        {
+          "name": "chef_innovation_score",
+          "description": "A numerical score from 1 to 100 representing the chef's tendency to innovate and try new culinary methods"
+        },
+        {
+          "name": "menu_items_count",
+          "description": "Total number of different dishes available on the chef's menu"
+        },
+        {
+          "name": "gastronomic_techniques_count",
+          "description": "The count of different gastronomic techniques used by the chef"
+        },
+        {
+          "name": "uses_international_flavors",
+          "description": "Indicates whether the chef incorporates international flavors into their cuisine"
+        },
+        {
+          "name": "menu_change_frequency",
+          "description": "Number of times the chef changes the menu annually"
+        },
+        {
+          "name": "local_supplier_partnerships",
+          "description": "Number of local suppliers from which the chef sources ingredients"
+        },
+        {
+          "name": "cuisine_complexity",
+          "description": "A score representing the complexity of the cuisine type the chef specializes in"
+        },
+        {
+          "name": "chef_experience",
+          "description": "Number of years of professional cooking experience the chef has"
+        },
+        {
+          "name": "ingredients_diversity_score",
+          "description": "A score representing the diversity of ingredients used by the chef"
+        },
+        {
+          "name": "seasonal_ingredient_usage",
+          "description": "Percentage of ingredients that are seasonal in the chef's dishes"
+        },
+        {
+          "name": "number_of_signature_dishes",
+          "description": "Total number of signature dishes a chef has developed"
+        },
+        {
+          "name": "region_climate",
+          "description": "Climatic condition of the region the chef works in"
+        },
+        {
+          "name": "preferred_cooking_method",
+          "description": "Primary cooking method preferred by the chef"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 1043,
+      "question": "Is there a relationship between the frequency of menu changes in restaurants and the chefs' innovation scores?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "menu_change_frequency",
+      "true_hypothesis": "Chefs who participate in more culinary competitions, have a higher number of signature dishes, and possess a higher chef innovation score tend to change their menu more frequently.",
+      "true_hypothesis_expr": "df['culinary_competition_participation'] + df['number_of_signature_dishes'] // 5 + df['chef_innovation_score'] // 10",
+      "relevant_cols": [
+        "culinary_competition_participation",
+        "number_of_signature_dishes",
+        "chef_innovation_score",
+        "menu_change_frequency"
+      ]
+    }
+  ]
+}

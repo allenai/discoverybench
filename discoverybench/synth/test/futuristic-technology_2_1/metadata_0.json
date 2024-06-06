@@ -1,0 +1,126 @@
+{
+  "id": 0,
+  "domain": "futuristic technology",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to cutting-edge inventions, future gadgets, and sci-fi concepts.",
+      "columns": [
+        {
+          "name": "government_investment",
+          "description": "Amount of funds invested by the government in futuristic technology per year in millions."
+        },
+        {
+          "name": "age_of_household_head",
+          "description": "Age of the head of the household"
+        },
+        {
+          "name": "regulatory_change_rate",
+          "description": "The count of significant technology-related regulatory updates made per year."
+        },
+        {
+          "name": "urban_area",
+          "description": "Whether the household is in an urban area"
+        },
+        {
+          "name": "digital_infrastructure_index",
+          "description": "An index from 0 to 10 measuring the quality and accessibility of digital infrastructure such as internet speed, public Wi-Fi access points, and digital education tools."
+        },
+        {
+          "name": "tech_openness_score",
+          "description": "Score rating the household's openness to technology on a scale from 1 to 10"
+        },
+        {
+          "name": "public_interest_in_tech",
+          "description": "Binary indicator of public interest in technology, where 1 represents high interest and 0 represents low interest, based on surveys and media analysis."
+        },
+        {
+          "name": "public_interest",
+          "description": "A rating from 0 to 100 reflecting public interest in adopting futuristic technologies in the area"
+        },
+        {
+          "name": "investment_in_tech_sector_percentage",
+          "description": "Percentage of the family's total investments that are allocated to technology sectors"
+        },
+        {
+          "name": "tech_patent_applications_per_1000",
+          "description": "Number of technological patent applications filed per 1000 residents in the area annually."
+        },
+        {
+          "name": "household_income",
+          "description": "Categorical income levels of the household"
+        },
+        {
+          "name": "robot_programming_skill_level",
+          "description": "Rated skill level of robot programming in the household from beginner (1), intermediate (2), to advanced (3)"
+        },
+        {
+          "name": "technological_advancement_cluster",
+          "description": "Binary indicator whether the area is considered as having high technological advancement"
+        },
+        {
+          "name": "tech_workshops_frequency",
+          "description": "Number of technology-based workshops conducted in the region per year."
+        },
+        {
+          "name": "smart_home_ownership",
+          "description": "Indicates if the household has smart home systems installed"
+        },
+        {
+          "name": "year",
+          "description": "The year of observation"
+        },
+        {
+          "name": "households_with_internet_percent",
+          "description": "Percentage of households in the area that have internet access."
+        },
+        {
+          "name": "technological_readiness",
+          "description": "An index rating from 0 to 100 representing how prepared an area is to implement futuristic technologies"
+        },
+        {
+          "name": "annual_tech_expos",
+          "description": "Counts the number of technology exhibitions held annually in the area"
+        },
+        {
+          "name": "decision_making_robots",
+          "description": "Whether robots used can perform tasks requiring human decision-making"
+        },
+        {
+          "name": "flagship_tech_company_presence",
+          "description": "Indicates if there is at least one flagship technology company (e.g., major corporations in innovation) in the area"
+        },
+        {
+          "name": "stem_graduate_percentage",
+          "description": "Percentage of the total population that graduates each year with a degree in science, technology, engineering, or mathematics."
+        },
+        {
+          "name": "number_of_robots",
+          "description": "Number of robot assistants used in the household"
+        },
+        {
+          "name": "VR_training_facility_present",
+          "description": "Indicates whether the household has a virtual reality setup for technical training"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 654,
+      "question": "Is there a relationship between the year of predominant technology uptake by 2030 and a combination of technological readiness and public interest levels in technologically advanced urban areas where the urban area and technological advancement cluster coexist?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "year",
+      "true_hypothesis": "By 2030, the year of predominant technology uptake can be predicted by assessing technological readiness and public interest levels, with a strong relationship observed only in technologically advanced urban areas where the urban area and technological advancement cluster coexist, and adjusting the prediction based on the technological readiness and public interest levels.",
+      "true_hypothesis_expr": "np.where(df['urban_area'] & df['technological_advancement_cluster'], 2030 - (df['technological_readiness']/10 + df['public_interest']/10)%10, 2022)",
+      "relevant_cols": [
+        "urban_area",
+        "public_interest",
+        "technological_readiness",
+        "technological_advancement_cluster",
+        "year"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": 0,
+  "domain": "futuristic technology",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to cutting-edge inventions, future gadgets, and sci-fi concepts.",
+      "columns": [
+        {
+          "name": "tech_openness_score",
+          "description": "Score rating the household's openness to technology on a scale from 1 to 10"
+        },
+        {
+          "name": "government_investment",
+          "description": "Amount of funds invested by the government in futuristic technology per year in millions."
+        },
+        {
+          "name": "households_with_internet_percent",
+          "description": "Percentage of households in the area that have internet access."
+        },
+        {
+          "name": "public_interest",
+          "description": "A rating from 0 to 100 reflecting public interest in adopting futuristic technologies in the area"
+        },
+        {
+          "name": "household_income",
+          "description": "Categorical income levels of the household"
+        },
+        {
+          "name": "stem_graduate_percentage",
+          "description": "Percentage of the total population that graduates each year with a degree in science, technology, engineering, or mathematics."
+        },
+        {
+          "name": "number_of_robots",
+          "description": "Number of robot assistants used in the household"
+        },
+        {
+          "name": "decision_making_robots",
+          "description": "Whether robots used can perform tasks requiring human decision-making"
+        },
+        {
+          "name": "urban_area",
+          "description": "Whether the household is in an urban area"
+        },
+        {
+          "name": "tech_patent_applications_per_1000",
+          "description": "Number of technological patent applications filed per 1000 residents in the area annually."
+        },
+        {
+          "name": "robot_use_prediction",
+          "description": "Predictive measure of robot use in households by 2030"
+        },
+        {
+          "name": "digital_infrastructure_index",
+          "description": "An index from 0 to 10 measuring the quality and accessibility of digital infrastructure such as internet speed, public Wi-Fi access points, and digital education tools."
+        },
+        {
+          "name": "VR_training_facility_present",
+          "description": "Indicates whether the household has a virtual reality setup for technical training"
+        },
+        {
+          "name": "annual_tech_expos",
+          "description": "Counts the number of technology exhibitions held annually in the area"
+        },
+        {
+          "name": "investment_in_tech_sector_percentage",
+          "description": "Percentage of the family's total investments that are allocated to technology sectors"
+        },
+        {
+          "name": "public_interest_in_tech",
+          "description": "Binary indicator of public interest in technology, where 1 represents high interest and 0 represents low interest, based on surveys and media analysis."
+        },
+        {
+          "name": "smart_home_ownership",
+          "description": "Indicates if the household has smart home systems installed"
+        },
+        {
+          "name": "tech_workshops_frequency",
+          "description": "Number of technology-based workshops conducted in the region per year."
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 647,
+      "question": "What is the relationship between the frequency of tech workshops and the number of tech patent applications per 1000 people in urban areas, considering the level of government investment in futuristic technology?",
+      "question_type": "general",
+      "difficulty": 4,
+      "target_col": "robot_use_prediction",
+      "true_hypothesis": "By 2030, households in urban areas with specified criteria are predicted to have a likelihood of using robots for daily chores, calculated based on a complex expression involving various technological factors. The prediction also includes a variable weighting based on household income levels for different scenarios.",
+      "true_hypothesis_expr": "np.where((np.where(df['urban_area'] & np.where(np.where(df['tech_patent_applications_per_1000']**2 / 100 + df['households_with_internet_percent'] / 100 >= 50, True, False) & (df['annual_tech_expos'] > 10), True, False), 2030 - ((0.2 * df['government_investment'] + 3 * round(5 * df['stem_graduate_percentage']/100 + 5 * df['public_interest_in_tech'] + df['digital_infrastructure_index'] + 0.05 * df['tech_workshops_frequency'])/10 + df['public_interest']/10)%10, 2022) == 2030) & (df['urban_area'] == True) & ((df['number_of_robots'] > 0) | df['decision_making_robots']), np.where(df['household_income'] == 'high', 0.9, np.where(df['household_income'] == 'medium', 0.75, 0.6)), 0)",
+      "relevant_cols": [
+        "urban_area",
+        "household_income",
+        "number_of_robots",
+        "decision_making_robots",
+        "public_interest",
+        "government_investment",
+        "tech_workshops_frequency",
+        "stem_graduate_percentage",
+        "public_interest_in_tech",
+        "digital_infrastructure_index",
+        "annual_tech_expos",
+        "tech_patent_applications_per_1000",
+        "households_with_internet_percent",
+        "robot_use_prediction"
+      ]
+    }
+  ]
+}

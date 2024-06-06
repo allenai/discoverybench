@@ -1,0 +1,104 @@
+{
+  "id": 1,
+  "domain": "futuristic technology",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to cutting-edge inventions, future gadgets, and sci-fi concepts.",
+      "columns": [
+        {
+          "name": "households_with_internet_percent",
+          "description": "Percentage of households in the area that have internet access."
+        },
+        {
+          "name": "digital_infrastructure_index",
+          "description": "An index from 0 to 10 measuring the quality and accessibility of digital infrastructure such as internet speed, public Wi-Fi access points, and digital education tools."
+        },
+        {
+          "name": "public_interest_in_tech",
+          "description": "Binary indicator of public interest in technology, where 1 represents high interest and 0 represents low interest, based on surveys and media analysis."
+        },
+        {
+          "name": "government_investment",
+          "description": "Amount of funds invested by the government in futuristic technology per year in millions."
+        },
+        {
+          "name": "urban_area",
+          "description": "Whether the household is in an urban area"
+        },
+        {
+          "name": "household_income",
+          "description": "Categorical income levels of the household"
+        },
+        {
+          "name": "stem_graduate_percentage",
+          "description": "Percentage of the total population that graduates each year with a degree in science, technology, engineering, or mathematics."
+        },
+        {
+          "name": "regulatory_change_rate",
+          "description": "The count of significant technology-related regulatory updates made per year."
+        },
+        {
+          "name": "smart_home_ownership",
+          "description": "Indicates if the household has smart home systems installed"
+        },
+        {
+          "name": "VR_training_facility_present",
+          "description": "Indicates whether the household has a virtual reality setup for technical training"
+        },
+        {
+          "name": "tech_patent_applications_per_1000",
+          "description": "Number of technological patent applications filed per 1000 residents in the area annually."
+        },
+        {
+          "name": "public_interest",
+          "description": "A rating from 0 to 100 reflecting public interest in adopting futuristic technologies in the area"
+        },
+        {
+          "name": "tech_workshops_frequency",
+          "description": "Number of technology-based workshops conducted in the region per year."
+        },
+        {
+          "name": "decision_making_robots",
+          "description": "Whether robots used can perform tasks requiring human decision-making"
+        },
+        {
+          "name": "investment_in_tech_sector_percentage",
+          "description": "Percentage of the family's total investments that are allocated to technology sectors"
+        },
+        {
+          "name": "number_of_robots",
+          "description": "Number of robot assistants used in the household"
+        },
+        {
+          "name": "annual_tech_expos",
+          "description": "Counts the number of technology exhibitions held annually in the area"
+        },
+        {
+          "name": "flagship_tech_company_presence",
+          "description": "Indicates if there is at least one flagship technology company (e.g., major corporations in innovation) in the area"
+        },
+        {
+          "name": "tech_openness_score",
+          "description": "Score rating the household's openness to technology on a scale from 1 to 10"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 651,
+      "question": "Is there a relationship between the square of tech patent applications per 1000 and households with internet percentage in predicting the presence of at least one flagship technology company in an area?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "flagship_tech_company_presence",
+      "true_hypothesis": "The calculated value based on the square of tech patent applications per 1000 and households with internet percentage being greater than or equal to 50 determines the presence of at least one flagship technology company in the area.",
+      "true_hypothesis_expr": "np.where(df['tech_patent_applications_per_1000']**2 / 100 + df['households_with_internet_percent'] / 100 >= 50, True, False)",
+      "relevant_cols": [
+        "tech_patent_applications_per_1000",
+        "households_with_internet_percent",
+        "flagship_tech_company_presence"
+      ]
+    }
+  ]
+}

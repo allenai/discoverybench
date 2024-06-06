@@ -1,0 +1,89 @@
+{
+  "id": 0,
+  "domain": "neuroscience",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to brain functions, neural pathways, and cognitive research.",
+      "columns": [
+        {
+          "name": "social_media_for_academia",
+          "description": "Average hours per week the participant uses social media to share or gather academic content"
+        },
+        {
+          "name": "degree_level",
+          "description": "Highest level of education degree obtained by the participant"
+        },
+        {
+          "name": "cognitive_games_frequency",
+          "description": "Number of times per week the participant engages in cognitive enhancing games"
+        },
+        {
+          "name": "participation_in_cognitive_research",
+          "description": "Number of cognitive research studies the participant has taken part in over the past year"
+        },
+        {
+          "name": "age",
+          "description": "Age of the participant"
+        },
+        {
+          "name": "hours_spent_on_cognitive_apps",
+          "description": "Number of hours per week the participant spends on apps designed for cognitive training"
+        },
+        {
+          "name": "memory_task_performance",
+          "description": "Score on standardized memory tasks, scaled between 0 and 10"
+        },
+        {
+          "name": "digital_resource_access",
+          "description": "Access level to digital resources like internet and educational software (scale 1-10)"
+        },
+        {
+          "name": "daily_meditation",
+          "description": "Whether the participant meditates daily"
+        },
+        {
+          "name": "occupation",
+          "description": "Occupation of the participant categorized into types such as student, professional, unemployed, etc."
+        },
+        {
+          "name": "omega_3_intake_level",
+          "description": "Level of omega-3 fatty acids intake measured in grams per day"
+        },
+        {
+          "name": "smart_device_ownership",
+          "description": "Whether the participant owns a smart device such as a smartphone, tablet, or smartwatch"
+        },
+        {
+          "name": "gender",
+          "description": "Gender of the participant"
+        },
+        {
+          "name": "normalized_response_time",
+          "description": "Measure related to response time normalization"
+        },
+        {
+          "name": "problem_solving_response_time",
+          "description": "Time taken to activate neural pathways during a problem-solving task (in milliseconds)"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 390,
+      "question": "Is there a relationship between omega-3 intake levels and memory task performance impacting normalized response times in individuals?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "normalized_response_time",
+      "true_hypothesis": "People with higher omega-3 intake levels and better memory task performance exhibit lower normalized response times, acknowledging the role of nutrition and cognitive abilities in response time efficiency.",
+      "true_hypothesis_expr": "df['problem_solving_response_time'] / (1 + 0.1 * df['omega_3_intake_level']**2 + 0.2 * df['memory_task_performance'] + 0.05)",
+      "relevant_cols": [
+        "problem_solving_response_time",
+        "omega_3_intake_level",
+        "memory_task_performance",
+        "normalized_response_time"
+      ]
+    }
+  ]
+}

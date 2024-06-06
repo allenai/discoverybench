@@ -1,0 +1,159 @@
+{
+  "id": 0,
+  "domain": "ancient architecture",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to historic buildings, architectural marvels, and ancient construction techniques.",
+      "columns": [
+        {
+          "name": "average_age_of_neighbors",
+          "description": "Average age in years of the nearby structures."
+        },
+        {
+          "name": "material_durability_score",
+          "description": "Score representing the durability of the primary construction material, higher values indicate stronger materials"
+        },
+        {
+          "name": "facade_complexity_index",
+          "description": "Score representing the complexity of geometric patterns and ornamental design on the structure's facade"
+        },
+        {
+          "name": "material_usage_ratio",
+          "description": "Ratio reflecting the extent of material usage patterns within or around the structure."
+        },
+        {
+          "name": "average_tourist_visits_per_year",
+          "description": "Average number of tourists visiting the structure per year"
+        },
+        {
+          "name": "structure_age",
+          "description": "Age of the structure in years"
+        },
+        {
+          "name": "in_historical_conservation_area",
+          "description": "Whether the structure is within a legally protected historical conservation area"
+        },
+        {
+          "name": "durability_material_percentage",
+          "description": "Percentage of nearby ancient structures that utilize highly durable construction materials."
+        },
+        {
+          "name": "daily_visitor_count",
+          "description": "Average number of visitors per day"
+        },
+        {
+          "name": "climate_harshness_score",
+          "description": "A numerical representation of the harshness of the climate where the structure is located, with higher values indicating more severe weather conditions"
+        },
+        {
+          "name": "ceremonial_use",
+          "description": "Indicates if the structure was used for ceremonial purposes"
+        },
+        {
+          "name": "construction_year",
+          "description": "Year the structure was constructed"
+        },
+        {
+          "name": "modern_infrastructure",
+          "description": "Indicates whether the building is equipped with modern infrastructure such as electricity and plumbing."
+        },
+        {
+          "name": "urban_shadowing",
+          "description": "Binary indicator if the building is in an urban area with significant shadowing by other tall buildings"
+        },
+        {
+          "name": "material_origin",
+          "description": "Indicates if the building materials were locally sourced"
+        },
+        {
+          "name": "site_location_region",
+          "description": "The geographical region the site is located in, like 'Tropical', 'Temperate', or 'Arid'"
+        },
+        {
+          "name": "ratio_of_clear_to_cloudy_days",
+          "description": "The ratio of clear days to cloudy days annually at the building's location"
+        },
+        {
+          "name": "latitude",
+          "description": "Latitude of the building location, indicating distance from the equator"
+        },
+        {
+          "name": "building_material_reflectivity",
+          "description": "Measure of how much sunlight the building's primary exterior materials can reflect"
+        },
+        {
+          "name": "neighbor_inscription_percentage",
+          "description": "Percentage of nearby ancient structures that have foundational inscriptions."
+        },
+        {
+          "name": "height_meters",
+          "description": "Height of the structure in meters"
+        },
+        {
+          "name": "local_construction_materials",
+          "description": "The primary material used in the building's construction, categorized by local availability."
+        },
+        {
+          "name": "average_daily_sunlight_hours",
+          "description": "Average number of hours per day the location receives sunlight"
+        },
+        {
+          "name": "restoration_presence",
+          "description": "Binary indicator of whether the nearby area has ongoing or recent restoration efforts."
+        },
+        {
+          "name": "has_stone_foundation",
+          "description": "Indicates whether the building has a stone foundation or not"
+        },
+        {
+          "name": "construction_method",
+          "description": "Indicates the predominant technology used in construction, such as 'Stone masonry', 'Adobe', or 'Wood'."
+        },
+        {
+          "name": "structural_complexity",
+          "description": "A numerical score representing the complexity of the building's architecture."
+        },
+        {
+          "name": "average_wall_thickness",
+          "description": "Average thickness of the walls measured in centimeters"
+        },
+        {
+          "name": "reliance_on_natural_lighting",
+          "description": "Whether the building design primarily relies on natural lighting for illumination and temperature regulation"
+        },
+        {
+          "name": "structure_id",
+          "description": "Unique identifier for each structure"
+        },
+        {
+          "name": "preservation_score",
+          "description": "A numeric score representing the state of the building's degradation, with lower scores indicating more erosion and higher scores indicating better preservation."
+        },
+        {
+          "name": "preventive_measures",
+          "description": "Indicates if routine preventive measures against erosion and material degradation are applied"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 108,
+      "question": "Is there a relationship between the material usage ratio of ancient architectural structures and their average tourist visits per year, material durability score, presence in a historical conservation area, and ceremonial use?",
+      "question_type": "general",
+      "difficulty": 3,
+      "target_col": "material_usage_ratio",
+      "true_hypothesis": "Structures with a combination of lower average tourist visits per year, lower material durability scores, not being in a historical conservation area, and being used for ceremonial purposes tend to have a higher material usage ratio, possibly due to cultural significance and easy access.",
+      "true_hypothesis_expr": "((df['average_tourist_visits_per_year'] / 5000) + ((50 - (df['material_durability_score'] * 3 + (df['in_historical_conservation_area'] * 10))) / 10 + (df['ceremonial_use'].astype(int)) * 5).clip(1, 100) / df['height_meters']",
+      "relevant_cols": [
+        "height_meters",
+        "average_tourist_visits_per_year",
+        "ceremonial_use",
+        "in_historical_conservation_area",
+        "material_usage_ratio",
+        "material_durability_score"
+      ]
+    }
+  ]
+}

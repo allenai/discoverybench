@@ -1,0 +1,133 @@
+{
+  "id": 3,
+  "domain": "robotic explorers",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to Mars rovers, space probes, and autonomous exploration vehicles.",
+      "columns": [
+        {
+          "name": "optical_imaging_resolution",
+          "description": "Resolution of the optical imaging system on the vehicle, measured in megapixels"
+        },
+        {
+          "name": "robotic_maintenance_sessions",
+          "description": "Number of maintenance and repair sessions performed on-site by robotic systems."
+        },
+        {
+          "name": "average_daily_temperature",
+          "description": "Average daily temperature in Celsius degrees at the location of the vehicle."
+        },
+        {
+          "name": "system_update_frequency",
+          "description": "Number of critical system updates received per year"
+        },
+        {
+          "name": "communication_attempts",
+          "description": "Number of attempts made to communicate with the control station per day."
+        },
+        {
+          "name": "communication_success_ratio",
+          "description": "Ratio of successful communications sessions to total communication attempts with mission control"
+        },
+        {
+          "name": "has_autonomous_navigation",
+          "description": "Indicates whether the vehicle is capable of fully autonomous navigation without immediate Earth-based intervention."
+        },
+        {
+          "name": "task_complexity_score",
+          "description": "A numerical score that rates the complexity of tasks the vehicle can perform on a scale from 1 to 10."
+        },
+        {
+          "name": "max_daily_wind_speed",
+          "description": "Maximum wind speed recorded in kilometers per hour on a given day at the vehicle's location."
+        },
+        {
+          "name": "past_turbulent_conditions",
+          "description": "Indicates if the vehicle has historically reported turbulent conditions, which include high wind speeds or extreme temperatures."
+        },
+        {
+          "name": "mission_duration",
+          "description": "Specifies the planned operational timeline of the vehicle in days."
+        },
+        {
+          "name": "new_geographical_features_found",
+          "description": "Number of new geographical features discovered by the vehicle"
+        },
+        {
+          "name": "mission_duration_days",
+          "description": "Total duration of the mission expected or experienced, measured in days."
+        },
+        {
+          "name": "years_since_last_survey",
+          "description": "Number of years since the last survey was conducted in the area by any exploration vehicle."
+        },
+        {
+          "name": "terrain_complexity",
+          "description": "A categorical ranking of the surveyed terrain's complexity, affecting navigation and survey capabilities."
+        },
+        {
+          "name": "communication_bandwidth",
+          "description": "The maximum data transmission capacity of the vehicle's communication system, measured in Mbps, which is crucial for high-speed data transmission to and from Earth."
+        },
+        {
+          "name": "power_fluctuations",
+          "description": "Count of significant power fluctuations per week detected in the vehicle."
+        },
+        {
+          "name": "communication_system_frequency",
+          "description": "Operational frequency of the vehicle's communication system, measured in GHz."
+        },
+        {
+          "name": "seasonal_temperature_variation",
+          "description": "Categorical indication of the level of temperature changes observed over seasons"
+        },
+        {
+          "name": "sensor_technology_types",
+          "description": "Counts the types of sensor technologies equipped on the vehicle, indicating its capability to handle diverse environmental data."
+        },
+        {
+          "name": "AI_decision_making_capabilities",
+          "description": "Indicates whether the vehicle is equipped with artificial intelligence capabilities to make decisions independently."
+        },
+        {
+          "name": "energy_storage_capacity",
+          "description": "Represents the total energy storage capacity of the vehicle, which is crucial for supporting high-performance computing over long missions."
+        },
+        {
+          "name": "number_of_sensors",
+          "description": "Total number of sensors equipped on the vehicle"
+        },
+        {
+          "name": "communication_delay_tolerance",
+          "description": "Vehicle's ability to operate effectively despite communication delays with Earth-based control centers, important for autonomous decision-making."
+        },
+        {
+          "name": "habitat_markers_found",
+          "description": "Count of biological or geological markers identified by the explorer that indicate past or potential habitats."
+        },
+        {
+          "name": "remote_control_capabilities",
+          "description": "Indicates the presence of remote control capabilities enabling distant manipulation and interventions."
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 759,
+      "question": "Is there a relationship between the count of sensor technology types on a robotic explorer and its total mission duration in days, communication system frequency, and remote control capabilities?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "sensor_technology_types",
+      "true_hypothesis": "The count of sensor technology types on a vehicle can be predicted using a combination of the total mission duration in days, communication system frequency, and the presence of remote control capabilities.",
+      "true_hypothesis_expr": "df['mission_duration_days'] / 400 + 5 * df['communication_system_frequency'] / 10 + df['remote_control_capabilities'].astype(int) * 3",
+      "relevant_cols": [
+        "mission_duration_days",
+        "communication_system_frequency",
+        "remote_control_capabilities",
+        "sensor_technology_types"
+      ]
+    }
+  ]
+}

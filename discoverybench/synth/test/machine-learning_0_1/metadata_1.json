@@ -1,0 +1,165 @@
+{
+  "id": 1,
+  "domain": "machine learning",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to algorithms, data patterns, and artificial intelligence.",
+      "columns": [
+        {
+          "name": "incorporates_AI_enhancements",
+          "description": "Indicates if the model incorporates artificial intelligence enhancements"
+        },
+        {
+          "name": "requires_complex_features",
+          "description": "Indicates if the dataset requires complex feature types like polynomial or interaction features to model."
+        },
+        {
+          "name": "algorithm_upgrade_threshold",
+          "description": "Minimum threshold of improvements needed for considering an algorithm upgrade"
+        },
+        {
+          "name": "model_accuracy",
+          "description": "Accuracy of the machine learning model"
+        },
+        {
+          "name": "pretrained_models_count",
+          "description": "Number of pretrained models integrated into the dataset creation process"
+        },
+        {
+          "name": "performance_stability",
+          "description": "Measure of how stable the model's performance is over different datasets"
+        },
+        {
+          "name": "uses_feature_scaling",
+          "description": "Indicates whether feature scaling is applied to the input features"
+        },
+        {
+          "name": "model_complexity",
+          "description": "Categorical measure of model complexity (low, medium, high)"
+        },
+        {
+          "name": "feature_count",
+          "description": "Number of features in the dataset"
+        },
+        {
+          "name": "spans_multiple_time_zones",
+          "description": "Indicates if the data collection covers multiple time zones"
+        },
+        {
+          "name": "response_urgency",
+          "description": "Categorical urgency of responding to data input, ranging from low to critical"
+        },
+        {
+          "name": "uses_dropout",
+          "description": "Indicates whether dropout regularization is used in the model"
+        },
+        {
+          "name": "data_diversity_score",
+          "description": "Numerical measure of the diversity of the training dataset"
+        },
+        {
+          "name": "adaptive_learning",
+          "description": "Indicates if the model can adaptively learn from incoming data in real-time"
+        },
+        {
+          "name": "computational_complexity_percentile",
+          "description": "Percentile ranking of models based on computational complexity"
+        },
+        {
+          "name": "computation_load_ratio",
+          "description": "Ratio of system's computation power to model's computation demand"
+        },
+        {
+          "name": "input_sensitivity",
+          "description": "Measure of how much output changes in response to changes in input"
+        },
+        {
+          "name": "has_special_characters_in_name",
+          "description": "Indicates if the dataset name includes special characters (e.g., @, #, $)."
+        },
+        {
+          "name": "dataset_size",
+          "description": "Represents the total number of records in the dataset."
+        },
+        {
+          "name": "algorithm_depth",
+          "description": "Depth of the trees or layers in the algorithm"
+        },
+        {
+          "name": "includes_time_series",
+          "description": "Indicates if the dataset includes time-series data"
+        },
+        {
+          "name": "percentage_of_binary_features",
+          "description": "The percentage of features in the dataset that are binary."
+        },
+        {
+          "name": "data_size",
+          "description": "Size of the dataset used"
+        },
+        {
+          "name": "processing_time",
+          "description": "Time taken to train the model"
+        },
+        {
+          "name": "application_type",
+          "description": "Type of application using the model"
+        },
+        {
+          "name": "average_user_rating",
+          "description": "Average rating provided by users on the complexity and utility of the dataset."
+        },
+        {
+          "name": "data_coverage_percentage",
+          "description": "Percentage of total possible data points actually present in the dataset."
+        },
+        {
+          "name": "feature_extraction_technique",
+          "description": "Type of feature extraction applied in the model"
+        },
+        {
+          "name": "data_noise_level",
+          "description": "Amount of noise in the input data, rated on a scale"
+        },
+        {
+          "name": "algorithm_type",
+          "description": "Type of machine learning algorithm used"
+        },
+        {
+          "name": "data_type_diversity",
+          "description": "Counts the number of unique data types used in the dataset"
+        },
+        {
+          "name": "includes_image_data",
+          "description": "Indicates if the dataset includes image data"
+        },
+        {
+          "name": "data_update_frequency",
+          "description": "Frequency of data updates needed by the application, measured in updates per minute"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 388,
+      "question": "Is there a relationship between the processing time of machine learning models and the diversity of data types in the dataset, taking into account dataset size, data coverage percentage, average user rating, complexity requirements, percentage of binary features, and presence of special characters in the name?",
+      "question_type": "general",
+      "difficulty": 3,
+      "target_col": "processing_time",
+      "true_hypothesis": "The processing time for machine learning models is calculated as 10 times the diversity of data types in the dataset plus 10 times a condition related to the diversity of data types and dataset size over 500 plus 15 times a condition based on specific features in the dataset, such as data coverage percentage, average user rating, complexity requirements, binary features percentage, and special characters in the name.",
+      "true_hypothesis_expr": "df['data_type_diversity'] * 10 + 10 * np.where((df['data_type_diversity'] > 3) & (df['dataset_size'] > 500), True, False) + 15 * np.where((np.ceil(2 + df['data_coverage_percentage']/10 + df['average_user_rating'] * 2 + 5 * df['requires_complex_features']) > 5) | (np.where((df['percentage_of_binary_features'] > 50) & (df['has_special_characters_in_name']), True, False)), True, False)",
+      "relevant_cols": [
+        "data_type_diversity",
+        "dataset_size",
+        "data_coverage_percentage",
+        "average_user_rating",
+        "requires_complex_features",
+        "percentage_of_binary_features",
+        "has_special_characters_in_name",
+        "processing_time"
+      ]
+    }
+  ]
+}

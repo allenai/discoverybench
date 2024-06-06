@@ -1,0 +1,94 @@
+{
+  "id": 0,
+  "domain": "ancient astronomy",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to celestial observations, ancient star maps, and early astronomical practices.",
+      "columns": [
+        {
+          "name": "binary_star_system_preference",
+          "description": "Shows the preference for binary star systems in ancient navigation"
+        },
+        {
+          "name": "percentage_of_ancient_observatories",
+          "description": "The percentage of land area that contains ancient astronomical observatories."
+        },
+        {
+          "name": "star_charts_documented_percentile",
+          "description": "Percentile ranking of civilizations based on the number of documented star charts"
+        },
+        {
+          "name": "astronomic_seasons_utilized",
+          "description": "Number of seasons in which the civilization made significant celestial observations"
+        },
+        {
+          "name": "number_of_clear_nights_per_year",
+          "description": "The total number of nights per year that experience clear skies, conducive for astronomical observations."
+        },
+        {
+          "name": "trade_activity_level",
+          "description": "Numeric score representing the level of trade activity, where higher values indicate greater activity"
+        },
+        {
+          "name": "civilization_name",
+          "description": "Name of the ancient civilization"
+        },
+        {
+          "name": "lunar_phase_records",
+          "description": "Number of documented lunar phases per century"
+        },
+        {
+          "name": "star_map_complexity",
+          "description": "Complexity rating of the star maps used on a scale from 1 to 10"
+        },
+        {
+          "name": "advanced_calendar_systems",
+          "description": "Indicates if the civilization has a sophisticated system for tracking time based on celestial events"
+        },
+        {
+          "name": "star_map_detail_level",
+          "description": "Detail level of star maps, rated from 10 to 100 with higher values indicating greater details"
+        },
+        {
+          "name": "star_chart_references",
+          "description": "Number of star charts created by the civilization"
+        },
+        {
+          "name": "metallic_ore_deposits",
+          "description": "Indicates the presence of significant metallic ore deposits in the region"
+        },
+        {
+          "name": "frequency_of_clear_skies",
+          "description": "Measure of how often the sky is clear, on a scale from 1 (rare) to 10 (frequent)."
+        },
+        {
+          "name": "technological_advancement_level",
+          "description": "Rating of technological advancements of the civilization on a scale from 1 to 5"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 851,
+      "question": "What is the relationship between the preference for binary star systems in ancient navigation and the civilization's advanced calendar systems, the percentile ranking of documented star charts, the number of star charts created, the presence of significant metallic ore deposits, the level of trade activity, the astronomic seasons utilized, the detail level of star maps, and the formula based on these factors?",
+      "question_type": "general",
+      "difficulty": 4,
+      "target_col": "binary_star_system_preference",
+      "true_hypothesis": "The preference for binary star systems in ancient navigation is influenced by the civilization's advanced calendar systems, the percentile ranking of documented star charts, the number of star charts created, the presence of significant metallic ore deposits, the level of trade activity, the astronomic seasons utilized, the detail level of star maps, and the formula based on these factors.",
+      "true_hypothesis_expr": "np.where(10 * (np.where(df['advanced_calendar_systems'], np.ceil(df['star_charts_documented_percentile'] / 5), 0) * np.where(np.where((df['star_chart_references'] > 50) & (df['lunar_phase_records'] > 100), True, False), 1, 0)) + 30 * np.where((df['metallic_ore_deposits'] == True) & (df['trade_activity_level'] > 50), True, False).astype(int) > 45, 50 + 2.0 * df['astronomic_seasons_utilized'] - 0.2 * df['star_map_detail_level'] ** 2 + 0.01 * df['astronomic_seasons_utilized'] * df['star_map_detail_level'] ** 2 * 1.3, 50 + 2.0 * df['astronomic_seasons_utilized'] - 0.2 * df['star_map_detail_level'] ** 2 + 0.01 * df['astronomic_seasons_utilized'] * df['star_map_detail_level'] ** 2 * 0.7)",
+      "relevant_cols": [
+        "advanced_calendar_systems",
+        "star_charts_documented_percentile",
+        "star_chart_references",
+        "lunar_phase_records",
+        "metallic_ore_deposits",
+        "trade_activity_level",
+        "astronomic_seasons_utilized",
+        "star_map_detail_level",
+        "binary_star_system_preference"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "id": 4,
+  "domain": "board games",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to strategy games, cards, and dice games.",
+      "columns": [
+        {
+          "name": "recent_tournament_participation",
+          "description": "Binary indicator if the player has participated in any tournaments in the past year"
+        },
+        {
+          "name": "average_game_duration_hours",
+          "description": "Average duration of a game session in hours"
+        },
+        {
+          "name": "tournament_participation_frequency",
+          "description": "A count of how often a player participates in tournaments annually"
+        },
+        {
+          "name": "dice_game_engagement_level",
+          "description": "Measures the engagement level of a player in dice games on a scale from 1 to 10"
+        },
+        {
+          "name": "forum_interaction_frequency",
+          "description": "The number of times a player posts or interacts in online game forums per month"
+        },
+        {
+          "name": "social_interaction_importance",
+          "description": "Indicates the importance of social interaction in games on a scale from 1 to 10"
+        },
+        {
+          "name": "game_types_owned",
+          "description": "Count of different types of games owned by the player"
+        },
+        {
+          "name": "game_sessions_per_month",
+          "description": "Number of game sessions a player participates in per month"
+        },
+        {
+          "name": "game_type_switch_rate",
+          "description": "Rate at which a player switches between different types of card games annually"
+        },
+        {
+          "name": "online_strategy_tournament_participation",
+          "description": "Tracks whether the player participates in online strategy game tournaments"
+        },
+        {
+          "name": "average_game_duration_minutes",
+          "description": "Average duration in minutes of games played by the player annually"
+        },
+        {
+          "name": "game_experience_level",
+          "description": "Categorical rating of the player's overall experience from novice to expert"
+        },
+        {
+          "name": "card_to_dice_win_ratio",
+          "description": "Ratio of the number of card game victories to the number of dice game victories over a year"
+        },
+        {
+          "name": "strategy_success_rate",
+          "description": "Percentage that measures strategy success in non-primary games"
+        },
+        {
+          "name": "number_of_game_genres_played",
+          "description": "Number of different game genres the player has played over the past year"
+        },
+        {
+          "name": "plays_in_tournaments",
+          "description": "Indicates whether the player regularly participates in tournaments"
+        },
+        {
+          "name": "average_game_duration",
+          "description": "The average duration of a game session in minutes preferred by the player"
+        },
+        {
+          "name": "session_length",
+          "description": "Duration of the playing session in hours"
+        },
+        {
+          "name": "game_diversity",
+          "description": "Number of different types of games played in a session"
+        },
+        {
+          "name": "age",
+          "description": "Age of the player"
+        },
+        {
+          "name": "rapid_rule_learning_ability",
+          "description": "Binary indicator where 1 represents high ability to learn and remember rules after brief exposure, 0 represents low ability"
+        },
+        {
+          "name": "efficiency_ratio",
+          "description": "Ratio of total wins to hours played"
+        },
+        {
+          "name": "board_game_genre_preference",
+          "description": "Indicates the player's preferred board game genre"
+        },
+        {
+          "name": "games_borrowed_frequency",
+          "description": "How frequently the player borrows games from friends, measured in times per month"
+        },
+        {
+          "name": "engagement_score",
+          "description": "Score measuring engagement in learning new games, based on duration of sessions and feedback scores"
+        },
+        {
+          "name": "new_game_frequency",
+          "description": "The number of new games a player starts playing per month"
+        },
+        {
+          "name": "owns_game_manuals",
+          "description": "Whether the player owns manuals for the games they play"
+        },
+        {
+          "name": "solitary_play_preference",
+          "description": "Player's preference for playing games alone"
+        },
+        {
+          "name": "strategic_complexity_rating",
+          "description": "Player's average rating of strategic complexity for the games they play, on a scale from 1 to 10"
+        },
+        {
+          "name": "strategy_preference",
+          "description": "Indicates if a player prefers strategy components in games, where 1 means yes and 0 means no"
+        },
+        {
+          "name": "strategic_complexity_preference",
+          "description": "Indicates the player's preference for strategic complexity in a game on a scale from 1 to 10"
+        },
+        {
+          "name": "card_game_preference",
+          "description": "Player's preference for card games on a scale from 1 to 10"
+        },
+        {
+          "name": "card_game_engagement_level",
+          "description": "Measures the engagement level of a player in card games on a scale from 1 to 10"
+        },
+        {
+          "name": "quick_decision_games_frequency",
+          "description": "A count of how often a player engages in games that require quick decision-making annually"
+        },
+        {
+          "name": "risk_preference",
+          "description": "Player's preference for risky decisions"
+        },
+        {
+          "name": "player_age_group",
+          "description": "Categorizes player age into groups"
+        },
+        {
+          "name": "likes_short_games",
+          "description": "Binary indicator if the player prefers games with a shorter playtime (less than 60 minutes)"
+        },
+        {
+          "name": "social_media_presence",
+          "description": "Binary indicator if a player is active on social media related to board games"
+        },
+        {
+          "name": "tournament_win_ratio",
+          "description": "Ratio of tournaments won to total tournaments participated in"
+        },
+        {
+          "name": "online_community_active",
+          "description": "Binary indicator if the player is active in online gaming communities"
+        },
+        {
+          "name": "frequent_high_stakes_player",
+          "description": "Binary indicator whether the player frequently participates in high-stakes games"
+        },
+        {
+          "name": "annual_winning_rate",
+          "description": "Average number of games won by the player per year"
+        },
+        {
+          "name": "game_complexity_score",
+          "description": "Average complexity score of the games played, rated from 1 to 10"
+        },
+        {
+          "name": "cooperative_game_frequency",
+          "description": "Rate at which a player engages in cooperative board games annually"
+        },
+        {
+          "name": "win_rate",
+          "description": "Percentage of games won by the player"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 21,
+      "question": "Is there a relationship between the preference for strategic complexity in games and the importance of social interaction, considering the average game duration?",
+      "question_type": "general",
+      "difficulty": 1,
+      "target_col": "social_interaction_importance",
+      "true_hypothesis": "Players who prefer strategic complexity in games and have a longer average game duration tend to place greater importance on social interaction in board games.",
+      "true_hypothesis_expr": "df['strategic_complexity_preference'] * 0.6 + 10 - df['average_game_duration'] // 30",
+      "relevant_cols": [
+        "strategic_complexity_preference",
+        "average_game_duration",
+        "social_interaction_importance"
+      ]
+    }
+  ]
+}

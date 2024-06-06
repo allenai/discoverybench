@@ -1,0 +1,119 @@
+{
+  "id": 1,
+  "domain": "cryptocurrency",
+  "datasets": [
+    {
+      "name": "data.csv",
+      "description": "Related to digital currencies, blockchain technology, and decentralized finance.",
+      "columns": [
+        {
+          "name": "investment_in_crypto",
+          "description": "Amount of money invested in cryptocurrency"
+        },
+        {
+          "name": "follows_crypto_news",
+          "description": "Indicates whether the individual regularly follows news related to cryptocurrencies"
+        },
+        {
+          "name": "age",
+          "description": "Age of the individual participating in decentralized finance"
+        },
+        {
+          "name": "holds_multiple_currencies",
+          "description": "Whether the individual holds more than one type of cryptocurrency"
+        },
+        {
+          "name": "crypto_portfolio_diversity",
+          "description": "The number of different cryptocurrencies the individual invests in"
+        },
+        {
+          "name": "economic_condition",
+          "description": "Current economic condition expressed as normal, upturn, or downturn"
+        },
+        {
+          "name": "research_hours_per_week",
+          "description": "Average number of hours per week the individual spends researching cryptocurrency markets"
+        },
+        {
+          "name": "number_of_trading_platforms",
+          "description": "The count of different platforms on which the individual actively trades cryptocurrencies"
+        },
+        {
+          "name": "decentralized_finance_participation",
+          "description": "Whether the individual participates in decentralized finance platforms"
+        },
+        {
+          "name": "uses_blockchain_technology",
+          "description": "Whether the individual uses blockchain technology actively in other domains than cryptocurrency trading"
+        },
+        {
+          "name": "monthly_blockchain_transactions",
+          "description": "The average number of blockchain transactions made by the individual per month"
+        },
+        {
+          "name": "risk_tolerance",
+          "description": "The individual's tolerance level for investment risks, expressed as a score"
+        },
+        {
+          "name": "uses_defi_services",
+          "description": "Whether the individual uses any decentralized financial services"
+        },
+        {
+          "name": "tech_workshops_attended",
+          "description": "Number of technology-focused workshops or webinars attended per year"
+        },
+        {
+          "name": "job_sector",
+          "description": "Sector of employment of the individual"
+        },
+        {
+          "name": "types_of_cryptocurrencies_invested",
+          "description": "The count of different types of cryptocurrencies the individual has invested in"
+        },
+        {
+          "name": "has_regular_access_to_internet",
+          "description": "Indicates whether the individual has regular access to the internet"
+        },
+        {
+          "name": "has_crypto_certifications",
+          "description": "Whether the individual has any formal certifications related to cryptocurrencies"
+        },
+        {
+          "name": "online_course_enrollment_frequency",
+          "description": "Number of online courses related to digital skills enrolled in per year"
+        },
+        {
+          "name": "forum_participation_level",
+          "description": "The degree of participation the individual has in online forums discussing cryptocurrencies, rated from 1 to 5"
+        },
+        {
+          "name": "number_of_cryptocurrencies_owned",
+          "description": "The number of different cryptocurrencies owned by the individual"
+        },
+        {
+          "name": "education_level",
+          "description": "Highest educational degree obtained by the individual"
+        }
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "qid": 245,
+      "question": "Do individuals who spend more time researching cryptocurrency markets and attend tech workshops have a more diverse crypto portfolio than those who do not engage in these activities?",
+      "question_type": "general",
+      "difficulty": 2,
+      "target_col": "crypto_portfolio_diversity",
+      "true_hypothesis": "Individuals who spend more time researching cryptocurrency markets, have higher digital literacy skills, attend more tech workshops and online courses, have regular internet access, and actively use blockchain technology tend to invest in a broader range of cryptocurrencies.",
+      "true_hypothesis_expr": "df['research_hours_per_week']*2 + ((df['online_course_enrollment_frequency'] * 2) + (df['tech_workshops_attended'] * 3)) * df['has_regular_access_to_internet'].astype(int)//2 + 10*df['uses_blockchain_technology'].astype(int)",
+      "relevant_cols": [
+        "research_hours_per_week",
+        "uses_blockchain_technology",
+        "online_course_enrollment_frequency",
+        "tech_workshops_attended",
+        "has_regular_access_to_internet",
+        "crypto_portfolio_diversity"
+      ]
+    }
+  ]
+}
