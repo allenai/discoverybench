@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "cloud_cover_rate",
-      "true_hypothesis": "Cloud cover rate is determined by a base rate of 75% when an industrial area is present and a base rate of 25% when an industrial area is not present. Additionally, cloud cover rate is adjusted based on wind speed, with higher wind speeds resulting in lower cloud cover rates.",
-      "true_hypothesis_expr": "np.where(df['industrial_area_presence'], 75, 25) + (100 - df['wind_speed']) * 0.5",
+      
+      
       "relevant_cols": [
         "industrial_area_presence",
         "wind_speed",

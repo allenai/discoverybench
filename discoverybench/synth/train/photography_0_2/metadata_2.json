@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "prefers_landscape_photography",
-      "true_hypothesis": "Photographers who have invested more than $2000 in equipment and edit photos frequently and prefer manual settings are likely to prefer landscape photography.",
-      "true_hypothesis_expr": "np.where((df['investment_in_equipment'] // 500 + 5 * df['frequent_photo_editing'].astype(int) > 5) & (np.where(df['prefers_manual_settings'], df['frequency_long_exposure'] * 3.3, df['frequency_long_exposure'] * 1.5) >= 50), True, False)",
+      
+      
       "relevant_cols": [
         "investment_in_equipment",
         "frequent_photo_editing",

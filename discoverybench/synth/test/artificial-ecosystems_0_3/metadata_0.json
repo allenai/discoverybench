@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "educational_programs",
-      "true_hypothesis": "The presence of educational programs is more likely when the total investment in infrastructure and training combined exceeds $1,000,000, and further impacted by whether the ecosystem provides competitive visitor services.",
-      "true_hypothesis_expr": "np.where((df['investment_in_infrastructure'] + df['investment_in_training']) > 1000000, np.where(df['competitive_visitor_services'], True, False), False)",
+      
+      
       "relevant_cols": [
         "investment_in_infrastructure",
         "investment_in_training",

@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "online_forum_participation",
-      "true_hypothesis": "The extent of a participant's engagement in steampunk-related social media groups (measured as a percentile), their age range, and the age group they belong to directly impact the number of steampunk-related online forums they actively participate in.",
-      "true_hypothesis_expr": "df['steampunk_social_media_engagement'] * np.where(df['newsletter_subscription'], 1.1, 0.9) + df['age_range'].map({'18-25': 2, '26-35': 3, '36-45': 4, '46-55': 3, '55+': 2})",
+      
+      
       "relevant_cols": [
         "steampunk_social_media_engagement",
         "age_range",

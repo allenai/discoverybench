@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "new_game_frequency",
-      "true_hypothesis": "Players who frequently interact in online game forums, especially those in the top 25% of forum interaction frequency and active on social media related to board games, tend to start playing new games more frequently.",
-      "true_hypothesis_expr": "np.where(df['forum_interaction_frequency'] >= np.percentile(df['forum_interaction_frequency'],75), df['forum_interaction_frequency']/10 + 3*np.where(df['social_media_presence']==True, 1, 0), 0)",
+      
+      
       "relevant_cols": [
         "forum_interaction_frequency",
         "social_media_presence",

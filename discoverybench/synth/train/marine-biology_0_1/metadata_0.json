@@ -76,8 +76,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "coral_biodiversity_percentile",
-      "true_hypothesis": "Coral reefs located in areas with low pollution levels are likely to have a coral biodiversity percentile calculated based on the level of pollution, seasonal current variation, ocean depth, human activity score, reef protection status, marine predator density, salinity variation, shipping route presence, water clarity, cloud cover, fishing activity, and several other environmental factors.",
-      "true_hypothesis_expr": "np.where(df['pollution_level']=='low', (np.where(df['seasonal_current_variation'] == 'low', 200 / (1 + np.exp(-(30 - 0.015 * df['ocean_depth'] - 0.8 * df['human_activity_score'] + 2 * (df['reef_is_protected'].astype(int)) - 15) / 10)), 120 / (1 + np.exp(-(30 - 0.015 * df['ocean_depth'] - 0.8 * df['human_activity_score'] + 2 * (df['reef_is_protected'].astype(int)) - 15) / 10))) + 10 * np.exp((-10*df['marine_predator_density'] + df['salinity_variation']**3 - 50*np.where(df['shipping_route_presence'], 1, 0)) / 100)*0.3 + ((24 * (df['water_clarity']/100) * (1 - df['cloud_cover']/100) * 3) + ((df['fishing_activity'].map({'none': 4, 'low': 3, 'moderate': 2, 'high': 1}) * 2) * 2))*2), 50)",
+      
+      
       "relevant_cols": [
         "fishing_activity",
         "pollution_level",

@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "dark_matter_anomaly_gravitational_effect",
-      "true_hypothesis": "The intensity of light emissions from nova events near the galaxy and the percentage of metallic content in stars are used to determine the gravitational effect of the nearest dark matter anomaly on the galaxy, from weak to strong.",
-      "true_hypothesis_expr": "np.where((df['metallic_content_percentage']>50) & (df['nova_light_emission_intensity']>25000), 'strong', np.where((df['metallic_content_percentage']>30) & (df['nova_light_emission_intensity']>15000), 'moderate', 'weak'))",
+      
+      
       "relevant_cols": [
         "metallic_content_percentage",
         "nova_light_emission_intensity",

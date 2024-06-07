@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "author_award_recognition",
-      "true_hypothesis": "Authors with a higher average score of critical reviews and a greater diversity in literary genres they have published in are more likely to receive awards.",
-      "true_hypothesis_expr": "df['critical_review_score'] * 10 + df['author_genre_diversity'] * 3",
+      
+      
       "relevant_cols": [
         "critical_review_score",
         "author_genre_diversity",

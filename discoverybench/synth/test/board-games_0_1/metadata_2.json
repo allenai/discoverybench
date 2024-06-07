@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "hours_played_weekly",
-      "true_hypothesis": "Players who have a higher engagement level in card games, a preference for strategy components, a higher preference for strategic complexity, a moderate average game duration preference, a preference for card games, and participate in online strategy game tournaments tend to play for longer hours weekly, according to the provided formula.",
-      "true_hypothesis_expr": "df['card_game_engagement_level']*2 + np.where(df['strategy_preference'], 5, 0)**2 + ((df['strategic_complexity_preference'] * 0.6 + 10 - df['average_game_duration'] // 30) * 0.5 + (df['card_game_preference'] * 3 + np.where(df['online_strategy_tournament_participation'], 5, -2)) * 0.5)**2 + (((df['strategic_complexity_preference'] * 0.6 + 10 - df['average_game_duration'] // 30) * 0.5) + ((df['card_game_preference'] * 3 + np.where(df['online_strategy_tournament_participation'], 5, -2)) * 0.5))*0.5*df['card_game_engagement_level']",
+      
+      
       "relevant_cols": [
         "card_game_engagement_level",
         "strategy_preference",

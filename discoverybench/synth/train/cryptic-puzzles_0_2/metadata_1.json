@@ -120,8 +120,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "leisure_preference",
-      "true_hypothesis": "Participants who engage in logical thinking activities and have problem-solving scores greater than 50 are more likely to prefer puzzles as a leisure activity compared to those who do not meet both criteria.",
-      "true_hypothesis_expr": "np.where((df['logical_thinking_activity'] == True) & (df['problem_solving_score'] > 50), 'puzzles', 'others')",
+      
+      
       "relevant_cols": [
         "logical_thinking_activity",
         "problem_solving_score",

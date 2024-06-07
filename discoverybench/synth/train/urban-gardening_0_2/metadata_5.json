@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "number_of_ornamental_plants",
-      "true_hypothesis": "The number of ornamental plants can be determined by taking the cube of a function based on sunlight exposure, average rainfall, focus on drought-resistant plants, and whether the garden specializes in ornamental plants, and adding 200 times the indicator of whether the garden specializes in ornamental plants.",
-      "true_hypothesis_expr": "(((-1) * np.where(df['focus_on_drought_resistant'], np.maximum(3, 24 - 2 * df['sunlight_exposure_hours']), 24 - df['average_rainfall_mm'] // 100))**3) + (200 * df['specializes_in_ornamentals'])",
+      
+      
       "relevant_cols": [
         "specializes_in_ornamentals",
         "sunlight_exposure_hours",

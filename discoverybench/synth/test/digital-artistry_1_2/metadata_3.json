@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "genres_covered",
-      "true_hypothesis": "Artists who offer tutorials and those whose works are frequently featured in digital art magazines tend to cover a combined average of the genres covered in their artworks, suggesting a potential influence of teaching and recognition on the variation of styles incorporated in their pieces.",
-      "true_hypothesis_expr": "(df['tutorials_offered'] + df['featured_in_magazines']) // 5",
+      
+      
       "relevant_cols": [
         "featured_in_magazines",
         "tutorials_offered",

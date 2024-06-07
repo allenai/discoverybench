@@ -88,8 +88,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "epic_poem_citations",
-      "true_hypothesis": "Knights with higher literacy rates and more participations in knight tournaments are cited more frequently in epic poems. There is a positive correlation where knights with higher literacy rates and greater participation in tournaments have increased epic_poem_citations.",
-      "true_hypothesis_expr": "((df['literacy_rates'] + 2*df['knight_tournaments']) * 2) + df['regions_with_epic_traditions'].astype(int) * 30",
+      
+      
       "relevant_cols": [
         "regions_with_epic_traditions",
         "literacy_rates",

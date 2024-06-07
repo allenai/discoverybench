@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "genre_specialization",
-      "true_hypothesis": "The specialization in digital art genres can be predicted based on the number of years the artist has been active in digital art, their average number of collaborations per year, and their participation in digital art competitions. Longer experience in the field, higher collaboration rates, and involvement in competitions suggest a broader exposure to various genres.",
-      "true_hypothesis_expr": "df['years_active'] + 2 * df['collaborations_per_year'] + 2 * df['participation_in_competitions'].astype(int)",
+      
+      
       "relevant_cols": [
         "years_active",
         "participation_in_competitions",

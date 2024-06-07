@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "artist_id",
-      "true_hypothesis": "Artists who have received more awards and have participated in international exhibitions and created their first artwork earlier are more likely to have a higher unique identifier.",
-      "true_hypothesis_expr": "df['number_of_awards'] * 100 + df['participation_in_international_exhibitions'] * 1000 + (2023 - df['year_first_artwork'])",
+      
+      
       "relevant_cols": [
         "participation_in_international_exhibitions",
         "year_first_artwork",

@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "digital_comfort",
-      "true_hypothesis": "Participants who engage frequently in VR gaming or have lower education levels return a level of comfort with digital interfaces equal to 5 if their VR gaming frequency is 7 or higher, otherwise, the level is based on their VR gaming frequency, technical job experience, tech meetup attendance, and whether they read tech articles.",
-      "true_hypothesis_expr": "np.where(df['VR_gaming_frequency'] >= 7, 5, df['technical_job_experience']//8 + df['tech_meetup_attendance']//10 + df['reads_tech_articles'].astype(int))",
+      
+      
       "relevant_cols": [
         "VR_gaming_frequency",
         "technical_job_experience",

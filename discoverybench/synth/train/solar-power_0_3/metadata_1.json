@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "surface_temperature",
-      "true_hypothesis": "The surface temperature in a location is calculated from the ratio of sunlight hours to day length, with an additional influence from the presence of solar panels. Higher surface temperatures are observed in locations with a greater sunlight-to-day length ratio and solar panels, due to reduced albedo effects.",
-      "true_hypothesis_expr": "(df['sunlight_hours'] / df['day_length']) * 50 + 20 * df['has_solar_panels'].astype(int) - 10",
+      
+      
       "relevant_cols": [
         "sunlight_hours",
         "day_length",

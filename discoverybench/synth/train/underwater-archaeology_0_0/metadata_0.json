@@ -72,8 +72,8 @@
       "question_type": "general",
       "difficulty": 4,
       "target_col": "contains_gold",
-      "true_hypothesis": "When the ocean current strength is greater than or equal to 2, the site is located within a protected marine area, the sediment accumulation rate is less than 5, and the multiplying factor of 20 times the condition-based value of True subtracted by 0.5 times the depth of the site exceeds 10, with stone structures present, and the total number of artifacts cubed plus zero to the power of the water depth subtracted by 3 is greater than 500, then the site contains gold artifacts.",
-      "true_hypothesis_expr": "np.where((np.where((((np.where((df['ocean_current_strength'] >= 2) & (df['protected_marine_area'] == True) & (df['sediment_accumulation_rate'] < 5), True, False)) * 20 - df['depth_of_site'] * 0.5) > 10) & (df['stone_structures_present']), 'yes', 'no') == 'yes') & (((df['number_of_artifacts'] ** 3 + df['water_depth'] ** 0 - 3) > 500), True, False)",
+      
+      
       "relevant_cols": [
         "water_depth",
         "number_of_artifacts",

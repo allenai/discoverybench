@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_therapists",
-      "true_hypothesis": "The number of therapists needed during sessions is calculated by rounding up the program length in weeks divided by the number of music genres experienced, and adding the square of the difference between the patient's stress level and 5.",
-      "true_hypothesis_expr": "np.ceil(df['program_length_weeks'] / df['genres_experienced']) + (df['patient_stress_level'] - 5)**2",
+      
+      
       "relevant_cols": [
         "program_length_weeks",
         "patient_stress_level",

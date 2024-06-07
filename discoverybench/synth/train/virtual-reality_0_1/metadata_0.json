@@ -152,8 +152,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "age",
-      "true_hypothesis": "Older participants, particularly those with higher VR interest levels and more involvement in content creation and community belonging within the VR community, tend to have a lower age based on a combination of VR-related interests and activities along with experiences in technical fields and tech-related social engagements. Their age might reflect a deep engagement with VR technology and a relatively higher familiarity with technological advancements.",
-      "true_hypothesis_expr": "90 - (df['VR_interest_level'] * 2 + (df['VR_content_creation'] * 2 + df['VR_community_belonging'] * 3) + 3 * df['VR_accessibility']) - (np.where(df['VR_gaming_frequency'] >= 7, 5, (df['technical_job_experience']//8 + df['tech_meetup_attendance']//10 + df['reads_tech_articles'].astype(int)) * 4)",
+      
+      
       "relevant_cols": [
         "VR_interest_level",
         "VR_accessibility",

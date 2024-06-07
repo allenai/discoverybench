@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "advanced_technique_usage",
-      "true_hypothesis": "Photographers who meet the specified low light shooting and camera weight conditions, and have a wildlife photography frequency squared divided by 10 greater than 20, and have won more photography contests than the median number of contests won among photographers, are 50% more likely to experiment with a combination of High Dynamic Range (HDR) techniques and manual white balance when they also attend outdoor workshops and have a high percentage of nature-themed photos in their portfolio.",
-      "true_hypothesis_expr": "np.where(((np.where(df['primary_shooting_condition'] == 'low_light', 25, 15) + (((df['outdoor_shoots_count']**3 + 2*df['average_lens_cost'] - df['indoor_shoots_count']**2)**2) + 5 * df['follows_industry_news'].astype(int))**2) / 10) > 20) & np.where((df['camera_weight_grams'] < 500) & ((df['outdoor_shoots_count']**3 + 2*df['average_lens_cost'] - df['indoor_shoots_count']**2) > (df['outdoor_shoots_count']**3 + 2*df['average_lens_cost'] - df['indoor_shoots_count']**2).quantile(0.5)), True, False), 0.5*(df['technique_HDR'].astype(float) + np.where(((df['participation_in_outdoor_workshops'] > 5) & (df['percentage_nature_photos'] >= 50)), True, False)), 0)",
+      
+      
       "relevant_cols": [
         "technique_HDR",
         "primary_shooting_condition",

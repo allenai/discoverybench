@@ -256,8 +256,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "garden_size",
-      "true_hypothesis": "The size of the garden can be determined based on a combination of accessibility, educational programs availability, presence in a residential area, growth time, focus on ornamental plants, number of sustainability workshops, average plant age, and certain conditions met regarding the number of sustainability workshops and average plant age.",
-      "true_hypothesis_expr": "100 * (((df['garden_accessibility_index'] * 5 + np.where(df['has_educational_programs'], 10, 0) + np.where(df['is_residential_area'], 5, 0)) + 1) / (((-1) * df['average_growth_time'])**3 + (200 * df['specializes_in_ornamentals']) + 1)) + 1000 * np.where((df['number_of_sustainability_workshops'] > 3) & (df['average_plant_age_years'] >= 5), True, False).astype(int)",
+      
+      
       "relevant_cols": [
         "garden_accessibility_index",
         "specializes_in_ornamentals",

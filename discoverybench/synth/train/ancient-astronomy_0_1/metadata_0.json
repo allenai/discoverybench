@@ -84,8 +84,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "latitude",
-      "true_hypothesis": "Civilizations with a sophisticated system for tracking time based on celestial events and a high number of documented star charts, alongside significant metallic ore deposits and high trade activity levels, tend to have higher average latitudes.",
-      "true_hypothesis_expr": "10 * (np.where(df['advanced_calendar_systems'], np.ceil(df['star_charts_documented_percentile'] / 5), 0) * np.where((df['star_chart_references'] > 50) & (df['lunar_phase_records'] > 100), True, False)) + 30 * np.where((df['metallic_ore_deposits'] == True) & (df['trade_activity_level'] > 50), True, False).astype(int)",
+      
+      
       "relevant_cols": [
         "advanced_calendar_systems",
         "star_charts_documented_percentile",

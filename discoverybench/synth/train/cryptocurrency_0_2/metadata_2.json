@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "risk_tolerance",
-      "true_hypothesis": "Individuals with a higher number of trading platforms squared and who actively participate in online forums discussing cryptocurrencies, as well as regularly follow crypto news, and hold multiple cryptocurrencies tend to have a higher risk tolerance score.",
-      "true_hypothesis_expr": "df['number_of_trading_platforms']**2 + 0.1 * (5 * df['forum_participation_level']**3 + 50 * df['follows_crypto_news'] + 30 * df['holds_multiple_currencies']) + 3 * df['uses_defi_services'].astype(int)",
+      
+      
       "relevant_cols": [
         "uses_defi_services",
         "follows_crypto_news",

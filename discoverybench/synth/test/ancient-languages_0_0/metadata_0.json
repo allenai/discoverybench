@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 4,
       "target_col": "effective_translations_score",
-      "true_hypothesis": "The translation effectiveness score for deciphering ancient scripts is determined by considering the ratio of the number of digitized artifacts to the number of available deciphering tools, adjusted by the complexity level of the script and the level of educational support and media recognition for the language.",
-      "true_hypothesis_expr": "(df['digitized_artifacts_count'] / df['deciphering_tools_count'] * df['deciphering_tools_count']**2 * ((2 if np.where((((((df['vocabulary_size']**0.5 + df['foundational_for_modern_languages']) * (df['recognized_in_cultural_practices'] + 1)) % 10 + 1) >= 8) & ((np.where((df['educational_program_availability'] == True) & (df['media_representation'] > 50) & (df['government_endorsement'] == True), 'high', np.where((df['educational_program_availability'] == True) | (df['media_representation'] > 20), 'moderate', 'low')) == 'high'), True, False).all() else 1) * 0.5 * df['script_complexity_level']**3 - 0.5 * (df['academic_conferences_count']*2 + df['active_researchers_count']*1.5 + np.where(df['has_modern_derivative'], 20, -10))**2 + 2 * (df['is_currently_used'].astype(int))**3).rank(method='min').astype(int))).sum()**2 + 0.01*(df['script_complexity_level']**2 + 10 / (df['international_collaboration'].astype(int) * 3 + df['academic_conferences_count'] * 2 + df['recent_publications'].astype(int) * 5) - 15 * np.where((df['high_accuracy_requirement_percentage'] > 75) & ((df['international_collaboration'].astype(int) * 3 + df['academic_conferences_count'] * 2 + df['recent_publications'].astype(int) * 5) > 10) & (df['digital_resources_availability'] >= 3), 1, 0))",
+      
+      
       "relevant_cols": [
         "digitized_artifacts_count",
         "deciphering_tools_count",

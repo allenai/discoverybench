@@ -112,8 +112,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "spatial_recognition_efficiency",
-      "true_hypothesis": "Robots equipped with AI are more efficient at spatial recognition tasks when the training duration is cubed, added to half of the task success rate squared, and with a constant value added.",
-      "true_hypothesis_expr": "df['training_duration']**3 + 0.5 * df['task_success_rate']**2 + 10",
+      
+      
       "relevant_cols": [
         "task_success_rate",
         "spatial_recognition_efficiency",

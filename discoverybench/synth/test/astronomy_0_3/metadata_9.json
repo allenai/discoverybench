@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "binary_star_percentage",
-      "true_hypothesis": "Galaxies with higher gravity_rule_index cubed added to two times the square of variable_stellar_types_ratio are likely to have a higher percentage of binary star systems.",
-      "true_hypothesis_expr": "df['gravity_rule_index']**3 + 2 * df['variable_stellar_types_ratio']**2",
+      
+      
       "relevant_cols": [
         "gravity_rule_index",
         "variable_stellar_types_ratio",

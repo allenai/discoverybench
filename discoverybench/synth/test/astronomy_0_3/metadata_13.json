@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "is_in_orion_cluster",
-      "true_hypothesis": "Galaxies with more than 20 observed nebulae and a significant presence of exotic matter type are classified as being in the Orion cluster.",
-      "true_hypothesis_expr": "np.where((df['number_of_nebulae'] > 20) & df['presence_exotic_matter'], True, False)",
+      
+      
       "relevant_cols": [
         "number_of_nebulae",
         "presence_exotic_matter",

@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "operation_time_years",
-      "true_hypothesis": "The operation time in years of autonomous exploration vehicles on Mars is influenced by the system update frequency and the relationship between the average daily temperature and its deviation from 20 degrees Celsius, wherein vehicles experiencing more frequent updates and operating under colder temperatures or with a deviation below 20 degrees Celsius tend to have longer operational spans.",
-      "true_hypothesis_expr": "df['system_update_frequency'] + np.maximum(0, 20 - df['average_daily_temperature']) // 5",
+      
+      
       "relevant_cols": [
         "average_daily_temperature",
         "system_update_frequency",

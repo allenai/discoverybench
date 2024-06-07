@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "material_durability_score",
-      "true_hypothesis": "The material durability score is determined by the climate harshness score where, if the structure's age is over 500 years, it is multiplied by 1.1 and then added 2; otherwise, if the structure's age is 500 or less, the climate harshness score is multiplied by 0.9 and then added 2.",
-      "true_hypothesis_expr": "np.where(df['structure_age'] > 500, df['climate_harshness_score'] * 1.1 + 2, df['climate_harshness_score'] * 0.9 + 2)",
+      
+      
       "relevant_cols": [
         "structure_age",
         "climate_harshness_score",

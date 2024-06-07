@@ -200,8 +200,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "featured_in_top_percentile",
-      "true_hypothesis": "Artists who utilize AI-based software and have created more than 20 artworks within the calculated threshold relative to their years of experience are flagged as being potentially featured in top percentile rankings of online art communities.",
-      "true_hypothesis_expr": "np.where(((df['software_type'] == 'AI-based') & (df['artworks_created'] - 0.5*df['years_of_experience']) > 20), True, False)",
+      
+      
       "relevant_cols": [
         "artworks_created",
         "years_of_experience",

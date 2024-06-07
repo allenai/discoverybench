@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "distance_from_cluster_center",
-      "true_hypothesis": "The distance from the cluster center decreases as the number of binary star systems increases, the velocity dispersion of stars increases, the average surface temperature of stars decreases, the ultraviolet emission is present, the level of cosmic radiation and the proportion of red stars are relatively high, especially when the dominant star type is a 'Giant'.",
-      "true_hypothesis_expr": "1000 - (df['binary_star_systems'] ** 2 + 50 * (df['velocity_dispersion_of_stars'] / df['average_surface_temperature_of_stars'] * 10 + 5 * df['ultraviolet_emission'].astype(int))) * (np.where((df['cosmic_radiation_level']**3 + df['proportion_of_red_stars'] > 0.7), 'Giant', 'Dwarf') == 'Giant')",
+      
+      
       "relevant_cols": [
         "binary_star_systems",
         "velocity_dispersion_of_stars",

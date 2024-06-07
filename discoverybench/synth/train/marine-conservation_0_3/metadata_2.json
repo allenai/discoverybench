@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "is_marine_conservation_zone",
-      "true_hypothesis": "We hypothesize that the binary indicator of whether an area is designated as a marine conservation zone is determined by a complex formula involving the rate of illegal fishing activities, the frequency of marine fauna disruptions, and the effectiveness of local government environmental policy enforcement, where a specific calculation threshold influences the outcome.",
-      "true_hypothesis_expr": "np.where(df['illegal_fishing_rate'] + df['marine_fauna_disruptions'] - 2*df['local_gov_environmental_policy_score'] > 50, False, True)",
+      
+      
       "relevant_cols": [
         "illegal_fishing_rate",
         "marine_fauna_disruptions",

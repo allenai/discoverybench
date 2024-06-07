@@ -192,8 +192,8 @@
       "question_type": "general",
       "difficulty": 4,
       "target_col": "composting_effectiveness_rating",
-      "true_hypothesis": "Community gardens in cities with populations over 500,000, using sustainable composting methods, having more than 15 local food markets within a 5 km radius, offering frequent gardening workshops, with specified composting conditions met and having sufficient local partners, are rated 1 point higher in composting effectiveness.",
-      "true_hypothesis_expr": "np.where(((df['residential_land_percentage']**2 * 1000 + 3 * df['green_jobs_available'] > 500000) & (np.where((((df['number_of_community_events'] * 1000 + df['funding_from_local_businesses'] * 0.5 - 10000 * df['high_density_residential_area'].astype(int)) * 0.3 + 2000 * np.where((df['historical_visitation'] > 5000) & (df['number_of_staff'] / df['square_footage'] > 0.0005), True, False) - df['percentage_native_plants'] * 50)**3 + (((df['population_density'] * 20 + np.where(df['land_availability']==True, 5000, 20000) / df['public_funding']) * 10 + 20 * df['has_local_partnerships']).astype(int)**2 * 5 - df['average_annual_temperature']) > 150000), True, False) & (df['sustainable_composting'] == 'Yes'), 1, 0) & (df['sustainable_composting'] == 'Yes'), 1, 0) & (np.where((df['number_of_local_food_markets'] > 15) & (df['frequent_gardening_workshops']), 'Yes', 'No') == 'Yes'), 9, df.get('composting_effectiveness_rating', 0)) + np.where((((df['number_of_community_events'] * 1000 + df['funding_from_local_businesses'] * 0.5 - 10000 * df['high_density_residential_area'].astype(int)) * 0.3 + 2000 * np.where((df['historical_visitation'] > 5000) & (df['number_of_staff'] / df['square_footage'] > 0.0005), True, False) - df['percentage_native_plants'] * 50)**3 + (((df['population_density'] * 20 + np.where(df['land_availability']==True, 5000, 20000) / df['public_funding']) * 10 + 20 * df['has_local_partnerships']).astype(int)**2 * 5 - df['average_annual_temperature']) > 150000), True, False) & (df['sustainable_composting'] == 'Yes'), 1, 0)",
+      
+      
       "relevant_cols": [
         "sustainable_composting",
         "residential_land_percentage",

@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "dominant_star_type",
-      "true_hypothesis": "Galaxies with cosmic radiation levels cubed plus proportion of red stars greater than 0.7 are more likely to have 'Giant' as their dominant star type.",
-      "true_hypothesis_expr": "np.where((df['cosmic_radiation_level']**3 + df['proportion_of_red_stars'] > 0.7), 'Giant', 'Dwarf')",
+      
+      
       "relevant_cols": [
         "cosmic_radiation_level",
         "proportion_of_red_stars",

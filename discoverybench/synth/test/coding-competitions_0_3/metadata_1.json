@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "internet_users_percentage",
-      "true_hypothesis": "The percentage of internet users in a country's urban areas is influenced by the cubic relationship of the number of public WiFi hotspots, twice the presence of internet education programs, adjusted by a constant, multiplied by the presence of rapid digital transformation.",
-      "true_hypothesis_expr": "(df['public_wifi_hotspots']**3 + 2 * df['internet_education_programs'].astype(int) + 5) * df['rapid_digital_transformation'].astype(int)",
+      
+      
       "relevant_cols": [
         "public_wifi_hotspots",
         "internet_education_programs",

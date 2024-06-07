@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "training_duration",
-      "true_hypothesis": "The duration of a robot's training is calculated by squaring the rating of training complexity, adding twice the number of training sessions per month, and then adding three if the robot has received a system update before the training commenced.",
-      "true_hypothesis_expr": "df['training_complexity']**2 + 2*df['training_schedule_frequency'] + 3*np.where(df['system_update_received'] == True, 1, 0)",
+      
+      
       "relevant_cols": [
         "training_complexity",
         "training_schedule_frequency",

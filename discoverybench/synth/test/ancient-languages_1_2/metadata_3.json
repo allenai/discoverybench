@@ -204,8 +204,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "material_complexity",
-      "true_hypothesis": "Languages with older estimated origin years are associated with higher material complexity, which increases with fewer modern speakers. The material complexity is influenced by both the historical age and speaker population of a language.",
-      "true_hypothesis_expr": "df['estimated_origin_year'].apply(lambda x: -((x // 1000) - 2)) + df['number_of_modern_speakers'].apply(lambda x: 10 if x < 10000 else (5 if x < 100000 else 1))",
+      
+      
       "relevant_cols": [
         "estimated_origin_year",
         "number_of_modern_speakers",

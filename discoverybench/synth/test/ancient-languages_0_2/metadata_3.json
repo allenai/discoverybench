@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "technological_support",
-      "true_hypothesis": "If over 75% of translation projects require high accuracy, if the sum of three times the presence of international collaboration, twice the number of academic conferences, and five times the presence of recent publications exceeds 10, and if there are at least 3 digital resources available, then advanced technological support is utilized in language translation projects.",
-      "true_hypothesis_expr": "np.where((df['high_accuracy_requirement_percentage'] > 75) & ((df['international_collaboration'].astype(int) * 3 + df['academic_conferences_count'] * 2 + df['recent_publications'].astype(int) * 5) > 10) & (df['digital_resources_availability'] >= 3), 1, 0)",
+      
+      
       "relevant_cols": [
         "academic_conferences_count",
         "high_accuracy_requirement_percentage",

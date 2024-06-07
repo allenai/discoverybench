@@ -204,8 +204,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "has_dedicated_funding",
-      "true_hypothesis": "Languages with historical significance scores of 8 or higher and high current academic interest have dedicated funding available for their translation efforts.",
-      "true_hypothesis_expr": "np.where((df['historical_significance_score'] >= 8) & (df['current_academic_interest'] == 'high'), True, False)",
+      
+      
       "relevant_cols": [
         "historical_significance_score",
         "current_academic_interest",

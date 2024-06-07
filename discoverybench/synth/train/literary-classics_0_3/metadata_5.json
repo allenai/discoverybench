@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "emotional_depth_percentile",
-      "true_hypothesis": "The emotional depth percentile of a literary classic can be influenced by the presence of multiple narrative perspectives, the richness of symbolic elements, and the complexity of the main character's development arc within the text.",
-      "true_hypothesis_expr": "10 * df['narrative_perspectives_count'] + 5 * df['symbolic_elements_index'] + 20 * df['main_character_arc_complexity'].astype(int)",
+      
+      
       "relevant_cols": [
         "narrative_perspectives_count",
         "symbolic_elements_index",

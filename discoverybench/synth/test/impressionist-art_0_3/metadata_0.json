@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "artist_popularity_percentile",
-      "true_hypothesis": "The artist's popularity percentile is determined by multiplying their associated art movements count by 10 and adding the diversity of works multiplied by 90.",
-      "true_hypothesis_expr": "df['associated_art_movements_count'] * 10 + df['diversity_of_works'] * 90",
+      
+      
       "relevant_cols": [
         "associated_art_movements_count",
         "diversity_of_works",

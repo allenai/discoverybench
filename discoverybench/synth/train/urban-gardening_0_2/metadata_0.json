@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "annual_cultural_events",
-      "true_hypothesis": "The number of annual cultural events in a city is inversely proportional to the result of dividing the total area of public green spaces by the square of the residential land percentage multiplied by 1000 added to thrice the number of green jobs available within the city, then multiplied by 100.",
-      "true_hypothesis_expr": "df['public_green_space_area'] / (df['residential_land_percentage']**2 * 1000 + 3 * df['green_jobs_available']) * 100",
+      
+      
       "relevant_cols": [
         "public_green_space_area",
         "residential_land_percentage",

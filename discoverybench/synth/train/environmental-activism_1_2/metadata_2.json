@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "green_space_area_percentage",
-      "true_hypothesis": "Regions with a higher number of environmental NGOs and stringent local pollution regulation scores have a green space area percentage that is calculated by multiplying the environmental NGO count by 0.18 and adding the pollution regulation score multiplied by 0.27.",
-      "true_hypothesis_expr": "df['environmental_NGO_count'] * 0.18 + df['pollution_regulation_score'] * 0.27",
+      
+      
       "relevant_cols": [
         "environmental_NGO_count",
         "pollution_regulation_score",

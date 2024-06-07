@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "historical_significance_score",
-      "true_hypothesis": "The historical significance score of a language is determined by the square root of the vocabulary size plus the influence on modern languages, weighted by recognition in current cultural practices.",
-      "true_hypothesis_expr": "((df['vocabulary_size']**0.5 + df['foundational_for_modern_languages']) * (df['recognized_in_cultural_practices'] + 1)) % 10 + 1",
+      
+      
       "relevant_cols": [
         "vocabulary_size",
         "foundational_for_modern_languages",

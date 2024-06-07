@@ -280,8 +280,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "gravitational_field_status",
-      "true_hypothesis": "Galaxies with a combined score (calculated from galaxy mass, metallic content percentage, and dark matter percentage) greater than or equal to 1 are more likely to have a stable gravitational field.",
-      "true_hypothesis_expr": "np.where((df['galaxy_mass']*0.000001 + df['metallic_content_percentage']*0.005 + df['dark_matter_percentage']*0.02) >= 1, True, False)",
+      
+      
       "relevant_cols": [
         "metallic_content_percentage",
         "galaxy_mass",

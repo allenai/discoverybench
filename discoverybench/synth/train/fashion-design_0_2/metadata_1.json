@@ -80,8 +80,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "is_in_europe",
-      "true_hypothesis": "Designers with local fashion magazine circulation per number of fashion design schools over 30,000 and with more than 15 designer runway appearances and an average profit margin from previous collections over 50% are classified as 'is_in_europe'.",
-      "true_hypothesis_expr": "np.where((df['local_fashion_magazine_circulation'] / df['number_of_fashion_design_schools'] * 1000 > 30000) & (np.where((df['num_designer_runway_appearances'] > 15) & (df['average_profit_margin_previous_collections'] > 50), True, False)), True, False)",
+      
+      
       "relevant_cols": [
         "local_fashion_magazine_circulation",
         "number_of_fashion_design_schools",

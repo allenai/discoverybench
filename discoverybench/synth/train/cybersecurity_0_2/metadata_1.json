@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "percentage_of_IT_staff",
-      "true_hypothesis": "Organizations that experience more than 3 annual cyber attacks and mandate cybersecurity training weekly exhibit a higher percentage of IT staff. The percentage of IT staff increases by 5% for every 1% increase in critical data handled, and organizations with such characteristics have a base increase of 10% compared to those that do not fit these criteria.",
-      "true_hypothesis_expr": "np.where(np.where((df['annual_cyber_attacks'] > 3) & (df['mandatory_cybersecurity_training']), 'weekly', 'yearly') == 'weekly', 0.1, 0) + 0.05 * df['percentage_of_critical_data']",
+      
+      
       "relevant_cols": [
         "percentage_of_critical_data",
         "annual_cyber_attacks",

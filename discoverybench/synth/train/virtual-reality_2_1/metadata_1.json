@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "predicted_vr_sickness",
-      "true_hypothesis": "Participants with a product of familiarity with VR technology and frequency of engaging in cognitive demanding tasks of 25 or lower are less likely to experience VR sickness.",
-      "true_hypothesis_expr": "np.where((df['vr_technology_familiarity'] * df['cognitive_task_frequency']) <= 25, True, False)",
+      
+      
       "relevant_cols": [
         "cognitive_task_frequency",
         "vr_technology_familiarity",

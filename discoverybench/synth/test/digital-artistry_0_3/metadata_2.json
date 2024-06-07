@@ -192,8 +192,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "offers_digital_art_tutorials",
-      "true_hypothesis": "Artists with a formal digital art education level greater than 5 and based in a tech hub are likely to offer digital art tutorials.",
-      "true_hypothesis_expr": "np.where((df['formal_digital_art_education'] > 5) & (df['based_in_tech_hub'] == True), True, False)",
+      
+      
       "relevant_cols": [
         "formal_digital_art_education",
         "based_in_tech_hub",

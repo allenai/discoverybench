@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 4,
       "target_col": "highly_successful_discovery",
-      "true_hypothesis": "Autonomous exploration vehicles that have AI decision-making capabilities, communication bandwidth above 500 Mbps, perform tasks with moderate complexity, and operate for extended durations, and discover more than 30 new geographical features, are classified as highly successful discoveries.",
-      "true_hypothesis_expr": "np.where((np.where(np.where(np.where(np.where((df['AI_decision_making_capabilities'] == True) & (df['communication_bandwidth'] > 500), True, False), df['mission_duration'] * 1.5 + df['task_complexity_score'] * 80 / 100 + (df['mission_duration_days'] / 400 + 5 * df['communication_system_frequency'] / 10 + df['remote_control_capabilities'].astype(int) * 3), (df['mission_duration_days'] / 400 + 5 * df['communication_system_frequency'] / 10 + df['remote_control_capabilities'].astype(int) * 3)) ** 3 + 2 * df['communication_delay_tolerance'] > 20, True, False) == True) & (np.where(df['optical_imaging_resolution'] > 30, np.where(df['communication_success_ratio'] > 0.8, 'highly_uneven', 'uneven'), 'even') == 'highly_uneven') & (df['new_geographical_features_found'] > 30), True, False)",
+      
+      
       "relevant_cols": [
         "new_geographical_features_found",
         "communication_delay_tolerance",

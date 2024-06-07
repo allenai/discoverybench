@@ -172,8 +172,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "number_of_scenes",
-      "true_hypothesis": "The number of scenes in a play is influenced by the number of actors, the use of special effects, the total number of costume changes, and specific play characteristics related to genre, average scene complexity, and actor availability. Plays with a higher number of actors, special effects, and costume changes tend to have more scenes, and certain genre-specific and actor availability criteria further impact scene counts.",
-      "true_hypothesis_expr": "(((df['number_of_actors'] // 10 + (df['uses_special_effects'] * 5)) ** 3) + 2 * df['total_costume_changes'] * (df['number_of_actors'] // 10 + (df['uses_special_effects'] * 5)) - 5 * (df['number_of_actors'] // 10 + (df['uses_special_effects'] * 5)) + np.where(np.where(((np.where((df['play_genre'] == 'drama') | (df['audience_interaction'] == True))) > 100) | ((np.where(((np.where((df['play_genre'] == 'classical') & (df['average_scene_complexity'] >= 7), 5, 2)) > 3), True, False)), 20, 0) + np.where(np.where((df['lead_actor_availability_days'] > 5) & (((100 if df.apply(lambda row: (100 if row['special_guest_appearance'] == True else 50) + (80 if row['holiday_season'] == True else 30) + row['promotional_discount'], axis=1) > 500)), 'Saturday', 'Wednesday').isin(['Friday', 'Saturday']), 10, 0)",
+      
+      
       "relevant_cols": [
         "play_genre",
         "average_scene_complexity",

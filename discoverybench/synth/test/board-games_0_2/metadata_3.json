@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "consistent_performance",
-      "true_hypothesis": "Players who engage in extended playing sessions for more than 6 hours and play a wide variety of games, tend to exhibit consistent performance.",
-      "true_hypothesis_expr": "np.where(df['session_length'] > 6, np.where(df['game_diversity'] > 5, True, False), False)",
+      
+      
       "relevant_cols": [
         "session_length",
         "game_diversity",

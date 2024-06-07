@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "is_annual_conference_month",
-      "true_hypothesis": "The likelihood of a debate occurring during an annual philosophical conference month can be predicted by checking if the number of published philosophical articles exceeds 100 and if recognized philosophers participated in the debates held in that month.",
-      "true_hypothesis_expr": "np.where((df['number_of_philosophical_articles'] > 100) & (df['presence_of_recognized_philosophers'] == True), True, False)",
+      
+      
       "relevant_cols": [
         "number_of_philosophical_articles",
         "presence_of_recognized_philosophers",

@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 4,
       "target_col": "lighting_reduction_percentage",
-      "true_hypothesis": "In controlled ecosystems with a bio-dome structure, the reduction in artificial lighting can reach up to 30% based on the relationship between external factors like external temperature, sunlight exposure, water body count, artificial light intensity, and the percentage of native vegetation, calculated through a complex expression involving various ecosystem parameters.",
-      "true_hypothesis_expr": "np.where(np.where((df['natural_sunlight_hours'] <= 3) & (df['water_body_count'] * 5 + 20 * np.where((df['artificial_light_intensity'] > 2500) & (df['percentage_native_vegetation'] < 50), True, False) + 40 >= 70), True, False) == True, (np.where(df.get('adaptive_climate_control_status', False), df.get('energy_consumption_kWh', 0) * 0.85 - df.get('external_temperature_C', 0) * np.select([(df['average_temperature'] * 0.5 + (df['occupancy_status'] * 3)/(24 - (df['plant_density'] / 1000 + df['carbon_dioxide_levels'] / 10000 * 24)) > 3), (df['average_temperature'] * 0.5 + (df['occupancy_status'] * 3)/(24 - (df['plant_density'] / 1000 + df['carbon_dioxide_levels'] / 10000 * 24)) < 0.5)], ['summer', 'winter'], default='spring') * 0.3) / (np.where(df.get('adaptive_climate_control_status', False), df.get('energy_consumption_kWh', 0) * 0.85 - df.get('external_temperature_C', 0) * np.select([(df['average_temperature'] * 0.5 + (df['occupancy_status'] * 3)/(24 - (df['plant_density'] / 1000 + df['carbon_dioxide_levels'] / 10000 * 24)) > 3), (df['average_temperature'] * 0.5 + (df['occupancy_status'] * 3)/(24 - (df['plant_density'] / 1000 + df['carbon_dioxide_levels'] / 10000 * 24)) < 0.5)], ['summer', 'winter'], default='spring'), df.get('energy_consumption_kWh', 0))) * 100, 0)",
+      
+      
       "relevant_cols": [
         "average_temperature",
         "occupancy_status",

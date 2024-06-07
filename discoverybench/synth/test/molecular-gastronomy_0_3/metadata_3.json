@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "year_of_data_collection",
-      "true_hypothesis": "The year of data collection can be determined from the year 2000 added to the count of online courses on molecular gastronomy available, doubled count of culinary patents registered, and reduced by ten times the presence of local molecular gastronomy competitions.",
-      "true_hypothesis_expr": "2000 + df['online_courses_count'] + 2 * df['culinary_patents_count'] - 10 * df['local_competitions_presence'].astype(int)",
+      
+      
       "relevant_cols": [
         "online_courses_count",
         "culinary_patents_count",

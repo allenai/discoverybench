@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "contains_chronological_features",
-      "true_hypothesis": "The proportion of binary features in a dataset exceeding 50% and the presence of special characters in dataset names are determinants for the presence of features based on time in the dataset.",
-      "true_hypothesis_expr": "np.where((df['percentage_of_binary_features'] > 50) & (df['has_special_characters_in_name']), True, False)",
+      
+      
       "relevant_cols": [
         "percentage_of_binary_features",
         "has_special_characters_in_name",

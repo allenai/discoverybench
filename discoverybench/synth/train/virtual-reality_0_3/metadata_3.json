@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "immersiveness_preference",
-      "true_hypothesis": "Participants with a higher frequency of VR gaming sessions and those investing in advanced VR equipment tend to have a higher preference for immersive environments, where the preference is calculated based on VR gaming frequency and ownership of advanced VR devices.",
-      "true_hypothesis_expr": "np.where(df['owns_advanced_VR'], df['VR_gaming_frequency'] / 2 + 2, df['VR_gaming_frequency'] / 3 + 1).astype(int)",
+      
+      
       "relevant_cols": [
         "VR_gaming_frequency",
         "owns_advanced_VR",

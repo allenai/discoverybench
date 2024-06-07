@@ -88,8 +88,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "kitchen_tool_variety",
-      "true_hypothesis": "The variety of kitchen tools used by a chef is calculated by adding the diversity score of ingredients, twice the count of gastronomic techniques, 15 if international flavors are used, and 3 if the chef has formal culinary education.",
-      "true_hypothesis_expr": "df['ingredients_diversity_score'] + df['gastronomic_techniques_count']*2 + 3*(df['uses_international_flavors']==True) * 5 + (df['has_formal_culinary_education'] * 3)",
+      
+      
       "relevant_cols": [
         "has_formal_culinary_education",
         "ingredients_diversity_score",

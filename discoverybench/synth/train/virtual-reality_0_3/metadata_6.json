@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "daily_tech_usage_hours",
-      "true_hypothesis": "The daily tech usage hours is calculated as the square of the number of tech devices owned plus 3 times the indication of using tech for leisure.",
-      "true_hypothesis_expr": "df['number_of_tech_devices_owned'] ** 2 + 3 * df['uses_tech_for_leisure']",
+      
+      
       "relevant_cols": [
         "number_of_tech_devices_owned",
         "uses_tech_for_leisure",

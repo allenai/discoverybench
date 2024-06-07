@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "intense_stellar_formation",
-      "true_hypothesis": "In a specific cluster of galaxies, if the ratio of passive_star_nuclei to active_star_nuclei is greater than 1, then the cluster is more likely to exhibit intense stellar formation.",
-      "true_hypothesis_expr": "np.where((df['passive_star_nuclei'] / (df['active_star_nuclei'] + 1)) > 1, True, False)",
+      
+      
       "relevant_cols": [
         "active_star_nuclei",
         "passive_star_nuclei",

@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "lexical_density",
-      "true_hypothesis": "The lexical density of a book is calculated by multiplying the period language style factor by a ratio that includes a modifier based on the presence of illustrations. The result is then divided by a factor based on the target audience age group. In this calculation, books with higher period language style factors and without illustrations or targeting adult audiences may result in higher lexical densities.",
-      "true_hypothesis_expr": "df['period_language_style_factor'] * (0.02 + (0.05 * df['has_illustrations'].astype(int))) / (df['target_audience_age'].map({'children': 3, 'teens': 2, 'adults': 1}))",
+      
+      
       "relevant_cols": [
         "has_illustrations",
         "period_language_style_factor",

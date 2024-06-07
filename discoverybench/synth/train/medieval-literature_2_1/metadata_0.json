@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "knight_name_survivability_score",
-      "true_hypothesis": "Knights with a higher 'literacy_level' who originate from regions known for significant epic literature and storytelling tend to have higher survivability scores based on the correlation between their literacy level and the number of regions with epic centers they come from.",
-      "true_hypothesis_expr": "df['literacy_level'] * (df['regions_with_epic_centers'] + df['literacy_level']) / 2.0",
+      
+      
       "relevant_cols": [
         "literacy_level",
         "regions_with_epic_centers",

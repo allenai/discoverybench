@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "pollution_control_index",
-      "true_hypothesis": "We hypothesize that the pollution control index is calculated by taking half the fishery compliance score, adding 1.8 times the number of research grants, and then adding 20 if there is international cooperation in marine conservation efforts.",
-      "true_hypothesis_expr": "df['fishery_compliance_score'] * 0.5 + df['research_grants_count'] * 1.8 + 20 * (df['has_international_cooperation'] == True)",
+      
+      
       "relevant_cols": [
         "has_international_cooperation",
         "fishery_compliance_score",

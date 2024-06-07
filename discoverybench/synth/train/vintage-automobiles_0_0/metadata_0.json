@@ -128,8 +128,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "high_resale_price",
-      "true_hypothesis": "Cars with a resale price in the top 25% of the distribution are flagged as high resale price cars.",
-      "true_hypothesis_expr": "np.where(df['resale_price'] > df['resale_price'].quantile(0.75), 'Yes', 'No')",
+      
+      
       "relevant_cols": [
         "resale_price",
         "high_resale_price"

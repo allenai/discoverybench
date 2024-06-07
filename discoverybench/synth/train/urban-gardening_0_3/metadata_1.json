@@ -236,8 +236,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "public_transport_accessibility",
-      "true_hypothesis": "Public transport accessibility is determined by the square root of the number of late-night businesses in the area plus the amount of green space per 1000 residents divided by 50, floored, converted to an integer, and then adjusted to fall within the range of 1 to 10.",
-      "true_hypothesis_expr": "np.floor(np.sqrt(df['late_night_business_count']) + df['green_space_per_1000_residents'] / 50).astype(int).clip(1, 10)",
+      
+      
       "relevant_cols": [
         "late_night_business_count",
         "green_space_per_1000_residents",

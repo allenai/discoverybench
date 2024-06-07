@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "genres_experienced",
-      "true_hypothesis": "The number of music genres experienced decreases with the participant's frequency of sadness during therapy sessions and the combination of therapy session frequency and preference for live music, while adjusting for the session time of day and preference for popular music genres.",
-      "true_hypothesis_expr": "((df['therapy_session_frequency'] + 2*df['preference_for_live_music']) / (1 + df['frequency_of_sadness'])) - df['session_time_of_day'].apply(lambda x: 0 if x == 'morning' else (1 if x=='afternoon' else 2)) - 2 * df['preference_for_popular_music']",
+      
+      
       "relevant_cols": [
         "session_time_of_day",
         "preference_for_popular_music",

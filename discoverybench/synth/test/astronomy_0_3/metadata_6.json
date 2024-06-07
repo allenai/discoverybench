@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "colder_cosmic_temperature",
-      "true_hypothesis": "Galaxies that are part of larger cosmic_structures and have higher gravitational_pull tend to have colder cosmic temperatures, particularly if they also exhibit high_radiation_levels.",
-      "true_hypothesis_expr": "df['cosmic_structures'] * 0.5 - df['gravitational_pull'] * 0.07 + 3 * df['high_radiation_levels']",
+      
+      
       "relevant_cols": [
         "cosmic_structures",
         "gravitational_pull",

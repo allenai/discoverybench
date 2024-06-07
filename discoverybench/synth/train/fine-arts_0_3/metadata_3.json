@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "specialization",
-      "true_hypothesis": "Artists with a sum of the square of the number of art techniques mastered and the number of collaborations with well-known artists greater than 40 are likely to specialize in modern art; otherwise, they are likely to specialize in abstract art.",
-      "true_hypothesis_expr": "np.where(df['techniques_mastered']**2 + df['well_known_collaborators'] > 40, 'modern', 'abstract')",
+      
+      
       "relevant_cols": [
         "techniques_mastered",
         "well_known_collaborators",

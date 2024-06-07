@@ -276,8 +276,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "annual_visitor_count",
-      "true_hypothesis": "The annual visitor count increases for gardens with a higher square footage of planted area and better public transit access, but decreases if a lower percentage of the garden consists of native plants.",
-      "true_hypothesis_expr": "df['square_footage'] * 0.3 + 2000 * df['public_transit_access'] - df['percentage_native_plants'] * 50",
+      
+      
       "relevant_cols": [
         "percentage_native_plants",
         "square_footage",

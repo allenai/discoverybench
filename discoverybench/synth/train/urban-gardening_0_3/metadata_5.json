@@ -236,8 +236,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "private_funding",
-      "true_hypothesis": "Gardens in areas with high population density and limited land availability receive significantly higher private funding due to a combination of factors related to population density and land availability, which contribute to the funding received.",
-      "true_hypothesis_expr": "df['population_density'] * 20 + np.where(df['land_availability']==True, 5000, 20000)",
+      
+      
       "relevant_cols": [
         "population_density",
         "land_availability",

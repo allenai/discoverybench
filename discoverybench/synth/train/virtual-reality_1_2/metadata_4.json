@@ -200,8 +200,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "derived_stress_level",
-      "true_hypothesis": "Individuals with higher exposure to VR environments and higher number of daily technology usage hours are more likely to report derived stress levels within a moderate range, potentially influenced by the combination of VR exposure frequency and daily tech usage hours.",
-      "true_hypothesis_expr": "np.clip(1 + (df['VR_exposure_frequency']**2 / 10) + (df['daily_tech_usage_hours'] / 4), 1, 5)",
+      
+      
       "relevant_cols": [
         "VR_exposure_frequency",
         "daily_tech_usage_hours",

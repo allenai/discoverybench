@@ -192,8 +192,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "uses_smartphone_secondary",
-      "true_hypothesis": "Photographers who use lightweight cameras (less than 500 grams) and win more photography contests than the median winner are more likely to use smartphones as secondary devices due to the convenience of having a secondary, easily accessible device for spontaneous shots. The likelihood of using smartphones as secondary devices increases when the photographer meets both criteria of using a lightweight camera and being more successful in contests.",
-      "true_hypothesis_expr": "np.where((df['camera_weight_grams'] < 500) & (df['photography_contests_won'] > df['photography_contests_won'].quantile(0.5)), True, False)",
+      
+      
       "relevant_cols": [
         "camera_weight_grams",
         "photography_contests_won",

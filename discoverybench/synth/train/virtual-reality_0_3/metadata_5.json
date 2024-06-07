@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "VR_exposure_frequency",
-      "true_hypothesis": "Higher values of technical training level, frequent equipment updates, and younger age group are positively associated with a greater VR exposure frequency, represented by a combination that involves the cube of technical training level, frequent equipment updates multiplied by 5, and age groups translated to numerical values.",
-      "true_hypothesis_expr": "df['technical_training_level']**3 + df['frequent_equipment_updates'] * 5 + df['age_group'].replace({'18-25': 5, '26-35': 4, '36-45': 3, '46-55': 2, '56+': 1})",
+      
+      
       "relevant_cols": [
         "technical_training_level",
         "frequent_equipment_updates",

@@ -88,8 +88,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "species_diversity",
-      "true_hypothesis": "In regions with a population density greater than 100 people per square kilometer and implementing community-led biodiversity conservation programs, the species diversity metric is 30% higher compared to regions with different conservation programs or lower population densities.",
-      "true_hypothesis_expr": "np.where((df['population_density'] > 100) & (df['conservation_program_type'] == 'community-led'), df.get('species_diversity', 0) * 1.3, df.get('species_diversity', 0))",
+      
+      
       "relevant_cols": [
         "population_density",
         "conservation_program_type",

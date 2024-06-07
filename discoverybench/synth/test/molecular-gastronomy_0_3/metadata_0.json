@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "exotic_ingredients",
-      "true_hypothesis": "The likelihood of using exotic ingredients in a dish can be determined by evaluating if the level of heat required for a culinary technique is at least 4 and if the sensory impact score is higher than 7. Dishes meeting these conditions are more likely to include exotic ingredients.",
-      "true_hypothesis_expr": "np.where((df['culinary_technique_heat'] >= 4) & (df['sensory_impact_score'] > 7), True, False)",
+      
+      
       "relevant_cols": [
         "culinary_technique_heat",
         "sensory_impact_score",

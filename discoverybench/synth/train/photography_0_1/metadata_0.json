@@ -144,8 +144,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "camera_megapixels",
-      "true_hypothesis": "Photographers who primarily shoot in low light conditions tend to use cameras with higher megapixels compared to those who shoot in well-lit conditions. Additionally, photographers with a higher equipment budget and who photograph wildlife with specialized lenses tend to have cameras with higher megapixels for better image resolution.",
-      "true_hypothesis_expr": "np.where(df['primary_shooting_condition'] == 'low_light', 25, 15) + (((df['equipment_budget']**3 + 5*df['workshops_attended']**2) * (df['photography_focus'] == 'wildlife'))**3 + (df['specialized_lenses_count']**2 + 5 * (np.where((df['competitions_participated'] > 5) & (df['weekly_editing_hours'] > 10) & df['active_in_online_forums'], True, False)).astype(int))**2) / 10",
+      
+      
       "relevant_cols": [
         "primary_shooting_condition",
         "specialized_lenses_count",

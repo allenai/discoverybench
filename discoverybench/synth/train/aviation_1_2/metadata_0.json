@@ -124,8 +124,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "has_advanced_navigation_training",
-      "true_hypothesis": "Pilots who have worked for more than 5 years at airlines with high technological fleet level and have more than 5 previous navigation errors are likely to have received advanced navigation training.",
-      "true_hypothesis_expr": "np.where((df['years_with_current_airline'] > 5) & (df['airline_fleet_technology_level'] == 'High') & (df['previous_navigation_errors'] > 5), True, False)",
+      
+      
       "relevant_cols": [
         "years_with_current_airline",
         "airline_fleet_technology_level",

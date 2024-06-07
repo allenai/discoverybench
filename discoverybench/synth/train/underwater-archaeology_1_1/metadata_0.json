@@ -80,8 +80,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "preserved_road_layout",
-      "true_hypothesis": "In locations where the presence of coral reefs contributes at least 20 times more value than the depth of the site subtracted by half, and stone structures are present, preserved road layouts are indicated with 'yes' at underwater archaeological sites.",
-      "true_hypothesis_expr": "np.where((df['coral_reefs_present'] * 20 - df['depth_of_site'] * 0.5 > 10) & (df['stone_structures_present']), 'yes', 'no')",
+      
+      
       "relevant_cols": [
         "stone_structures_present",
         "depth_of_site",

@@ -84,8 +84,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "international_investor_presence",
-      "true_hypothesis": "Designers with more than 15 appearances in major runway events and an average profit margin of over 50% in their previous collections are more likely to have international investors present.",
-      "true_hypothesis_expr": "np.where((df['num_designer_runway_appearances'] > 15) & (df['average_profit_margin_previous_collections'] > 50), True, False)",
+      
+      
       "relevant_cols": [
         "num_designer_runway_appearances",
         "average_profit_margin_previous_collections",

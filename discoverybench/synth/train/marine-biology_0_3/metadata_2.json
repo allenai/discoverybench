@@ -84,8 +84,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "daily_sunlight_hours",
-      "true_hypothesis": "The average daily sunlight hours at a marine location increase as water clarity improves, particularly when there are fewer clouds. Daily sunlight hours can be calculated as 24 multiplied by water clarity percentage divided by 100 multiplied by 1 minus cloud cover percentage divided by 100.",
-      "true_hypothesis_expr": "(24 * (df['water_clarity']/100) * (1 - df['cloud_cover']/100))",
+      
+      
       "relevant_cols": [
         "water_clarity",
         "cloud_cover",

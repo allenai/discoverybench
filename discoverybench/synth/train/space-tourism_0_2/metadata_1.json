@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "frequent_flyer_status",
-      "true_hypothesis": "Tourists classified as seniors, with a high total travel cost calculation, and booking directly are likely to have frequent flyer status.",
-      "true_hypothesis_expr": "np.where((df['age_group'] == 'senior') & ((1000 + 1500 * df['number_of_companions'] + 2000 * df['space_membership'].astype(int) + np.where(df['primary_travel_purpose'] == 'research', 3000, np.where(df['primary_travel_purpose'] == 'education', 2000, 0))) > 5000) & (df['booking_source'] == 'direct'), True, False)",
+      
+      
       "relevant_cols": [
         "age_group",
         "booking_source",

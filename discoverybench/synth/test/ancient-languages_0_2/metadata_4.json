@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "international_experts_involved",
-      "true_hypothesis": "The involvement of international experts is more likely when there is high geopolitical tension in the region, specifically in the Middle East.",
-      "true_hypothesis_expr": "np.where((df.get('geopolitical_tension') > 7) & (df.get('region') == 'Middle East'), True, False)",
+      
+      
       "relevant_cols": [
         "geopolitical_tension",
         "international_experts_involved"

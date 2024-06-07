@@ -96,8 +96,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "gdp_per_capita",
-      "true_hypothesis": "The GDP per capita in a region can be predicted by taking 120 times the number of designated protected wildlife areas, adding 5 times the total healthcare budget per capita, and subtracting 850 times the number of recorded natural disasters. Regions with more protected areas and higher healthcare budget tend to have higher GDP per capita, but high frequency of natural disasters can negatively impact this relationship due to the associated costs.",
-      "true_hypothesis_expr": "df['protected_wildlife_areas_count'] * 120 + df['healthcare_budget_per_capita'] * 5 - df['frequency_of_natural_disasters'] * 850",
+      
+      
       "relevant_cols": [
         "protected_wildlife_areas_count",
         "healthcare_budget_per_capita",

@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "employee_training_frequency",
-      "true_hypothesis": "In a dataset on cybersecurity, organizations in the healthcare sector that have a higher percentage of employees accessing sensitive data (numeric concept) and have a dedicated IT security team (binary concept), conduct employee cybersecurity training on a monthly basis if the specified conditions are met, otherwise they conduct it annually.",
-      "true_hypothesis_expr": "np.where((df['organization_sector'] == 'healthcare') & (df['percent_employees_accessing_sensitive_data'] > 50) & (df['has_dedicated_IT_security_team']), 'monthly', 'annually')",
+      
+      
       "relevant_cols": [
         "organization_sector",
         "percent_employees_accessing_sensitive_data",

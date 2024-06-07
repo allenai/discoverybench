@@ -144,8 +144,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "photo_editing_software_use",
-      "true_hypothesis": "Photographers who invest more than $5000 in equipment and spend over 20 hours weekly on photography, or those who post on social media and have a social media popularity percentile above 80%, tend to use photo editing software.",
-      "true_hypothesis_expr": "np.logical_or(np.where((df['investment_in_equipment'] > 5000) & (df['hours_spent_photography_weekly'] > 20), True, False), np.logical_and(df['posts_on_social_media'], df['social_media_popularity_percentile'] > 0.8))",
+      
+      
       "relevant_cols": [
         "investment_in_equipment",
         "posts_on_social_media",

@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "sensor_input_count",
-      "true_hypothesis": "The number of sensor inputs on a robot correlates with whether it is primarily designed for industrial tasks and capable of continuous operation. Specifically, for industrial robots with timed task sequences above 5, the sensor input count varies from 5 to 15.",
-      "true_hypothesis_expr": "np.where((df['primary_operational_focus'] == 'industrial') & df['continuous_operation_capable'] & (df['timed_task_sequence_count'] > 5), np.random.randint(15, 50), np.random.randint(5, 15))",
+      
+      
       "relevant_cols": [
         "timed_task_sequence_count",
         "primary_operational_focus",

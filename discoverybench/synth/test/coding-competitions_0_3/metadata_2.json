@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "coding_bootcamps",
-      "true_hypothesis": "The number of coding bootcamps in a participant's country can be better explained by the square root of internet speed plus the square of tech interest, each multiplied by a factor related to major universities offering computer science programs.",
-      "true_hypothesis_expr": "(df['internet_speed'] ** 0.5 + df['tech_interest'] ** 2) * (df['major_universities_cs'] * 20 + 1)",
+      
+      
       "relevant_cols": [
         "internet_speed",
         "tech_interest",

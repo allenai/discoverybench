@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "feature_count",
-      "true_hypothesis": "The number of features in a dataset can be estimated by adding 10 times the count of pretrained models used (quantitative) and 15 times the indicator for dataset including time-series data, to that dataset's base feature count.",
-      "true_hypothesis_expr": "df['pretrained_models_count'] + 10 * df['includes_image_data'].astype(int) + 15 * df['includes_time_series'].astype(int)",
+      
+      
       "relevant_cols": [
         "pretrained_models_count",
         "includes_image_data",

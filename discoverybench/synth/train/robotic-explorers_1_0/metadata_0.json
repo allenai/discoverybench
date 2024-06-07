@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "highly_successful_discovery",
-      "true_hypothesis": "Autonomous exploration vehicles that have autonomous navigation capability and high energy storage capacity, and discover more than 30 new geographical features, are classified as highly successful discoveries.",
-      "true_hypothesis_expr": "np.where((np.where(np.where(df['has_autonomous_navigation'], df['energy_storage_capacity'] / 100 + df['sensor_technology_types'], df['sensor_technology_types'])**3 + 2*df['communication_delay_tolerance'] > 20, True, False) == True) & (np.where(df['optical_imaging_resolution'] > 30, np.where(df['communication_success_ratio'] > 0.8, 'highly_uneven', 'uneven'), 'even') == 'highly_uneven') & (df['new_geographical_features_found'] > 30), True, False)",
+      
+      
       "relevant_cols": [
         "new_geographical_features_found",
         "communication_delay_tolerance",

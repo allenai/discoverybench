@@ -272,8 +272,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "bio_dome_size_sq_m",
-      "true_hypothesis": "The size of the bio-dome in square meters is calculated by multiplying the percentage of curated floor area specifically designed for aquatic and plant habitats by 10, and then subtracting twice the percentage of the bio-dome surface covered by solar panels.",
-      "true_hypothesis_expr": "df['curated_floor_area_percentage'] * 10 - df['solar_panel_coverage_percentage'] * 2",
+      
+      
       "relevant_cols": [
         "curated_floor_area_percentage",
         "solar_panel_coverage_percentage",

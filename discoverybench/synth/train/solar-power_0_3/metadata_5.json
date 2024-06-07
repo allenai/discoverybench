@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "average_daylight_hours",
-      "true_hypothesis": "The average daylight hours at a solar-powered home are calculated by multiplying the daylight to night ratio by 15 for spring and summer seasons, and by 9 for other seasons.",
-      "true_hypothesis_expr": "df['daylight_to_night_ratio'] * np.where(df['season'].isin(['spring', 'summer']), 15, 9)",
+      
+      
       "relevant_cols": [
         "season",
         "daylight_to_night_ratio",

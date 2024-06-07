@@ -100,8 +100,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "processor_speed",
-      "true_hypothesis": "Robots with higher energy efficiency ratings, more complex tooling mechanisms, and equipped with advanced cooling mechanisms tend to have higher processor speeds due to the direct impact of energy efficiency, tool complexity level, advanced cooling, and few other factors on processor speed.",
-      "true_hypothesis_expr": "1 + 0.8 * (df['operational_uptime_percent'] * 0.3 + df['tool_complexity_level'] * 3) / 50 + 0.3 * df['energy_efficiency'] + df['has_advanced_cooling'] * 1",
+      
+      
       "relevant_cols": [
         "energy_efficiency",
         "has_advanced_cooling",

@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "VR_apps_usage",
-      "true_hypothesis": "Participants who create more VR content items (like games, experiences, or applications) per month and have a stronger sense of belonging to the VR community are likely to use more VR apps. Increased VR content creation and higher ratings of VR community belonging positively correlate with higher levels of VR app usage.",
-      "true_hypothesis_expr": "df['VR_content_creation'] * 2 + df['VR_community_belonging'] * 3",
+      
+      
       "relevant_cols": [
         "VR_content_creation",
         "VR_community_belonging",

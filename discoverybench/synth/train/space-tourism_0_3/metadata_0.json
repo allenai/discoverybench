@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "cabin_class",
-      "true_hypothesis": "The cabin class booked by a tourist could be influenced by their total wealth and past experiences of traveling to space. We predict that if the tourist's wealth is over $1,000,000, they would choose first class. For tourists with a wealth over $500,000 who have traveled to space before, they might opt for business class. Otherwise, the tourist is likely to book economy class.",
-      "true_hypothesis_expr": "np.where(df['tourist_wealth'] > 1000000, 'first', np.where((df['tourist_wealth'] > 500000) & (df['previous_space_travel'] == True), 'business', 'economy'))",
+      
+      
       "relevant_cols": [
         "tourist_wealth",
         "previous_space_travel",

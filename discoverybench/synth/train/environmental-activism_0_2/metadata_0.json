@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "is_above_renewable_threshold",
-      "true_hypothesis": "Regions where the square of average investment in green technologies per capita divided by 1000 minus the sum of 500, five times the number of environmental policies, and twice the public transportation usage rate is greater than 250 are indicated as being above the renewable threshold.",
-      "true_hypothesis_expr": "np.where((df['per_capita_green_investment']**2 / 1000 - (500 - (df['number_of_environmental_policies'] * 5) - (df['public_transportation_usage_rate'] * 2))) > 250, True, False)",
+      
+      
       "relevant_cols": [
         "per_capita_green_investment",
         "number_of_environmental_policies",

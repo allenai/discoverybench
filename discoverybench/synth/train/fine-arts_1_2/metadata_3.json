@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "international_awards_prediction",
-      "true_hypothesis": "Artists with higher media appearances count squared, collaboration scores multiplied by 5, and those featured in top art magazines are more likely to win international awards if the calculated value is greater than 50.",
-      "true_hypothesis_expr": "np.where((df['media_appearances_count'] ** 2 + 5 * df['collaboration_score'] + (df['featured_in_top_magazines'] * 20)) > 50, True, False)",
+      
+      
       "relevant_cols": [
         "media_appearances_count",
         "collaboration_score",

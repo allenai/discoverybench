@@ -244,8 +244,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "type_of_ecosystem",
-      "true_hypothesis": "In artificial ecosystems, the type_of_ecosystem is determined based on a combination of the number of species and the amount of energy consumed for air purification per species, along with the average daylight hours experienced. Ecosystems where energy consumption per species is high and the resulting daylight hours adjusted by UV filtering technology are low are classified as desert. Ecosystems with low energy consumption per species and high daylight hours, considering UV filtration, are classified as tropical. The remaining ecosystems are categorized as temperate.",
-      "true_hypothesis_expr": "np.where((df['energy_consumption_air_purification'] / df['number_of_species'] >= 8) & (np.where(df['UV_filter_installed'], df['average_daylight_hours'] * 2.5, df['average_daylight_hours'] * 4) < 20), 'desert', np.where((df['energy_consumption_air_purification'] / df['number_of_species'] <= 3) & (np.where(df['UV_filter_installed'], df['average_daylight_hours'] * 2.5, df['average_daylight_hours'] * 4) >= 60), 'tropical', 'temperate'))",
+      
+      
       "relevant_cols": [
         "number_of_species",
         "average_daylight_hours",

@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "dish_id",
-      "true_hypothesis": "In molecular gastronomy, the combination of a dish's preparation complexity and presentation novelty is utilized to derive a unique identifier for each dish.",
-      "true_hypothesis_expr": "np.where((df['preparation_complexity']**3 + df['presentation_novelty']**2) % 7 == 0, 'D006', np.where((df['preparation_complexity']**3 + df['presentation_novelty']**2) % 7 == 1, 'D007', np.where((df['preparation_complexity']**3 + df['presentation_novelty']**2) % 7 == 2, 'D008', np.where((df['preparation_complexity']**3 + df['presentation_novelty']**2) % 7 == 3, 'D009', np.where((df['preparation_complexity']**3 + df['presentation_novelty']**2) % 7 == 4, 'D010', np.where((df['preparation_complexity']**3 + df['presentation_novelty']**2) % 7 == 5, 'D011', 'D012'))))))",
+      
+      
       "relevant_cols": [
         "presentation_novelty",
         "preparation_complexity",

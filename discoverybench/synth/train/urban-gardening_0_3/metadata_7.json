@@ -236,8 +236,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "is_residential_area",
-      "true_hypothesis": "Community-driven urban gardens that have more than 10 local volunteers and receive more than $20,000 in local funding are classified as being located in a residential area.",
-      "true_hypothesis_expr": "np.where((df['number_of_local_volunteers'] > 10) & (df['local_funding_amount'] > 20) & df['is_community_driven'], True, False)",
+      
+      
       "relevant_cols": [
         "number_of_local_volunteers",
         "local_funding_amount",

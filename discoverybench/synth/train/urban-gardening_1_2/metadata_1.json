@@ -276,8 +276,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "volunteer_involvement_level",
-      "true_hypothesis": "The level of volunteer involvement in community activities is positively influenced by the accessibility of public transport, population density, and the percentage of residential areas in the city.",
-      "true_hypothesis_expr": "(df['public_transport_accessibility'] * 0.5 + df['population_density'] * 0.0001 + df['residential_area_percentage'] * 0.05).astype(int)",
+      
+      
       "relevant_cols": [
         "population_density",
         "public_transport_accessibility",

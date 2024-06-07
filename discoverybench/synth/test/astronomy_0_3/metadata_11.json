@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "dark_matter_percentage",
-      "true_hypothesis": "Galaxies with a dark matter percentage of 50 or higher can be predicted by a model that calculates it as 18% of the star formation rate plus 42% of the binary star systems percentage, offset by 50.",
-      "true_hypothesis_expr": "0.18 * df['star_formation_rate'] + 0.42 * df['binary_star_systems_percentage'] + 50",
+      
+      
       "relevant_cols": [
         "star_formation_rate",
         "binary_star_systems_percentage",

@@ -252,8 +252,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "year_created",
-      "true_hypothesis": "The year a painting was created can be estimated based on the percentile rank of painting creation within the Impressionist period, where paintings created earlier in the period have lower percentiles, and those created later have higher percentiles.",
-      "true_hypothesis_expr": "1870 + ((1890 - 1870) * (df['impressionist_period_percentile']/100.0))",
+      
+      
       "relevant_cols": [
         "impressionist_period_percentile",
         "year_created"

@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "adjusted_time_to_solve",
-      "true_hypothesis": "Participants with previous experience in similar puzzles, who prefer puzzles as leisure activity and are solving puzzles with less than 50 pieces, tend to have their time to solve adjusted to 75% of the original time.",
-      "true_hypothesis_expr": "np.where((df['previous_experience'] == True) & (df['leisure_preference'] == 'puzzles') & (df['puzzle_pieces'] < 50), df.get('time_to_solve', 0) * 0.75, df.get('time_to_solve', 0))",
+      
+      
       "relevant_cols": [
         "previous_experience",
         "leisure_preference",

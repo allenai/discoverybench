@@ -272,8 +272,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "energy_consumption_kWh",
-      "true_hypothesis": "In artificial ecosystems, the introduction of advanced climate control systems that adapt to both external weather conditions and internal ecosystem parameters (e.g., humidity, temperature) can optimize energy consumption. These systems reduce energy usage by applying a specific coefficient to energy consumption based on the adaptive climate control status and external temperature, adjusting consumption differently for different seasons to maintain optimal conditions.",
-      "true_hypothesis_expr": "np.where(df.get('adaptive_climate_control_status', False), df.get('energy_consumption_kWh', 0) * 0.85 - df.get('external_temperature_C', 0) * (np.where(df['season'] == 'winter', 0.1, np.where(df['season'] == 'summer', 0.2, 0))), df.get('energy_consumption_kWh', 0))",
+      
+      
       "relevant_cols": [
         "external_temperature_C",
         "season",

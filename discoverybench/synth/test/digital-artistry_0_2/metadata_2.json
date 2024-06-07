@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "art_forum_participations",
-      "true_hypothesis": "Artists who utilize a diverse range of digital tools and have high levels of engagement on online art platforms, paired with participation in a significant number of digital art competitions and a notable year-over-year increase in submission rate, are more active in art forums.",
-      "true_hypothesis_expr": "2*df['digital_tool_diversity'] + 10*df['online_art_engagement'] + 15*np.where((df['total_art_competitions'] ** 2 + 0.1 * df['year_over_year_submission_increase'] > 25), True, False)",
+      
+      
       "relevant_cols": [
         "digital_tool_diversity",
         "online_art_engagement",

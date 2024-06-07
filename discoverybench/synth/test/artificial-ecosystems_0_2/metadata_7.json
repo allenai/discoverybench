@@ -212,8 +212,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "reflective_glass_percentage",
-      "true_hypothesis": "In artificial ecosystems, the percentage of reflective glass used in dome construction is influenced by the average daylight hours and the presence of UV-filter technologies, where increased average daylight hours correlate to lower reflective glass usage when UV-filter technologies are installed, and higher reflective glass usage when UV-filter technologies are not installed, offering varying levels of protection against solar radiation.",
-      "true_hypothesis_expr": "np.where(df['UV_filter_installed'], df['average_daylight_hours'] * 2.5, df['average_daylight_hours'] * 4)",
+      
+      
       "relevant_cols": [
         "average_daylight_hours",
         "UV_filter_installed",

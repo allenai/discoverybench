@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "is_enclosed",
-      "true_hypothesis": "In ecosystems, when artificial light intensity is higher than 2500 lumens and the percentage of native vegetation is less than 50%, the ecosystem is considered enclosed.",
-      "true_hypothesis_expr": "np.where((df['artificial_light_intensity'] > 2500) & (df['percentage_native_vegetation'] < 50), True, False)",
+      
+      
       "relevant_cols": [
         "artificial_light_intensity",
         "percentage_native_vegetation",

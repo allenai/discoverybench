@@ -108,8 +108,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "aviation_safety_seminars_attended_per_year",
-      "true_hypothesis": "Pilots who attend more aviation safety seminars likely have a calculated value of 5 times their flight hours per year of experience plus 10 times whether they fly multi-engine aircraft.",
-      "true_hypothesis_expr": "5 * df['flight_hours_per_year_of_experience'] + 10 * df['flies_multi_engine_aircraft'].astype(int)",
+      
+      
       "relevant_cols": [
         "flight_hours_per_year_of_experience",
         "flies_multi_engine_aircraft",

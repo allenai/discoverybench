@@ -192,8 +192,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "award_recipient",
-      "true_hypothesis": "Artists who have participated in more digital art competitions and have a squared total number of digital art competitions plus 0.1 times percentage increase in digital art submissions greater than 25 are more likely to be award recipients.",
-      "true_hypothesis_expr": "np.where((df['total_art_competitions'] ** 2 + 0.1 * df['year_over_year_submission_increase'] > 25), True, False)",
+      
+      
       "relevant_cols": [
         "total_art_competitions",
         "year_over_year_submission_increase",

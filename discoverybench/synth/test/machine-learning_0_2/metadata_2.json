@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "preprocessing_complexity",
-      "true_hypothesis": "The preprocessing complexity is higher when the data set has a larger variety of data types and when the data collection covers multiple time zones, resulting in more processing steps before model training.",
-      "true_hypothesis_expr": "df['data_type_diversity'] * 2 + (df['spans_multiple_time_zones'] * 3)",
+      
+      
       "relevant_cols": [
         "data_type_diversity",
         "spans_multiple_time_zones",

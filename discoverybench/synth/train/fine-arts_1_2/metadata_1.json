@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "awards_count",
-      "true_hypothesis": "Artists with education level values squared plus twice the number of collaborative projects they have tend to have a higher count of awards.",
-      "true_hypothesis_expr": "df['education_level']**2 + 2 * df['collaborative_projects_count']",
+      
+      
       "relevant_cols": [
         "education_level",
         "collaborative_projects_count",

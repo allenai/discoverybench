@@ -192,8 +192,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "camera_megapixels",
-      "true_hypothesis": "Photographers who primarily shoot in low light conditions tend to use cameras with higher megapixels compared to those who shoot in well-lit conditions. Moreover, photographers who engage more frequently in wildlife photography and have a higher frequency squared, all else being equal, are more likely to choose cameras with higher megapixels for better image resolution.",
-      "true_hypothesis_expr": "np.where(df['primary_shooting_condition'] == 'low_light', 25, 15) + (df['wildlife_photography_frequency']**2) / 10",
+      
+      
       "relevant_cols": [
         "primary_shooting_condition",
         "wildlife_photography_frequency",

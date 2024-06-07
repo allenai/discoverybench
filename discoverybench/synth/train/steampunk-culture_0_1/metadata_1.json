@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "age",
-      "true_hypothesis": "Participants' age can be predicted by a formula that includes their employment in a creative field, number of hobbies, social media engagement with steampunk content, age range, and newsletter subscription status.",
-      "true_hypothesis_expr": "np.minimum(65, np.maximum(18, (df['employment_in_creative_field']*15 + 22) + (df['num_of_hobbies']*0.7) + np.where(np.where((np.where(df['age_of_participant']**2 - 5 * df['steampunk_content_exposure'] < 1000, 'online', 'in_person') == 'in_person') & (df['steampunk_social_media_engagement'] * np.where(df['newsletter_subscription'], 1.1, 0.9) + df['age_range'].map({'18-25': 2, '26-35': 3, '36-45': 4, '46-55': 3, '55+': 2}), 5, 0)))",
+      
+      
       "relevant_cols": [
         "employment_in_creative_field",
         "num_of_hobbies",

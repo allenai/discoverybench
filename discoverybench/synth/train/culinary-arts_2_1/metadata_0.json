@@ -112,8 +112,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "cuisine_specialty",
-      "true_hypothesis": "Chefs who prefer more complex dishes have higher kitchen_tool_variety and longer meal_preparation_time. Chefs with kitchen_tool_variety greater than 25 and meal_preparation_time over 60 specialize in French cuisine, those with kitchen_tool_variety greater than 20 and meal_preparation_time over 45 specialize in Indian cuisine, while chefs with kitchen_tool_variety less than or equal to 20 and meal_preparation_time less than or equal to 45 tend to specialize in Chinese cuisine.",
-      "true_hypothesis_expr": "np.where((df['kitchen_tool_variety'] > 25) & (df['meal_preparation_time'] > 60), 'French', np.where((df['kitchen_tool_variety'] > 20) & (df['meal_preparation_time'] > 45), 'Indian', np.where((df['kitchen_tool_variety'] <= 20) & (df['meal_preparation_time'] <= 45), 'Chinese', 'Italian')))",
+      
+      
       "relevant_cols": [
         "kitchen_tool_variety",
         "meal_preparation_time",

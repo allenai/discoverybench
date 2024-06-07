@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "travel_class",
-      "true_hypothesis": "Space tourists who both participated in promotional events and have preferences for group travel, come from countries with a high space program rank, and are from North America are more likely to select orbital class due to a combination of their active engagement and specific travel inclinations.",
-      "true_hypothesis_expr": "np.where((df['participated_in_promotional_events'] == True) & ((5 + df['prefers_group_travel']*2 + df['origin_country_space_program_rank']*0.2 + df['is_from_north_america']*3*(df['origin_country_space_program_rank']*0.1)) >= 5), 'orbital', 'suborbital')",
+      
+      
       "relevant_cols": [
         "participated_in_promotional_events",
         "prefers_group_travel",

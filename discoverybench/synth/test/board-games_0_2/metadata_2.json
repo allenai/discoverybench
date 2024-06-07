@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "peak_win_streak",
-      "true_hypothesis": "Players who participate more frequently in scheduled tournaments and interact more often in online game forums are expected to achieve a peak win streak calculated by doubling the tournament participation frequency and adding a component based on forum interaction frequency, where players with higher forum interaction frequencies above the 75th percentile may experience a boost depending on their social media presence, reflecting their active engagement and adaptability in competitive play.",
-      "true_hypothesis_expr": "df['tournament_participation_frequency'] * 2 + np.where(df['forum_interaction_frequency'] >= np.percentile(df['forum_interaction_frequency'],75), df['forum_interaction_frequency']/10 + 3*np.where(df['social_media_presence']==True, 1, 0), 0)",
+      
+      
       "relevant_cols": [
         "tournament_participation_frequency",
         "forum_interaction_frequency",

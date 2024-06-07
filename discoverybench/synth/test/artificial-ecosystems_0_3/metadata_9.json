@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "temperature_control_efficiency",
-      "true_hypothesis": "The efficiency of temperature control in artificial ecosystems depends on the number of different plant species within the bio-dome, with each plant species diversifying the system contributing to the efficiency rating. Additionally, the presence of a water recycling system increases the efficiency rating due to its impact on internal humidity levels.",
-      "true_hypothesis_expr": "df['plant_species_diversity'] * 0.002 + (df['water_recycling_system_present'].astype(int) * 0.1) + 0.5",
+      
+      
       "relevant_cols": [
         "plant_species_diversity",
         "water_recycling_system_present",

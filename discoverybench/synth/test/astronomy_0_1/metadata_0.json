@@ -200,8 +200,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "luminous_blue_variable_count",
-      "true_hypothesis": "Galaxies with a complex interaction between distance to nearest star-forming region, star formation rate, presence of magnetic fields, age, dominant stellar age, luminosity variability, average surface temperature, ultraviolet emission, binary star systems, and dark matter density classification, show variability in the count of luminous blue variables.",
-      "true_hypothesis_expr": "((np.power(df['distance_to_nearest_star_forming_region'], -1) * df['star_formation_rate'] * 5 + np.where(df['magnetic_field_presence'], 10, 0) - df['galaxy_age']) / 10 + (np.where((df['dominant_stellar_age'] < 100) & (df['luminosity_variability'] > 5), 'spiral', np.where(df['luminosity_variability'] <= 2, 'elliptical', 'irregular')) == 'spiral') * 3).astype(int) * 3 + (1000 - (df['binary_star_systems'] ** 2 + 50 * (df['velocity_dispersion_of_stars'] / df['average_surface_temperature_of_stars'] * 10 + 5 * df['ultraviolet_emission'].astype(int))) * (np.where((df['dominant_stellar_age'] < 100) & (df['luminosity_variability'] > 5), 'spiral', np.where(df['luminosity_variability'] <= 2, 'elliptical', 'irregular')) == 'Giant')) / 50 + np.where(df.get('dark_matter_density_classification', '') == 'high', 50, -30)",
+      
+      
       "relevant_cols": [
         "galaxy_age",
         "distance_to_nearest_star_forming_region",

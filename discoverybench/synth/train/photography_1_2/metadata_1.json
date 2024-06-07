@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "photography_contests_won",
-      "true_hypothesis": "Photographers who engage in more outdoor shoots, have a higher average lens cost, and fewer indoor shoots are likely to win more photography contests. The number of outdoor shoots taken cubed, multiplied by two times the average lens cost, minus the square of indoor shoots taken, influences the number of contests won.",
-      "true_hypothesis_expr": "df['outdoor_shoots_count']**3 + 2*df['average_lens_cost'] - df['indoor_shoots_count']**2",
+      
+      
       "relevant_cols": [
         "outdoor_shoots_count",
         "indoor_shoots_count",

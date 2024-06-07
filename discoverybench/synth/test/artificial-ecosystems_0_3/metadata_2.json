@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "staff_per_hectare",
-      "true_hypothesis": "The number of staff per hectare in an ecosystem is determined by taking the total area of the ecosystem in hectares, dividing it by 10, and adding the value obtained by multiplying the indicator of whether the ecosystem is open year-round by 5. For example, a larger ecosystem may have more staff per hectare, and if it operates throughout the year, additional staff may be needed due to continuous maintenance requirements.",
-      "true_hypothesis_expr": "df['ecosystem_size_hectares'] / 10 + (df['open_year_round'] * 5)",
+      
+      
       "relevant_cols": [
         "ecosystem_size_hectares",
         "open_year_round",

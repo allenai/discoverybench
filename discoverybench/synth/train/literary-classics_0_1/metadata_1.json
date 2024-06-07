@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "publication_year",
-      "true_hypothesis": "The publication year is calculated based on a formula that considers the count of major themes associated with different literary movements and the presence of new literary techniques typical for the time period in the book.",
-      "true_hypothesis_expr": "1700 + 10 * df['influential_themes_count'] + 20 * df['new_techniques_used'].astype(int)",
+      
+      
       "relevant_cols": [
         "influential_themes_count",
         "new_techniques_used",

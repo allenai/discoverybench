@@ -136,8 +136,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "historical_findings",
-      "true_hypothesis": "Historical findings in exploration areas are more likely if there have been more than 50 communication attempts per day, significant power fluctuations per week detected in the vehicle, and the survey in the area was conducted more than five years ago.",
-      "true_hypothesis_expr": "np.where((df['communication_attempts'] > 50) & (df['power_fluctuations'] > 10) & (df['years_since_last_survey'] > 5), True, False)",
+      
+      
       "relevant_cols": [
         "power_fluctuations",
         "communication_attempts",

@@ -228,8 +228,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "frame_material",
-      "true_hypothesis": "Wood frames are used on paintings by Monet with more than 50 visitors per year, high popularity among impressionist art style, and created in outdoor settings with elevation affecting the choice, while metal frames are used for other cases.",
-      "true_hypothesis_expr": "np.where((df['artist_name'] == 'Monet') & ((np.log(df['number_of_visitors']) * 10 + df['style_popularity_index']) > 50) & ((np.where(df['scene_setting'] == 'outdoor', 20 - df['elevation']*0.006, 25 - df['elevation']*0.003)) < 15), 'Wood', 'Metal')",
+      
+      
       "relevant_cols": [
         "artist_name",
         "style_popularity_index",

@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "foreshadowing_percentage",
-      "true_hypothesis": "The foreshadowing percentage in classical novels is influenced by the complexity of character development, era influence on writing style, and author's origin, where the complexity has a quadratic relationship and the era influence linearly, while the author's origin modulates these effects.",
-      "true_hypothesis_expr": "(df['character_complexity_index']**2 + 10 * df['era_influence']) * (df['author_origin_western'] * 1.2 + 0.8)",
+      
+      
       "relevant_cols": [
         "character_complexity_index",
         "era_influence",

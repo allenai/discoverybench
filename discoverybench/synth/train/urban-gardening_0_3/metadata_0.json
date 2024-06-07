@@ -236,8 +236,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "city_population",
-      "true_hypothesis": "The square of the percentage of total land used for residential purposes in the city, multiplied by 1000, plus three times the number of job openings in green industries within the city, explains the city's population.",
-      "true_hypothesis_expr": "df['residential_land_percentage']**2 * 1000 + 3 * df['green_jobs_available']",
+      
+      
       "relevant_cols": [
         "residential_land_percentage",
         "green_jobs_available",

@@ -88,8 +88,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "manuscripts_collected",
-      "true_hypothesis": "Knights with a higher number of castle residencies reflecting their status, active participation in jousting tournaments showing engagement in knightly culture, and adhering to knightly vows are likely to have collected more manuscripts.",
-      "true_hypothesis_expr": "df['castle_residencies'] * 5 + df['jousting_tournaments'] * 2 + 10 * df['knightly_vows'].astype(int)",
+      
+      
       "relevant_cols": [
         "castle_residencies",
         "jousting_tournaments",

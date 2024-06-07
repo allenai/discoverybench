@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "predicted_performance_percentile",
-      "true_hypothesis": "Cars with higher participation in vintage car shows, countries with higher precision engineering scores, authenticity certificates, increased demand for vintage cars in the region, and meeting specific conditions related to historical value, maintenance cost change, and age are predicted to have a higher percentile performance than other cars.",
-      "true_hypothesis_expr": "(df['car_show_participation_frequency'] * 2 + df['country_of_origin_precision_score'] * 5 + np.where(df['certificate_of_authenticity'], 20, 0) * 0.5) + (df['region_demand_for_vintage'] * 0.3) + (30 * np.where((df['historical_value_index'] >= 7) & ((df['maintenance_cost_change'] >= 50) | (df['car_age'] > 60)), True, False))",
+      
+      
       "relevant_cols": [
         "car_age",
         "region_demand_for_vintage",

@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "trip_duration",
-      "true_hypothesis": "Tourists who attend pre-trip space simulation training and bring more personal items tend to opt for longer-duration space trips, likely implying that better psychological preparedness and personal comfort correlate with opting for the maximum between the personal items count squared plus 5 and the personal items count as the trip duration.",
-      "true_hypothesis_expr": "np.where(df['pre_trip_training'], 5 + df['personal_items_count']**2, df['personal_items_count'])",
+      
+      
       "relevant_cols": [
         "pre_trip_training",
         "personal_items_count",

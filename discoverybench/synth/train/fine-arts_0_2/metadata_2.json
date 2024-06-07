@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "international_exhibitions",
-      "true_hypothesis": "The square of the artist's art style diversity plus five times the indication of gallery representation is associated with the number of international exhibitions, indicating that artists with a diverse range of styles and gallery support tend to have more international exposure.",
-      "true_hypothesis_expr": "df['art_style_diversity'] ** 2 + 5 * df['gallery_representation']",
+      
+      
       "relevant_cols": [
         "art_style_diversity",
         "gallery_representation",

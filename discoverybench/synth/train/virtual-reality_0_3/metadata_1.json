@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "education_level",
-      "true_hypothesis": "Participants with higher technical_job_experience, frequent tech_meetup_attendance, and who regularly read tech articles likely attain higher education levels. This hypothesis assumes that experience in technical fields, participation in tech events, and staying informed through articles positively impact educational attainment levels.",
-      "true_hypothesis_expr": "df['technical_job_experience']//8 + df['tech_meetup_attendance']//10 + df['reads_tech_articles'].astype(int)",
+      
+      
       "relevant_cols": [
         "technical_job_experience",
         "tech_meetup_attendance",

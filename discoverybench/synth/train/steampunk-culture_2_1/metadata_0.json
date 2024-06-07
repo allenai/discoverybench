@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "annual_spending_on_themed_clothing",
-      "true_hypothesis": "Participants who own steampunk-themed home decor and use a steampunk-themed credit card see a 20% increase in annual spending on regular, non-themed clothing, especially if they have been in the subculture for less than 3 years.",
-      "true_hypothesis_expr": "df['annual_spending_on_regular_clothing'] * (1.2 * df['has_steampunk_credit_card'] * df['owns_steampunk_decor'] * (df['years_in_subculture'] < 3))",
+      
+      
       "relevant_cols": [
         "annual_spending_on_regular_clothing",
         "has_steampunk_credit_card",

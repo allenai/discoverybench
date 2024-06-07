@@ -156,8 +156,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "percentage_nature_photos",
-      "true_hypothesis": "Photographers who prefer manual camera settings and frequently use long exposure techniques are likely to have a higher percentage of nature-themed photos in their portfolios than photographers who prefer manual settings but use long exposure techniques less frequently.",
-      "true_hypothesis_expr": "np.where(df['prefers_manual_settings'], df['frequency_long_exposure'] * 3.3, df['frequency_long_exposure'] * 1.5)",
+      
+      
       "relevant_cols": [
         "prefers_manual_settings",
         "frequency_long_exposure",

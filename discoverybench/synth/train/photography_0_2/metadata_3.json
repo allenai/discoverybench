@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "frequent_tripod_use",
-      "true_hypothesis": "The frequency of tripod use by photographers is determined by the ratio of the number of outdoor shoots to the percentage of studio work, multiplied by 10.",
-      "true_hypothesis_expr": "(df['number_of_outdoor_shoots'] / df['percentage_of_studio_work']) * 10 if not df[df['percentage_of_studio_work'] != 0].empty else 0",
+      
+      
       "relevant_cols": [
         "number_of_outdoor_shoots",
         "percentage_of_studio_work",

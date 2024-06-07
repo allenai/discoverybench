@@ -108,8 +108,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "predicted_type_of_aircraft_frequently_flew",
-      "true_hypothesis": "Pilots who have a large number of followers on aviation-related social media channels and a high aviation incident awareness score, along with specific advanced navigation system training, are more likely to fly Commercial aircraft. Pilots with fewer social media followers and relatively lower advanced aerodynamics training hours, especially those who also have multiple engine aircraft experience, are more likely to fly Private aircraft. Pilots with even lower social media followers and possibly depending on flying over mountainous terrain may be inclined to fly Cargo aircraft.",
-      "true_hypothesis_expr": "np.where((df['social_media_followers'] > 50000) & ((df['aviation_incident_awareness_score']**3 + 10 * df['aviation_incident_awareness_score'] * df['advanced_navigation_system_training'].astype(int) + 20*np.where(np.where((df['international_flight_experience'] == True) & (df['average_flight_altitude'] > 20000), 'mountainous', 'coastal') == 'mountainous', 1, 0)) > 50) & (np.where(df['advanced_aerodynamics_training_hours']**3 / (5 * df['flight_hours_per_year_of_experience'] + 10 * df['flies_multi_engine_aircraft'].astype(int) + 1) > 125, True, False) == True), 'Commercial', np.where((df['social_media_followers'] > 20000) & ((df['aviation_incident_awareness_score']**3 + 10 * df['aviation_incident_awareness_score'] * df['advanced_navigation_system_training'].astype(int) + 20*np.where(np.where((df['international_flight_experience'] == True) & (df['average_flight_altitude'] > 20000), 'mountainous', 'coastal') == 'mountainous', 1, 0)) > 30), 'Private', np.where(df['social_media_followers'] < 5000, 'Cargo', 'Military')))",
+      
+      
       "relevant_cols": [
         "social_media_followers",
         "aviation_incident_awareness_score",

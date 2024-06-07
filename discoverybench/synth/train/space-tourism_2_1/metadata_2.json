@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "age",
-      "true_hypothesis": "Tourists who participate in spacewalk activities forays with a higher socioeconomic status tend to have an older age, likely due to the demanding training involved and the financial capacity required. This effect is particularly notable among tourists inclined towards orbital travel experiences.",
-      "true_hypothesis_expr": "df['spacewalk_participation'] * 15 + df['socioeconomic_status'] * 2 + 18",
+      
+      
       "relevant_cols": [
         "spacewalk_participation",
         "socioeconomic_status",

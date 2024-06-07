@@ -192,8 +192,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "percentage_digital_tools_used",
-      "true_hypothesis": "Artists with a higher degree of technical training in software applications specific to digital artistry tend to use digital tools more frequently in their artwork production, and those who actively participate in technology-based art forums add additional usage of digital tools in their artwork creation process.",
-      "true_hypothesis_expr": "10 * df['technical_training_level'] + 15 * (df['active_in_tech_art_forums'] == True)",
+      
+      
       "relevant_cols": [
         "technical_training_level",
         "active_in_tech_art_forums",

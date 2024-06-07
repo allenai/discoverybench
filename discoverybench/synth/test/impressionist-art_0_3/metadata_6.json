@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "has_signature",
-      "true_hypothesis": "The likelihood of a painting having a signature can be predicted by the age of the painting and the detail level of brush strokes, hypothesizing that paintings less than 100 years old with a brush stroke detail level greater than 5 are more likely to be signed.",
-      "true_hypothesis_expr": "np.where((df['painting_age'] < 100) & (df['brush_stroke_detail_level'] > 5), True, False)",
+      
+      
       "relevant_cols": [
         "painting_age",
         "brush_stroke_detail_level",

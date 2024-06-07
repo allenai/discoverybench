@@ -92,8 +92,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "regulatory_change_rate",
-      "true_hypothesis": "The count of significant technology-related regulatory updates made per year can be predicted by a combination of the percentage of the total population that graduates each year with a degree in science, technology, engineering, or mathematics, the level of public interest in technology indicated by surveys and media analysis, and the quality and accessibility of digital infrastructure measured by an index. A higher percentage of STEM graduates, increased public interest, and better digital infrastructure are associated with a higher count of annual regulatory changes related to technology.",
-      "true_hypothesis_expr": "round(5 * df['stem_graduate_percentage']/100 + 5 * df['public_interest_in_tech'] + df['digital_infrastructure_index'])",
+      
+      
       "relevant_cols": [
         "stem_graduate_percentage",
         "public_interest_in_tech",

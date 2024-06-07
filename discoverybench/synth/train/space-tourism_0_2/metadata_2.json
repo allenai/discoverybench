@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "meal_preference",
-      "true_hypothesis": "The meal preference of a tourist depends on a combination of the average age of the travel group and the availability of a nutritional awareness program on the spacecraft, classifying them as either vegetarian or non-vegetarian based on specific calculations.",
-      "true_hypothesis_expr": "np.where(50 * (df['average_age_of_group'] / 80) + 50 * df['nutritional_awareness_program'].astype(int) > 50, 'vegetarian', 'non-vegetarian')",
+      
+      
       "relevant_cols": [
         "average_age_of_group",
         "nutritional_awareness_program",

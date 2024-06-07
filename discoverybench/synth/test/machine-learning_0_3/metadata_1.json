@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "input_feature_count",
-      "true_hypothesis": "The input feature count is calculated as 10 plus the floor division of the computational complexity percentile by 10 plus the product of 10, the algorithm upgrade threshold, and whether the model incorporates AI enhancements.",
-      "true_hypothesis_expr": "10 + (df['computational_complexity_percentile']//10) + (10 * df['algorithm_upgrade_threshold'] * df['incorporates_AI_enhancements'].astype(int))",
+      
+      
       "relevant_cols": [
         "computational_complexity_percentile",
         "algorithm_upgrade_threshold",

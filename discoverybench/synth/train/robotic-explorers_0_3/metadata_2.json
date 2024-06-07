@@ -120,8 +120,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "energy_storage_capacity",
-      "true_hypothesis": "Energy storage capacity of exploration vehicles is calculated as 1.5 times the mission duration in days plus 80 times the task complexity score.",
-      "true_hypothesis_expr": "df['mission_duration'] * 1.5 + df['task_complexity_score'] * 80",
+      
+      
       "relevant_cols": [
         "mission_duration",
         "task_complexity_score",

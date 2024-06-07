@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "internal_CO2_level_ppm",
-      "true_hypothesis": "In artificial ecosystems, the internal CO2 level is predicted by a calculation based on the rate of photosynthetic activity and the proportion of the dome covered by plant life. A higher photosynthetic_activity_rating or plant_coverage_percentile results in a lower internal CO2 level, as calculated by: 10000 - 80 * df['photosynthetic_activity_rating'] - 90 * df['plant_coverage_percentile'].",
-      "true_hypothesis_expr": "10000 - 80 * df['photosynthetic_activity_rating'] - 90 * df['plant_coverage_percentile']",
+      
+      
       "relevant_cols": [
         "photosynthetic_activity_rating",
         "plant_coverage_percentile",

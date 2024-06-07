@@ -76,8 +76,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "predicted_season",
-      "true_hypothesis": "In fashion design, the number of local fashion magazine circulation per fashion design school, designer's runway appearances, and profit margin from previous collections combine with temperature, venue type, percentage of new designers, number of international designers, and month of the year to predict the season of the fashion show. The relationship is observed in shows where specific criteria regarding these factors are met, resulting in the prediction of Winter or Summer seasons. For other cases, Autumn is predicted.",
-      "true_hypothesis_expr": "np.where((np.where((df['local_fashion_magazine_circulation'] / df['number_of_fashion_design_schools'] * 1000 > 30000) & (np.where((df['num_designer_runway_appearances'] > 15) & (df['average_profit_margin_previous_collections'] > 50), True, False), True, False)) & (((100 - df['percentage_new_designers'] * 0.6 + df['count_international_designers'] * 0.8 - df['month_of_year']) * 0.9 + 20 * (df['venue_type'] == 'indoor')) > 50) & (df['external_temperature'] < 10), 'Winter', np.where((np.where((df['local_fashion_magazine_circulation'] / df['number_of_fashion_design_schools'] * 1000 > 30000) & (np.where((df['num_designer_runway_appearances'] > 15) & (df['average_profit_margin_previous_collections'] > 50), True, False), True, False)) & (((100 - df['percentage_new_designers'] * 0.6 + df['count_international_designers'] * 0.8 - df['month_of_year']) * 0.9 + 20 * (df['venue_type'] == 'indoor')) < 50) & (df['external_temperature'] > 20), 'Summer', 'Autumn'))",
+      
+      
       "relevant_cols": [
         "external_temperature",
         "venue_type",

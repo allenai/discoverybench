@@ -204,8 +204,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "language_family_rank",
-      "true_hypothesis": "The rank of a language family based on study commonality is determined by the combination of the complexity of its script raised to the power of 3, the available texts count squared and multiplied by 0.5, and twice the indicator of whether the script is currently in use.",
-      "true_hypothesis_expr": "(df['script_complexity']**3 - 0.5 * df['available_texts_count']**2 + 2 * (df['is_currently_used'].astype(int))**3).rank(method='min').astype(int)",
+      
+      
       "relevant_cols": [
         "script_complexity",
         "is_currently_used",

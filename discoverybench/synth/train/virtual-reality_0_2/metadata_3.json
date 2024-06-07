@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "physical_activity_frequency",
-      "true_hypothesis": "Participants who own advanced VR devices and have high VR gaming frequency engage in physical activities more frequently compared to those who do not own advanced VR devices or have lower VR gaming frequency. The level of technology usage and being a top tech user also affect the frequency of physical activity engagement.",
-      "true_hypothesis_expr": "np.where(np.where(df['owns_advanced_VR'], df['VR_gaming_frequency'] / 2 + 2, df['VR_gaming_frequency'] / 3 + 1).astype(int), np.where((df['technology_usage_percent'] > 75) & df['top_tech_user'], True, False).map({True: 2, False: 1}), 0)",
+      
+      
       "relevant_cols": [
         "VR_gaming_frequency",
         "owns_advanced_VR",

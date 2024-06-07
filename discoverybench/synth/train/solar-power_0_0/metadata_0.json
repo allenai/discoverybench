@@ -124,8 +124,8 @@
       "question_type": "general",
       "difficulty": 4,
       "target_col": "efficiency_gain",
-      "true_hypothesis": "Solar paneled homes with blue-colored photovoltaic cells record efficiency gains when the cell color is blue, the month is between October and March, and the average daylight duration squared minus the average daily temperature variation is categorized as not high or medium, also considering the number of clear days.",
-      "true_hypothesis_expr": "np.where((df['cell_color'] == 'blue') & (df['month'] >= 10) & (df['month'] <= 3) & (((df['number_of_clear_days'] * (1 - (np.where((np.where((df['average_daylight_duration'] ** 2 - df['average_daily_temperature_variation']) >= 50, 'high', np.where((df['average_daylight_duration'] ** 2 - df['average_daily_temperature_variation']) >= 20, 'medium', 'low')) == 'high', 1 - df['solar_panel_efficiency'] / 40, 1))) / 365 * 12) < 5), True, False)",
+      
+      
       "relevant_cols": [
         "cell_color",
         "month",

@@ -164,8 +164,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "number_of_therapists",
-      "true_hypothesis": "The number of therapists needed during sessions is calculated by rounding up the program length in weeks divided by the difference between the variety of musical tastes the participant has and twice the preference for popular music, adjusting for the session time of day, and then adding the square of the difference between the patient's stress level and 5.",
-      "true_hypothesis_expr": "np.ceil(df['program_length_weeks'] / (df['musical_taste_variety'] - df['session_time_of_day'].apply(lambda x: 0 if x == 'morning' else (1 if x=='afternoon' else 2)) - 2 * df['preference_for_popular_music'] - 2)) + (df['patient_stress_level'] - 5)**2",
+      
+      
       "relevant_cols": [
         "program_length_weeks",
         "patient_stress_level",

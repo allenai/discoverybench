@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "technique_manual_white_balance",
-      "true_hypothesis": "Photographers who attend more than 5 outdoor workshops and have at least 50% nature-themed photos in their portfolio, and if the calculated metric of outdoor shoots to studio work percentage multiplied by 10 is greater than or equal to 7, are more likely to use manual white balance for their photography.",
-      "true_hypothesis_expr": "np.where((np.where((df['participation_in_outdoor_workshops'] > 5) & (df['percentage_nature_photos'] >= 50), True, False) == True) & (((df['number_of_outdoor_shoots'] / df['percentage_of_studio_work']) * 10 if not df[df['percentage_of_studio_work'] != 0].empty else 0) >= 7), True, False)",
+      
+      
       "relevant_cols": [
         "number_of_outdoor_shoots",
         "percentage_of_studio_work",

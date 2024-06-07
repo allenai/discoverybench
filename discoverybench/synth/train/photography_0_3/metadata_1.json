@@ -156,8 +156,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "follows_industry_news",
-      "true_hypothesis": "Photographers who participate in more than 5 photography competitions per year, spend over 10 hours per week editing photos, and are active in online photography forums are more likely to follow industry news regularly.",
-      "true_hypothesis_expr": "np.where((df['competitions_participated'] > 5) & (df['weekly_editing_hours'] > 10) & df['active_in_online_forums'], True, False)",
+      
+      
       "relevant_cols": [
         "competitions_participated",
         "weekly_editing_hours",

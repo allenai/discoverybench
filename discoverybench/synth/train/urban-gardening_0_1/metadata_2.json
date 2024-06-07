@@ -204,8 +204,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "garden_size",
-      "true_hypothesis": "The size of the garden can be determined based on a combination of accessibility, educational programs availability, the presence in a residential area, the number of local volunteers and local funding amount if the garden is community-driven, the focus on ornamental plants, the number of workshops conducted, the number of guest expert visits, and specific conditions related to drought resistance, sunlight exposure, participation in sustainability workshops, and ratios of rare plant species.",
-      "true_hypothesis_expr": "100 * (((df['garden_accessibility_index'] * 5 + np.where(np.where((df['number_of_workshops'] > 3) & (df['guest_expert_visits'] > 1) & (np.where((df['number_of_local_volunteers'] > 10) & (df['local_funding_amount'] > 20) & df['is_community_driven']), True, False), 10, 0) + np.where(np.where((np.where((df['number_of_local_volunteers'] > 10) & (df['local_funding_amount'] > 20) & df['is_community_driven']), True, False), 5, 0)) + 1) / (((-1) * (np.where(df['focus_on_drought_resistant'], np.maximum(3, 24 - 2 * df['sunlight_exposure_hours']), 24 - df['average_rainfall_mm'] // 100))**3 + (200 * df['specializes_in_ornamentals']) + 1)) + 1000 * (df['rare_plant_species_ratio'] * 5 + df['volunteer_participation_rate'] // 10 >= 15).astype(int)",
+      
+      
       "relevant_cols": [
         "garden_accessibility_index",
         "number_of_workshops",

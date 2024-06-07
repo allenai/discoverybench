@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "music_genre_preference_match",
-      "true_hypothesis": "Patients who rate their session enjoyment above 3 and have access to therapy sessions outside of standard working hours, and express interest in at least five different musical genres are more likely to have their genre preferences matched in therapy sessions.",
-      "true_hypothesis_expr": "np.where(((df['session_enjoyment_rating'] + 5 * df['non_work_hour_access'].astype(int)) > 3) & (df['musical_interest_diversity'] >= 5), 1, 0)",
+      
+      
       "relevant_cols": [
         "musical_interest_diversity",
         "session_enjoyment_rating",

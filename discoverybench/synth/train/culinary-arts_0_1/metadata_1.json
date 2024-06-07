@@ -88,8 +88,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "cuisine_specialty",
-      "true_hypothesis": "Chefs who have high scores in ingredients diversity, gastronomic techniques count, incorporate international flavors, have formal culinary education, and meet specific thresholds in culinary metrics tend to specialize in French, Indian, Chinese, or Italian cuisine based on the calculated criteria.",
-      "true_hypothesis_expr": "np.where((df['ingredients_diversity_score'] + df['gastronomic_techniques_count']*2 + 3*(df['uses_international_flavors']==True) * 5 + (df['has_formal_culinary_education'] * 3) > 25) & ((((df['culinary_competition_participation'] + df['number_of_signature_dishes'] // 5 + df['chef_innovation_score'] // 10) * 4 + (2 * df['local_supplier_partnerships']**3 + 30 * df['participation_in_culinary_innovation_programs'] + df['menu_items_count']**2) * 2 + df['chef_experience']) / 3) > 60), 'French', np.where((df['ingredients_diversity_score'] + df['gastronomic_techniques_count']*2 + 3*(df['uses_international_flavors']==True) * 5 + (df['has_formal_culinary_education'] * 3) > 20) & ((((df['culinary_competition_participation'] + df['number_of_signature_dishes'] // 5 + df['chef_innovation_score'] // 10) * 4 + (2 * df['local_supplier_partnerships']**3 + 30 * df['participation_in_culinary_innovation_programs'] + df['menu_items_count']**2) * 2 + df['chef_experience']) / 3) > 45), 'Indian', np.where((df['ingredients_diversity_score'] + df['gastronomic_techniques_count']*2 + 3*(df['uses_international_flavors']==True) * 5 + (df['has_formal_culinary_education'] * 3) <= 20) & ((((df['culinary_competition_participation'] + df['number_of_signature_dishes'] // 5 + df['chef_innovation_score'] // 10) * 4 + (2 * df['local_supplier_partnerships']**3 + 30 * df['participation_in_culinary_innovation_programs'] + df['menu_items_count']**2) * 2 + df['chef_experience']) / 3) <= 45), 'Chinese', 'Italian')))",
+      
+      
       "relevant_cols": [
         "has_formal_culinary_education",
         "ingredients_diversity_score",

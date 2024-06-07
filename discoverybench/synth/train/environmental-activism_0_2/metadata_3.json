@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "environmental_education_index",
-      "true_hypothesis": "The environmental education index is calculated as twice the percentage of the population that regularly uses public transportation plus ten times a combination of variables including the square of environmental protest frequency, recycling program participation, and cubic of industry pollution level, with additional calculations applied to obtain a result. ",
-      "true_hypothesis_expr": "2 * df['public_transportation_usage_rate'] + 10 * (np.round((df['environmental_protest_frequency']**2 * 0.01 + df['recycling_program_participation'] * 0.03 + df['industry_pollution_level']**3 * 0.05) % 5 + 1)",
+      
+      
       "relevant_cols": [
         "public_transportation_usage_rate",
         "environmental_protest_frequency",

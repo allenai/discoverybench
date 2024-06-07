@@ -172,8 +172,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "efficiency_gain",
-      "true_hypothesis": "Solar paneled homes with blue-colored photovoltaic cells record efficiency gains when the cell color is blue, month is between October and March, and the average daily sunlight is less than 5 hours.",
-      "true_hypothesis_expr": "np.where((df['cell_color'] == 'blue') & (df['month'] >= 10) & (df['month'] <= 3) & (df['average_daily_sunlight'] < 5), True, False)",
+      
+      
       "relevant_cols": [
         "cell_color",
         "month",

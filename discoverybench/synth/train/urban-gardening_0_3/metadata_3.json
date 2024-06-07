@@ -236,8 +236,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "square_footage",
-      "true_hypothesis": "The square footage of the garden can be determined by multiplying the annual number of community events by 1000, adding the annual funding received from local businesses times 0.5, and subtracting 10000 times the presence indicator of a high density residential area in the garden.",
-      "true_hypothesis_expr": "df['number_of_community_events'] * 1000 + df['funding_from_local_businesses'] * 0.5 - 10000 * df['high_density_residential_area'].astype(int)",
+      
+      
       "relevant_cols": [
         "number_of_community_events",
         "funding_from_local_businesses",

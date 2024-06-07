@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "has_missing_values",
-      "true_hypothesis": "Datasets with more than 5 feature types or containing chronological features are likely to have missing values.",
-      "true_hypothesis_expr": "np.where((df['number_of_feature_types'] > 5) | (df['contains_chronological_features']), True, False)",
+      
+      
       "relevant_cols": [
         "number_of_feature_types",
         "contains_chronological_features",

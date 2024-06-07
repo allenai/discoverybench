@@ -200,8 +200,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "social_interaction",
-      "true_hypothesis": "Participants who report having more than 10 positive interactions per week and spend over 4 hours in VR on weekends are more likely to prefer group activities over solitary activities, indicating a preference for social interactions.",
-      "true_hypothesis_expr": "np.where((df['positive_vr_interactions'] > 10) & (df['weekend_vr_hours'] > 4), True, False)",
+      
+      
       "relevant_cols": [
         "weekend_vr_hours",
         "positive_vr_interactions",

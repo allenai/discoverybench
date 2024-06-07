@@ -192,8 +192,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "software_proficiency_level",
-      "true_hypothesis": "Artists who participate in specialized software training courses, own higher-end equipment, and focus on 3D modeling demonstrate higher software proficiency.",
-      "true_hypothesis_expr": "np.clip(df['software_training_courses'] + df['high_end_equipment_ownership']*2 + df['focus_on_3D_modeling']*2, 1, 5)",
+      
+      
       "relevant_cols": [
         "software_training_courses",
         "high_end_equipment_ownership",

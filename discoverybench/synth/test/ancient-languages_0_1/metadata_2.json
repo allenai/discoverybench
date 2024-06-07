@@ -172,8 +172,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "cultural_narratives_discovered_count",
-      "true_hypothesis": "The number of new cultural narratives discovered is equal to the sum of the script distinctiveness score and twice the number of geopolitical tensions above 7 in the Middle East region.",
-      "true_hypothesis_expr": "df['script_distinctiveness'] + (np.where((df.get('geopolitical_tension') > 7) & (df.get('region') == 'Middle East'), True, False) * 2)",
+      
+      
       "relevant_cols": [
         "script_distinctiveness",
         "geopolitical_tension",

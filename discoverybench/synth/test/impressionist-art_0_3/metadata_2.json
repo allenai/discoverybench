@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "historical_importance",
-      "true_hypothesis": "The historical significance of a painting can be predicted by combining the artist's level of recognition, the popularity of the painting technique during that period, the frequency of exhibitions, and adjusting these factors based on the artist's most active period.",
-      "true_hypothesis_expr": "df['artist_notoriety'] * df['technique_popularity'] * df['exhibition_frequency'] / df['artist_period'].map({'Early': 1, 'Middle': 2, 'Late': 3})",
+      
+      
       "relevant_cols": [
         "artist_notoriety",
         "technique_popularity",

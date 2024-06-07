@@ -164,8 +164,8 @@
       "question_type": "general",
       "difficulty": 4,
       "target_col": "increase_in_win_probability",
-      "true_hypothesis": "Players who have a high card game engagement level, prefer strategy components in games, and have a higher strategic complexity preference, along with participation in online strategy game tournaments, exhibit an increase in win probability in unrelated card games by a multiplier factor calculated through a complex formula involving various player preferences and game engagement metrics.",
-      "true_hypothesis_expr": "5*(np.where(np.where((df['cooperative_game_frequency']>0.5) | (df['online_community_active']==True), True, False), 2.5 + 2 * (0.5 * df['card_to_dice_win_ratio'] + np.where(df['game_experience_level'] == 'expert', 0.3, 0) + np.where(df['frequent_high_stakes_player'], 0.2, -0.1)) - 1.5 * (df['number_of_game_genres_played'] / df['average_game_duration_minutes'] + 0.1 * df['likes_short_games'].astype(int)), 2.2 + 1.8 * (0.5 * df['card_to_dice_win_ratio'] + np.where(df['game_experience_level'] == 'expert', 0.3, 0) + np.where(df['frequent_high_stakes_player'], 0.2, -0.1)) - 1.2 * (df['number_of_game_genres_played'] / df['average_game_duration_minutes'] + 0.1 * df['likes_short_games'].astype(int))).round().clip(1, 5)*10 + (df['plays_in_tournaments']*50) + np.where(df['player_age_group'] == '24-35', 20, 0)) + 0.1*(df['card_game_engagement_level']*2 + np.where(df['strategy_preference'], 5, 0)**2 + (((df['strategic_complexity_preference'] * 0.6 + 10 - df['average_game_duration'] // 30)*0.5 + (df['card_game_preference'] * 3 + np.where(df['online_strategy_tournament_participation'], 5, -2))*0.5)**2) + 0.5*df['card_game_engagement_level']*((df['strategic_complexity_preference'] * 0.6 + 10 - df['average_game_duration'] // 30)*0.5 + (df['card_game_preference'] * 3 + np.where(df['online_strategy_tournament_participation'], 5, -2))*0.5))**2 - 0.5*df['strategy_success_rate",
+      
+      
       "relevant_cols": [
         "card_game_engagement_level",
         "strategy_preference",

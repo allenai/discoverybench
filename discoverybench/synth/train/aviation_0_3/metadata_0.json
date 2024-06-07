@@ -108,8 +108,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "previous_navigation_errors",
-      "true_hypothesis": "Pilots flying larger aircraft types are more likely to have higher instances of navigation errors when compared to pilots flying smaller aircraft types. Additionally, pilots with more international flight hours and lower frequency of simulation training sessions tend to have higher instances of navigation errors.",
-      "true_hypothesis_expr": "np.where(df['aircraft_type_size']=='Large', df['international_flight_hours'] // 1000 - df['frequency_of_simulation_training'], df['international_flight_hours'] // 1500 - df['frequency_of_simulation_training'])",
+      
+      
       "relevant_cols": [
         "international_flight_hours",
         "aircraft_type_size",

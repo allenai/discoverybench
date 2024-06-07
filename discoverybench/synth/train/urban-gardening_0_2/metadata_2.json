@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "annual_visitor_count",
-      "true_hypothesis": "The annual visitor count increases for gardens with a higher number of community events and more funding from local businesses, but decreases if located in a high-density residential area or has a lower percentage of the garden area covered with native plants, while also considering certain historical visitation and staff-to-square-footage ratio criteria.",
-      "true_hypothesis_expr": "df['number_of_community_events'] * 1000 + df['funding_from_local_businesses'] * 0.5 - 10000 * df['high_density_residential_area'].astype(int) * 0.3 + 2000 * np.where((df['historical_visitation'] > 5000) & (df['number_of_staff'] / df['square_footage'] > 0.0005), True, False) - df['percentage_native_plants'] * 50",
+      
+      
       "relevant_cols": [
         "percentage_native_plants",
         "number_of_community_events",

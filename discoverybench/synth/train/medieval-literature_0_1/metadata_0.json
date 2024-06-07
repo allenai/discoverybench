@@ -88,8 +88,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "knight_name_survivability_score",
-      "true_hypothesis": "Knights with more troubadour friendships, castle residencies, jousting tournaments, knightly vows, and high region epic tradition scores have higher survivability scores.",
-      "true_hypothesis_expr": "df['castle_residencies'] * 5 + df['jousting_tournaments'] * 2 + 10 * df['knightly_vows'].astype(int)*0.2 + df['troubadour_friendships']*0.8 * (np.where(3*df['region_epic_tradition_score']**2 + 15*df['can_recite_verses'] * df['accolade_count'] > 25, True, False) + df['castle_residencies'] * 5 + df['jousting_tournaments'] * 2 + 10 * df['knightly_vows'].astype(int)*0.2 + df['troubadour_friendships']*0.8) / 2.0",
+      
+      
       "relevant_cols": [
         "troubadour_friendships",
         "castle_residencies",

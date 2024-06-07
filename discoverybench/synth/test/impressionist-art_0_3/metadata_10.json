@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "scene_setting",
-      "true_hypothesis": "The type of light source (natural or artificial) and time period (before or after 1890) are related to whether a painting depicts an indoor or outdoor scene. Paintings with natural light and created after 1890 are more likely to depict outdoor scenes.",
-      "true_hypothesis_expr": "np.where((df['light_source'] == 'natural') & (df['time_period'] == 'after_1890'), 'outdoor', 'indoor')",
+      
+      
       "relevant_cols": [
         "light_source",
         "time_period",

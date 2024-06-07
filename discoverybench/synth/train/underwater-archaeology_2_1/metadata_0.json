@@ -88,8 +88,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "preserved_road_layout",
-      "true_hypothesis": "In locations with more than 10 visible anchor remains and stone structures present, preserved road layouts are indicated with 'yes' at underwater archaeological sites.",
-      "true_hypothesis_expr": "np.where((df['visible_anchor_remains'] > 10) & (df['stone_structures_present']), 'yes', 'no')",
+      
+      
       "relevant_cols": [
         "stone_structures_present",
         "visible_anchor_remains",

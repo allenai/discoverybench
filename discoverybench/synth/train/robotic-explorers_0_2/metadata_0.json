@@ -108,8 +108,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "historical_findings",
-      "true_hypothesis": "Exploration areas are more likely to have historical findings if the square of the average daily temperature plus five times the maximum daily wind speed, when multiplied by 1 plus past turbulent conditions, is greater than 50, there are power fluctuations exceeding 10 per week, and the weighted sum of negative habitat markers found and robotic maintenance sessions performed, plus 5, is greater than 5.",
-      "true_hypothesis_expr": "np.where(((df['average_daily_temperature']**2 + 5 * df['max_daily_wind_speed']) * (1 + df['past_turbulent_conditions']) > 50) & (df['power_fluctuations'] > 10) & ((df['habitat_markers_found'] * -0.1 + df['robotic_maintenance_sessions'] * -0.2 + 5) > 5), True, False)",
+      
+      
       "relevant_cols": [
         "power_fluctuations",
         "average_daily_temperature",

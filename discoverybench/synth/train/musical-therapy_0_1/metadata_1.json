@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "predicted_music_preference",
-      "true_hypothesis": "Patients whose mood improvement post-session and session frequency per week, when combined and squared, show a preference for classical music over pop music for their therapy sessions.",
-      "true_hypothesis_expr": "np.where(((df['mood_improvement_post_session'] + df['session_frequency_per_week'])**2 - 2*df['stress_level_pre_session']) > 8, 'classical', 'pop')",
+      
+      
       "relevant_cols": [
         "stress_level_pre_session",
         "mood_improvement_post_session",

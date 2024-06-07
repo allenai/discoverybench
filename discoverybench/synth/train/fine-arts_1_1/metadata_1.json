@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "primary_medium",
-      "true_hypothesis": "Artists with international exhibitions count added to the square of their education level plus twice the collaborative projects count, minus the local exhibitions count, greater than 30 tend to work more frequently in oil paint compared to watercolor.",
-      "true_hypothesis_expr": "np.where(df['international_exhibitions_count'] + (df['education_level']**2 + 2 * df['collaborative_projects_count']) - df['local_exhibitions_count'] > 30, 'oil_paint', 'watercolor')",
+      
+      
       "relevant_cols": [
         "international_exhibitions_count",
         "local_exhibitions_count",

@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "is_from_north_america",
-      "true_hypothesis": "Tourists who used English as the primary language during booking and who booked stays of more than 10 days in space hotels are more likely to be from North America.",
-      "true_hypothesis_expr": "np.where((df['booking_language_english'] == True) & (df['length_of_stay_days'] > 10), True, False)",
+      
+      
       "relevant_cols": [
         "booking_language_english",
         "length_of_stay_days",

@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "media_appearances_count",
-      "true_hypothesis": "The number of media appearances an artist has is related to the product of the total number of gallery exhibitions and the popularity score added to 10 times the art featured in public spaces. Artists with a higher product of gallery exhibitions and popularity score, along with more art in public spaces, tend to have greater media visibility.",
-      "true_hypothesis_expr": "df['gallery_exhibitions_count'] * df['popularity_score'] + 10 * df['art_in_public_spaces']",
+      
+      
       "relevant_cols": [
         "gallery_exhibitions_count",
         "art_in_public_spaces",

@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "specialized_researchers_count",
-      "true_hypothesis": "The quotient of the number of digitized artifacts available for each language family divided by the number of deciphering tools available specifically for deciphering scripts of each ancient language family, multiplied by the square of the number of deciphering tools, is likely indicative of the number of specialized researchers dedicated to the research of each ancient language family.",
-      "true_hypothesis_expr": "df['digitized_artifacts_count'] / df['deciphering_tools_count'] * df['deciphering_tools_count']**2",
+      
+      
       "relevant_cols": [
         "digitized_artifacts_count",
         "deciphering_tools_count",

@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "owns_game_manuals",
-      "true_hypothesis": "Players who own a diverse range of game types, frequently borrow games from friends, and have a total score above 35 are more likely to own game manuals.",
-      "true_hypothesis_expr": "np.where((df['game_types_owned'] * df['game_complexity_score'] + df['games_borrowed_frequency']) > 35, True, False)",
+      
+      
       "relevant_cols": [
         "game_types_owned",
         "games_borrowed_frequency",

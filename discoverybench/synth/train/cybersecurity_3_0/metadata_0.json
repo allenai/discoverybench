@@ -136,8 +136,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "data_breaches_per_year",
-      "true_hypothesis": "In a dataset of cybersecurity incidents, organizations in the technology sector that use two-factor authentication and conduct employee training quarterly experience 45% fewer data breaches per year compared to those not meeting these criteria.",
-      "true_hypothesis_expr": "np.where((df['two_factor_authentication'] == True) & (df['employee_training_frequency'] == 'quarterly') & (df['organization_sector'] == 'technology'), df.get('data_breaches_per_year', 0) * 0.55, df.get('data_breaches_per_year', 0))",
+      
+      
       "relevant_cols": [
         "two_factor_authentication",
         "organization_sector",

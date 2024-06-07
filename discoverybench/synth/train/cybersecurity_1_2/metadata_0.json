@@ -124,8 +124,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "has_dedicated_IT_security_team",
-      "true_hypothesis": "Organizations with more than 10 reported cybersecurity incidents and a policy requiring regular password updates are more likely to have a dedicated IT security team.",
-      "true_hypothesis_expr": "np.where((df['number_of_cybersecurity_incidents'] > 10) & (df['requires_regular_password_updates'] == True), True, False)",
+      
+      
       "relevant_cols": [
         "requires_regular_password_updates",
         "number_of_cybersecurity_incidents",

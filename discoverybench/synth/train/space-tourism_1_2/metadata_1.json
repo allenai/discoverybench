@@ -236,8 +236,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "frequent_flyer_status",
-      "true_hypothesis": "Tourists classified as seniors, with an average ticket price over $5000, and booking directly are likely to have frequent flyer status.",
-      "true_hypothesis_expr": "np.where((df['age_group'] == 'senior') & (df['average_ticket_price'] > 5000) & (df['booking_source'] == 'direct'), True, False)",
+      
+      
       "relevant_cols": [
         "age_group",
         "booking_source",

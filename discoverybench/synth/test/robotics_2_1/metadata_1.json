@@ -128,8 +128,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "AI_model_version",
-      "true_hypothesis": "Robots with processor_speed greater than 3 GHz and more than 10 system_updates that also have a dual-core processor are classified under AI_model_version v2.0. Robots with processor_speed greater than 2 GHz and more than 5 system_updates but not necessarily a dual-core processor are classified under AI_model_version v1.2. Other robots fall under AI_model_version v1.0.",
-      "true_hypothesis_expr": "np.where((df['processor_speed'] > 3) & (df['system_updates'] > 10) & df['has_dual_core_processor'], 'v2.0', np.where((df['processor_speed'] > 2) & (df['system_updates'] > 5), 'v1.2', 'v1.0'))",
+      
+      
       "relevant_cols": [
         "system_updates",
         "has_dual_core_processor",

@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "energy_consumption_air_purification",
-      "true_hypothesis": "In artificial ecosystems, the ratio of backup_energy_reserves to the number_of_high_energy_devices multiplied by 1000 predicts the energy consumption for air purification. A higher result indicates higher energy requirements due to a greater reliance on energy-intensive technology.",
-      "true_hypothesis_expr": "df['backup_energy_reserves'] / df['number_of_high_energy_devices'] * 1000",
+      
+      
       "relevant_cols": [
         "backup_energy_reserves",
         "number_of_high_energy_devices",

@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "available_texts_count",
-      "true_hypothesis": "The count of deciphered texts available for study in an ancient language is derived from twice the number of academic conferences held annually dedicated to the language, added to 1.5 times the number of active researchers (both academic and amateurs) dedicated to studying the language, with an additional 20 texts if the language has a modern derivative and a deduction of 10 texts if it doesn't.",
-      "true_hypothesis_expr": "df['academic_conferences_count']*2 + df['active_researchers_count']*1.5 + np.where(df['has_modern_derivative'], 20, -10)",
+      
+      
       "relevant_cols": [
         "academic_conferences_count",
         "active_researchers_count",

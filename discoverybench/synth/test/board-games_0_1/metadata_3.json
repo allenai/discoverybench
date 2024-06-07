@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "times_won",
-      "true_hypothesis": "Players who engage more in cooperative board games or are active in online gaming communities tend to win more times. A higher card-to-dice win ratio, a higher game experience level, and being a frequent high-stakes player positively influence the number of wins, while the diversity of game genres played negatively impacts it. The number of wins may also be affected by the player's preference for shorter games, participation in tournaments, and age group.",
-      "true_hypothesis_expr": "(np.where(np.where((df['cooperative_game_frequency']>0.5) | (df['online_community_active']==True), True, False), 2.5 + 2 * (0.5 * df['card_to_dice_win_ratio'] + np.where(df['game_experience_level'] == 'expert', 0.3, 0) + np.where(df['frequent_high_stakes_player'], 0.2, -0.1)) - 1.5 * (df['number_of_game_genres_played'] / df['average_game_duration_minutes'] + 0.1 * df['likes_short_games'].astype(int)), 2.2 + 1.8 * (0.5 * df['card_to_dice_win_ratio'] + np.where(df['game_experience_level'] == 'expert', 0.3, 0) + np.where(df['frequent_high_stakes_player'], 0.2, -0.1)) - 1.2 * (df['number_of_game_genres_played'] / df['average_game_duration_minutes'] + 0.1 * df['likes_short_games'].astype(int))).round().clip(1, 5)) * 10 + (df['plays_in_tournaments'] * 50) + np.where(df['player_age_group'] == '24-35', 20, 0)",
+      
+      
       "relevant_cols": [
         "plays_in_tournaments",
         "player_age_group",

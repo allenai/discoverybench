@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "conservation_funding",
-      "true_hypothesis": "We hypothesize that conservation funding is calculated as the total of marine biodiversity index multiplied by 1000, environmental surveillance count multiplied by 500, and recent environmental violations multiplied by 10000.",
-      "true_hypothesis_expr": "df['marine_biodiversity_index'] * 1000 + df['environmental_surveillance_count'] * 500 + df['recent_environmental_violations'] * 10000",
+      
+      
       "relevant_cols": [
         "marine_biodiversity_index",
         "environmental_surveillance_count",

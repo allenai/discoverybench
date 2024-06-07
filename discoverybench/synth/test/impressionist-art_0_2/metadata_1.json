@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "odd_year_exhibition",
-      "true_hypothesis": "Odd-year exhibition likelihood increases with values derived from a complex formula involving various artist and exhibition attributes being greater than 50.",
-      "true_hypothesis_expr": "np.where(3 * df['artist_popularity'] + 2 * df['symposium_exposures'] - df['non_prestigious_gallery_displays'] + df['artist_notoriety'] * df['technique_popularity'] * df['exhibition_frequency'] / df['artist_period'].map({'Early': 1, 'Middle': 2, 'Late': 3'}) - 2*np.where((df['count_natural_elements'] > 10) & (df['season_created'].isin(['spring', 'summer'])) & (df['period_of_impressionism'] == 'late') > 50, True, False) > 50, True, False)",
+      
+      
       "relevant_cols": [
         "artist_popularity",
         "symposium_exposures",

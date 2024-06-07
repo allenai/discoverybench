@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "unique_strategies_developed",
-      "true_hypothesis": "Players who participate in tournaments frequently and win often tend to develop a greater number of unique strategies due to exposure to various styles and the necessity to adapt quickly under competitive conditions. A player's capacity for strategic thought, reflected by their ability to remember game rules after brief exposure, also influences the number of unique strategies developed. Additionally, players with rapid rule-learning abilities who excel in tournaments demonstrate an even higher capacity to develop unique strategies compared to others.",
-      "true_hypothesis_expr": "df['tournament_participation_frequency'] * df['tournament_win_ratio'] * 5 + 3 * np.where((df['strategic_complexity_rating'] > 5) & (df['quick_decision_games_frequency'] > 50), True, False) ** 3",
+      
+      
       "relevant_cols": [
         "tournament_participation_frequency",
         "tournament_win_ratio",

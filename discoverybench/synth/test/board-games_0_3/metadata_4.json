@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "social_interaction_importance",
-      "true_hypothesis": "Players who prefer strategic complexity in games and have a longer average game duration tend to place greater importance on social interaction in board games.",
-      "true_hypothesis_expr": "df['strategic_complexity_preference'] * 0.6 + 10 - df['average_game_duration'] // 30",
+      
+      
       "relevant_cols": [
         "strategic_complexity_preference",
         "average_game_duration",

@@ -204,8 +204,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "vr_experience_rating",
-      "true_hypothesis": "People who have a higher education app satisfaction level, as calculated by the provided expression, may rate their VR experience more positively based on their technology usage frequency, digital comfort, and duration of VR usage.",
-      "true_hypothesis_expr": "df['education_app_satisfaction'] + np.where((90 - (df['technology_usage_frequency'] * 2) - (df['digital_comfort'] * 4) > 50) & (df['vr_usage_duration'] > 30), 5, np.where((90 - (df['technology_usage_frequency'] * 2) - (df['digital_comfort'] * 4) < 20) & df.get('vr_sickness', False), 0, 3))",
+      
+      
       "relevant_cols": [
         "vr_usage_duration",
         "education_app_satisfaction",

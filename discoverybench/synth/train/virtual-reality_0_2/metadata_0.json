@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "technology_usage_frequency",
-      "true_hypothesis": "Participants who show a higher interest level in VR, engage more in creating VR content, feel a stronger sense of belonging to the VR community, and have better accessibility to VR technology tend to exhibit more frequent technology usage throughout the week.",
-      "true_hypothesis_expr": "df['VR_interest_level'] * 2 + (df['VR_content_creation'] * 2 + df['VR_community_belonging'] * 3) + 3 * df['VR_accessibility']",
+      
+      
       "relevant_cols": [
         "VR_interest_level",
         "VR_accessibility",

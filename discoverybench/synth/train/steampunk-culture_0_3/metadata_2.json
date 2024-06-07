@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "preference_for_communication",
-      "true_hypothesis": "The preference for communication is mainly determined by a calculated value based on the participant's age squared minus 5 times their exposure to steampunk content, resulting in a decision between online and in-person communication.",
-      "true_hypothesis_expr": "np.where(df['age_of_participant']**2 - 5 * df['steampunk_content_exposure'] < 1000, 'online', 'in_person')",
+      
+      
       "relevant_cols": [
         "age_of_participant",
         "steampunk_content_exposure",

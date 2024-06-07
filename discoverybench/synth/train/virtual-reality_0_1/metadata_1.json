@@ -152,8 +152,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "predicted_vr_sickness",
-      "true_hypothesis": "Participants with a sum of technical job experience in 8-year intervals, tech meetup attendance in 10-meetup intervals, and reading tech articles, all to the power of 3, added to the product of being in the 18-25 age group and three times cognitive task frequency, totaling 25 or lower, are less likely to experience VR sickness.",
-      "true_hypothesis_expr": "np.where(((df['technical_job_experience']//8 + df['tech_meetup_attendance']//10 + df['reads_tech_articles'].astype(int)) ** 3 + (df['age_group'] == '18-25').astype(int)*3*df['cognitive_task_frequency'] <= 25, True, False)",
+      
+      
       "relevant_cols": [
         "technical_job_experience",
         "tech_meetup_attendance",

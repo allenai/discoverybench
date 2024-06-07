@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "puzzle_pieces",
-      "true_hypothesis": "The number of puzzle pieces is determined by the cognitive skill level of the participant, the time they dedicate to puzzles, and whether they frequently engage in mind-challenging games.",
-      "true_hypothesis_expr": "np.select([(df['cognitive_skill_level'] == 'beginner'), (df['cognitive_skill_level'] == 'intermediate'), (df['cognitive_skill_level'] == 'advanced'), (df['cognitive_skill_level'] == 'expert')], [(df['time_dedication']/10 - df['frequent_mind_games']*5), (df['time_dedication']/8 - df['frequent_mind_games']*5), (df['time_dedication']/6 - df['frequent_mind_games']*5), (df['time_dedication']/4 - df['frequent_mind_games']*5)], default=10)",
+      
+      
       "relevant_cols": [
         "time_dedication",
         "cognitive_skill_level",

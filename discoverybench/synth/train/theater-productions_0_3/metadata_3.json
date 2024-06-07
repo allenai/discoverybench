@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_lead_actors",
-      "true_hypothesis": "The number of lead actors in a theater production is predicted to be 5 if the play genre is classical and the average scene complexity is 7 or more; otherwise, it is predicted to be 2.",
-      "true_hypothesis_expr": "np.where((df['play_genre'] == 'classical') & (df['average_scene_complexity'] >= 7), 5, 2)",
+      
+      
       "relevant_cols": [
         "play_genre",
         "average_scene_complexity",

@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_feature_types",
-      "true_hypothesis": "The number of feature types in a dataset is calculated by taking the ceiling of a combination involving the data coverage percentage, average user rating, and the indication of whether complex features are required for modeling.",
-      "true_hypothesis_expr": "np.ceil(2 + df['data_coverage_percentage']/10 + df['average_user_rating'] * 2 + 5 * df['requires_complex_features'])",
+      
+      
       "relevant_cols": [
         "data_coverage_percentage",
         "average_user_rating",

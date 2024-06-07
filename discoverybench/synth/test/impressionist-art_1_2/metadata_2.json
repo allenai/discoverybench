@@ -240,8 +240,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "technological_symbols_count",
-      "true_hypothesis": "The count of technological symbols in a painting is calculated as 0.3 times the gallery visibility score added to 1.5 times the artist prolificacy score, plus 10 times the presence of an artist's signature.",
-      "true_hypothesis_expr": "df['gallery_visibility_score'] * 0.3 + df['artist_prolificacy_score'] * 1.5 + 10 * df['has_signature'].astype(int)",
+      
+      
       "relevant_cols": [
         "gallery_visibility_score",
         "artist_prolificacy_score",

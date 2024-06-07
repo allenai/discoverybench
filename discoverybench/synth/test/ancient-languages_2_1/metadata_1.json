@@ -220,8 +220,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "translation_time_hours",
-      "true_hypothesis": "The translation time in hours is calculated using a formula involving the square of the script complexity level, plus 10 divided by the number of expert translators available, minus 15 multiplied by whether advanced technological support is available.",
-      "true_hypothesis_expr": "df['script_complexity_level']**2 + 10 / df['expert_translators_available'] - 15 * df['technological_support']",
+      
+      
       "relevant_cols": [
         "script_complexity_level",
         "expert_translators_available",

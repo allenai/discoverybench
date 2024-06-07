@@ -228,8 +228,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "surrealism_preference",
-      "true_hypothesis": "Artists who work primarily in oil paint tend to explore surrealism themes significantly more than landscape themes compared to artists who primarily work with different mediums.",
-      "true_hypothesis_expr": "np.where(df['primary_medium']=='oil_paint', df['theme_surrealism']/(df['theme_surrealism'] + df['theme_landscape']+0.001), df['theme_landscape']/(df['theme_surrealism'] + df['theme_landscape']+0.001))",
+      
+      
       "relevant_cols": [
         "theme_surrealism",
         "surrealism_preference",

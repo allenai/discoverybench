@@ -276,8 +276,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_ornamental_plants",
-      "true_hypothesis": "The number of ornamental plants can be determined by taking the cube of the negative average growth time of plants and adding 200 times the indicator of whether the garden specializes in ornamental plants.",
-      "true_hypothesis_expr": "(((-1) * df['average_growth_time'])**3) + (200 * df['specializes_in_ornamentals'])",
+      
+      
       "relevant_cols": [
         "specializes_in_ornamentals",
         "average_growth_time",

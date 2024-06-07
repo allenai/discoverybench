@@ -80,8 +80,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "education_level",
-      "true_hypothesis": "The analysis suggests that individuals with higher annual incomes above $30,000 and digital resource access level of 3 or above tend to have a higher likelihood of achieving a Master's degree, while those with annual incomes above $20,000 and digital resource access level of 2 or above tend to achieve a Bachelor's degree.",
-      "true_hypothesis_expr": "np.where((np.select([df['degree_level'].isin(['Master', 'PhD']), (df['cognitive_games_frequency'] * 2 + df['social_media_for_academia'] * 1.5) >= 20], [150000, 120000], default=50000) > 50000) & (df.get('digital_resource_access', 0) >= 5), 'PhD', np.where((np.select([df['degree_level'].isin(['Master', 'PhD']), (df['cognitive_games_frequency'] * 2 + df['social_media_for_academia'] * 1.5) >= 20], [150000, 120000], default=50000) > 30000) & (df.get('digital_resource_access', 0) >= 3), 'Master', np.where((np.select([df['degree_level'].isin(['Master', 'PhD']), (df['cognitive_games_frequency'] * 2 + df['social_media_for_academia'] * 1.5) >= 20], [150000, 120000], default=50000) > 20000) & (df.get('digital_resource_access', 0) >= 2), 'Bachelor', 'High School')))",
+      
+      
       "relevant_cols": [
         "degree_level",
         "cognitive_games_frequency",

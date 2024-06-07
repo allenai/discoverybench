@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "rapid_rule_learning_ability",
-      "true_hypothesis": "Players with a strategic complexity rating higher than 5 and who engage in quick decision games more than 50 times annually have a high ability to learn and remember game rules after brief exposure.",
-      "true_hypothesis_expr": "np.where((df['strategic_complexity_rating'] > 5) & (df['quick_decision_games_frequency'] > 50), True, False)",
+      
+      
       "relevant_cols": [
         "strategic_complexity_rating",
         "quick_decision_games_frequency",

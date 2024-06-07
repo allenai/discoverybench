@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 4,
       "target_col": "blue_hue_range",
-      "true_hypothesis": "Landscape paintings by Monet and Renoir from the impressionist movement between 1870 and 1890 were more likely to use additional blue hues, enhancing atmospheric clarity, during periods of heightened volcanic activity. The likelihood of using additional blue hues increased by 60% for every unit increase in volcanic activity levels, suggesting a strong correlation between volcanic activity and the usage of blue hues.",
-      "true_hypothesis_expr": "np.where(((df['volcanic_activity'] > 5) & ((1870 + ((1890 - 1870) * (100 - (df['landscape_elements_count'] * 0.5 - np.ceil(df['modern_elements_count'] / 10 + (df['painting_year_estimation'] - 1870) / 12.5 + df['industrial_elements_presence']*1) ** 2 + (df['exhibitions_count']**3 + df['artworks_sold']**2 * df['awards_count'] + 2.5) * 10)/100.0)) >= 1870) & ((1870 + ((1890 - 1870) * (100 - (df['landscape_elements_count'] * 0.5 - np.ceil(df['modern_elements_count'] / 10 + (df['painting_year_estimation'] - 1870) / 12.5 + df['industrial_elements_presence']*1) ** 2 + (df['exhibitions_count']**3 + df['artworks_sold']**2 * df['awards_count'] + 2.5) * 10)/100.0)) <= 1890) & ((df['artist_name'] == 'Monet') | (df['artist_name'] == 'Renoir'))), 60 + df['volcanic_activity'] * 2, 30 + df['volcanic_activity'])",
+      
+      
       "relevant_cols": [
         "artist_name",
         "volcanic_activity",

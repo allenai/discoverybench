@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "ingredient_type",
-      "true_hypothesis": "Dishes made with locally sourced ingredients exceeding 50% and higher preparation complexity level above 5 are classified as binary-dry types; otherwise, they are categorized as liquid. This classification is based on a combination of local ingredient usage percentage and dish preparation complexity.",
-      "true_hypothesis_expr": "np.where((df['local_ingredient_usage'] > 50) & (df['preparation_complexity'] > 5), 'binary-dry', 'liquid')",
+      
+      
       "relevant_cols": [
         "local_ingredient_usage",
         "preparation_complexity",

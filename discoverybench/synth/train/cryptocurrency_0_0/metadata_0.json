@@ -96,8 +96,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "investment_likelihood",
-      "true_hypothesis": "Individuals aged between 25-35 years, who participate in decentralized finance platforms, are more likely to invest in cryptocurrency during economic downturns compared to those outside the age range or not participating in decentralized finance, indicating a higher risk tolerance or different investment strategy among this specific group.",
-      "true_hypothesis_expr": "np.where((df['age'] >= 25) & (df['age'] <= 35) & (df['economic_condition'] == 'downturn') & df['decentralized_finance_participation'], 'High', 'Low')",
+      
+      
       "relevant_cols": [
         "age",
         "economic_condition",

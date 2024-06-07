@@ -96,8 +96,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "robot_programming_skill_level",
-      "true_hypothesis": "The robot programming skill level in households is determined by a combination of factors, such as the availability of a VR training facility for technical training, and the percentage of family investments allocated to the technology sector. When the investment in tech sector percentage exceeds 35%, there is an increased likelihood of a higher robot programming skill level.",
-      "true_hypothesis_expr": "1 + 2 * df['VR_training_facility_present'] + ((df['investment_in_tech_sector_percentage'] > 35).astype(int))",
+      
+      
       "relevant_cols": [
         "VR_training_facility_present",
         "investment_in_tech_sector_percentage",

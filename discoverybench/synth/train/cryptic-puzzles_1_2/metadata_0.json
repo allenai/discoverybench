@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "creative_preference_score",
-      "true_hypothesis": "Participants who quickly solve time-bound puzzles and enjoy varying puzzle types have a creative preference score of 3, indicating a moderate inclination towards creative thinking.",
-      "true_hypothesis_expr": "np.where((df['average_solve_time'] <= 10) & df['enjoys_variety'], 3, 7)",
+      
+      
       "relevant_cols": [
         "average_solve_time",
         "enjoys_variety",

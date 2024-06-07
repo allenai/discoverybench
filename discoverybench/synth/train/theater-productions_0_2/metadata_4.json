@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "day_of_week",
-      "true_hypothesis": "Plays are scheduled on Saturday if the lead actor is available for more than 5 days and if the calculated performance score based on lead actor availability, special guest appearance, holiday season, and promotional discount exceeds 500; otherwise, plays are scheduled on Wednesday.",
-      "true_hypothesis_expr": "np.where((df['lead_actor_availability_days'] > 5) & ((df.apply(lambda row: (100 if row['special_guest_appearance'] == True else 50) + (80 if row['holiday_season'] == True else 30) + row['promotional_discount'], axis=1)) > 500), 'Saturday', 'Wednesday')",
+      
+      
       "relevant_cols": [
         "lead_actor_availability_days",
         "special_guest_appearance",

@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "musical_genre_preference_structured",
-      "true_hypothesis": "The preference for structured musical genres like classical or jazz increases when the emotional stability score squared plus the number of live classical music concert attendance is greater than 0.",
-      "true_hypothesis_expr": "np.where((df['emotional_stability_score']**2 + df['live_classical_concert_attendance']) > 0, True, False)",
+      
+      
       "relevant_cols": [
         "emotional_stability_score",
         "live_classical_concert_attendance",

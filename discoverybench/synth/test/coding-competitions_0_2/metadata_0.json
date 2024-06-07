@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "senior_coders",
-      "true_hypothesis": "The number of senior coders in a country can be estimated as the result of multiplying the number of technical university graduates by 2, adding the total tech startup investment multiplied by 0.001, adding 200 times the presence of modern tech education practices (converted to integer) multiplied by -0.2, then adding 200.",
-      "true_hypothesis_expr": "df['technical_university_graduates'] * 2 + df['tech_startup_investment'] * 0.001 + 200 * df['modern_tech_education_practices'].astype(int) * (-0.2) * ((df['public_wifi_hotspots']**3 + 2 * df['internet_education_programs'].astype(int) + 5) * df['rapid_digital_transformation'].astype(int)) + 200",
+      
+      
       "relevant_cols": [
         "technical_university_graduates",
         "tech_startup_investment",

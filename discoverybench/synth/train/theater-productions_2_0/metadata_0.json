@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "average_engagement_score",
-      "true_hypothesis": "The average engagement score of the play is calculated based on the percentage of scenes containing special effects and whether live music is present.",
-      "true_hypothesis_expr": "10 / (np.floor((df['special_effects_percentage']**2) / 20 + 30 * df['live_music_present']) ** 2 + 1)",
+      
+      
       "relevant_cols": [
         "average_engagement_score",
         "special_effects_percentage",

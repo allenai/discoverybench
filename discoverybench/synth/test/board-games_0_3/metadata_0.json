@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "game_sessions_per_month",
-      "true_hypothesis": "Players with a higher win rate and longer average game duration are likely to have an increased number of game sessions per month, calculated based on the expression: (win_rate / 10) + (2 * average_game_duration_hours).",
-      "true_hypothesis_expr": "df['win_rate'] / 10 + 2 * df['average_game_duration_hours']",
+      
+      
       "relevant_cols": [
         "win_rate",
         "average_game_duration_hours",

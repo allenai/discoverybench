@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "predicted_vr_sickness",
-      "true_hypothesis": "Participants with an education level to the power of 3 plus twice the frequency of technology interaction at work added to the product of being in the age group 18-25 and three times cognitive task frequency, all of which summing to 25 or lower, are less likely to experience VR sickness.",
-      "true_hypothesis_expr": "np.where((df['education_level']**3 + df['tech_interaction_frequency']*2 + (df['age_group'] == '18-25').astype(int) * 3 * df['cognitive_task_frequency']) <= 25, True, False)",
+      
+      
       "relevant_cols": [
         "cognitive_task_frequency",
         "age_group",

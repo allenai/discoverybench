@@ -288,8 +288,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "cluster_region",
-      "true_hypothesis": "Galaxies that have stable gravitational fields and recent supernova events, where the stellar age demographic is old, are assigned to region3; if the stellar age demographic is mid-age, they are assigned to region2; otherwise, they are assigned to region1.",
-      "true_hypothesis_expr": "np.where((df['gravitational_field_status'] == True) & (df['recent_supernova'] == True), np.where(df['stellar_age_demographic'] == 'old', 'region3', np.where(df['stellar_age_demographic'] == 'mid-age', 'region2', 'region1')), 'region1')",
+      
+      
       "relevant_cols": [
         "stellar_age_demographic",
         "gravitational_field_status",

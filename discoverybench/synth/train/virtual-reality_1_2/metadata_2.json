@@ -200,8 +200,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "vr_technology_familiarity",
-      "true_hypothesis": "Individuals who are in the 18-25 age group, have higher education levels, and interact more frequently with technology at work tend to show greater familiarity with VR technology.",
-      "true_hypothesis_expr": "df['education_level']**3 + df['tech_interaction_frequency']*2 + (df['age_group'] == '18-25').astype(int) * 3",
+      
+      
       "relevant_cols": [
         "age_group",
         "education_level",

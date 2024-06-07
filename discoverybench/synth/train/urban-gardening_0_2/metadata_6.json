@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "offers_green_waste_recycling",
-      "true_hypothesis": "Gardens where the proportion of rare plant species multiplied by 5 plus the volunteer participation rate divided by 10 is greater than 3 and the quality of the irrigation system multiplied by 5 minus the natural logarithm of daily pedestrian traffic is at least 5 are likely to offer green waste recycling facilities.",
-      "true_hypothesis_expr": "np.where(((df['rare_plant_species_ratio'] * 5 + df['volunteer_participation_rate'] // 10) > 3) & ((df['irrigation_system_quality'].map({'low': 1, 'medium': 2, 'high': 3}) * 5 - np.log(df['daily_pedestrian_traffic'])) >= 5), True, False)",
+      
+      
       "relevant_cols": [
         "rare_plant_species_ratio",
         "volunteer_participation_rate",

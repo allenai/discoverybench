@@ -236,8 +236,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "socioeconomic_status",
-      "true_hypothesis": "The calculation of the tourists' socioeconomic status considers a weighted sum of three factors: the use of advanced technologies, the number of previous space trips, and the relationship between space trips and earth vacations. This suggests that tourists with more advanced tech use and a higher number of previous space trips have a higher socioeconomic status.",
-      "true_hypothesis_expr": "3*np.where(df['advanced_tech_use'], 1, 0) + (df['number_previous_space_trips']**2) / (1 + df['ratio_space_trips_to_earth_vacations'])",
+      
+      
       "relevant_cols": [
         "ratio_space_trips_to_earth_vacations",
         "advanced_tech_use",

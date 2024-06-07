@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "ingredient_rarity",
-      "true_hypothesis": "The rarity of an ingredient is higher if its production volume is less than 50 metric tons annually, calculated as 10 minus the production volume multiplied by 0.01, added to three times the seasonal availability indicator, and added to four times the cultural significance indicator, with a base rarity value of 1 for production volumes 50 metric tons or more.",
-      "true_hypothesis_expr": "np.where(df['production_volume'] < 50, 10 - df['production_volume']*0.01 + 3*df['seasonal_availability'] + 4*df['cultural_significance'], 1)",
+      
+      
       "relevant_cols": [
         "production_volume",
         "seasonal_availability",

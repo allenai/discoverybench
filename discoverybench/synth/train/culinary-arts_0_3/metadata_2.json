@@ -92,8 +92,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "seasonal_ingredient_usage",
-      "true_hypothesis": "Chefs with higher numbers of local supplier partnerships and those participating in culinary innovation programs are likely to have seasonal ingredient usage influenced by a complex combination of factors such as a cubic relationship with local supplier partnerships, a linear relationship with participation in culinary innovation programs, and a quadratic relationship with the number of menu items.",
-      "true_hypothesis_expr": "2 * df['local_supplier_partnerships']**3 + 30 * df['participation_in_culinary_innovation_programs'] + df['menu_items_count']**2",
+      
+      
       "relevant_cols": [
         "local_supplier_partnerships",
         "participation_in_culinary_innovation_programs",

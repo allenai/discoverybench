@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "solar_panel_age",
-      "true_hypothesis": "The age of solar panels increases by 5 years, then an additional 20 years if the household uses high-efficiency appliances, and a further 30% of the locality's solar energy usage percentile.",
-      "true_hypothesis_expr": "5 + 20 * df['high_efficiency_appliances'] + 0.3 * df['locality_solar_energy_usage_percentile']",
+      
+      
       "relevant_cols": [
         "high_efficiency_appliances",
         "locality_solar_energy_usage_percentile",

@@ -212,8 +212,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "vr_experience_rating",
-      "true_hypothesis": "People over the age of 50 who use VR technology for more than 30 minutes are more satisfied with educational applications, while teenagers who experience virtual reality sickness express lower satisfaction with educational applications than older users.",
-      "true_hypothesis_expr": "df['education_app_satisfaction'] + np.where((df['age'] > 50) & (df['vr_usage_duration'] > 30), 5, np.where((df['age'] < 20) & df.get('vr_sickness', False), 0, 3))",
+      
+      
       "relevant_cols": [
         "vr_usage_duration",
         "education_app_satisfaction",

@@ -100,8 +100,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "power_supply_wattage",
-      "true_hypothesis": "Robots designed for industrial tasks, capable of continuous operation, with more than 5 timed tasks, and with specific feature combinations will have their power supply wattage calculated based on a complex formula involving various attributes such as timed task sequence count, primary operational focus, continuous operation capability, task designation, market sector, and continuous operation need.",
-      "true_hypothesis_expr": "np.where((df['primary_operational_focus'] == 'industrial') & df['continuous_operation_capable'] & (df['timed_task_sequence_count'] > 5), np.random.randint(15, 50), np.random.randint(5, 15)) ** 3 + 10 * (4 - 2 * df['task_designation'] + df['market_sector'].apply(lambda x: {'consumer': -1, 'industrial': 1, 'research': 2}[x]) - 3 * df['continuous_operation_need']) ** 2",
+      
+      
       "relevant_cols": [
         "timed_task_sequence_count",
         "primary_operational_focus",

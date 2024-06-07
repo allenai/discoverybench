@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "advanced_tech_use",
-      "true_hypothesis": "The willingness to use advanced technologies during trips is influenced by the age bracket of tourists and the proportion of income they spend on technology. Specifically, tourists between the ages of 18-30 or 31-45 who spend at least 50% of their income on technology are more likely to be willing to use advanced technologies during trips.",
-      "true_hypothesis_expr": "np.where((df['age_bracket'].isin(['18-30', '31-45']) & (df['proportion_income_spent_on_tech'] >= 50)), True, False)",
+      
+      
       "relevant_cols": [
         "age_bracket",
         "proportion_income_spent_on_tech",

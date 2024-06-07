@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "average_temperature",
-      "true_hypothesis": "The average temperature during the creation of a painting varies inversely with the elevation of the geographic location; for outdoor scenes, the average temperature decreases by 0.006 degrees Celsius per meter of elevation when the light source is natural and the time period is after 1890, while for indoor scenes under the same conditions, the average temperature decreases by 0.003 degrees Celsius per meter of elevation.",
-      "true_hypothesis_expr": "np.where(np.where((df['light_source'] == 'natural') & (df['time_period'] == 'after_1890'), 'outdoor', 'indoor') == 'outdoor', 20 - df['elevation']*0.006, 25 - df['elevation']*0.003)",
+      
+      
       "relevant_cols": [
         "elevation",
         "light_source",

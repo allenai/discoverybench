@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "temperature_suitability",
-      "true_hypothesis": "The temperature suitability can be calculated by combining the soil richness level and the presence of optimal microbial populations using the provided formula.",
-      "true_hypothesis_expr": "(df['soil_richness_level'] * 0.1) + (5 * df['microbial_population_optimal'])",
+      
+      
       "relevant_cols": [
         "soil_richness_level",
         "microbial_population_optimal",

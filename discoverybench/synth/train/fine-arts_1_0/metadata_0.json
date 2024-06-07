@@ -204,8 +204,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "surrealism_preference",
-      "true_hypothesis": "Artists who exhibit a preference for surrealism themes are more likely to use oil paint compared to watercolor when they have a high count of international exhibitions, a higher education level, and are involved in more collaborative projects than local exhibitions, showcasing a bias towards traditional art mediums to express surrealist concepts.",
-      "true_hypothesis_expr": "np.where(np.where(df['international_exhibitions_count'] + (df['education_level']**2 + 2 * df['collaborative_projects_count']) - df['local_exhibitions_count'] > 30, 'oil_paint', 'watercolor')=='oil_paint', df['theme_surrealism']/(df['theme_surrealism'] + (df['outdoor_festival_count'] * 2 + (df['education_in_modern_art'] * 15)+0.001), ((df['outdoor_festival_count'] * 2 + (df['education_in_modern_art'] * 15))/(df['theme_surrealism'] + (df['outdoor_festival_count'] * 2 + (df['education_in_modern_art'] * 15))+0.001)))",
+      
+      
       "relevant_cols": [
         "theme_surrealism",
         "international_exhibitions_count",

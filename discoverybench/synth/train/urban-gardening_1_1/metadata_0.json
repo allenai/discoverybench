@@ -256,8 +256,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "has_educational_program",
-      "true_hypothesis": "Gardens with certain characteristics such as square footage, public transit access, percentage of native plants, private and public funding, and local partnerships that meet the criteria of the complex calculated expression are more likely to have educational programs.",
-      "true_hypothesis_expr": "np.where((((df['square_footage'] * 0.3 + 2000 * df['public_transit_access'] - df['percentage_native_plants'] * 50)**3 + ((df['private_funding'] / df['public_funding']) * 10 + 20 * df['has_local_partnerships']).astype(int)**2 * 5 - df['average_annual_temperature']) > 150000, True, False)",
+      
+      
       "relevant_cols": [
         "average_annual_temperature",
         "percentage_native_plants",

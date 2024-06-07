@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "award_wins",
-      "true_hypothesis": "Artists with advanced software skills, those who own high-end equipment, focus on 3D modeling, engage more with the online community, and regularly update their portfolio are likely to win more awards as calculated by the expression: award_wins = (software_training_courses + high_end_equipment_ownership*2 + focus_on_3D_modeling*2)^3 + 2*(online_community_engagement^2) + portfolio_updated_frequency",
-      "true_hypothesis_expr": "(np.clip(df['software_training_courses'] + df['high_end_equipment_ownership']*2 + df['focus_on_3D_modeling']*2, 1, 5))**3 + 2*(df['online_community_engagement']**2) + df['portfolio_updated_frequency']",
+      
+      
       "relevant_cols": [
         "online_community_engagement",
         "portfolio_updated_frequency",

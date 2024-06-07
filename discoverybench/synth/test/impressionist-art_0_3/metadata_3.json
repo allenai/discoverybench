@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "is_landscape",
-      "true_hypothesis": "The likelihood that a painting is a landscape increases if it features more than 10 natural elements, especially if created during spring or summer and from the later period of the impressionist era.",
-      "true_hypothesis_expr": "np.where((df['count_natural_elements'] > 10) & (df['season_created'].isin(['spring', 'summer'])) & (df['period_of_impressionism'] == 'late'), True, False)",
+      
+      
       "relevant_cols": [
         "count_natural_elements",
         "season_created",

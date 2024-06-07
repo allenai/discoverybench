@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "owns_VR_device",
-      "true_hypothesis": "Individuals who spend more than 75% of their daily entertainment time using technology and are in the top 25th percentile of technology users are more likely to own a Virtual Reality device.",
-      "true_hypothesis_expr": "np.where((df['technology_usage_percent'] > 75) & df['top_tech_user'], True, False)",
+      
+      
       "relevant_cols": [
         "technology_usage_percent",
         "top_tech_user",

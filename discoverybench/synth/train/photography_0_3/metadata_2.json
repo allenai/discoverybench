@@ -156,8 +156,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "outdoor_shoots_count",
-      "true_hypothesis": "Photographers who specialize in wildlife photography and are professionals, using equipment with higher image resolution, tend to engage in more outdoor shoots due to a direct relationship between these factors.",
-      "true_hypothesis_expr": "np.where(df['is_professional'] & df['specializes_in_wildlife'], df['camera_resolution_megapixels'] * 3, 0)",
+      
+      
       "relevant_cols": [
         "specializes_in_wildlife",
         "camera_resolution_megapixels",

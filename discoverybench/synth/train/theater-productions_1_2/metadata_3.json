@@ -220,8 +220,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "day_of_week",
-      "true_hypothesis": "Plays are scheduled on Saturday if the lead actor is available for more than 5 days and if ticket pre-sales are over 500; otherwise, plays are scheduled on Wednesday.",
-      "true_hypothesis_expr": "np.where((df['lead_actor_availability_days'] > 5) & (df['ticket_pre_sales'] > 500), 'Saturday', 'Wednesday')",
+      
+      
       "relevant_cols": [
         "lead_actor_availability_days",
         "ticket_pre_sales",

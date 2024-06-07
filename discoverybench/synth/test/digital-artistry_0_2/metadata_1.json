@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "digital_to_traditional_ratio",
-      "true_hypothesis": "Artists with higher technical training levels and active participation in tech art forums, combined with formal education in digital art and being based in tech hubs, tend to have a higher digital to traditional ratio. Additionally, artists who use advanced digital tools and engage more in online art communities and frequent technology training sessions also contribute to a higher digital to traditional ratio.",
-      "true_hypothesis_expr": "0.05 * (10 * df['technical_training_level'] + 15 * (df['active_in_tech_art_forums'] == True)) + 2 * np.where((df['formal_digital_art_education'] > 5) & (df['based_in_tech_hub'] == True), True, False) + 0.03 * np.where(df['uses_advanced_digital_tools'], df['online_art_community_engagement'] + df['frequency_of_technology_training'], df['online_art_community_engagement'])",
+      
+      
       "relevant_cols": [
         "technical_training_level",
         "active_in_tech_art_forums",

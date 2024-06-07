@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "collaborative_projects_count",
-      "true_hypothesis": "Artists who visit art exhibitions or engage in art discussions have a collaborative_projects_count equal to 60% of their art_exhibition_visits plus 40% of their art_discussions_engaged.",
-      "true_hypothesis_expr": "df['art_exhibition_visits'] * 0.6 + df['art_discussions_engaged'] * 0.4",
+      
+      
       "relevant_cols": [
         "art_exhibition_visits",
         "art_discussions_engaged",

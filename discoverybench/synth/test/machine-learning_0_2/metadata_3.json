@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "requires_normalization",
-      "true_hypothesis": "Datasets with more than 3 unique data types and a size exceeding 500 records require normalization.",
-      "true_hypothesis_expr": "np.where((df['data_type_diversity'] > 3) & (df['dataset_size'] > 500), True, False)",
+      
+      
       "relevant_cols": [
         "data_type_diversity",
         "dataset_size",

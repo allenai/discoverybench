@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "artist_prolificacy_score",
-      "true_hypothesis": "The artist prolificacy score can be predicted based on the cube of the number of art exhibitions featuring their work, the average sale prices of their paintings, and whether they were primarily active in Paris. The relationship suggests that artists with a higher cube of exhibitions, higher average sale prices, and those active in Paris tend to have a higher prolificacy score.",
-      "true_hypothesis_expr": "df['number_of_exhibitions']**3 + 5*df['average_sale_price'] + 15*np.where(df['active_in_paris'], 1, 0)",
+      
+      
       "relevant_cols": [
         "number_of_exhibitions",
         "average_sale_price",

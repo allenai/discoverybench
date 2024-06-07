@@ -204,8 +204,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "junior_coders",
-      "true_hypothesis": "The number of junior coders can be predicted by the number of coding bootcamps and tech startups in a participant\u2019s country, particularly significant in countries with a high entrepreneurship index, where the number of junior coders is proportional to 50 times the number of coding bootcamps plus the number of tech startups plus half the product of the entrepreneurship index, tech startups, and tech startups.",
-      "true_hypothesis_expr": "df['coding_bootcamps'] * 50 + df['tech_startups'] + df['entrepreneurship_index'] * df['tech_startups'] * 0.5",
+      
+      
       "relevant_cols": [
         "entrepreneurship_index",
         "coding_bootcamps",

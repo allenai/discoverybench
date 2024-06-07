@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "processing_time",
-      "true_hypothesis": "The processing time for machine learning models is calculated as 10 times the diversity of data types in the dataset plus 10 times a condition related to the diversity of data types and dataset size over 500 plus 15 times a condition based on specific features in the dataset, such as data coverage percentage, average user rating, complexity requirements, binary features percentage, and special characters in the name.",
-      "true_hypothesis_expr": "df['data_type_diversity'] * 10 + 10 * np.where((df['data_type_diversity'] > 3) & (df['dataset_size'] > 500), True, False) + 15 * np.where((np.ceil(2 + df['data_coverage_percentage']/10 + df['average_user_rating'] * 2 + 5 * df['requires_complex_features']) > 5) | (np.where((df['percentage_of_binary_features'] > 50) & (df['has_special_characters_in_name']), True, False)), True, False)",
+      
+      
       "relevant_cols": [
         "data_type_diversity",
         "dataset_size",

@@ -164,8 +164,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "lauded_author_factor",
-      "true_hypothesis": "The lauded_author_factor is influenced by the numeric score assessing narrative style compared to prevailing styles within the same genre, multiplied by 10, and further adjusted by taking into account whether the novel contains dynamic characters (>5), unexpected twists, and an average age of main characters under 30 through specific weights assigned to those criteria. Additionally, the numeric values representing primary themes such as love, betrayal, war, friendship, adventure, mystery, historical, and fantasy are crucial in determining the final value of the lauded_author_factor.",
-      "true_hypothesis_expr": "df['narrative_style_relative_to_genre'] * 10 + (np.where((df['dynamic_characters'] > 5) & (df['unexpected_twists'] == True) & (df['average_age_of_main_characters'] < 30), True, False) * 20) + (df['primary_themes'].map({'love': 5, 'betrayal': 8, 'war': 12, 'friendship': 3, 'adventure': 4, 'mystery': 15, 'historical': 10, 'fantasy': 7}))",
+      
+      
       "relevant_cols": [
         "narrative_style_relative_to_genre",
         "primary_themes",

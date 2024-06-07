@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "model_error_rate",
-      "true_hypothesis": "The model error rate varies based on whether dropout regularization is applied, with models using dropout having a decreased error rate that is 90% of the original rate. Additionally, the error rate is adjusted based on the data diversity score and model complexity levels.",
-      "true_hypothesis_expr": "np.where(df['uses_dropout'], 0.9 * df.get('model_error_rate', 0), df.get('model_error_rate', 0)) - 0.05 * df.get('data_diversity_score', 0) + df['model_complexity'].map({'low': 0.05, 'medium': 0.02, 'high': -0.01})",
+      
+      
       "relevant_cols": [
         "data_diversity_score",
         "model_complexity",

@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "travel_month",
-      "true_hypothesis": "Tourists who are interested in celestial events are likely to take into account the number of daylight hours at the launch site to determine the travel month, choosing to travel when they can make the most of the available daylight.",
-      "true_hypothesis_expr": "np.where((df['interest_in_celestial_events'] == True), np.ceil(df['daylight_hours_at_launch'] / 2), np.floor(12 - df['daylight_hours_at_launch'] / 2))",
+      
+      
       "relevant_cols": [
         "daylight_hours_at_launch",
         "interest_in_celestial_events",

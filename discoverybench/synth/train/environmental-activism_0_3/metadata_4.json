@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "pollution_regulation_score",
-      "true_hypothesis": "Regions with a higher percentage of college graduates and higher renewable energy usage percentiles tend to have pollution regulation scores determined by a weighted combination of these two factors.",
-      "true_hypothesis_expr": "np.round(0.6 * df['percentage_of_college_graduates'] + 0.4 * df['renewable_energy_usage_percentile'])",
+      
+      
       "relevant_cols": [
         "percentage_of_college_graduates",
         "renewable_energy_usage_percentile",

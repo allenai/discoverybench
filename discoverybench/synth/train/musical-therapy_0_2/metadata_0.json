@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "structured_activity_preference",
-      "true_hypothesis": "Patients who experience a greater increase in mood post-therapy sessions and attend sessions more frequently are more likely to have a higher preference for structured activities.",
-      "true_hypothesis_expr": "df['mood_improvement_post_session'] + df['session_frequency_per_week']",
+      
+      
       "relevant_cols": [
         "mood_improvement_post_session",
         "session_frequency_per_week",

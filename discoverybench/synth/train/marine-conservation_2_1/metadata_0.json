@@ -152,8 +152,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_species",
-      "true_hypothesis": "In marine protected areas where there is a high level of tourist activity, measured by the number of tourist visits annually, and a high level of pollution control, indicated by pollution control index, we hypothesize that these factors significantly increase the number of species. This relationship holds mainly in areas recognized for eco-tourism.",
-      "true_hypothesis_expr": "np.where(df['is_eco_tourism_area'], df['tourist_visits_annual'] * 0.05 + df['pollution_control_index'] * 50, 0)",
+      
+      
       "relevant_cols": [
         "tourist_visits_annual",
         "pollution_control_index",

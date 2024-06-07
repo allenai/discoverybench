@@ -164,8 +164,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "influential_period",
-      "true_hypothesis": "The likelihood of a novel being from an influential period can be predicted by the combination of the critical review score, author genre diversity, and publication century. If the calculation (critical_review_score * 10 + author_genre_diversity * 3) is greater than 50 and the publication century is 18 or later, then the novel is from an influential period.",
-      "true_hypothesis_expr": "np.where((((df['critical_review_score'] * 10 + df['author_genre_diversity'] * 3) > 50) & (df['publication_century'] >= 18)), True, False)",
+      
+      
       "relevant_cols": [
         "critical_review_score",
         "publication_century",

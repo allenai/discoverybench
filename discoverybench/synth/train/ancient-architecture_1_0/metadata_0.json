@@ -144,8 +144,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "material_usage_ratio",
-      "true_hypothesis": "Structures with a combination of lower average tourist visits per year, lower material durability scores, not being in a historical conservation area, and being used for ceremonial purposes tend to have a higher material usage ratio, possibly due to cultural significance and easy access.",
-      "true_hypothesis_expr": "((df['average_tourist_visits_per_year'] / 5000) + ((50 - (df['material_durability_score'] * 3 + (df['in_historical_conservation_area'] * 10))) / 10 + (df['ceremonial_use'].astype(int)) * 5).clip(1, 100) / df['height_meters']",
+      
+      
       "relevant_cols": [
         "height_meters",
         "average_tourist_visits_per_year",

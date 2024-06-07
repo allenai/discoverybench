@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "photo_editing_software_use",
-      "true_hypothesis": "Photographers who participate in online contests or post on social media and are popular on social media tend to use photo editing software.",
-      "true_hypothesis_expr": "np.logical_or(df['participates_online_contests'], np.logical_and(df['posts_on_social_media'], df['social_media_popularity_percentile'] > 0.8))",
+      
+      
       "relevant_cols": [
         "posts_on_social_media",
         "social_media_popularity_percentile",

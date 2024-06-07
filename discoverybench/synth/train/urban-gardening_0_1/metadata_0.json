@@ -204,8 +204,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "vegetable_plots",
-      "true_hypothesis": "Gardens with more than 15 local food markets within a 5 km radius and in cities that hold gardening workshops more than twice a month are likely to include vegetable plots.",
-      "true_hypothesis_expr": "np.where((df['number_of_local_food_markets'] > 15) & (df['frequent_gardening_workshops']), 'Yes', 'No')",
+      
+      
       "relevant_cols": [
         "number_of_local_food_markets",
         "frequent_gardening_workshops",

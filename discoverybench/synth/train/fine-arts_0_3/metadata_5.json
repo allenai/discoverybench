@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "collaboration_score",
-      "true_hypothesis": "Artists with a higher number of solo exhibitions and larger social media presence tend to have higher collaboration scores due to greater visibility and influence in the art community. An artist\u2019s collaboration score is calculated by multiplying the number of solo exhibitions by 0.5 and adding to it the social media followers divided by 100,000 and multiplied by 0.1.",
-      "true_hypothesis_expr": "df['solo_exhibitions_count'] * 0.5 + df['social_media_followers'] / 100000 * 0.1",
+      
+      
       "relevant_cols": [
         "solo_exhibitions_count",
         "social_media_followers",

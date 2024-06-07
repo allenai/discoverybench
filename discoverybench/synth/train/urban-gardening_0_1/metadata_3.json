@@ -204,8 +204,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "number_of_trees",
-      "true_hypothesis": "Gardens with more sunlight, higher frequency of community events, larger garden space per capita, and garden type regulations favoring food-producing plants tend to have more trees, as computed from a complex expression involving these factors.",
-      "true_hypothesis_expr": "100 - (50 + 2 * df['sunlight_hours_per_day'] - 1.5 * df['frequency_of_community_events']) + 20 * np.where(((df['garden_space_per_capita'] * 5) + (df['garden_type_regulation'] * 10) > 10) & (df['annual_rainfall'] > 800), True, False).astype(int)",
+      
+      
       "relevant_cols": [
         "sunlight_hours_per_day",
         "frequency_of_community_events",

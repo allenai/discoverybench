@@ -164,8 +164,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "architectural_style",
-      "true_hypothesis": "Buildings that have both opening area percentage greater than 50% and a facade complexity index greater than 7 are classified as Gothic architectural style, otherwise, they are classified as Classical.",
-      "true_hypothesis_expr": "np.where((df['opening_area_percentage'] > 50) & (df['facade_complexity_index'] > 7), 'Gothic', 'Classical')",
+      
+      
       "relevant_cols": [
         "facade_complexity_index",
         "opening_area_percentage",

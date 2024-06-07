@@ -136,8 +136,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "accuracy_rate",
-      "true_hypothesis": "Participants aged between 25-34, who prefer creative elements over logical elements, and prefer quick tasks, have an accuracy rate, especially higher in wordplay puzzles compared to any other age group.",
-      "true_hypothesis_expr": "np.where((df['participant_age'] >= 25) & (df['participant_age'] <= 34) & (np.where(((df['logical_preference_score'] > df['creative_preference_score']) & df['prefers_quick_tasks']), 'numeric', np.where(df['creative_preference_score'] > df['logical_preference_score'], 'wordplay', 'visual')) == 'wordplay'), df['participant_age'], 0)",
+      
+      
       "relevant_cols": [
         "logical_preference_score",
         "prefers_quick_tasks",

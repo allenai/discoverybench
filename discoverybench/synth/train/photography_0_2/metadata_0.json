@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "wildlife_photography_frequency",
-      "true_hypothesis": "The frequency of engaging in wildlife photography is positively correlated with a cubic relationship between the photographer's equipment budget and workshops attended, specialized lenses owned, and active participation in wildlife photography related online forums, along with the condition of participating in more than 5 competitions, spending more than 10 hours weekly on editing, and being active in online forums, as shown in the provided complex expression.",
-      "true_hypothesis_expr": "((df['equipment_budget']**3 + 5*df['workshops_attended']**2) * (df['photography_focus'] == 'wildlife')**3 + df['specialized_lenses_count']**2 + 5 * np.where((df['competitions_participated'] > 5) & (df['weekly_editing_hours'] > 10) & df['active_in_online_forums'], True, False).astype(int))",
+      
+      
       "relevant_cols": [
         "specialized_lenses_count",
         "photography_focus",

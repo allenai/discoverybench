@@ -204,8 +204,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "local_club_participation",
-      "true_hypothesis": "Participants who have attended more than 10 coding webinars and have access to advanced coding resources are more likely to participate in local programming clubs.",
-      "true_hypothesis_expr": "np.where((df['number_of_webinars_attended'] > 10) & (df['access_to_advanced_resources'] == True), True, False)",
+      
+      
       "relevant_cols": [
         "access_to_advanced_resources",
         "number_of_webinars_attended",

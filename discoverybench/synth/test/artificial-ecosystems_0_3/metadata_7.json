@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "mechanical_reliability_score",
-      "true_hypothesis": "The mechanical reliability score of the environmental control system's machinery is derived by a percentage calculation based on the ratio of the external temperature in Celsius and the system check frequency per year.",
-      "true_hypothesis_expr": "(df['external_temperature_C'] / 50 + df['system_check_frequency_per_year'] / 24) * 100",
+      
+      
       "relevant_cols": [
         "external_temperature_C",
         "system_check_frequency_per_year",

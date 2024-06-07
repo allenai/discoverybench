@@ -232,8 +232,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "average_engagement_score",
-      "true_hypothesis": "The average engagement score of the play is inversely proportional to the square of the number of lighting changes per scene.",
-      "true_hypothesis_expr": "10 / (df['lighting_changes_per_scene'] ** 2 + 1)",
+      
+      
       "relevant_cols": [
         "average_engagement_score",
         "lighting_changes_per_scene"

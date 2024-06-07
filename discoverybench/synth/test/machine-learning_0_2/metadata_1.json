@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "uses_regularization",
-      "true_hypothesis": "The model uses regularization techniques when the input sensitivity is greater than 0.8 and the performance stability is less than 0.5.",
-      "true_hypothesis_expr": "np.where((df['input_sensitivity'] > 0.8) & (df['performance_stability'] < 0.5), True, False)",
+      
+      
       "relevant_cols": [
         "input_sensitivity",
         "performance_stability",

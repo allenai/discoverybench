@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "training_type",
-      "true_hypothesis": "Robots with an industrial primary operational focus, capable of continuous operation with more than 5 timed tasks, and exhibiting specific performance metrics are classified as 'musical' in the training_type column, otherwise classified as 'traditional'.",
-      "true_hypothesis_expr": "np.where((np.where((df['primary_operational_focus'] == 'industrial') & df['continuous_operation_capable'] & (df['timed_task_sequence_count'] > 5), np.random.randint(15, 50), np.random.randint(5, 15))**3 + 10*(4 - 2 * df['task_designation'] + df['market_sector'].apply(lambda x: {'consumer': -1, 'industrial': 1, 'research': 2}[x]) - 3 * df['continuous_operation_need'])**2 > 500) & (df['processing_speed_GHz'] > 1.5) & (df['processing_speed_GHz'] < 2.5), 'musical', 'traditional')",
+      
+      
       "relevant_cols": [
         "processing_speed_GHz",
         "timed_task_sequence_count",

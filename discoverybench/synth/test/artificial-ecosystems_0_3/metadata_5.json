@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "artificial_light_usage_hours",
-      "true_hypothesis": "The formula to calculate `artificial_light_usage_hours` based on `plant_density` and `carbon_dioxide_levels` is given by: 24 - (df['plant_density'] / 1000 + df['carbon_dioxide_levels'] / 10000 * 24)",
-      "true_hypothesis_expr": "24 - (df['plant_density'] / 1000 + df['carbon_dioxide_levels'] / 10000 * 24)",
+      
+      
       "relevant_cols": [
         "plant_density",
         "carbon_dioxide_levels",

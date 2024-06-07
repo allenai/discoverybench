@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "recent_tournament_participation",
-      "true_hypothesis": "Players who have a cooperative game frequency higher than 0.5 or are active in online gaming communities are more likely to have participated in recent tournaments in the past year.",
-      "true_hypothesis_expr": "np.where((df['cooperative_game_frequency']>0.5) | (df['online_community_active']==True), True, False)",
+      
+      
       "relevant_cols": [
         "cooperative_game_frequency",
         "online_community_active",

@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "art_pieces_sold_per_year",
-      "true_hypothesis": "Artists who participate in international exhibitions, receive positive reviews, and primarily create digital art are predicted to sell an average of art_pieces_sold_per_year per year.",
-      "true_hypothesis_expr": "df['participates_in_international_exhibitions']*20 + df['positive_reviews_percentage']*2 + df['primarily_creates_digital_art']*30",
+      
+      
       "relevant_cols": [
         "participates_in_international_exhibitions",
         "positive_reviews_percentage",

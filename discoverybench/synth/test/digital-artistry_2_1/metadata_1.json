@@ -232,8 +232,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "collaboration_projects",
-      "true_hypothesis": "Artists with the cube root of the ratio of digital to traditional artworks plus twice the number of art forums participations have a higher number of collaboration projects, due to the combined influence of digital-traditional blend and active art forum involvement.",
-      "true_hypothesis_expr": "np.cbrt(df['digital_to_traditional_ratio']) + 2 * df['art_forum_participations']",
+      
+      
       "relevant_cols": [
         "digital_to_traditional_ratio",
         "art_forum_participations",

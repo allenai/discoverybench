@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "number_of_fruit_trees",
-      "true_hypothesis": "The number of fruit trees in urban gardens is determined by the formula: garden_accessibility_index x 5 + 10 (if number_of_workshops > 3 and guest_expert_visits > 1 and has_school_affiliation) + 5 (if number_of_local_volunteers > 10 and local_funding_amount > 20 and is_community_driven).",
-      "true_hypothesis_expr": "df['garden_accessibility_index'] * 5 + np.where(np.where((df['number_of_workshops'] > 3) & (df['guest_expert_visits'] > 1) & (df['has_school_affiliation'] == True), True, False), 10, 0) + np.where(np.where((df['number_of_local_volunteers'] > 10) & (df['local_funding_amount'] > 20) & df['is_community_driven'], True, False), 5, 0)",
+      
+      
       "relevant_cols": [
         "garden_accessibility_index",
         "number_of_workshops",

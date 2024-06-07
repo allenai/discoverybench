@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "gallery_visibility_score",
-      "true_hypothesis": "The visibility of a painting in public galleries can be predicted by a formula that combines the distance of the year of creation from 1900 and whether the painting is part of a recognized series. Higher values of gallery visibility score indicate higher visibility, with the specific method of calculation involving the year offset from 1900 divided by 50, combined with the part of a series indicator scaled by 50 and the result taken modulo 101.",
-      "true_hypothesis_expr": "((1900 - df['year_of_creation']) / 50 + df['part_of_series'] * 50) % 101",
+      
+      
       "relevant_cols": [
         "year_of_creation",
         "part_of_series",

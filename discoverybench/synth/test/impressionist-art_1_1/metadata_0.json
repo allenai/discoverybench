@@ -228,8 +228,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "painting_id",
-      "true_hypothesis": "The value of a painting's unique identifier (painting_id) is determined by a complex formula involving the artist's popularity, presence of landscape, critics' positive reviews, historical importance, and the painting's category.",
-      "true_hypothesis_expr": "3.0 * df['artist_popularity_percentile'] + 15 * np.where(df['contains_landscape'], 1, 0) * 20 + (np.where(df['critics_positive_reviews'] + df['historical_importance'] - 2*df['is_landscape'] > 50, True, False) * 500)",
+      
+      
       "relevant_cols": [
         "contains_landscape",
         "artist_popularity_percentile",

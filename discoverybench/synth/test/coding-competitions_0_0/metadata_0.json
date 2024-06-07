@@ -156,8 +156,8 @@
       "question_type": "general",
       "difficulty": 4,
       "target_col": "top_10_percent_finish",
-      "true_hypothesis": "Participants from countries with a calculation based on various factors like technical university graduates, tech startup investments, modern tech education practices, digital transformation, and digital infrastructure investments, among others, will finish in the top 10% of global coding competitions if the result is below 10,000; otherwise, they won't.",
-      "true_hypothesis_expr": "np.where((((df['technical_university_graduates'] * 2 + df['tech_startup_investment'] * 0.001 + 200 * df['modern_tech_education_practices'].astype(int)) * (-0.2) * ((df['public_wifi_hotspots']**3 + 2 * df['internet_education_programs'].astype(int) + 5) * df['rapid_digital_transformation'].astype(int)) + 200) / ((df['internet_speed'] ** 0.5 + df['tech_interest'] ** 2) * (df['major_universities_cs'] * 20 + 1) + (df['digital_infrastructure_investment'] * 0.005 + df['stem_higher_education_rate'] * 50 * (df['high_digital_consumption'] * 1)) + df['entrepreneurship_index'] * (df['digital_infrastructure_investment'] * 0.005 + df['stem_higher_education_rate'] * 50 * (df['high_digital_consumption'] * 1)) * 0.5) * 1000 + (10000 if 'cs_degree_universities' in df.columns else 0)) < 10000, 1, 0)",
+      
+      
       "relevant_cols": [
         "technical_university_graduates",
         "tech_startup_investment",

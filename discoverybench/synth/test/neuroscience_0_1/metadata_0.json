@@ -80,8 +80,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "prefrontal_cortex_activity",
-      "true_hypothesis": "Higher levels of omega-3 intake and memory task performance correspond to an increase in prefrontal cortex activity, with the impact of omega-3 intake squared being more pronounced in influencing prefrontal cortex activity during memory tasks.",
-      "true_hypothesis_expr": "0.1 * df['omega_3_intake_level']**2 + 0.2 * df['memory_task_performance'] + 0.05",
+      
+      
       "relevant_cols": [
         "omega_3_intake_level",
         "memory_task_performance",

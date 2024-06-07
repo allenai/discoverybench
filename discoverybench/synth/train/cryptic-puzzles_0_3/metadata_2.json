@@ -120,8 +120,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "frequent_mind_games",
-      "true_hypothesis": "Participants with a puzzle complexity preference of 5 or higher, a puzzle solving frequency of 10 or more times per week, and aged 30 years or older are more likely to frequently engage in mind-challenging games.",
-      "true_hypothesis_expr": "np.where((df['puzzle_complexity_preference']>=5) & (df['puzzle_solving_frequency']>=10) & (df['participant_age']>=30), True, False)",
+      
+      
       "relevant_cols": [
         "puzzle_solving_frequency",
         "puzzle_complexity_preference",

@@ -108,8 +108,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "trading_frequency_per_month",
-      "true_hypothesis": "Traders who have a high level of participation in online forums discussing cryptocurrencies, follow crypto news regularly, and hold multiple currencies are expected to have a trading frequency per month calculated as 5 times the forum participation level cubed, plus 50 times the binary indicator for following crypto news, and 30 times the binary indicator for holding multiple currencies.",
-      "true_hypothesis_expr": "5 * df['forum_participation_level']**3 + 50 * df['follows_crypto_news'] + 30 * df['holds_multiple_currencies']",
+      
+      
       "relevant_cols": [
         "follows_crypto_news",
         "forum_participation_level",

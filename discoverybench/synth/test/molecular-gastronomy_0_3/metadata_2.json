@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "predicted_variety_of_ingredient_types",
-      "true_hypothesis": "In molecular gastronomy, dishes that are part of special culinary events likely require a diverse set of ingredients to cater to unique themes or guest preferences, especially when paired with beverages.",
-      "true_hypothesis_expr": "np.where(df['is_special_event'], 5 + df['guest_preferences_variation'], 3 + np.where(df['beverage_pairing'] != 'none', 2, 0))",
+      
+      
       "relevant_cols": [
         "is_special_event",
         "beverage_pairing",

@@ -256,8 +256,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "season",
-      "true_hypothesis": "The ratio of daylight hours to artificial light usage hours in an artificial ecosystem categorizes the season. Seasons are categorized based on the ratio being either greater than 3 indicating 'summer', less than 0.5 indicating 'winter', otherwise defaulting to 'spring'.",
-      "true_hypothesis_expr": "np.select([(df['daylight_hours']/df['artificial_light_usage_hours'] > 3), (df['daylight_hours']/df['artificial_light_usage_hours'] < 0.5)], ['summer', 'winter'], default='spring')",
+      
+      
       "relevant_cols": [
         "daylight_hours",
         "artificial_light_usage_hours",

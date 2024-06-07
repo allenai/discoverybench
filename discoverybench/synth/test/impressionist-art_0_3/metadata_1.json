@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "critics_positive_reviews",
-      "true_hypothesis": "The number of positive critics' reviews increases with 3 times the artist's popularity level added to 2 times the number of symposium exposures but decreases when subtracting the count of non-prestigious gallery displays.",
-      "true_hypothesis_expr": "3 * df['artist_popularity'] + 2 * df['symposium_exposures'] - df['non_prestigious_gallery_displays']",
+      
+      
       "relevant_cols": [
         "artist_popularity",
         "symposium_exposures",

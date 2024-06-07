@@ -144,8 +144,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "vehicle_id",
-      "true_hypothesis": "Exploration vehicles assigned to regions with significant historical findings and high seasonal temperature variation are labeled with 'V001'; otherwise, they are labeled 'V004'.",
-      "true_hypothesis_expr": "np.where((df['historical_findings'] == True) & (df['seasonal_temperature_variation'] == 'high'), 'V001', 'V004')",
+      
+      
       "relevant_cols": [
         "seasonal_temperature_variation",
         "historical_findings",

@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "AI_model_complexity_index",
-      "true_hypothesis": "Robots that are designated for light-duty work, operate in the consumer market without the need for continuous operation, and have a lower task designation value, a market sector transformation that sets 'consumer' to -1 and 'research' to 2, will tend to utilize AI models with lower complexity index values.",
-      "true_hypothesis_expr": "4 - 2 * df['task_designation'] + df['market_sector'].apply(lambda x: {'consumer': -1, 'industrial': 1, 'research': 2}[x]) - 3 * df['continuous_operation_need']",
+      
+      
       "relevant_cols": [
         "task_designation",
         "market_sector",

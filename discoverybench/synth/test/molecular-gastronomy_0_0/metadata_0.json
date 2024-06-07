@@ -128,8 +128,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "predicted_satisfaction_increase",
-      "true_hypothesis": "The predicted satisfaction increase is calculated as the cube of the difference between the customer satisfaction rating and 1, divided by 729.",
-      "true_hypothesis_expr": "(df['customer_satisfaction_rating'] - 1)**3 / 729",
+      
+      
       "relevant_cols": [
         "customer_satisfaction_rating",
         "predicted_satisfaction_increase"

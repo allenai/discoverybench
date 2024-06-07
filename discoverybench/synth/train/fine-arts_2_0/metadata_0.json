@@ -220,8 +220,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "surrealism_preference",
-      "true_hypothesis": "Artists who have high counts of international exhibitions and awards, but low counts of local exhibitions, have a stronger preference for surrealism themes compared to artists with lower international exhibition and award counts, even if they participate in outdoor festivals and have formal education in modern art.",
-      "true_hypothesis_expr": "np.where(np.where(df['international_exhibitions_count'] + df['awards_count'] - df['local_exhibitions_count'] > 30, 'oil_paint', 'watercolor')=='oil_paint', df['theme_surrealism']/(df['theme_surrealism'] + (df['outdoor_festival_count'] * 2 + (df['education_in_modern_art'] * 15)+0.001), (df['outdoor_festival_count'] * 2 + (df['education_in_modern_art'] * 15))/(df['theme_surrealism'] + (df['outdoor_festival_count'] * 2 + (df['education_in_modern_art'] * 15))+0.001))",
+      
+      
       "relevant_cols": [
         "theme_surrealism",
         "international_exhibitions_count",

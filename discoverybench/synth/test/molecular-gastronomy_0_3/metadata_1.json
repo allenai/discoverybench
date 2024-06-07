@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "ingredient_matching_score",
-      "true_hypothesis": "In this dataset, the ingredient matching score is calculated by multiplying the preparation steps with the sum of special equipment indicator and 1. Higher values of preparation steps and special equipment lead to a higher ingredient matching score.",
-      "true_hypothesis_expr": "df['preparation_steps'] * (df['special_equipment'] + 1)",
+      
+      
       "relevant_cols": [
         "preparation_steps",
         "special_equipment",

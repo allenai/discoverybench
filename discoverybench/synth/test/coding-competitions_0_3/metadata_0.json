@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "tech_companies_using_advanced_tech",
-      "true_hypothesis": "The number of tech companies using advanced programming technologies is determined by doubling the number of technical university graduates, adding a small fraction of the tech startup investment, and including a fixed value multiplied by the presence of modern tech education practices.",
-      "true_hypothesis_expr": "df['technical_university_graduates'] * 2 + df['tech_startup_investment'] * 0.001 + 200 * df['modern_tech_education_practices'].astype(int)",
+      
+      
       "relevant_cols": [
         "technical_university_graduates",
         "tech_startup_investment",

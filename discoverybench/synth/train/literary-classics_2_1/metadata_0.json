@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "literary_classic_recognition",
-      "true_hypothesis": "The recognition of a book as a literary classic is determined by a combined metric of the total number of literary awards received by the author up to the publication year of the book, the average score of critical reviews, and whether the book has been adapted into a movie.",
-      "true_hypothesis_expr": "np.where((df['author_award_count']*df['critical_review_score'] + 5*df['has_movie_adaptation']) > 30, 'Classic', 'Not Classic')",
+      
+      
       "relevant_cols": [
         "author_award_count",
         "critical_review_score",

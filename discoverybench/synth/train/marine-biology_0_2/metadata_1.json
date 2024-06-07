@@ -80,8 +80,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "plankton_density",
-      "true_hypothesis": "Plankton density near a reef is likely to be higher with increased water clarity and decreased cloud cover. Additionally, lower fishing activity levels are associated with higher plankton density.",
-      "true_hypothesis_expr": "(24 * (df['water_clarity']/100) * (1 - df['cloud_cover']/100)) * 3 + (df['fishing_activity'].map({'none': 4, 'low': 3, 'moderate': 2, 'high': 1}) * 2)",
+      
+      
       "relevant_cols": [
         "fishing_activity",
         "water_clarity",

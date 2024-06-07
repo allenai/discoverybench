@@ -124,8 +124,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "architectural_style",
-      "true_hypothesis": "Buildings with a calculated value based on facade complexity index, reliance on natural lighting, structural complexity, local construction materials, modern infrastructure, ratio of clear to cloudy days, building material reflectivity, and urban shadowing are classified as Gothic architectural style if the value is over a certain threshold, and as Classical otherwise.",
-      "true_hypothesis_expr": "np.where(((10 * np.abs(5 * df['structural_complexity'] - 15 * np.where(df['local_construction_materials'] == 'stone', 1, 0) + 30 * np.where(df['modern_infrastructure'], 1, 0) - 90)/90 + 5 * (df['ratio_of_clear_to_cloudy_days'] * df['building_material_reflectivity'] * (1 - df['urban_shadowing']) * 3)/24 + 15 * df['reliance_on_natural_lighting']) > 50) & (df['facade_complexity_index'] > 7), 'Gothic', 'Classical')",
+      
+      
       "relevant_cols": [
         "facade_complexity_index",
         "reliance_on_natural_lighting",

@@ -80,8 +80,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "contains_gold",
-      "true_hypothesis": "Analysis of 1000 underwater archaeological sites reveals that sites where there are more than 10 visible anchor remains and stone structures present, and depth of site minus water depth is greater than 10, are more likely to contain gold artifacts.",
-      "true_hypothesis_expr": "np.where((np.where(((df['coral_reefs_present'] * 20 - df['depth_of_site'] * 0.5) > 10) & (df['stone_structures_present']), 'yes', 'no') == 'yes') & ((df['number_of_artifacts'] ** 3 + df['water_depth'] ** 0 - 3) > 500), True, False)",
+      
+      
       "relevant_cols": [
         "water_depth",
         "number_of_artifacts",

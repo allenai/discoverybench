@@ -156,8 +156,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "shape_index",
-      "true_hypothesis": "The preservation score and construction method are influential factors in determining the shape index of ancient structures.",
-      "true_hypothesis_expr": "df['preservation_score'] * 0.5 + (df['construction_method'].map({'Stone masonry': 20, 'Adobe': 15, 'Wood': 10}))",
+      
+      
       "relevant_cols": [
         "preservation_score",
         "construction_method",

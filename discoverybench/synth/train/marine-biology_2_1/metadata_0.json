@@ -96,8 +96,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "coral_biodiversity_percentile",
-      "true_hypothesis": "Coral reefs located in areas with low pollution levels are likely to have a coral biodiversity percentile equal to 50 or the result of an equation involving nutrient upwelling frequency and plankton density.",
-      "true_hypothesis_expr": "np.where(df['pollution_level']=='low', (df['nutrient_upwelling_frequency']*0.3 + df['plankton_density']*2), 50)",
+      
+      
       "relevant_cols": [
         "pollution_level",
         "nutrient_upwelling_frequency",

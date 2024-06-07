@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "construction_method",
-      "true_hypothesis": "The construction method in the dataset is determined based on the average wall thickness and the presence of a stone foundation. Buildings with an average wall thickness greater than 100 and a stone foundation are classified as 'Stone masonry'. If the average wall thickness is greater than 50 but there is no stone foundation, the construction method is labeled as 'Adobe'. Otherwise, the construction method is identified as 'Wood'.",
-      "true_hypothesis_expr": "np.where((df['average_wall_thickness'] > 100) & (df['has_stone_foundation'] == True), 'Stone masonry', np.where((df['average_wall_thickness'] > 50) & (df['has_stone_foundation'] == False), 'Adobe', 'Wood'))",
+      
+      
       "relevant_cols": [
         "average_wall_thickness",
         "has_stone_foundation",

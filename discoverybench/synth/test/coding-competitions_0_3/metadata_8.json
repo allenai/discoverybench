@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "previous_contest_rank_percentile",
-      "true_hypothesis": "Participants with completed programming courses, frequent involvement in collaborative projects, and longer participation in coding competitions tend to achieve lower rankings in coding contests.",
-      "true_hypothesis_expr": "100 - (df['programming_courses_completed'] * 2 + df['collaborative_projects_frequency'] * 1.5 + df['participation_duration_years'] * 3)",
+      
+      
       "relevant_cols": [
         "programming_courses_completed",
         "collaborative_projects_frequency",

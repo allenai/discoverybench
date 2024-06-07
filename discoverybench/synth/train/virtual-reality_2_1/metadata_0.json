@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "age",
-      "true_hypothesis": "Participants with a higher technology usage frequency and greater comfort with digital interfaces are likely to be older. Older individuals may exhibit less frequent technology usage and lower comfort with digital environments, possibly because they are less familiar with new technologies.",
-      "true_hypothesis_expr": "90 - (df['technology_usage_frequency'] * 2) - (df['digital_comfort'] * 4)",
+      
+      
       "relevant_cols": [
         "technology_usage_frequency",
         "digital_comfort",

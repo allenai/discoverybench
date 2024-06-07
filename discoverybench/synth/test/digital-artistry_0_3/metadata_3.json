@@ -192,8 +192,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "art_style_popularity_percentile",
-      "true_hypothesis": "Artists who frequently use advanced digital tools alongside being actively engaged in online art communities and receiving frequent technology training have a higher popularity percentile for their art style.",
-      "true_hypothesis_expr": "np.where(df['uses_advanced_digital_tools'], df['online_art_community_engagement'] + df['frequency_of_technology_training'], df['online_art_community_engagement'])",
+      
+      
       "relevant_cols": [
         "online_art_community_engagement",
         "frequency_of_technology_training",

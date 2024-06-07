@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "green_space_area_percentage",
-      "true_hypothesis": "Regions with a higher number of environmental NGOs, a higher percentage of college graduates, and a higher renewable energy usage percentile have a green space area percentage that is calculated by multiplying the environmental NGO count by 0.18, adding 60% of the college graduates percentage and 40% of the renewable energy usage percentile, and then multiplying the total by 0.27.",
-      "true_hypothesis_expr": "df['environmental_NGO_count'] * 0.18 + np.round(0.6 * df['percentage_of_college_graduates'] + 0.4 * df['renewable_energy_usage_percentile']) * 0.27",
+      
+      
       "relevant_cols": [
         "environmental_NGO_count",
         "percentage_of_college_graduates",

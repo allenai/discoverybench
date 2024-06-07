@@ -108,8 +108,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "computational_power_rating",
-      "true_hypothesis": "Vehicles equipped with artificial intelligence decision-making capabilities and communication bandwidth exceeding 500 Mbps tend to have higher computational power ratings due to the relationship between mission duration, task complexity score, mission duration in days, communication system frequency, and remote control capabilities affecting the computational demands.",
-      "true_hypothesis_expr": "np.where(np.where((df['AI_decision_making_capabilities'] == True) & (df['communication_bandwidth'] > 500), True, False), (df['mission_duration'] * 1.5 + df['task_complexity_score'] * 80) / 100 + (df['mission_duration_days'] / 400 + 5 * df['communication_system_frequency'] / 10 + df['remote_control_capabilities'].astype(int) * 3), (df['mission_duration_days'] / 400 + 5 * df['communication_system_frequency'] / 10 + df['remote_control_capabilities'].astype(int) * 3))",
+      
+      
       "relevant_cols": [
         "mission_duration",
         "task_complexity_score",

@@ -236,8 +236,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "average_plant_age_years",
-      "true_hypothesis": "The average age of plants in urban gardens is determined by the quality of the irrigation system and the level of daily pedestrian traffic, with higher irrigation system quality leading to older plants and higher pedestrian traffic resulting in younger plants.",
-      "true_hypothesis_expr": "df['irrigation_system_quality'].map({'low': 1, 'medium': 2, 'high': 3}) * 5 - np.log(df['daily_pedestrian_traffic'])",
+      
+      
       "relevant_cols": [
         "irrigation_system_quality",
         "daily_pedestrian_traffic",

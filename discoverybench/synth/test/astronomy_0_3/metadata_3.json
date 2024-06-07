@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "galaxy_type",
-      "true_hypothesis": "Galaxy types can be identified based on the dominant stellar age combined with the luminosity variability. Spiral galaxies are characterized by a dominant stellar age of less than 100 million years and a luminosity variability greater than 5. Elliptical galaxies tend to have a luminosity variability of 2 or lower, and other galaxies can be classified as irregular.",
-      "true_hypothesis_expr": "np.where((df['dominant_stellar_age'] < 100) & (df['luminosity_variability'] > 5), 'spiral', np.where(df['luminosity_variability'] <= 2, 'elliptical', 'irregular'))",
+      
+      
       "relevant_cols": [
         "dominant_stellar_age",
         "luminosity_variability",

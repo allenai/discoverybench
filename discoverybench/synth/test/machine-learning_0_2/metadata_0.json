@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "training_cycles",
-      "true_hypothesis": "The number of training cycles is calculated based on various factors including computational complexity, algorithm upgrade threshold, incorporation of AI enhancements, model error rate, data diversity score, model complexity, dropout usage, and feature scaling applied.",
-      "true_hypothesis_expr": "((10 + (df['computational_complexity_percentile']//10) + (10 * df['algorithm_upgrade_threshold'] * df['incorporates_AI_enhancements'].astype(int))) * (1 - np.where(df['uses_dropout'], 0.9 * df.get('model_error_rate', 0), df.get('model_error_rate', 0)) - 0.05 * df.get('data_diversity_score', 0) + df['model_complexity'].map({'low': 0.05, 'medium': 0.02, 'high': -0.01}))) * np.where(df['uses_feature_scaling'], 1.2, 0.8)",
+      
+      
       "relevant_cols": [
         "uses_feature_scaling",
         "computational_complexity_percentile",

@@ -156,8 +156,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "predicted_snowfall",
-      "true_hypothesis": "In regions classified as semi-urban, with solar panels that are older than 10 years and tree coverage, the predicted snowfall increases by 20% when the combined rating, based on solar panel age, tree coverage, and region type, is greater than 5 and the home's energy storage capacity is below 500 kilowatt-hours.",
-      "true_hypothesis_expr": "np.where(((df['solar_panel_age'] * 2 + 10 * (df['tree_coverage'] * 2) + 20 * (df['region_type'] == 'semi-urban')) > 5) & (df.get('home_energy_storage_capacity', 0) < 500), df.get('snowfall', 0)*1.2, df.get('snowfall', 0))",
+      
+      
       "relevant_cols": [
         "region_type",
         "home_energy_storage_capacity",

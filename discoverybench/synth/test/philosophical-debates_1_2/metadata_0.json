@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "debate_day_of_week",
-      "true_hypothesis": "Debates held using a digital platform, combined with a high average number of audience questions, are more likely to be scheduled on Wednesdays rather than Sundays.",
-      "true_hypothesis_expr": "np.where((df['average_audience_questions'] > df['average_audience_questions'].quantile(0.75)) & df['digital_platform_used'], 'Wednesday', 'Sunday')",
+      
+      
       "relevant_cols": [
         "average_audience_questions",
         "digital_platform_used",

@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "live_music_present",
-      "true_hypothesis": "High-budget productions where the product of the set complexity squared, venue capacity, and total performance days divided by the weighted average of average ticket price to lead actors and production budget is greater than 40 are more likely to feature live music.",
-      "true_hypothesis_expr": "np.where((((df['set_complexity'] ** 2) * df['venue_capacity'] / df['number_of_performance_days']) / np.where((df['play_genre'] == 'classical') & (df['average_scene_complexity'] >= 7), 5, 2)) * ((df['number_of_complex_roles'] * 15000 + (np.where(df['season_of_production'] == 'summer', 20000, 0) + np.where(df['season_of_production'] == 'winter', 10000, 0))) / 100000) > 40, True, False)",
+      
+      
       "relevant_cols": [
         "set_complexity",
         "venue_capacity",

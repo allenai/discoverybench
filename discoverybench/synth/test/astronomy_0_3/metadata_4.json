@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "interstellar_magnetic_field_strength",
-      "true_hypothesis": "The strength of a galaxy's interstellar magnetic field is calculated as the ratio of the velocity dispersion of stars to the average surface temperature of stars in the galaxy, multiplied by 10, with an additional impact from the ultraviolet emission intensity.",
-      "true_hypothesis_expr": "df['velocity_dispersion_of_stars'] / df['average_surface_temperature_of_stars'] * 10 + 5 * df['ultraviolet_emission'].astype(int)",
+      
+      
       "relevant_cols": [
         "velocity_dispersion_of_stars",
         "average_surface_temperature_of_stars",

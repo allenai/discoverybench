@@ -156,8 +156,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "predicted_performance_percentile",
-      "true_hypothesis": "Cars with higher scores in advanced safety features, region demand for vintage cars, and having undergone major restoration are predicted to have a higher percentile performance than other cars.",
-      "true_hypothesis_expr": "(df['safety_feature_score'] * 0.5) + (df['region_demand_for_vintage'] * 0.3) + (30 * df['major_restoration_done'])",
+      
+      
       "relevant_cols": [
         "region_demand_for_vintage",
         "safety_feature_score",

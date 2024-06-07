@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "insolation_level",
-      "true_hypothesis": "As cloud cover rate and surface temperature decrease, the insolation level is expected to increase as per the formula: 1000 - 10 * cloud_cover_rate - 5 * surface_temperature.",
-      "true_hypothesis_expr": "1000 - 10 * df['cloud_cover_rate'] - 5 * df['surface_temperature']",
+      
+      
       "relevant_cols": [
         "cloud_cover_rate",
         "surface_temperature",

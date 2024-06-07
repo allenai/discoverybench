@@ -124,8 +124,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "education_level",
-      "true_hypothesis": "Individuals who have attended more than 5 blockchain-related conferences and have crypto certifications tend to hold PhD degrees.",
-      "true_hypothesis_expr": "np.where((df['blockchain_conference_attendances'] > 5) & (df['has_crypto_certifications']), 'PhD', 'Bachelors')",
+      
+      
       "relevant_cols": [
         "has_crypto_certifications",
         "blockchain_conference_attendances",

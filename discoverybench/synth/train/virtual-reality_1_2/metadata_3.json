@@ -200,8 +200,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "physical_activity_frequency",
-      "true_hypothesis": "Participants with higher immersiveness preference ratings who own a VR device are predicted to engage in physical activities more frequently, consistent with a heightened level of immersiveness experience influencing their active involvement in physical activities.",
-      "true_hypothesis_expr": "df['immersiveness_preference'] * df['owns_VR_device'].map({True: 2, False: 1})",
+      
+      
       "relevant_cols": [
         "immersiveness_preference",
         "owns_VR_device",

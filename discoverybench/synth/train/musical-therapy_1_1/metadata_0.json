@@ -164,8 +164,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "predicted_music_preference",
-      "true_hypothesis": "Patients with a calculated value (structured_activity_preference squared minus twice the stress_level_pre_session, where the result is greater than 8) prefer classical music over pop music for their therapy sessions.",
-      "true_hypothesis_expr": "np.where((df['structured_activity_preference']**2 - 2*df['stress_level_pre_session']) > 8, 'classical', 'pop')",
+      
+      
       "relevant_cols": [
         "stress_level_pre_session",
         "structured_activity_preference",

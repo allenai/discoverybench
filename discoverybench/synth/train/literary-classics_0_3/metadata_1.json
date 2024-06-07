@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "tragic_ending",
-      "true_hypothesis": "The likelihood of a novel having a tragic ending can be predicted by assessing whether the number of dynamic_characters is greater than 5, if unexpected_twists is True, and if the average_age_of_main_characters is less than 30. Novels with more than 5 dynamic characters, unexpected twists, and main characters with an average age below 30 are more likely to have tragic endings.",
-      "true_hypothesis_expr": "np.where((df['dynamic_characters'] > 5) & (df['unexpected_twists'] == True) & (df['average_age_of_main_characters'] < 30), True, False)",
+      
+      
       "relevant_cols": [
         "dynamic_characters",
         "unexpected_twists",

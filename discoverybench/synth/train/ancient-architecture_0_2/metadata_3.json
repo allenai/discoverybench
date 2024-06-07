@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "opening_area_percentage",
-      "true_hypothesis": "The opening area percentage of a building is calculated as 10 times the absolute value of a complex function involving structural complexity, type of construction materials, and presence of modern infrastructure, plus 5 times the product of the ratio of clear to cloudy days, building material reflectivity, urban shadowing factor, and 3, and an additional 15 times the reliance on natural lighting factor.",
-      "true_hypothesis_expr": "10 * np.abs(5 * df['structural_complexity'] - 15 * np.where(df['local_construction_materials'] == 'stone', 1, 0) + 30 * np.where(df['modern_infrastructure'], 1, 0) - 90)/90 + 5 * (df['ratio_of_clear_to_cloudy_days'] * df['building_material_reflectivity'] * (1 - df['urban_shadowing']) * 3)/24 + 15 * df['reliance_on_natural_lighting']",
+      
+      
       "relevant_cols": [
         "reliance_on_natural_lighting",
         "structural_complexity",

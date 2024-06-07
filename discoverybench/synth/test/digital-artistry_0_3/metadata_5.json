@@ -192,8 +192,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "tutorials_offered",
-      "true_hypothesis": "Artists who are specialized in digital painting and participate in international art contests are likely to offer more tutorials, as proficiency with sophisticated tools and recognition in competitive events enhance their teaching credentials, regardless of the complexity level of software used.",
-      "true_hypothesis_expr": "np.where(df['specialized_in_digital_painting'], df['software_complexity_level'] + df['international_contests_participated'], 0)",
+      
+      
       "relevant_cols": [
         "software_complexity_level",
         "international_contests_participated",

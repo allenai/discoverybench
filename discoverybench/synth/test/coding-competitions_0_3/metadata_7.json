@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_webinars_attended",
-      "true_hypothesis": "The number of webinars attended can be derived by multiplying the participant's coding proficiency level by 10 and subtracting 30 if they have a full-time job outside programming.",
-      "true_hypothesis_expr": "df['coding_proficiency_level'] * 10 - df['has_full_time_non_coding_job'] * 30",
+      
+      
       "relevant_cols": [
         "coding_proficiency_level",
         "has_full_time_non_coding_job",

@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "urbanization_level",
-      "true_hypothesis": "The urbanization level of the depicted location in an impressionist painting can be estimated by the calculation involving the number of modern elements in the painting, the estimated year of painting, and the presence of industrial elements. The formula takes into account the modern elements count, the estimated painting year, and the presence of industrial elements to determine the urbanization level with a transformation based on specific coefficients and constants.",
-      "true_hypothesis_expr": "np.ceil(df['modern_elements_count'] / 10 + (df['painting_year_estimation'] - 1870) / 12.5 + df['industrial_elements_presence']*1)",
+      
+      
       "relevant_cols": [
         "modern_elements_count",
         "painting_year_estimation",

@@ -280,8 +280,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "supernova_frequency",
-      "true_hypothesis": "The frequency of supernovae in galaxies is influenced by the difference between the'central_black_hole_mass' and 'galaxy_age' divided by 10, with an additional factor of 3 for galaxies classified as 'spiral'.",
-      "true_hypothesis_expr": "((df['central_black_hole_mass'] - df['galaxy_age']) / 10 + (df['galaxy_type'] == 'spiral') * 3).astype(int)",
+      
+      
       "relevant_cols": [
         "galaxy_age",
         "central_black_hole_mass",

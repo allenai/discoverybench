@@ -84,8 +84,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "designer_origin_gdp_per_capita",
-      "true_hypothesis": "The GDP per capita of the country from where the fashion designer originates can be estimated by dividing the annual circulation numbers of major fashion magazines within the designer's home country by the total number of fashion design schools in that country and then multiplying the result by 1,000.",
-      "true_hypothesis_expr": "df['local_fashion_magazine_circulation'] / df['number_of_fashion_design_schools'] * 1000",
+      
+      
       "relevant_cols": [
         "local_fashion_magazine_circulation",
         "number_of_fashion_design_schools",

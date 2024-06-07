@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "stellar_age_demographic",
-      "true_hypothesis": "Galaxies with a gravity rule index raised to the power of 3 plus 2 times the variable stellar types ratio greater than 50 and cosmic radiation percentile greater than 75% are categorized as 'old', galaxies with a cosmic radiation percentile greater than 50% are categorized as 'mid-age', and those failing the prior conditions are categorized as 'young'.",
-      "true_hypothesis_expr": "np.where((df['gravity_rule_index']**3 + 2 * df['variable_stellar_types_ratio']**2 > 50) & (df['cosmic_radiation_percentile'] > 75), 'old', np.where(df['cosmic_radiation_percentile'] > 50, 'mid-age', 'young'))",
+      
+      
       "relevant_cols": [
         "cosmic_radiation_percentile",
         "gravity_rule_index",

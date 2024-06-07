@@ -256,8 +256,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "number_of_trees",
-      "true_hypothesis": "Gardens with a higher number of plant types and annual rainfall above 800 millimeters tend to have more trees, resulting from a calculation based on the number of plant types and annual rainfall.",
-      "true_hypothesis_expr": "100 - (50 + 2 * df['sunlight_hours_per_day'] - 1.5 * df['frequency_of_community_events']) + 20 * np.where((df['number_of_plant_types'] > 10) & (df['annual_rainfall'] > 800), True, False).astype(int)",
+      
+      
       "relevant_cols": [
         "sunlight_hours_per_day",
         "frequency_of_community_events",

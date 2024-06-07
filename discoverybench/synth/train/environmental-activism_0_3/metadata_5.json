@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "environmental_laws_strictness",
-      "true_hypothesis": "Regions with higher frequency of environmental protests, greater participation in recycling programs, and higher industry pollution levels tend to enact stricter environmental laws.",
-      "true_hypothesis_expr": "np.round((df['environmental_protest_frequency']**2 * 0.01 + df['recycling_program_participation'] * 0.03 + df['industry_pollution_level']**3 * 0.05) % 5 + 1)",
+      
+      
       "relevant_cols": [
         "environmental_protest_frequency",
         "recycling_program_participation",

@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "percentage_of_flower_beds",
-      "true_hypothesis": "The percentage of garden area dedicated to flower beds increases with an intricately calculated relationship involving the number of sunlight hours per day and the frequency of community events. Specifically, it is calculated as 50 plus two times the average number of sunlight hours the garden receives per day, subtracting 1.5 times the number of community events held in the garden per month.",
-      "true_hypothesis_expr": "50 + 2 * df['sunlight_hours_per_day'] - 1.5 * df['frequency_of_community_events']",
+      
+      
       "relevant_cols": [
         "sunlight_hours_per_day",
         "frequency_of_community_events",

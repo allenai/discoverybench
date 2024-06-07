@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "prefers_group_travel",
-      "true_hypothesis": "Space tourists who have purchased travel insurance, completed space travel training, and have high interest in space missions are more likely to prefer group travel.",
-      "true_hypothesis_expr": "np.where((df['has_travel_insurance'] & df['completed_space_travel_training']) & (df['interest_in_space_missions'] >= 7), True, False)",
+      
+      
       "relevant_cols": [
         "has_travel_insurance",
         "completed_space_travel_training",

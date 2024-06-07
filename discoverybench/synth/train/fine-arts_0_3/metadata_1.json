@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_online_followers",
-      "true_hypothesis": "Artists who participate in international exhibitions and have significant media coverage are likely to have high numbers of online followers, especially among artists who engage primarily in contemporary artworks. The number of online followers is calculated by multiplying the number of international exhibitions by 1000, adjusting based on whether the artist focuses on contemporary art, and scaling by the level of media coverage.",
-      "true_hypothesis_expr": "df['international_exhibitions_count'] * 1000 * np.where(df['focuses_on_contemporary_art'], 1, 0.5) * df['media_coverage'].map({'low': 0.5, 'medium': 1, 'high': 2})",
+      
+      
       "relevant_cols": [
         "international_exhibitions_count",
         "media_coverage",

@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "artist_influence_score",
-      "true_hypothesis": "An artist's influence score can be predicted using a complex formula involving the cube of the number of exhibitions, the square of the number of artworks sold multiplied by the number of awards received, and an additional constant term. This indicates that the artist's influence score is highly influenced by the interplay between the number of exhibitions, artworks sold, and awards received in a non-linear manner.",
-      "true_hypothesis_expr": "df['exhibitions_count']**3 + df['artworks_sold']**2 * df['awards_count'] + 2.5",
+      
+      
       "relevant_cols": [
         "exhibitions_count",
         "artworks_sold",

@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "adjusted_time_to_solve",
-      "true_hypothesis": "Participants with previous experience in similar puzzles, who engage in logical thinking activities and have problem-solving scores above 50, prefer puzzles as leisure activities, solve puzzles with less than 50 pieces, have a beginner or intermediate cognitive skill level, and spend less than a certain amount of time dedicated to puzzles per session while not frequently engaging in mind games, tend to have their time to solve adjusted to 75% of the original time.",
-      "true_hypothesis_expr": "np.where((df['previous_experience'] == True) & ((np.where((df['logical_thinking_activity'] == True) & (df['problem_solving_score'] > 50), 'puzzles', 'others') == 'puzzles') & (np.select([(df['cognitive_skill_level'] == 'beginner'), (df['cognitive_skill_level'] == 'intermediate'), (df['cognitive_skill_level'] == 'advanced'), (df['cognitive_skill_level'] == 'expert')], [(df['time_dedication']/10 - df['frequent_mind_games']*5), (df['time_dedication']/8 - df['frequent_mind_games']*5), (df['time_dedication']/6 - df['frequent_mind_games']*5), (df['time_dedication']/4 - df['frequent_mind_games']*5)], default=10) < 50), df.get('time_to_solve', 0) * 0.75, df.get('time_to_solve', 0))",
+      
+      
       "relevant_cols": [
         "previous_experience",
         "logical_thinking_activity",

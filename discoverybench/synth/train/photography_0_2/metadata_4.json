@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "participates_online_contests",
-      "true_hypothesis": "Photographers who invest more than $5000 in camera equipment and spend more than 20 hours per week on photography are more likely to participate in online contests.",
-      "true_hypothesis_expr": "np.where((df['investment_in_equipment'] > 5000) & (df['hours_spent_photography_weekly'] > 20), True, False)",
+      
+      
       "relevant_cols": [
         "investment_in_equipment",
         "hours_spent_photography_weekly",

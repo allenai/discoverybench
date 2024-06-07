@@ -92,8 +92,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "nutrient_upwelling_frequency",
-      "true_hypothesis": "The frequency of nutrient upwelling near reefs is likely higher in areas where the average sea surface temperature is lower and seasonal variation in ocean currents is less pronounced, as these conditions may stabilize and enhance the upwelling processes. Additionally, the proximity of the reef to the nearest landmass may also influence the nutrient upwelling frequency, with closer reefs experiencing an increase in frequency due to a factor of 10 times the exponential decay of the reef's proximity to land divided by 100.",
-      "true_hypothesis_expr": "np.where(df['seasonal_current_variation'] == 'low', 200 / (1 + np.exp(-(df['sea_surface_temperature'] - 15) / 10)), 120 / (1 + np.exp(-(df['sea_surface_temperature'] - 15) / 10))) + 10 * np.exp(-df['reef_proximity_to_land'] / 100)",
+      
+      
       "relevant_cols": [
         "seasonal_current_variation",
         "sea_surface_temperature",

@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "ambient_temperature",
-      "true_hypothesis": "Robots operating with 30% operational uptime and a tool complexity level of 3 are observed to have higher ambient temperatures due to the combined impact of operational uptime and tool complexity on the ambient temperature.",
-      "true_hypothesis_expr": "df['operational_uptime_percent'] * 0.3 + df['tool_complexity_level'] * 3",
+      
+      
       "relevant_cols": [
         "operational_uptime_percent",
         "tool_complexity_level",

@@ -220,8 +220,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "card_game_complexity",
-      "true_hypothesis": "The level of complexity of the card games played by the players is determined by a weighted combination of their annual winning rate, game type switch rate, and recent tournament participation, with certain coefficients applied to these factors to round the values and limit the complexity rating between 1 and 5.",
-      "true_hypothesis_expr": "np.where(df['recent_tournament_participation'], 2.5 + 2 * df['annual_winning_rate'] - 1.5 * df['game_type_switch_rate'], 2.2 + 1.8 * df['annual_winning_rate'] - 1.2 * df['game_type_switch_rate']).round().clip(1, 5)",
+      
+      
       "relevant_cols": [
         "annual_winning_rate",
         "game_type_switch_rate",

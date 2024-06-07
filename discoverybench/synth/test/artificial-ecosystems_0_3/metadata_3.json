@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "educational_facilities",
-      "true_hypothesis": "The presence of educational facilities in ecosystems increases when the number of species maintained within the ecosystem is at least 50 and the natural disaster frequency per year in the area is less than 5.",
-      "true_hypothesis_expr": "np.where((df['number_of_species'] >= 50) & (df['natural_disaster_frequency'] < 5), True, False)",
+      
+      
       "relevant_cols": [
         "number_of_species",
         "natural_disaster_frequency",

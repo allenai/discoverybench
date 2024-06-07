@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "average_star_surface_temperature",
-      "true_hypothesis": "The average star surface temperature in a galaxy can be estimated by a base temperature of 6000 Kelvin, with an additional 500 Kelvin if the galaxy has an active galactic nucleus, and a deduction of 20 Kelvin for each billion years of the galaxy's estimated age.",
-      "true_hypothesis_expr": "6000 + 500 * np.where(df['has_active_galactic_nucleus'], 1, 0) - 20 * df['galaxy_age']",
+      
+      
       "relevant_cols": [
         "galaxy_age",
         "has_active_galactic_nucleus",

@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "preferred_view",
-      "true_hypothesis": "The preferred view depends on the average number of daylight hours at the launch site on the day of departure. When the interest in celestial events is true and the calculated time is less than 7 hours before noon, or when it's the weekend with specific crew and solar activity conditions met, tourists prefer Earth-facing views; otherwise, they prefer star-facing views.",
-      "true_hypothesis_expr": "np.where(((np.where((df['interest_in_celestial_events'] == True), np.ceil(df['daylight_hours_at_launch'] / 2), np.floor(12 - df['daylight_hours_at_launch'] / 2)) < 7) & ((np.where(df['is_weekend'], 10, 5) + df['crew_size'] % 10 - (df['solar_activity_index'] // 10) >= 6) & (np.where(df['is_weekend'], 10, 5) + df['crew_size'] % 10 - (df['solar_activity_index'] // 10) <= 18)), 'Earth-facing', 'star-facing')",
+      
+      
       "relevant_cols": [
         "daylight_hours_at_launch",
         "interest_in_celestial_events",

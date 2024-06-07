@@ -212,8 +212,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "relative_humidity_percentage",
-      "true_hypothesis": "In artificial ecosystems, the relative humidity percentage is calculated based on a formula that involves multiplying the number of significant water bodies by 5, adding 20 times whether the artificial light intensity is high and the percentage of native vegetation is low, and then adding 40.",
-      "true_hypothesis_expr": "df['water_body_count'] * 5 + 20 * np.where((df['artificial_light_intensity'] > 2500) & (df['percentage_native_vegetation'] < 50), True, False) + 40",
+      
+      
       "relevant_cols": [
         "water_body_count",
         "artificial_light_intensity",

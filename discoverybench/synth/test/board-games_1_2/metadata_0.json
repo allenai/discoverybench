@@ -220,8 +220,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "game_types_known",
-      "true_hypothesis": "Players who own game manuals and participate in more frequent game sessions and show a higher level of engagement in learning new games are likely to know more types of games.",
-      "true_hypothesis_expr": "np.where(df['owns_game_manuals'], df['game_sessions_per_month']**2 + 3*df['engagement_score'] + 9, df['game_sessions_per_month']**2 + 3*df['engagement_score'] + 5)",
+      
+      
       "relevant_cols": [
         "engagement_score",
         "game_sessions_per_month",

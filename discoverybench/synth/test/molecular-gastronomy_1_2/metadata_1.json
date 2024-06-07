@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "region_popularity_score",
-      "true_hypothesis": "The popularity score of molecular gastronomy in a region is determined by a calculation involving the number of media exposures, the presence of celebrity chefs, and the year of data collection. The final score is rounded to the nearest integer and constrained between the values of 1 and 5.",
-      "true_hypothesis_expr": "np.minimum(np.maximum(np.round(1 + 0.04*df['media_exposures_count'] + 2*df['celebrity_chef_presence'] + 0.01*(df['year_of_data_collection'] - 2000)), 1), 5)",
+      
+      
       "relevant_cols": [
         "media_exposures_count",
         "celebrity_chef_presence",

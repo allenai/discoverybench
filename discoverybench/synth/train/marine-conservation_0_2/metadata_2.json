@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "is_eco_tourism_area",
-      "true_hypothesis": "We hypothesize that marine areas with a combined calculated value, based on the variables related to marine biodiversity, environmental surveillance, recent environmental violations, commercial fishing restrictions, local community involvement, and pollution index, exceeding $25,000,000 are more likely to be designated as eco-tourism areas.",
-      "true_hypothesis_expr": "np.where(((df['marine_biodiversity_index'] * 1000 + df['environmental_surveillance_count'] * 500 + df['recent_environmental_violations'] * 10000)**3 + 2*df['commercial_fishing_restrictions']**2 + ((df['local_community_involvement'] / df['pollution_index']) * 5)*3) > 25000000, True, False)",
+      
+      
       "relevant_cols": [
         "commercial_fishing_restrictions",
         "marine_biodiversity_index",

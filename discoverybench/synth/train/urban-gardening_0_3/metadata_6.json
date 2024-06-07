@@ -236,8 +236,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "has_educational_programs",
-      "true_hypothesis": "Urban gardens that have more than 3 workshops, receive more than 1 guest expert visit, and are affiliated with local schools are documented to offer educational programs on gardening and sustainability.",
-      "true_hypothesis_expr": "np.where((df['number_of_workshops'] > 3) & (df['guest_expert_visits'] > 1) & (df['has_school_affiliation'] == True), True, False)",
+      
+      
       "relevant_cols": [
         "number_of_workshops",
         "guest_expert_visits",

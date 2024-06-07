@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "impressionist_period_percentile",
-      "true_hypothesis": "The impressionist period percentile of a painting can be estimated by applying the formula: 100 - (landscape_elements_count * 0.5 - np.ceil(modern_elements_count / 10 + (painting_year_estimation - 1870) / 12.5 + industrial_elements_presence*1) ** 2 + (exhibitions_count**3 + artworks_sold**2 * awards_count + 2.5) * 10) to account for the influence of landscape elements, urbanization level, and artist's influence score. Higher values of landscape elements and artist's influence score, along with lower modern elements counts, painting year estimations, and industrial elements presence, indicate an earlier point in the Impressionist period.",
-      "true_hypothesis_expr": "100 - (df['landscape_elements_count'] * 0.5 - (np.ceil(df['modern_elements_count'] / 10 + (df['painting_year_estimation'] - 1870) / 12.5 + df['industrial_elements_presence']*1)) ** 2 + (df['exhibitions_count']**3 + df['artworks_sold']**2 * df['awards_count'] + 2.5) * 10)",
+      
+      
       "relevant_cols": [
         "landscape_elements_count",
         "modern_elements_count",

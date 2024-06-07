@@ -108,8 +108,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "primary_flying_terrain",
-      "true_hypothesis": "Pilots who have international flight experience and operate at altitudes greater than 20,000 feet are more likely to fly primarily over mountainous terrains.",
-      "true_hypothesis_expr": "np.where((df['international_flight_experience'] == True) & (df['average_flight_altitude'] > 20000), 'mountainous', 'coastal')",
+      
+      
       "relevant_cols": [
         "international_flight_experience",
         "average_flight_altitude",

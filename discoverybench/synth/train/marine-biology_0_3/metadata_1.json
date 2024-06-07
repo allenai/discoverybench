@@ -84,8 +84,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "reef_proximity_to_land",
-      "true_hypothesis": "Reef proximity to land is influenced by the presence of large marine predators, salinity levels in the nearby ocean, and the presence of shipping routes. Specifically, a reef closer to areas with higher marine predator density, lower salinity variation, and no active shipping routes will be closer to the land.",
-      "true_hypothesis_expr": "df['marine_predator_density']*(-10) + df['salinity_variation']**3 - 50*np.where(df['shipping_route_presence'], 1, 0)",
+      
+      
       "relevant_cols": [
         "marine_predator_density",
         "salinity_variation",

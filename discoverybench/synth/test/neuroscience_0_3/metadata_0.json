@@ -76,8 +76,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "internet_usage_for_education",
-      "true_hypothesis": "Participants who engage more frequently in cognitive games and use social media for academia are likely to use the internet more for educational purposes.",
-      "true_hypothesis_expr": "df['cognitive_games_frequency'] * 2 + df['social_media_for_academia'] * 1.5",
+      
+      
       "relevant_cols": [
         "cognitive_games_frequency",
         "social_media_for_academia",

@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "exhibition_size",
-      "true_hypothesis": "Artists with greater representation by art galleries, more international followers, and being known for using innovative techniques tend to participate in larger exhibitions.",
-      "true_hypothesis_expr": "df['gallery_representation']**3 + 5*df['international_audience']*df['gallery_representation'] + 1000*np.where(df['innovative_technique'], 1, 0)",
+      
+      
       "relevant_cols": [
         "gallery_representation",
         "international_audience",

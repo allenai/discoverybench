@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 4,
       "target_col": "average_engagement_score",
-      "true_hypothesis": "The average engagement score of the play is calculated based on attributes such as whether the content is licensed, the lead actor's experience, the focus on historical accuracy, past success count, weekly rehearsal hours, set complexity, venue capacity, performance days, play genre, scene complexity, number of complex roles, and the season of production.",
-      "true_hypothesis_expr": "10 / (np.floor((np.where(df['target_audience_family'], ((df['licensed_content'].astype(int) / (df['original_content'].astype(int) + 0.1)) + df['lead_actor_experience'] * 0.2 + df['historical_accuracy_focus'].astype(int) * 2)**3 + 10*np.where((df['past_success_count'] > 20) & (df['weekly_rehearsal_hours'] > 20), True, False)* ((df['licensed_content'].astype(int) / (df['original_content'].astype(int) + 0.1)) + df['lead_actor_experience'] * 0.2 + df['historical_accuracy_focus'].astype(int) * 2), 0.5*((df['licensed_content'].astype(int) / (df['original_content'].astype(int) + 0.1)) + df['lead_actor_experience'] * 0.2 + df['historical_accuracy_focus'].astype(int) * 2)**3 + 5*np.where((df['past_success_count'] > 20) & (df['weekly_rehearsal_hours'] > 20), True, False)* ((df['licensed_content'].astype(int) / (df['original_content'].astype(int) + 0.1)) + df['lead_actor_experience'] * 0.2 + df['historical_accuracy_focus'].astype(int) * 2))**2) / 20 + 30 * np.where((((((df['set_complexity'] ** 2) * df['venue_capacity'] / (np.where((df['play_genre'] == 'classical') & (df['average_scene_complexity'] >= 7), 5, 2)) / df['number_of_performance_days']) / (np.where((df['play_genre'] == 'classical') & (df['average_scene_complexity'] >= 7), 5, 2))) * ((df['number_of_complex_roles'] * 15000 + (np.where(df['season_of_production'] == 'summer', 20000, 0) + np.where(df['season_of_production'] == 'winter', 10000, 0)) / 100000) > 40), True, False)) ** 2 + 1)",
+      
+      
       "relevant_cols": [
         "target_audience_family",
         "licensed_content",

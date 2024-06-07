@@ -204,8 +204,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "review_days",
-      "true_hypothesis": "The time taken for reviewing translations is affected by the square of a composite factor based on the estimated origin year and the number of modern speakers, adjusted by a factor dependent on collaborative effort, and further modified by the use of machine learning in the deciphering process.",
-      "true_hypothesis_expr": "((df['estimated_origin_year'].apply(lambda x: -((x // 1000) - 2)) + df['number_of_modern_speakers'].apply(lambda x: 10 if x < 10000 else (5 if x < 100000 else 1))) ** 2) * (5 if df['collaborative_effort'].any() else 3) + 30 * df['use_of_ml']",
+      
+      
       "relevant_cols": [
         "collaborative_effort",
         "use_of_ml",

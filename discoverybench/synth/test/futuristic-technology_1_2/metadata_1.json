@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "technological_advancement_cluster",
-      "true_hypothesis": "Areas with at least one flagship technology company and more than 10 annual technology exhibitions are classified as having high technological advancement.",
-      "true_hypothesis_expr": "np.where(df['flagship_tech_company_presence'] & (df['annual_tech_expos'] > 10), True, False)",
+      
+      
       "relevant_cols": [
         "annual_tech_expos",
         "flagship_tech_company_presence",

@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "artist_id",
-      "true_hypothesis": "There is a higher likelihood of an artist having a higher unique identifier if they have sold more art pieces per year, have a greater number of online followers, have participated in international exhibitions, and created their first artwork earlier.",
-      "true_hypothesis_expr": "df['art_pieces_sold_per_year'] * 0.1 + np.log1p(df['number_of_online_followers']) * 0.05 * 100 + df['participation_in_international_exhibitions'] * 1000 + (2023 - df['year_first_artwork'])",
+      
+      
       "relevant_cols": [
         "participation_in_international_exhibitions",
         "year_first_artwork",

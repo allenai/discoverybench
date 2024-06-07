@@ -144,8 +144,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "model_performance_score",
-      "true_hypothesis": "The model performance score is calculated using a formula involving the number of pretrained models, the inclusion of image data, and the presence of time-series data. The formula includes nonlinear relationships between these features and the model performance, where each feature contributes differently to the overall algorithm accuracy.",
-      "true_hypothesis_expr": "100 * (0.5 * (df['pretrained_models_count'] + 10 * df['includes_image_data'].astype(int) + 15 * df['includes_time_series'].astype(int))**3 - 2 * (df['pretrained_models_count'] + 10 * df['includes_image_data'].astype(int) + 15 * df['includes_time_series'].astype(int))**2 + 3 * (df['pretrained_models_count'] + 10 * df['includes_image_data'].astype(int) + 15 * df['includes_time_series'].astype(int)))",
+      
+      
       "relevant_cols": [
         "pretrained_models_count",
         "includes_image_data",

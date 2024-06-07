@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "average_audience_questions",
-      "true_hypothesis": "The presence of a keynote speaker and whether the philosophical topic discussed is ethics influence the average number of audience questions.",
-      "true_hypothesis_expr": "3 * (df['philosophical_topic']=='ethics').astype(int) + 10 * df['keynote_speaker_present'] + 5",
+      
+      
       "relevant_cols": [
         "philosophical_topic",
         "keynote_speaker_present",

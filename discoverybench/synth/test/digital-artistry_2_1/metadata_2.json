@@ -232,8 +232,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "estimated_followers",
-      "true_hypothesis": "Artists who participate in digital art competitions, have work spanning multiple genres, and win awards are likely to have a higher number of estimated followers. The number of followers can be estimated by multiplying the number of art competitions participated in by 1000, the number of genres covered by 500, and the number of award wins by 2000.",
-      "true_hypothesis_expr": "df['art_competitions_participated'] * 1000 + df['genres_covered'] * 500 + df['award_wins'] * 2000",
+      
+      
       "relevant_cols": [
         "art_competitions_participated",
         "genres_covered",

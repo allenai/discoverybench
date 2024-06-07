@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "practice_hours_per_week",
-      "true_hypothesis": "Participants who attend three times the number of weekly problem-solving sessions, complete fewer programming courses, have a lower frequency of collaborative projects, and have been participating in coding competitions for fewer years spend, on average, more time practicing coding per week.",
-      "true_hypothesis_expr": "df['weekly_problem_solving_sessions'] * 3 + (100 - (df['programming_courses_completed'] * 2 + df['collaborative_projects_frequency'] * 1.5 + df['participation_duration_years'] * 3) / 50) * 10",
+      
+      
       "relevant_cols": [
         "weekly_problem_solving_sessions",
         "programming_courses_completed",

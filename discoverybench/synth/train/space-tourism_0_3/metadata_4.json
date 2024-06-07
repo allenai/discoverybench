@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "group_vegetarian_meal_percentage",
-      "true_hypothesis": "The percentage of vegetarian meals consumed within a tourist's travel group can be estimated by combining the average age of the group with the influence of a nutritional awareness program, where the vegetarian meal percentage is calculated as 50% of the group's average age divided by 80 plus 50% of the presence of a nutritional awareness program.",
-      "true_hypothesis_expr": "50 * (df['average_age_of_group'] / 80) + 50 * df['nutritional_awareness_program'].astype(int)",
+      
+      
       "relevant_cols": [
         "average_age_of_group",
         "nutritional_awareness_program",

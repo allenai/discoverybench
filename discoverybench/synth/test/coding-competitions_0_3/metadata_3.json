@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "tech_startups",
-      "true_hypothesis": "The number of tech startups in a country can be predicted by the country's investment in digital infrastructure, the percentage of the population with higher education degrees in STEM fields, and the presence of high digital content and service consumption, where the investment in digital infrastructure is weighted by 0.005, the higher education rate in STEM fields is weighted by 50, and the high digital consumption indicator affects the prediction.",
-      "true_hypothesis_expr": "df['digital_infrastructure_investment'] * 0.005 + df['stem_higher_education_rate'] * 50 * (df['high_digital_consumption'] * 1)",
+      
+      
       "relevant_cols": [
         "digital_infrastructure_investment",
         "stem_higher_education_rate",

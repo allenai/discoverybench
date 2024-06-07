@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "terrain_type",
-      "true_hypothesis": "Vehicles equipped with a higher-resolution optical imaging system and a communication success ratio greater than 0.8 are classified as operating in highly uneven terrain; otherwise, they are classified as operating in uneven or even terrain.",
-      "true_hypothesis_expr": "np.where(df['optical_imaging_resolution'] > 30, np.where(df['communication_success_ratio'] > 0.8, 'highly_uneven', 'uneven'), 'even')",
+      
+      
       "relevant_cols": [
         "optical_imaging_resolution",
         "communication_success_ratio",

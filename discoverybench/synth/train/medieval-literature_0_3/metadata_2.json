@@ -88,8 +88,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "manuscript_contributions",
-      "true_hypothesis": "Knights with higher literacy_rates and who participate more frequently in knight_tournaments contribute more to manuscripts. There is a positive correlation between a knight\u2019s literacy and tournament participation, as well as their contributions to manuscripts, which is calculated based on literacy_rates and knight_tournaments using a linear combination with coefficients 1 and 2 respectively.",
-      "true_hypothesis_expr": "df['literacy_rates'] + 2*df['knight_tournaments']",
+      
+      
       "relevant_cols": [
         "literacy_rates",
         "knight_tournaments",

@@ -76,8 +76,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "audience_approval_rating",
-      "true_hypothesis": "In fashion data focusing on runway shows, it is observed that clothing ensembles featuring both traditional and modern textiles receive a 70% higher audience approval rating than those with only modern textiles, but this trend is only seen in European-based fashion shows.",
-      "true_hypothesis_expr": "20 + 70 * (df['ensemble_type'] == 'mixed') * (df['fashion_show_location'] == 'Europe')",
+      
+      
       "relevant_cols": [
         "ensemble_type",
         "fashion_show_location",

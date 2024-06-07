@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "environmental_education_index",
-      "true_hypothesis": "The environmental education index is calculated as twice the public transportation usage rate plus ten times the strictness rating of environmental laws.",
-      "true_hypothesis_expr": "2 * df['public_transportation_usage_rate'] + 10 * df['environmental_laws_strictness']",
+      
+      
       "relevant_cols": [
         "public_transportation_usage_rate",
         "environmental_laws_strictness",

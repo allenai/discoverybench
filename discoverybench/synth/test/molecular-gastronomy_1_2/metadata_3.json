@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "ingredient_price_fluctuation",
-      "true_hypothesis": "The ingredient price fluctuation is calculated as the ratio of the cost associated with applying advanced culinary techniques to the main ingredient to the rarity level of the main ingredient.",
-      "true_hypothesis_expr": "df['culinary_technique_cost'] / df['ingredient_rarity']",
+      
+      
       "relevant_cols": [
         "culinary_technique_cost",
         "ingredient_rarity",

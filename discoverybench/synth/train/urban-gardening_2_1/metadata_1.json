@@ -288,8 +288,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "garden_size",
-      "true_hypothesis": "The size of the garden is influenced by the number of fruit trees and ornamental plants present, with a bonus factor added for gardens offering green waste recycling facilities. Larger gardens tend to have a higher number of fruit trees relative to ornamental plants and are more likely to have green waste recycling services available.",
-      "true_hypothesis_expr": "100 * ((df['number_of_fruit_trees'] + 1) / (df['number_of_ornamental_plants'] + 1)) + 1000 * df['offers_green_waste_recycling'].astype(int)",
+      
+      
       "relevant_cols": [
         "number_of_fruit_trees",
         "number_of_ornamental_plants",

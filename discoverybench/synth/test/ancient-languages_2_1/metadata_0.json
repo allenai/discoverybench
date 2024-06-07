@@ -220,8 +220,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_scripts",
-      "true_hypothesis": "The number of scripts analyzed for translation increases with the product of the count of specialized researchers for each language family and a factor determined by whether dedicated funding is available for the translation efforts of each language family, with additional weight given to languages from less commonly studied families based on the rank of the language family.",
-      "true_hypothesis_expr": "(df['specialized_researchers_count'] * ((2 if df['has_dedicated_funding'].all() else 1) * np.where(df['language_family_rank'] > 5, 0.5, 1.5))).sum()",
+      
+      
       "relevant_cols": [
         "specialized_researchers_count",
         "has_dedicated_funding",

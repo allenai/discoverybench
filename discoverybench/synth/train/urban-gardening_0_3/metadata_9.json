@@ -236,8 +236,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_sustainability_workshops",
-      "true_hypothesis": "Gardens where the number of sustainability workshops is calculated based on rare plant species ratio and volunteer participation rate by multiplying rare plant species ratio by 5 and adding the volunteer participation rate divided by 10 tend to have a higher number of actual sustainability workshops.",
-      "true_hypothesis_expr": "df['rare_plant_species_ratio'] * 5 + df['volunteer_participation_rate'] // 10",
+      
+      
       "relevant_cols": [
         "rare_plant_species_ratio",
         "volunteer_participation_rate",

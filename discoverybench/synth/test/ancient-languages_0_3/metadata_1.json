@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "current_academic_interest",
-      "true_hypothesis": "The level of current academic interest in ancient languages increases when they have educational programs and are featured in popular media, with a moderate response when there is government endorsement.",
-      "true_hypothesis_expr": "np.where((df['educational_program_availability'] == True) & (df['media_representation'] > 50) & (df['government_endorsement'] == True), 'high', np.where((df['educational_program_availability'] == True) | (df['media_representation'] > 20), 'moderate', 'low'))",
+      
+      
       "relevant_cols": [
         "educational_program_availability",
         "media_representation",

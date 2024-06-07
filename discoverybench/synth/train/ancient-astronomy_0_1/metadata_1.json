@@ -84,8 +84,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "binary_star_usage",
-      "true_hypothesis": "There is a complex relationship between the number of astronomic seasons utilized, the detail level of star maps, and the percentage of navigational practices involving binary star systems.",
-      "true_hypothesis_expr": "50 + 2.0 * df['astronomic_seasons_utilized'] - 0.2 * df['star_map_detail_level'] ** 2 + 0.01 * df['astronomic_seasons_utilized'] * df['star_map_detail_level'] ** 2",
+      
+      
       "relevant_cols": [
         "astronomic_seasons_utilized",
         "star_map_detail_level",

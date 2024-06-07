@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "painting_size",
-      "true_hypothesis": "The size of the painting is influenced by the logarithm of various factors including whether it is on temporary exhibition, if it is international, if it aligns with the tourist season, and metrics based on these factors along with a style popularity index.",
-      "true_hypothesis_expr": "np.log(df['is_temporary_exhibition'].astype(int) * df['is_international'].astype(int) * df['tourist_season'].astype(int) * 20000 + df['is_temporary_exhibition'].astype(int) * 10000 + df['is_international'].astype(int) * 5000 + 1000) * 10 + df['style_popularity_index']",
+      
+      
       "relevant_cols": [
         "style_popularity_index",
         "is_temporary_exhibition",

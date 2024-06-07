@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "travel_class",
-      "true_hypothesis": "Space tourists who both participated in promotional events and have a personal interest rating in space exploration of 5 and above are more likely to select orbital class due to a combination of their active engagement and high interest in space.",
-      "true_hypothesis_expr": "np.where((df['participated_in_promotional_events'] == True) & (df['personal_interest_in_space'] >= 5), 'orbital', 'suborbital')",
+      
+      
       "relevant_cols": [
         "participated_in_promotional_events",
         "personal_interest_in_space",

@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "featured_in_top_magazines",
-      "true_hypothesis": "Artists who have organized more solo exhibitions and whose works have been acquired by prestigious galleries are more likely to be featured in top art magazines if the cube of the solo exhibitions count plus twice the square of the gallery prestige level is greater than 50. The probability to be featured increases as the solo exhibitions count is raised to the power of three and the gallery prestige level is squared.",
-      "true_hypothesis_expr": "np.where(df['solo_exhibitions_count']**3 + 2*df['gallery_prestige_level']**2 > 50, True, False)",
+      
+      
       "relevant_cols": [
         "solo_exhibitions_count",
         "gallery_prestige_level",

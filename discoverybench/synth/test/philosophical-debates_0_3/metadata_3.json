@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "presence_of_recognized_philosophers",
-      "true_hypothesis": "The presence of recognized philosophers in debates can be predicted by checking if the squared monthly attendance rate plus 10% of the number of philosophical books sold is equal to or greater than 50.",
-      "true_hypothesis_expr": "np.where((df['monthly_attendance_rate']**2 + 0.1*df['number_of_philosophical_books_sold']) >= 50, True, False)",
+      
+      
       "relevant_cols": [
         "monthly_attendance_rate",
         "number_of_philosophical_books_sold",

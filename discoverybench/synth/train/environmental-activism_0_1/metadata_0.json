@@ -128,8 +128,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "region_id",
-      "true_hypothesis": "The region_id is calculated as 100 times the square root of the sum of the square of the regulatory compliance percentage and the cube of the number of local environmental organizations, added to 10 times a binary indicator based on the condition involving the per capita green investment, number of environmental policies, and public transportation usage rate.",
-      "true_hypothesis_expr": "100*np.sqrt(df['regulatory_compliance_percentage']**2 + df['local_environmental_organizations']**3) + 10*np.where((df['per_capita_green_investment']**2 / 1000 - (500 - (df['number_of_environmental_policies'] * 5) - (df['public_transportation_usage_rate'] * 2))) > 250, True, False)",
+      
+      
       "relevant_cols": [
         "regulatory_compliance_percentage",
         "local_environmental_organizations",

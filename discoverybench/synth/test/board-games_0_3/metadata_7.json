@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "game_type_switch_rate",
-      "true_hypothesis": "The game type switch rate is calculated using the average game duration, the number of game genres played, and whether the player likes short games, with a specific weight added for liking short games.",
-      "true_hypothesis_expr": "df['number_of_game_genres_played'] / df['average_game_duration_minutes'] + 0.1 * df['likes_short_games'].astype(int)",
+      
+      
       "relevant_cols": [
         "average_game_duration_minutes",
         "number_of_game_genres_played",

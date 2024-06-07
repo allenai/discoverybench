@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "role_at_events",
-      "true_hypothesis": "Participants who prefer in-person communication, have high social media engagement in steampunk groups, belong to specific age ranges, and live relatively close to urban or suburban areas where technology fairs are held take on the role of planner at events, while the rest become attendees.",
-      "true_hypothesis_expr": "np.where((np.where(df['age_of_participant']**2 - 5 * df['steampunk_content_exposure'] < 1000, 'online', 'in_person') == 'in_person') & ((df['steampunk_social_media_engagement'] * np.where(df['newsletter_subscription'], 1.1, 0.9) + df['age_range'].map({'18-25': 2, '26-35': 3, '36-45': 4, '46-55': 3, '55+': 2}) >= 5)) & ((np.where(df['residence_type'] == 'urban', 300, np.where(df['residence_type'] == 'suburban', 700, 1500)) - df['technology_fair_attendance'] * 30) < 1000), 'planner', 'attendee')",
+      
+      
       "relevant_cols": [
         "age_of_participant",
         "steampunk_content_exposure",

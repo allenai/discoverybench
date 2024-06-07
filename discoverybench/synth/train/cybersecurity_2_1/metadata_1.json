@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_employees",
-      "true_hypothesis": "In a cybersecurity dataset, number of employees in an organization is calculated by multiplying the percentage of IT staff by 1200 and adding 1000 for organizations experiencing cyber attacks monthly, and 1000 for organizations with cyber attacks less frequently than monthly.",
-      "true_hypothesis_expr": "df['percentage_of_IT_staff'] * 1200 + np.where(df['cyber_attack_frequency'] == 'monthly', 1.25, 1) * 1000",
+      
+      
       "relevant_cols": [
         "cyber_attack_frequency",
         "percentage_of_IT_staff",

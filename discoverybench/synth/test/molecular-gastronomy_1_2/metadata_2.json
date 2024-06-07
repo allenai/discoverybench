@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "predicted_harvest_season",
-      "true_hypothesis": "The predicted harvest season of an ingredient can be classified as Summer when the temperature suitability is above 7 and peak ingredient availability is True. Conversely, it can be classified as Winter when the temperature suitability is 7 or below and peak ingredient availability is True. For all other cases, the harvest season is categorized as Fall.",
-      "true_hypothesis_expr": "np.where((df['temperature_suitability'] > 7) & (df['peak_ingredient_availability']), 'Summer', np.where((df['temperature_suitability'] <= 7) & (df['peak_ingredient_availability']), 'Winter', 'Fall'))",
+      
+      
       "relevant_cols": [
         "peak_ingredient_availability",
         "temperature_suitability",

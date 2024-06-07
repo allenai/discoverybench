@@ -220,8 +220,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "game_type_change_frequency",
-      "true_hypothesis": "Players who rate social interaction in games and dice game engagement equally have a moderate frequency of game type changes per year.",
-      "true_hypothesis_expr": "(df['social_interaction_importance'] * 0.5) + (df['dice_game_engagement_level'] * 0.5)",
+      
+      
       "relevant_cols": [
         "social_interaction_importance",
         "dice_game_engagement_level",

@@ -280,8 +280,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "binary_star_prevalence",
-      "true_hypothesis": "The rate of occurrence of binary star systems within a galaxy is higher when the galaxy is closer to star-forming regions. Additionally, as the gravitational effect from nearby dark matter anomalies strengthens, the prevalence of binary star systems increases within the galaxy.",
-      "true_hypothesis_expr": "1 / df['star_forming_region_proximity'] + df['dark_matter_anomaly_gravitational_effect'].map({'weak': 0.1, 'moderate': 0.5, 'strong': 0.9})",
+      
+      
       "relevant_cols": [
         "star_forming_region_proximity",
         "dark_matter_anomaly_gravitational_effect",

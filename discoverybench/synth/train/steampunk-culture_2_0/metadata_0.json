@@ -128,8 +128,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "spending_ratio",
-      "true_hypothesis": "Individuals who have owned a steampunk-themed credit card and steampunk decor for less than 3 years spend an average of 20% more money on steampunk-themed clothing and accessories compared to their spending on regular, non-themed clothing.",
-      "true_hypothesis_expr": "(df['annual_spending_on_regular_clothing'] * (1.2 * df['has_steampunk_credit_card'] * df['owns_steampunk_decor'] * (df['years_in_subculture'] < 3))) / df['annual_spending_on_regular_clothing']",
+      
+      
       "relevant_cols": [
         "annual_spending_on_regular_clothing",
         "has_steampunk_credit_card",

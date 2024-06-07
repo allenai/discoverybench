@@ -112,8 +112,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "binary_star_system_preference",
-      "true_hypothesis": "Ancient civilizations that developed in latitudes above 45 degrees north were more likely to use binary star systems for navigation, with a preference weighted by 1.3 compared to civilizations near the equator, which mainly identified and categorized single stars as navigation aids.",
-      "true_hypothesis_expr": "np.where(df['latitude'] > 45, df['binary_star_usage'] * 1.3, df['binary_star_usage'] * 0.7)",
+      
+      
       "relevant_cols": [
         "binary_star_system_preference",
         "latitude",

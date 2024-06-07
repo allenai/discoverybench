@@ -124,8 +124,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "debate_format",
-      "true_hypothesis": "In philosophical debates, the presence of a professional ethics philosopher as a speaker and the debate occurring on a weekday can predict the debate format. Specifically, when a professional ethics philosopher is speaking and the debate is held on a weekday, it is more likely to be moderated.",
-      "true_hypothesis_expr": "np.where((df['ethics_philosopher_present'] == True) & (df['debate_day_of_week'].isin(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])), 'moderated', 'unmoderated')",
+      
+      
       "relevant_cols": [
         "ethics_philosopher_present",
         "debate_day_of_week",

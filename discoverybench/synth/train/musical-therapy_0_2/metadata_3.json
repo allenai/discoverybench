@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "predicted_relaxation_level",
-      "true_hypothesis": "Patients who experience a greater variety in music genres during therapy sessions and show increased heart rate variability along with feelings of calmness, are expected to report higher relaxation levels.",
-      "true_hypothesis_expr": "df['music_genre_variety'] + 5 * np.where((df['heart_rate_variability_percentage'] > 0) & (df['feelings_of_calmness'] >= 7), 1, 0)",
+      
+      
       "relevant_cols": [
         "music_genre_variety",
         "heart_rate_variability_percentage",

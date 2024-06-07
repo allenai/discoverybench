@@ -92,8 +92,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "plankton_density",
-      "true_hypothesis": "The plankton density near a reef is likely to be higher if the location experiences longer periods of sunlight, coupled with moderate to low fishing activity, enabling optimal photosynthesis to occur, as well as a reduced disruption of the plankton population resulting from fishing.",
-      "true_hypothesis_expr": "df['daily_sunlight_hours'] * 3 + (df['fishing_activity'].map({'none': 4, 'low': 3, 'moderate': 2, 'high': 1}) * 2)",
+      
+      
       "relevant_cols": [
         "fishing_activity",
         "daily_sunlight_hours",

@@ -164,8 +164,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "base_width_meters",
-      "true_hypothesis": "The base width of the structure increases with the average number of tourists that visit the site per year, decreases as the distance to the nearest village decreases, and increases for structures used for ceremonial purposes.",
-      "true_hypothesis_expr": "((df['average_tourist_visits_per_year'] / 5000) + (50 - df['distance_to_nearest_village_km']) / 10 + (df['ceremonial_use'].astype(int)) * 5).clip(1, 100)",
+      
+      
       "relevant_cols": [
         "average_tourist_visits_per_year",
         "ceremonial_use",

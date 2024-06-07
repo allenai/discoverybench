@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "script_age_at_discovery_estimated",
-      "true_hypothesis": "Script age at discovery estimated is determined by the sediment accumulation rate at the discovery site and inversely proportional to the archaeology technology index.",
-      "true_hypothesis_expr": "df['sediment_accumulation_rate']*1000 / df['archaeology_technology_index']",
+      
+      
       "relevant_cols": [
         "sediment_accumulation_rate",
         "archaeology_technology_index",

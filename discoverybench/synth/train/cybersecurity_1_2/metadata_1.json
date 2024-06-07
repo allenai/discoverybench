@@ -124,8 +124,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "percentage_of_IT_staff",
-      "true_hypothesis": "Organizations that have a higher frequency of implementing security patches or updates, and possess a greater proportion of sensitive or critical data, typically exhibit a higher percentage of IT staff. The percentage of IT staff increases by a base value of 5% for every 1% increase in critical data handled, and organizations that perform weekly updates are expected to have 10% more IT staff than those that don't.",
-      "true_hypothesis_expr": "np.where(df['security_update_frequency'] == 'weekly', 0.1, 0) + 0.05 * df['percentage_of_critical_data']",
+      
+      
       "relevant_cols": [
         "percentage_of_critical_data",
         "security_update_frequency",

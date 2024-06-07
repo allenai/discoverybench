@@ -136,8 +136,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "vehicle_id",
-      "true_hypothesis": "Exploration vehicles that have more than 50 communication attempts per day, power fluctuations of more than 10, and have not been surveyed for over 5 years, and are in regions with high seasonal temperature variation are labeled 'V001'; otherwise, they are labeled 'V004'.",
-      "true_hypothesis_expr": "np.where((np.where((df['communication_attempts'] > 50) & (df['power_fluctuations'] > 10) & (df['years_since_last_survey'] > 5), True, False) == True) & (df['seasonal_temperature_variation'] == 'high'), 'V001', 'V004')",
+      
+      
       "relevant_cols": [
         "seasonal_temperature_variation",
         "power_fluctuations",

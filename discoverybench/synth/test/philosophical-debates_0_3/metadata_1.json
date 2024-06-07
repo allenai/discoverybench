@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "digital_platform_used",
-      "true_hypothesis": "The likelihood of using a digital platform for philosophical debates is higher on Thursdays and Fridays when the external temperature is 15 degrees Celsius or higher.",
-      "true_hypothesis_expr": "np.where((df['day_of_week'].isin(['Thursday', 'Friday']) & (df['external_temperature'] >= 15)), True, False)",
+      
+      
       "relevant_cols": [
         "day_of_week",
         "external_temperature",

@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "awards_count",
-      "true_hypothesis": "Artists with education level values squared plus two times the product of 60% of art exhibition visits and 40% of art discussions engaged tend to have a higher count of awards.",
-      "true_hypothesis_expr": "df['education_level']**2 + 2 * (df['art_exhibition_visits'] * 0.6 + df['art_discussions_engaged'] * 0.4)",
+      
+      
       "relevant_cols": [
         "education_level",
         "art_exhibition_visits",

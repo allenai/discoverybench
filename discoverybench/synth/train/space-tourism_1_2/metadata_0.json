@@ -236,8 +236,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "preferred_view",
-      "true_hypothesis": "The preferred view depends on whether the travel month is before July and the time of departure is between 6 AM and 6 PM. In such cases, tourists prefer Earth-facing views; otherwise, they prefer star-facing views from the cabin.",
-      "true_hypothesis_expr": "np.where((df['travel_month'] < 7) & (df['time_of_departure'] >= 6) & (df['time_of_departure'] <= 18), 'Earth-facing', 'star-facing')",
+      
+      
       "relevant_cols": [
         "travel_month",
         "time_of_departure",

@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "annual_winning_rate",
-      "true_hypothesis": "The annual winning rate is calculated as half of the card-to-dice win ratio plus 0.3 if the player is an expert and plus 0.2 if the player frequently participates in high-stakes games.",
-      "true_hypothesis_expr": "0.5 * df['card_to_dice_win_ratio'] + np.where(df['game_experience_level'] == 'expert', 0.3, 0) + np.where(df['frequent_high_stakes_player'], 0.2, -0.1)",
+      
+      
       "relevant_cols": [
         "card_to_dice_win_ratio",
         "game_experience_level",

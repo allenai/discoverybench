@@ -136,8 +136,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "spending_ratio",
-      "true_hypothesis": "Individuals who participate in steampunk culture spend an average of 30% more money on steampunk-themed clothing and accessories compared to those involved in other subcultures, particularly measured by a ratio of expenditure on themed clothing to regular, non-themed clothing.",
-      "true_hypothesis_expr": "df['annual_spending_on_themed_clothing'] / df['annual_spending_on_regular_clothing']",
+      
+      
       "relevant_cols": [
         "annual_spending_on_regular_clothing",
         "spending_ratio",

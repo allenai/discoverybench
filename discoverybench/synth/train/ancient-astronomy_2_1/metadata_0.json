@@ -108,8 +108,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "latitude",
-      "true_hypothesis": "Civilizations with a high frequency of solar eclipses and advanced metallurgical technology tended to develop at higher latitudes due to the specific conditions in those regions.",
-      "true_hypothesis_expr": "10 * df['solar_eclipse_frequency'] + 30 * df['advanced_metallurgy'].astype(int)",
+      
+      
       "relevant_cols": [
         "solar_eclipse_frequency",
         "advanced_metallurgy",

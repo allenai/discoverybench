@@ -256,8 +256,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "visitor_entries_per_month",
-      "true_hypothesis": "The number of visitor entries per month is proportional to the square of the number of unique species within the ecosystem, directly impacted by the availability of educational programs, and varies based on the air quality index of the ecosystem.",
-      "true_hypothesis_expr": "df['number_of_unique_species']**2 + 50 * df['educational_programs'] + df['air_quality_index']**3 * 0.01",
+      
+      
       "relevant_cols": [
         "number_of_unique_species",
         "educational_programs",

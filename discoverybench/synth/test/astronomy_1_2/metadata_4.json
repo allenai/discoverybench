@@ -280,8 +280,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "galaxy_total_luminosity",
-      "true_hypothesis": "The total luminosity of a galaxy is derived from the average surface temperature of its stars and whether it has a binary star system. It is calculated as the product of the average star surface temperature multiplied by 10000 and the presence of a binary star system multiplied by 500,000, where greater star temperatures and the existence of a binary star system lead to higher galaxy total luminosity.",
-      "true_hypothesis_expr": "df['average_star_surface_temperature'] * 10000 + df['has_binary_star_system'] * 500000000",
+      
+      
       "relevant_cols": [
         "has_binary_star_system",
         "average_star_surface_temperature",

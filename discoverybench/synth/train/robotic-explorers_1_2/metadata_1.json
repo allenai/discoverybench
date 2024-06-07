@@ -136,8 +136,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "computational_power_rating",
-      "true_hypothesis": "Vehicles with autonomous navigation capability tend to have higher computational power ratings because they utilize advanced sensors and data processing capabilities designed for autonomous operations.",
-      "true_hypothesis_expr": "np.where(df['has_autonomous_navigation'], df['energy_storage_capacity'] / 100 + df['sensor_technology_types'], df['sensor_technology_types'])",
+      
+      
       "relevant_cols": [
         "energy_storage_capacity",
         "sensor_technology_types",

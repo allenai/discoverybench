@@ -224,8 +224,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "young_galaxy_indicator",
-      "true_hypothesis": "Galaxies within 50,000 light years of a galactic core and having a stellar density between 5 and 20 stars per cubic light year relative to their distance to the nearest black hole are classified as relatively young galaxies in the dataset.",
-      "true_hypothesis_expr": "np.where((df['distance_to_galactic_core'] < 50000) & (np.maximum(0, np.minimum(20, -0.0001 * df['proximity_to_black_hole'] ** 3 + 0.02 * df['stellar_density'])) >= 5), True, False)",
+      
+      
       "relevant_cols": [
         "distance_to_galactic_core",
         "proximity_to_black_hole",

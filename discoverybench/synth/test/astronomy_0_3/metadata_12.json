@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "cosmic_ray_exposure",
-      "true_hypothesis": "Cosmic ray exposure in galaxies can be calculated by combining the impact of supernova rate, magnetic field strength, and the presence of binary star systems using a specific formula.",
-      "true_hypothesis_expr": "10 * df['supernova_rate'] + 50 * df['magnetic_field_strength'] + 200 * df['has_binary_star_system']",
+      
+      
       "relevant_cols": [
         "supernova_rate",
         "magnetic_field_strength",

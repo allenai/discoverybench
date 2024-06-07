@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "technological_readiness",
-      "true_hypothesis": "Technological readiness by 2030 can be predicted by a linear combination of the government investment in futuristic tech, the rate of regulatory changes related to technology, and the frequency of tech-based educational workshops, where technological readiness increases by 0.2 times the government investment, 3 times the regulatory change rate, and 0.05 times the tech workshops frequency.",
-      "true_hypothesis_expr": "0.2 * df['government_investment'] + 3 * df['regulatory_change_rate'] + 0.05 * df['tech_workshops_frequency']",
+      
+      
       "relevant_cols": [
         "government_investment",
         "tech_workshops_frequency",

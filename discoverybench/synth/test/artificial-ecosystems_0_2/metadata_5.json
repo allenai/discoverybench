@@ -212,8 +212,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "solar_panel_coverage_percentage",
-      "true_hypothesis": "The percentage of the bio-dome surface covered by solar panels is calculated by squaring the light intensity level, subtracting five times the cube of a combination of plant species diversity, water recycling system efficiency, and a constant, and then adjusting by a factor of ten depending on the presence of geothermal heating.",
-      "true_hypothesis_expr": "df['light_intensity_level']**2 - 5 * (df['plant_species_diversity'] * 0.002 + (df['water_recycling_system_present'].astype(int) * 0.1) + 0.5)**3 + 10 * np.where(df['has_geothermal_heating'], 0, 1)",
+      
+      
       "relevant_cols": [
         "light_intensity_level",
         "has_geothermal_heating",

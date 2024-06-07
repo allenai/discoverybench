@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "preparation_complexity",
-      "true_hypothesis": "In the context of dish preparation complexity, the preparation complexity score is determined by multiplying the number of preparation steps by the presence of special equipment, then adding a score based on culinary technique heat level and sensory impact.",
-      "true_hypothesis_expr": "df['preparation_steps'] * (df['special_equipment'] + 1) + 5 * np.where((df['culinary_technique_heat'] >= 4) & (df['sensory_impact_score'] > 7), True, False).astype(int)",
+      
+      
       "relevant_cols": [
         "culinary_technique_heat",
         "sensory_impact_score",

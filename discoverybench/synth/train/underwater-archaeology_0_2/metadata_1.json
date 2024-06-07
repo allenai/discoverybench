@@ -76,8 +76,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "underwater_visibility",
-      "true_hypothesis": "At underwater sites, the visibility is predicted by the level of sediment concentration and the light penetration along with the water current speed. Specifically, visibility is calculated based on a complex formula that relates light penetration, current speed, and sediment concentration to determine the underwater visibility.",
-      "true_hypothesis_expr": "100 - (-0.5 * df['light_penetration'] + 40 * np.log(df['current_speed']) + 50)**2 + 10 / df['sediment_concentration']",
+      
+      
       "relevant_cols": [
         "sediment_concentration",
         "light_penetration",

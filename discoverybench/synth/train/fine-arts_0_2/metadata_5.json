@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "international_awards_prediction",
-      "true_hypothesis": "Artists with a higher number of gallery exhibitions worldwide, works featured in public spaces, popularity score, combined influence of solo exhibitions count and social media followers, and a certain condition involving solo exhibitions count, gallery prestige level, and a constant value are more likely to win international awards if the calculated value is greater than 50.",
-      "true_hypothesis_expr": "np.where((((df['gallery_exhibitions_count'] * df['popularity_score'] + 10 * df['art_in_public_spaces']) ** 2 + 5 * (df['solo_exhibitions_count'] * 0.5 + df['social_media_followers'] / 100000 * 0.1) + ((np.where(df['solo_exhibitions_count']**3 + 2*df['gallery_prestige_level']**2 > 50, True, False)) * 20)) > 50), True, False)",
+      
+      
       "relevant_cols": [
         "gallery_exhibitions_count",
         "art_in_public_spaces",

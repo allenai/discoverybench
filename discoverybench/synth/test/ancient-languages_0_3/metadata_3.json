@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "monthly_translation_requests",
-      "true_hypothesis": "The number of monthly translation requests is calculated by multiplying the count of international collaboration by 3, the count of academic conferences held annually by 2, and the count of recent publications by 5 in the field of ancient languages.",
-      "true_hypothesis_expr": "df['international_collaboration'].astype(int) * 3 + df['academic_conferences_count'] * 2 + df['recent_publications'].astype(int) * 5",
+      
+      
       "relevant_cols": [
         "academic_conferences_count",
         "international_collaboration",

@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "artist_id",
-      "true_hypothesis": "The artist ID is derived from a formula that takes into account the artist's online engagement rate, years active in digital art, collaborations per year, participation in competitions, and digital tool diversity. Higher values of these attributes result in a lower artist ID.",
-      "true_hypothesis_expr": "10000 - (df['digital_tool_diversity']**3 + 5*(df['years_active'] + 2 * df['collaborations_per_year'] + 2 * df['participation_in_competitions'].astype(int))**2 + 2*df['online_engagement_rate'])",
+      
+      
       "relevant_cols": [
         "online_engagement_rate",
         "years_active",

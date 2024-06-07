@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "software_type",
-      "true_hypothesis": "Artists who have received formal education in digital art and have participated in recent technological upgrade training for up to 2 years are more likely to use AI-based software instead of traditional software.",
-      "true_hypothesis_expr": "np.where((df['formal_education_in_digital_art'] == True) & (df['recent_tech_training_years'] <= 2), 'AI-based', 'traditional')",
+      
+      
       "relevant_cols": [
         "formal_education_in_digital_art",
         "recent_tech_training_years",

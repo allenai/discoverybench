@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "year_of_rating",
-      "true_hypothesis": "The year of customer ratings is calculated by subtracting a region popularity score derived from factors such as media exposures count, celebrity chef presence, and year of data collection, from 2023.",
-      "true_hypothesis_expr": "2023 - ((np.minimum(np.maximum(np.round(1 + 0.04*df['media_exposures_count'] + 2*df['celebrity_chef_presence'] + 0.01*(df['year_of_data_collection'] - 2000)), 1), 5) - 1) % 5)",
+      
+      
       "relevant_cols": [
         "media_exposures_count",
         "celebrity_chef_presence",

@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "gdp_per_capita",
-      "true_hypothesis": "The GDP per capita of a country can be predicted based on the percentage of technology-related degrees awarded annually relative to all degrees, the proportion of population with access to high-speed internet, and a binary adjustment for the country's innovation index value modified through polynomial transformations.",
-      "true_hypothesis_expr": "df['tech_degree_percentage']**3 + 0.5 * df['high_speed_internet_access']**2 + 30000 * df['top_20_innovation_index'].astype(int)",
+      
+      
       "relevant_cols": [
         "tech_degree_percentage",
         "high_speed_internet_access",

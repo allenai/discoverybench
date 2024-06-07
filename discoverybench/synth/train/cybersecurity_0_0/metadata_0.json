@@ -112,8 +112,8 @@
       "question_type": "general",
       "difficulty": 4,
       "target_col": "data_breaches_per_year",
-      "true_hypothesis": "In a dataset of cybersecurity incidents, organizations in the technology sector that use two-factor authentication, belong to the healthcare sector, have more than 50% of employees accessing sensitive data, require regular password updates, have more than 10 cybersecurity incidents reported, and needing monthly password updates are 55% less likely to experience data breaches per year compared to those not meeting these criteria.",
-      "true_hypothesis_expr": "np.where((df['two_factor_authentication'] == True) & (np.where((df['organization_sector'] == 'healthcare') & (df['percent_employees_accessing_sensitive_data'] > 50) & (np.where(((df['frequency_of_software_updates'] * df['number_of_IT_security_staff'] * 5 + 50 * df['uses_encryption_technologies']) > 10) & (df['requires_regular_password_updates'] == True), True, False)), 'monthly', 'annually') == 'quarterly') & (df['organization_sector'] == 'technology'), df.get('data_breaches_per_year', 0) * 0.55, df.get('data_breaches_per_year', 0))",
+      
+      
       "relevant_cols": [
         "two_factor_authentication",
         "organization_sector",

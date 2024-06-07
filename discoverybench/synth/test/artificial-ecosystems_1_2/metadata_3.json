@@ -256,8 +256,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "adaptive_climate_control_status",
-      "true_hypothesis": "In artificial ecosystems, the activation of adaptive climate control systems is influenced by the combination of high internal CO2 levels squared plus half the biodiversity index multiplied by internal CO2 level minus double the mechanical reliability score being greater than 5000.",
-      "true_hypothesis_expr": "np.where(df['internal_CO2_level_ppm']**2 + 0.5 * df['biodiversity_index'] * df['internal_CO2_level_ppm'] - 2 * df['mechanical_reliability_score'] > 5000, True, False)",
+      
+      
       "relevant_cols": [
         "biodiversity_index",
         "internal_CO2_level_ppm",

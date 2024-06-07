@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "central_black_hole_mass",
-      "true_hypothesis": "The mass of the central black hole in a galaxy depends on the inverse of the distance to the nearest star-forming region, the star formation rate of the galaxy, and whether significant magnetic fields are present.",
-      "true_hypothesis_expr": "np.power(df['distance_to_nearest_star_forming_region'], -1) * df['star_formation_rate'] * 5 + np.where(df['magnetic_field_presence'], 10, 0)",
+      
+      
       "relevant_cols": [
         "distance_to_nearest_star_forming_region",
         "star_formation_rate",

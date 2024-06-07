@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_visitors",
-      "true_hypothesis": "The number of visitors can be calculated by multiplying various factors such as whether the painting is on temporary exhibition, whether it is from an international source, and whether the count was done during the high tourist season with specific monetary values assigned to each factor.",
-      "true_hypothesis_expr": "df['is_temporary_exhibition'].astype(int) * df['is_international'].astype(int) * df['tourist_season'].astype(int) * 20000 + df['is_temporary_exhibition'].astype(int) * 10000 + df['is_international'].astype(int) * 5000 + 1000",
+      
+      
       "relevant_cols": [
         "is_temporary_exhibition",
         "is_international",

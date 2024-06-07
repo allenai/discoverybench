@@ -144,8 +144,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "major_restoration_done",
-      "true_hypothesis": "Cars are more likely to have undergone major restoration if the historical value index is 7 or higher and maintenance costs have either increased by 50% or more over the last 10 years or if the car's age is over 60 years.",
-      "true_hypothesis_expr": "np.where((df['historical_value_index'] >= 7) & ((df['maintenance_cost_change'] >= 50) | (df['car_age'] > 60)), True, False)",
+      
+      
       "relevant_cols": [
         "car_age",
         "historical_value_index",

@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "predicted_number_of_tech_companies",
-      "true_hypothesis": "The predicted number of tech companies in a country is calculated by dividing the total number of engineering graduates annually by the percentage of the country's population that has access to the internet, then multiplying the result by the number of patent filings related to technology annually.",
-      "true_hypothesis_expr": "(df['number_of_engineering_graduates'] / df['percentage_population_internet_access']) * df['tech_related_patent_filings']",
+      
+      
       "relevant_cols": [
         "number_of_engineering_graduates",
         "percentage_population_internet_access",

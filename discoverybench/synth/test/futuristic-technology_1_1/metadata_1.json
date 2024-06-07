@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "age_of_household_head",
-      "true_hypothesis": "The age of the head of the household can be predicted by subtracting two times the technological openness score, five times the ownership of smart home systems, and ten times the skill level of robot programming from 100. Higher values of these factors result in a lower predicted age of the household head.",
-      "true_hypothesis_expr": "100 - (df['tech_openness_score'] * 2) - (df['smart_home_ownership'] * 5) - (df['robot_programming_skill_level'] * 10)",
+      
+      
       "relevant_cols": [
         "tech_openness_score",
         "smart_home_ownership",

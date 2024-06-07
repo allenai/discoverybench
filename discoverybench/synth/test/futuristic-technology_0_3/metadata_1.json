@@ -92,8 +92,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "flagship_tech_company_presence",
-      "true_hypothesis": "The calculated value based on the square of tech patent applications per 1000 and households with internet percentage being greater than or equal to 50 determines the presence of at least one flagship technology company in the area.",
-      "true_hypothesis_expr": "np.where(df['tech_patent_applications_per_1000']**2 / 100 + df['households_with_internet_percent'] / 100 >= 50, True, False)",
+      
+      
       "relevant_cols": [
         "tech_patent_applications_per_1000",
         "households_with_internet_percent",

@@ -192,8 +192,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "collaborations_per_year",
-      "true_hypothesis": "The average number of collaborations per year an artist engages in can be predicted by evaluating the artist\u2019s use of different technology platforms, the diversity in their artistic tools, and their regional exposure multiplied by respective weights of 1.5, 2, and 0.5. Artists using more technology platforms, diverse artistic tools, and having higher regional exposure are expected to have a higher number of collaborations per year.",
-      "true_hypothesis_expr": "df['technology_platforms_used'] * 1.5 + df['artistic_tools_diversity'] * 2 + df['regional_exposure'] * 0.5",
+      
+      
       "relevant_cols": [
         "technology_platforms_used",
         "artistic_tools_diversity",

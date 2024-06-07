@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "education_level",
-      "true_hypothesis": "Individuals with more than 5 cryptocurrencies owned and a monthly average blockchain transaction count that meets the condition, and have crypto certifications, tend to hold PhD degrees.",
-      "true_hypothesis_expr": "np.where(((np.floor(0.4 * df['number_of_cryptocurrencies_owned'] + 0.05 * df['monthly_blockchain_transactions']) > 5) & (df['has_crypto_certifications']), 'PhD', 'Bachelors')",
+      
+      
       "relevant_cols": [
         "has_crypto_certifications",
         "number_of_cryptocurrencies_owned",

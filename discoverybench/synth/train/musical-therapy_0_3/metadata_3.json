@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "post_session_discussion",
-      "true_hypothesis": "Patients who experience heart rate variability percentage greater than 0 and report feelings of calmness at a level greater than or equal to 7 are more likely to engage in post-session discussions about their emotional states.",
-      "true_hypothesis_expr": "np.where((df['heart_rate_variability_percentage'] > 0) & (df['feelings_of_calmness'] >= 7), True, False)",
+      
+      
       "relevant_cols": [
         "heart_rate_variability_percentage",
         "feelings_of_calmness",

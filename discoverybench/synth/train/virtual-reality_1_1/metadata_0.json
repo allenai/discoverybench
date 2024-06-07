@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "age",
-      "true_hypothesis": "Participants with higher VR interests, lower VR app usage, lower VR accessibility, and low to moderate VR gaming frequency, combined with lower or moderate education levels, are likely to be older. Older individuals may exhibit a lower level of interest in VR technology, limited VR app usage, challenges with accessibility to VR equipment, and less frequent gaming experiences, possibly due to lesser exposure or familiarity with newer technologies.",
-      "true_hypothesis_expr": "90 - (df['VR_interest_level'] * 2 + df['VR_apps_usage'] + 3 * df['VR_accessibility']) - (np.where(df['VR_gaming_frequency'] >= 7, 5, df['education_level']) * 4)",
+      
+      
       "relevant_cols": [
         "VR_interest_level",
         "VR_accessibility",

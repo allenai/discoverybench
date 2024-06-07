@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "public_interest_score",
-      "true_hypothesis": "The public interest score of a book increases based on 10 times the literary award status score added to the current theme popularity score.",
-      "true_hypothesis_expr": "10 * df['literary_award_status'] + df['current_theme_popularity']",
+      
+      
       "relevant_cols": [
         "literary_award_status",
         "current_theme_popularity",

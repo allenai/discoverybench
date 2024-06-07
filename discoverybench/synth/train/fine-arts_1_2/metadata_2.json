@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "art_exhibits_attended",
-      "true_hypothesis": "Artists who utilize mixed media in their works and have sold their artworks in multiple countries tend to attend art exhibits more frequently, especially prominent among artists specializing in contemporary art.",
-      "true_hypothesis_expr": "np.where(df['specialization'] == 'contemporary', df['mixed_media_usage'] * 10 + df['countries_artworks_sold'], df['mixed_media_usage'] * 5 + df['countries_artworks_sold']//2)",
+      
+      
       "relevant_cols": [
         "mixed_media_usage",
         "countries_artworks_sold",

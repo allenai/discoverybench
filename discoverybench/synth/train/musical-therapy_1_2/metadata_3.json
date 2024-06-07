@@ -164,8 +164,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "genres_experienced",
-      "true_hypothesis": "The number of music genres experienced decreases with the participant's variety in musical taste and when the therapy sessions are held late in the day, particularly affecting participants who prefer less popular music genres.",
-      "true_hypothesis_expr": "df['musical_taste_variety'] - df['session_time_of_day'].apply(lambda x: 0 if x == 'morning' else (1 if x=='afternoon' else 2)) - 2 * df['preference_for_popular_music']",
+      
+      
       "relevant_cols": [
         "session_time_of_day",
         "preference_for_popular_music",

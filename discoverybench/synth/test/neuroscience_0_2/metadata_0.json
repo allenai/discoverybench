@@ -76,8 +76,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "annual_income",
-      "true_hypothesis": "Participants with Master's or PhD degrees, and who engage in cognitive enhancing games more than or equal to 20 times a week, along with spending 1.5 or more hours per week on social media to share or gather academic content, are likely to have annual incomes of $150,000 or $120,000 respectively.",
-      "true_hypothesis_expr": "np.select([df['degree_level'].isin(['Master', 'PhD']), (df['cognitive_games_frequency'] * 2 + df['social_media_for_academia'] * 1.5) >= 20], [150000, 120000], default=50000)",
+      
+      
       "relevant_cols": [
         "degree_level",
         "cognitive_games_frequency",

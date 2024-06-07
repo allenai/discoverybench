@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "has_bioluminescent_flora",
-      "true_hypothesis": "In ecosystems, the presence of bioluminescent flora is indicated by having natural sunlight hours less than or equal to 3, water bodies count multiplied by 5 plus 20 if artificial light intensity is greater than 2500 and percentage of native vegetation is less than 50 multiplied by 1, and then adding 40, resulting in a value greater than or equal to 70.",
-      "true_hypothesis_expr": "np.where((df['natural_sunlight_hours'] <= 3) & ((df['water_body_count'] * 5 + 20 * np.where((df['artificial_light_intensity'] > 2500) & (df['percentage_native_vegetation'] < 50), True, False) + 40) >= 70), True, False)",
+      
+      
       "relevant_cols": [
         "natural_sunlight_hours",
         "water_body_count",

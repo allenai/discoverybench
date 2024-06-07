@@ -88,8 +88,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "literacy_level",
-      "true_hypothesis": "Knights with a higher number of 'castle_residencies', reflecting status and access to resources, and 'troubadour_friendships', indicating exposure to lyrical and oral storytelling traditions, have a higher 'literacy_level'.",
-      "true_hypothesis_expr": "df['castle_residencies'] * 5 + df['jousting_tournaments'] * 2 + 10 * df['knightly_vows'].astype(int)*0.2 + df['troubadour_friendships']*0.8",
+      
+      
       "relevant_cols": [
         "troubadour_friendships",
         "castle_residencies",

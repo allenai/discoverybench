@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "art_exhibits_attended",
-      "true_hypothesis": "Artists who have mastered a variety of art techniques and collaborated with internationally recognized artists tend to attend art exhibits more frequently, especially prominent among artists specializing in contemporary art.",
-      "true_hypothesis_expr": "np.where(np.where(df['techniques_mastered']**2 + df['well_known_collaborators'] > 40, 'modern', 'abstract') == 'contemporary', df['mixed_media_usage'] * 10 + df['countries_artworks_sold'], df['mixed_media_usage'] * 5 + df['countries_artworks_sold']//2)",
+      
+      
       "relevant_cols": [
         "mixed_media_usage",
         "countries_artworks_sold",

@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "patient_gender",
-      "true_hypothesis": "Patients whose treatment involves predominantly harmonic music and who report relaxation level post-session greater than 7 are more likely to be female.",
-      "true_hypothesis_expr": "np.where((df['harmonic_music_presence'] == True) & (df.get('relaxation_level_post_session', 0) > 7), 'female', 'other')",
+      
+      
       "relevant_cols": [
         "harmonic_music_presence",
         "patient_gender"

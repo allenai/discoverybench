@@ -180,8 +180,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "vr_experience_rating",
-      "true_hypothesis": "Higher VR experience ratings could be associated with individuals showing greater satisfaction with VR educational applications and having longer VR usage durations, as determined by a complex calculation involving interest in VR technology, usage of VR apps, accessibility to VR equipment, gaming frequency, and education level.",
-      "true_hypothesis_expr": "df['education_app_satisfaction'] + np.where((90 - ((df['VR_interest_level'] * 2 + df['VR_apps_usage'] + 3 * df['VR_accessibility']) * 2) - (np.where(df['VR_gaming_frequency'] >= 7, 5, df['education_level']) * 4) > 50) & (df['vr_usage_duration'] > 30), 5, np.where((90 - ((df['VR_interest_level'] * 2 + df['VR_apps_usage'] + 3 * df['VR_accessibility']) * 2) - (np.where(df['VR_gaming_frequency'] >= 7, 5, df['education_level']) * 4) < 20) & df.get('vr_sickness', False), 0, 3))",
+      
+      
       "relevant_cols": [
         "vr_usage_duration",
         "education_app_satisfaction",

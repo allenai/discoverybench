@@ -124,8 +124,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "participants_for_utilitarianism",
-      "true_hypothesis": "The number of participants advocating for utilitarianism can be estimated by performing a square operation on the 'philosophical_background_score' column and adding the product of 10 times 'critical_event_occurred' and 'philosophical_background_score'.",
-      "true_hypothesis_expr": "df['philosophical_background_score']**2 + 10 * (df['critical_event_occurred'] * df['philosophical_background_score'])",
+      
+      
       "relevant_cols": [
         "critical_event_occurred",
         "philosophical_background_score",

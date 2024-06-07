@@ -188,8 +188,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "government_investment_in_tech",
-      "true_hypothesis": "The government investment in technology can be predicted by the educational quality in STEM fields of the country's universities, the political stability of the country, and the presence of a critical mass of technology innovation clusters.",
-      "true_hypothesis_expr": "df['average_stem_score'] * 1000 + df['political_stability'] * 2000 + (df['has_critical_tech_cluster'] * 10000)",
+      
+      
       "relevant_cols": [
         "average_stem_score",
         "political_stability",

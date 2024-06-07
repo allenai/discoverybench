@@ -124,8 +124,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "owns_steampunk_decor",
-      "true_hypothesis": "Participants who attend a steampunk convention, have a steampunk-related hobby, and spend more than $10 on steampunk items monthly are more likely to own steampunk decor.",
-      "true_hypothesis_expr": "np.where((df['attends_steampunk_convention'] & df['has_steampunk_hobby']) & (df['monthly_budget_spent_on_steampunk'] > 10), True, False)",
+      
+      
       "relevant_cols": [
         "attends_steampunk_convention",
         "monthly_budget_spent_on_steampunk",

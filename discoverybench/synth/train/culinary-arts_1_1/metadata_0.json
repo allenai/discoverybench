@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "cuisine_specialty",
-      "true_hypothesis": "Chefs who have high cuisine complexity scores and formal culinary education, and whose menu change frequency, seasonal ingredient usage, and chef experience score collectively indicate a French cuisine specialization, tend to specialize in French cuisine. Those with criteria indicating an Indian cuisine specialization tend to specialize in Indian cuisine. Chefs meeting the criteria for Chinese cuisine tend to specialize in Chinese cuisine, while others lean towards Italian cuisine.",
-      "true_hypothesis_expr": "np.where((df['cuisine_complexity'] * 5 + (df['has_formal_culinary_education'] * 3) > 25) & ((df['menu_change_frequency'] * 4 + df['seasonal_ingredient_usage'] * 2 + df['chef_experience']) / 3 > 60), 'French', np.where((df['cuisine_complexity'] * 5 + (df['has_formal_culinary_education'] * 3) > 20) & ((df['menu_change_frequency'] * 4 + df['seasonal_ingredient_usage'] * 2 + df['chef_experience']) / 3 > 45), 'Indian', np.where((df['cuisine_complexity'] * 5 + (df['has_formal_culinary_education'] * 3) <= 20) & ((df['menu_change_frequency'] * 4 + df['seasonal_ingredient_usage'] * 2 + df['chef_experience']) / 3 <= 45), 'Chinese', 'Italian')))",
+      
+      
       "relevant_cols": [
         "has_formal_culinary_education",
         "chef_experience",

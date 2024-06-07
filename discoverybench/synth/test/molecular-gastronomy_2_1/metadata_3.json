@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "season",
-      "true_hypothesis": "Customers are more likely to prefer dishes in the Winter season when the percentage price increase of the main ingredient is greater than or equal to 5.",
-      "true_hypothesis_expr": "np.where(df['ingredient_price_fluctuation'] >= 5, df.get('ingredient_harvest_season', 'Winter'), np.where(df['ingredient_price_fluctuation'] <= -5, 'Winter', 'Fall'))",
+      
+      
       "relevant_cols": [
         "ingredient_price_fluctuation",
         "season"

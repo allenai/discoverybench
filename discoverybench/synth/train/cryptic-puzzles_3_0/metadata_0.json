@@ -144,8 +144,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "accuracy_rate",
-      "true_hypothesis": "Participants aged between 25-34 solve wordplay puzzles with a higher accuracy rate compared to any other age group, especially when the puzzles involve only wordplay elements.",
-      "true_hypothesis_expr": "np.where((df['participant_age'] >= 25) & (df['participant_age'] <= 34) & (df['puzzle_type'] == 'wordplay'), df['participant_age'], 0)",
+      
+      
       "relevant_cols": [
         "participant_age",
         "accuracy_rate",

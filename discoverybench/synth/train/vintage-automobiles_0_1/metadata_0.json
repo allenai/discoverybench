@@ -128,8 +128,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "engine_size",
-      "true_hypothesis": "Vehicles with a higher performance rating, rarity in the market, presence in a country with a racing tradition, and larger engine performance ratios tend to have larger engine sizes. Moreover, cars with a higher region performance index, luxury in design, and larger design luxury indexes tend to have larger engine sizes.",
-      "true_hypothesis_expr": "0.01 * (10 + (0.9 * df['market_rarity_percentile']) + (10 * np.where((df['number_of_car_museums']**2 + (3 * df['average_speed_limit']**3) + (9 * df['has_annual_car_event'])) > 1000, True, False)) + (5 * np.where((df['design_luxury_index'] > 70) & (df['engine_performance_ratio'] > 3), True, False)) + 0.02 * df.get('region_performance_index', 0) + 0.03 * df.get('top_performance_percentile', 0)",
+      
+      
       "relevant_cols": [
         "market_rarity_percentile",
         "number_of_car_museums",

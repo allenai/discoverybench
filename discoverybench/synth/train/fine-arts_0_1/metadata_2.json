@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "theme_landscape",
-      "true_hypothesis": "Artists who engage more frequently in outdoor art festivals and have an educational background in modern arts are likely to produce a higher number of landscape themed artworks, calculated by multiplying the number of outdoor festivals by 2 and adding 15 times the education level in modern art.",
-      "true_hypothesis_expr": "df['outdoor_festival_count'] * 2 + (df['education_in_modern_art'] * 15)",
+      
+      
       "relevant_cols": [
         "outdoor_festival_count",
         "education_in_modern_art",

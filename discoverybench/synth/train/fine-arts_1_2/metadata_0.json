@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_awards",
-      "true_hypothesis": "Artists who sell more art pieces per year and have a higher number of online followers are likely to receive a number of awards closely approximated by their art pieces sold per year multiplied by 0.1 plus the natural log of their number of online followers plus 1, all multiplied by 0.05.",
-      "true_hypothesis_expr": "df['art_pieces_sold_per_year'] * 0.1 + np.log1p(df['number_of_online_followers']) * 0.05",
+      
+      
       "relevant_cols": [
         "art_pieces_sold_per_year",
         "number_of_online_followers",

@@ -144,8 +144,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "ai_decision_making",
-      "true_hypothesis": "Vehicles with a computational power rating that, when cubed and added to twice the communication delay tolerance, results in a value greater than 20 are likely to utilize AI-based decision-making algorithms.",
-      "true_hypothesis_expr": "np.where(df['computational_power_rating']**3 + 2*df['communication_delay_tolerance'] > 20, True, False)",
+      
+      
       "relevant_cols": [
         "communication_delay_tolerance",
         "computational_power_rating",

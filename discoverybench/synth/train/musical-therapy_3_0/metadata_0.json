@@ -184,8 +184,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "adjusted_wellness_score",
-      "true_hypothesis": "Patients over 65 years old who undergo musical therapy sessions featuring classical music for at least 30 minutes thrice a week exhibit a wellness score adjusted by a factor of 1.4 in relation to their self-reported wellness score.",
-      "true_hypothesis_expr": "np.where((df.get('music_type') == 'classical') & (df['patient_age'] > 65) & (df['session_duration'] >= 30) & (df['sessions_per_week'] >= 3), df['self_reported_wellness_score'] * 1.4, df['self_reported_wellness_score'])",
+      
+      
       "relevant_cols": [
         "session_duration",
         "self_reported_wellness_score",

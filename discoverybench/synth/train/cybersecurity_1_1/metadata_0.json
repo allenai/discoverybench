@@ -124,8 +124,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "employee_training_frequency",
-      "true_hypothesis": "In a dataset on cybersecurity, organizations in the healthcare sector that have a higher percentage of employees accessing sensitive data and have a policy requiring employees to update passwords regularly and have experienced more than 10 cybersecurity incidents in the past year, conduct employee cybersecurity training on a monthly basis if the specified conditions are met, otherwise they conduct it annually.",
-      "true_hypothesis_expr": "np.where((df['organization_sector'] == 'healthcare') & (df['percent_employees_accessing_sensitive_data'] > 50) & (np.where((df['number_of_cybersecurity_incidents'] > 10) & (df['requires_regular_password_updates'] == True), True, False)), 'monthly', 'annually')",
+      
+      
       "relevant_cols": [
         "organization_sector",
         "percent_employees_accessing_sensitive_data",

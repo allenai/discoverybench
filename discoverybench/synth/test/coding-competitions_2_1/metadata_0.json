@@ -212,8 +212,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "registered_coders",
-      "true_hypothesis": "The number of registered coders in a participant's country can be derived from the ratio of the number of senior coders (having over 10 years of experience) to the number of junior coders (having less than 5 years of experience), multiplied by 1000, plus 10000 if the country has renowned universities offering computer science degrees.",
-      "true_hypothesis_expr": "df['senior_coders'] / df['junior_coders'] * 1000 + (10000 if 'cs_degree_universities' in df.columns else 0)",
+      
+      
       "relevant_cols": [
         "cs_degree_universities",
         "senior_coders",

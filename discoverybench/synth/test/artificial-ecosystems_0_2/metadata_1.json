@@ -212,8 +212,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "public_accessibility",
-      "true_hypothesis": "Public accessibility in the ecosystem is determined based on the ecosystem size, year-round operation, number of species, and natural disaster frequency, where the ecosystem size divided by 10 plus 5 if open year-round is greater than 10, and the number of species is 50 or more while the natural disaster frequency is less than 5.",
-      "true_hypothesis_expr": "np.where(((df['ecosystem_size_hectares'] / 10 + (df['open_year_round'] * 5)) > 10) & (np.where((df['number_of_species'] >= 50) & (df['natural_disaster_frequency'] < 5), True, False)), True, False)",
+      
+      
       "relevant_cols": [
         "ecosystem_size_hectares",
         "open_year_round",

@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "specialized_meal_service_available",
-      "true_hypothesis": "Trips with a luxury level greater than 3 or an average tourist age over 50 are more likely to offer a specialized meal service such as gluten-free or allergy-friendly.",
-      "true_hypothesis_expr": "np.where((df['luxury_level'] > 3) | (df['average_tourist_age'] > 50), True, False)",
+      
+      
       "relevant_cols": [
         "luxury_level",
         "average_tourist_age",

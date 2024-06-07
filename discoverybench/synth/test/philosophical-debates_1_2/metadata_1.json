@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "philosophical_background_score",
-      "true_hypothesis": "The philosophical background score can be determined by multiplying the argument intensity by 2, adding 5 if the moderator's ethical stance is 'utilitarian', and adding 3 if a special guest relevant to the philosophical topic was present during the debate.",
-      "true_hypothesis_expr": "df['argument_intensity'] * 2 + (df['moderator_ethical_stance'] == 'utilitarian') * 5 + df['special_guest_present'] * 3",
+      
+      
       "relevant_cols": [
         "argument_intensity",
         "moderator_ethical_stance",

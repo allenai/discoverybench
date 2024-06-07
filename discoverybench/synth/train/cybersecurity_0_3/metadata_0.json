@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "number_of_cybersecurity_incidents",
-      "true_hypothesis": "Organizations with a higher frequency of software updates, a greater number of IT security staff, and that use encryption technologies, experience more reported cybersecurity incidents with a base value of 50.",
-      "true_hypothesis_expr": "df['frequency_of_software_updates'] * df['number_of_IT_security_staff'] * 5 + 50 * df['uses_encryption_technologies']",
+      
+      
       "relevant_cols": [
         "frequency_of_software_updates",
         "number_of_IT_security_staff",

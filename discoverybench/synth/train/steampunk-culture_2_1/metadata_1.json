@@ -132,8 +132,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "age",
-      "true_hypothesis": "Participants' age can be predicted by a formula that consists of their employment in a creative field, the number of hobbies they have, and potential involvement as event planners at steampunk events.",
-      "true_hypothesis_expr": "np.minimum(65, np.maximum(18, (df['employment_in_creative_field']*15 + 22) + (df['num_of_hobbies']*0.7) + np.where(df['role_at_events'] == 'planner', 5, 0)))",
+      
+      
       "relevant_cols": [
         "employment_in_creative_field",
         "num_of_hobbies",

@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "average_ticket_price",
-      "true_hypothesis": "The average ticket price can be predicted by the square of the set complexity, multiplied by the venue capacity and divided by the number of performance days. Specifically, plays with higher squared set complexity, larger venue capacities, and fewer performance days predict higher ticket prices.",
-      "true_hypothesis_expr": "(df['set_complexity'] ** 2) * df['venue_capacity'] / df['number_of_performance_days']",
+      
+      
       "relevant_cols": [
         "set_complexity",
         "venue_capacity",

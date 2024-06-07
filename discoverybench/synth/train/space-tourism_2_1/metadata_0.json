@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "tourist_id",
-      "true_hypothesis": "Tourist IDs can be uniquely determined by the combination of their preferred view (Earth-facing or star-facing), frequent flyer status (whether they have travelled more than 3 times), and preference for meal type (vegetarian or non-vegetarian). The unique identification is performed by calculating a composite value using the preferred view, frequent flyer status, and meal preference columns. Each tourist ID is calculated based on the formula: 100 * (preferred_view_category_code) + 10 * (frequent_flyer_status) + meal_preference_category_code, where preferred_view_category_code and meal_preference_category_code are derived from converting the categorical columns to numerical representations.",
-      "true_hypothesis_expr": "df['preferred_view'].astype('category').cat.codes * 100 + df['frequent_flyer_status'].astype(int) * 10 + df['meal_preference'].astype('category').cat.codes",
+      
+      
       "relevant_cols": [
         "preferred_view",
         "frequent_flyer_status",

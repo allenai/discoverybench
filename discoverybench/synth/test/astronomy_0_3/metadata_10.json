@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "galaxy_mass",
-      "true_hypothesis": "The mass of a galaxy is calculated as the square of its average orbital velocity, added to 100 million times the number of satellite galaxies, and then adding 1 billion times the indicator of a central supermassive black hole, presenting a dynamic adjustment.",
-      "true_hypothesis_expr": "df['average_orbital_velocity']**2 + 10**8 * df['number_of_satellite_galaxies'] + 10**9 * df['central_black_hole_presence']",
+      
+      
       "relevant_cols": [
         "average_orbital_velocity",
         "number_of_satellite_galaxies",

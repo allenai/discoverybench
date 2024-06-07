@@ -140,8 +140,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "puzzle_type",
-      "true_hypothesis": "Participants who prefer logical reasoning over abstract thinking or prefer quick tasks are more likely to choose numeric puzzles, while those who prefer creative thinking tend to choose wordplay puzzles.",
-      "true_hypothesis_expr": "np.where(((df['logical_preference_score'] > df['creative_preference_score']) & df['prefers_quick_tasks']), 'numeric', np.where(df['creative_preference_score'] > df['logical_preference_score'], 'wordplay', 'visual'))",
+      
+      
       "relevant_cols": [
         "logical_preference_score",
         "prefers_quick_tasks",

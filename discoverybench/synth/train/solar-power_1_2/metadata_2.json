@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "average_wind_speed",
-      "true_hypothesis": "The average wind speed can be calculated by doubling the solar panel age and adding 20 if the region is semi-urban while considering the presence of tree coverage.",
-      "true_hypothesis_expr": "df['solar_panel_age'] * 2 + 10 * (df['tree_coverage'] * 2) + 20 * (df['region_type'] == 'semi-urban')",
+      
+      
       "relevant_cols": [
         "region_type",
         "solar_panel_age",

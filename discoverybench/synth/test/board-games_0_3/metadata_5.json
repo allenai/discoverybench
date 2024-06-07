@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "dice_game_engagement_level",
-      "true_hypothesis": "Players who exhibit a higher preference for card games and participate in online strategy game tournaments tend to have higher levels of engagement in dice games, with engagement levels being influenced by both preferences for card games and participation in online strategy game tournaments.",
-      "true_hypothesis_expr": "df['card_game_preference'] * 3 + np.where(df['online_strategy_tournament_participation'], 5, -2)",
+      
+      
       "relevant_cols": [
         "online_strategy_tournament_participation",
         "card_game_preference",

@@ -208,8 +208,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "average_engagement_score",
-      "true_hypothesis": "The average engagement score of the play is calculated based on costume complexity level, interactive engagement with the audience, ticket price, number of lead actors, production budget, and whether the target audience is primarily families.",
-      "true_hypothesis_expr": "10 / (np.floor((np.where(df['target_audience_family'], df['costume_complexity_level']**3 + 10*df['interactive_engagement_binary']*df['costume_complexity_level'], 0.5*df['costume_complexity_level']**3 + 5*df['interactive_engagement_binary']*df['costume_complexity_level'])**2) / 20 + 30 * np.where((df['average_ticket_price'] / df['number_of_lead_actors']) * (df['production_budget'] / 100000) > 40, True, False)) ** 2 + 1)",
+      
+      
       "relevant_cols": [
         "target_audience_family",
         "average_engagement_score",

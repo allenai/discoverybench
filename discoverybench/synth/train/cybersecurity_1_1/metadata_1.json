@@ -124,8 +124,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "number_of_employees",
-      "true_hypothesis": "In a cybersecurity dataset, number of employees in an organization is calculated as the sum of 0.1 multiplied by the indicator for weekly security updates and 0.05 multiplied by the percentage of critical data, all multiplied by 1200, and then adding 1000 for organizations experiencing cyber attacks monthly and 250 if the cyber attacks are more frequent than monthly.",
-      "true_hypothesis_expr": "(np.where(df['security_update_frequency'] == 'weekly', 0.1, 0) + 0.05 * df['percentage_of_critical_data']) * 1200 + np.where(df['cyber_attack_frequency'] == 'monthly', 1.25, 1) * 1000",
+      
+      
       "relevant_cols": [
         "cyber_attack_frequency",
         "percentage_of_critical_data",

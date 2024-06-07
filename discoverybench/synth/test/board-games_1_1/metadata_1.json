@@ -216,8 +216,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "game_type",
-      "true_hypothesis": "Players who follow a pattern where their risk preference is true and the sum of twice the tournament participation frequency and the new game frequency exceeds 50 tend to prefer dice games. On the other hand, individuals with a preference for playing games alone and who have playing sessions lasting more than 6 hours, involving more than 5 different types of games, are more likely to engage in strategy board games.",
-      "true_hypothesis_expr": "np.where((df['risk_preference'] == True) & ((df['tournament_participation_frequency'] * 2 + df['new_game_frequency']) > 50), 'dice', np.where((df['solitary_play_preference'] == True) & (np.where(df['session_length'] > 6, np.where(df['game_diversity'] > 5, True, False), False) == True), 'strategy_board', 'cards'))",
+      
+      
       "relevant_cols": [
         "tournament_participation_frequency",
         "risk_preference",

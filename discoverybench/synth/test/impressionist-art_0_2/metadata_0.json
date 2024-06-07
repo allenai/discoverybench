@@ -196,8 +196,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "exhibition_count",
-      "true_hypothesis": "The number of times a painting is exhibited publicly is calculated as 3.0 times the count of associated art movements multiplied by 10 plus the diversity of works multiplied by 90, then with an additional 15 if the painting features a landscape.",
-      "true_hypothesis_expr": "3.0 * (df['associated_art_movements_count'] * 10 + df['diversity_of_works'] * 90) + 15 * np.where(df['contains_landscape'], 1, 0)",
+      
+      
       "relevant_cols": [
         "contains_landscape",
         "associated_art_movements_count",

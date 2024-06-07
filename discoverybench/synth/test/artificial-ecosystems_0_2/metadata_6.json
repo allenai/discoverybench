@@ -212,8 +212,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "thermal_regulation_level",
-      "true_hypothesis": "In artificial ecosystems, the ratio of backup energy reserves to high energy device utilization per species predicts the level of sophistication in thermal regulation technology. Higher ratios indicate ecosystems with advanced thermal regulation technology to optimize energy reserves and environmental stability.",
-      "true_hypothesis_expr": "df['backup_energy_reserves'] / df['number_of_high_energy_devices'] * 1000 / df['number_of_species']",
+      
+      
       "relevant_cols": [
         "number_of_species",
         "backup_energy_reserves",

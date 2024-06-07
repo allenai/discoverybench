@@ -160,8 +160,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "requires_real_time",
-      "true_hypothesis": "The requirement for real-time processing is met when the data update frequency is over 30 updates per minute, the response urgency is high or critical, and the computation load ratio exceeds 1.",
-      "true_hypothesis_expr": "np.where((df['data_update_frequency'] > 30) & (df['response_urgency'].isin(['high', 'critical'])) & (df['computation_load_ratio'] > 1), True, False)",
+      
+      
       "relevant_cols": [
         "data_update_frequency",
         "response_urgency",

@@ -116,8 +116,8 @@
       "question_type": "general",
       "difficulty": 2,
       "target_col": "annual_income",
-      "true_hypothesis": "Individuals with more research hours per week, higher digital literacy scores, active use of blockchain technology, and involvement in cryptocurrency-related activities such as attending blockchain conferences and having crypto certifications tend to have higher annual incomes.",
-      "true_hypothesis_expr": "(df['research_hours_per_week']*2 + df['digital_literacy_score']//2 + 10*df['uses_blockchain_technology'].astype(int)) * 1000 + np.where((df['blockchain_conference_attendances'] > 5) & (df['has_crypto_certifications']), 70000, 50000) + (df['investment_experience_years']**2 + 0.1 * df['trading_frequency_per_month'] + 3 * df['uses_defi_services'].astype(int)) * 5000",
+      
+      
       "relevant_cols": [
         "has_crypto_certifications",
         "research_hours_per_week",

@@ -156,8 +156,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "indoor_shoots_count",
-      "true_hypothesis": "The count of indoor photography sessions completed by photographers can be calculated as twice the number of evening photo shoots they conduct added to the product of their client rating and the square of their post-processing skill level.",
-      "true_hypothesis_expr": "2 * df['evening_shoots_count'] + df['client_rating'] * df['post_processing_skill']**2",
+      
+      
       "relevant_cols": [
         "post_processing_skill",
         "client_rating",

@@ -248,8 +248,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "recent_supernova_events",
-      "true_hypothesis": "The number of recent supernova events is calculated as the result of applying a non-linear function to the proximity to black holes and stellar density, ensuring the final count falls within the range of 0 to 20.",
-      "true_hypothesis_expr": "np.maximum(0, np.minimum(20, -0.0001 * df['proximity_to_black_hole'] ** 3 + 0.02 * df['stellar_density']))",
+      
+      
       "relevant_cols": [
         "proximity_to_black_hole",
         "stellar_density",

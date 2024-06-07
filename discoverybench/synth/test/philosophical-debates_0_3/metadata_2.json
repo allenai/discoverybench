@@ -104,8 +104,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "special_guest_present",
-      "true_hypothesis": "The presence of a special guest can be predicted by whether the audience interest level per session, adjusted for the average debate duration, exceeds 60 minutes.",
-      "true_hypothesis_expr": "np.where((df['audience_interest_level'] / df['number_of_sessions'] * df['average_debate_duration']) > 60, True, False)",
+      
+      
       "relevant_cols": [
         "audience_interest_level",
         "average_debate_duration",

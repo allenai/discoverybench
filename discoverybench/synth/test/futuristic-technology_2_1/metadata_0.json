@@ -112,8 +112,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "year",
-      "true_hypothesis": "By 2030, the year of predominant technology uptake can be predicted by assessing technological readiness and public interest levels, with a strong relationship observed only in technologically advanced urban areas where the urban area and technological advancement cluster coexist, and adjusting the prediction based on the technological readiness and public interest levels.",
-      "true_hypothesis_expr": "np.where(df['urban_area'] & df['technological_advancement_cluster'], 2030 - (df['technological_readiness']/10 + df['public_interest']/10)%10, 2022)",
+      
+      
       "relevant_cols": [
         "urban_area",
         "public_interest",

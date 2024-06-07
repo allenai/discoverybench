@@ -148,8 +148,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "tree_coverage",
-      "true_hypothesis": "Houses with lower average temperatures below 10 degrees Celsius and at altitudes above 1500 meters are more likely to have tree coverage.",
-      "true_hypothesis_expr": "np.where((df['average_temperature'] < 10) & (df['altitude'] > 1500), True, False)",
+      
+      
       "relevant_cols": [
         "average_temperature",
         "altitude",

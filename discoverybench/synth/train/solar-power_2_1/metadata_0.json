@@ -168,8 +168,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "average_daily_sunlight",
-      "true_hypothesis": "The average daily sunlight in the region can be calculated by multiplying the number of clear days by the complement of the cloud cover ratio, dividing by 365, and then multiplying by 12.",
-      "true_hypothesis_expr": "(df['number_of_clear_days'] * (1 - df['cloud_cover_ratio'])) / 365 * 12",
+      
+      
       "relevant_cols": [
         "number_of_clear_days",
         "cloud_cover_ratio",

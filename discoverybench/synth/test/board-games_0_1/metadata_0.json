@@ -176,8 +176,8 @@
       "question_type": "general",
       "difficulty": 3,
       "target_col": "player_id",
-      "true_hypothesis": "Players with a cumulative score over 35, calculated based on the combination of types of games owned, game complexity, games borrowed frequency, win rate, average game duration, engagement score, tournament participation frequency, tournament win ratio, strategic complexity rating, quick decision games frequency, and efficiency ratio, are uniquely identified by a complex formula to calculate their player IDs.",
-      "true_hypothesis_expr": "np.where((df['game_types_owned'] * df['game_complexity_score'] + df['games_borrowed_frequency']) > 35, ((df['win_rate'] / 10 + 2 * df['average_game_duration_hours'])**2 + 3*df['engagement_score'] + 9)**3 + (((df['tournament_participation_frequency'] * df['tournament_win_ratio'] * 5 + 3 * (np.where((df['strategic_complexity_rating'] > 5) & (df['quick_decision_games_frequency'] > 50), True, False) ** 3)**2) * df['efficiency_ratio'] + df['efficiency_ratio']), ((df['win_rate'] / 10 + 2 * df['average_game_duration_hours'])**2 + 3*df['engagement_score'] + 5)**3 + (((df['tournament_participation_frequency'] * df['tournament_win_ratio'] * 5 + 3 * (np.where((df['strategic_complexity_rating'] > 5) & (df['quick_decision_games_frequency'] > 50), True, False) ** 3)**2) * df['efficiency_ratio'] + df['efficiency_ratio']))",
+      
+      
       "relevant_cols": [
         "efficiency_ratio",
         "engagement_score",

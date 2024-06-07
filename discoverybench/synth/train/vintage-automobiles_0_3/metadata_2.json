@@ -144,8 +144,8 @@
       "question_type": "general",
       "difficulty": 1,
       "target_col": "high_performance_region",
-      "true_hypothesis": "A car is considered to be in a high-performance region if the horsepower exceeds 300, the exhibition count is greater than 5, and the car has won awards in exhibitions.",
-      "true_hypothesis_expr": "np.where((df['horsepower'] > 300) & (df['exhibition_count'] > 5) & (df['has_won_awards'] == True), True, False)",
+      
+      
       "relevant_cols": [
         "horsepower",
         "exhibition_count",
