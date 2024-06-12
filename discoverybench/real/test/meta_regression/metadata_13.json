@@ -1,379 +1,287 @@
 {
+    "id": 0,
+    "domain": "meta science",
+    "workflow_tags": "data selection, meta regression, summary statistics, feature engineering,data standardization",
     "datasets": [
         {
+            "name": "meta-regression_joined_data_heterogeneity_in_replication_projects.csv",
+            "description": "Data created by merging data.csv and RProjects.csv",
+            "domain_knowledge": "",
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
-                        "description": "Study identifier, usually names of authors from original study",
-                        "name": "study"
+                        "name": "study",
+                        "description": "Study identifier, usually names of authors from original study"
                     },
                     {
-                        "depth": 0,
-                        "description": "The replication project that the study was on (Psychology or Experimental Economics)",
-                        "name": "project.x"
+                        "name": "project.x",
+                        "description": "The replication project that the study was on (Psychology or Experimental Economics)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Effect estimate of original study on correlation scale",
-                        "name": "ro"
+                        "name": "ro",
+                        "description": "Effect estimate of original study on correlation scale"
                     },
                     {
-                        "depth": 0,
-                        "description": "Effect estimate of replication study on correlation scale",
-                        "name": "rr"
+                        "name": "rr",
+                        "description": "Effect estimate of replication study on correlation scale"
                     },
                     {
-                        "depth": 0,
-                        "description": "Effect estimate of original study transformed to Fisher-z scale",
-                        "name": "fiso"
+                        "name": "fiso",
+                        "description": "Effect estimate of original study transformed to Fisher-z scale"
                     },
                     {
-                        "depth": 0,
-                        "description": "Effect estimate of replication study transformed to Fisher-z scale",
-                        "name": "fisr"
+                        "name": "fisr",
+                        "description": "Effect estimate of replication study transformed to Fisher-z scale"
                     },
                     {
-                        "depth": 0,
-                        "description": "Standard error of Fisher-z transformed effect estimate of original study",
-                        "name": "se_fiso"
+                        "name": "se_fiso",
+                        "description": "Standard error of Fisher-z transformed effect estimate of original study"
                     },
                     {
-                        "depth": 0,
-                        "description": "Standard error of Fisher-z transformed effect estimate of replication study",
-                        "name": "se_fisr"
+                        "name": "se_fisr",
+                        "description": "Standard error of Fisher-z transformed effect estimate of replication study"
                     },
                     {
-                        "depth": 0,
-                        "description": "Two-sided p-value from significance test of effect estimate from original study",
-                        "name": "po"
+                        "name": "po",
+                        "description": "Two-sided p-value from significance test of effect estimate from original study"
                     },
                     {
-                        "depth": 0,
-                        "description": "Two-sided p-value from significance test of effect estimate from replication study",
-                        "name": "pr"
+                        "name": "pr",
+                        "description": "Two-sided p-value from significance test of effect estimate from replication study"
                     },
                     {
-                        "depth": 0,
-                        "description": "One-sided p-value from significance test of effect estimate from original study (in the direction of the original effect estimate)",
-                        "name": "po1"
+                        "name": "po1",
+                        "description": "One-sided p-value from significance test of effect estimate from original study (in the direction of the original effect estimate)"
                     },
                     {
-                        "depth": 0,
-                        "description": "One-sided p-value from significance test of effect estimate from replication study (in the direction of the original effect estimate)",
-                        "name": "pr1"
+                        "name": "pr1",
+                        "description": "One-sided p-value from significance test of effect estimate from replication study (in the direction of the original effect estimate)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Peer belief about whether replication effect estimate will achieve statistical significance elicited through prediction market (only available for EERP and SSRP)",
-                        "name": "pm_belief"
+                        "name": "pm_belief",
+                        "description": "Peer belief about whether replication effect estimate will achieve statistical significance elicited through prediction market (only available for EERP and SSRP)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Sample size in original study",
-                        "name": "no"
+                        "name": "no",
+                        "description": "Sample size in original study"
                     },
                     {
-                        "depth": 0,
-                        "description": "Sample size in replication study",
-                        "name": "nr"
+                        "name": "nr",
+                        "description": "Sample size in replication study"
                     },
                     {
-                        "depth": 0,
-                        "description": "Names of Original paper's authors",
-                        "name": "authors.o"
+                        "name": "authors.o",
+                        "description": "Names of Original paper's authors"
                     },
                     {
-                        "depth": 0,
-                        "description": "Year of Publication of the study",
-                        "name": "pub_year"
+                        "name": "pub_year",
+                        "description": "Year of Publication of the study"
                     },
                     {
-                        "depth": 0,
-                        "description": "Journal in which the study was published",
-                        "name": "journal"
+                        "name": "journal",
+                        "description": "Journal in which the study was published"
                     },
                     {
-                        "depth": 0,
-                        "description": "Discipline of original paper. One of the following: Social, Cognitive or Economics",
-                        "name": "discipline"
+                        "name": "discipline",
+                        "description": "Discipline of original paper. One of the following: Social, Cognitive or Economics"
                     },
                     {
-                        "depth": 0,
-                        "description": "Number of pages of original paper",
-                        "name": "length"
+                        "name": "length",
+                        "description": "Number of pages of original paper"
                     },
                     {
-                        "depth": 0,
-                        "description": "Number of citations of original paper",
-                        "name": "citations"
+                        "name": "citations",
+                        "description": "Number of citations of original paper"
                     },
                     {
-                        "depth": 0,
-                        "description": "Sample size of replication",
-                        "name": "n.r"
+                        "name": "n.r",
+                        "description": "Sample size of replication"
                     },
                     {
-                        "depth": 0,
-                        "description": "Post hoc power based on original effect size",
-                        "name": "power.o"
+                        "name": "power.o",
+                        "description": "Post hoc power based on original effect size"
                     },
                     {
-                        "depth": 0,
-                        "description": "Post hoc power based on replication effect size",
-                        "name": "power.r"
+                        "name": "power.r",
+                        "description": "Post hoc power based on replication effect size"
                     },
                     {
-                        "depth": 0,
-                        "description": "Planned power of the replication based on planned N and original ES",
-                        "name": "power_planned.r"
+                        "name": "power_planned.r",
+                        "description": "Planned power of the replication based on planned N and original ES"
                     },
                     {
-                        "depth": 0,
-                        "description": "Country where original experiment was conducted",
-                        "name": "experiment_country.o"
+                        "name": "experiment_country.o",
+                        "description": "Country where original experiment was conducted"
                     },
                     {
-                        "depth": 0,
-                        "description": "Country where replication is to be conducted",
-                        "name": "experiment_country.r"
+                        "name": "experiment_country.r",
+                        "description": "Country where replication is to be conducted"
                     },
                     {
-                        "depth": 0,
-                        "description": "Language used with subjects in original experiment (English, German, Dutch, Polish, Hebrew, French, Italian, Arabic, Spanish, Korean)",
-                        "name": "experiment_language.o"
+                        "name": "experiment_language.o",
+                        "description": "Language used with subjects in original experiment (English, German, Dutch, Polish, Hebrew, French, Italian, Arabic, Spanish, Korean)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Language to be used with subjects in replication (English, Polish, German, Dutch, Italian, Portuguese, Malay, Turkish, Czech, Arabic, Spanish)",
-                        "name": "experiment_language.r"
+                        "name": "experiment_language.r",
+                        "description": "Language to be used with subjects in replication (English, Polish, German, Dutch, Italian, Portuguese, Malay, Turkish, Czech, Arabic, Spanish)"
                     },
                     {
-                        "depth": 0,
-                        "description": "If the original experiment was conducted online (1: yes, 0: no)",
-                        "name": "online.o"
+                        "name": "online.o",
+                        "description": "If the original experiment was conducted online (1: yes, 0: no)"
                     },
                     {
-                        "depth": 0,
-                        "description": "If the replication was conducted online (1: yes, 0: no)",
-                        "name": "online.r"
+                        "name": "online.r",
+                        "description": "If the replication was conducted online (1: yes, 0: no)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Compensation in original experiment (credit, cash, nothing, mixed)",
-                        "name": "compensation.o"
+                        "name": "compensation.o",
+                        "description": "Compensation in original experiment (credit, cash, nothing, mixed)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Compensation in replication (credit, cash, nothing, mixed)",
-                        "name": "compensation.r"
+                        "name": "compensation.r",
+                        "description": "Compensation in replication (credit, cash, nothing, mixed)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of subjects used in original experiment (students, online, anyone, community)",
-                        "name": "subjects.o"
+                        "name": "subjects.o",
+                        "description": "Type of subjects used in original experiment (students, online, anyone, community)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of subjects used in replication (students, online, anyone, community)",
-                        "name": "subjects.r"
+                        "name": "subjects.r",
+                        "description": "Type of subjects used in replication (students, online, anyone, community)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Final market price in prediction market",
-                        "name": "endprice"
+                        "name": "endprice",
+                        "description": "Final market price in prediction market"
                     },
                     {
-                        "depth": 0,
-                        "description": "Number of transactions in prediction market",
-                        "name": "transactions"
+                        "name": "transactions",
+                        "description": "Number of transactions in prediction market"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total volume of traded stocks in prediction market",
-                        "name": "trading_volume"
+                        "name": "trading_volume",
+                        "description": "Total volume of traded stocks in prediction market"
                     },
                     {
-                        "depth": 0,
-                        "description": "Binary outcome variable; study is replicated if p <= 0.05 and effect goes in the same direction as the original",
-                        "name": "replicated"
+                        "name": "replicated",
+                        "description": "Binary outcome variable; study is replicated if p <= 0.05 and effect goes in the same direction as the original"
                     },
                     {
-                        "depth": 0,
-                        "description": "The replication project that the study was on (rpp: Psychology or ee: Experimental Economics)",
-                        "name": "project.y"
+                        "name": "project.y",
+                        "description": "The replication project that the study was on (rpp: Psychology or ee: Experimental Economics)"
                     },
                     {
-                        "depth": 0,
-                        "description": "The continuous outcome variable; the standardized replication effect size to the original effect | relative effect size = (replication effect size / original effect size)",
-                        "name": "relative_es"
+                        "name": "relative_es",
+                        "description": "The continuous outcome variable; the standardized replication effect size to the original effect | relative effect size = (replication effect size / original effect size)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Number of authors in original study",
-                        "name": "n_authors.o"
+                        "name": "n_authors.o",
+                        "description": "Number of authors in original study"
                     },
                     {
-                        "depth": 0,
-                        "description": "Number of authors in replication",
-                        "name": "n_authors.r"
+                        "name": "n_authors.r",
+                        "description": "Number of authors in replication"
                     },
                     {
-                        "depth": 0,
-                        "description": "Average number of citations of authors in original study",
-                        "name": "author_citations_avg.o"
+                        "name": "author_citations_avg.o",
+                        "description": "Average number of citations of authors in original study"
                     },
                     {
-                        "depth": 0,
-                        "description": "Number of citations of the author in original study with the highest citation count",
-                        "name": "author_citations_max.o"
+                        "name": "author_citations_max.o",
+                        "description": "Number of citations of the author in original study with the highest citation count"
                     },
                     {
-                        "depth": 0,
-                        "description": "Ratio of male authors in original study",
-                        "name": "authors_male.o"
+                        "name": "authors_male.o",
+                        "description": "Ratio of male authors in original study"
                     },
                     {
-                        "depth": 0,
-                        "description": "Most senior author in the original paper (Professor, Associate Professor, Assistant, Researcher, Assistant Professor)",
-                        "name": "seniority.o"
+                        "name": "seniority.o",
+                        "description": "Most senior author in the original paper (Professor, Associate Professor, Assistant, Researcher, Assistant Professor)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Average number of citations of authors in replication study",
-                        "name": "author_citations_avg.r"
+                        "name": "author_citations_avg.r",
+                        "description": "Average number of citations of authors in replication study"
                     },
                     {
-                        "depth": 0,
-                        "description": "Number of citations of the author in original study with the highest citation count",
-                        "name": "author_citations_max.r"
+                        "name": "author_citations_max.r",
+                        "description": "Number of citations of the author in original study with the highest citation count"
                     },
                     {
-                        "depth": 0,
-                        "description": "Ratio of male authors in replication",
-                        "name": "authors_male.r"
+                        "name": "authors_male.r",
+                        "description": "Ratio of male authors in replication"
                     },
                     {
-                        "depth": 0,
-                        "description": "Most senior author in the original paper (Professor, Associate Professor, Assistant, Researcher, Assistant Professor)",
-                        "name": "seniority.r"
+                        "name": "seniority.r",
+                        "description": "Most senior author in the original paper (Professor, Associate Professor, Assistant, Researcher, Assistant Professor)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Aggregated column",
-                        "name": "aggregated"
+                        "name": "aggregated",
+                        "description": "Aggregated column"
                     },
                     {
-                        "depth": 0,
-                        "description": "Unique id for each replication lab",
-                        "name": "lab_id"
+                        "name": "lab_id",
+                        "description": "Unique id for each replication lab"
                     },
                     {
-                        "depth": 0,
-                        "description": "Standardized effect size required in replication to achieve 80% power",
-                        "name": "es_80power"
+                        "name": "es_80power",
+                        "description": "Standardized effect size required in replication to achieve 80% power"
                     },
                     {
-                        "depth": 0,
-                        "description": "Original study and replication are in the same country",
-                        "name": "same_country"
+                        "name": "same_country",
+                        "description": "Original study and replication are in the same country"
                     },
                     {
-                        "depth": 0,
-                        "description": "Original study and replication are in the same language",
-                        "name": "same_language"
+                        "name": "same_language",
+                        "description": "Original study and replication are in the same language"
                     },
                     {
-                        "depth": 0,
-                        "description": "Original study and replication are both conducted online",
-                        "name": "same_online"
+                        "name": "same_online",
+                        "description": "Original study and replication are both conducted online"
                     },
                     {
-                        "depth": 0,
-                        "description": "Original study and replication use same type of subjects",
-                        "name": "same_subjects"
+                        "name": "same_subjects",
+                        "description": "Original study and replication use same type of subjects"
                     },
                     {
-                        "depth": 0,
-                        "description": "Original experiment lab in the US",
-                        "name": "us_lab.o"
+                        "name": "us_lab.o",
+                        "description": "Original experiment lab in the US"
                     },
                     {
-                        "depth": 0,
-                        "description": "Replication experiment lab in the US",
-                        "name": "us_lab.r"
+                        "name": "us_lab.r",
+                        "description": "Replication experiment lab in the US"
                     }
                 ]
-            },
-            "description": "Data created by merging data.csv and RProjects.csv",
-            "domain_knowledge": "",
-            "max_depth": 0,
-            "name": "meta-regression_joined_data_heterogeneity_in_replication_projects.csv"
+            }
         }
     ],
-    "domain": "meta science",
-    "hypotheses": {
-        "intermediate": [],
-        "main": [
-            {
-                "depth": 0,
-                "expr": "",
-                "expr_ind": "",
-                "target": "",
-                "text": ""
-            }
-        ]
-    },
-    "id": 0,
     "intermediate": [],
+    "hypotheses": {
+        "main": [
+            {}
+        ],
+        "intermediate": []
+    },
     "queries": [
         [
             {
-                "prior_findings": "",
                 "qid": 0,
-                "question": "What proportion of subjects were students in original studies in Experimental Economics?",
-                "question_specificity": null,
                 "question_type": "relationship",
-                "relevant_cols": [],
-                "target_col": "",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "What proportion of subjects were students in original studies in Experimental Economics?"
             },
             {
-                "prior_findings": "",
                 "qid": 1,
-                "question": "What proportion of subjects were students in replication studies in Experimental Economics?",
-                "question_specificity": null,
                 "question_type": "relationship",
-                "relevant_cols": [],
-                "target_col": "",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "What proportion of subjects were students in replication studies in Experimental Economics?"
             },
             {
-                "prior_findings": "",
                 "qid": 2,
-                "question": "What proportion of subjects were from the community in original studies in Experimental Economics?",
-                "question_specificity": null,
                 "question_type": "relationship",
-                "relevant_cols": [],
-                "target_col": "",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "What proportion of subjects were from the community in original studies in Experimental Economics?"
             },
             {
-                "prior_findings": "",
                 "qid": 3,
-                "question": "What type of subjects were used in all replication studies in Experimental Economics?",
-                "question_specificity": null,
                 "question_type": "relationship",
-                "relevant_cols": [],
-                "target_col": "",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "What type of subjects were used in all replication studies in Experimental Economics?"
             }
         ]
-    ],
-    "workflow": "",
-    "workflow_tags": "data selection, meta regression, summary statistics, feature engineering,data standardization"
+    ]
 }

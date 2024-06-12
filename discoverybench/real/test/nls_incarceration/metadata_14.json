@@ -1,111 +1,66 @@
 {
+    "id": 0,
+    "domain": "sociology",
+    "workflow_tags": "summary statistics, data selection",
+    "domain_knowledge": "Incarceration status can be gauged indirectly by studying the place of residence. If it is ‘Jail’, or other facilities of detention, incarceration can be assumed. ",
     "datasets": [
         {
+            "name": "nls_incarceration_processed.csv",
+            "description": "This dataset was created from the National Longitudinal Study of Youth's 1979 cohort to about the race, wealth, and incarceration status of the participants.",
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
-                        "description": "Race of the respondent (hispanic, black or white)",
-                        "name": "race"
+                        "name": "race",
+                        "description": "Race of the respondent (hispanic, black or white)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Sex of the respondent (male or female)",
-                        "name": "sex"
+                        "name": "sex",
+                        "description": "Sex of the respondent (male or female)"
                     },
                     {
-                        "depth": 0,
-                        "description": "A boolean variable that equals 1 if the respondent was jailed between 1985 to 1994",
-                        "name": "ever_jailed"
+                        "name": "ever_jailed",
+                        "description": "A boolean variable that equals 1 if the respondent was jailed between 1985 to 1994"
                     },
                     {
-                        "depth": 0,
-                        "description": "A composite variable creating by summing five wealth variables from the NLS data for the year 1985",
-                        "name": "composite_wealth_1985"
+                        "name": "composite_wealth_1985",
+                        "description": "A composite variable creating by summing five wealth variables from the NLS data for the year 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "A composite variable creating by summing five wealth variables from the NLS data for the year 1990",
-                        "name": "composite_wealth_1990"
+                        "name": "composite_wealth_1990",
+                        "description": "A composite variable creating by summing five wealth variables from the NLS data for the year 1990"
                     },
                     {
-                        "depth": 0,
-                        "description": "A composite variable creating by summing five wealth variables from the NLS data for the year 1996",
-                        "name": "composite_wealth_1996"
+                        "name": "composite_wealth_1996",
+                        "description": "A composite variable creating by summing five wealth variables from the NLS data for the year 1996"
                     }
                 ]
-            },
-            "description": "This dataset was created from the National Longitudinal Study of Youth's 1979 cohort to about the race, wealth, and incarceration status of the participants.",
-            "domain_knowledge": "",
-            "max_depth": 0,
-            "name": "nls_incarceration_processed.csv"
+            }
         }
     ],
-    "domain": "sociology",
-    "hypotheses": {
-        "intermediate": [],
-        "main": [
-            {
-                "depth": 0,
-                "expr": "",
-                "expr_ind": "",
-                "target": "",
-                "text": ""
-            }
-        ]
-    },
-    "id": 0,
     "intermediate": [],
+    "hypotheses": {
+        "main": [
+            {}
+        ],
+        "intermediate": []
+    },
     "queries": [
         [
             {
-                "prior_findings": "",
                 "qid": 0,
-                "question": "Between which years did the largest increases in median wealth occur among black females?",
-                "question_specificity": null,
                 "question_type": "context",
-                "relevant_cols": [
-                    "composite_wealth_1985",
-                    "composite_wealth_1990",
-                    "race",
-                    "sex"
-                ],
-                "target_col": "composite_wealth_1990",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "Between which years did the largest increases in median wealth occur among black females?"
             },
             {
-                "prior_findings": "",
                 "qid": 1,
-                "question": "Among which demographic group did the largest increases in median wealth occur from 1985 to 1990?",
-                "question_specificity": null,
                 "question_type": "variables",
-                "relevant_cols": [
-                    "composite_wealth_1985",
-                    "composite_wealth_1990"
-                ],
-                "target_col": "composite_wealth_1990",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "Among which demographic group did the largest increases in median wealth occur from 1985 to 1990?"
             },
             {
-                "prior_findings": "",
                 "qid": 2,
-                "question": "What was the percentage increase in median wealth among black females from 1985 to 1990?",
-                "question_specificity": null,
                 "question_type": "relationship",
-                "relevant_cols": [
-                    "composite_wealth_1985",
-                    "composite_wealth_1990",
-                    "race",
-                    "sex"
-                ],
-                "target_col": "composite_wealth_1990",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "What was the percentage increase in median wealth among black females from 1985 to 1990?"
             }
         ]
-    ],
-    "workflow": "",
-    "workflow_tags": "summary statistics, data selection"
+    ]
 }

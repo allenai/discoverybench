@@ -1,1397 +1,1109 @@
 {
+    "id": 0,
+    "domain": "economics",
+    "workflow_tags": "data selection, econometric modelling, mixture models",
+    "domain_knowledge": "Managing endogeneity and autoregression can be important in econometrics data to ensure accurate and reliable estimates, enabling valid causal inferences from the data. This will be relevant to extracting correct inferences from the data. 1. Government’s expenditure on education could be a proxy for the investment in human capital. 2. Exports of goods and services could be a proxy for economic output. 3. Terminology: Adjusted Savings: Education Expenditure (percentage of GNI) - This metric indicates the proportion of Gross National Income (GNI) allocated for future educational spending. GNI Per Capita (constant 2015 US dollars) - Represents the Gross National Income per capita adjusted for inflation to the year 2015, expressed in US dollars. School Enrollment, Primary (percentage gross) - The gross enrollment ratio for primary education, which measures the percentage of children of official primary school age who are enrolled in primary school. School Enrollment, Secondary (percentage gross) - The gross enrollment ratio for secondary education, indicating the percentage of children of official secondary school age who are enrolled in secondary school. Labor Force Participation Rate, Total (percentage of total population ages 15+) (modeled ILO estimate) - This figure represents the percentage of the total population aged 15 and older who are economically active, as estimated by the International Labour Organization (ILO). Exports of Goods and Services (annual percentage growth) - Reflects the annual percentage growth rate of exports of goods and services. Lower middle income countries could be assumed to be coming under the label of developing countries.",
     "datasets": [
         {
-            "columns": {
-                "raw": [
-                    {
-                        "depth": 0,
-                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income",
-                        "name": "Country Group"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC",
-                        "name": "Country Code"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1975",
-                        "name": "1975 [YR1975]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1976",
-                        "name": "1976 [YR1976]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1977",
-                        "name": "1977 [YR1977]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1978",
-                        "name": "1978 [YR1978]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1979",
-                        "name": "1979 [YR1979]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1980",
-                        "name": "1980 [YR1980]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1981",
-                        "name": "1981 [YR1981]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1982",
-                        "name": "1982 [YR1982]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1983",
-                        "name": "1983 [YR1983]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1984",
-                        "name": "1984 [YR1984]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1985",
-                        "name": "1985 [YR1985]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1986",
-                        "name": "1986 [YR1986]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1987",
-                        "name": "1987 [YR1987]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1988",
-                        "name": "1988 [YR1988]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1989",
-                        "name": "1989 [YR1989]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1990",
-                        "name": "1990 [YR1990]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1991",
-                        "name": "1991 [YR1991]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1992",
-                        "name": "1992 [YR1992]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1993",
-                        "name": "1993 [YR1993]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1994",
-                        "name": "1994 [YR1994]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1995",
-                        "name": "1995 [YR1995]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1996",
-                        "name": "1996 [YR1996]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1997",
-                        "name": "1997 [YR1997]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1998",
-                        "name": "1998 [YR1998]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1999",
-                        "name": "1999 [YR1999]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2000",
-                        "name": "2000 [YR2000]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2001",
-                        "name": "2001 [YR2001]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2002",
-                        "name": "2002 [YR2002]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2003",
-                        "name": "2003 [YR2003]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2004",
-                        "name": "2004 [YR2004]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2005",
-                        "name": "2005 [YR2005]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2006",
-                        "name": "2006 [YR2006]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2007",
-                        "name": "2007 [YR2007]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2008",
-                        "name": "2008 [YR2008]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2009",
-                        "name": "2009 [YR2009]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2010",
-                        "name": "2010 [YR2010]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2011",
-                        "name": "2011 [YR2011]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2012",
-                        "name": "2012 [YR2012]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2013",
-                        "name": "2013 [YR2013]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2014",
-                        "name": "2014 [YR2014]"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2015",
-                        "name": "2015 [YR2015]"
-                    }
-                ]
-            },
+            "name": "Adjusted_savings_education_expenditure_percentage_of_GNI.csv",
             "description": "This dataset contains information on adjusted savings: education expenditure (percentage of gni) for Sub-Saharan Africa and Lower Middle Income Countries (LMC) from 1975 to 2015.",
-            "domain_knowledge": "The percentage of GNI that is saved for future education expenditures.",
-            "max_depth": 0,
-            "name": "Adjusted_savings_education_expenditure_percentage_of_GNI.csv"
-        },
-        {
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
-                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income",
-                        "name": "Country Group"
+                        "name": "Country Group",
+                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income"
                     },
                     {
-                        "depth": 0,
-                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC",
-                        "name": "Country Code"
+                        "name": "Country Code",
+                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1975",
-                        "name": "1975 [YR1975]"
+                        "name": "1975 [YR1975]",
+                        "description": "The value of indicator for the year 1975"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1976",
-                        "name": "1976 [YR1976]"
+                        "name": "1976 [YR1976]",
+                        "description": "The value of indicator for the year 1976"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1977",
-                        "name": "1977 [YR1977]"
+                        "name": "1977 [YR1977]",
+                        "description": "The value of indicator for the year 1977"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1978",
-                        "name": "1978 [YR1978]"
+                        "name": "1978 [YR1978]",
+                        "description": "The value of indicator for the year 1978"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1979",
-                        "name": "1979 [YR1979]"
+                        "name": "1979 [YR1979]",
+                        "description": "The value of indicator for the year 1979"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1980",
-                        "name": "1980 [YR1980]"
+                        "name": "1980 [YR1980]",
+                        "description": "The value of indicator for the year 1980"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1981",
-                        "name": "1981 [YR1981]"
+                        "name": "1981 [YR1981]",
+                        "description": "The value of indicator for the year 1981"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1982",
-                        "name": "1982 [YR1982]"
+                        "name": "1982 [YR1982]",
+                        "description": "The value of indicator for the year 1982"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1983",
-                        "name": "1983 [YR1983]"
+                        "name": "1983 [YR1983]",
+                        "description": "The value of indicator for the year 1983"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1984",
-                        "name": "1984 [YR1984]"
+                        "name": "1984 [YR1984]",
+                        "description": "The value of indicator for the year 1984"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1985",
-                        "name": "1985 [YR1985]"
+                        "name": "1985 [YR1985]",
+                        "description": "The value of indicator for the year 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1986",
-                        "name": "1986 [YR1986]"
+                        "name": "1986 [YR1986]",
+                        "description": "The value of indicator for the year 1986"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1987",
-                        "name": "1987 [YR1987]"
+                        "name": "1987 [YR1987]",
+                        "description": "The value of indicator for the year 1987"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1988",
-                        "name": "1988 [YR1988]"
+                        "name": "1988 [YR1988]",
+                        "description": "The value of indicator for the year 1988"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1989",
-                        "name": "1989 [YR1989]"
+                        "name": "1989 [YR1989]",
+                        "description": "The value of indicator for the year 1989"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1990",
-                        "name": "1990 [YR1990]"
+                        "name": "1990 [YR1990]",
+                        "description": "The value of indicator for the year 1990"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1991",
-                        "name": "1991 [YR1991]"
+                        "name": "1991 [YR1991]",
+                        "description": "The value of indicator for the year 1991"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1992",
-                        "name": "1992 [YR1992]"
+                        "name": "1992 [YR1992]",
+                        "description": "The value of indicator for the year 1992"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1993",
-                        "name": "1993 [YR1993]"
+                        "name": "1993 [YR1993]",
+                        "description": "The value of indicator for the year 1993"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1994",
-                        "name": "1994 [YR1994]"
+                        "name": "1994 [YR1994]",
+                        "description": "The value of indicator for the year 1994"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1995",
-                        "name": "1995 [YR1995]"
+                        "name": "1995 [YR1995]",
+                        "description": "The value of indicator for the year 1995"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1996",
-                        "name": "1996 [YR1996]"
+                        "name": "1996 [YR1996]",
+                        "description": "The value of indicator for the year 1996"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1997",
-                        "name": "1997 [YR1997]"
+                        "name": "1997 [YR1997]",
+                        "description": "The value of indicator for the year 1997"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1998",
-                        "name": "1998 [YR1998]"
+                        "name": "1998 [YR1998]",
+                        "description": "The value of indicator for the year 1998"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1999",
-                        "name": "1999 [YR1999]"
+                        "name": "1999 [YR1999]",
+                        "description": "The value of indicator for the year 1999"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2000",
-                        "name": "2000 [YR2000]"
+                        "name": "2000 [YR2000]",
+                        "description": "The value of indicator for the year 2000"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2001",
-                        "name": "2001 [YR2001]"
+                        "name": "2001 [YR2001]",
+                        "description": "The value of indicator for the year 2001"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2002",
-                        "name": "2002 [YR2002]"
+                        "name": "2002 [YR2002]",
+                        "description": "The value of indicator for the year 2002"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2003",
-                        "name": "2003 [YR2003]"
+                        "name": "2003 [YR2003]",
+                        "description": "The value of indicator for the year 2003"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2004",
-                        "name": "2004 [YR2004]"
+                        "name": "2004 [YR2004]",
+                        "description": "The value of indicator for the year 2004"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2005",
-                        "name": "2005 [YR2005]"
+                        "name": "2005 [YR2005]",
+                        "description": "The value of indicator for the year 2005"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2006",
-                        "name": "2006 [YR2006]"
+                        "name": "2006 [YR2006]",
+                        "description": "The value of indicator for the year 2006"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2007",
-                        "name": "2007 [YR2007]"
+                        "name": "2007 [YR2007]",
+                        "description": "The value of indicator for the year 2007"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2008",
-                        "name": "2008 [YR2008]"
+                        "name": "2008 [YR2008]",
+                        "description": "The value of indicator for the year 2008"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2009",
-                        "name": "2009 [YR2009]"
+                        "name": "2009 [YR2009]",
+                        "description": "The value of indicator for the year 2009"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2010",
-                        "name": "2010 [YR2010]"
+                        "name": "2010 [YR2010]",
+                        "description": "The value of indicator for the year 2010"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2011",
-                        "name": "2011 [YR2011]"
+                        "name": "2011 [YR2011]",
+                        "description": "The value of indicator for the year 2011"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2012",
-                        "name": "2012 [YR2012]"
+                        "name": "2012 [YR2012]",
+                        "description": "The value of indicator for the year 2012"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2013",
-                        "name": "2013 [YR2013]"
+                        "name": "2013 [YR2013]",
+                        "description": "The value of indicator for the year 2013"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2014",
-                        "name": "2014 [YR2014]"
+                        "name": "2014 [YR2014]",
+                        "description": "The value of indicator for the year 2014"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2015",
-                        "name": "2015 [YR2015]"
+                        "name": "2015 [YR2015]",
+                        "description": "The value of indicator for the year 2015"
                     }
                 ]
-            },
+            }
+        },
+        {
+            "name": "Exports_of_goods_and_services_annual_percentage_growth.csv",
             "description": "This dataset contains information on exports of goods and services (annual percentage growth) for Sub-Saharan Africa and Lower Middle Income Countries (LMC) from 1975 to 2015.",
-            "domain_knowledge": "The annual percentage growth rate of exports of goods and services.",
-            "max_depth": 0,
-            "name": "Exports_of_goods_and_services_annual_percentage_growth.csv"
-        },
-        {
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
-                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income",
-                        "name": "Country Group"
+                        "name": "Country Group",
+                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income"
                     },
                     {
-                        "depth": 0,
-                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC",
-                        "name": "Country Code"
+                        "name": "Country Code",
+                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1975",
-                        "name": "1975 [YR1975]"
+                        "name": "1975 [YR1975]",
+                        "description": "The value of indicator for the year 1975"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1976",
-                        "name": "1976 [YR1976]"
+                        "name": "1976 [YR1976]",
+                        "description": "The value of indicator for the year 1976"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1977",
-                        "name": "1977 [YR1977]"
+                        "name": "1977 [YR1977]",
+                        "description": "The value of indicator for the year 1977"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1978",
-                        "name": "1978 [YR1978]"
+                        "name": "1978 [YR1978]",
+                        "description": "The value of indicator for the year 1978"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1979",
-                        "name": "1979 [YR1979]"
+                        "name": "1979 [YR1979]",
+                        "description": "The value of indicator for the year 1979"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1980",
-                        "name": "1980 [YR1980]"
+                        "name": "1980 [YR1980]",
+                        "description": "The value of indicator for the year 1980"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1981",
-                        "name": "1981 [YR1981]"
+                        "name": "1981 [YR1981]",
+                        "description": "The value of indicator for the year 1981"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1982",
-                        "name": "1982 [YR1982]"
+                        "name": "1982 [YR1982]",
+                        "description": "The value of indicator for the year 1982"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1983",
-                        "name": "1983 [YR1983]"
+                        "name": "1983 [YR1983]",
+                        "description": "The value of indicator for the year 1983"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1984",
-                        "name": "1984 [YR1984]"
+                        "name": "1984 [YR1984]",
+                        "description": "The value of indicator for the year 1984"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1985",
-                        "name": "1985 [YR1985]"
+                        "name": "1985 [YR1985]",
+                        "description": "The value of indicator for the year 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1986",
-                        "name": "1986 [YR1986]"
+                        "name": "1986 [YR1986]",
+                        "description": "The value of indicator for the year 1986"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1987",
-                        "name": "1987 [YR1987]"
+                        "name": "1987 [YR1987]",
+                        "description": "The value of indicator for the year 1987"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1988",
-                        "name": "1988 [YR1988]"
+                        "name": "1988 [YR1988]",
+                        "description": "The value of indicator for the year 1988"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1989",
-                        "name": "1989 [YR1989]"
+                        "name": "1989 [YR1989]",
+                        "description": "The value of indicator for the year 1989"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1990",
-                        "name": "1990 [YR1990]"
+                        "name": "1990 [YR1990]",
+                        "description": "The value of indicator for the year 1990"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1991",
-                        "name": "1991 [YR1991]"
+                        "name": "1991 [YR1991]",
+                        "description": "The value of indicator for the year 1991"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1992",
-                        "name": "1992 [YR1992]"
+                        "name": "1992 [YR1992]",
+                        "description": "The value of indicator for the year 1992"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1993",
-                        "name": "1993 [YR1993]"
+                        "name": "1993 [YR1993]",
+                        "description": "The value of indicator for the year 1993"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1994",
-                        "name": "1994 [YR1994]"
+                        "name": "1994 [YR1994]",
+                        "description": "The value of indicator for the year 1994"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1995",
-                        "name": "1995 [YR1995]"
+                        "name": "1995 [YR1995]",
+                        "description": "The value of indicator for the year 1995"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1996",
-                        "name": "1996 [YR1996]"
+                        "name": "1996 [YR1996]",
+                        "description": "The value of indicator for the year 1996"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1997",
-                        "name": "1997 [YR1997]"
+                        "name": "1997 [YR1997]",
+                        "description": "The value of indicator for the year 1997"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1998",
-                        "name": "1998 [YR1998]"
+                        "name": "1998 [YR1998]",
+                        "description": "The value of indicator for the year 1998"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1999",
-                        "name": "1999 [YR1999]"
+                        "name": "1999 [YR1999]",
+                        "description": "The value of indicator for the year 1999"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2000",
-                        "name": "2000 [YR2000]"
+                        "name": "2000 [YR2000]",
+                        "description": "The value of indicator for the year 2000"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2001",
-                        "name": "2001 [YR2001]"
+                        "name": "2001 [YR2001]",
+                        "description": "The value of indicator for the year 2001"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2002",
-                        "name": "2002 [YR2002]"
+                        "name": "2002 [YR2002]",
+                        "description": "The value of indicator for the year 2002"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2003",
-                        "name": "2003 [YR2003]"
+                        "name": "2003 [YR2003]",
+                        "description": "The value of indicator for the year 2003"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2004",
-                        "name": "2004 [YR2004]"
+                        "name": "2004 [YR2004]",
+                        "description": "The value of indicator for the year 2004"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2005",
-                        "name": "2005 [YR2005]"
+                        "name": "2005 [YR2005]",
+                        "description": "The value of indicator for the year 2005"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2006",
-                        "name": "2006 [YR2006]"
+                        "name": "2006 [YR2006]",
+                        "description": "The value of indicator for the year 2006"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2007",
-                        "name": "2007 [YR2007]"
+                        "name": "2007 [YR2007]",
+                        "description": "The value of indicator for the year 2007"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2008",
-                        "name": "2008 [YR2008]"
+                        "name": "2008 [YR2008]",
+                        "description": "The value of indicator for the year 2008"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2009",
-                        "name": "2009 [YR2009]"
+                        "name": "2009 [YR2009]",
+                        "description": "The value of indicator for the year 2009"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2010",
-                        "name": "2010 [YR2010]"
+                        "name": "2010 [YR2010]",
+                        "description": "The value of indicator for the year 2010"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2011",
-                        "name": "2011 [YR2011]"
+                        "name": "2011 [YR2011]",
+                        "description": "The value of indicator for the year 2011"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2012",
-                        "name": "2012 [YR2012]"
+                        "name": "2012 [YR2012]",
+                        "description": "The value of indicator for the year 2012"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2013",
-                        "name": "2013 [YR2013]"
+                        "name": "2013 [YR2013]",
+                        "description": "The value of indicator for the year 2013"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2014",
-                        "name": "2014 [YR2014]"
+                        "name": "2014 [YR2014]",
+                        "description": "The value of indicator for the year 2014"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2015",
-                        "name": "2015 [YR2015]"
+                        "name": "2015 [YR2015]",
+                        "description": "The value of indicator for the year 2015"
                     }
                 ]
-            },
+            }
+        },
+        {
+            "name": "GNI_per_capita_constant_2015_USdollar.csv",
             "description": "This dataset contains information on gni per capita (constant 2015 usdollar) for Sub-Saharan Africa and Lower Middle Income Countries (LMC) from 1975 to 2015.",
-            "domain_knowledge": "Gross National Income (GNI) per capita adjusted for inflation to 2015 US dollars.",
-            "max_depth": 0,
-            "name": "GNI_per_capita_constant_2015_USdollar.csv"
-        },
-        {
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
-                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income",
-                        "name": "Country Group"
+                        "name": "Country Group",
+                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income"
                     },
                     {
-                        "depth": 0,
-                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC",
-                        "name": "Country Code"
+                        "name": "Country Code",
+                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1975",
-                        "name": "1975 [YR1975]"
+                        "name": "1975 [YR1975]",
+                        "description": "The value of indicator for the year 1975"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1976",
-                        "name": "1976 [YR1976]"
+                        "name": "1976 [YR1976]",
+                        "description": "The value of indicator for the year 1976"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1977",
-                        "name": "1977 [YR1977]"
+                        "name": "1977 [YR1977]",
+                        "description": "The value of indicator for the year 1977"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1978",
-                        "name": "1978 [YR1978]"
+                        "name": "1978 [YR1978]",
+                        "description": "The value of indicator for the year 1978"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1979",
-                        "name": "1979 [YR1979]"
+                        "name": "1979 [YR1979]",
+                        "description": "The value of indicator for the year 1979"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1980",
-                        "name": "1980 [YR1980]"
+                        "name": "1980 [YR1980]",
+                        "description": "The value of indicator for the year 1980"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1981",
-                        "name": "1981 [YR1981]"
+                        "name": "1981 [YR1981]",
+                        "description": "The value of indicator for the year 1981"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1982",
-                        "name": "1982 [YR1982]"
+                        "name": "1982 [YR1982]",
+                        "description": "The value of indicator for the year 1982"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1983",
-                        "name": "1983 [YR1983]"
+                        "name": "1983 [YR1983]",
+                        "description": "The value of indicator for the year 1983"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1984",
-                        "name": "1984 [YR1984]"
+                        "name": "1984 [YR1984]",
+                        "description": "The value of indicator for the year 1984"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1985",
-                        "name": "1985 [YR1985]"
+                        "name": "1985 [YR1985]",
+                        "description": "The value of indicator for the year 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1986",
-                        "name": "1986 [YR1986]"
+                        "name": "1986 [YR1986]",
+                        "description": "The value of indicator for the year 1986"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1987",
-                        "name": "1987 [YR1987]"
+                        "name": "1987 [YR1987]",
+                        "description": "The value of indicator for the year 1987"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1988",
-                        "name": "1988 [YR1988]"
+                        "name": "1988 [YR1988]",
+                        "description": "The value of indicator for the year 1988"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1989",
-                        "name": "1989 [YR1989]"
+                        "name": "1989 [YR1989]",
+                        "description": "The value of indicator for the year 1989"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1990",
-                        "name": "1990 [YR1990]"
+                        "name": "1990 [YR1990]",
+                        "description": "The value of indicator for the year 1990"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1991",
-                        "name": "1991 [YR1991]"
+                        "name": "1991 [YR1991]",
+                        "description": "The value of indicator for the year 1991"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1992",
-                        "name": "1992 [YR1992]"
+                        "name": "1992 [YR1992]",
+                        "description": "The value of indicator for the year 1992"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1993",
-                        "name": "1993 [YR1993]"
+                        "name": "1993 [YR1993]",
+                        "description": "The value of indicator for the year 1993"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1994",
-                        "name": "1994 [YR1994]"
+                        "name": "1994 [YR1994]",
+                        "description": "The value of indicator for the year 1994"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1995",
-                        "name": "1995 [YR1995]"
+                        "name": "1995 [YR1995]",
+                        "description": "The value of indicator for the year 1995"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1996",
-                        "name": "1996 [YR1996]"
+                        "name": "1996 [YR1996]",
+                        "description": "The value of indicator for the year 1996"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1997",
-                        "name": "1997 [YR1997]"
+                        "name": "1997 [YR1997]",
+                        "description": "The value of indicator for the year 1997"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1998",
-                        "name": "1998 [YR1998]"
+                        "name": "1998 [YR1998]",
+                        "description": "The value of indicator for the year 1998"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1999",
-                        "name": "1999 [YR1999]"
+                        "name": "1999 [YR1999]",
+                        "description": "The value of indicator for the year 1999"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2000",
-                        "name": "2000 [YR2000]"
+                        "name": "2000 [YR2000]",
+                        "description": "The value of indicator for the year 2000"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2001",
-                        "name": "2001 [YR2001]"
+                        "name": "2001 [YR2001]",
+                        "description": "The value of indicator for the year 2001"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2002",
-                        "name": "2002 [YR2002]"
+                        "name": "2002 [YR2002]",
+                        "description": "The value of indicator for the year 2002"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2003",
-                        "name": "2003 [YR2003]"
+                        "name": "2003 [YR2003]",
+                        "description": "The value of indicator for the year 2003"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2004",
-                        "name": "2004 [YR2004]"
+                        "name": "2004 [YR2004]",
+                        "description": "The value of indicator for the year 2004"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2005",
-                        "name": "2005 [YR2005]"
+                        "name": "2005 [YR2005]",
+                        "description": "The value of indicator for the year 2005"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2006",
-                        "name": "2006 [YR2006]"
+                        "name": "2006 [YR2006]",
+                        "description": "The value of indicator for the year 2006"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2007",
-                        "name": "2007 [YR2007]"
+                        "name": "2007 [YR2007]",
+                        "description": "The value of indicator for the year 2007"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2008",
-                        "name": "2008 [YR2008]"
+                        "name": "2008 [YR2008]",
+                        "description": "The value of indicator for the year 2008"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2009",
-                        "name": "2009 [YR2009]"
+                        "name": "2009 [YR2009]",
+                        "description": "The value of indicator for the year 2009"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2010",
-                        "name": "2010 [YR2010]"
+                        "name": "2010 [YR2010]",
+                        "description": "The value of indicator for the year 2010"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2011",
-                        "name": "2011 [YR2011]"
+                        "name": "2011 [YR2011]",
+                        "description": "The value of indicator for the year 2011"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2012",
-                        "name": "2012 [YR2012]"
+                        "name": "2012 [YR2012]",
+                        "description": "The value of indicator for the year 2012"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2013",
-                        "name": "2013 [YR2013]"
+                        "name": "2013 [YR2013]",
+                        "description": "The value of indicator for the year 2013"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2014",
-                        "name": "2014 [YR2014]"
+                        "name": "2014 [YR2014]",
+                        "description": "The value of indicator for the year 2014"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2015",
-                        "name": "2015 [YR2015]"
+                        "name": "2015 [YR2015]",
+                        "description": "The value of indicator for the year 2015"
                     }
                 ]
-            },
+            }
+        },
+        {
+            "name": "Labor_force_participation_rate_total_percentage_of_total_population_ages_15+_modeled_ILO_estimate.csv",
             "description": "This dataset contains information on labor force participation rate, total (percentage of total population ages 15+) (modeled ilo estimate) for Sub-Saharan Africa and Lower Middle Income Countries (LMC) from 1975 to 2015.",
-            "domain_knowledge": "The percentage of the total population ages 15 and older that is economically active.",
-            "max_depth": 0,
-            "name": "Labor_force_participation_rate_total_percentage_of_total_population_ages_15+_modeled_ILO_estimate.csv"
-        },
-        {
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
-                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income",
-                        "name": "Country Group"
+                        "name": "Country Group",
+                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income"
                     },
                     {
-                        "depth": 0,
-                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC",
-                        "name": "Country Code"
+                        "name": "Country Code",
+                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1975",
-                        "name": "1975 [YR1975]"
+                        "name": "1975 [YR1975]",
+                        "description": "The value of indicator for the year 1975"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1976",
-                        "name": "1976 [YR1976]"
+                        "name": "1976 [YR1976]",
+                        "description": "The value of indicator for the year 1976"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1977",
-                        "name": "1977 [YR1977]"
+                        "name": "1977 [YR1977]",
+                        "description": "The value of indicator for the year 1977"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1978",
-                        "name": "1978 [YR1978]"
+                        "name": "1978 [YR1978]",
+                        "description": "The value of indicator for the year 1978"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1979",
-                        "name": "1979 [YR1979]"
+                        "name": "1979 [YR1979]",
+                        "description": "The value of indicator for the year 1979"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1980",
-                        "name": "1980 [YR1980]"
+                        "name": "1980 [YR1980]",
+                        "description": "The value of indicator for the year 1980"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1981",
-                        "name": "1981 [YR1981]"
+                        "name": "1981 [YR1981]",
+                        "description": "The value of indicator for the year 1981"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1982",
-                        "name": "1982 [YR1982]"
+                        "name": "1982 [YR1982]",
+                        "description": "The value of indicator for the year 1982"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1983",
-                        "name": "1983 [YR1983]"
+                        "name": "1983 [YR1983]",
+                        "description": "The value of indicator for the year 1983"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1984",
-                        "name": "1984 [YR1984]"
+                        "name": "1984 [YR1984]",
+                        "description": "The value of indicator for the year 1984"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1985",
-                        "name": "1985 [YR1985]"
+                        "name": "1985 [YR1985]",
+                        "description": "The value of indicator for the year 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1986",
-                        "name": "1986 [YR1986]"
+                        "name": "1986 [YR1986]",
+                        "description": "The value of indicator for the year 1986"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1987",
-                        "name": "1987 [YR1987]"
+                        "name": "1987 [YR1987]",
+                        "description": "The value of indicator for the year 1987"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1988",
-                        "name": "1988 [YR1988]"
+                        "name": "1988 [YR1988]",
+                        "description": "The value of indicator for the year 1988"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1989",
-                        "name": "1989 [YR1989]"
+                        "name": "1989 [YR1989]",
+                        "description": "The value of indicator for the year 1989"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1990",
-                        "name": "1990 [YR1990]"
+                        "name": "1990 [YR1990]",
+                        "description": "The value of indicator for the year 1990"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1991",
-                        "name": "1991 [YR1991]"
+                        "name": "1991 [YR1991]",
+                        "description": "The value of indicator for the year 1991"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1992",
-                        "name": "1992 [YR1992]"
+                        "name": "1992 [YR1992]",
+                        "description": "The value of indicator for the year 1992"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1993",
-                        "name": "1993 [YR1993]"
+                        "name": "1993 [YR1993]",
+                        "description": "The value of indicator for the year 1993"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1994",
-                        "name": "1994 [YR1994]"
+                        "name": "1994 [YR1994]",
+                        "description": "The value of indicator for the year 1994"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1995",
-                        "name": "1995 [YR1995]"
+                        "name": "1995 [YR1995]",
+                        "description": "The value of indicator for the year 1995"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1996",
-                        "name": "1996 [YR1996]"
+                        "name": "1996 [YR1996]",
+                        "description": "The value of indicator for the year 1996"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1997",
-                        "name": "1997 [YR1997]"
+                        "name": "1997 [YR1997]",
+                        "description": "The value of indicator for the year 1997"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1998",
-                        "name": "1998 [YR1998]"
+                        "name": "1998 [YR1998]",
+                        "description": "The value of indicator for the year 1998"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1999",
-                        "name": "1999 [YR1999]"
+                        "name": "1999 [YR1999]",
+                        "description": "The value of indicator for the year 1999"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2000",
-                        "name": "2000 [YR2000]"
+                        "name": "2000 [YR2000]",
+                        "description": "The value of indicator for the year 2000"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2001",
-                        "name": "2001 [YR2001]"
+                        "name": "2001 [YR2001]",
+                        "description": "The value of indicator for the year 2001"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2002",
-                        "name": "2002 [YR2002]"
+                        "name": "2002 [YR2002]",
+                        "description": "The value of indicator for the year 2002"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2003",
-                        "name": "2003 [YR2003]"
+                        "name": "2003 [YR2003]",
+                        "description": "The value of indicator for the year 2003"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2004",
-                        "name": "2004 [YR2004]"
+                        "name": "2004 [YR2004]",
+                        "description": "The value of indicator for the year 2004"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2005",
-                        "name": "2005 [YR2005]"
+                        "name": "2005 [YR2005]",
+                        "description": "The value of indicator for the year 2005"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2006",
-                        "name": "2006 [YR2006]"
+                        "name": "2006 [YR2006]",
+                        "description": "The value of indicator for the year 2006"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2007",
-                        "name": "2007 [YR2007]"
+                        "name": "2007 [YR2007]",
+                        "description": "The value of indicator for the year 2007"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2008",
-                        "name": "2008 [YR2008]"
+                        "name": "2008 [YR2008]",
+                        "description": "The value of indicator for the year 2008"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2009",
-                        "name": "2009 [YR2009]"
+                        "name": "2009 [YR2009]",
+                        "description": "The value of indicator for the year 2009"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2010",
-                        "name": "2010 [YR2010]"
+                        "name": "2010 [YR2010]",
+                        "description": "The value of indicator for the year 2010"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2011",
-                        "name": "2011 [YR2011]"
+                        "name": "2011 [YR2011]",
+                        "description": "The value of indicator for the year 2011"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2012",
-                        "name": "2012 [YR2012]"
+                        "name": "2012 [YR2012]",
+                        "description": "The value of indicator for the year 2012"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2013",
-                        "name": "2013 [YR2013]"
+                        "name": "2013 [YR2013]",
+                        "description": "The value of indicator for the year 2013"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2014",
-                        "name": "2014 [YR2014]"
+                        "name": "2014 [YR2014]",
+                        "description": "The value of indicator for the year 2014"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2015",
-                        "name": "2015 [YR2015]"
+                        "name": "2015 [YR2015]",
+                        "description": "The value of indicator for the year 2015"
                     }
                 ]
-            },
+            }
+        },
+        {
+            "name": "School_enrollment_primary_percentage_gross.csv",
             "description": "This dataset contains information on school enrollment, primary (percentage gross) for Sub-Saharan Africa and Lower Middle Income Countries (LMC) from 1975 to 2015.",
-            "domain_knowledge": "The gross enrollment ratio for primary school, representing the percentage of children of official primary school age who are enrolled in primary school.",
-            "max_depth": 0,
-            "name": "School_enrollment_primary_percentage_gross.csv"
-        },
-        {
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
-                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income",
-                        "name": "Country Group"
+                        "name": "Country Group",
+                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income"
                     },
                     {
-                        "depth": 0,
-                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC",
-                        "name": "Country Code"
+                        "name": "Country Code",
+                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1975",
-                        "name": "1975 [YR1975]"
+                        "name": "1975 [YR1975]",
+                        "description": "The value of indicator for the year 1975"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1976",
-                        "name": "1976 [YR1976]"
+                        "name": "1976 [YR1976]",
+                        "description": "The value of indicator for the year 1976"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1977",
-                        "name": "1977 [YR1977]"
+                        "name": "1977 [YR1977]",
+                        "description": "The value of indicator for the year 1977"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1978",
-                        "name": "1978 [YR1978]"
+                        "name": "1978 [YR1978]",
+                        "description": "The value of indicator for the year 1978"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1979",
-                        "name": "1979 [YR1979]"
+                        "name": "1979 [YR1979]",
+                        "description": "The value of indicator for the year 1979"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1980",
-                        "name": "1980 [YR1980]"
+                        "name": "1980 [YR1980]",
+                        "description": "The value of indicator for the year 1980"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1981",
-                        "name": "1981 [YR1981]"
+                        "name": "1981 [YR1981]",
+                        "description": "The value of indicator for the year 1981"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1982",
-                        "name": "1982 [YR1982]"
+                        "name": "1982 [YR1982]",
+                        "description": "The value of indicator for the year 1982"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1983",
-                        "name": "1983 [YR1983]"
+                        "name": "1983 [YR1983]",
+                        "description": "The value of indicator for the year 1983"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1984",
-                        "name": "1984 [YR1984]"
+                        "name": "1984 [YR1984]",
+                        "description": "The value of indicator for the year 1984"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1985",
-                        "name": "1985 [YR1985]"
+                        "name": "1985 [YR1985]",
+                        "description": "The value of indicator for the year 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1986",
-                        "name": "1986 [YR1986]"
+                        "name": "1986 [YR1986]",
+                        "description": "The value of indicator for the year 1986"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1987",
-                        "name": "1987 [YR1987]"
+                        "name": "1987 [YR1987]",
+                        "description": "The value of indicator for the year 1987"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1988",
-                        "name": "1988 [YR1988]"
+                        "name": "1988 [YR1988]",
+                        "description": "The value of indicator for the year 1988"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1989",
-                        "name": "1989 [YR1989]"
+                        "name": "1989 [YR1989]",
+                        "description": "The value of indicator for the year 1989"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1990",
-                        "name": "1990 [YR1990]"
+                        "name": "1990 [YR1990]",
+                        "description": "The value of indicator for the year 1990"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1991",
-                        "name": "1991 [YR1991]"
+                        "name": "1991 [YR1991]",
+                        "description": "The value of indicator for the year 1991"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1992",
-                        "name": "1992 [YR1992]"
+                        "name": "1992 [YR1992]",
+                        "description": "The value of indicator for the year 1992"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1993",
-                        "name": "1993 [YR1993]"
+                        "name": "1993 [YR1993]",
+                        "description": "The value of indicator for the year 1993"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1994",
-                        "name": "1994 [YR1994]"
+                        "name": "1994 [YR1994]",
+                        "description": "The value of indicator for the year 1994"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1995",
-                        "name": "1995 [YR1995]"
+                        "name": "1995 [YR1995]",
+                        "description": "The value of indicator for the year 1995"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1996",
-                        "name": "1996 [YR1996]"
+                        "name": "1996 [YR1996]",
+                        "description": "The value of indicator for the year 1996"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1997",
-                        "name": "1997 [YR1997]"
+                        "name": "1997 [YR1997]",
+                        "description": "The value of indicator for the year 1997"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1998",
-                        "name": "1998 [YR1998]"
+                        "name": "1998 [YR1998]",
+                        "description": "The value of indicator for the year 1998"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 1999",
-                        "name": "1999 [YR1999]"
+                        "name": "1999 [YR1999]",
+                        "description": "The value of indicator for the year 1999"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2000",
-                        "name": "2000 [YR2000]"
+                        "name": "2000 [YR2000]",
+                        "description": "The value of indicator for the year 2000"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2001",
-                        "name": "2001 [YR2001]"
+                        "name": "2001 [YR2001]",
+                        "description": "The value of indicator for the year 2001"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2002",
-                        "name": "2002 [YR2002]"
+                        "name": "2002 [YR2002]",
+                        "description": "The value of indicator for the year 2002"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2003",
-                        "name": "2003 [YR2003]"
+                        "name": "2003 [YR2003]",
+                        "description": "The value of indicator for the year 2003"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2004",
-                        "name": "2004 [YR2004]"
+                        "name": "2004 [YR2004]",
+                        "description": "The value of indicator for the year 2004"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2005",
-                        "name": "2005 [YR2005]"
+                        "name": "2005 [YR2005]",
+                        "description": "The value of indicator for the year 2005"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2006",
-                        "name": "2006 [YR2006]"
+                        "name": "2006 [YR2006]",
+                        "description": "The value of indicator for the year 2006"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2007",
-                        "name": "2007 [YR2007]"
+                        "name": "2007 [YR2007]",
+                        "description": "The value of indicator for the year 2007"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2008",
-                        "name": "2008 [YR2008]"
+                        "name": "2008 [YR2008]",
+                        "description": "The value of indicator for the year 2008"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2009",
-                        "name": "2009 [YR2009]"
+                        "name": "2009 [YR2009]",
+                        "description": "The value of indicator for the year 2009"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2010",
-                        "name": "2010 [YR2010]"
+                        "name": "2010 [YR2010]",
+                        "description": "The value of indicator for the year 2010"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2011",
-                        "name": "2011 [YR2011]"
+                        "name": "2011 [YR2011]",
+                        "description": "The value of indicator for the year 2011"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2012",
-                        "name": "2012 [YR2012]"
+                        "name": "2012 [YR2012]",
+                        "description": "The value of indicator for the year 2012"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2013",
-                        "name": "2013 [YR2013]"
+                        "name": "2013 [YR2013]",
+                        "description": "The value of indicator for the year 2013"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2014",
-                        "name": "2014 [YR2014]"
+                        "name": "2014 [YR2014]",
+                        "description": "The value of indicator for the year 2014"
                     },
                     {
-                        "depth": 0,
-                        "description": "The value of indicator for the year 2015",
-                        "name": "2015 [YR2015]"
+                        "name": "2015 [YR2015]",
+                        "description": "The value of indicator for the year 2015"
                     }
                 ]
-            },
+            }
+        },
+        {
+            "name": "School_enrollment_secondary_percentage_gross.csv",
             "description": "This dataset contains information on school enrollment, secondary (percentage gross) for Sub-Saharan Africa and Lower Middle Income Countries (LMC) from 1975 to 2015.",
-            "domain_knowledge": "The gross enrollment ratio for secondary school, representing the percentage of children of official secondary school age who are enrolled in secondary school.",
-            "max_depth": 0,
-            "name": "School_enrollment_secondary_percentage_gross.csv"
+            "columns": {
+                "raw": [
+                    {
+                        "name": "Country Group",
+                        "description": "The name given to the group of countries- Sub-Saharan Africa and Lower middle income"
+                    },
+                    {
+                        "name": "Country Code",
+                        "description": "The code name assigned to each group of countries: Sub-Saharan Africa-SSA and Lower Middle Income Countries-LMC"
+                    },
+                    {
+                        "name": "1975 [YR1975]",
+                        "description": "The value of indicator for the year 1975"
+                    },
+                    {
+                        "name": "1976 [YR1976]",
+                        "description": "The value of indicator for the year 1976"
+                    },
+                    {
+                        "name": "1977 [YR1977]",
+                        "description": "The value of indicator for the year 1977"
+                    },
+                    {
+                        "name": "1978 [YR1978]",
+                        "description": "The value of indicator for the year 1978"
+                    },
+                    {
+                        "name": "1979 [YR1979]",
+                        "description": "The value of indicator for the year 1979"
+                    },
+                    {
+                        "name": "1980 [YR1980]",
+                        "description": "The value of indicator for the year 1980"
+                    },
+                    {
+                        "name": "1981 [YR1981]",
+                        "description": "The value of indicator for the year 1981"
+                    },
+                    {
+                        "name": "1982 [YR1982]",
+                        "description": "The value of indicator for the year 1982"
+                    },
+                    {
+                        "name": "1983 [YR1983]",
+                        "description": "The value of indicator for the year 1983"
+                    },
+                    {
+                        "name": "1984 [YR1984]",
+                        "description": "The value of indicator for the year 1984"
+                    },
+                    {
+                        "name": "1985 [YR1985]",
+                        "description": "The value of indicator for the year 1985"
+                    },
+                    {
+                        "name": "1986 [YR1986]",
+                        "description": "The value of indicator for the year 1986"
+                    },
+                    {
+                        "name": "1987 [YR1987]",
+                        "description": "The value of indicator for the year 1987"
+                    },
+                    {
+                        "name": "1988 [YR1988]",
+                        "description": "The value of indicator for the year 1988"
+                    },
+                    {
+                        "name": "1989 [YR1989]",
+                        "description": "The value of indicator for the year 1989"
+                    },
+                    {
+                        "name": "1990 [YR1990]",
+                        "description": "The value of indicator for the year 1990"
+                    },
+                    {
+                        "name": "1991 [YR1991]",
+                        "description": "The value of indicator for the year 1991"
+                    },
+                    {
+                        "name": "1992 [YR1992]",
+                        "description": "The value of indicator for the year 1992"
+                    },
+                    {
+                        "name": "1993 [YR1993]",
+                        "description": "The value of indicator for the year 1993"
+                    },
+                    {
+                        "name": "1994 [YR1994]",
+                        "description": "The value of indicator for the year 1994"
+                    },
+                    {
+                        "name": "1995 [YR1995]",
+                        "description": "The value of indicator for the year 1995"
+                    },
+                    {
+                        "name": "1996 [YR1996]",
+                        "description": "The value of indicator for the year 1996"
+                    },
+                    {
+                        "name": "1997 [YR1997]",
+                        "description": "The value of indicator for the year 1997"
+                    },
+                    {
+                        "name": "1998 [YR1998]",
+                        "description": "The value of indicator for the year 1998"
+                    },
+                    {
+                        "name": "1999 [YR1999]",
+                        "description": "The value of indicator for the year 1999"
+                    },
+                    {
+                        "name": "2000 [YR2000]",
+                        "description": "The value of indicator for the year 2000"
+                    },
+                    {
+                        "name": "2001 [YR2001]",
+                        "description": "The value of indicator for the year 2001"
+                    },
+                    {
+                        "name": "2002 [YR2002]",
+                        "description": "The value of indicator for the year 2002"
+                    },
+                    {
+                        "name": "2003 [YR2003]",
+                        "description": "The value of indicator for the year 2003"
+                    },
+                    {
+                        "name": "2004 [YR2004]",
+                        "description": "The value of indicator for the year 2004"
+                    },
+                    {
+                        "name": "2005 [YR2005]",
+                        "description": "The value of indicator for the year 2005"
+                    },
+                    {
+                        "name": "2006 [YR2006]",
+                        "description": "The value of indicator for the year 2006"
+                    },
+                    {
+                        "name": "2007 [YR2007]",
+                        "description": "The value of indicator for the year 2007"
+                    },
+                    {
+                        "name": "2008 [YR2008]",
+                        "description": "The value of indicator for the year 2008"
+                    },
+                    {
+                        "name": "2009 [YR2009]",
+                        "description": "The value of indicator for the year 2009"
+                    },
+                    {
+                        "name": "2010 [YR2010]",
+                        "description": "The value of indicator for the year 2010"
+                    },
+                    {
+                        "name": "2011 [YR2011]",
+                        "description": "The value of indicator for the year 2011"
+                    },
+                    {
+                        "name": "2012 [YR2012]",
+                        "description": "The value of indicator for the year 2012"
+                    },
+                    {
+                        "name": "2013 [YR2013]",
+                        "description": "The value of indicator for the year 2013"
+                    },
+                    {
+                        "name": "2014 [YR2014]",
+                        "description": "The value of indicator for the year 2014"
+                    },
+                    {
+                        "name": "2015 [YR2015]",
+                        "description": "The value of indicator for the year 2015"
+                    }
+                ]
+            }
         }
     ],
-    "domain": "economics",
-    "hypotheses": {
-        "intermediate": [],
-        "main": [
-            {
-                "depth": 0,
-                "expr": "",
-                "expr_ind": "",
-                "target": "",
-                "text": ""
-            }
-        ]
-    },
-    "id": 0,
     "intermediate": [],
+    "hypotheses": {
+        "main": [
+            {}
+        ],
+        "intermediate": []
+    },
     "queries": [
         [
             {
-                "prior_findings": "",
                 "qid": 0,
-                "question": "In what regions does increased education spending positively impact per capita GDP?",
-                "question_specificity": null,
                 "question_type": "context",
-                "relevant_cols": [],
-                "target_col": "GNI per capita (constant 2015 US dollar)",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "In what regions does increased education spending positively impact per capita GDP?"
             },
             {
-                "prior_findings": "",
                 "qid": 1,
-                "question": "What is the impact of increased education expenditure on per capita GDP in developing countries?",
-                "question_specificity": null,
                 "question_type": "relationship",
-                "relevant_cols": [],
-                "target_col": "",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "What is the impact of increased education expenditure on per capita GDP in developing countries?"
             }
         ]
-    ],
-    "workflow": "",
-    "workflow_tags": "data selection, econometric modelling, mixture models"
+    ]
 }
