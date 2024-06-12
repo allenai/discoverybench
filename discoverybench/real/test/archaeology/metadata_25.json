@@ -1,384 +1,304 @@
 {
+    "id": 0,
+    "domain": "humanities",
+    "workflow_tags": "data cleaning, feature engineering, time series analysis, correlation analysis",
+    "domain_knowledge": "1. Symbolic capital consists of Hatchet & Swords, Daggers, House Size. 2. Social Capital consists of Copper and Gold, Amber, Monument Count 3. Cultural Capital consists of Diversity of Pottery form, Diversity of Pottery Decoration. 4. Economic Capital consists of Depot, Sickle, Axes & Celts, Monument Size. 5. Human impact or landscape openness, respectively, as reflected in the pollen data, can be used as a demographic indicator based on the assumption that an increasing population density leads to increasing woodland clearance due to an increasing demand for resources including wood, agricultural land and settlement areas. Each sample from the pollen record used in the principal component analysis is absolutely dated and therefore the openness score (PC 1.) can be plotted as a time series, expressing human induced land clearance. The 'Belau_PC1' of pollen data (pollen_openness_score_Belau_Woserin_Feeser_et_al_2019.csv) has been assumed to reflect openness. Original openness score through 'Belau_PC1', 100-year smoothed openness score, and linear interpolation of openness score have been used to signify growth. The original openness score (Belau_PC1), the 100-year smoothed openness score (pollen_inter_100), and the linear interpolation of the openness score (pollen_inter) have been used to signify openness. 6. Demographic growth manifests itself in growth set bringing with it a further opening of the landscape. Opening of landscape corresponds to higher growth rates. During the Early Neolithic, we are dealing with a population growth that goes hand in hand with the opening up of vegetation and the cultivation of the landscape. The growth rate is defined as the percentage change of the 100-year smoothed openness score (pollen_grate_100). Time series analysis and PCA are done in 100-year bins.",
     "datasets": [
         {
-            "columns": {
-                "raw": [
-                    {
-                        "depth": 0,
-                        "description": "Common Era (BCE x (-1))",
-                        "name": "CE"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Calibrated years before the present",
-                        "name": "calBP"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Mean of kernel density estimation of all data points",
-                        "name": "kde_all_mean"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Standard deviation of kernel density estimation of all data points",
-                        "name": "kde_all_std"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "KDE of data points after detrending",
-                        "name": "kde_all_detrend"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Mean of KDE growth rates",
-                        "name": "g_all_mean"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Standard deviation of KDE growth rates",
-                        "name": "g_all_std"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Pollen data of Belau Lake",
-                        "name": "pollen"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated and forward filled missing pollen values",
-                        "name": "pollen_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Detrended pollen values from interpolated pollen values",
-                        "name": "pollen_detrend"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Rolling mean of the interpolated pollen data with a window size of 100",
-                        "name": "pollen_inter_100"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Percentage change of interpolated pollen data",
-                        "name": "pollen_grate_100"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for Hatchets and Swords",
-                        "name": "HatchetSword"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z values for Hatchets and Swords",
-                        "name": "HatchetSword_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for Daggers",
-                        "name": "Dagger"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z value for Daggers",
-                        "name": "Dagger_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for House Size in meter squared",
-                        "name": "HouseSize"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z values for House Sizes in meter squared",
-                        "name": "HouseSize_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for Copper and Gold",
-                        "name": "CopperGold"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z values for Copper and Gold",
-                        "name": "CopperGold_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for Amber",
-                        "name": "Amber"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z values for Amber",
-                        "name": "Amber_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for Monument Count",
-                        "name": "MonumentCount"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z values for Monument Count",
-                        "name": "MonumentCount_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for Depot",
-                        "name": "Depot"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z values for Depot",
-                        "name": "Depot_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for Sickle",
-                        "name": "Sickle"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z values for Sickle",
-                        "name": "Sickle_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for Axes and Celts",
-                        "name": "AxesCelts"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z values for Axes and Celts",
-                        "name": "AxesCelts_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for Monument Size",
-                        "name": "MonumentSize"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z values for Monument Size",
-                        "name": "MonumentSize_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for Pottery Form",
-                        "name": "PotteryForm"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z values for Pottery Form",
-                        "name": "PotteryForm_inter"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Z values for Pottery Decoration",
-                        "name": "PotteryDecoration"
-                    },
-                    {
-                        "depth": 0,
-                        "description": "Interpolated z values for Pottery Decoration",
-                        "name": "PotteryDecoration_inter"
-                    }
-                ]
-            },
+            "name": "time_series_data.csv",
             "description": "This dataset provides a detailed quantification of archaeological findings over various time periods, measured in Z values for different cultural and economic indicators such as tools, house sizes, materials, and monument data. ",
-            "max_depth": 0,
-            "name": "time_series_data.csv"
-        },
-        {
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
-                        "description": "Before Common Era",
-                        "name": "BCE"
+                        "name": "CE",
+                        "description": "Common Era (BCE x (-1))"
                     },
                     {
-                        "depth": 0,
-                        "description": "Dropped after data loading",
-                        "name": "group"
+                        "name": "calBP",
+                        "description": "Calibrated years before the present"
                     },
                     {
-                        "depth": 0,
-                        "description": "Dropped after data loading",
-                        "name": "color"
+                        "name": "kde_all_mean",
+                        "description": "Mean of kernel density estimation of all data points"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for Hatchets and Swords",
-                        "name": "ZAxtSchwert"
+                        "name": "kde_all_std",
+                        "description": "Standard deviation of kernel density estimation of all data points"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for Daggers",
-                        "name": "ZDolch"
+                        "name": "kde_all_detrend",
+                        "description": "KDE of data points after detrending"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for House Size",
-                        "name": "Zhausgr"
+                        "name": "g_all_mean",
+                        "description": "Mean of KDE growth rates"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for Copper and Gold",
-                        "name": "ZCU_AU"
+                        "name": "g_all_std",
+                        "description": "Standard deviation of KDE growth rates"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for Amber",
-                        "name": "Zamber"
+                        "name": "pollen",
+                        "description": "Pollen data of Belau Lake"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for Monument Count",
-                        "name": "ZMonument"
+                        "name": "pollen_inter",
+                        "description": "Interpolated and forward filled missing pollen values"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for Depot",
-                        "name": "ZHort"
+                        "name": "pollen_detrend",
+                        "description": "Detrended pollen values from interpolated pollen values"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for Sickle",
-                        "name": "ZSichel"
+                        "name": "pollen_inter_100",
+                        "description": "Rolling mean of the interpolated pollen data with a window size of 100"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for Axes and Celts",
-                        "name": "ZBeil"
+                        "name": "pollen_grate_100",
+                        "description": "Percentage change of interpolated pollen data"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for Monument Size",
-                        "name": "ZMW"
+                        "name": "HatchetSword",
+                        "description": "Z values for Hatchets and Swords"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for Pottery Form",
-                        "name": "ZKeform"
+                        "name": "HatchetSword_inter",
+                        "description": "Interpolated z values for Hatchets and Swords"
                     },
                     {
-                        "depth": 0,
-                        "description": "Z values for Pottery Decoration",
-                        "name": "Zkeverz"
+                        "name": "Dagger",
+                        "description": "Z values for Daggers"
+                    },
+                    {
+                        "name": "Dagger_inter",
+                        "description": "Interpolated z value for Daggers"
+                    },
+                    {
+                        "name": "HouseSize",
+                        "description": "Z values for House Size in meter squared"
+                    },
+                    {
+                        "name": "HouseSize_inter",
+                        "description": "Interpolated z values for House Sizes in meter squared"
+                    },
+                    {
+                        "name": "CopperGold",
+                        "description": "Z values for Copper and Gold"
+                    },
+                    {
+                        "name": "CopperGold_inter",
+                        "description": "Interpolated z values for Copper and Gold"
+                    },
+                    {
+                        "name": "Amber",
+                        "description": "Z values for Amber"
+                    },
+                    {
+                        "name": "Amber_inter",
+                        "description": "Interpolated z values for Amber"
+                    },
+                    {
+                        "name": "MonumentCount",
+                        "description": "Z values for Monument Count"
+                    },
+                    {
+                        "name": "MonumentCount_inter",
+                        "description": "Interpolated z values for Monument Count"
+                    },
+                    {
+                        "name": "Depot",
+                        "description": "Z values for Depot"
+                    },
+                    {
+                        "name": "Depot_inter",
+                        "description": "Interpolated z values for Depot"
+                    },
+                    {
+                        "name": "Sickle",
+                        "description": "Z values for Sickle"
+                    },
+                    {
+                        "name": "Sickle_inter",
+                        "description": "Interpolated z values for Sickle"
+                    },
+                    {
+                        "name": "AxesCelts",
+                        "description": "Z values for Axes and Celts"
+                    },
+                    {
+                        "name": "AxesCelts_inter",
+                        "description": "Interpolated z values for Axes and Celts"
+                    },
+                    {
+                        "name": "MonumentSize",
+                        "description": "Z values for Monument Size"
+                    },
+                    {
+                        "name": "MonumentSize_inter",
+                        "description": "Interpolated z values for Monument Size"
+                    },
+                    {
+                        "name": "PotteryForm",
+                        "description": "Z values for Pottery Form"
+                    },
+                    {
+                        "name": "PotteryForm_inter",
+                        "description": "Interpolated z values for Pottery Form"
+                    },
+                    {
+                        "name": "PotteryDecoration",
+                        "description": "Z values for Pottery Decoration"
+                    },
+                    {
+                        "name": "PotteryDecoration_inter",
+                        "description": "Interpolated z values for Pottery Decoration"
                     }
                 ]
-            },
+            }
+        },
+        {
+            "name": "capital.csv",
             "description": "This dataset contains archaeological data of various forms of capital across different prehistoric periods.",
-            "max_depth": 0,
-            "name": "capital.csv"
-        },
-        {
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
-                        "description": "Index or a time marker in years counting backward",
-                        "name": "Unnamed"
+                        "name": "BCE",
+                        "description": "Before Common Era"
                     },
                     {
-                        "depth": 0,
-                        "description": "Calibrated years Before Present (1950 AD)",
-                        "name": "calBP"
+                        "name": "group",
+                        "description": "Dropped after data loading"
                     },
                     {
-                        "depth": 0,
-                        "description": "Common Era",
-                        "name": "CE"
+                        "name": "color",
+                        "description": "Dropped after data loading"
                     },
                     {
-                        "depth": 0,
-                        "description": "PC1 of principal components for pollen in Belau",
-                        "name": "Belau_PC1"
+                        "name": "ZAxtSchwert",
+                        "description": "Z values for Hatchets and Swords"
                     },
                     {
-                        "depth": 0,
-                        "description": "PC1 of principal components for pollen in Woserin",
-                        "name": "Woserin_PC1"
+                        "name": "ZDolch",
+                        "description": "Z values for Daggers"
                     },
                     {
-                        "depth": 0,
-                        "description": "Interpolated PC1 for the Belau site",
-                        "name": "Belau_PC1_inter"
+                        "name": "Zhausgr",
+                        "description": "Z values for House Size"
                     },
                     {
-                        "depth": 0,
-                        "description": "Interpolated PC1 for the Woserin site",
-                        "name": "Woserin_PC1_inter"
+                        "name": "ZCU_AU",
+                        "description": "Z values for Copper and Gold"
                     },
                     {
-                        "depth": 0,
-                        "description": "The average of the interpolated PC1 for the Belau and Woserin sites",
-                        "name": "MEAN"
+                        "name": "Zamber",
+                        "description": "Z values for Amber"
                     },
                     {
-                        "depth": 0,
-                        "description": "Smoothed averages of the PC1 over 50 years",
-                        "name": "SMOOTH_MEAN_50y"
+                        "name": "ZMonument",
+                        "description": "Z values for Monument Count"
                     },
                     {
-                        "depth": 0,
-                        "description": "Smoothed averages of the PC1 over 100 years",
-                        "name": "SMOOTH_MEAN_100y"
+                        "name": "ZHort",
+                        "description": "Z values for Depot"
                     },
                     {
-                        "depth": 0,
-                        "description": "Smoothed averages of the PC1 over 150 years",
-                        "name": "SMOOTH_MEAN_150y"
+                        "name": "ZSichel",
+                        "description": "Z values for Sickle"
                     },
                     {
-                        "depth": 0,
-                        "description": "Smoothed averages of the PC1 over 200 years",
-                        "name": "SMOOTH_MEAN_200y"
+                        "name": "ZBeil",
+                        "description": "Z values for Axes and Celts"
                     },
                     {
-                        "depth": 0,
-                        "description": "Smoothed averages of the PC1 over 250 years",
-                        "name": "SMOOTH_MEAN_250y"
+                        "name": "ZMW",
+                        "description": "Z values for Monument Size"
+                    },
+                    {
+                        "name": "ZKeform",
+                        "description": "Z values for Pottery Form"
+                    },
+                    {
+                        "name": "Zkeverz",
+                        "description": "Z values for Pottery Decoration"
                     }
                 ]
-            },
+            }
+        },
+        {
+            "name": "pollen_openness_score_Belau_Woserin_Feeser_et_al_2019.csv",
             "description": "Records of pollen data's PCA & interpolations acrosss sites.",
-            "max_depth": 0,
-            "name": "pollen_openness_score_Belau_Woserin_Feeser_et_al_2019.csv"
+            "columns": {
+                "raw": [
+                    {
+                        "name": "Unnamed",
+                        "description": "Index or a time marker in years counting backward"
+                    },
+                    {
+                        "name": "calBP",
+                        "description": "Calibrated years Before Present (1950 AD)"
+                    },
+                    {
+                        "name": "CE",
+                        "description": "Common Era"
+                    },
+                    {
+                        "name": "Belau_PC1",
+                        "description": "PC1 of principal components for pollen in Belau"
+                    },
+                    {
+                        "name": "Woserin_PC1",
+                        "description": "PC1 of principal components for pollen in Woserin"
+                    },
+                    {
+                        "name": "Belau_PC1_inter",
+                        "description": "Interpolated PC1 for the Belau site"
+                    },
+                    {
+                        "name": "Woserin_PC1_inter",
+                        "description": "Interpolated PC1 for the Woserin site"
+                    },
+                    {
+                        "name": "MEAN",
+                        "description": "The average of the interpolated PC1 for the Belau and Woserin sites"
+                    },
+                    {
+                        "name": "SMOOTH_MEAN_50y",
+                        "description": "Smoothed averages of the PC1 over 50 years"
+                    },
+                    {
+                        "name": "SMOOTH_MEAN_100y",
+                        "description": "Smoothed averages of the PC1 over 100 years"
+                    },
+                    {
+                        "name": "SMOOTH_MEAN_150y",
+                        "description": "Smoothed averages of the PC1 over 150 years"
+                    },
+                    {
+                        "name": "SMOOTH_MEAN_200y",
+                        "description": "Smoothed averages of the PC1 over 200 years"
+                    },
+                    {
+                        "name": "SMOOTH_MEAN_250y",
+                        "description": "Smoothed averages of the PC1 over 250 years"
+                    }
+                ]
+            }
         }
     ],
-    "domain": "humanities",
-    "domain_knowledge": "1. Symbolic capital consists of Hatchet & Swords, Daggers, House Size. 2. Social Capital consists of Copper and Gold, Amber, Monument Count 3. Cultural Capital consists of Diversity of Pottery form, Diversity of Pottery Decoration. 4. Economic Capital consists of Depot, Sickle, Axes & Celts, Monument Size. 5. Human impact or landscape openness, respectively, as reflected in the pollen data, can be used as a demographic indicator based on the assumption that an increasing population density leads to increasing woodland clearance due to an increasing demand for resources including wood, agricultural land and settlement areas. Each sample from the pollen record used in the principal component analysis is absolutely dated and therefore the openness score (PC 1.) can be plotted as a time series, expressing human induced land clearance. The 'Belau_PC1' of pollen data (pollen_openness_score_Belau_Woserin_Feeser_et_al_2019.csv) has been assumed to reflect openness. Original openness score through 'Belau_PC1', 100-year smoothed openness score, and linear interpolation of openness score have been used to signify growth. The original openness score (Belau_PC1), the 100-year smoothed openness score (pollen_inter_100), and the linear interpolation of the openness score (pollen_inter) have been used to signify openness. 6. Demographic growth manifests itself in growth set bringing with it a further opening of the landscape. Opening of landscape corresponds to higher growth rates. During the Early Neolithic, we are dealing with a population growth that goes hand in hand with the opening up of vegetation and the cultivation of the landscape. The growth rate is defined as the percentage change of the 100-year smoothed openness score (pollen_grate_100).",
-    "hypotheses": {
-        "intermediate": [],
-        "main": [
-            {
-                "depth": 0,
-                "expr": "",
-                "expr_ind": "",
-                "target": "",
-                "text": ""
-            }
-        ]
-    },
-    "id": 0,
     "intermediate": [],
+    "hypotheses": {
+        "main": [
+            {}
+        ],
+        "intermediate": []
+    },
     "queries": [
         [
             {
-                "prior_findings": "",
                 "qid": 0,
-                "question": "What is the relationship of amber finds and number of monuments with house sizes between 3400-3000 BCE?",
-                "question_specificity": null,
                 "question_type": "relationship",
-                "relevant_cols": [],
-                "target_col": "",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "What is the relationship of amber finds and number of monuments with house sizes between 3400-3000 BCE?"
             }
         ]
-    ],
-    "workflow": "",
-    "workflow_tags": "data cleaning, data transformation, feature engineering, time series segmentation, correlation analysis"
+    ]
 }

@@ -1,351 +1,276 @@
 {
+    "id": 0,
+    "domain": "sociology",
+    "workflow_tags": "data selection, statistical tests, feature engineering, data cleaning",
+    "domain_knowledge": "This is a longitudinal survey data that does not have a perfect response rate. Addressing & accounting for missing information in longitudinal survey data is critical to ensuring the validity and reliability of the analysis outcomes. Spending and saving behavior can be used as proxies for Time preference of an individual. Incarceration status can also be gauged by studying the place of residence. If it is ‘Jail’, or other facilities of detention, incarceration can be assumed. Test scores and class standings are some of the ways to gauge the academic performance of an individual.",
     "datasets": [
         {
+            "name": "nls_raw.csv",
+            "description": "The dataset contains information from National Longitudinal Survey of Youth (NLSY79). It includes information about the Demographics, Family Background, Education, Health, Residential, Financial & Criminal Records of the participants.",
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
-                        "description": "Unique Identifier of the respondent",
-                        "name": "ID# (range 1-12686) 1979"
+                        "name": "ID# (range 1-12686) 1979",
+                        "description": "Unique Identifier of the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Sample Identification Code",
-                        "name": "Sample ID, 1979 (interview)"
+                        "name": "Sample ID, 1979 (interview)",
+                        "description": "Sample Identification Code"
                     },
                     {
-                        "depth": 0,
-                        "description": "Age of respondent in 1979",
-                        "name": "Age of respondent, 1979"
+                        "name": "Age of respondent, 1979",
+                        "description": "Age of respondent in 1979"
                     },
                     {
-                        "depth": 0,
-                        "description": "Age of respondent in 1981",
-                        "name": "Age of respondent at interview date, 1981"
+                        "name": "Age of respondent at interview date, 1981",
+                        "description": "Age of respondent in 1981"
                     },
                     {
-                        "depth": 0,
-                        "description": "Age of respondent in 1989",
-                        "name": "Age of respondent at interview date, 1989"
+                        "name": "Age of respondent at interview date, 1989",
+                        "description": "Age of respondent in 1989"
                     },
                     {
-                        "depth": 0,
-                        "description": "Occupation of the adult male present in the household of the respondent at age 14 in 1979. Variable records the occupation of the father figure of the repondent, values include FARMER AND FARM MANAGERS, PROFESSIONAL,TECHNICAL AND KINDRED etc",
-                        "name": "Occupation of adult male in household at age 14, 1979"
+                        "name": "Occupation of adult male in household at age 14, 1979",
+                        "description": "Occupation of the adult male present in the household of the respondent at age 14 in 1979. Variable records the occupation of the father figure of the repondent, values include FARMER AND FARM MANAGERS, PROFESSIONAL,TECHNICAL AND KINDRED etc"
                     },
                     {
-                        "depth": 0,
-                        "description": "Highest grade or year of regular school that respondent's mother ever completed till 1979",
-                        "name": "Highest grade completed by respondent's mother, 1979"
+                        "name": "Highest grade completed by respondent's mother, 1979",
+                        "description": "Highest grade or year of regular school that respondent's mother ever completed till 1979"
                     },
                     {
-                        "depth": 0,
-                        "description": "Highest grade or year of regular school that respondent's father ever completed till 1979",
-                        "name": "Highest grade completed by respondent's father, 1979"
+                        "name": "Highest grade completed by respondent's father, 1979",
+                        "description": "Highest grade or year of regular school that respondent's father ever completed till 1979"
                     },
                     {
-                        "depth": 0,
-                        "description": "Highest grade or year of regular school that respondent have completed and got credit for till 1979",
-                        "name": "Highest grade completed, 1979"
+                        "name": "Highest grade completed, 1979",
+                        "description": "Highest grade or year of regular school that respondent have completed and got credit for till 1979"
                     },
                     {
-                        "depth": 0,
-                        "description": "Respondent's racial/ethnic cohort, contains one of three values 1:BLACK, 2:HISPANIC, 3:NON-BLACK NON-HISPANIC",
-                        "name": "Racial/ethnic cohort, 1979"
+                        "name": "Racial/ethnic cohort, 1979",
+                        "description": "Respondent's racial/ethnic cohort, contains one of three values 1:BLACK, 2:HISPANIC, 3:NON-BLACK NON-HISPANIC"
                     },
                     {
-                        "depth": 0,
-                        "description": "Sex of the respondent, 1:MALE or 2:FEMALE",
-                        "name": "Sex of respondent, 1979"
+                        "name": "Sex of respondent, 1979",
+                        "description": "Sex of the respondent, 1:MALE or 2:FEMALE"
                     },
                     {
-                        "depth": 0,
-                        "description": "Family size of the respondent in 1979",
-                        "name": "Family size, 1979"
+                        "name": "Family size, 1979",
+                        "description": "Family size of the respondent in 1979"
                     },
                     {
-                        "depth": 0,
-                        "description": "Boolean variable that indicates if the respondent was convicted of an illegal act in adult court other than minor traffic violations before 1980",
-                        "name": "Ever convicted of an illegal act in adult court before 1980"
+                        "name": "Ever convicted of an illegal act in adult court before 1980",
+                        "description": "Boolean variable that indicates if the respondent was convicted of an illegal act in adult court other than minor traffic violations before 1980"
                     },
                     {
-                        "depth": 0,
-                        "description": "Boolean variable that indicated if the respondent was sentenced to spend time in a corrections institute, like a jail, prison, or a youth institution like a training school or reform school or not before 1980",
-                        "name": "Ever been sentenced in any correctional institution before 1980"
+                        "name": "Ever been sentenced in any correctional institution before 1980",
+                        "description": "Boolean variable that indicated if the respondent was sentenced to spend time in a corrections institute, like a jail, prison, or a youth institution like a training school or reform school or not before 1980"
                     },
                     {
-                        "depth": 0,
-                        "description": "Height of the respondent in inches in 1981",
-                        "name": "Height of respondent, 1981"
+                        "name": "Height of respondent, 1981",
+                        "description": "Height of the respondent in inches in 1981"
                     },
                     {
-                        "depth": 0,
-                        "description": "Height of the respondent in inches in 1985",
-                        "name": "Height of respondent, 1985"
+                        "name": "Height of respondent, 1985",
+                        "description": "Height of the respondent in inches in 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "Weight of the respondent in kilograms in 1981",
-                        "name": "Weight of respondent, 1981"
+                        "name": "Weight of respondent, 1981",
+                        "description": "Weight of the respondent in kilograms in 1981"
                     },
                     {
-                        "depth": 0,
-                        "description": "Weight of the respondent in kilograms in 1989",
-                        "name": "Weight of respondent, 1989"
+                        "name": "Weight of respondent, 1989",
+                        "description": "Weight of the respondent in kilograms in 1989"
                     },
                     {
-                        "depth": 0,
-                        "description": "Weight of the respondent in kilograms in 1992",
-                        "name": "Weight of respondent, 1992"
+                        "name": "Weight of respondent, 1992",
+                        "description": "Weight of the respondent in kilograms in 1992"
                     },
                     {
-                        "depth": 0,
-                        "description": "Respondent's rank in the class that he attended in school last year (in 1980) (variable recorded in 1981)",
-                        "name": "Rank in class last year attended at this school, 1981"
+                        "name": "Rank in class last year attended at this school, 1981",
+                        "description": "Respondent's rank in the class that he attended in school last year (in 1980) (variable recorded in 1981)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Number of students in the respondent's class for the last year attended this school",
-                        "name": "Number of students in class last year attended at this school, 1981"
+                        "name": "Number of students in class last year attended at this school, 1981",
+                        "description": "Number of students in the respondent's class for the last year attended this school"
                     },
                     {
-                        "depth": 0,
-                        "description": "This variable represents the standardized scores of respondents on the Arithmetic Reasoning section of the ASVAB test. It provides a way to compare individuals' performance on this specific aspect of the test within a standardized framework.",
-                        "name": "ASVAB - Arithmetic Reasoning Z Score (rounded), 1981"
+                        "name": "ASVAB - Arithmetic Reasoning Z Score (rounded), 1981",
+                        "description": "This variable represents the standardized scores of respondents on the Arithmetic Reasoning section of the ASVAB test. It provides a way to compare individuals' performance on this specific aspect of the test within a standardized framework."
                     },
                     {
-                        "depth": 0,
-                        "description": "This variable represents the standardized scores of respondents on the Word Knowledge section of the ASVAB test, allowing for comparison of individuals' performance on this specific aspect of the test within a standardized framework.",
-                        "name": "ASVAB - Word Knowledge Z Score (rounded), 1981"
+                        "name": "ASVAB - Word Knowledge Z Score (rounded), 1981",
+                        "description": "This variable represents the standardized scores of respondents on the Word Knowledge section of the ASVAB test, allowing for comparison of individuals' performance on this specific aspect of the test within a standardized framework."
                     },
                     {
-                        "depth": 0,
-                        "description": "This variable represents the standardized scores of respondents on the Paragraph Comprehension section of the ASVAB test, allowing for comparison of individuals' performance on this specific aspect of the test within a standardized framework.",
-                        "name": "ASVAB - Paragraph Comprehension Z Score (rounded), 1981"
+                        "name": "ASVAB - Paragraph Comprehension Z Score (rounded), 1981",
+                        "description": "This variable represents the standardized scores of respondents on the Paragraph Comprehension section of the ASVAB test, allowing for comparison of individuals' performance on this specific aspect of the test within a standardized framework."
                     },
                     {
-                        "depth": 0,
-                        "description": "This variable represents the standardized scores of respondents on the Mathematics Knowledge section of the ASVAB test, facilitating comparison of individuals' performance on this specific aspect of the test within a standardized framework.",
-                        "name": "ASVAB - Mathematics Knowledge Z Score (rounded), 1981"
+                        "name": "ASVAB - Mathematics Knowledge Z Score (rounded), 1981",
+                        "description": "This variable represents the standardized scores of respondents on the Mathematics Knowledge section of the ASVAB test, facilitating comparison of individuals' performance on this specific aspect of the test within a standardized framework."
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1981, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1981"
+                        "name": "Type of residence respondent is living in, 1981",
+                        "description": "Type of residence respondent is living in the 1981, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1982, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1982"
+                        "name": "Type of residence respondent is living in, 1982",
+                        "description": "Type of residence respondent is living in the 1982, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1983, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1983"
+                        "name": "Type of residence respondent is living in, 1983",
+                        "description": "Type of residence respondent is living in the 1983, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1984, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1984"
+                        "name": "Type of residence respondent is living in, 1984",
+                        "description": "Type of residence respondent is living in the 1984, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1985, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1985"
+                        "name": "Type of residence respondent is living in, 1985",
+                        "description": "Type of residence respondent is living in the 1985, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1986, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1986"
+                        "name": "Type of residence respondent is living in, 1986",
+                        "description": "Type of residence respondent is living in the 1986, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1987, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1987"
+                        "name": "Type of residence respondent is living in, 1987",
+                        "description": "Type of residence respondent is living in the 1987, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1988, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1988"
+                        "name": "Type of residence respondent is living in, 1988",
+                        "description": "Type of residence respondent is living in the 1988, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1989, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1989"
+                        "name": "Type of residence respondent is living in, 1989",
+                        "description": "Type of residence respondent is living in the 1989, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1990, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1990"
+                        "name": "Type of residence respondent is living in, 1990",
+                        "description": "Type of residence respondent is living in the 1990, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1991, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1991"
+                        "name": "Type of residence respondent is living in, 1991",
+                        "description": "Type of residence respondent is living in the 1991, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1992, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1992"
+                        "name": "Type of residence respondent is living in, 1992",
+                        "description": "Type of residence respondent is living in the 1992, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1993, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1993"
+                        "name": "Type of residence respondent is living in, 1993",
+                        "description": "Type of residence respondent is living in the 1993, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1994, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1994"
+                        "name": "Type of residence respondent is living in, 1994",
+                        "description": "Type of residence respondent is living in the 1994, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Type of residence respondent is living in the 1996, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD",
-                        "name": "Type of residence respondent is living in, 1996"
+                        "name": "Type of residence respondent is living in, 1996",
+                        "description": "Type of residence respondent is living in the 1996, contains one of these values 1:ABOARD SHIP, BARRACKS,    2:BACHELOR, OFFICER QUARTERS,    3:DORM, FRATERNITY, SORORITY,    4:HOSPITAL,    5:JAIL,    6:OTHER TEMPORARY QUARTERS,    11:OWN DWELLING UNIT,    12:ON-BASE MIL FAM HOUSING,    13:OFF-BASE MIL FAM HOUSING,    14:ORPHANAGE,    15:RELIGIOUS INSTITUTION,    16:OTHER INDIVIDUAL QUARTERS,    17:PARENTAL,    18:HHI CONDUCTED WITH PARENT,    19:R IN PARENTAL HOUSEHOLD"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total Net Wealth for Family. Created by summing all asset values and subtracting all debts for the year 1985",
-                        "name": "Family net wealth, 1985"
+                        "name": "Family net wealth, 1985",
+                        "description": "Total Net Wealth for Family. Created by summing all asset values and subtracting all debts for the year 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total Net Wealth for Family. Created by summing all asset values and subtracting all debts for the year 1990",
-                        "name": "Family net wealth, 1990"
+                        "name": "Family net wealth, 1990",
+                        "description": "Total Net Wealth for Family. Created by summing all asset values and subtracting all debts for the year 1990"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total Net Wealth for Family. Created by summing all asset values and subtracting all debts for the year 1996",
-                        "name": "Family net wealth, 1996 (key data point)"
+                        "name": "Family net wealth, 1996 (key data point)",
+                        "description": "Total Net Wealth for Family. Created by summing all asset values and subtracting all debts for the year 1996"
                     },
                     {
-                        "depth": 0,
-                        "description": "Market value of residential property that respondent/spouse owned in 1985",
-                        "name": "Market value of residential property respondent/spouse own, 1985"
+                        "name": "Market value of residential property respondent/spouse own, 1985",
+                        "description": "Market value of residential property that respondent/spouse owned in 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "Market value of residential property that respondent/spouse owned in 1990",
-                        "name": "Market value of residential property respondent/spouse own, 1990"
+                        "name": "Market value of residential property respondent/spouse own, 1990",
+                        "description": "Market value of residential property that respondent/spouse owned in 1990"
                     },
                     {
-                        "depth": 0,
-                        "description": "Market value of residential property that respondent/spouse owned in 1996",
-                        "name": "Market value of residential property respondent/spouse own, 1996"
+                        "name": "Market value of residential property respondent/spouse own, 1996",
+                        "description": "Market value of residential property that respondent/spouse owned in 1996"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total market value of all of the real estate, assets in the business(es), farm operation(s) in 1985",
-                        "name": "Total market value of farm, business, and other property, 1985"
+                        "name": "Total market value of farm, business, and other property, 1985",
+                        "description": "Total market value of all of the real estate, assets in the business(es), farm operation(s) in 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total market value of all of the real estate, assets in the business(es), farm operation(s) in 1990",
-                        "name": "Total market value of farm, business, and other property, 1990"
+                        "name": "Total market value of farm, business, and other property, 1990",
+                        "description": "Total market value of all of the real estate, assets in the business(es), farm operation(s) in 1990"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total market value of all of the real estate, assets in the business(es), farm operation(s) in 1996",
-                        "name": "Total market value of farm, business, and other property, 1996"
+                        "name": "Total market value of farm, business, and other property, 1996",
+                        "description": "Total market value of all of the real estate, assets in the business(es), farm operation(s) in 1996"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total market value of all vehicles including automobiles that respondent/spouse owned in 1985",
-                        "name": "Market Value of vehicles respondent/spouse own, 1985"
+                        "name": "Market Value of vehicles respondent/spouse own, 1985",
+                        "description": "Total market value of all vehicles including automobiles that respondent/spouse owned in 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total market value of all vehicles including automobiles that respondent/spouse owned in 1990",
-                        "name": "Market Value of vehicles respondent/spouse own, 1990"
+                        "name": "Market Value of vehicles respondent/spouse own, 1990",
+                        "description": "Total market value of all vehicles including automobiles that respondent/spouse owned in 1990"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total market value of all vehicles including automobiles that respondent/spouse owned in 1996",
-                        "name": "Market Value of vehicles respondent/spouse own, 96"
+                        "name": "Market Value of vehicles respondent/spouse own, 96",
+                        "description": "Total market value of all vehicles including automobiles that respondent/spouse owned in 1996"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total market value of all the other assets of the respondent that were worth more than $500 in 1985",
-                        "name": "Total market value of items over $500, 1985"
+                        "name": "Total market value of items over $500, 1985",
+                        "description": "Total market value of all the other assets of the respondent that were worth more than $500 in 1985"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total market value of all the other assets of the respondent that were worth more than $500 in 1990",
-                        "name": "Total market value of items over $500, 1990"
+                        "name": "Total market value of items over $500, 1990",
+                        "description": "Total market value of all the other assets of the respondent that were worth more than $500 in 1990"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total market value of all the other assets of the respondent that were worth more than $500 in 1996",
-                        "name": "Total market value of items over $500, 1996"
+                        "name": "Total market value of items over $500, 1996",
+                        "description": "Total market value of all the other assets of the respondent that were worth more than $500 in 1996"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total net family income for the previous calendar year (1978) (recorded in 1979)",
-                        "name": "Total net family income, previous calendar year, 1979"
+                        "name": "Total net family income, previous calendar year, 1979",
+                        "description": "Total net family income for the previous calendar year (1978) (recorded in 1979)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total net family income for the previous calendar year (1984) (recorded in 1985)",
-                        "name": "Total net family income, previous calendar year, 1985"
+                        "name": "Total net family income, previous calendar year, 1985",
+                        "description": "Total net family income for the previous calendar year (1984) (recorded in 1985)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Total net family income for the previous calendar year (1989) (recorded in 1989)",
-                        "name": "Total net family income, previous calendar year, 1989"
+                        "name": "Total net family income, previous calendar year, 1989",
+                        "description": "Total net family income for the previous calendar year (1989) (recorded in 1989)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Categorical variable indicating if was more money was put into or taken out of respondent/spouse savings since last interview in 1989.\nIt contains four values 1:PUT MORE MONEY IN, 2:TOOK MORE MONEY OUT, 3:NO CHANGE, 4:NO SAVINGS",
-                        "name": "Was more money put into or taken out of R/spouse savings since last interview, 1989"
+                        "name": "Was more money put into or taken out of R/spouse savings since last interview, 1989",
+                        "description": "Categorical variable indicating if was more money was put into or taken out of respondent/spouse savings since last interview in 1989.\nIt contains four values 1:PUT MORE MONEY IN, 2:TOOK MORE MONEY OUT, 3:NO CHANGE, 4:NO SAVINGS"
                     },
                     {
-                        "depth": 0,
-                        "description": "Net amount of money that respondent/spouse put into their savings since last interview in 1989",
-                        "name": "Net amount respondent/spouse put into savings since last interview, 1989"
+                        "name": "Net amount respondent/spouse put into savings since last interview, 1989",
+                        "description": "Net amount of money that respondent/spouse put into their savings since last interview in 1989"
                     },
                     {
-                        "depth": 0,
-                        "description": "Net amount of money that respondent/spouse took out of savings since last interview in 1989",
-                        "name": "Net amount respondent/spouse took out of savings since last interview, 1989"
+                        "name": "Net amount respondent/spouse took out of savings since last interview, 1989",
+                        "description": "Net amount of money that respondent/spouse took out of savings since last interview in 1989"
                     }
                 ]
-            },
-            "description": "The dataset contains information from National Longitudinal Survey of Youth (NLSY79). It includes information about the Demographics, Family Background, Education, Health, Residential, Financial & Criminal Records of the participants.",
-            "domain_knowledge": "Armed Services Vocational Aptitude Battery (ASVAB) measures the respondent's knowledge and skills in the topical areas such as mathematical reasoning, science, and reading comprehension. The savings behaviour of the respondent can be inferred from the net amount of money put into or taken out of savings since the last interview. Wealth is calculated by summing all asset values and subtracting all debts. The dataset also includes information on the respondent's criminal history, such as whether the respondent was ever convicted of an illegal act in adult court before 1980 and whether the respondent was ever sentenced in any correctional institution before 1980.",
-            "max_depth": 0,
-            "name": "nls_raw.csv"
+            }
         }
     ],
-    "domain": "sociology",
-    "hypotheses": {
-        "intermediate": [],
-        "main": [
-            {
-                "depth": 0,
-                "expr": "",
-                "expr_ind": "",
-                "target": "",
-                "text": ""
-            }
-        ]
-    },
-    "id": 0,
     "intermediate": [],
+    "hypotheses": {
+        "main": [
+            {}
+        ],
+        "intermediate": []
+    },
     "queries": [
         [
             {
-                "prior_findings": "",
                 "qid": 0,
-                "question": "How does the median wealth of white individuals compare to that of black and Hispanic individuals from 1985 onwards?",
-                "question_specificity": null,
                 "question_type": "relationship",
-                "relevant_cols": [],
-                "target_col": "",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "How does the median wealth of white individuals compare to that of black and Hispanic individuals from 1985 onwards?"
             }
         ]
-    ],
-    "workflow": "",
-    "workflow_tags": "data selection, statistical analysis, feature engineering, data cleaning"
+    ]
 }

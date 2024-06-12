@@ -1,1056 +1,840 @@
 {
+    "id": 0,
+    "domain": "engineering",
+    "workflow_tags": "data cleaning, data standardization, statistical sampling, statistical tests",
+    "domain_knowledge": "The data from this ML requirements survey may include negative numbers, which could indicate no response. Negative values or -99 may signify NA and have to be excluded.",
     "datasets": [
         {
+            "name": "requirements_engineering_for_ML-enabled_systems.csv",
+            "description": "Survey responses detailing the roles, techniques, and documentation practices associated with requirements in ML-enabled system projects.",
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
-                        "description": "The unique identifier for each respondent.",
-                        "name": "ID"
+                        "name": "ID",
+                        "description": "The unique identifier for each respondent."
                     },
                     {
-                        "depth": 0,
-                        "description": "The current status of the respondent",
-                        "name": "Status"
+                        "name": "Status",
+                        "description": "The current status of the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "The duration of the respondent's involvement",
-                        "name": "Duration"
+                        "name": "Duration",
+                        "description": "The duration of the respondent's involvement"
                     },
                     {
-                        "depth": 0,
-                        "description": "Undergraduate (e.g., Computer Science, Statistics)",
-                        "name": "D1_Undergraduation"
+                        "name": "D1_Undergraduation",
+                        "description": "Undergraduate (e.g., Computer Science, Statistics)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Specialization (e.g., Data Science specialization, Project Management specialization)",
-                        "name": "D1_Specialization"
+                        "name": "D1_Specialization",
+                        "description": "Specialization (e.g., Data Science specialization, Project Management specialization)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Master (e.g., M.Sc. in Computer Science, M.Sc. in Economics)",
-                        "name": "D1_Master"
+                        "name": "D1_Master",
+                        "description": "Master (e.g., M.Sc. in Computer Science, M.Sc. in Economics)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Ph.D. (e.g., Ph.D. in Computer Science, Ph.D. in Mathematics)",
-                        "name": "D1_Phd"
+                        "name": "D1_Phd",
+                        "description": "Ph.D. (e.g., Ph.D. in Computer Science, Ph.D. in Mathematics)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Professional ML Certifications/Courses (e.g., Google Professional ML Engineer Certification, Coursera/Udacity course on ML)",
-                        "name": "D1_Courses"
+                        "name": "D1_Courses",
+                        "description": "Professional ML Certifications/Courses (e.g., Google Professional ML Engineer Certification, Coursera/Udacity course on ML)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Other course specified by respondent",
-                        "name": "D1_Others"
+                        "name": "D1_Others",
+                        "description": "Other course specified by respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Country in which the respondent is currently working",
-                        "name": "D2_Country"
+                        "name": "D2_Country",
+                        "description": "Country in which the respondent is currently working"
                     },
                     {
-                        "depth": 0,
-                        "description": "Size of the organization the respondent currently work for (1-10 employees, 11-50 employees ... more than 2000 employees)",
-                        "name": "D3_Company_Size"
+                        "name": "D3_Company_Size",
+                        "description": "Size of the organization the respondent currently work for (1-10 employees, 11-50 employees ... more than 2000 employees)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Role that best describes the respondent's current activities within the company (Project Lead/ Project Manager, business Analyst, Requirements Engineer, Solution Architect, Data Scientist, Developer, Test Manager / Tester)",
-                        "name": "D4_Role"
+                        "name": "D4_Role",
+                        "description": "Role that best describes the respondent's current activities within the company (Project Lead/ Project Manager, business Analyst, Requirements Engineer, Solution Architect, Data Scientist, Developer, Test Manager / Tester)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Other role specified by respondent",
-                        "name": "D4_Role_Others"
+                        "name": "D4_Role_Others",
+                        "description": "Other role specified by respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Years of experience in working with the development of software based products",
-                        "name": "D5_Software_Experience"
+                        "name": "D5_Software_Experience",
+                        "description": "Years of experience in working with the development of software based products"
                     },
                     {
-                        "depth": 0,
-                        "description": "Years of Experience in developing ML-enabled systems",
-                        "name": "D6_ML_Experience"
+                        "name": "D6_ML_Experience",
+                        "description": "Years of Experience in developing ML-enabled systems"
                     },
                     {
-                        "depth": 0,
-                        "description": "Number of ML-enabled system projects that the respondent participated in",
-                        "name": "D7_Total_ML_Projects"
+                        "name": "D7_Total_ML_Projects",
+                        "description": "Number of ML-enabled system projects that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Number of ML-enabled system projects that the respondent participated in that actually got deployed",
-                        "name": "D8_ML_Production"
+                        "name": "D8_ML_Production",
+                        "description": "Number of ML-enabled system projects that the respondent participated in that actually got deployed"
                     },
                     {
-                        "depth": 0,
-                        "description": "The Team size of the ML-enabled system projects that the respondent participated in",
-                        "name": "D9_ML_Project_Team_Size"
+                        "name": "D9_ML_Project_Team_Size",
+                        "description": "The Team size of the ML-enabled system projects that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Participant responded with None as the response for project management framework applied in the participated ML-enabled systems project",
-                        "name": "D10_ML_Management_Framework_None"
+                        "name": "D10_ML_Management_Framework_None",
+                        "description": "Participant responded with None as the response for project management framework applied in the participated ML-enabled systems project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Participant responded with CRISP-DM as the response for project management framework applied in the participated ML-enabled systems project",
-                        "name": "D10_ML_Management_Framework_CRISP-DM"
+                        "name": "D10_ML_Management_Framework_CRISP-DM",
+                        "description": "Participant responded with CRISP-DM as the response for project management framework applied in the participated ML-enabled systems project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Participant responded with Kanban as the response for project management framework applied in the participated ML-enabled systems project",
-                        "name": "D10_ML_Management_Framework_Kanban"
+                        "name": "D10_ML_Management_Framework_Kanban",
+                        "description": "Participant responded with Kanban as the response for project management framework applied in the participated ML-enabled systems project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Participant responded with Lean as the response for project management framework applied in the participated ML-enabled systems project",
-                        "name": "D10_ML_Management_Framework_Lean"
+                        "name": "D10_ML_Management_Framework_Lean",
+                        "description": "Participant responded with Lean as the response for project management framework applied in the participated ML-enabled systems project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Participant responded with RUP as the response for project management framework applied in the participated ML-enabled systems project",
-                        "name": "D10_ML_Management_Framework_RUP"
+                        "name": "D10_ML_Management_Framework_RUP",
+                        "description": "Participant responded with RUP as the response for project management framework applied in the participated ML-enabled systems project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Participant responded with SAFe as the response for project management framework applied in the participated ML-enabled systems project",
-                        "name": "D10_ML_Management_Framework_SAFe"
+                        "name": "D10_ML_Management_Framework_SAFe",
+                        "description": "Participant responded with SAFe as the response for project management framework applied in the participated ML-enabled systems project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Participant responded with Scrum as the response for project management framework applied in the participated ML-enabled systems project",
-                        "name": "D10_ML_Management_Framework_Scrum"
+                        "name": "D10_ML_Management_Framework_Scrum",
+                        "description": "Participant responded with Scrum as the response for project management framework applied in the participated ML-enabled systems project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Participant responded with a different framework as the response for project management framework applied in the participated ML-enabled systems project",
-                        "name": "D10_ML_Management_Framework_Others"
+                        "name": "D10_ML_Management_Framework_Others",
+                        "description": "Participant responded with a different framework as the response for project management framework applied in the participated ML-enabled systems project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Name of the other framework for project management framework applied in the participated ML-enabled systems project",
-                        "name": "D10_ML_Management_Framework_Others_Free"
+                        "name": "D10_ML_Management_Framework_Others_Free",
+                        "description": "Name of the other framework for project management framework applied in the participated ML-enabled systems project"
                     },
                     {
-                        "depth": 0,
-                        "description": "The agility of the development of the respondent in the ML-enabled systems projects that the respondent participated in",
-                        "name": "D11_Agile_Development"
+                        "name": "D11_Agile_Development",
+                        "description": "The agility of the development of the respondent in the ML-enabled systems projects that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Banking was the domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Banking"
+                        "name": "D12_ML_Project_Context_Banking",
+                        "description": "Banking was the domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Defense was the domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Defense"
+                        "name": "D12_ML_Project_Context_Defense",
+                        "description": "Defense was the domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Education was the domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Education"
+                        "name": "D12_ML_Project_Context_Education",
+                        "description": "Education was the domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Embedded systems in Automotive or Avionics was the domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Embedded"
+                        "name": "D12_ML_Project_Context_Embedded",
+                        "description": "Embedded systems in Automotive or Avionics was the domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Entertainment was the domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Entertainment"
+                        "name": "D12_ML_Project_Context_Entertainment",
+                        "description": "Entertainment was the domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Healthcare was the domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Healthcare"
+                        "name": "D12_ML_Project_Context_Healthcare",
+                        "description": "Healthcare was the domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Insurance was the domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Insurance"
+                        "name": "D12_ML_Project_Context_Insurance",
+                        "description": "Insurance was the domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Logistics was the domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Logistics"
+                        "name": "D12_ML_Project_Context_Logistics",
+                        "description": "Logistics was the domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Oil & Gas was the domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Oil"
+                        "name": "D12_ML_Project_Context_Oil",
+                        "description": "Oil & Gas was the domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Sales/E-commerce was the domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Sales"
+                        "name": "D12_ML_Project_Context_Sales",
+                        "description": "Sales/E-commerce was the domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Telecommunication was the domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Telecom"
+                        "name": "D12_ML_Project_Context_Telecom",
+                        "description": "Telecommunication was the domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Respondent specified some other domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Others"
+                        "name": "D12_ML_Project_Context_Others",
+                        "description": "Respondent specified some other domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Respondent's domain of application of the ML-enabled systems project that the respondent participated in",
-                        "name": "D12_ML_Project_Context_Others_Free"
+                        "name": "D12_ML_Project_Context_Others_Free",
+                        "description": "Respondent's domain of application of the ML-enabled systems project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "C language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)",
-                        "name": "D13_ML_Programming_Language_C"
+                        "name": "D13_ML_Programming_Language_C",
+                        "description": "C language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Java language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)",
-                        "name": "D13_ML_Programming_Language_Java"
+                        "name": "D13_ML_Programming_Language_Java",
+                        "description": "Java language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Javascript language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)",
-                        "name": "D13_ML_Programming_Language_Javascript"
+                        "name": "D13_ML_Programming_Language_Javascript",
+                        "description": "Javascript language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Julia language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)",
-                        "name": "D13_ML_Programming_Language_Julia"
+                        "name": "D13_ML_Programming_Language_Julia",
+                        "description": "Julia language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)"
                     },
                     {
-                        "depth": 0,
-                        "description": "MatLab language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)",
-                        "name": "D13_ML_Programming_Language_MatLab"
+                        "name": "D13_ML_Programming_Language_MatLab",
+                        "description": "MatLab language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Python language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)",
-                        "name": "D13_ML_Programming_Language_Python"
+                        "name": "D13_ML_Programming_Language_Python",
+                        "description": "Python language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)"
                     },
                     {
-                        "depth": 0,
-                        "description": "R language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)",
-                        "name": "D13_ML_Programming_Language_R"
+                        "name": "D13_ML_Programming_Language_R",
+                        "description": "R language was in the list of general languages that composed the ML-enabled system projects (including eventually Non-ML related parts)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Other language was specified as the general language that composed the ML-enabled system projects (including eventually Non-ML related parts)",
-                        "name": "D13_ML_Programming_Language_Others"
+                        "name": "D13_ML_Programming_Language_Others",
+                        "description": "Other language was specified as the general language that composed the ML-enabled system projects (including eventually Non-ML related parts)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Name of the other language that was specified as the general language that composed the ML-enabled system projects (including eventually Non-ML related parts)",
-                        "name": "D13_ML_Programming_Language_Others_Free"
+                        "name": "D13_ML_Programming_Language_Others_Free",
+                        "description": "Name of the other language that was specified as the general language that composed the ML-enabled system projects (including eventually Non-ML related parts)"
                     },
                     {
-                        "depth": 0,
-                        "description": "Prediction was the main purpose of the ML-enabled system projects the respondent participated in",
-                        "name": "D14_ML_Purpose_Prediction"
+                        "name": "D14_ML_Purpose_Prediction",
+                        "description": "Prediction was the main purpose of the ML-enabled system projects the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "The typical purposes that were addressed using prediction in the project",
-                        "name": "D14_ML_Purpose_Prediction_Free"
+                        "name": "D14_ML_Purpose_Prediction_Free",
+                        "description": "The typical purposes that were addressed using prediction in the project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Classification was the main purpose of the ML-enabled system projects the respondent participated in",
-                        "name": "D14_ML_Purpose_Classification"
+                        "name": "D14_ML_Purpose_Classification",
+                        "description": "Classification was the main purpose of the ML-enabled system projects the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "The typical purposes that were addressed using classification in the project",
-                        "name": "D14_ML_Purpose_Classification_Free"
+                        "name": "D14_ML_Purpose_Classification_Free",
+                        "description": "The typical purposes that were addressed using classification in the project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Association was the main purpose of the ML-enabled system projects the respondent participated in",
-                        "name": "D14_ML_Purpose_Association"
+                        "name": "D14_ML_Purpose_Association",
+                        "description": "Association was the main purpose of the ML-enabled system projects the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "The typical purposes that were addressed using association in the project",
-                        "name": "D14_ML_Purpose_Association_Free"
+                        "name": "D14_ML_Purpose_Association_Free",
+                        "description": "The typical purposes that were addressed using association in the project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Clustering was the main purpose of the ML-enabled system projects the respondent participated in",
-                        "name": "D14_ML_Purpose_Clustering"
+                        "name": "D14_ML_Purpose_Clustering",
+                        "description": "Clustering was the main purpose of the ML-enabled system projects the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "The typical purposes that were addressed using clustering in the project",
-                        "name": "D14_ML_Purpose_Clustering_Free"
+                        "name": "D14_ML_Purpose_Clustering_Free",
+                        "description": "The typical purposes that were addressed using clustering in the project"
                     },
                     {
-                        "depth": 0,
-                        "description": "ML-enabled system project had some other purpose",
-                        "name": "D14_ML_Purpose_Others"
+                        "name": "D14_ML_Purpose_Others",
+                        "description": "ML-enabled system project had some other purpose"
                     },
                     {
-                        "depth": 0,
-                        "description": "The other purposes that were addressed in the project",
-                        "name": "D14_ML_Purpose_Others_Free"
+                        "name": "D14_ML_Purpose_Others_Free",
+                        "description": "The other purposes that were addressed in the project"
                     },
                     {
-                        "depth": 0,
-                        "description": "Apriori algorithm was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_Apriori"
+                        "name": "D15_ML_Algorithms_Apriori",
+                        "description": "Apriori algorithm was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Bayesian algorithm was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_Bayesian"
+                        "name": "D15_ML_Algorithms_Bayesian",
+                        "description": "Bayesian algorithm was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "DBSCAN algorithm was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_DBSCAN"
+                        "name": "D15_ML_Algorithms_DBSCAN",
+                        "description": "DBSCAN algorithm was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Decision Tree algorithm was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_Decision_Tree"
+                        "name": "D15_ML_Algorithms_Decision_Tree",
+                        "description": "Decision Tree algorithm was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Ensemble  (e.g. Random Forests, XGBoost) Algorithm was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_Ensembles"
+                        "name": "D15_ML_Algorithms_Ensembles",
+                        "description": "Ensemble  (e.g. Random Forests, XGBoost) Algorithm was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Gaussian Mixture was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_Gaussian_Mixture"
+                        "name": "D15_ML_Algorithms_Gaussian_Mixture",
+                        "description": "Gaussian Mixture was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "KMeans algorithm was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_KMeans"
+                        "name": "D15_ML_Algorithms_KMeans",
+                        "description": "KMeans algorithm was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "KNN was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_KNN"
+                        "name": "D15_ML_Algorithms_KNN",
+                        "description": "KNN was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Linear Regression was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_Linear_Regression"
+                        "name": "D15_ML_Algorithms_Linear_Regression",
+                        "description": "Linear Regression was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Logistic Regression was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_Logistic_Regression"
+                        "name": "D15_ML_Algorithms_Logistic_Regression",
+                        "description": "Logistic Regression was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Naive Bayes was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_Naive_Bayes"
+                        "name": "D15_ML_Algorithms_Naive_Bayes",
+                        "description": "Naive Bayes was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Neural Networks were employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_Neural_Networks"
+                        "name": "D15_ML_Algorithms_Neural_Networks",
+                        "description": "Neural Networks were employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Support Vector Machines was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_SVM"
+                        "name": "D15_ML_Algorithms_SVM",
+                        "description": "Support Vector Machines was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "Some other algorithm was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_Others"
+                        "name": "D15_ML_Algorithms_Others",
+                        "description": "Some other algorithm was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "The name of the different algorithm that was employed in the ML-enabled system project that the respondent participated in",
-                        "name": "D15_ML_Algorithms_Others_Free"
+                        "name": "D15_ML_Algorithms_Others_Free",
+                        "description": "The name of the different algorithm that was employed in the ML-enabled system project that the respondent participated in"
                     },
                     {
-                        "depth": 0,
-                        "description": "The level of relevance of Problem Understanding and Requirements with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know",
-                        "name": "Q1_ML_Life_Cycle_Importance_Problem_Understanding"
+                        "name": "Q1_ML_Life_Cycle_Importance_Problem_Understanding",
+                        "description": "The level of relevance of Problem Understanding and Requirements with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "The level of relevance of Data Collection with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know",
-                        "name": "Q1_ML_Life_Cycle_Importance_Data_Collection"
+                        "name": "Q1_ML_Life_Cycle_Importance_Data_Collection",
+                        "description": "The level of relevance of Data Collection with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "The level of relevance of Data Pre-Processing with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know",
-                        "name": "Q1_ML_Life_Cycle_Importance_Data_Pre-Processing"
+                        "name": "Q1_ML_Life_Cycle_Importance_Data_Pre-Processing",
+                        "description": "The level of relevance of Data Pre-Processing with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "The level of relevance of Model Creation with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know",
-                        "name": "Q1_ML_Life_Cycle_Importance_Model_Creation"
+                        "name": "Q1_ML_Life_Cycle_Importance_Model_Creation",
+                        "description": "The level of relevance of Model Creation with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "The level of relevance of Model Evaluation with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know",
-                        "name": "Q1_ML_Life_Cycle_Importance_Model_Evaluation"
+                        "name": "Q1_ML_Life_Cycle_Importance_Model_Evaluation",
+                        "description": "The level of relevance of Model Evaluation with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "The level of relevance of Model Deployment with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know",
-                        "name": "Q1_ML_Life_Cycle_Importance_Model_Deployment"
+                        "name": "Q1_ML_Life_Cycle_Importance_Model_Deployment",
+                        "description": "The level of relevance of Model Deployment with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "The level of relevance of Model Monitoring with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know",
-                        "name": "Q1_ML_Life_Cycle_Importance_Model_Monitoring"
+                        "name": "Q1_ML_Life_Cycle_Importance_Model_Monitoring",
+                        "description": "The level of relevance of Model Monitoring with regard to project success. One of the following: Not Relevant at All, Low Relevance, Neutral, High Relevance, Extremely Relevant, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty level of Problem Understanding and Requirements stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know",
-                        "name": "Q2_ML_Life_Cycle_Difficulty_Problem_Understanding"
+                        "name": "Q2_ML_Life_Cycle_Difficulty_Problem_Understanding",
+                        "description": "Difficulty level of Problem Understanding and Requirements stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty level of Data Collection stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know",
-                        "name": "Q2_ML_Life_Cycle_Difficulty_Data_Collection"
+                        "name": "Q2_ML_Life_Cycle_Difficulty_Data_Collection",
+                        "description": "Difficulty level of Data Collection stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty level of Data Pre-Processing stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know",
-                        "name": "Q2_ML_Life_Cycle_Difficulty_Data_Pre-Processing"
+                        "name": "Q2_ML_Life_Cycle_Difficulty_Data_Pre-Processing",
+                        "description": "Difficulty level of Data Pre-Processing stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty level of Model Creation stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know",
-                        "name": "Q2_ML_Life_Cycle_Difficulty_Model_Creation"
+                        "name": "Q2_ML_Life_Cycle_Difficulty_Model_Creation",
+                        "description": "Difficulty level of Model Creation stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty level of Model Evaluation stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know",
-                        "name": "Q2_ML_Life_Cycle_Difficulty_Model_Evaluation"
+                        "name": "Q2_ML_Life_Cycle_Difficulty_Model_Evaluation",
+                        "description": "Difficulty level of Model Evaluation stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty level of Model Deployment stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know",
-                        "name": "Q2_ML_Life_Cycle_Difficulty_Model_Deployment"
+                        "name": "Q2_ML_Life_Cycle_Difficulty_Model_Deployment",
+                        "description": "Difficulty level of Model Deployment stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty level of Model Monitoring stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know",
-                        "name": "Q2_ML_Life_Cycle_Difficulty_Model_Monitoring"
+                        "name": "Q2_ML_Life_Cycle_Difficulty_Model_Monitoring",
+                        "description": "Difficulty level of Model Monitoring stage in ML Life Cycle. One of the following: Very Easy, Easy, Neutral, Complex, Very Complex, I don't know"
                     },
                     {
-                        "depth": 0,
-                        "description": "The proportion of effort spent in the ML life cycle stage for Problem Understanding",
-                        "name": "Q3_ML_Life_Cycle_Effort_Problem_Understanding"
+                        "name": "Q3_ML_Life_Cycle_Effort_Problem_Understanding",
+                        "description": "The proportion of effort spent in the ML life cycle stage for Problem Understanding"
                     },
                     {
-                        "depth": 0,
-                        "description": "The proportion of effort spent in the ML life cycle stage for Data Collection",
-                        "name": "Q3_ML_Life_Cycle_Effort_Data_Collection"
+                        "name": "Q3_ML_Life_Cycle_Effort_Data_Collection",
+                        "description": "The proportion of effort spent in the ML life cycle stage for Data Collection"
                     },
                     {
-                        "depth": 0,
-                        "description": "The proportion of effort spent in the ML life cycle stage for Data Pre-Processing",
-                        "name": "Q3_ML_Life_Cycle_Effort_Data_Pre-Processing"
+                        "name": "Q3_ML_Life_Cycle_Effort_Data_Pre-Processing",
+                        "description": "The proportion of effort spent in the ML life cycle stage for Data Pre-Processing"
                     },
                     {
-                        "depth": 0,
-                        "description": "The proportion of effort spent in the ML life cycle stage for Model Creation",
-                        "name": "Q3_ML_Life_Cycle_Effort_Model_Creation"
+                        "name": "Q3_ML_Life_Cycle_Effort_Model_Creation",
+                        "description": "The proportion of effort spent in the ML life cycle stage for Model Creation"
                     },
                     {
-                        "depth": 0,
-                        "description": "The proportion of effort spent in the ML life cycle stage for Model Evaluation",
-                        "name": "Q3_ML_Life_Cycle_Effort_Model_Evaluation"
+                        "name": "Q3_ML_Life_Cycle_Effort_Model_Evaluation",
+                        "description": "The proportion of effort spent in the ML life cycle stage for Model Evaluation"
                     },
                     {
-                        "depth": 0,
-                        "description": "The proportion of effort spent in the ML life cycle stage for Model Deployment",
-                        "name": "Q3_ML_Life_Cycle_Effort_Model_Deployment"
+                        "name": "Q3_ML_Life_Cycle_Effort_Model_Deployment",
+                        "description": "The proportion of effort spent in the ML life cycle stage for Model Deployment"
                     },
                     {
-                        "depth": 0,
-                        "description": "The proportion of effort spent in the ML life cycle stage for Model Monitoring",
-                        "name": "Q3_ML_Life_Cycle_Effort_Model_Monitoring"
+                        "name": "Q3_ML_Life_Cycle_Effort_Model_Monitoring",
+                        "description": "The proportion of effort spent in the ML life cycle stage for Model Monitoring"
                     },
                     {
-                        "depth": 0,
-                        "description": "The first main problem faced in Problem Understanding phase in the ML life cycle stage",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Problem_Understanding_Free_First"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Problem_Understanding_Free_First",
+                        "description": "The first main problem faced in Problem Understanding phase in the ML life cycle stage"
                     },
                     {
-                        "depth": 0,
-                        "description": "The second main problem faced in the Problem Understanding phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Problem_Understanding_Free_Second"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Problem_Understanding_Free_Second",
+                        "description": "The second main problem faced in the Problem Understanding phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The third main problem faced in the Problem Understanding phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Problem_Understanding_Free_Third"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Problem_Understanding_Free_Third",
+                        "description": "The third main problem faced in the Problem Understanding phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The first main problem faced in the Data Collection phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Collection_Free_First"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Collection_Free_First",
+                        "description": "The first main problem faced in the Data Collection phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The second main problem faced in the Data Collection phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Collection_Free_Second"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Collection_Free_Second",
+                        "description": "The second main problem faced in the Data Collection phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The third main problem faced in the Data Collection phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Collection_Free_Third"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Collection_Free_Third",
+                        "description": "The third main problem faced in the Data Collection phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The first main problem faced in the Data Pre-Processing phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Pre-Processing_Free_First"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Pre-Processing_Free_First",
+                        "description": "The first main problem faced in the Data Pre-Processing phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The second main problem faced in the Data Pre-Processing phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Pre-Processing_Free_Second"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Pre-Processing_Free_Second",
+                        "description": "The second main problem faced in the Data Pre-Processing phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The third main problem faced in the Data Pre-Processing phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Pre-Processing_Free_Third"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Data_Pre-Processing_Free_Third",
+                        "description": "The third main problem faced in the Data Pre-Processing phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The first main problem faced in the Model Creation phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Creation_Free_First"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Creation_Free_First",
+                        "description": "The first main problem faced in the Model Creation phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The second main problem faced in the Model Creation phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Creation_Free_Second"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Creation_Free_Second",
+                        "description": "The second main problem faced in the Model Creation phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The third main problem faced in the Model Creation phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Creation_Free_Third"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Creation_Free_Third",
+                        "description": "The third main problem faced in the Model Creation phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The first main problem faced in the Model Evaluation phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Evaluation_Free_First"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Evaluation_Free_First",
+                        "description": "The first main problem faced in the Model Evaluation phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The second main problem faced in the Model Evaluation phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Evaluation_Free_Second"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Evaluation_Free_Second",
+                        "description": "The second main problem faced in the Model Evaluation phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The third main problem faced in the Model Evaluation phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Evaluation_Free_Third"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Evaluation_Free_Third",
+                        "description": "The third main problem faced in the Model Evaluation phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The first main problem faced in the Model Deployment phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Deployment_Free_First"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Deployment_Free_First",
+                        "description": "The first main problem faced in the Model Deployment phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The second main problem faced in the Model Deployment phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Deployment_Free_Second"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Deployment_Free_Second",
+                        "description": "The second main problem faced in the Model Deployment phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The third main problem faced in the Model Deployment phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Deployment_Free_Third"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Deployment_Free_Third",
+                        "description": "The third main problem faced in the Model Deployment phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The first main problem faced in the Model Monitoring phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Monitoring_Free_First"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Monitoring_Free_First",
+                        "description": "The first main problem faced in the Model Monitoring phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The second main problem faced in the Model Monitoring phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Monitoring_Free_Second"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Monitoring_Free_Second",
+                        "description": "The second main problem faced in the Model Monitoring phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The third main problem faced in the Model Monitoring phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Monitoring_Free_Third"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Monitoring_Free_Third",
+                        "description": "The third main problem faced in the Model Monitoring phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The first main problem faced in an unspecified phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Other_Free_First"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Other_Free_First",
+                        "description": "The first main problem faced in an unspecified phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The second main problem faced in an unspecified phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Other_Free_Second"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Other_Free_Second",
+                        "description": "The second main problem faced in an unspecified phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The third main problem faced in an unspecified phase of the ML life cycle",
-                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Other_Free_Third"
+                        "name": "Q4_ML_Life_Cycle_Main_Problems_Model_Other_Free_Third",
+                        "description": "The third main problem faced in an unspecified phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The first main problem faced in ranking phase of the ML life cycle",
-                        "name": "Q5_ML_Life_Cycle_Main_Problems_Ranking_Free_First"
+                        "name": "Q5_ML_Life_Cycle_Main_Problems_Ranking_Free_First",
+                        "description": "The first main problem faced in ranking phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The second main problem faced in ranking phase of the ML life cycle",
-                        "name": "Q5_ML_Life_Cycle_Main_Problems_Ranking_Free_Second"
+                        "name": "Q5_ML_Life_Cycle_Main_Problems_Ranking_Free_Second",
+                        "description": "The second main problem faced in ranking phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "The third main problem faced in ranking phase of the ML life cycle",
-                        "name": "Q5_ML_Life_Cycle_Main_Problems_Ranking_Free_Third"
+                        "name": "Q5_ML_Life_Cycle_Main_Problems_Ranking_Free_Third",
+                        "description": "The third main problem faced in ranking phase of the ML life cycle"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which the respondent believes ML solutions are optimal",
-                        "name": "Q6_ML_Solution_Optimality"
+                        "name": "Q6_ML_Solution_Optimality",
+                        "description": "Degree to which the respondent believes ML solutions are optimal"
                     },
                     {
-                        "depth": 0,
-                        "description": "Extra effort required to achieve optimal ML solutions as perceived by the respondent",
-                        "name": "Q7_ML_Solution_Optimality_Extra_Effort"
+                        "name": "Q7_ML_Solution_Optimality_Extra_Effort",
+                        "description": "Extra effort required to achieve optimal ML solutions as perceived by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which ML aspects are addressed by the Project Lead in the respondent's organization",
-                        "name": "Q8_ML_Addressing_Project_Lead"
+                        "name": "Q8_ML_Addressing_Project_Lead",
+                        "description": "Degree to which ML aspects are addressed by the Project Lead in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which ML aspects are addressed by the Business Analyst in the respondent's organization",
-                        "name": "Q8_ML_Addressing_Business_Analyst"
+                        "name": "Q8_ML_Addressing_Business_Analyst",
+                        "description": "Degree to which ML aspects are addressed by the Business Analyst in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which ML aspects are addressed by the Requirement Engineer in the respondent's organization",
-                        "name": "Q8_ML_Addressing_Requirement_Engineer"
+                        "name": "Q8_ML_Addressing_Requirement_Engineer",
+                        "description": "Degree to which ML aspects are addressed by the Requirement Engineer in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which ML aspects are addressed by the Solution Architect in the respondent's organization",
-                        "name": "Q8_ML_Addressing_Solution_Architect"
+                        "name": "Q8_ML_Addressing_Solution_Architect",
+                        "description": "Degree to which ML aspects are addressed by the Solution Architect in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which ML aspects are addressed by the Data Scientist in the respondent's organization",
-                        "name": "Q8_ML_Addressing_Data_Scientist"
+                        "name": "Q8_ML_Addressing_Data_Scientist",
+                        "description": "Degree to which ML aspects are addressed by the Data Scientist in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which ML aspects are addressed by the Developer in the respondent's organization",
-                        "name": "Q8_ML_Addressing_Developer"
+                        "name": "Q8_ML_Addressing_Developer",
+                        "description": "Degree to which ML aspects are addressed by the Developer in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which ML aspects are addressed by the Tester in the respondent's organization",
-                        "name": "Q8_ML_Addressing_Tester"
+                        "name": "Q8_ML_Addressing_Tester",
+                        "description": "Degree to which ML aspects are addressed by the Tester in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which ML aspects are addressed by other roles specified by the respondent",
-                        "name": "Q8_ML_Addressing_Others"
+                        "name": "Q8_ML_Addressing_Others",
+                        "description": "Degree to which ML aspects are addressed by other roles specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Free text response for other roles addressing ML aspects specified by the respondent",
-                        "name": "Q8_ML_Addressing_Others_Free"
+                        "name": "Q8_ML_Addressing_Others_Free",
+                        "description": "Free text response for other roles addressing ML aspects specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which interviews are used for ML requirements elicitation in the respondent's organization",
-                        "name": "Q9_ML_Elicitation_Interviews"
+                        "name": "Q9_ML_Elicitation_Interviews",
+                        "description": "Degree to which interviews are used for ML requirements elicitation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which scenarios are used for ML requirements elicitation in the respondent's organization",
-                        "name": "Q9_ML_Elicitation_Scenarios"
+                        "name": "Q9_ML_Elicitation_Scenarios",
+                        "description": "Degree to which scenarios are used for ML requirements elicitation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which prototyping is used for ML requirements elicitation in the respondent's organization",
-                        "name": "Q9_ML_Elicitation_Prototyping"
+                        "name": "Q9_ML_Elicitation_Prototyping",
+                        "description": "Degree to which prototyping is used for ML requirements elicitation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which workshops and meetings are used for ML requirements elicitation in the respondent's organization",
-                        "name": "Q9_ML_Elicitation_Workshops_Meetings"
+                        "name": "Q9_ML_Elicitation_Workshops_Meetings",
+                        "description": "Degree to which workshops and meetings are used for ML requirements elicitation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which observation is used for ML requirements elicitation in the respondent's organization",
-                        "name": "Q9_ML_Elicitation_Observation"
+                        "name": "Q9_ML_Elicitation_Observation",
+                        "description": "Degree to which observation is used for ML requirements elicitation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which other methods are used for ML requirements elicitation specified by the respondent",
-                        "name": "Q9_ML_Elicitation_Others"
+                        "name": "Q9_ML_Elicitation_Others",
+                        "description": "Degree to which other methods are used for ML requirements elicitation specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Free text response for other methods of ML requirements elicitation specified by the respondent",
-                        "name": "Q9_ML_Elicitation_Others_Free"
+                        "name": "Q9_ML_Elicitation_Others_Free",
+                        "description": "Free text response for other methods of ML requirements elicitation specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which ML aspects are not documented in the respondent's organization",
-                        "name": "Q10_ML_Documentation_Not_Documented"
+                        "name": "Q10_ML_Documentation_Not_Documented",
+                        "description": "Degree to which ML aspects are not documented in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which vision documents are used for ML documentation in the respondent's organization",
-                        "name": "Q10_ML_Documentation_Vision_Document"
+                        "name": "Q10_ML_Documentation_Vision_Document",
+                        "description": "Degree to which vision documents are used for ML documentation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which requirements lists are used for ML documentation in the respondent's organization",
-                        "name": "Q10_ML_Documentation_Requirements_Lists"
+                        "name": "Q10_ML_Documentation_Requirements_Lists",
+                        "description": "Degree to which requirements lists are used for ML documentation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which goal models are used for ML documentation in the respondent's organization",
-                        "name": "Q10_ML_Documentation_Goal_Models"
+                        "name": "Q10_ML_Documentation_Goal_Models",
+                        "description": "Degree to which goal models are used for ML documentation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which use case models are used for ML documentation in the respondent's organization",
-                        "name": "Q10_ML_Documentation_Use_Case_Models"
+                        "name": "Q10_ML_Documentation_Use_Case_Models",
+                        "description": "Degree to which use case models are used for ML documentation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which prototypes are used for ML documentation in the respondent's organization",
-                        "name": "Q10_ML_Documentation_Prototypes"
+                        "name": "Q10_ML_Documentation_Prototypes",
+                        "description": "Degree to which prototypes are used for ML documentation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which user stories are used for ML documentation in the respondent's organization",
-                        "name": "Q10_ML_Documentation_User_Stories"
+                        "name": "Q10_ML_Documentation_User_Stories",
+                        "description": "Degree to which user stories are used for ML documentation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which BDD scenarios are used for ML documentation in the respondent's organization",
-                        "name": "Q10_ML_Documentation_BDD_Scenarios"
+                        "name": "Q10_ML_Documentation_BDD_Scenarios",
+                        "description": "Degree to which BDD scenarios are used for ML documentation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which ML Canvas is used for ML documentation in the respondent's organization",
-                        "name": "Q10_ML_Documentation_MLCanvas"
+                        "name": "Q10_ML_Documentation_MLCanvas",
+                        "description": "Degree to which ML Canvas is used for ML documentation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which notebooks are used for ML documentation in the respondent's organization",
-                        "name": "Q10_ML_Documentation_Notebooks"
+                        "name": "Q10_ML_Documentation_Notebooks",
+                        "description": "Degree to which notebooks are used for ML documentation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which data models are used for ML documentation in the respondent's organization",
-                        "name": "Q10_ML_Documentation_Data_Models"
+                        "name": "Q10_ML_Documentation_Data_Models",
+                        "description": "Degree to which data models are used for ML documentation in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which other documentation methods are used for ML specified by the respondent",
-                        "name": "Q10_ML_Documentation_Others"
+                        "name": "Q10_ML_Documentation_Others",
+                        "description": "Degree to which other documentation methods are used for ML specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Free text response for other documentation methods for ML specified by the respondent",
-                        "name": "Q10_ML_Documentation_Others_Free"
+                        "name": "Q10_ML_Documentation_Others_Free",
+                        "description": "Free text response for other documentation methods for ML specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which non-functional requirements (NFRs) are not considered in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_Not_Considered"
+                        "name": "Q11_ML_NFRs_Not_Considered",
+                        "description": "Degree to which non-functional requirements (NFRs) are not considered in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which data quality is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_Data_Quality"
+                        "name": "Q11_ML_NFRs_Data_Quality",
+                        "description": "Degree to which data quality is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which model accountability is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_Model_Accountability"
+                        "name": "Q11_ML_NFRs_Model_Accountability",
+                        "description": "Degree to which model accountability is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which model ethics and fairness are considered as non-functional requirements in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_Model_Ethics_Fairness"
+                        "name": "Q11_ML_NFRs_Model_Ethics_Fairness",
+                        "description": "Degree to which model ethics and fairness are considered as non-functional requirements in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which model explainability is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_Model_Explainability"
+                        "name": "Q11_ML_NFRs_Model_Explainability",
+                        "description": "Degree to which model explainability is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which model interactiveness is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_Model_Interactiveness"
+                        "name": "Q11_ML_NFRs_Model_Interactiveness",
+                        "description": "Degree to which model interactiveness is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which model reliability is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_Model_Reliability"
+                        "name": "Q11_ML_NFRs_Model_Reliability",
+                        "description": "Degree to which model reliability is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which model transparency is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_Model_Transparency"
+                        "name": "Q11_ML_NFRs_Model_Transparency",
+                        "description": "Degree to which model transparency is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which system compatibility is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_System_Compatibility"
+                        "name": "Q11_ML_NFRs_System_Compatibility",
+                        "description": "Degree to which system compatibility is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which system maintainability is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_System_Maintainability"
+                        "name": "Q11_ML_NFRs_System_Maintainability",
+                        "description": "Degree to which system maintainability is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which system performance is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_System_Performance"
+                        "name": "Q11_ML_NFRs_System_Performance",
+                        "description": "Degree to which system performance is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which system portability is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_System_Portability"
+                        "name": "Q11_ML_NFRs_System_Portability",
+                        "description": "Degree to which system portability is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which system privacy is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_System_Privacy"
+                        "name": "Q11_ML_NFRs_System_Privacy",
+                        "description": "Degree to which system privacy is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which system reliability is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_System_Reliability"
+                        "name": "Q11_ML_NFRs_System_Reliability",
+                        "description": "Degree to which system reliability is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which system safety is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_System_Safety"
+                        "name": "Q11_ML_NFRs_System_Safety",
+                        "description": "Degree to which system safety is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which system security is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_System_Security"
+                        "name": "Q11_ML_NFRs_System_Security",
+                        "description": "Degree to which system security is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which system usability is considered as a non-functional requirement in ML projects in the respondent's organization",
-                        "name": "Q11_ML_NFRs_System_Usability"
+                        "name": "Q11_ML_NFRs_System_Usability",
+                        "description": "Degree to which system usability is considered as a non-functional requirement in ML projects in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which other non-functional requirements are considered in ML projects specified by the respondent",
-                        "name": "Q11_ML_NFRs_Others"
+                        "name": "Q11_ML_NFRs_Others",
+                        "description": "Degree to which other non-functional requirements are considered in ML projects specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Free text response for other non-functional requirements considered in ML projects specified by the respondent",
-                        "name": "Q11_ML_NFRs_Others_Free"
+                        "name": "Q11_ML_NFRs_Others_Free",
+                        "description": "Free text response for other non-functional requirements considered in ML projects specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty in managing customer expectations in ML projects as perceived by the respondent",
-                        "name": "Q12_ML_Most_Difficult_Activity_Customer_Expectations"
+                        "name": "Q12_ML_Most_Difficult_Activity_Customer_Expectations",
+                        "description": "Difficulty in managing customer expectations in ML projects as perceived by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty in eliciting and analyzing requirements in ML projects as perceived by the respondent",
-                        "name": "Q12_ML_Most_Difficult_Activity_Eliciting_Analyzing"
+                        "name": "Q12_ML_Most_Difficult_Activity_Eliciting_Analyzing",
+                        "description": "Difficulty in eliciting and analyzing requirements in ML projects as perceived by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty in aligning requirements with data in ML projects as perceived by the respondent",
-                        "name": "Q12_ML_Most_Difficult_Activity_Aligning_Requirements_Data"
+                        "name": "Q12_ML_Most_Difficult_Activity_Aligning_Requirements_Data",
+                        "description": "Difficulty in aligning requirements with data in ML projects as perceived by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty in resolving conflicts in ML projects as perceived by the respondent",
-                        "name": "Q12_ML_Most_Difficult_Activity_Conflicts"
+                        "name": "Q12_ML_Most_Difficult_Activity_Conflicts",
+                        "description": "Difficulty in resolving conflicts in ML projects as perceived by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty in dealing with new quality attributes in ML projects as perceived by the respondent",
-                        "name": "Q12_ML_Most_Difficult_Activity_New_Quality_Attributes"
+                        "name": "Q12_ML_Most_Difficult_Activity_New_Quality_Attributes",
+                        "description": "Difficulty in dealing with new quality attributes in ML projects as perceived by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty in documenting ML projects as perceived by the respondent",
-                        "name": "Q12_ML_Most_Difficult_Activity_Documentation"
+                        "name": "Q12_ML_Most_Difficult_Activity_Documentation",
+                        "description": "Difficulty in documenting ML projects as perceived by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty in selecting appropriate metrics in ML projects as perceived by the respondent",
-                        "name": "Q12_ML_Most_Difficult_Activity_Selecting_Metrics"
+                        "name": "Q12_ML_Most_Difficult_Activity_Selecting_Metrics",
+                        "description": "Difficulty in selecting appropriate metrics in ML projects as perceived by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty in verifying ML projects as perceived by the respondent",
-                        "name": "Q12_ML_Most_Difficult_Activity_Verification"
+                        "name": "Q12_ML_Most_Difficult_Activity_Verification",
+                        "description": "Difficulty in verifying ML projects as perceived by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty in managing changing requirements in ML projects as perceived by the respondent",
-                        "name": "Q12_ML_Most_Difficult_Activity_Changing_Requirements"
+                        "name": "Q12_ML_Most_Difficult_Activity_Changing_Requirements",
+                        "description": "Difficulty in managing changing requirements in ML projects as perceived by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Difficulty in other activities in ML projects specified by the respondent",
-                        "name": "Q12_ML_Most_Difficult_Activity_Others"
+                        "name": "Q12_ML_Most_Difficult_Activity_Others",
+                        "description": "Difficulty in other activities in ML projects specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Free text response for other difficult activities in ML projects specified by the respondent",
-                        "name": "Q12_ML_Most_Difficult_Activity_Others_Free"
+                        "name": "Q12_ML_Most_Difficult_Activity_Others_Free",
+                        "description": "Free text response for other difficult activities in ML projects specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which the embedded model deployment approach is used in the respondent's organization",
-                        "name": "Q13_Model_Deploy_Approach_Embedded_Model"
+                        "name": "Q13_Model_Deploy_Approach_Embedded_Model",
+                        "description": "Degree to which the embedded model deployment approach is used in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which the service model deployment approach is used in the respondent's organization",
-                        "name": "Q13_Model_Deploy_Approach_Service"
+                        "name": "Q13_Model_Deploy_Approach_Service",
+                        "description": "Degree to which the service model deployment approach is used in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which the Platform as a Service (PaaS) deployment approach is used in the respondent's organization",
-                        "name": "Q13_Model_Deploy_Approach_PaaS"
+                        "name": "Q13_Model_Deploy_Approach_PaaS",
+                        "description": "Degree to which the Platform as a Service (PaaS) deployment approach is used in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which other deployment approaches are used in the respondent's organization",
-                        "name": "Q13_Model_Deploy_Approach_Others"
+                        "name": "Q13_Model_Deploy_Approach_Others",
+                        "description": "Degree to which other deployment approaches are used in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Free text response for other deployment approaches used in the respondent's organization",
-                        "name": "Q13_Model_Deploy_Approach_Others_Free"
+                        "name": "Q13_Model_Deploy_Approach_Others_Free",
+                        "description": "Free text response for other deployment approaches used in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Yes response indicating if a deployment pipeline is used in the respondent's organization",
-                        "name": "Q14_Model_Deploy_Pipeline_Yes"
+                        "name": "Q14_Model_Deploy_Pipeline_Yes",
+                        "description": "Yes response indicating if a deployment pipeline is used in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Free text response if a deployment pipeline is used in the respondent's organization",
-                        "name": "Q14_Model_Deploy_Pipeline_Yes_Free"
+                        "name": "Q14_Model_Deploy_Pipeline_Yes_Free",
+                        "description": "Free text response if a deployment pipeline is used in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "No response indicating if a deployment pipeline is not used in the respondent's organization",
-                        "name": "Q14_Model_Deploy_Pipeline_No"
+                        "name": "Q14_Model_Deploy_Pipeline_No",
+                        "description": "No response indicating if a deployment pipeline is not used in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Degree to which production monitoring is conducted for deployed models in the respondent's organization",
-                        "name": "Q15_Model_Deploy_Production_Monitoring"
+                        "name": "Q15_Model_Deploy_Production_Monitoring",
+                        "description": "Degree to which production monitoring is conducted for deployed models in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Importance of monitoring inputs and outputs of models in the respondent's organization",
-                        "name": "Q16_Model_Monitor_Aspects_Input_And_Output"
+                        "name": "Q16_Model_Monitor_Aspects_Input_And_Output",
+                        "description": "Importance of monitoring inputs and outputs of models in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Importance of monitoring the interpretability of model outputs in the respondent's organization",
-                        "name": "Q16_Model_Monitor_Aspects_Interpretability_Output"
+                        "name": "Q16_Model_Monitor_Aspects_Interpretability_Output",
+                        "description": "Importance of monitoring the interpretability of model outputs in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Importance of monitoring outputs and decisions of models in the respondent's organization",
-                        "name": "Q16_Model_Monitor_Aspects_Output_And_Decisions"
+                        "name": "Q16_Model_Monitor_Aspects_Output_And_Decisions",
+                        "description": "Importance of monitoring outputs and decisions of models in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Importance of monitoring fairness of models in the respondent's organization",
-                        "name": "Q16_Model_Monitor_Aspects_Fairness"
+                        "name": "Q16_Model_Monitor_Aspects_Fairness",
+                        "description": "Importance of monitoring fairness of models in the respondent's organization"
                     },
                     {
-                        "depth": 0,
-                        "description": "Importance of monitoring other aspects of models specified by the respondent",
-                        "name": "Q16_Model_Monitor_Aspects_Others"
+                        "name": "Q16_Model_Monitor_Aspects_Others",
+                        "description": "Importance of monitoring other aspects of models specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Free text response for other aspects of model monitoring specified by the respondent",
-                        "name": "Q16_Model_Monitor_Aspects_Others_Free"
+                        "name": "Q16_Model_Monitor_Aspects_Others_Free",
+                        "description": "Free text response for other aspects of model monitoring specified by the respondent"
                     },
                     {
-                        "depth": 0,
-                        "description": "Yes or No response indicating if the respondent uses automated machine learning tools",
-                        "name": "Q17_Automated_Machine_Learning_Tools_Yes_No"
+                        "name": "Q17_Automated_Machine_Learning_Tools_Yes_No",
+                        "description": "Yes or No response indicating if the respondent uses automated machine learning tools"
                     },
                     {
-                        "depth": 0,
-                        "description": "Free text response if the respondent uses automated machine learning tools",
-                        "name": "Q17_Automated_Machine_Learning_Tools_Yes_Free"
+                        "name": "Q17_Automated_Machine_Learning_Tools_Yes_Free",
+                        "description": "Free text response if the respondent uses automated machine learning tools"
                     },
                     {
-                        "depth": 0,
-                        "description": "Origin of the respondent",
-                        "name": "Origin"
+                        "name": "Origin",
+                        "description": "Origin of the respondent"
                     }
                 ]
-            },
-            "description": "Survey responses detailing the roles, techniques, and documentation practices associated with requirements in ML-enabled system projects.",
-            "domain_knowledge": "",
-            "max_depth": 0,
-            "name": "requirements_engineering_for_ML-enabled_systems.csv"
+            }
         }
     ],
-    "domain": "engineering",
-    "hypotheses": {
-        "intermediate": [],
-        "main": [
-            {
-                "depth": 0,
-                "expr": "",
-                "expr_ind": "",
-                "target": "",
-                "text": ""
-            }
-        ]
-    },
-    "id": 0,
     "intermediate": [],
+    "hypotheses": {
+        "main": [
+            {}
+        ],
+        "intermediate": []
+    },
     "queries": [
         [
             {
-                "prior_findings": "",
                 "qid": 0,
-                "question": "Which Non-Functional Requirements concerning model aspects are considered important in ML-enabled system projects, with 37.825% (95% CI [37.464, 38.187]) and 36.721% (95% CI [36.341, 37.101]) of respondents indicating so, respectively, after bootstrapping for statistical significance?",
-                "question_specificity": null,
                 "question_type": "context",
-                "relevant_cols": [],
-                "target_col": "",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "question": "Which Non-Functional Requirements concerning model aspects are considered important in ML-enabled system projects, with 37.825% (95% CI [37.464, 38.187]) and 36.721% (95% CI [36.341, 37.101]) of respondents indicating so, respectively, after bootstrapping for statistical significance?"
             }
         ]
-    ],
-    "workflow": "",
-    "workflow_tags": "data cleaning, data classification, data transformation, statistical sampling, statistical analysis"
+    ]
 }

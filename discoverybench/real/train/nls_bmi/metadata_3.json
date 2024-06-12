@@ -1,108 +1,108 @@
 {
+    "id": 0,
+    "domain": "sociology",
+    "workflow_tags": "regression",
+    "domain_knowledge": "Spending and saving behavior can be used as proxies for Time preference of an individual.",
     "datasets": [
         {
+            "name": "nls_bmi_processed.csv",
+            "description": "This dataset is from the National Longitudinal Survey of Youth (NLSY79) includes variables such as gender, age, income, savings behavior, BMI, and racial background.",
+            "max_depth": 0,
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
+                        "name": "GENDER",
                         "description": "Gender of the Respondent (MALE or FEMALE)",
-                        "name": "GENDER"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "AGE",
                         "description": "The age of the respondent in the year 1989",
-                        "name": "AGE"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "AGE_2",
                         "description": "Square of the age of the Respondent",
-                        "name": "AGE_2"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "INCOME",
                         "description": "The income of the respondent in the year 1989",
-                        "name": "INCOME"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "DISSAVED",
                         "description": "A boolean variable that equals 1 if the respondent took more money out of than put into savings and equals 0 otherwise",
-                        "name": "DISSAVED"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "SAMESAVE",
                         "description": "A boolean variable that equals 1 if the respondent's savings level did not change or the respondent had no savings, and is 0 otherwise",
-                        "name": "SAMESAVE"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "BMI",
                         "description": "Body mass index of the respondent calculated using the standard formula using the height and weight of the respondent using the height of 1985 and weight of 1989",
-                        "name": "BMI"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "BLACK",
                         "description": "A boolean variable that indicated if the respondent belongs to the black race or not",
-                        "name": "BLACK"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "HISPANIC",
                         "description": "A boolean variable that indicated if the respondent belongs to the hispanic race or not",
-                        "name": "HISPANIC"
+                        "depth": 0
                     }
                 ]
-            },
-            "description": "This dataset is from the National Longitudinal Survey of Youth (NLSY79) includes variables such as gender, age, income, savings behavior, BMI, and racial background.",
-            "domain_knowledge": "",
-            "max_depth": 0,
-            "name": "nls_bmi_processed.csv"
+            }
         }
     ],
-    "domain": "sociology",
+    "intermediate": [],
     "hypotheses": {
-        "intermediate": [],
         "main": [
             {
                 "depth": 0,
+                "target": "",
                 "expr": "",
                 "expr_ind": "",
-                "target": "",
-                "text": ""
+                "text": "Younger individuals are more likely to withdraw more money from savings than they had put in and with a negative coefficient between age and withdrawing more than putting into savings (-0.0422)."
             }
-        ]
+        ],
+        "intermediate": []
     },
-    "id": 0,
-    "intermediate": [],
+    "workflow": "1. One-hot encode Gender variable into MALE and FEMALE\n2. Extract the independent variables ['AGE','INCOME', 'BMI', 'BLACK', 'HISPANIC', 'MALE', 'FEMALE']\n3. Add dependent variable (DISSAVED) from the df\n4. Add a constant term to the independent variable to account for the intercept term in the logistic regression model.\n5. Fit a logistic regression model",
     "queries": [
         [
             {
-                "prior_findings": "",
                 "qid": 0,
-                "question": "How does age influence the likelihood of withdrawing more money from savings than putting in?",
-                "question_specificity": null,
-                "question_type": "relationship",
+                "true_hypothesis": "Younger individuals are more likely to withdraw more money from savings than they had put in and with a negative coefficient between age and withdrawing more than putting into savings (-0.0422).",
+                "true_hypothesis_expr": "DISSAVED ~ AGE + AGE_2 + INCOME + SAMESAVE + BMI + BLACK + HISPANIC",
                 "relevant_cols": [
                     "AGE",
                     "DISSAVED"
                 ],
                 "target_col": "DISSAVED",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": "DISSAVED ~ AGE + AGE_2 + INCOME + SAMESAVE + BMI + BLACK + HISPANIC"
+                "prior_findings": "",
+                "question_type": "relationship",
+                "question_specificity": null,
+                "question": "How does age influence the likelihood of withdrawing more money from savings than putting in?"
             },
             {
-                "prior_findings": "",
                 "qid": 1,
-                "question": "What behaviors regarding withdrawal of savings have been observed in relation to age?",
-                "question_specificity": null,
-                "question_type": "context",
+                "true_hypothesis": "Younger individuals are more likely to withdraw more money from savings than they had put in and with a negative coefficient between age and withdrawing more than putting into savings (-0.0422).",
+                "true_hypothesis_expr": "DISSAVED ~ AGE + AGE_2 + INCOME + SAMESAVE + BMI + BLACK + HISPANIC",
                 "relevant_cols": [
                     "AGE",
                     "DISSAVED"
                 ],
                 "target_col": "DISSAVED",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": "DISSAVED ~ AGE + AGE_2 + INCOME + SAMESAVE + BMI + BLACK + HISPANIC"
+                "prior_findings": "",
+                "question_type": "context",
+                "question_specificity": null,
+                "question": "What behaviors regarding withdrawal of savings have been observed in relation to age?"
             }
         ]
-    ],
-    "workflow": "",
-    "workflow_tags": "regression"
+    ]
 }

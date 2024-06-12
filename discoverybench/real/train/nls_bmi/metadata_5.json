@@ -1,84 +1,84 @@
 {
+    "id": 0,
+    "domain": "sociology",
+    "workflow_tags": "regression, data selection",
+    "domain_knowledge": "Spending and saving behavior can be used as proxies for Time preference of an individual.",
     "datasets": [
         {
+            "name": "nls_bmi_processed.csv",
+            "description": "This dataset is from the National Longitudinal Survey of Youth (NLSY79) includes variables such as gender, age, income, savings behavior, BMI, and racial background.",
+            "max_depth": 0,
             "columns": {
                 "raw": [
                     {
-                        "depth": 0,
+                        "name": "GENDER",
                         "description": "Gender of the Respondent (MALE or FEMALE)",
-                        "name": "GENDER"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "AGE",
                         "description": "The age of the respondent in the year 1989",
-                        "name": "AGE"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "AGE_2",
                         "description": "Square of the age of the Respondent",
-                        "name": "AGE_2"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "INCOME",
                         "description": "The income of the respondent in the year 1989",
-                        "name": "INCOME"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "DISSAVED",
                         "description": "A boolean variable that equals 1 if the respondent took more money out of than put into savings and equals 0 otherwise",
-                        "name": "DISSAVED"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "SAMESAVE",
                         "description": "A boolean variable that equals 1 if the respondent's savings level did not change or the respondent had no savings, and is 0 otherwise",
-                        "name": "SAMESAVE"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "BMI",
                         "description": "Body mass index of the respondent calculated using the standard formula using the height and weight of the respondent using the height of 1985 and weight of 1989",
-                        "name": "BMI"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "BLACK",
                         "description": "A boolean variable that indicated if the respondent belongs to the black race or not",
-                        "name": "BLACK"
+                        "depth": 0
                     },
                     {
-                        "depth": 0,
+                        "name": "HISPANIC",
                         "description": "A boolean variable that indicated if the respondent belongs to the hispanic race or not",
-                        "name": "HISPANIC"
+                        "depth": 0
                     }
                 ]
-            },
-            "description": "This dataset is from the National Longitudinal Survey of Youth (NLSY79) includes variables such as gender, age, income, savings behavior, BMI, and racial background.",
-            "domain_knowledge": "",
-            "max_depth": 0,
-            "name": "nls_bmi_processed.csv"
+            }
         }
     ],
-    "domain": "sociology",
+    "intermediate": [],
     "hypotheses": {
-        "intermediate": [],
         "main": [
             {
                 "depth": 0,
+                "target": "",
                 "expr": "",
                 "expr_ind": "",
-                "target": "",
-                "text": ""
+                "text": "Higher time preference associated with higher BMI is more pronounced for men with coefficient for withdrawing more than saving being 0.5256, and coefficient for same amount of saving being 0.4715"
             }
-        ]
+        ],
+        "intermediate": []
     },
-    "id": 0,
-    "intermediate": [],
+    "workflow": "1. Two OLS regressions were ran to compared the differences betwen MALE & FEMALE\n\n2. OLS Regression on data with GENDER=\"MALE\" with DISSAVED and SAMESAVE as independent variables and BMI as dependent variable\n\n3. OLS Regression on data with GENDER=\"FEMALE\" with DISSAVED and SAMESAVE as independent variables and BMI as dependent variable",
     "queries": [
         [
             {
-                "prior_findings": "",
                 "qid": 0,
-                "question": "How does higher time preference relate to BMI across different genders?",
-                "question_specificity": null,
-                "question_type": "context",
+                "true_hypothesis": "Higher time preference associated with higher BMI is more pronounced for men with coefficient for withdrawing more than saving being 0.5256, and coefficient for same amount of saving being 0.4715",
+                "true_hypothesis_expr": "",
                 "relevant_cols": [
                     "GENDER",
                     "BMI",
@@ -86,15 +86,15 @@
                     "SAMESAVE"
                 ],
                 "target_col": "",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "prior_findings": "",
+                "question_type": "context",
+                "question_specificity": null,
+                "question": "How does higher time preference relate to BMI across different genders?"
             },
             {
-                "prior_findings": "",
                 "qid": 1,
-                "question": "In what way is higher time preference linked to higher BMI among men?",
-                "question_specificity": null,
-                "question_type": "relationship",
+                "true_hypothesis": "Higher time preference associated with higher BMI is more pronounced for men with coefficient for withdrawing more than saving being 0.5256, and coefficient for same amount of saving being 0.4715",
+                "true_hypothesis_expr": "",
                 "relevant_cols": [
                     "GENDER",
                     "BMI",
@@ -102,11 +102,11 @@
                     "SAMESAVE"
                 ],
                 "target_col": "",
-                "true_hypothesis": "",
-                "true_hypothesis_expr": ""
+                "prior_findings": "",
+                "question_type": "relationship",
+                "question_specificity": null,
+                "question": "In what way is higher time preference linked to higher BMI among men?"
             }
         ]
-    ],
-    "workflow": "",
-    "workflow_tags": "regression, data selection"
+    ]
 }
