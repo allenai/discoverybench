@@ -11,6 +11,10 @@ Dataset and code for ["DiscoveryBench: Towards Data-Driven Discovery with Large 
 
 ---
 
+## Overview
+
+TBA from the paper and high level context. 
+
 This repo is structured as follows:
 
 - **DiscoveryBench**: Contains both real and synthetic datasets, located in the `discoverybench` folder.
@@ -60,6 +64,10 @@ Options:
   --eval_output_path TEXT       Evaluation output path
   --help                        Show this message and exit.
 ```
+
+## Contribution 
+
+TBA on how users can contribute for agents. 
 
 ## ✍️ Citation
 If you find our work helpful, please use the following citations.
