@@ -2,7 +2,7 @@
     "id": 0,
     "domain": "sociology",
     "workflow_tags": "gini coefficient, data selection",
-    "domain_knowledge": "Incarceration status can be gauged indirectly by studying the place of residence. If it is ‘Jail’, or other facilities of detention, incarceration can be assumed. ",
+    "domain_knowledge": "Incarceration status can be gauged indirectly by studying the place of residence. If it is 'Jail', or other facilities of detention, incarceration can be assumed. ",
     "datasets": [
         {
             "name": "nls_incarceration_processed.csv",
