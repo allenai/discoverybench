@@ -72,9 +72,12 @@ Options:
   --help                        Show this message and exit.
 ```
 
-## Contribution 
+## 🙌 Contributing to DiscoveryBench
 
-TBA on how users can contribute to agents. 
+We welcome contributions to our repository of discovery agents. In case of any issues for the agents, evaluation, or any other bug, please follow our issue templates. We would try to respond to as soon as possible. 
+
+Reach out to us at: [Bodhisattwa Prasad Majumder]([url](https://www.majumderb.com/)) and [Harshit Surana]([url](https://harshitsurana.com/)) (Email: {bodhi, harshits}@allenai.org).
+
 
 ## ✍️ Citation
 If you find our work helpful, please use the following citations.
