@@ -1,12 +1,13 @@
 {
     "id": 0,
     "domain": "economics",
+    "workflow_tags": "regression, data cleaning, data integration",
+    "domain_knowledge": "",
     "datasets": [
         {
             "name": "offshoring_iv_mar2.dta",
             "description": "This dataset contains measures aimed at capturing exogenous variation in the ease or costs of offshoring across industries and years. It is constructed using variation in offshoring across countries to the U.S., interacting with each industry's initial distribution of offshoring across those countries. This offshoring measure is intended to be used as an explanatory variable when examining impacts on domestic employment patterns.",
             "max_depth": 0,
-            "domain_knowledge": "",
             "columns": {
                 "raw": [
                     {
@@ -31,7 +32,6 @@
             "name": "immi_popimputed_00_07.dta",
             "description": "This dataset provides imputed measures of immigrant employment aimed at capturing exogenous variation in immigration costs and push-factors across industries and years",
             "max_depth": 0,
-            "domain_knowledge": "",
             "columns": {
                 "raw": [
                     {
@@ -77,7 +77,6 @@
             {
                 "qid": 0,
                 "true_hypothesis": "Increased ease of immigration has no significant effect on the share of native employment",
-                "true_hypothesis_expr": "",
                 "relevant_cols": [],
                 "target_col": "",
                 "prior_findings": "",
@@ -88,7 +87,6 @@
             {
                 "qid": 1,
                 "true_hypothesis": "Increased ease of immigration has no significant effect on the share of native employment",
-                "true_hypothesis_expr": "",
                 "relevant_cols": [],
                 "target_col": "",
                 "prior_findings": "",

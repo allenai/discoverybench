@@ -2,6 +2,7 @@
     "id": 0,
     "domain": "biology",
     "workflow_tags": "regression",
+    "domain_knowledge": "",
     "datasets": [
         {
             "name": "body-size-evolution-in-south-american-freshwater-fishes.csv",
@@ -137,7 +138,6 @@
             {
                 "qid": 0,
                 "true_hypothesis": "The rate of maximum body length evolution emerged as the most influential factor explaining spatial variation in speciation rates. The relationship is positive with linear coefficient 0.82.",
-                "true_hypothesis_expr": "",
                 "relevant_cols": [],
                 "target_col": "",
                 "prior_findings": "",
@@ -148,7 +148,6 @@
             {
                 "qid": 1,
                 "true_hypothesis": "The rate of maximum body length evolution emerged as the most influential factor explaining spatial variation in speciation rates. The relationship is positive with linear coefficient 0.82.",
-                "true_hypothesis_expr": "",
                 "relevant_cols": [],
                 "target_col": "",
                 "prior_findings": "",
@@ -159,7 +158,6 @@
             {
                 "qid": 2,
                 "true_hypothesis": "The rate of maximum body length evolution emerged as the most influential factor explaining spatial variation in speciation rates. The relationship is positive with linear coefficient 0.82.",
-                "true_hypothesis_expr": "",
                 "relevant_cols": [],
                 "target_col": "",
                 "prior_findings": "",
