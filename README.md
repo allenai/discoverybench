@@ -76,7 +76,7 @@ Options:
 
 We welcome contributions to our repository of discovery agents. In case of any issues for the agents, evaluation, or any other bug, please follow [our issue templates](https://github.com/allenai/discoverybench/issues/new/choose). We would try to respond to as soon as possible. 
 
-Reach out to us at: [Bodhisattwa Prasad Majumder](https://www.majumderb.com) and [Harshit Surana](https://harshitsurana.com) (Email: {bodhi, harshits}@allenai.org).
+Reach out to us at: [Bodhisattwa Prasad Majumder](https://www.majumderb.com) and [Harshit Surana](https://harshitsurana.com) (Email: {bodhisattwam, harshits}@allenai.org).
 
 
 ## ✍️ Citation
