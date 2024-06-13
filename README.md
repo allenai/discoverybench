@@ -11,9 +11,16 @@ Dataset and code for ["DiscoveryBench: Towards Data-Driven Discovery with Large 
 
 ---
 
-## Overview
+## 👋 Overview
 
-TBA from the paper and high level context. 
+DiscoveryBench is designed to systematically assess current model capabilities in data-driven discovery tasks and provide a useful resource for improving them. Each DiscoveryBench task consists of a goal and dataset(s). Solving the task requires both statistical analysis and semantic reasoning. A faceted evaluation allows open-ended final answers to be rigorously evaluated.
+
+<p align="center">
+  <a href="[https://github.com/princeton-nlp/Llamao](https://github.com/allenai/discoverybench)">
+    <img src="assets/background-teaser.png" width="100%" alt="DiscoveryBench Background" />
+  </a>
+</p>
+
 
 This repo is structured as follows:
 
@@ -67,7 +74,7 @@ Options:
 
 ## Contribution 
 
-TBA on how users can contribute for agents. 
+TBA on how users can contribute to agents. 
 
 ## ✍️ Citation
 If you find our work helpful, please use the following citations.
