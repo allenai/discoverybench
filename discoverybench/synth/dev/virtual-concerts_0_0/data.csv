@@ -1,0 +1,501 @@
+artist_time_zone,interactive_features_available,engagement_rate,interactive_elements,concert_length_minutes,advertising_budget,engagement_score,artist_age_group,guest_artist_present,production_team_size,streaming_platform,audience_reach,target_audience_diversity,streaming_platforms_count,concert_time_slot,concert_genre,total_viewer_count,exclusive_content_offered
+UTC,,73.7903,False,123,30256,100.0,Gen X,True,10,Facebook Live,867834,False,7,morning,classical,65688,False
+UTC+2,False,74.1676,True,117,44945,100.0,Gen Z,False,8,Facebook Live,794205,True,7,evening,classical,70052,False
+UTC+2,False,74.3276,True,126,52001,100.0,Boomers,False,11,Facebook Live,62817,True,6,afternoon,hiphop,66946,False
+UTC+2,,76.0646,False,80,88031,100.0,Gen Z,False,10,Facebook Live,638222,False,8,morning,jazz,67537,True
+UTC,True,73.5971,True,136,28437,100.0,Gen X,False,9,YouTube,814029,True,7,evening,classical,64298,False
+UTC+1,False,70.6799,True,132,36629,100.0,Boomers,True,10,Twitch,796898,False,8,afternoon,jazz,68169,True
+UTC+3,True,71.0563,False,103,53652,100.0,Boomers,True,10,YouTube,788606,False,7,afternoon,classical,75814,True
+UTC,False,70.4884,False,157,38651,100.0,Gen Z,True,10,YouTube,97402,False,6,morning,,68047,False
+UTC+3,True,71.8199,False,112,22241,100.0,Gen Z,True,10,Facebook Live,534955,False,7,afternoon,jazz,68936,False
+UTC,False,70.1964,True,122,54273,100.0,Gen Z,False,9,YouTube,967194,False,7,afternoon,jazz,72619,False
+UTC+2,True,70.0886,True,120,51886,100.0,Boomers,False,10,Instagram Live,513655,True,7,afternoon,rock,73383,True
+UTC+2,False,71.8404,True,129,30156,100.0,Gen Z,True,9,Facebook Live,637769,False,8,afternoon,rock,72100,True
+UTC-5,True,70.0072,True,113,37031,100.0,Millennials,True,10,Facebook Live,421807,False,8,evening,classical,63403,True
+UTC+3,True,70.2655,True,127,31296,100.0,Millennials,False,9,Instagram Live,586324,False,7,afternoon,pop,60158,False
+UTC+1,True,74.6785,False,103,36922,100.0,Gen X,True,10,Twitch,686145,False,8,afternoon,hiphop,57119,True
+UTC+2,False,74.9507,True,123,31675,100.0,Gen Z,False,8,YouTube,800181,True,7,afternoon,pop,66433,False
+UTC+3,True,70.0831,False,114,58513,100.0,Boomers,False,8,Instagram Live,186643,True,6,evening,hiphop,69772,True
+UTC+2,True,74.7321,False,131,44275,100.0,Boomers,False,8,YouTube,168393,True,7,morning,,76345,False
+UTC+2,True,67.5652,True,131,42519,100.0,Gen Z,True,10,Facebook Live,190652,False,7,afternoon,jazz,65477,True
+UTC-5,False,66.5774,False,115,43639,100.0,Millennials,True,9,Instagram Live,596748,True,7,morning,,74831,False
+UTC+3,True,69.5154,False,145,38180,100.0,Gen Z,False,9,Twitch,739889,True,8,evening,jazz,67456,True
+UTC,True,68.2595,True,143,28648,100.0,Boomers,True,10,Instagram Live,214990,False,7,morning,jazz,71339,False
+UTC+1,True,72.674,True,100,63909,100.0,Boomers,False,11,Twitch,930384,False,7,evening,electronic,70056,False
+UTC+3,False,71.0522,True,152,25159,100.0,Gen X,False,9,YouTube,512314,False,6,afternoon,rock,66341,True
+UTC-5,False,70.6335,False,117,19938,100.0,Gen Z,True,10,Twitch,778067,True,7,evening,jazz,68881,False
+UTC+1,True,80.6767,False,129,35544,100.0,Gen Z,True,9,YouTube,28158,True,7,afternoon,hiphop,65686,False
+UTC,False,73.457,False,133,52305,100.0,Gen Z,True,9,Facebook Live,427247,True,7,afternoon,rock,67741,True
+UTC+2,,77.3009,True,102,49589,100.0,Gen Z,True,9,Twitch,662542,False,8,afternoon,hiphop,71406,False
+UTC+1,True,71.5891,True,117,46252,100.0,Gen X,False,10,Twitch,424204,False,7,afternoon,jazz,70218,False
+UTC-5,True,66.1321,True,148,47591,100.0,Boomers,False,10,Facebook Live,1000000,False,8,evening,jazz,62536,False
+UTC+1,True,74.064,True,130,20899,100.0,Boomers,False,11,Twitch,436452,True,7,morning,rock,68596,False
+UTC-5,False,77.4477,False,141,42737,100.0,Gen Z,True,10,Facebook Live,653804,False,7,evening,classical,66926,True
+UTC+3,True,73.397,True,117,34153,100.0,Millennials,False,12,Twitch,148661,True,8,morning,electronic,63483,False
+UTC+3,False,71.5485,True,145,28161,100.0,Millennials,True,10,Instagram Live,502287,True,7,afternoon,hiphop,61197,False
+UTC+3,False,69.1004,True,95,45874,100.0,Gen X,False,9,Instagram Live,391550,True,7,afternoon,classical,73192,False
+UTC,,70.2343,False,118,34394,100.0,Boomers,True,8,YouTube,774898,False,7,evening,rock,58182,False
+UTC+1,False,77.671,False,124,12751,100.0,Boomers,False,10,Twitch,892170,False,7,afternoon,,79112,False
+UTC-5,,70.2542,False,107,73195,100.0,Gen X,False,10,YouTube,261139,False,8,morning,,73693,False
+UTC,,72.1231,False,118,66243,100.0,Gen Z,False,10,Facebook Live,791070,False,7,afternoon,rock,67140,True
+UTC,False,74.7849,True,118,69975,100.0,Gen X,True,10,Twitch,307027,True,7,morning,pop,70855,True
+UTC+3,True,69.754,False,103,50475,100.0,Gen Z,False,10,Instagram Live,693284,False,8,afternoon,rock,59848,True
+UTC,True,69.8529,True,108,76187,100.0,Millennials,False,10,Twitch,514000,True,7,evening,hiphop,67849,True
+UTC+1,True,73.0382,False,133,44402,100.0,Gen Z,True,10,Facebook Live,154149,True,7,morning,electronic,77520,True
+UTC+3,False,79.397,True,109,47910,100.0,Gen X,True,9,YouTube,32200,False,6,evening,classical,66994,False
+UTC+3,,74.3813,True,118,41826,100.0,Millennials,True,11,Facebook Live,373181,True,8,afternoon,jazz,64422,True
+UTC+1,False,68.8734,False,104,39777,100.0,Gen X,True,9,Twitch,452893,True,8,afternoon,electronic,78046,False
+UTC+1,,68.9894,False,125,55041,100.0,Millennials,True,9,Instagram Live,194613,False,7,afternoon,,63311,True
+UTC+3,True,74.4408,True,111,37977,100.0,Gen X,True,9,Instagram Live,897290,True,7,afternoon,jazz,75288,True
+UTC+1,False,70.6484,False,137,54850,100.0,Gen X,True,9,Twitch,872847,False,7,morning,pop,63132,True
+UTC+1,,67.8007,True,136,35464,100.0,Gen X,True,9,Facebook Live,132009,False,7,evening,pop,72664,False
+UTC,True,73.6805,True,128,56672,100.0,Gen X,False,10,Instagram Live,452873,False,8,morning,jazz,63498,False
+UTC+3,True,74.7868,False,119,42991,100.0,Gen Z,True,9,Twitch,327960,False,8,evening,jazz,64275,True
+UTC,True,72.8898,True,101,76003,100.0,Boomers,False,9,Twitch,915231,False,8,morning,,73158,False
+UTC-5,False,76.6439,False,127,33626,100.0,Boomers,True,10,Twitch,491611,False,7,evening,hiphop,74479,False
+UTC-5,False,71.3549,False,113,50761,100.0,Gen Z,False,10,Twitch,181669,True,6,morning,electronic,71804,False
+UTC-5,True,72.4327,True,129,46454,100.0,Boomers,False,11,YouTube,1000000,False,8,afternoon,electronic,71140,False
+UTC+1,True,68.7891,False,101,37922,100.0,Millennials,False,10,Twitch,956240,True,8,afternoon,pop,77067,False
+UTC+2,True,74.6943,False,121,66289,100.0,Gen X,False,8,Twitch,629179,False,7,morning,,70995,False
+UTC+2,False,64.5677,False,121,45112,100.0,Millennials,False,11,YouTube,1000,True,7,evening,pop,72543,False
+UTC+1,True,73.6563,True,124,50422,100.0,Boomers,False,9,Facebook Live,280263,True,6,morning,classical,69573,True
+UTC+1,,75.0123,True,113,35221,100.0,Gen X,False,10,Instagram Live,736083,True,7,evening,,69459,False
+UTC-5,True,66.3701,False,135,44547,100.0,Millennials,False,11,Instagram Live,396249,False,7,afternoon,hiphop,68648,False
+UTC,True,72.6345,False,117,36179,100.0,Boomers,False,11,Twitch,731010,False,6,morning,rock,70354,False
+UTC-5,False,70.4832,False,139,63438,100.0,Gen X,False,10,YouTube,658878,True,7,evening,classical,63037,True
+UTC+2,True,76.3775,False,131,49696,100.0,Boomers,False,9,Twitch,26156,True,7,morning,,65089,False
+UTC+1,False,68.6698,True,131,50872,100.0,Gen X,False,12,YouTube,109711,False,6,evening,jazz,67727,True
+UTC,True,69.4253,True,126,47953,100.0,Gen X,True,8,Instagram Live,217589,True,8,afternoon,electronic,67219,True
+UTC-5,False,73.2142,False,112,66635,100.0,Gen Z,False,11,Instagram Live,198929,True,8,afternoon,pop,67956,False
+UTC+3,False,67.2236,False,126,55562,100.0,Millennials,False,10,Instagram Live,451781,True,8,morning,pop,80541,False
+UTC+1,True,78.8674,True,141,59944,100.0,Gen X,True,10,YouTube,927664,False,7,evening,electronic,68377,True
+UTC+3,False,71.3719,True,141,31526,100.0,Gen Z,False,11,Facebook Live,237746,False,6,afternoon,electronic,60164,True
+UTC-5,,72.2928,False,137,40139,100.0,Gen X,True,9,Instagram Live,229280,False,8,evening,pop,66986,True
+UTC+3,False,68.0374,False,145,45732,100.0,Millennials,True,10,Instagram Live,452335,False,7,evening,hiphop,77208,True
+UTC+3,False,68.9203,False,113,60750,100.0,Boomers,True,9,Twitch,712480,False,7,evening,pop,65292,True
+UTC,False,70.8563,True,129,55886,100.0,Gen X,False,9,Facebook Live,199551,False,7,morning,electronic,74553,False
+UTC+2,False,66.5478,False,121,17813,100.0,Gen Z,True,10,YouTube,701789,False,8,afternoon,electronic,68326,True
+UTC+1,,73.3888,True,125,39362,100.0,Gen X,True,10,Facebook Live,508010,False,7,evening,rock,69757,True
+UTC+1,True,72.5525,True,128,38147,100.0,Gen Z,False,8,Twitch,68480,True,7,afternoon,hiphop,70309,False
+UTC-5,False,65.6022,False,142,50599,100.0,Boomers,False,10,Instagram Live,119972,True,6,afternoon,pop,65317,False
+UTC-5,True,70.7431,True,122,31920,100.0,Gen X,False,9,Twitch,737527,False,7,afternoon,,68963,False
+UTC,True,70.5474,True,115,54823,100.0,Millennials,False,10,Facebook Live,977769,True,7,evening,pop,72638,True
+UTC,False,74.0959,True,109,40892,100.0,Gen X,False,11,YouTube,742590,True,7,evening,classical,60825,False
+UTC-5,False,72.9415,False,110,46832,100.0,Millennials,True,10,Facebook Live,112320,True,7,morning,classical,77525,True
+UTC,False,72.0333,False,93,51169,100.0,Gen Z,False,10,Twitch,600997,False,8,morning,electronic,68505,False
+UTC+2,False,73.0894,False,112,44904,100.0,Gen X,True,10,YouTube,363280,True,8,afternoon,rock,62516,False
+UTC+1,False,67.9136,False,119,27206,100.0,Millennials,False,9,Twitch,928938,False,8,evening,electronic,66906,False
+UTC+3,False,69.2553,False,137,42332,100.0,Gen X,True,11,Twitch,309497,False,8,evening,jazz,63786,False
+UTC+2,True,74.2583,True,118,64236,100.0,Millennials,False,10,Facebook Live,932613,False,6,evening,pop,62901,True
+UTC,True,73.2322,True,100,25927,100.0,Gen Z,True,10,Twitch,397824,True,7,afternoon,electronic,73062,True
+UTC-5,True,72.8224,True,136,63769,100.0,Millennials,True,10,Twitch,663814,False,7,afternoon,classical,75281,True
+UTC+1,True,74.5862,True,114,27753,100.0,Gen X,True,10,YouTube,220884,False,7,morning,pop,73407,True
+UTC+3,True,70.3051,False,98,26337,100.0,Gen Z,False,10,Facebook Live,930185,False,8,evening,classical,61760,False
+UTC+2,True,74.3415,False,93,45611,100.0,Gen Z,True,8,Facebook Live,557613,True,8,morning,jazz,65357,True
+UTC,True,75.5623,False,118,45905,100.0,Millennials,False,9,Instagram Live,267243,True,8,evening,rock,74390,False
+UTC+3,True,73.3928,False,151,22450,100.0,Gen X,False,10,Instagram Live,831129,True,6,morning,classical,67411,True
+UTC-5,False,70.0116,False,107,37412,100.0,Millennials,True,9,Facebook Live,781967,False,7,morning,hiphop,63135,True
+UTC+2,,68.7777,True,131,38183,100.0,Boomers,True,9,Facebook Live,787763,True,7,afternoon,electronic,62457,False
+UTC+1,False,71.3624,False,110,34205,100.0,Gen Z,True,8,Twitch,266319,False,8,morning,rock,73897,True
+UTC,False,72.2998,True,109,42615,100.0,Millennials,False,11,YouTube,64442,True,8,afternoon,hiphop,74173,False
+UTC+1,False,70.674,False,117,36149,100.0,Gen Z,False,10,Facebook Live,466349,False,8,evening,rock,66430,True
+UTC-5,True,68.398,False,117,50875,100.0,Gen X,False,9,Instagram Live,564772,False,6,morning,electronic,66058,False
+UTC,True,74.3161,False,114,43276,100.0,Boomers,False,8,Twitch,254136,True,7,afternoon,,68355,False
+UTC+1,False,70.3758,False,125,57651,100.0,Millennials,False,9,Instagram Live,123511,True,7,morning,electronic,67367,False
+UTC+2,True,77.002,False,92,36463,100.0,Millennials,False,11,Facebook Live,427731,False,8,afternoon,electronic,73532,False
+UTC+3,False,73.0957,False,115,31452,100.0,Gen X,True,9,YouTube,166494,True,7,evening,electronic,60203,False
+UTC+2,False,73.1537,True,133,47697,100.0,Millennials,True,10,Instagram Live,737203,False,8,morning,pop,71102,True
+UTC,True,73.8465,False,82,45849,100.0,Gen Z,False,8,YouTube,860668,True,7,afternoon,hiphop,68567,False
+UTC-5,True,67.4436,True,115,39995,100.0,Millennials,True,8,YouTube,567032,False,8,morning,electronic,69367,False
+UTC+3,False,72.3532,True,135,43108,100.0,Millennials,True,9,YouTube,42116,True,6,afternoon,,67260,False
+UTC,True,69.0357,True,129,18393,100.0,Boomers,True,10,Twitch,465845,True,6,morning,electronic,65161,False
+UTC+2,False,69.3977,True,113,43964,100.0,Boomers,True,8,Instagram Live,187699,False,8,evening,hiphop,63698,True
+UTC+2,False,67.9039,False,113,26031,100.0,Boomers,False,10,Facebook Live,308104,False,8,afternoon,classical,75198,False
+UTC-5,False,74.4556,False,97,32601,100.0,Gen X,False,11,YouTube,782595,False,7,morning,classical,59261,True
+UTC+1,False,68.2346,True,125,46695,100.0,Gen Z,False,9,Instagram Live,908430,True,8,evening,rock,73367,False
+UTC-5,True,70.5581,True,112,37332,100.0,Boomers,True,10,YouTube,903142,False,8,evening,hiphop,61660,True
+UTC+2,False,72.3333,False,116,39711,100.0,Boomers,False,10,YouTube,275793,False,7,evening,jazz,66411,True
+UTC+3,True,76.4779,True,114,45328,100.0,Millennials,False,9,Instagram Live,696931,True,7,morning,hiphop,70890,True
+UTC,False,73.3215,True,122,28796,100.0,Gen X,True,10,Facebook Live,229394,True,7,morning,classical,76434,True
+UTC+1,True,77.6711,True,99,43427,100.0,Boomers,False,9,YouTube,629083,True,7,afternoon,hiphop,64672,False
+UTC+1,False,71.3612,False,107,60933,100.0,Boomers,False,10,Twitch,824837,True,7,afternoon,rock,65869,False
+UTC+1,False,70.2158,True,97,23872,100.0,Gen X,True,9,Facebook Live,1000000,True,8,evening,classical,68723,True
+UTC+1,,76.1365,True,140,34928,100.0,Gen Z,False,8,Twitch,470365,False,8,evening,pop,73327,False
+UTC+2,False,65.5731,True,144,39726,100.0,Gen X,False,11,Instagram Live,693697,True,7,evening,classical,70438,False
+UTC+3,False,73.6481,True,172,30028,100.0,Millennials,False,10,Facebook Live,809771,True,7,afternoon,pop,73482,False
+UTC+1,True,71.3997,True,125,38270,100.0,Gen X,True,10,Facebook Live,220922,True,8,evening,rock,62841,True
+UTC-5,True,68.4227,False,124,48775,100.0,Gen Z,True,9,Facebook Live,759104,False,7,morning,hiphop,68563,False
+UTC,False,70.8111,False,111,43988,100.0,Millennials,False,9,Instagram Live,648836,False,6,morning,jazz,63605,False
+UTC+3,True,67.3281,False,130,32052,100.0,Gen Z,False,10,YouTube,618692,True,7,evening,,74185,True
+UTC+3,False,73.1529,False,99,56781,100.0,Gen X,True,10,Instagram Live,920323,False,6,morning,pop,74024,False
+UTC+1,True,71.725,True,105,38750,100.0,Gen Z,False,10,Facebook Live,460414,False,8,morning,electronic,59467,True
+UTC-5,False,71.5195,True,136,48477,100.0,Millennials,False,10,YouTube,7580,True,7,evening,pop,74999,False
+UTC+3,False,77.7367,False,131,33963,100.0,Gen X,False,10,Facebook Live,424815,True,6,morning,electronic,63846,False
+UTC+2,True,71.987,True,129,32610,100.0,Gen X,False,9,Twitch,67891,False,7,morning,hiphop,70425,True
+UTC+2,False,77.0365,True,138,30980,100.0,Boomers,False,10,Facebook Live,895853,True,7,evening,rock,70172,True
+UTC+2,False,69.1641,True,128,16963,100.0,Boomers,True,11,Twitch,345136,True,8,morning,rock,60298,False
+UTC+1,True,67.4974,False,123,34507,100.0,Gen Z,True,10,Twitch,65003,False,8,morning,jazz,65030,True
+UTC+3,True,69.2249,False,146,41961,100.0,Boomers,True,10,Twitch,424818,True,7,evening,classical,58848,True
+UTC+1,False,70.7008,False,129,29040,100.0,Gen Z,True,8,Twitch,59586,False,6,morning,classical,71026,True
+UTC-5,,74.2374,True,136,31798,100.0,Gen X,True,10,Instagram Live,456438,False,7,evening,classical,64357,False
+UTC,False,67.9091,False,106,41734,100.0,Boomers,True,10,Facebook Live,437592,False,8,morning,pop,53120,False
+UTC,True,71.2139,False,118,46976,100.0,Gen X,True,11,Instagram Live,948689,True,7,morning,classical,59269,True
+UTC+2,True,70.4712,False,112,7054,100.0,Gen Z,True,10,Facebook Live,629103,True,8,morning,hiphop,77445,True
+UTC+3,False,68.8771,False,107,34723,100.0,Millennials,False,10,YouTube,944819,False,7,evening,jazz,65226,True
+UTC,False,70.1105,False,137,41236,100.0,Gen X,True,11,Twitch,212903,False,7,evening,classical,61519,False
+UTC+2,True,71.7429,False,123,46089,100.0,Millennials,False,9,Twitch,609184,True,7,afternoon,jazz,60326,False
+UTC+2,False,72.4545,False,96,39760,100.0,Millennials,True,11,YouTube,37295,True,8,morning,pop,71947,True
+UTC-5,False,68.2295,False,120,41097,100.0,Millennials,False,9,YouTube,39742,False,7,morning,rock,74048,True
+UTC+1,True,71.2745,False,132,41020,100.0,Gen Z,False,8,Facebook Live,238799,True,6,evening,hiphop,68841,False
+UTC+1,False,69.5069,False,129,34301,100.0,Gen X,False,8,Instagram Live,926134,True,7,afternoon,classical,68271,False
+UTC-5,,71.5145,True,109,22376,100.0,Millennials,True,10,Facebook Live,649809,False,7,afternoon,electronic,67773,True
+UTC-5,,71.8343,False,117,24326,100.0,Boomers,False,10,Facebook Live,703898,False,8,evening,electronic,72844,True
+UTC,,70.7063,False,109,20521,100.0,Boomers,True,11,YouTube,1000000,False,7,evening,pop,70921,False
+UTC,True,73.3361,False,125,24717,100.0,Millennials,True,8,YouTube,603924,False,8,morning,hiphop,64552,False
+UTC+1,False,64.7848,False,97,32075,100.0,Millennials,True,8,Instagram Live,795107,False,8,morning,jazz,59299,True
+UTC+2,True,74.1936,True,104,71663,100.0,Gen Z,False,10,Facebook Live,799004,True,7,evening,classical,54818,True
+UTC+3,True,74.8675,False,114,13890,100.0,Boomers,False,10,Facebook Live,53555,False,8,evening,classical,66884,False
+UTC,False,72.3445,True,131,31100,100.0,Gen Z,False,10,YouTube,315754,False,6,afternoon,pop,73108,False
+UTC+2,True,70.5873,False,120,44744,100.0,Millennials,True,10,Instagram Live,632138,True,7,afternoon,electronic,55384,True
+UTC+2,True,74.1285,True,127,30439,100.0,Gen X,False,9,Facebook Live,624302,False,7,morning,jazz,73641,True
+UTC+3,True,67.9924,False,107,14870,100.0,Gen Z,True,11,Instagram Live,588157,False,7,evening,hiphop,66943,False
+UTC-5,False,73.837,True,103,50649,100.0,Gen Z,False,10,Facebook Live,74335,True,8,evening,classical,69746,False
+UTC+2,True,65.0184,True,112,15539,100.0,Millennials,True,8,Facebook Live,296938,False,6,morning,electronic,72790,False
+UTC-5,False,72.9871,True,151,53267,100.0,Boomers,False,10,Facebook Live,365856,True,7,morning,jazz,75868,True
+UTC+1,True,75.4032,False,146,30644,100.0,Gen Z,False,10,Twitch,158643,False,8,afternoon,,64410,False
+UTC+3,,74.3412,True,150,58283,100.0,Gen Z,True,11,YouTube,526219,False,7,evening,hiphop,72176,True
+UTC+3,True,71.644,True,120,42506,100.0,Gen Z,False,9,YouTube,428518,True,7,morning,,78911,True
+UTC-5,False,70.8514,False,120,35184,100.0,Gen Z,False,9,Instagram Live,553314,True,7,afternoon,rock,66186,True
+UTC+3,True,74.7981,False,150,50020,100.0,Gen Z,True,10,Twitch,556466,False,6,evening,hiphop,73393,False
+UTC+2,False,68.7018,False,126,26616,100.0,Gen Z,False,8,Instagram Live,796347,False,8,afternoon,rock,65729,True
+UTC,False,80.5204,True,111,52112,100.0,Gen Z,False,9,Twitch,54764,True,8,afternoon,electronic,67732,True
+UTC-5,True,72.8821,True,114,56678,100.0,Millennials,True,12,Twitch,74621,True,7,morning,classical,73373,True
+UTC,True,73.1544,False,133,33270,100.0,Gen Z,True,12,Twitch,104112,False,7,morning,,67704,True
+UTC,True,73.526,False,135,28315,100.0,Boomers,True,10,YouTube,539909,True,6,evening,classical,63540,False
+UTC,False,72.673,True,153,49836,100.0,Gen Z,True,10,Facebook Live,731271,True,7,afternoon,,61340,True
+UTC-5,True,75.9627,False,122,35566,100.0,Gen X,False,8,Facebook Live,563764,False,8,morning,electronic,81853,True
+UTC+2,True,68.1671,False,96,23492,100.0,Millennials,False,11,Facebook Live,585408,False,8,evening,electronic,63517,False
+UTC+3,,80.3689,False,96,39090,100.0,Gen Z,True,10,YouTube,407715,True,8,afternoon,pop,72446,False
+UTC-5,True,72.2723,True,120,39609,100.0,Millennials,False,9,YouTube,240617,True,6,morning,pop,66416,True
+UTC-5,True,72.2359,True,136,53867,100.0,Millennials,False,8,YouTube,65806,False,6,afternoon,jazz,76382,True
+UTC,False,74.8833,True,130,48152,100.0,Boomers,True,10,Twitch,1000,False,6,evening,pop,68248,False
+UTC-5,True,76.2251,True,138,47331,100.0,Millennials,False,8,Twitch,505298,False,8,morning,,71357,True
+UTC+3,True,69.9093,False,127,26588,100.0,Millennials,False,10,Instagram Live,599321,True,7,morning,electronic,67267,False
+UTC,True,69.8155,True,105,50294,100.0,Gen X,False,9,Instagram Live,550374,False,7,morning,pop,64449,False
+UTC+3,True,73.3275,True,103,36422,100.0,Gen X,True,9,Facebook Live,65018,False,8,morning,classical,58852,True
+UTC-5,True,70.0158,False,127,37241,100.0,Gen Z,False,8,YouTube,827504,False,6,morning,rock,63075,True
+UTC+2,True,72.5754,True,141,30705,100.0,Millennials,True,9,YouTube,758183,True,6,morning,hiphop,72934,True
+UTC+1,True,70.8822,True,117,49476,100.0,Gen Z,False,9,Facebook Live,487685,False,7,afternoon,pop,72293,True
+UTC+3,False,73.1184,True,120,42758,100.0,Millennials,False,10,Instagram Live,595705,False,7,afternoon,pop,71665,False
+UTC+3,True,70.526,False,122,8435,100.0,Gen Z,True,8,YouTube,272215,False,7,evening,electronic,61269,True
+UTC-5,False,68.6539,True,109,44513,100.0,Gen Z,True,11,Twitch,356358,True,6,evening,jazz,56133,False
+UTC,False,74.2214,False,132,51423,100.0,Millennials,True,10,Twitch,228762,False,8,morning,pop,73742,True
+UTC+2,True,79.6811,True,97,69697,100.0,Gen Z,False,10,Facebook Live,395559,True,7,evening,electronic,65004,False
+UTC+2,True,72.1889,True,116,36631,100.0,Boomers,False,8,Twitch,345261,False,7,evening,electronic,83441,False
+UTC-5,,72.4393,True,135,42594,100.0,Boomers,False,11,Twitch,717507,False,7,afternoon,,70553,True
+UTC-5,True,73.3909,False,136,36111,100.0,Gen Z,True,10,Twitch,869532,True,6,morning,hiphop,62792,True
+UTC,False,73.246,False,127,39482,100.0,Millennials,False,11,Facebook Live,446448,True,7,morning,electronic,72194,True
+UTC-5,True,74.1576,False,110,32177,100.0,Boomers,False,9,Instagram Live,817497,False,7,morning,electronic,66405,True
+UTC-5,False,73.527,False,130,12456,100.0,Millennials,False,10,Instagram Live,877972,True,7,evening,pop,71326,True
+UTC+2,False,73.8059,True,100,12953,100.0,Boomers,True,11,Facebook Live,767047,True,7,afternoon,rock,65453,False
+UTC+3,False,76.0743,True,114,38480,100.0,Millennials,True,9,Instagram Live,1000,True,7,evening,pop,64543,False
+UTC+1,True,72.3337,True,113,26846,100.0,Gen Z,False,8,Instagram Live,771043,True,7,morning,,70289,False
+UTC,True,67.5283,False,111,29415,100.0,Millennials,True,11,Instagram Live,10158,False,8,morning,classical,78249,True
+UTC+1,False,65.3068,True,128,22580,100.0,Boomers,False,10,Instagram Live,965103,False,7,afternoon,classical,62109,False
+UTC-5,True,69.3783,False,92,54342,100.0,Boomers,True,9,YouTube,986850,False,6,morning,rock,69883,False
+UTC-5,False,76.2777,False,100,40759,100.0,Boomers,True,9,YouTube,468419,False,8,morning,hiphop,70286,True
+UTC,True,72.2004,True,116,62114,100.0,Gen Z,True,10,YouTube,179850,True,7,evening,jazz,60012,True
+UTC-5,False,70.64,True,128,50217,100.0,Gen Z,True,10,Instagram Live,641556,False,6,evening,electronic,74966,True
+UTC-5,False,69.1147,True,145,41176,100.0,Gen Z,True,10,Instagram Live,74986,True,7,afternoon,jazz,65697,False
+UTC+1,True,61.999,True,131,18366,100.0,Boomers,True,9,Facebook Live,973849,True,7,morning,pop,66304,False
+UTC+1,True,71.5376,True,120,41889,100.0,Gen Z,True,10,Facebook Live,561994,False,7,afternoon,rock,57892,True
+UTC,True,74.4167,False,127,36482,100.0,Gen X,False,10,Twitch,549022,False,8,afternoon,hiphop,66854,True
+UTC,False,74.2815,True,107,32645,100.0,Millennials,False,10,YouTube,846560,True,7,afternoon,,78237,True
+UTC,False,75.4463,False,124,18051,100.0,Gen X,False,10,Instagram Live,150587,False,6,afternoon,rock,74189,True
+UTC-5,False,71.0187,True,88,22850,100.0,Gen Z,False,10,YouTube,287361,True,8,evening,jazz,71770,False
+UTC+3,False,70.7721,False,133,32844,100.0,Boomers,True,8,Instagram Live,481637,False,6,evening,rock,69631,False
+UTC,True,77.8857,False,91,39712,100.0,Boomers,True,9,Facebook Live,427517,False,6,evening,pop,68348,False
+UTC+1,True,73.7918,False,135,46085,100.0,Millennials,True,9,Facebook Live,943687,True,7,afternoon,jazz,78759,False
+UTC+2,,73.8182,False,120,43846,100.0,Millennials,True,9,YouTube,549841,False,8,afternoon,classical,74172,True
+UTC-5,,72.1684,True,126,30928,100.0,Gen Z,True,9,Twitch,204438,False,6,evening,rock,69549,False
+UTC+1,False,72.8593,True,125,54980,100.0,Boomers,False,9,Instagram Live,68736,False,8,morning,jazz,68211,True
+UTC+2,False,78.7254,False,125,58340,100.0,Gen X,True,11,Twitch,35778,True,8,morning,jazz,73178,True
+UTC+2,True,79.8974,True,121,44964,100.0,Gen X,True,9,YouTube,846289,True,7,afternoon,,55319,True
+UTC,True,67.8643,True,95,51220,100.0,Millennials,False,10,YouTube,266754,True,6,afternoon,hiphop,75299,True
+UTC+2,False,67.1953,True,115,41195,100.0,Boomers,True,10,Facebook Live,439728,True,6,afternoon,pop,71471,False
+UTC-5,False,68.8415,True,123,53188,100.0,Millennials,True,9,Facebook Live,235372,True,8,afternoon,pop,72268,True
+UTC,False,68.5706,False,83,44054,100.0,Millennials,False,11,YouTube,372889,False,8,morning,pop,77640,True
+UTC+3,True,70.4328,True,127,71957,100.0,Gen X,True,10,Instagram Live,973237,False,8,evening,rock,68535,False
+UTC+2,False,76.3855,False,123,46508,100.0,Gen X,True,9,Instagram Live,181928,True,8,evening,pop,71027,False
+UTC+2,False,69.6926,False,113,37886,100.0,Millennials,True,11,Facebook Live,35013,False,7,morning,hiphop,68441,True
+UTC+2,True,72.1879,False,160,50999,100.0,Gen Z,False,11,Instagram Live,789639,True,6,morning,electronic,70882,True
+UTC+2,False,69.5188,False,139,41460,100.0,Millennials,False,9,YouTube,919218,False,8,morning,electronic,67642,False
+UTC-5,False,73.34,True,117,45544,100.0,Gen X,False,11,Facebook Live,281968,True,8,afternoon,jazz,64580,False
+UTC+1,False,72.5942,True,121,49212,100.0,Millennials,True,9,Facebook Live,115728,True,8,morning,,55872,True
+UTC,False,75.7819,False,108,28629,100.0,Gen X,False,8,Instagram Live,866462,True,6,morning,jazz,83278,False
+UTC+2,False,71.0902,False,132,42556,100.0,Gen X,True,11,Twitch,588654,False,8,evening,jazz,63912,False
+UTC,True,62.305,True,118,58166,100.0,Gen Z,False,10,Facebook Live,219991,False,7,evening,classical,69948,False
+UTC+3,False,63.6774,False,119,29619,100.0,Boomers,True,10,Facebook Live,130624,True,8,morning,,73669,False
+UTC-5,False,77.7173,True,131,43855,100.0,Boomers,True,9,Twitch,377487,False,6,afternoon,classical,65612,False
+UTC+2,False,68.1418,False,117,32270,100.0,Millennials,False,10,Facebook Live,667814,False,9,morning,hiphop,75775,False
+UTC,True,77.491,False,123,50132,100.0,Gen Z,True,11,Twitch,890313,False,8,evening,hiphop,53369,True
+UTC+2,True,64.8197,False,120,42739,100.0,Boomers,True,9,Facebook Live,599769,False,8,evening,classical,73263,True
+UTC+3,False,75.6636,True,151,48878,100.0,Gen X,True,9,YouTube,966617,False,7,evening,rock,66865,True
+UTC,False,76.3221,True,112,37116,100.0,Gen Z,True,9,YouTube,576358,False,8,afternoon,,74184,True
+UTC,False,75.2053,False,121,43082,100.0,Boomers,True,9,Facebook Live,578395,True,8,evening,jazz,73263,False
+UTC+3,,75.5869,True,112,50120,100.0,Gen Z,False,10,YouTube,764600,False,7,evening,electronic,62857,False
+UTC+1,True,72.1613,False,156,10863,100.0,Boomers,True,9,Facebook Live,1000000,False,7,morning,jazz,65991,True
+UTC,True,70.3916,True,138,36677,100.0,Gen Z,False,10,Twitch,739063,False,8,afternoon,jazz,55739,True
+UTC+1,True,76.0721,True,100,6587,100.0,Millennials,False,11,Facebook Live,926249,True,7,afternoon,hiphop,60298,True
+UTC-5,False,78.9059,False,122,35039,100.0,Gen X,True,10,Instagram Live,746044,False,7,evening,rock,77465,False
+UTC,False,73.5777,False,112,54668,100.0,Gen X,True,9,Instagram Live,203561,True,6,afternoon,hiphop,70705,True
+UTC+3,,69.5945,False,108,47677,100.0,Gen X,True,10,Facebook Live,1000,False,7,evening,hiphop,72577,True
+UTC+2,False,72.993,False,141,49974,100.0,Boomers,False,10,Twitch,749603,True,7,evening,jazz,76174,True
+UTC+2,True,70.7848,False,111,29097,100.0,Gen X,True,10,YouTube,137032,True,6,afternoon,rock,74857,False
+UTC,False,77.4533,True,126,29994,100.0,Boomers,False,10,Twitch,827088,True,7,evening,pop,69713,True
+UTC-5,True,76.7798,True,101,33215,100.0,Gen Z,True,9,Twitch,437392,False,7,afternoon,,77397,False
+UTC-5,True,75.5738,False,98,43059,100.0,Gen X,True,10,Instagram Live,175487,True,7,evening,pop,63884,True
+UTC-5,False,70.7541,True,107,32984,100.0,Millennials,False,10,Twitch,850550,True,7,morning,electronic,66101,True
+UTC+2,False,71.7092,False,131,34412,100.0,Boomers,True,8,YouTube,188470,False,7,evening,jazz,66515,False
+UTC+3,True,71.1443,True,115,22357,100.0,Gen X,True,10,Twitch,306571,True,8,afternoon,jazz,58913,False
+UTC+1,True,65.4085,True,116,18036,100.0,Millennials,True,9,YouTube,65233,True,6,morning,electronic,63764,True
+UTC+1,False,75.6196,False,129,17515,100.0,Boomers,True,10,Twitch,828350,True,7,afternoon,classical,68331,True
+UTC,False,71.5316,False,127,41527,100.0,Boomers,False,9,Instagram Live,572972,False,7,evening,classical,60513,True
+UTC-5,,75.6208,False,123,43653,100.0,Gen Z,False,10,YouTube,679986,True,7,afternoon,electronic,51995,False
+UTC+3,False,71.1533,True,131,29741,100.0,Gen X,False,10,Facebook Live,307091,True,8,afternoon,rock,70203,False
+UTC+2,True,77.662,True,104,52948,100.0,Boomers,False,8,Twitch,817429,True,8,afternoon,pop,61810,False
+UTC+1,False,78.9778,True,163,49410,100.0,Boomers,False,9,Facebook Live,412851,True,8,afternoon,,58604,False
+UTC,True,67.6472,False,128,57836,100.0,Millennials,False,9,YouTube,45876,False,8,morning,,71877,True
+UTC+3,True,82.1281,True,115,38145,100.0,Gen Z,True,8,YouTube,173838,True,7,morning,,68114,False
+UTC+1,,63.4335,False,119,30621,100.0,Millennials,True,8,YouTube,489699,False,7,evening,pop,65403,True
+UTC-5,True,73.4198,True,113,44461,100.0,Millennials,True,10,Instagram Live,386166,False,7,evening,pop,79929,True
+UTC+2,False,70.8768,True,113,45572,100.0,Boomers,False,9,Twitch,793313,True,7,evening,electronic,69293,False
+UTC,False,72.0198,False,100,53464,100.0,Millennials,False,9,Instagram Live,162149,True,7,evening,jazz,55741,False
+UTC,True,71.6494,True,139,55627,100.0,Millennials,True,9,Twitch,626643,False,8,afternoon,classical,54700,False
+UTC+1,True,71.2913,True,118,41084,100.0,Gen X,False,10,Twitch,223134,True,7,afternoon,classical,66787,False
+UTC-5,True,72.3095,True,104,22970,100.0,Millennials,False,10,YouTube,972555,False,6,evening,hiphop,57282,False
+UTC,False,71.2991,True,124,32901,100.0,Gen Z,False,10,Facebook Live,270646,False,7,afternoon,rock,65359,True
+UTC+2,False,74.6353,True,137,59003,100.0,Gen Z,False,11,Twitch,216235,False,6,evening,hiphop,71755,False
+UTC,False,71.4314,True,131,50275,100.0,Boomers,True,9,Instagram Live,223725,False,7,afternoon,electronic,67282,False
+UTC,True,67.7173,False,109,44910,100.0,Boomers,False,10,Twitch,337534,True,7,morning,pop,55023,False
+UTC-5,False,68.0695,False,122,30270,100.0,Gen Z,True,9,Instagram Live,290047,False,7,morning,jazz,66527,True
+UTC,False,77.626,True,130,50408,100.0,Millennials,True,11,Facebook Live,630256,False,8,morning,electronic,71055,False
+UTC+1,False,71.4604,False,123,29534,100.0,Millennials,True,10,Twitch,305106,True,7,afternoon,,82569,False
+UTC+2,False,74.6154,False,127,52152,100.0,Gen Z,False,9,Instagram Live,633334,False,8,evening,rock,61856,True
+UTC+1,False,78.8974,False,139,10922,100.0,Gen X,False,12,Instagram Live,705924,True,7,evening,jazz,67668,True
+UTC,False,70.5122,True,108,42191,100.0,Gen X,False,9,Twitch,499153,False,6,afternoon,classical,70384,True
+UTC-5,False,70.7611,True,94,47797,100.0,Millennials,False,8,YouTube,582048,False,8,afternoon,hiphop,72319,True
+UTC+2,True,66.0085,False,130,30415,100.0,Gen X,False,10,Facebook Live,778113,True,8,morning,rock,66835,False
+UTC-5,True,71.4062,True,97,46299,100.0,Millennials,False,8,Twitch,415568,True,8,evening,classical,63604,True
+UTC-5,False,77.206,True,108,33096,100.0,Boomers,False,11,YouTube,170234,False,6,morning,jazz,67101,True
+UTC+2,False,70.1989,True,103,28166,100.0,Gen Z,True,12,YouTube,548853,False,6,evening,,62272,False
+UTC+2,False,74.3384,False,114,55737,100.0,Gen X,True,8,Instagram Live,221764,False,8,evening,electronic,59004,True
+UTC+1,True,69.0292,False,144,41220,100.0,Boomers,True,9,Facebook Live,689928,False,8,afternoon,,63582,False
+UTC+2,True,74.509,True,120,53200,100.0,Boomers,True,10,YouTube,865153,True,7,evening,pop,73688,False
+UTC,True,75.1125,False,118,39028,100.0,Gen Z,True,11,Instagram Live,580437,True,8,evening,pop,65941,False
+UTC+3,False,72.8557,True,123,28704,100.0,Gen X,True,9,Instagram Live,486141,True,7,afternoon,classical,69383,False
+UTC+1,True,71.5296,True,97,40696,100.0,Gen X,True,9,YouTube,227217,False,7,evening,pop,60854,True
+UTC+1,False,73.8719,False,133,30407,100.0,Millennials,True,8,Twitch,633944,True,7,afternoon,pop,64492,False
+UTC+3,True,68.311,True,138,42631,100.0,Boomers,True,10,Facebook Live,957112,False,7,evening,electronic,71466,False
+UTC+1,True,72.2613,True,97,55611,100.0,Gen Z,False,10,Twitch,685426,True,6,afternoon,,74415,False
+UTC,True,69.0879,False,133,63448,100.0,Gen Z,False,9,Instagram Live,928607,True,6,afternoon,jazz,74190,True
+UTC+2,,74.6025,False,123,71542,100.0,Millennials,False,10,Facebook Live,476756,False,7,afternoon,rock,74642,False
+UTC+2,False,72.3149,True,115,46728,100.0,Gen X,False,9,Facebook Live,717060,True,8,morning,,73077,True
+UTC+2,True,70.7881,False,106,46351,100.0,Boomers,True,9,YouTube,231379,True,8,evening,pop,57492,True
+UTC+2,True,72.1644,False,118,40165,100.0,Boomers,True,9,Facebook Live,656605,True,8,evening,hiphop,80542,True
+UTC+3,False,65.2713,True,120,45485,100.0,Boomers,False,10,Instagram Live,494643,False,7,morning,electronic,63271,True
+UTC+3,False,76.3585,False,125,48602,100.0,Boomers,False,9,Twitch,135215,True,8,evening,classical,70535,True
+UTC+2,True,70.3345,False,126,45029,100.0,Gen Z,False,10,YouTube,79382,False,8,afternoon,classical,66903,False
+UTC-5,False,68.495,False,119,56805,100.0,Millennials,True,10,YouTube,824527,False,8,afternoon,rock,58232,True
+UTC+2,False,69.0623,False,127,56022,100.0,Gen Z,True,9,Twitch,702119,True,8,evening,classical,68736,False
+UTC-5,,70.5472,True,138,41753,100.0,Gen Z,False,11,Twitch,904625,False,7,evening,jazz,69269,False
+UTC+1,False,69.9406,True,100,42152,100.0,Boomers,False,10,Facebook Live,92375,False,8,evening,jazz,70629,False
+UTC,True,75.5196,False,122,48745,100.0,Gen X,False,10,YouTube,617781,False,8,evening,electronic,60112,False
+UTC-5,,71.0316,True,114,34058,100.0,Boomers,True,9,YouTube,485302,True,8,afternoon,jazz,76827,True
+UTC,True,72.3439,True,126,42807,100.0,Millennials,True,10,Twitch,956807,True,8,afternoon,pop,72779,False
+UTC+2,True,71.5922,True,157,56420,100.0,Boomers,True,11,Instagram Live,682552,False,7,afternoon,hiphop,74886,False
+UTC+1,True,69.9752,True,116,43089,100.0,Boomers,True,11,Twitch,85429,False,8,morning,electronic,71320,False
+UTC-5,,77.2167,False,97,57321,100.0,Boomers,False,9,Instagram Live,998378,True,8,afternoon,jazz,70844,False
+UTC,False,72.5712,False,121,46878,100.0,Gen Z,True,10,Facebook Live,283454,True,7,afternoon,classical,70686,False
+UTC+2,False,76.5545,False,119,34432,100.0,Millennials,True,10,YouTube,631603,False,7,afternoon,jazz,59387,False
+UTC+3,False,73.349,False,114,36956,100.0,Gen Z,True,9,Facebook Live,735862,False,7,evening,classical,66773,True
+UTC+2,,65.1734,True,122,20437,100.0,Millennials,False,10,Instagram Live,636901,False,6,afternoon,hiphop,68750,False
+UTC+2,True,67.6406,True,108,62854,100.0,Gen Z,True,10,Instagram Live,624746,False,6,morning,hiphop,66457,True
+UTC+3,True,72.0313,False,124,34656,100.0,Boomers,False,9,Twitch,667297,False,8,evening,hiphop,77809,False
+UTC-5,True,67.0438,True,111,29023,100.0,Gen X,False,10,Instagram Live,374793,False,7,evening,electronic,70311,False
+UTC+3,True,72.1066,True,109,31007,100.0,Boomers,True,11,Instagram Live,699843,True,7,evening,classical,65136,False
+UTC-5,False,70.4313,False,115,51890,100.0,Gen Z,True,10,Instagram Live,825439,True,7,morning,pop,63803,True
+UTC+3,False,70.0333,False,115,69059,100.0,Millennials,False,10,Twitch,333115,True,8,afternoon,,76680,True
+UTC+2,False,71.1011,False,122,36811,100.0,Gen X,True,9,Twitch,175332,True,8,afternoon,hiphop,68046,False
+UTC-5,True,71.5837,True,133,20469,100.0,Boomers,True,10,Instagram Live,940550,True,8,afternoon,,75709,False
+UTC,,71.9931,False,145,53306,100.0,Boomers,False,10,Facebook Live,233781,True,8,evening,rock,70572,True
+UTC+3,True,71.005,True,129,50357,100.0,Gen Z,False,8,Instagram Live,325416,True,6,evening,,72520,False
+UTC+2,False,70.9872,False,105,23772,100.0,Gen Z,True,11,Twitch,278722,True,8,morning,rock,65283,False
+UTC,,72.1686,False,127,21278,100.0,Gen X,True,9,YouTube,444366,False,7,morning,classical,66582,True
+UTC+1,True,71.8453,False,115,29326,100.0,Gen X,True,9,Instagram Live,180616,True,6,afternoon,hiphop,80858,False
+UTC+3,True,72.5951,False,110,65031,100.0,Gen X,False,9,YouTube,617628,False,7,morning,electronic,79450,True
+UTC+3,True,74.8482,True,127,42598,100.0,Millennials,True,9,Twitch,958670,False,6,evening,electronic,72045,True
+UTC-5,True,70.0264,False,103,53600,100.0,Gen X,False,9,YouTube,434237,False,7,afternoon,electronic,59682,False
+UTC-5,False,72.3745,False,124,35945,100.0,Boomers,True,10,Twitch,855210,True,7,morning,pop,72211,True
+UTC,False,71.2507,False,104,38102,100.0,Gen Z,True,12,Instagram Live,82717,False,7,afternoon,electronic,61566,False
+UTC+3,False,72.5022,False,115,38550,100.0,Gen X,False,10,Instagram Live,997011,True,8,morning,classical,61906,True
+UTC+2,False,72.5699,True,133,42163,100.0,Millennials,False,9,YouTube,757496,False,8,afternoon,,65607,True
+UTC+3,False,73.2827,False,116,64528,100.0,Millennials,False,10,YouTube,758021,True,7,morning,rock,70363,True
+UTC,False,73.3188,False,127,33958,100.0,Millennials,False,11,Twitch,266730,True,9,afternoon,hiphop,67536,True
+UTC+3,False,71.4016,True,133,44798,100.0,Millennials,False,8,Instagram Live,727561,False,8,afternoon,pop,80373,True
+UTC+2,False,72.6177,False,110,46665,100.0,Millennials,True,10,Twitch,785328,True,7,afternoon,rock,61374,False
+UTC+3,False,78.5135,True,136,6863,100.0,Gen Z,True,9,Instagram Live,929119,False,7,morning,hiphop,53709,False
+UTC+1,True,63.8306,True,124,46890,100.0,Millennials,False,9,Facebook Live,631135,False,8,evening,,78135,False
+UTC-5,True,72.0704,True,100,19749,100.0,Boomers,True,8,Facebook Live,724445,True,7,afternoon,jazz,70673,False
+UTC+3,False,73.6447,False,132,38587,100.0,Gen Z,False,10,YouTube,472201,False,6,evening,pop,70101,True
+UTC-5,True,73.5728,True,138,28039,100.0,Gen X,True,10,Facebook Live,374137,True,8,morning,jazz,72125,False
+UTC+2,False,71.8396,True,108,43863,100.0,Gen X,True,8,Instagram Live,2985,False,8,morning,pop,66560,False
+UTC-5,True,71.52,True,111,48589,100.0,Gen X,False,12,YouTube,224324,False,8,morning,,72249,False
+UTC-5,True,71.9692,False,103,58523,100.0,Gen Z,True,9,Instagram Live,485070,False,7,morning,hiphop,56062,True
+UTC+3,True,73.9147,True,130,71102,100.0,Gen Z,True,8,Instagram Live,674187,False,7,evening,electronic,68820,True
+UTC-5,True,70.1272,True,113,29770,100.0,Millennials,True,11,Twitch,164675,False,8,morning,classical,81318,True
+UTC-5,True,75.5039,True,121,35662,100.0,Boomers,True,8,Facebook Live,92417,True,7,evening,pop,67827,True
+UTC+1,False,73.0891,True,110,31118,100.0,Millennials,True,11,YouTube,336290,True,8,evening,classical,68038,True
+UTC+3,False,75.0797,True,118,50470,100.0,Millennials,True,10,YouTube,35000,True,6,morning,rock,70207,False
+UTC-5,False,71.3655,True,123,52220,100.0,Gen Z,True,10,YouTube,735662,True,8,evening,electronic,61731,True
+UTC,False,80.173,False,135,45482,100.0,Boomers,True,9,Facebook Live,837218,False,7,afternoon,jazz,77001,False
+UTC+1,,75.9115,False,103,41099,100.0,Gen Z,True,8,Twitch,677936,False,8,afternoon,hiphop,68239,False
+UTC+3,True,67.9529,False,161,67106,100.0,Millennials,True,11,Instagram Live,895188,False,6,afternoon,pop,60624,True
+UTC,True,76.1825,False,126,38910,100.0,Millennials,True,9,YouTube,326086,False,6,afternoon,,58225,True
+UTC+1,True,75.0204,True,132,49562,100.0,Gen X,False,11,Facebook Live,119883,True,7,afternoon,rock,62785,False
+UTC+3,False,73.4496,False,111,6338,100.0,Gen Z,False,10,Facebook Live,18133,True,7,afternoon,electronic,73090,False
+UTC-5,False,76.3172,True,109,27830,100.0,Gen X,True,8,Twitch,641802,False,8,afternoon,hiphop,68357,False
+UTC,False,69.8841,False,126,31452,100.0,Gen Z,True,8,Instagram Live,242262,False,7,evening,electronic,60454,False
+UTC,,72.9293,False,131,26736,100.0,Millennials,True,9,Facebook Live,116867,True,7,afternoon,rock,66272,True
+UTC-5,True,70.1218,False,129,36253,100.0,Boomers,False,11,YouTube,128257,False,8,afternoon,classical,62314,True
+UTC+2,True,67.8345,False,128,19317,100.0,Gen X,True,10,YouTube,606167,False,8,afternoon,jazz,69224,True
+UTC,True,72.9929,False,116,52238,100.0,Millennials,False,9,Twitch,843284,True,7,evening,hiphop,80908,False
+UTC+2,True,73.9963,False,117,29284,100.0,Millennials,False,10,YouTube,546349,True,7,afternoon,rock,66654,False
+UTC+3,True,70.1245,False,130,59897,100.0,Gen X,False,10,Instagram Live,864876,False,8,evening,hiphop,70056,False
+UTC,False,67.4546,False,112,17794,100.0,Gen X,False,9,YouTube,554445,True,7,evening,classical,66359,True
+UTC+3,False,74.2529,False,114,38286,100.0,Millennials,True,11,YouTube,695732,True,7,morning,electronic,73804,True
+UTC-5,,77.3864,False,110,47291,100.0,Boomers,True,10,Twitch,616768,True,7,morning,hiphop,71161,False
+UTC,True,68.2977,True,100,42551,100.0,Millennials,True,10,Facebook Live,691442,False,7,evening,pop,73516,False
+UTC+2,False,69.9475,True,141,52244,100.0,Gen Z,False,10,Facebook Live,815350,False,7,evening,jazz,68898,True
+UTC,True,73.9055,True,110,43618,100.0,Gen X,True,10,Twitch,201093,True,7,morning,electronic,60063,False
+UTC+2,False,76.4541,False,87,45689,100.0,Millennials,False,9,Twitch,954861,True,7,afternoon,classical,68732,False
+UTC+1,,68.4611,False,98,48007,100.0,Boomers,True,9,Instagram Live,879621,False,6,evening,rock,69744,False
+UTC+1,False,67.9499,True,108,52019,100.0,Boomers,True,11,Instagram Live,938732,True,8,morning,,76777,False
+UTC+2,,67.3208,False,95,42849,100.0,Boomers,True,11,YouTube,851417,False,7,evening,rock,54181,False
+UTC+1,True,68.6886,True,137,53462,100.0,Gen X,True,9,Instagram Live,744235,True,7,morning,jazz,76104,True
+UTC+2,True,67.7573,True,116,57741,100.0,Gen Z,True,11,Instagram Live,827995,True,8,evening,pop,77729,True
+UTC+1,,68.9989,True,133,50303,100.0,Boomers,False,8,YouTube,600124,False,7,afternoon,electronic,67071,False
+UTC+1,True,71.9682,False,131,46557,100.0,Boomers,False,10,Instagram Live,845717,False,8,afternoon,,61009,True
+UTC,True,72.0458,True,112,56453,100.0,Millennials,True,10,Twitch,652023,False,8,evening,,76926,False
+UTC,False,70.0198,False,119,27633,100.0,Gen X,True,10,Twitch,793258,True,7,evening,jazz,85668,True
+UTC+1,True,72.0369,True,130,68296,100.0,Boomers,False,10,Facebook Live,964798,False,7,afternoon,rock,76817,False
+UTC-5,True,70.55,True,132,45397,100.0,Millennials,False,9,Facebook Live,490425,False,6,morning,classical,76937,False
+UTC,,73.7753,True,125,31617,100.0,Gen X,False,10,Twitch,87343,True,7,afternoon,rock,68492,False
+UTC+2,True,80.0539,True,135,32940,100.0,Millennials,False,9,Facebook Live,189927,True,8,evening,,70428,True
+UTC+3,False,75.8912,False,123,32092,100.0,Boomers,False,8,Instagram Live,480169,True,8,morning,,68505,True
+UTC-5,False,77.9781,True,110,29142,100.0,Boomers,False,9,Facebook Live,644553,False,8,afternoon,hiphop,66738,True
+UTC,False,76.6351,True,105,57225,100.0,Gen Z,False,9,Twitch,518052,True,6,afternoon,pop,62290,True
+UTC+3,True,71.0098,True,107,27114,100.0,Boomers,False,9,Facebook Live,255291,True,8,afternoon,hiphop,59475,True
+UTC,True,74.1708,True,124,41843,100.0,Gen X,True,9,Instagram Live,358675,True,7,afternoon,jazz,66482,True
+UTC+2,True,75.4515,True,133,54459,100.0,Millennials,False,11,YouTube,28878,False,8,evening,rock,70125,True
+UTC+3,True,76.3868,False,136,49269,100.0,Boomers,True,10,Instagram Live,168562,False,8,afternoon,electronic,66394,True
+UTC+2,True,77.2888,False,105,43668,100.0,Boomers,True,11,YouTube,914686,True,7,evening,electronic,64104,True
+UTC+3,False,76.5743,True,126,19760,100.0,Gen X,False,10,Facebook Live,705138,True,7,evening,hiphop,68154,True
+UTC+2,False,67.0986,True,129,31049,100.0,Boomers,True,9,Facebook Live,702709,False,8,afternoon,classical,66510,False
+UTC+2,False,73.6439,True,124,55961,100.0,Boomers,True,10,YouTube,269348,False,8,afternoon,hiphop,63414,True
+UTC+2,False,74.949,False,124,51956,100.0,Gen X,False,10,Facebook Live,527422,False,8,evening,classical,49057,False
+UTC,False,71.0507,False,135,27942,100.0,Boomers,True,9,Twitch,275159,True,6,morning,classical,52044,False
+UTC+3,,71.637,False,124,31827,100.0,Millennials,False,9,Twitch,389330,True,8,evening,,71010,True
+UTC+3,False,68.8841,True,106,36083,100.0,Boomers,False,9,Facebook Live,112615,True,7,morning,,66028,True
+UTC+1,,76.6688,True,123,37266,100.0,Millennials,True,9,Twitch,996512,False,7,morning,rock,69943,True
+UTC+1,True,76.5654,False,134,32441,100.0,Millennials,False,9,Twitch,106814,True,6,evening,hiphop,74883,True
+UTC+1,True,70.0305,True,136,21094,100.0,Millennials,True,9,YouTube,394455,False,8,morning,pop,65362,True
+UTC,,68.9409,False,105,60382,100.0,Gen X,True,10,Facebook Live,697209,False,8,evening,electronic,74129,False
+UTC+1,False,75.6269,False,122,49998,100.0,Boomers,True,10,YouTube,655739,False,7,evening,rock,65920,True
+UTC,False,74.8465,False,158,43152,100.0,Gen Z,True,9,Twitch,479032,True,7,evening,electronic,79179,False
+UTC+2,False,75.5811,False,143,9117,100.0,Boomers,False,9,Instagram Live,130228,False,7,afternoon,hiphop,64358,True
+UTC,False,76.2927,True,109,58054,100.0,Boomers,True,9,Twitch,879645,False,7,afternoon,jazz,64890,True
+UTC-5,True,71.5171,True,127,40602,100.0,Millennials,False,8,YouTube,103100,False,7,afternoon,electronic,66883,True
+UTC+2,True,72.117,True,129,38032,100.0,Millennials,True,10,YouTube,335499,False,7,morning,,76891,True
+UTC+1,True,69.1549,True,113,35301,100.0,Boomers,False,9,Twitch,626677,True,6,morning,electronic,71972,True
+UTC+1,True,72.7104,False,109,48035,100.0,Boomers,False,10,Facebook Live,391515,True,6,evening,rock,71007,False
+UTC+3,True,67.6617,False,107,43867,100.0,Millennials,True,9,Twitch,437849,True,8,afternoon,,52273,True
+UTC+3,,76.3216,True,126,57078,100.0,Gen Z,False,10,Facebook Live,250351,False,7,afternoon,classical,69748,False
+UTC+2,True,69.6982,True,140,29606,100.0,Gen X,False,9,YouTube,310909,True,6,morning,hiphop,60197,True
+UTC-5,,76.8036,False,121,11389,100.0,Millennials,True,11,Facebook Live,335143,True,7,afternoon,electronic,76652,True
+UTC+1,False,70.5543,False,106,40705,100.0,Boomers,True,9,Facebook Live,81827,False,6,evening,jazz,63268,True
+UTC,True,66.6817,False,112,43018,100.0,Gen Z,True,10,Instagram Live,800087,False,7,evening,rock,69731,False
+UTC+2,,74.7639,True,120,14334,100.0,Gen X,False,9,Facebook Live,726211,False,8,evening,pop,75536,True
+UTC+2,,70.7489,False,127,53269,100.0,Gen X,True,11,Twitch,346072,False,7,morning,pop,80848,True
+UTC-5,False,76.2006,False,126,28226,100.0,Gen X,True,9,Twitch,560029,True,7,morning,classical,56836,True
+UTC+1,False,73.3861,False,119,49434,100.0,Millennials,False,10,Instagram Live,877782,True,9,evening,pop,67476,True
+UTC-5,True,66.3704,True,120,53076,100.0,Millennials,False,10,Twitch,875431,True,7,evening,jazz,64412,False
+UTC+3,False,72.4242,True,119,55335,100.0,Gen Z,True,10,Instagram Live,473176,True,7,morning,electronic,68219,False
+UTC+3,True,71.2989,False,109,49480,100.0,Gen X,False,9,Twitch,657702,True,7,morning,pop,73336,True
+UTC+1,False,73.6006,True,113,47293,100.0,Millennials,True,11,YouTube,186671,False,7,evening,pop,77939,False
+UTC-5,True,78.5746,False,128,36948,100.0,Gen X,True,11,Twitch,432693,False,7,evening,classical,59117,False
+UTC,,73.0945,True,101,34545,100.0,Millennials,True,10,Facebook Live,416456,True,6,evening,hiphop,72311,True
+UTC-5,True,73.2241,True,131,22646,100.0,Gen X,False,8,Facebook Live,925499,False,6,morning,electronic,80312,True
+UTC+1,False,73.9951,True,133,37126,100.0,Millennials,False,10,Twitch,212228,False,6,afternoon,pop,67740,True
+UTC+2,False,71.9242,True,119,35924,100.0,Gen Z,False,9,Twitch,761982,False,9,afternoon,classical,57921,True
+UTC+3,False,70.2484,False,125,22252,100.0,Millennials,True,9,Instagram Live,909718,True,8,evening,jazz,58269,False
+UTC-5,False,68.1558,True,146,51286,100.0,Boomers,False,9,YouTube,372612,False,8,evening,hiphop,57238,False
+UTC+2,False,71.2136,True,175,49662,100.0,Gen X,False,10,Instagram Live,138227,False,8,evening,pop,74627,True
+UTC+2,,64.316,False,125,64465,100.0,Gen Z,False,10,YouTube,828986,False,7,morning,classical,67928,False
+UTC+2,,72.5142,True,142,43225,100.0,Millennials,False,9,YouTube,403329,True,8,morning,,76595,True
+UTC+1,True,71.342,False,109,19037,100.0,Gen X,True,10,YouTube,645649,True,8,afternoon,pop,69955,False
+UTC+2,False,66.9635,False,113,31441,100.0,Boomers,False,10,YouTube,436646,True,7,afternoon,pop,69393,False
+UTC+3,True,75.2561,True,120,34925,100.0,Millennials,True,9,Facebook Live,129657,True,7,afternoon,hiphop,54177,False
+UTC-5,,71.4981,True,140,30670,100.0,Millennials,True,9,Twitch,802133,False,7,afternoon,classical,61307,True
+UTC+2,True,63.5075,False,110,45714,100.0,Boomers,False,10,Instagram Live,634569,False,8,afternoon,jazz,58379,False
+UTC+3,,74.6333,True,126,40289,100.0,Gen X,True,9,YouTube,466439,True,8,afternoon,rock,69114,False
+UTC,False,72.1617,False,106,38707,100.0,Gen X,True,9,Twitch,311263,False,8,afternoon,hiphop,68828,False
+UTC+2,True,72.8413,True,114,57976,100.0,Gen X,True,8,Instagram Live,490369,False,7,evening,classical,75198,True
+UTC+1,True,71.1181,True,128,28375,100.0,Millennials,False,10,Facebook Live,383219,True,7,evening,jazz,70171,True
+UTC+2,True,73.6964,False,89,57772,100.0,Gen X,True,8,Instagram Live,75530,True,7,afternoon,jazz,64259,True
+UTC+3,True,67.6618,True,137,15685,100.0,Gen Z,False,10,Instagram Live,723454,True,7,afternoon,jazz,85539,False
+UTC,False,74.9769,False,125,61429,100.0,Gen Z,True,12,Twitch,993094,True,8,evening,classical,69841,True
+UTC-5,False,64.3179,False,114,63880,100.0,Boomers,False,11,Twitch,261708,False,7,evening,electronic,72581,False
+UTC,False,67.0018,True,127,51259,100.0,Millennials,False,11,Instagram Live,722746,False,7,morning,jazz,69307,True
+UTC-5,True,68.3913,True,138,42922,100.0,Boomers,True,10,Instagram Live,192253,False,8,afternoon,pop,67219,False
+UTC+2,,76.5534,False,116,53657,100.0,Millennials,True,10,YouTube,798042,False,8,morning,jazz,62134,True
+UTC+1,True,66.9075,False,127,19534,100.0,Gen X,True,12,Facebook Live,671389,True,8,afternoon,jazz,70946,False
+UTC+2,True,75.9379,False,94,65931,100.0,Gen Z,False,8,Instagram Live,66780,False,8,afternoon,rock,72359,True
+UTC+3,True,78.357,False,151,42403,100.0,Gen Z,False,10,Twitch,944945,True,7,afternoon,rock,58731,False
+UTC+2,True,75.913,False,144,36492,100.0,Gen Z,False,8,YouTube,917279,True,7,evening,jazz,66432,True
+UTC+2,True,75.2556,True,129,19947,100.0,Gen X,True,10,Facebook Live,277544,False,8,afternoon,,64650,True
+UTC+2,False,68.3073,True,136,38743,100.0,Boomers,True,11,Twitch,945516,True,8,afternoon,pop,63545,False
+UTC+3,,74.3538,True,116,50802,100.0,Boomers,True,8,Twitch,669251,False,8,morning,classical,67519,True
+UTC+1,True,69.6342,True,112,57870,100.0,Millennials,False,9,YouTube,228072,False,7,evening,electronic,74984,False
+UTC+1,False,68.5967,True,129,29671,100.0,Gen Z,True,9,Instagram Live,278462,False,6,afternoon,,70946,False
+UTC+3,True,78.4176,False,130,38436,100.0,Boomers,True,8,Instagram Live,655171,True,8,evening,classical,68949,True
+UTC+2,True,68.5227,False,132,37530,100.0,Boomers,False,9,Twitch,823774,False,7,afternoon,electronic,65040,False
+UTC+2,False,75.7642,True,108,39415,100.0,Gen X,False,9,Facebook Live,761871,False,8,morning,hiphop,74962,False
+UTC-5,False,76.0752,True,112,20950,100.0,Boomers,True,10,Facebook Live,640029,False,8,afternoon,hiphop,63117,False
+UTC,True,70.3806,False,115,48827,100.0,Boomers,False,11,Facebook Live,418247,False,8,morning,jazz,65292,False
+UTC+1,False,71.8802,True,118,6704,100.0,Gen Z,False,10,YouTube,308443,False,7,afternoon,pop,62671,True
+UTC+3,True,72.382,False,95,33492,100.0,Gen X,False,11,YouTube,902857,True,7,afternoon,rock,72217,True
+UTC+2,True,71.7033,True,124,19973,100.0,Boomers,True,9,Instagram Live,245314,True,8,evening,hiphop,68877,True
+UTC+1,False,73.8443,False,134,38982,100.0,Gen X,False,10,Instagram Live,615183,True,6,morning,,72552,False
+UTC+2,False,65.5087,True,113,52555,100.0,Gen Z,False,10,Twitch,225183,False,7,afternoon,hiphop,60509,True
+UTC+2,True,73.1243,False,138,36213,100.0,Boomers,True,9,Twitch,597891,False,6,afternoon,hiphop,73047,True
+UTC+2,False,77.2588,True,132,46322,100.0,Gen X,True,10,YouTube,344263,False,7,evening,hiphop,71359,False
+UTC+3,False,74.4964,True,149,46195,100.0,Gen X,True,8,Instagram Live,795905,False,8,evening,pop,68001,False
+UTC-5,True,72.4657,False,112,55227,100.0,Gen Z,False,8,YouTube,820239,False,7,evening,classical,66859,True
+UTC+3,False,70.8708,True,150,37754,100.0,Millennials,True,8,YouTube,286536,True,8,morning,hiphop,59530,False
+UTC+3,,74.2242,False,137,41771,100.0,Gen X,False,9,Twitch,1000000,True,7,afternoon,,71719,False
+UTC+1,True,68.9773,True,106,49729,100.0,Boomers,False,10,Twitch,233956,True,8,afternoon,hiphop,72582,True
+UTC+3,False,63.426,True,123,47226,100.0,Gen Z,False,10,Twitch,87970,False,8,evening,hiphop,69751,True
+UTC+2,False,69.0459,False,131,28763,100.0,Millennials,False,12,YouTube,387619,True,6,evening,,74458,False
+UTC,False,70.6603,True,113,42031,100.0,Gen X,True,12,YouTube,673957,False,6,afternoon,,55774,False
+UTC+2,True,71.4734,False,135,37389,100.0,Millennials,False,10,Facebook Live,740455,False,6,morning,rock,65982,False
+UTC+3,True,69.5844,True,117,44831,100.0,Gen X,True,9,YouTube,386740,False,6,evening,pop,74065,False
+UTC-5,False,75.1483,False,136,46703,100.0,Gen Z,False,10,Twitch,1000,False,7,evening,rock,65669,False
+UTC+2,True,75.986,False,134,30281,100.0,Millennials,True,11,Instagram Live,447706,True,8,afternoon,,62577,True
+UTC+3,,75.7968,False,125,57755,100.0,Gen X,False,9,Facebook Live,467693,False,6,evening,pop,75919,True
+UTC+3,False,79.9631,False,122,38503,100.0,Boomers,True,10,Twitch,832113,True,7,afternoon,pop,68358,False
+UTC+1,True,74.1662,False,133,19198,100.0,Gen X,False,10,YouTube,389298,False,7,evening,rock,73835,False
+UTC+2,,64.0615,True,129,33047,100.0,Gen X,False,11,Facebook Live,602729,True,7,evening,pop,75062,True
+UTC,True,68.0706,True,101,45829,100.0,Millennials,False,9,YouTube,734707,False,7,evening,hiphop,68512,False
+UTC-5,False,57.8736,False,125,53474,100.0,Gen X,True,10,YouTube,62138,True,8,evening,pop,59837,True
+UTC+3,True,62.5315,False,76,40814,100.0,Gen Z,True,10,YouTube,672335,False,7,afternoon,classical,74545,True

@@ -1,0 +1,105 @@
+{
+    "id": 0,
+    "domain": "ancient history",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to civilizations, archaeological discoveries, and ancient cultures.",
+            "columns": [
+                {
+                    "name": "region_climate",
+                    "description": "Predominant climate of the region inhabited"
+                },
+                {
+                    "name": "trade_network_size",
+                    "description": "Represents the extent of the civilization's trade network, coded as the number of external connections"
+                },
+                {
+                    "name": "number_of_religious_universities",
+                    "description": "Count of universities focused on religious studies within the civilization"
+                },
+                {
+                    "name": "distinct_religious_beliefs",
+                    "description": "Number of distinct religious beliefs systems recognized"
+                },
+                {
+                    "name": "predicted_religious_ritual_types",
+                    "description": "Prediction of the types of religious rituals practiced within the civilization"
+                },
+                {
+                    "name": "centralized_religious_structure",
+                    "description": "Existence of a structured, unified religious hierarchy within the civilization"
+                },
+                {
+                    "name": "mythological_beliefs",
+                    "description": "Level of mythology influence in civilization, measured as a cultural imprint"
+                },
+                {
+                    "name": "trade_routes",
+                    "description": "Number of major trade routes used by the civilization"
+                },
+                {
+                    "name": "language_diversity_index",
+                    "description": "A numerical index representing the diversity of official languages spoken within the civilization"
+                },
+                {
+                    "name": "agricultural_productivity",
+                    "description": "A numeric representation of the civilization's agricultural output per capita"
+                },
+                {
+                    "name": "distinct_societal_roles",
+                    "description": "Number of distinct roles recognized in the society"
+                },
+                {
+                    "name": "settled_regions_count",
+                    "description": "Number of distinct regions settled by the civilization"
+                },
+                {
+                    "name": "temples_per_capita",
+                    "description": "Number of religious temples per 1000 citizens"
+                },
+                {
+                    "name": "num_unique_artifacts",
+                    "description": "The number of unique artifacts discovered from a civilization."
+                },
+                {
+                    "name": "has_documented_legal_system",
+                    "description": "Indicates whether the civilization had a formally documented legal system"
+                },
+                {
+                    "name": "population_in_thousands",
+                    "description": "Population of the civilization in thousands"
+                },
+                {
+                    "name": "number_of_libraries",
+                    "description": "Count of libraries within the civilization"
+                },
+                {
+                    "name": "main_language",
+                    "description": "Primary language of the civilization"
+                },
+                {
+                    "name": "has_advanced_agriculture",
+                    "description": "Indicates whether the civilization has advanced agricultural practices, with 1 for yes and 0 for no."
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 133,
+            "question": "Can the number of distinct societal roles in ancient civilizations be accurately predicted using a combination of factors such as agricultural productivity, documented legal system, and trade network size?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "distinct_societal_roles",
+            "true_hypothesis": "The number of distinct societal roles in an ancient civilization can be predicted by a non-linear combination of the factors. Specifically, the number of distinct societal roles is calculated by summing 5 times the product of the civilization's agricultural productivity and 0.1, 20 times the presence of a documented legal system, and 5 times the product of the trade network size and 0.2.",
+            "true_hypothesis_expr": "5 * (df['agricultural_productivity'] * 0.1 + df['trade_network_size'] * 0.2) + 20 * df['has_documented_legal_system'].astype(int)",
+            "relevant_cols": [
+                "has_documented_legal_system",
+                "agricultural_productivity",
+                "trade_network_size",
+                "distinct_societal_roles"
+            ]
+        }
+    ]
+}

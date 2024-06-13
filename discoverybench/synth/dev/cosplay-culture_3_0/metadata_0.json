@@ -1,0 +1,172 @@
+{
+    "id": 0,
+    "domain": "cosplay culture",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to costume play, fandom events, and character impersonation.",
+            "columns": [
+                {
+                    "name": "general_fandom_events",
+                    "description": "Number of general fan culture events not specifically aimed at character impersonation attended in the past year"
+                },
+                {
+                    "name": "costume_origin",
+                    "description": "Whether the costume was self-made or purchased"
+                },
+                {
+                    "name": "number_of_cosplay_related_posts",
+                    "description": "Total number of posts related to cosplay made in the past year"
+                },
+                {
+                    "name": "non_binary",
+                    "description": "Indicates if the individual identifies as non-binary (1 for yes, 0 for no)."
+                },
+                {
+                    "name": "skill_level",
+                    "description": "Self-assessed skill level in costume creation"
+                },
+                {
+                    "name": "average_cost_per_cosplay",
+                    "description": "Average amount of money spent on each cosplay costume."
+                },
+                {
+                    "name": "cosplay_genre_specialization",
+                    "description": "The specific genre of cosplay the participant specializes in, e.g., fantasy, sci-fi, anime."
+                },
+                {
+                    "name": "number_of_events_attended",
+                    "description": "Total number of cosplay events attended in the past year"
+                },
+                {
+                    "name": "participation_frequency",
+                    "description": "How many times per year the participant engages in cosplay character impersonation"
+                },
+                {
+                    "name": "character_specific_events",
+                    "description": "Number of cosplay events specifically aimed at character impersonation attended in the past year"
+                },
+                {
+                    "name": "preference_for_elaborate_costumes",
+                    "description": "Indicates whether the participant prefers elaborate costumes over simpler designs"
+                },
+                {
+                    "name": "number_of_social_media_followers",
+                    "description": "Total number of followers on all social media platforms"
+                },
+                {
+                    "name": "costume_complexity_score_percentile",
+                    "description": "Percentile ranking of an individual's costume complexity score compared to other event attendees."
+                },
+                {
+                    "name": "investment_in_expensive_materials",
+                    "description": "Amount of money spent on costume materials per year in USD"
+                },
+                {
+                    "name": "is_frequent_and_over_30_costume_maker",
+                    "description": "Boolean indicating if the individual is considered a frequent costume maker and is over 30 years old (1 for yes, 0 for no)."
+                },
+                {
+                    "name": "number_of_new_media_researched",
+                    "description": "Count of new media titles (less than 5 years old) researched by the participant each month"
+                },
+                {
+                    "name": "personal_connection_to_character",
+                    "description": "Whether the participant feels a strong personal connection to the characters they impersonate."
+                },
+                {
+                    "name": "diverse_event_attendance",
+                    "description": "The count of different types of cosplay events (competitions, meet-ups, conventions) the participant attended in the past year."
+                },
+                {
+                    "name": "focus_on_new_media",
+                    "description": "Indicator of whether the participant mainly creates costumes based on characters from new media (less than 5 years old)"
+                },
+                {
+                    "name": "gender",
+                    "description": "The gender of the participant"
+                },
+                {
+                    "name": "hours_spent_on_creation",
+                    "description": "Total hours spent on costume creation in the past year"
+                },
+                {
+                    "name": "region_cosplay_popularity",
+                    "description": "Rate of cosplay participants per thousand people in the participant's region."
+                },
+                {
+                    "name": "lgbtq_theme_event_percentage",
+                    "description": "Percentage of the total cosplay events attended by an individual that are specifically LGBTQ+ themed."
+                },
+                {
+                    "name": "first_time_event_attendee",
+                    "description": "Boolean indicating if the individual is attending a fandom event for the first time (1 for yes, 0 for no)."
+                },
+                {
+                    "name": "number_of_cosplay_social_media_groups",
+                    "description": "Number of social media groups related to cosplay that the participant is active in"
+                },
+                {
+                    "name": "age",
+                    "description": "The age of the participant in years"
+                },
+                {
+                    "name": "trend_setter_following_score",
+                    "description": "Score representing the individual's engagement with trend-setting influencers in the cosplay community, calculated based on the number of influencers followed."
+                },
+                {
+                    "name": "fandom_genre_diversity_score",
+                    "description": "Score based on the variety of genres (e.g., fantasy, sci-fi, horror) someone is interested in, calculated as the number of distinct genres."
+                },
+                {
+                    "name": "event_attendance",
+                    "description": "Number of fandom events attended in the past year"
+                },
+                {
+                    "name": "variety_of_costumes",
+                    "description": "Number of different character costumes created in the past year"
+                },
+                {
+                    "name": "age_based_fandom_preference_count",
+                    "description": "Number of fandom preferences based on age demographic categories (e.g., kids, teens, adults)."
+                },
+                {
+                    "name": "participation_in_competitions",
+                    "description": "Whether the participant has taken part in any cosplay competitions"
+                },
+                {
+                    "name": "number_of_high_quality_fabrics",
+                    "description": "Number of different high-quality fabrics used in the costume."
+                },
+                {
+                    "name": "hours_spent_online_communities",
+                    "description": "Number of hours spent per month in online communities related to cosplay and media fandoms"
+                },
+                {
+                    "name": "online_cosplay_community_active",
+                    "description": "Boolean indicating if the individual is an active member of any online cosplay communities (1 for yes, 0 for no)."
+                },
+                {
+                    "name": "percent_recycled_materials",
+                    "description": "Percentage of the costume made from recycled materials."
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 217,
+            "question": "What is the relationship between age, frequency of character impersonation participation, and being considered a frequent costume maker in the cosplay culture domain?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "is_frequent_and_over_30_costume_maker",
+            "true_hypothesis": "Among cosplay culture enthusiasts, those over the age of 30 and participating in character impersonation at least three times a year are considered frequent costume makers, compared to those who are younger or participate less often.",
+            "true_hypothesis_expr": "np.where((df['age'] > 30) & (df['participation_frequency'] >= 3), True, False)",
+            "relevant_cols": [
+                "age",
+                "is_frequent_and_over_30_costume_maker",
+                "participation_frequency"
+            ]
+        }
+    ]
+}

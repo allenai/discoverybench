@@ -1,0 +1,80 @@
+{
+    "id": 0,
+    "domain": "puzzle-solving games",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to brain teasers, escape rooms, and puzzle-solving challenges.",
+            "columns": [
+                {
+                    "name": "mental_fitness_apps_hours",
+                    "description": "Number of hours spent per week on apps designed to enhance cognitive skills"
+                },
+                {
+                    "name": "strategy_games_played",
+                    "description": "Number of strategy-based games the individual plays each week"
+                },
+                {
+                    "name": "puzzle_solved_quickly",
+                    "description": "Whether an individual frequently solved puzzles quicker than peers"
+                },
+                {
+                    "name": "cognitive_game_percentage",
+                    "description": "Percentage of total leisure time spent on cognitive games"
+                },
+                {
+                    "name": "attention_span_score",
+                    "description": "Score that quantifies the ability to maintain focus on tasks involving cognitive activities"
+                },
+                {
+                    "name": "favorite_cuisine",
+                    "description": "Preferred cuisine of the individual"
+                },
+                {
+                    "name": "advanced_decision_making_skills",
+                    "description": "Whether the person exhibits advanced decision-making skills"
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the individual"
+                },
+                {
+                    "name": "hours_spent_reading",
+                    "description": "Number of hours the individual spends reading intellectually stimulating books each day"
+                },
+                {
+                    "name": "hours_of_sleep",
+                    "description": "Average number of hours the individual sleeps per day"
+                },
+                {
+                    "name": "profession",
+                    "description": "Type of profession of the individual"
+                },
+                {
+                    "name": "logic_puzzle_events_attended",
+                    "description": "Number of logic puzzle events attended per month"
+                },
+                {
+                    "name": "daily_brain_teasers_solved",
+                    "description": "Number of brain teasers solved per day"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 516,
+            "question": "Is there a relationship between the age group of 25-40 years, daily brain teaser solving, and displaying advanced decision-making skills among professionals in the domain of puzzle-solving games?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "advanced_decision_making_skills",
+            "true_hypothesis": "Professionals aged 25-40 years who solve at least one brain teaser per day are more likely to exhibit advanced decision-making skills compared to those who don't.",
+            "true_hypothesis_expr": "np.where((df['daily_brain_teasers_solved'] >= 1) & (df['age'] >= 25) & (df['age'] <= 40), True, False)",
+            "relevant_cols": [
+                "age",
+                "advanced_decision_making_skills",
+                "daily_brain_teasers_solved"
+            ]
+        }
+    ]
+}

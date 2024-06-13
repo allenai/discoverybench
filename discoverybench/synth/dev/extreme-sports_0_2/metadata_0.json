@@ -1,0 +1,205 @@
+{
+    "id": 0,
+    "domain": "extreme sports",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to high-adrenaline activities, risky sports, and extreme challenges.",
+            "columns": [
+                {
+                    "name": "adrenaline_level",
+                    "description": "Self-reported adrenaline level during events on a scale from 1 to 10"
+                },
+                {
+                    "name": "daily_physical_activity",
+                    "description": "Hours of physical activity participant engages in daily besides extreme sports"
+                },
+                {
+                    "name": "sport_specific_training",
+                    "description": "Number of hours dedicated to training specifically for extreme sports per week"
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the participant"
+                },
+                {
+                    "name": "extreme_sport_events_attended",
+                    "description": "Number of extreme sport events attended by the participant in a year"
+                },
+                {
+                    "name": "years_of_experience",
+                    "description": "The number of years the participant has been involved in extreme sports."
+                },
+                {
+                    "name": "overall_risk",
+                    "description": "Participant's assessment of the overall risk involved in their activities, on a binary scale"
+                },
+                {
+                    "name": "location",
+                    "description": "Location of regular training"
+                },
+                {
+                    "name": "media_exposure",
+                    "description": "Level of media exposure rated from low to high"
+                },
+                {
+                    "name": "number_of_injuries",
+                    "description": "Total count of injuries a participant has had during their career in extreme sports"
+                },
+                {
+                    "name": "personal_sponsorship",
+                    "description": "Indicates whether the participant has personal sponsorship"
+                },
+                {
+                    "name": "initiation_age",
+                    "description": "Age at which participant started engaging in extreme sports"
+                },
+                {
+                    "name": "seasonal_effects",
+                    "description": "Binary indicator of whether training is in the high season for the sport (1 for high season, 0 for low season)"
+                },
+                {
+                    "name": "safety_equipment_importance",
+                    "description": "Importance placed on using safety equipment while participating in extreme sports, rated from 1 to 10"
+                },
+                {
+                    "name": "has_health_insurance",
+                    "description": "Whether the participant has health insurance covering extreme sports related injuries"
+                },
+                {
+                    "name": "equipment_cost",
+                    "description": "Average annual cost of sport equipment in USD"
+                },
+                {
+                    "name": "number_of_indoor_activities",
+                    "description": "The number of times a participant engages in indoor extreme sports per month"
+                },
+                {
+                    "name": "adrenaline_tier",
+                    "description": "Categorizes participants by their adrenaline-seeking behavior into low, medium, or high"
+                },
+                {
+                    "name": "number_of_extreme_sport_influencers_followed",
+                    "description": "The number of extreme sport influencers a participant follows on social media"
+                },
+                {
+                    "name": "custom_gear_ownership",
+                    "description": "Indicates if the participant owns customized safety gear for extreme sports"
+                },
+                {
+                    "name": "types_of_sports_participated",
+                    "description": "Count of different extreme sports the participant is actively involved in"
+                },
+                {
+                    "name": "high_performance_gear",
+                    "description": "Indicates whether the participant uses high-performance equipment"
+                },
+                {
+                    "name": "preference_for_natural_scenery",
+                    "description": "Indicates if the participant prefers to perform sports in natural settings like mountains or coastal areas"
+                },
+                {
+                    "name": "external_endorsements",
+                    "description": "Count of sponsorships or external endorsements the participant has received"
+                },
+                {
+                    "name": "number_of_outdoor_activities",
+                    "description": "The number of times a participant engages in outdoor extreme sports per month"
+                },
+                {
+                    "name": "competitive_environment_preference",
+                    "description": "Indicates if the participant prefers competitive events in extreme sports"
+                },
+                {
+                    "name": "prefers_solo_events",
+                    "description": "Indicates if the participant prefers solo over team events"
+                },
+                {
+                    "name": "successful_to_attempted_challenges",
+                    "description": "Ratio of successfully completed challenges to attempted challenges"
+                },
+                {
+                    "name": "safety_gear_use",
+                    "description": "Indicates the frequency of safety gear usage during events, ranked from 1 (always) to 5 (never)"
+                },
+                {
+                    "name": "thrill_seeking_score",
+                    "description": "A numerical score representing the participant's affinity for taking high risks"
+                },
+                {
+                    "name": "risk_aversion",
+                    "description": "Risk aversion level from 1 (low) to 10 (high) indicating how likely a participant is to avoid risky activities"
+                },
+                {
+                    "name": "number_of_sport_types",
+                    "description": "Number of different extreme sports the participant is involved in"
+                },
+                {
+                    "name": "recovery_time",
+                    "description": "Average time taken for a participant to recover from injuries, measured in months"
+                },
+                {
+                    "name": "career_oriented",
+                    "description": "Whether the participant views extreme sports as a career (true) or just a hobby (false)"
+                },
+                {
+                    "name": "sport_engagement_period",
+                    "description": "Indicates when the participant usually engages in extreme sports"
+                },
+                {
+                    "name": "number_of_past_injuries",
+                    "description": "The total count of injuries the participant has sustained from extreme sports."
+                },
+                {
+                    "name": "risk_tolerance",
+                    "description": "Rating of how much risk a participant is willing to take, graded from 1 to 10"
+                },
+                {
+                    "name": "previous_experience",
+                    "description": "Number of years participant has been involved in extreme sports"
+                },
+                {
+                    "name": "annual_extreme_events",
+                    "description": "Number of extreme sports events attended by the participant each year"
+                },
+                {
+                    "name": "participation_in_peak_season",
+                    "description": "Indicates if the participant frequently takes part in extreme sports events during the peak season."
+                },
+                {
+                    "name": "frequent_competitions",
+                    "description": "Indicates if the participant frequently competes in extreme sports events"
+                },
+                {
+                    "name": "adherence_rate",
+                    "description": "Percentage of adherence to training schedules"
+                },
+                {
+                    "name": "repeat_participation",
+                    "description": "Indicates if the participant repeatedly engages in the same extreme sport"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 674,
+            "question": "What is the relationship between thrill-seeking scores and the ownership of custom gear in the context of extreme sports participation?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "thrill_seeking_score",
+            "true_hypothesis": "Participants who engage in extreme sports frequently during vacations, own customized safety gear, repeat participation, prefer competitive events, and have accumulated more years of experience without many past injuries may tend to have higher thrill-seeking scores.",
+            "true_hypothesis_expr": "df['repeat_participation'].astype(int)*df['custom_gear_ownership'].astype(int)*(df['sport_engagement_period'] == 'vacation').astype(int)*2 + 1 * 2 + np.where(df['competitive_environment_preference'], 1, 0) * np.where(df['years_of_experience'] - df['number_of_past_injuries'] * 0.5 + df['participation_in_peak_season'].astype(int) * 5 > 20, 'high', np.where(df['years_of_experience'] - df['number_of_past_injuries'] * 0.5 + df['participation_in_peak_season'].astype(int) * 5 > 10, 'medium', 'low'))",
+            "relevant_cols": [
+                "competitive_environment_preference",
+                "repeat_participation",
+                "custom_gear_ownership",
+                "sport_engagement_period",
+                "years_of_experience",
+                "number_of_past_injuries",
+                "participation_in_peak_season",
+                "thrill_seeking_score"
+            ]
+        }
+    ]
+}

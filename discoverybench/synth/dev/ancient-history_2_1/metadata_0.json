@@ -1,0 +1,132 @@
+{
+    "id": 0,
+    "domain": "ancient history",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to civilizations, archaeological discoveries, and ancient cultures.",
+            "columns": [
+                {
+                    "name": "trade_routes",
+                    "description": "Number of major trade routes used by the civilization"
+                },
+                {
+                    "name": "num_unique_artifacts",
+                    "description": "The number of unique artifacts discovered from a civilization."
+                },
+                {
+                    "name": "mythological_beliefs",
+                    "description": "Level of mythology influence in civilization, measured as a cultural imprint"
+                },
+                {
+                    "name": "technological_advancement_level",
+                    "description": "A numeric representation of the civilization's technological level based on known artifacts and tools"
+                },
+                {
+                    "name": "distinct_religious_beliefs",
+                    "description": "Number of distinct religious beliefs systems recognized"
+                },
+                {
+                    "name": "temples_per_capita",
+                    "description": "Number of religious temples per 1000 citizens"
+                },
+                {
+                    "name": "type_of_government",
+                    "description": "The governing system of the civilization, represented as a categorical type"
+                },
+                {
+                    "name": "settled_regions_count",
+                    "description": "Number of distinct regions settled by the civilization"
+                },
+                {
+                    "name": "population_in_thousands",
+                    "description": "Population of the civilization in thousands"
+                },
+                {
+                    "name": "has_advanced_agriculture",
+                    "description": "Indicates whether the civilization has advanced agricultural practices, with 1 for yes and 0 for no."
+                },
+                {
+                    "name": "religious_education",
+                    "description": "Availability of religious education within the civilization"
+                },
+                {
+                    "name": "number_of_libraries",
+                    "description": "Count of libraries within the civilization"
+                },
+                {
+                    "name": "agricultural_productivity",
+                    "description": "A numeric representation of the civilization's agricultural output per capita"
+                },
+                {
+                    "name": "number_of_religious_universities",
+                    "description": "Count of universities focused on religious studies within the civilization"
+                },
+                {
+                    "name": "legal_religious_diversity",
+                    "description": "Legality of practicing multiple religions within the civilization"
+                },
+                {
+                    "name": "predicted_religious_ritual_types",
+                    "description": "Prediction of the types of religious rituals practiced within the civilization"
+                },
+                {
+                    "name": "main_language",
+                    "description": "Primary language of the civilization"
+                },
+                {
+                    "name": "has_documented_legal_system",
+                    "description": "Indicates whether the civilization had a formally documented legal system"
+                },
+                {
+                    "name": "architectural_styles_count",
+                    "description": "Number of distinct architectural styles in the civilization"
+                },
+                {
+                    "name": "region_climate",
+                    "description": "Predominant climate of the region inhabited"
+                },
+                {
+                    "name": "civilization_name",
+                    "description": "Name of the ancient civilization"
+                },
+                {
+                    "name": "centralized_religious_structure",
+                    "description": "Existence of a structured, unified religious hierarchy within the civilization"
+                },
+                {
+                    "name": "trade_network_size",
+                    "description": "Represents the extent of the civilization's trade network, coded as the number of external connections"
+                },
+                {
+                    "name": "technological_level",
+                    "description": "Represents the technological advancement level of a civilization on a scale from 1 to 10"
+                },
+                {
+                    "name": "distinct_societal_roles",
+                    "description": "Number of distinct roles recognized in the society"
+                },
+                {
+                    "name": "language_diversity_index",
+                    "description": "A numerical index representing the diversity of official languages spoken within the civilization"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 134,
+            "question": "Is there a relationship between the ratio of distinct societal roles to distinct religious beliefs adopted in ancient civilizations and how they can be classified?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "civilization_name",
+            "true_hypothesis": "The civilization name can be predicted by evaluating whether the ratio of the number of distinct societal roles to the distinct religious beliefs adopted is greater than 5, where civilizations with a ratio greater than 5 are classified as 'Roman' and others as 'Maya'.",
+            "true_hypothesis_expr": "np.where((df['distinct_societal_roles'] / df['distinct_religious_beliefs']) > 5, 'Roman', 'Maya')",
+            "relevant_cols": [
+                "distinct_religious_beliefs",
+                "distinct_societal_roles",
+                "civilization_name"
+            ]
+        }
+    ]
+}

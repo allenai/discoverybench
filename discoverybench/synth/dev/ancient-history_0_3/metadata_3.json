@@ -1,0 +1,112 @@
+{
+    "id": 3,
+    "domain": "ancient history",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to civilizations, archaeological discoveries, and ancient cultures.",
+            "columns": [
+                {
+                    "name": "region_climate",
+                    "description": "Predominant climate of the region inhabited"
+                },
+                {
+                    "name": "has_documented_legal_system",
+                    "description": "Indicates whether the civilization had a formally documented legal system"
+                },
+                {
+                    "name": "settled_regions_count",
+                    "description": "Number of distinct regions settled by the civilization"
+                },
+                {
+                    "name": "technological_level",
+                    "description": "Represents the technological advancement level of a civilization on a scale from 1 to 10"
+                },
+                {
+                    "name": "language_diversity_index",
+                    "description": "A numerical index representing the diversity of official languages spoken within the civilization"
+                },
+                {
+                    "name": "temples_per_capita",
+                    "description": "Number of religious temples per 1000 citizens"
+                },
+                {
+                    "name": "trade_network_size",
+                    "description": "Represents the extent of the civilization's trade network, coded as the number of external connections"
+                },
+                {
+                    "name": "distinct_religious_beliefs",
+                    "description": "Number of distinct religious beliefs systems recognized"
+                },
+                {
+                    "name": "legal_religious_diversity",
+                    "description": "Legality of practicing multiple religions within the civilization"
+                },
+                {
+                    "name": "number_of_libraries",
+                    "description": "Count of libraries within the civilization"
+                },
+                {
+                    "name": "has_advanced_agriculture",
+                    "description": "Indicates whether the civilization has advanced agricultural practices, with 1 for yes and 0 for no."
+                },
+                {
+                    "name": "main_language",
+                    "description": "Primary language of the civilization"
+                },
+                {
+                    "name": "religious_education",
+                    "description": "Availability of religious education within the civilization"
+                },
+                {
+                    "name": "type_of_government",
+                    "description": "The governing system of the civilization, represented as a categorical type"
+                },
+                {
+                    "name": "agricultural_productivity",
+                    "description": "A numeric representation of the civilization's agricultural output per capita"
+                },
+                {
+                    "name": "num_unique_artifacts",
+                    "description": "The number of unique artifacts discovered from a civilization."
+                },
+                {
+                    "name": "centralized_religious_structure",
+                    "description": "Existence of a structured, unified religious hierarchy within the civilization"
+                },
+                {
+                    "name": "mythological_beliefs",
+                    "description": "Level of mythology influence in civilization, measured as a cultural imprint"
+                },
+                {
+                    "name": "number_of_religious_universities",
+                    "description": "Count of universities focused on religious studies within the civilization"
+                },
+                {
+                    "name": "population_in_thousands",
+                    "description": "Population of the civilization in thousands"
+                },
+                {
+                    "name": "technological_advancement_level",
+                    "description": "A numeric representation of the civilization's technological level based on known artifacts and tools"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 141,
+            "question": "What is the relationship between the availability of religious education and the combined number of libraries and religious universities in ancient civilizations?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "religious_education",
+            "true_hypothesis": "In civilizations where the product of the number of libraries and religious universities exceeds 150, there is availability of religious education.",
+            "true_hypothesis_expr": "np.where((df['number_of_libraries'] * df['number_of_religious_universities']) > 150, True, False)",
+            "relevant_cols": [
+                "number_of_libraries",
+                "number_of_religious_universities",
+                "religious_education"
+            ]
+        }
+    ]
+}

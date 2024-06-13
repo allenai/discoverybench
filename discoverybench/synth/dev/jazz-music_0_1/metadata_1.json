@@ -1,0 +1,146 @@
+{
+    "id": 1,
+    "domain": "jazz music",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to improvisation, swing rhythms, and iconic jazz musicians.",
+            "columns": [
+                {
+                    "name": "genre_specific_events",
+                    "description": "Number of genre-specific events (e.g., jazz) the venue hosts annually."
+                },
+                {
+                    "name": "jazz_genre_historicity",
+                    "description": "Score representing the historic and cultural significance of the artist's primary jazz genre, scaled from 1 to 5."
+                },
+                {
+                    "name": "avg_performance_duration",
+                    "description": "Average duration of setlist in hours per performance."
+                },
+                {
+                    "name": "music_style_complexity",
+                    "description": "Count of distinct jazz genres performed by the ensemble."
+                },
+                {
+                    "name": "stage_presence_intensity",
+                    "description": "Quantified measure of the musician's energy and engagement during live performances."
+                },
+                {
+                    "name": "number_of_improvisations_per_week",
+                    "description": "Number of improvisations the musician engages in during performances per week."
+                },
+                {
+                    "name": "social_media_following",
+                    "description": "The total count of followers of the venue’s official social media accounts."
+                },
+                {
+                    "name": "weekend_performance",
+                    "description": "Whether the performance is held on a weekend."
+                },
+                {
+                    "name": "original_compositions",
+                    "description": "Binary value indicating whether the artist primarily performs original compositions (True) or covers (False)."
+                },
+                {
+                    "name": "unique_song_releases_last_year",
+                    "description": "Number of unique songs released by the ensemble in the previous year."
+                },
+                {
+                    "name": "avg_audience_size",
+                    "description": "Average audience size per festival."
+                },
+                {
+                    "name": "years_of_experience",
+                    "description": "The number of years the musician has been performing jazz."
+                },
+                {
+                    "name": "latest_album_commercial_success",
+                    "description": "Indicates whether the ensemble's latest album was commercially successful (sold over 10,000 copies)."
+                },
+                {
+                    "name": "percentage_sold_out_shows",
+                    "description": "The percentage of shows that are fully sold out in a season per venue."
+                },
+                {
+                    "name": "uses_swing_rhythms",
+                    "description": "Indicator whether swing rhythms are used exclusively by the musician."
+                },
+                {
+                    "name": "performance_complexity",
+                    "description": "A quantifiable measure of the improvisational and technical complexity of the artist's performance, scaled from 1 to 10."
+                },
+                {
+                    "name": "primary_instrument",
+                    "description": "The main instrument the musician uses to perform."
+                },
+                {
+                    "name": "total_jazz_albums",
+                    "description": "Total number of albums released by the musician that primarily feature jazz music."
+                },
+                {
+                    "name": "musician_id",
+                    "description": "Unique identifier for each musician."
+                },
+                {
+                    "name": "total_music_awards_won",
+                    "description": "Total number of music awards won by the ensemble throughout their career."
+                },
+                {
+                    "name": "overseas_performance_count",
+                    "description": "Total number of performances the ensemble has held outside their home country."
+                },
+                {
+                    "name": "international_song_percentage",
+                    "description": "Percentage of songs in the ensemble's setlist that are international."
+                },
+                {
+                    "name": "region_jazz_popularity",
+                    "description": "Popularity of jazz in the musician's primary active region on a scale from low to high."
+                },
+                {
+                    "name": "ensemble_size",
+                    "description": "The number of musicians in the ensemble."
+                },
+                {
+                    "name": "experience_to_improvisation_ratio",
+                    "description": "Ratio of years of experience to the number of improvisations per week."
+                },
+                {
+                    "name": "venue_type",
+                    "description": "The type of venue, categorizing its primary use and setting."
+                },
+                {
+                    "name": "years_playing_jazz",
+                    "description": "Number of years the musician has been actively playing jazz music."
+                },
+                {
+                    "name": "average_income_area",
+                    "description": "Average income of the area where the venue is located."
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 987,
+            "question": "Is there a relationship between jazz ensemble size and the number of distinct jazz genres performed, average setlist performance duration, and a calculated factor based on various factors related to international involvement, overseas experience, song releases, awards won, album success, and audience size?",
+            "question_type": "general",
+            "difficulty": 3,
+            "target_col": "ensemble_size",
+            "true_hypothesis": "For jazz ensembles, the complexity of the music style (counted by number of distinct jazz genres performed), the average setlist performance duration, and a calculated factor based on international song percentage, overseas performance count, unique song releases, total music awards won, latest album commercial success, and audience size, are key determinants of ensemble size. Ensembles that play more complex styles, have longer performances, and have greater international involvement, overseas performance experience, song releases, music award achievements, album success, and audience sizes generally have more musicians.",
+            "true_hypothesis_expr": "df['music_style_complexity'] + 2 * df['avg_performance_duration'] * (np.where((df['international_song_percentage'] * 0.2 + df['overseas_performance_count'] * 0.5 + 2 * (df['unique_song_releases_last_year'] + df['total_music_awards_won'] * 2 + (df['latest_album_commercial_success'] * 5)) ** 2 / df['avg_audience_size']) > 50, True, False).astype(int) + 3",
+            "relevant_cols": [
+                "music_style_complexity",
+                "avg_performance_duration",
+                "avg_audience_size",
+                "international_song_percentage",
+                "overseas_performance_count",
+                "unique_song_releases_last_year",
+                "total_music_awards_won",
+                "latest_album_commercial_success",
+                "ensemble_size"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "id": 0,
+    "domain": "virtual concerts",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to online music performances, digital shows, and live streaming.",
+            "columns": [
+                {
+                    "name": "social_media_engagement_score",
+                    "description": "Numerical score representing the level of engagement (likes, shares, comments) of the artist's promotional content for the concert on social media platforms"
+                },
+                {
+                    "name": "concert_time_slot",
+                    "description": "The time slot of the concert, categorized as morning, afternoon, or evening."
+                },
+                {
+                    "name": "exclusive_content_offered",
+                    "description": "Whether exclusive downloadable content was offered with the concert ticket."
+                },
+                {
+                    "name": "streaming_platform",
+                    "description": "The platform on which the virtual concert was hosted."
+                },
+                {
+                    "name": "target_audience_diversity",
+                    "description": "A binary indicator where 1 represents high diversity of the target audience in terms of global distribution and 0 represents low diversity."
+                },
+                {
+                    "name": "engagement_rate",
+                    "description": "The percentage of engaged users among the viewers."
+                },
+                {
+                    "name": "engagement_score",
+                    "description": "Numerical score representing the level of engagement with the virtual concert."
+                },
+                {
+                    "name": "peak_online_traffic_time",
+                    "description": "Indicates if the concert was scheduled during the hours of peak global online traffic."
+                },
+                {
+                    "name": "premium_ticket_ratio",
+                    "description": "The ratio of premium to standard tickets sold for the concert."
+                },
+                {
+                    "name": "day_of_week",
+                    "description": "The day of the week the virtual concert took place."
+                },
+                {
+                    "name": "streaming_platforms_count",
+                    "description": "Number of different digital platforms where the concert will be streamed."
+                },
+                {
+                    "name": "viewer_count",
+                    "description": "The number of unique viewers who actively participated in the concert."
+                },
+                {
+                    "name": "artist_time_zone",
+                    "description": "Primary time zone of the featured artists."
+                },
+                {
+                    "name": "artist_age_group",
+                    "description": "The predominant age group of the artist's audience."
+                },
+                {
+                    "name": "interactive_features_available",
+                    "description": "Indicates whether interactive features (e.g., live polling, request a song) were available during the concert"
+                },
+                {
+                    "name": "concert_length_minutes",
+                    "description": "Total duration of the concert in minutes."
+                },
+                {
+                    "name": "interactive_elements",
+                    "description": "Indicates if the virtual concert incorporated interactive features such as live chats, polls, or viewer choices."
+                },
+                {
+                    "name": "audience_reach",
+                    "description": "Estimated number of potential viewers for the concert from around the world."
+                },
+                {
+                    "name": "advertising_budget",
+                    "description": "The amount of money spent on advertising the virtual concert."
+                },
+                {
+                    "name": "total_viewer_count",
+                    "description": "Total number of people who watched the concert online."
+                },
+                {
+                    "name": "guest_artist_present",
+                    "description": "Indicates whether guest artists performed during the concert."
+                },
+                {
+                    "name": "production_team_size",
+                    "description": "The number of individuals in the production team organizing the concert."
+                },
+                {
+                    "name": "concert_genre",
+                    "description": "Musical genre of the concert."
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 660,
+            "question": "Is there a relationship between artist age group, day of the week, and engagement score in virtual concerts that could impact viewer count?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "engagement_score",
+            "true_hypothesis": "Artists with predominantly Gen Z audiences will see a 40% higher engagement score in virtual concerts hosted on weekdays compared to weekends, regardless of traditional peak times for live, in-person events.",
+            "true_hypothesis_expr": "df['viewer_count'] * (np.where(df['day_of_week'].isin(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']), 1.4, 1)) * (np.where(df['artist_age_group'] == 'Gen Z', 1.4, 1))",
+            "relevant_cols": [
+                "artist_age_group",
+                "engagement_score",
+                "day_of_week",
+                "viewer_count"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "id": 0,
+    "domain": "puzzle-solving games",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to brain teasers, escape rooms, and puzzle-solving challenges.",
+            "columns": [
+                {
+                    "name": "favorite_cuisine",
+                    "description": "Preferred cuisine of the individual"
+                },
+                {
+                    "name": "mental_fitness_apps_hours",
+                    "description": "Number of hours spent per week on apps designed to enhance cognitive skills"
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the individual"
+                },
+                {
+                    "name": "puzzle_solved_quickly",
+                    "description": "Whether an individual frequently solved puzzles quicker than peers"
+                },
+                {
+                    "name": "hours_of_sleep",
+                    "description": "Average number of hours the individual sleeps per day"
+                },
+                {
+                    "name": "daily_brain_teasers_solved",
+                    "description": "Number of brain teasers solved per day"
+                },
+                {
+                    "name": "profession",
+                    "description": "Type of profession of the individual"
+                },
+                {
+                    "name": "hours_spent_reading",
+                    "description": "Number of hours the individual spends reading intellectually stimulating books each day"
+                },
+                {
+                    "name": "logic_puzzle_events_attended",
+                    "description": "Number of logic puzzle events attended per month"
+                },
+                {
+                    "name": "attention_span_score",
+                    "description": "Score that quantifies the ability to maintain focus on tasks involving cognitive activities"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 525,
+            "question": "Is there a relationship between the number of daily brain teasers solved and the hours spent reading, logic puzzle events attended, puzzles solved quickly, hours spent on mental fitness apps, and attention span score?",
+            "question_type": "general",
+            "difficulty": 3,
+            "target_col": "daily_brain_teasers_solved",
+            "true_hypothesis": "Daily brain teasers solved can be predicted by the time spent reading intellectually stimulating books cubed plus twice the product of twice the hours spent on mental fitness apps and the attention span score, times the number of logic puzzle events attended, plus 10 times the number of puzzles solved quickly.",
+            "true_hypothesis_expr": "(df['hours_spent_reading']**3) + (2 * (2 * (df['mental_fitness_apps_hours'] * 5 + df['attention_span_score'] * 0.5) * df['logic_puzzle_events_attended'] + 10 * df['puzzle_solved_quickly']))",
+            "relevant_cols": [
+                "hours_spent_reading",
+                "logic_puzzle_events_attended",
+                "puzzle_solved_quickly",
+                "mental_fitness_apps_hours",
+                "attention_span_score",
+                "daily_brain_teasers_solved"
+            ]
+        }
+    ]
+}
