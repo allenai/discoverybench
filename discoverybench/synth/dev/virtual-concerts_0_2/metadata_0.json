@@ -1,0 +1,106 @@
+{
+    "id": 0,
+    "domain": "virtual concerts",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to online music performances, digital shows, and live streaming.",
+            "columns": [
+                {
+                    "name": "production_team_size",
+                    "description": "The number of individuals in the production team organizing the concert."
+                },
+                {
+                    "name": "engagement_rate",
+                    "description": "The percentage of engaged users among the viewers."
+                },
+                {
+                    "name": "concert_time_slot",
+                    "description": "The time slot of the concert, categorized as morning, afternoon, or evening."
+                },
+                {
+                    "name": "total_viewer_count",
+                    "description": "Total number of people who watched the concert online."
+                },
+                {
+                    "name": "audience_reach",
+                    "description": "Estimated number of potential viewers for the concert from around the world."
+                },
+                {
+                    "name": "concert_length_minutes",
+                    "description": "Total duration of the concert in minutes."
+                },
+                {
+                    "name": "peak_online_traffic_time",
+                    "description": "Indicates if the concert was scheduled during the hours of peak global online traffic."
+                },
+                {
+                    "name": "streaming_platform",
+                    "description": "The platform on which the virtual concert was hosted."
+                },
+                {
+                    "name": "artist_time_zone",
+                    "description": "Primary time zone of the featured artists."
+                },
+                {
+                    "name": "premium_ticket_ratio",
+                    "description": "The ratio of premium to standard tickets sold for the concert."
+                },
+                {
+                    "name": "streaming_platforms_count",
+                    "description": "Number of different digital platforms where the concert will be streamed."
+                },
+                {
+                    "name": "interactive_features_available",
+                    "description": "Indicates whether interactive features (e.g., live polling, request a song) were available during the concert"
+                },
+                {
+                    "name": "target_audience_diversity",
+                    "description": "A binary indicator where 1 represents high diversity of the target audience in terms of global distribution and 0 represents low diversity."
+                },
+                {
+                    "name": "advertising_budget",
+                    "description": "The amount of money spent on advertising the virtual concert."
+                },
+                {
+                    "name": "interactive_elements",
+                    "description": "Indicates if the virtual concert incorporated interactive features such as live chats, polls, or viewer choices."
+                },
+                {
+                    "name": "artist_age_group",
+                    "description": "The predominant age group of the artist's audience."
+                },
+                {
+                    "name": "guest_artist_present",
+                    "description": "Indicates whether guest artists performed during the concert."
+                },
+                {
+                    "name": "concert_genre",
+                    "description": "Musical genre of the concert."
+                },
+                {
+                    "name": "exclusive_content_offered",
+                    "description": "Whether exclusive downloadable content was offered with the concert ticket."
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 665,
+            "question": "Is there a relationship between the premium ticket ratio for the concert and the availability of interactive features during the concert?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "premium_ticket_ratio",
+            "true_hypothesis": "The premium ticket ratio for the concert can be calculated by taking 1% of the total viewer count divided by 1000, adding 20 for each guest artist present, multiplying by 1.5 if the concert genre is 'pop' or 'electronic', then adding 15% of the availability of interactive features during the concert.",
+            "true_hypothesis_expr": "0.01 * (((df['total_viewer_count'] / 1000) + (df['guest_artist_present'].astype(int) * 20)) * np.where(df['concert_genre'].isin(['pop', 'electronic']), 1.5, 1)) + (0.15 * df['interactive_features_available'])",
+            "relevant_cols": [
+                "interactive_features_available",
+                "total_viewer_count",
+                "guest_artist_present",
+                "concert_genre",
+                "premium_ticket_ratio"
+            ]
+        }
+    ]
+}

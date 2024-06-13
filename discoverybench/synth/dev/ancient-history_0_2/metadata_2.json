@@ -1,0 +1,106 @@
+{
+    "id": 2,
+    "domain": "ancient history",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to civilizations, archaeological discoveries, and ancient cultures.",
+            "columns": [
+                {
+                    "name": "region_climate",
+                    "description": "Predominant climate of the region inhabited"
+                },
+                {
+                    "name": "trade_network_size",
+                    "description": "Represents the extent of the civilization's trade network, coded as the number of external connections"
+                },
+                {
+                    "name": "number_of_religious_universities",
+                    "description": "Count of universities focused on religious studies within the civilization"
+                },
+                {
+                    "name": "distinct_religious_beliefs",
+                    "description": "Number of distinct religious beliefs systems recognized"
+                },
+                {
+                    "name": "predicted_religious_ritual_types",
+                    "description": "Prediction of the types of religious rituals practiced within the civilization"
+                },
+                {
+                    "name": "centralized_religious_structure",
+                    "description": "Existence of a structured, unified religious hierarchy within the civilization"
+                },
+                {
+                    "name": "mythological_beliefs",
+                    "description": "Level of mythology influence in civilization, measured as a cultural imprint"
+                },
+                {
+                    "name": "trade_routes",
+                    "description": "Number of major trade routes used by the civilization"
+                },
+                {
+                    "name": "language_diversity_index",
+                    "description": "A numerical index representing the diversity of official languages spoken within the civilization"
+                },
+                {
+                    "name": "agricultural_productivity",
+                    "description": "A numeric representation of the civilization's agricultural output per capita"
+                },
+                {
+                    "name": "distinct_societal_roles",
+                    "description": "Number of distinct roles recognized in the society"
+                },
+                {
+                    "name": "settled_regions_count",
+                    "description": "Number of distinct regions settled by the civilization"
+                },
+                {
+                    "name": "temples_per_capita",
+                    "description": "Number of religious temples per 1000 citizens"
+                },
+                {
+                    "name": "num_unique_artifacts",
+                    "description": "The number of unique artifacts discovered from a civilization."
+                },
+                {
+                    "name": "has_documented_legal_system",
+                    "description": "Indicates whether the civilization had a formally documented legal system"
+                },
+                {
+                    "name": "population_in_thousands",
+                    "description": "Population of the civilization in thousands"
+                },
+                {
+                    "name": "number_of_libraries",
+                    "description": "Count of libraries within the civilization"
+                },
+                {
+                    "name": "main_language",
+                    "description": "Primary language of the civilization"
+                },
+                {
+                    "name": "has_advanced_agriculture",
+                    "description": "Indicates whether the civilization has advanced agricultural practices, with 1 for yes and 0 for no."
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 144,
+            "question": "What is the relationship between the number of libraries and the predicted religious ritual type score in ancient civilizations?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "predicted_religious_ritual_types",
+            "true_hypothesis": "Civilizations with a high number of libraries and religious universities, and with a low temples per capita and language diversity index, are assigned a predicted religious ritual type score of 15; otherwise, they are assigned a score of 5.",
+            "true_hypothesis_expr": "np.where((np.where((df['number_of_libraries'] * df['number_of_religious_universities']) > 150, True, False) & np.where((df['temples_per_capita'] * df['language_diversity_index']) <= 2, True, False)), 15, 5)",
+            "relevant_cols": [
+                "number_of_libraries",
+                "number_of_religious_universities",
+                "temples_per_capita",
+                "language_diversity_index",
+                "predicted_religious_ritual_types"
+            ]
+        }
+    ]
+}

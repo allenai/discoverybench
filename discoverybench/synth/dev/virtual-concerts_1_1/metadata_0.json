@@ -1,0 +1,112 @@
+{
+    "id": 0,
+    "domain": "virtual concerts",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to online music performances, digital shows, and live streaming.",
+            "columns": [
+                {
+                    "name": "total_viewer_count",
+                    "description": "Total number of people who watched the concert online."
+                },
+                {
+                    "name": "concert_genre",
+                    "description": "Musical genre of the concert."
+                },
+                {
+                    "name": "artist_age_group",
+                    "description": "The predominant age group of the artist's audience."
+                },
+                {
+                    "name": "social_media_engagement_score",
+                    "description": "Numerical score representing the level of engagement (likes, shares, comments) of the artist's promotional content for the concert on social media platforms"
+                },
+                {
+                    "name": "exclusive_content_offered",
+                    "description": "Whether exclusive downloadable content was offered with the concert ticket."
+                },
+                {
+                    "name": "peak_online_traffic_time",
+                    "description": "Indicates if the concert was scheduled during the hours of peak global online traffic."
+                },
+                {
+                    "name": "streaming_platform",
+                    "description": "The platform on which the virtual concert was hosted."
+                },
+                {
+                    "name": "artist_time_zone",
+                    "description": "Primary time zone of the featured artists."
+                },
+                {
+                    "name": "engagement_rate",
+                    "description": "The percentage of engaged users among the viewers."
+                },
+                {
+                    "name": "concert_time_slot",
+                    "description": "The time slot of the concert, categorized as morning, afternoon, or evening."
+                },
+                {
+                    "name": "advertising_budget",
+                    "description": "The amount of money spent on advertising the virtual concert."
+                },
+                {
+                    "name": "concert_length_minutes",
+                    "description": "Total duration of the concert in minutes."
+                },
+                {
+                    "name": "viewer_count",
+                    "description": "The number of unique viewers who actively participated in the concert."
+                },
+                {
+                    "name": "production_team_size",
+                    "description": "The number of individuals in the production team organizing the concert."
+                },
+                {
+                    "name": "streaming_platforms_count",
+                    "description": "Number of different digital platforms where the concert will be streamed."
+                },
+                {
+                    "name": "interactive_elements",
+                    "description": "Indicates if the virtual concert incorporated interactive features such as live chats, polls, or viewer choices."
+                },
+                {
+                    "name": "day_of_week",
+                    "description": "The day of the week the virtual concert took place."
+                },
+                {
+                    "name": "guest_artist_present",
+                    "description": "Indicates whether guest artists performed during the concert."
+                },
+                {
+                    "name": "target_audience_diversity",
+                    "description": "A binary indicator where 1 represents high diversity of the target audience in terms of global distribution and 0 represents low diversity."
+                },
+                {
+                    "name": "audience_reach",
+                    "description": "Estimated number of potential viewers for the concert from around the world."
+                },
+                {
+                    "name": "interactive_features_available",
+                    "description": "Indicates whether interactive features (e.g., live polling, request a song) were available during the concert"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 668,
+            "question": "Is there a relationship between the characteristics of virtual concerts and the total viewer count they attract?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "viewer_count",
+            "true_hypothesis": "Virtual concerts that feature interactive elements and are scheduled during international peak online traffic times will see a viewer count calculated by multiplying the number of interactive elements by the peak online traffic time, converting them to integers, then multiplying the result by 1000 and adding 500.",
+            "true_hypothesis_expr": "df['interactive_elements'].astype(int) * df['peak_online_traffic_time'].astype(int) * 1000 + 500",
+            "relevant_cols": [
+                "interactive_elements",
+                "peak_online_traffic_time",
+                "viewer_count"
+            ]
+        }
+    ]
+}

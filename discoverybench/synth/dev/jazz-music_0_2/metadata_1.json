@@ -1,0 +1,144 @@
+{
+    "id": 1,
+    "domain": "jazz music",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to improvisation, swing rhythms, and iconic jazz musicians.",
+            "columns": [
+                {
+                    "name": "avg_audience_size",
+                    "description": "Average audience size per festival."
+                },
+                {
+                    "name": "music_style_complexity",
+                    "description": "Count of distinct jazz genres performed by the ensemble."
+                },
+                {
+                    "name": "years_playing_jazz",
+                    "description": "Number of years the musician has been actively playing jazz music."
+                },
+                {
+                    "name": "has_international_experience",
+                    "description": "Indicates whether the ensemble has performed internationally."
+                },
+                {
+                    "name": "venue_type",
+                    "description": "The type of venue, categorizing its primary use and setting."
+                },
+                {
+                    "name": "is_lead_instrument",
+                    "description": "Indicates if the primary instrument is commonly associated as a jazz lead instrument (e.g., saxophone, trumpet)."
+                },
+                {
+                    "name": "social_media_following",
+                    "description": "The total count of followers of the venue’s official social media accounts."
+                },
+                {
+                    "name": "venue_size",
+                    "description": "The capacity of the venue where the musician performs most often."
+                },
+                {
+                    "name": "jazz_genre_historicity",
+                    "description": "Score representing the historic and cultural significance of the artist's primary jazz genre, scaled from 1 to 5."
+                },
+                {
+                    "name": "total_jazz_albums",
+                    "description": "Total number of albums released by the musician that primarily feature jazz music."
+                },
+                {
+                    "name": "stage_presence_intensity",
+                    "description": "Quantified measure of the musician's energy and engagement during live performances."
+                },
+                {
+                    "name": "percentage_sold_out_shows",
+                    "description": "The percentage of shows that are fully sold out in a season per venue."
+                },
+                {
+                    "name": "years_of_experience",
+                    "description": "The number of years the musician has been performing jazz."
+                },
+                {
+                    "name": "performance_complexity",
+                    "description": "A quantifiable measure of the improvisational and technical complexity of the artist's performance, scaled from 1 to 10."
+                },
+                {
+                    "name": "unique_song_releases_last_year",
+                    "description": "Number of unique songs released by the ensemble in the previous year."
+                },
+                {
+                    "name": "uses_swing_rhythms",
+                    "description": "Indicator whether swing rhythms are used exclusively by the musician."
+                },
+                {
+                    "name": "region_jazz_popularity",
+                    "description": "Popularity of jazz in the musician's primary active region on a scale from low to high."
+                },
+                {
+                    "name": "number_of_improvisations_per_week",
+                    "description": "Number of improvisations the musician engages in during performances per week."
+                },
+                {
+                    "name": "weekend_performance",
+                    "description": "Whether the performance is held on a weekend."
+                },
+                {
+                    "name": "original_compositions",
+                    "description": "Binary value indicating whether the artist primarily performs original compositions (True) or covers (False)."
+                },
+                {
+                    "name": "international_song_percentage",
+                    "description": "Percentage of songs in the ensemble's setlist that are international."
+                },
+                {
+                    "name": "experience_to_improvisation_ratio",
+                    "description": "Ratio of years of experience to the number of improvisations per week."
+                },
+                {
+                    "name": "average_income_area",
+                    "description": "Average income of the area where the venue is located."
+                },
+                {
+                    "name": "latest_album_commercial_success",
+                    "description": "Indicates whether the ensemble's latest album was commercially successful (sold over 10,000 copies)."
+                },
+                {
+                    "name": "total_music_awards_won",
+                    "description": "Total number of music awards won by the ensemble throughout their career."
+                },
+                {
+                    "name": "genre_specific_events",
+                    "description": "Number of genre-specific events (e.g., jazz) the venue hosts annually."
+                },
+                {
+                    "name": "avg_performance_duration",
+                    "description": "Average duration of setlist in hours per performance."
+                },
+                {
+                    "name": "overseas_performance_count",
+                    "description": "Total number of performances the ensemble has held outside their home country."
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 984,
+            "question": "Is there a relationship between a jazz ensemble's average audience size and their likelihood of having international experience?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "has_international_experience",
+            "true_hypothesis": "Ensembles where the combination of international song percentage, overseas performance count, unique song releases last year, total music awards won, latest album commercial success, and a calculated composite score based on these factors exceeds 50 are more likely to have international experience.",
+            "true_hypothesis_expr": "np.where(df['international_song_percentage'] * 0.2 + df['overseas_performance_count'] * 0.5 + 2 * (df['unique_song_releases_last_year'] + df['total_music_awards_won'] * 2 + (df['latest_album_commercial_success'] * 5)) ** 2 / df['avg_audience_size'] > 50, True, False)",
+            "relevant_cols": [
+                "avg_audience_size",
+                "international_song_percentage",
+                "overseas_performance_count",
+                "unique_song_releases_last_year",
+                "total_music_awards_won",
+                "latest_album_commercial_success",
+                "has_international_experience"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,197 @@
+{
+    "id": 3,
+    "domain": "ancient civilizations",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to Mesopotamia, Egypt, Greece, Rome, and early cultures.",
+            "columns": [
+                {
+                    "name": "social_cohesion_index",
+                    "description": "A numerical value representing the degree of unity and collective efficacy within a civilization, based on social structures and common values."
+                },
+                {
+                    "name": "number_of_trade_routes",
+                    "description": "Number of major trade routes passing through or originating from the city"
+                },
+                {
+                    "name": "economic_status",
+                    "description": "Economic ranking of the city from 1 (poor) to 10 (wealthy)"
+                },
+                {
+                    "name": "annual_festival_count",
+                    "description": "The number of significant festivals held annually in the city"
+                },
+                {
+                    "name": "proximity_to_water",
+                    "description": "Binary indicator if the city is less than 10 km from a major water source (1 = yes, 0 = no)"
+                },
+                {
+                    "name": "external_trade_level",
+                    "description": "A numerical measure indicating the extent and complexity of trade relationships with other civilizations or tribes."
+                },
+                {
+                    "name": "central_market_district_size",
+                    "description": "Approximate area of the central market district in square kilometers"
+                },
+                {
+                    "name": "city_elevation",
+                    "description": "The elevation of the city above sea level in meters"
+                },
+                {
+                    "name": "administrative_complexity",
+                    "description": "Level of administrative complexity based on governance, laws, and societal structure"
+                },
+                {
+                    "name": "essential_resources_available",
+                    "description": "Indicates availability of key resources like water, minerals, and crops"
+                },
+                {
+                    "name": "trade_intensity_ratio",
+                    "description": "A numerical measure calculating the ratio of trade transactions to population size."
+                },
+                {
+                    "name": "is_military_stronghold",
+                    "description": "Indicates if the city was considered a strategic military location"
+                },
+                {
+                    "name": "proximity_to_water_source",
+                    "description": "Distance in kilometers to the nearest major water source (river or lake)"
+                },
+                {
+                    "name": "number_of_ziggurats",
+                    "description": "Number of ziggurats in the city"
+                },
+                {
+                    "name": "number_of_trade_schools",
+                    "description": "The number of educational institutions in the city specializing in trade."
+                },
+                {
+                    "name": "type_of_government",
+                    "description": "The type of governmental system ruling the city"
+                },
+                {
+                    "name": "years_of_political_stability",
+                    "description": "The number of consecutive years without significant violations in leadership or governmental structures."
+                },
+                {
+                    "name": "military_presence",
+                    "description": "The total number of military personnel stationed within the city"
+                },
+                {
+                    "name": "distance_to_cultural_center",
+                    "description": "The distance in kilometers from the city to the nearest major cultural center"
+                },
+                {
+                    "name": "technological_advancement_score",
+                    "description": "A numerical measure reflecting the level of technological sophistication achieved, such as metallurgy, architecture, and engineering."
+                },
+                {
+                    "name": "high_value_trade_incidence",
+                    "description": "Indicates if the city often trades in high-value materials such as gold or gemstones, recorded as true or false"
+                },
+                {
+                    "name": "percentage_of_skilled_traders",
+                    "description": "The percentage of the city's population that are trained and skilled traders"
+                },
+                {
+                    "name": "percentage_arable_land",
+                    "description": "Percentage of land within a 5 km radius of the city center that is arable"
+                },
+                {
+                    "name": "cultural_influence_score",
+                    "description": "Scoring of the cultural significance based on artifacts, literature, and historical mentions"
+                },
+                {
+                    "name": "economic_opportunities_rating",
+                    "description": "A categorical rating of economic opportunities in the city, ranging from 'low' to 'high'."
+                },
+                {
+                    "name": "population_density",
+                    "description": "The number of people per square kilometer in the city"
+                },
+                {
+                    "name": "government_structure_complexity",
+                    "description": "A categorical measure indicating the complexity of the government system, ranging from tribal to advanced bureaucratic states."
+                },
+                {
+                    "name": "societal_values_towards_science",
+                    "description": "Binary indicator where 1 indicates a positive societal value towards science and technological growth, and 0 indicates neutral or negative values."
+                },
+                {
+                    "name": "trade_network_size",
+                    "description": "The number of trade routes connected to the city"
+                },
+                {
+                    "name": "economic_recession_occurred",
+                    "description": "Indicates whether an economic recession occurred in the city in a given year, recorded as true or false."
+                },
+                {
+                    "name": "external_conflict_presence",
+                    "description": "A binary indicator of whether the civilization is facing invasions or military conflicts from external forces during a given time period."
+                },
+                {
+                    "name": "number_of_temples",
+                    "description": "Number of temples in the city dedicated to major gods"
+                },
+                {
+                    "name": "multilingual_traders_majority",
+                    "description": "Indicates if the majority of skilled traders in the city can communicate in multiple languages, recorded as true or false"
+                },
+                {
+                    "name": "architectural_complexity",
+                    "description": "A rating of the architectural complexity and historical significance of buildings and structures within the city, rated from 1 to 10."
+                },
+                {
+                    "name": "cultural_event_frequency",
+                    "description": "The number of annual cultural events held in the city such as festivals, ceremonies, and public gatherings."
+                },
+                {
+                    "name": "average_trade_volume",
+                    "description": "The average volume of trade goods passing through the city per month"
+                },
+                {
+                    "name": "religious_significance",
+                    "description": "Level of religious significance based on historical records of temples and religious activities"
+                },
+                {
+                    "name": "types_of_goods_traded",
+                    "description": "The number of different types of goods traded in the city"
+                },
+                {
+                    "name": "educational_reach",
+                    "description": "A numerical score representing the extent of education coverage in the population, related to the number of educational institutions per capita."
+                },
+                {
+                    "name": "ruling_dynasty_present",
+                    "description": "Indicates whether a ruling dynasty is present in the city currently"
+                },
+                {
+                    "name": "temple_proximity",
+                    "description": "Distance in kilometers from the city center to the nearest major temple"
+                },
+                {
+                    "name": "conflict_count_last_decade",
+                    "description": "Number of recorded conflicts in the city over the last decade"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 47,
+            "question": "Is there a relationship between the trade intensity ratio, educational reach, societal values towards science, and the technological advancement score in ancient civilizations?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "technological_advancement_score",
+            "true_hypothesis": "The technological advancement score is influenced by combining the trade intensity ratio, educational reach, and societal values towards science through a specific mathematical formula that includes multiplying the trade intensity ratio by 2.5, adding the educational reach multiplied by 0.1, and then multiplying 3 by the societal values towards science indicator.",
+            "true_hypothesis_expr": "df['trade_intensity_ratio'] * 2.5 + df['educational_reach'] * 0.1 + 3 * df['societal_values_towards_science']",
+            "relevant_cols": [
+                "trade_intensity_ratio",
+                "educational_reach",
+                "societal_values_towards_science",
+                "technological_advancement_score"
+            ]
+        }
+    ]
+}

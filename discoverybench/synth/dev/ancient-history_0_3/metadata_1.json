@@ -1,0 +1,112 @@
+{
+    "id": 1,
+    "domain": "ancient history",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to civilizations, archaeological discoveries, and ancient cultures.",
+            "columns": [
+                {
+                    "name": "region_climate",
+                    "description": "Predominant climate of the region inhabited"
+                },
+                {
+                    "name": "has_documented_legal_system",
+                    "description": "Indicates whether the civilization had a formally documented legal system"
+                },
+                {
+                    "name": "settled_regions_count",
+                    "description": "Number of distinct regions settled by the civilization"
+                },
+                {
+                    "name": "technological_level",
+                    "description": "Represents the technological advancement level of a civilization on a scale from 1 to 10"
+                },
+                {
+                    "name": "language_diversity_index",
+                    "description": "A numerical index representing the diversity of official languages spoken within the civilization"
+                },
+                {
+                    "name": "temples_per_capita",
+                    "description": "Number of religious temples per 1000 citizens"
+                },
+                {
+                    "name": "trade_network_size",
+                    "description": "Represents the extent of the civilization's trade network, coded as the number of external connections"
+                },
+                {
+                    "name": "distinct_religious_beliefs",
+                    "description": "Number of distinct religious beliefs systems recognized"
+                },
+                {
+                    "name": "legal_religious_diversity",
+                    "description": "Legality of practicing multiple religions within the civilization"
+                },
+                {
+                    "name": "number_of_libraries",
+                    "description": "Count of libraries within the civilization"
+                },
+                {
+                    "name": "has_advanced_agriculture",
+                    "description": "Indicates whether the civilization has advanced agricultural practices, with 1 for yes and 0 for no."
+                },
+                {
+                    "name": "main_language",
+                    "description": "Primary language of the civilization"
+                },
+                {
+                    "name": "religious_education",
+                    "description": "Availability of religious education within the civilization"
+                },
+                {
+                    "name": "type_of_government",
+                    "description": "The governing system of the civilization, represented as a categorical type"
+                },
+                {
+                    "name": "agricultural_productivity",
+                    "description": "A numeric representation of the civilization's agricultural output per capita"
+                },
+                {
+                    "name": "num_unique_artifacts",
+                    "description": "The number of unique artifacts discovered from a civilization."
+                },
+                {
+                    "name": "centralized_religious_structure",
+                    "description": "Existence of a structured, unified religious hierarchy within the civilization"
+                },
+                {
+                    "name": "mythological_beliefs",
+                    "description": "Level of mythology influence in civilization, measured as a cultural imprint"
+                },
+                {
+                    "name": "number_of_religious_universities",
+                    "description": "Count of universities focused on religious studies within the civilization"
+                },
+                {
+                    "name": "population_in_thousands",
+                    "description": "Population of the civilization in thousands"
+                },
+                {
+                    "name": "technological_advancement_level",
+                    "description": "A numeric representation of the civilization's technological level based on known artifacts and tools"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 137,
+            "question": "What is the relationship between the number of unique artifacts discovered (num_unique_artifacts), the presence of advanced agricultural practices (has_advanced_agriculture), the technological level of a civilization, and how do they interplay with each other?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "technological_level",
+            "true_hypothesis": "The technological_level of a civilization increases with the square of the number of unique artifacts discovered (num_unique_artifacts) and the presence of advanced agricultural practices (has_advanced_agriculture), along with a constant term factor of 1.",
+            "true_hypothesis_expr": "df['num_unique_artifacts']**2 + 2 * df['has_advanced_agriculture'] + 1",
+            "relevant_cols": [
+                "num_unique_artifacts",
+                "has_advanced_agriculture",
+                "technological_level"
+            ]
+        }
+    ]
+}

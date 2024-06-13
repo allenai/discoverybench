@@ -1,0 +1,77 @@
+{
+    "id": 0,
+    "domain": "puzzle-solving games",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to brain teasers, escape rooms, and puzzle-solving challenges.",
+            "columns": [
+                {
+                    "name": "attention_span_score",
+                    "description": "Score that quantifies the ability to maintain focus on tasks involving cognitive activities"
+                },
+                {
+                    "name": "cognitive_game_percentage",
+                    "description": "Percentage of total leisure time spent on cognitive games"
+                },
+                {
+                    "name": "puzzle_solved_quickly",
+                    "description": "Whether an individual frequently solved puzzles quicker than peers"
+                },
+                {
+                    "name": "favorite_cuisine",
+                    "description": "Preferred cuisine of the individual"
+                },
+                {
+                    "name": "strategy_games_played",
+                    "description": "Number of strategy-based games the individual plays each week"
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the individual"
+                },
+                {
+                    "name": "mental_fitness_apps_hours",
+                    "description": "Number of hours spent per week on apps designed to enhance cognitive skills"
+                },
+                {
+                    "name": "logic_puzzle_events_attended",
+                    "description": "Number of logic puzzle events attended per month"
+                },
+                {
+                    "name": "hours_spent_reading",
+                    "description": "Number of hours the individual spends reading intellectually stimulating books each day"
+                },
+                {
+                    "name": "profession",
+                    "description": "Type of profession of the individual"
+                },
+                {
+                    "name": "advanced_decision_making_skills",
+                    "description": "Whether the person exhibits advanced decision-making skills"
+                },
+                {
+                    "name": "hours_of_sleep",
+                    "description": "Average number of hours the individual sleeps per day"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 517,
+            "question": "What is the relationship between age, hours spent reading intellectually stimulating books, and the number of strategy games played in relation to advanced decision-making skills in the context of puzzle-solving games?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "advanced_decision_making_skills",
+            "true_hypothesis": "Individuals aged 25-40 years who spend a significant amount of time reading intellectually stimulating books each day and play strategy games are more likely to exhibit advanced decision-making skills.",
+            "true_hypothesis_expr": "np.where((((df['hours_spent_reading']**3) + (2 * df['strategy_games_played'])) >= 1) & (df['age'] >= 25) & (df['age'] <= 40), True, False)",
+            "relevant_cols": [
+                "age",
+                "hours_spent_reading",
+                "advanced_decision_making_skills",
+                "strategy_games_played"
+            ]
+        }
+    ]
+}

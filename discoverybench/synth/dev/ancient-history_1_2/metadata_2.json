@@ -1,0 +1,128 @@
+{
+    "id": 2,
+    "domain": "ancient history",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to civilizations, archaeological discoveries, and ancient cultures.",
+            "columns": [
+                {
+                    "name": "type_of_government",
+                    "description": "The governing system of the civilization, represented as a categorical type"
+                },
+                {
+                    "name": "distinct_societal_roles",
+                    "description": "Number of distinct roles recognized in the society"
+                },
+                {
+                    "name": "religious_education",
+                    "description": "Availability of religious education within the civilization"
+                },
+                {
+                    "name": "centralized_religious_structure",
+                    "description": "Existence of a structured, unified religious hierarchy within the civilization"
+                },
+                {
+                    "name": "settled_regions_count",
+                    "description": "Number of distinct regions settled by the civilization"
+                },
+                {
+                    "name": "distinct_religious_beliefs",
+                    "description": "Number of distinct religious beliefs systems recognized"
+                },
+                {
+                    "name": "main_language",
+                    "description": "Primary language of the civilization"
+                },
+                {
+                    "name": "legal_religious_diversity",
+                    "description": "Legality of practicing multiple religions within the civilization"
+                },
+                {
+                    "name": "technological_advancement_level",
+                    "description": "A numeric representation of the civilization's technological level based on known artifacts and tools"
+                },
+                {
+                    "name": "number_of_libraries",
+                    "description": "Count of libraries within the civilization"
+                },
+                {
+                    "name": "num_unique_artifacts",
+                    "description": "The number of unique artifacts discovered from a civilization."
+                },
+                {
+                    "name": "temples_per_capita",
+                    "description": "Number of religious temples per 1000 citizens"
+                },
+                {
+                    "name": "architectural_styles_count",
+                    "description": "Number of distinct architectural styles in the civilization"
+                },
+                {
+                    "name": "mythological_beliefs",
+                    "description": "Level of mythology influence in civilization, measured as a cultural imprint"
+                },
+                {
+                    "name": "number_of_religious_universities",
+                    "description": "Count of universities focused on religious studies within the civilization"
+                },
+                {
+                    "name": "language_diversity_index",
+                    "description": "A numerical index representing the diversity of official languages spoken within the civilization"
+                },
+                {
+                    "name": "region_climate",
+                    "description": "Predominant climate of the region inhabited"
+                },
+                {
+                    "name": "trade_routes",
+                    "description": "Number of major trade routes used by the civilization"
+                },
+                {
+                    "name": "population_in_thousands",
+                    "description": "Population of the civilization in thousands"
+                },
+                {
+                    "name": "predicted_religious_ritual_types",
+                    "description": "Prediction of the types of religious rituals practiced within the civilization"
+                },
+                {
+                    "name": "technological_level",
+                    "description": "Represents the technological advancement level of a civilization on a scale from 1 to 10"
+                },
+                {
+                    "name": "agricultural_productivity",
+                    "description": "A numeric representation of the civilization's agricultural output per capita"
+                },
+                {
+                    "name": "trade_network_size",
+                    "description": "Represents the extent of the civilization's trade network, coded as the number of external connections"
+                },
+                {
+                    "name": "has_advanced_agriculture",
+                    "description": "Indicates whether the civilization has advanced agricultural practices, with 1 for yes and 0 for no."
+                },
+                {
+                    "name": "has_documented_legal_system",
+                    "description": "Indicates whether the civilization had a formally documented legal system"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 143,
+            "question": "Is there a relationship between the presence of religious education and legal support for multiple religions in ancient civilizations and the predicted score for religious ritual types assigned to them?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "predicted_religious_ritual_types",
+            "true_hypothesis": "Civilizations with religious education and legal support for multiple religions are assigned a predicted religious ritual type score of 15; otherwise, they are assigned a score of 5.",
+            "true_hypothesis_expr": "np.where(df['religious_education'] & df['legal_religious_diversity'], 15, 5)",
+            "relevant_cols": [
+                "religious_education",
+                "legal_religious_diversity",
+                "predicted_religious_ritual_types"
+            ]
+        }
+    ]
+}

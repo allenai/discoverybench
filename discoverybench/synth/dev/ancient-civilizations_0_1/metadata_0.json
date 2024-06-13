@@ -1,0 +1,175 @@
+{
+    "id": 0,
+    "domain": "ancient civilizations",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to Mesopotamia, Egypt, Greece, Rome, and early cultures.",
+            "columns": [
+                {
+                    "name": "social_cohesion_index",
+                    "description": "A numerical value representing the degree of unity and collective efficacy within a civilization, based on social structures and common values."
+                },
+                {
+                    "name": "number_of_ziggurats",
+                    "description": "Number of ziggurats in the city"
+                },
+                {
+                    "name": "annual_festival_count",
+                    "description": "The number of significant festivals held annually in the city"
+                },
+                {
+                    "name": "societal_values_towards_science",
+                    "description": "Binary indicator where 1 indicates a positive societal value towards science and technological growth, and 0 indicates neutral or negative values."
+                },
+                {
+                    "name": "architectural_complexity",
+                    "description": "A rating of the architectural complexity and historical significance of buildings and structures within the city, rated from 1 to 10."
+                },
+                {
+                    "name": "average_trade_volume",
+                    "description": "The average volume of trade goods passing through the city per month"
+                },
+                {
+                    "name": "trade_intensity_ratio",
+                    "description": "A numerical measure calculating the ratio of trade transactions to population size."
+                },
+                {
+                    "name": "proximity_to_water",
+                    "description": "Binary indicator if the city is less than 10 km from a major water source (1 = yes, 0 = no)"
+                },
+                {
+                    "name": "distance_to_cultural_center",
+                    "description": "The distance in kilometers from the city to the nearest major cultural center"
+                },
+                {
+                    "name": "number_of_trade_schools",
+                    "description": "The number of educational institutions in the city specializing in trade."
+                },
+                {
+                    "name": "military_presence",
+                    "description": "The total number of military personnel stationed within the city"
+                },
+                {
+                    "name": "is_military_stronghold",
+                    "description": "Indicates if the city was considered a strategic military location"
+                },
+                {
+                    "name": "external_trade_level",
+                    "description": "A numerical measure indicating the extent and complexity of trade relationships with other civilizations or tribes."
+                },
+                {
+                    "name": "external_conflict_presence",
+                    "description": "A binary indicator of whether the civilization is facing invasions or military conflicts from external forces during a given time period."
+                },
+                {
+                    "name": "distance_from_capital",
+                    "description": "Distance from the capital city in kilometers"
+                },
+                {
+                    "name": "percentage_arable_land",
+                    "description": "Percentage of land within a 5 km radius of the city center that is arable"
+                },
+                {
+                    "name": "religious_significance",
+                    "description": "Level of religious significance based on historical records of temples and religious activities"
+                },
+                {
+                    "name": "central_market_district_size",
+                    "description": "Approximate area of the central market district in square kilometers"
+                },
+                {
+                    "name": "city_name",
+                    "description": "Name of the city in ancient Mesopotamia"
+                },
+                {
+                    "name": "number_of_trade_routes",
+                    "description": "Number of major trade routes passing through or originating from the city"
+                },
+                {
+                    "name": "economic_status",
+                    "description": "Economic ranking of the city from 1 (poor) to 10 (wealthy)"
+                },
+                {
+                    "name": "high_value_trade_incidence",
+                    "description": "Indicates if the city often trades in high-value materials such as gold or gemstones, recorded as true or false"
+                },
+                {
+                    "name": "economic_opportunities_rating",
+                    "description": "A categorical rating of economic opportunities in the city, ranging from 'low' to 'high'."
+                },
+                {
+                    "name": "city_elevation",
+                    "description": "The elevation of the city above sea level in meters"
+                },
+                {
+                    "name": "educational_reach",
+                    "description": "A numerical score representing the extent of education coverage in the population, related to the number of educational institutions per capita."
+                },
+                {
+                    "name": "cultural_event_frequency",
+                    "description": "The number of annual cultural events held in the city such as festivals, ceremonies, and public gatherings."
+                },
+                {
+                    "name": "cultural_influence_score",
+                    "description": "Scoring of the cultural significance based on artifacts, literature, and historical mentions"
+                },
+                {
+                    "name": "economic_recession_occurred",
+                    "description": "Indicates whether an economic recession occurred in the city in a given year, recorded as true or false."
+                },
+                {
+                    "name": "conflict_count_last_decade",
+                    "description": "Number of recorded conflicts in the city over the last decade"
+                },
+                {
+                    "name": "type_of_government",
+                    "description": "The type of governmental system ruling the city"
+                },
+                {
+                    "name": "essential_resources_available",
+                    "description": "Indicates availability of key resources like water, minerals, and crops"
+                },
+                {
+                    "name": "number_of_temples",
+                    "description": "Number of temples in the city dedicated to major gods"
+                },
+                {
+                    "name": "population",
+                    "description": "Estimated population of the city"
+                },
+                {
+                    "name": "multilingual_traders_majority",
+                    "description": "Indicates if the majority of skilled traders in the city can communicate in multiple languages, recorded as true or false"
+                },
+                {
+                    "name": "government_structure_complexity",
+                    "description": "A categorical measure indicating the complexity of the government system, ranging from tribal to advanced bureaucratic states."
+                },
+                {
+                    "name": "types_of_goods_traded",
+                    "description": "The number of different types of goods traded in the city"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 43,
+            "question": "Is there a relationship between the annual festival count, economic status, availability of essential resources, average trade volume, military presence, and the city names in the dataset related to ancient civilizations?",
+            "question_type": "general",
+            "difficulty": 3,
+            "target_col": "city_name",
+            "true_hypothesis": "In ancient Mesopotamia, cities are classified based on a complicated formula involving the city's economic status, the availability of essential resources, the average trade volume, the military presence, the number of annual festivals, and specific threshold values. Based on the calculation result, cities are labeled 'Ur', 'Eridu', 'Nippur', or 'Uruk'.",
+            "true_hypothesis_expr": "np.select([(np.where(np.where((df['average_trade_volume'] >= 2500) & (df['military_presence'] >= 5000), True, False), 10 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/10, 5 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/20)**3 + 3*df['annual_festival_count']**2 + 5*np.where(np.where((df['average_trade_volume'] >= 2500) & (df['military_presence'] >= 5000), True, False), 10 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/10, 5 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/20)*df['annual_festival_count'] > 300), (np.where(np.where((df['average_trade_volume'] >= 2500) & (df['military_presence'] >= 5000), True, False), 10 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/10, 5 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/20)**3 + 3*df['annual_festival_count']**2 + 5*np.where(np.where((df['average_trade_volume'] >= 2500) & (df['military_presence'] >= 5000), True, False), 10 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/10, 5 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/20)*df['annual_festival_count'] > 150), (np.where(np.where((df['average_trade_volume'] >= 2500) & (df['military_presence'] >= 5000), True, False), 10 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/10, 5 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/20)**3 + 3*df['annual_festival_count']**2 + 5*np.where(np.where((df['average_trade_volume'] >= 2500) & (df['military_presence'] >= 5000), True, False), 10 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/10, 5 - (100 - df['economic_status']*10 + (0 if df['essential_resources_available'].all() else 20))/20)*df['annual_festival_count'] > 75)], ['Ur', 'Eridu', 'Nippur'], default='Uruk')",
+            "relevant_cols": [
+                "annual_festival_count",
+                "economic_status",
+                "essential_resources_available",
+                "average_trade_volume",
+                "military_presence",
+                "city_name"
+            ]
+        }
+    ]
+}

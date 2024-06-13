@@ -1,0 +1,93 @@
+{
+    "id": 0,
+    "domain": "sustainable fashion",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to eco-friendly clothing, ethical fashion, and sustainable design practices.",
+            "columns": [
+                {
+                    "name": "design_preference",
+                    "description": "Consumer preference for minimalist vs. patterned designs"
+                },
+                {
+                    "name": "willingness_to_pay_premium",
+                    "description": "Consumer's willingness to pay a premium for sustainable fashion, scored out of 100"
+                },
+                {
+                    "name": "income_level",
+                    "description": "Annual income of the consumer"
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the consumer"
+                },
+                {
+                    "name": "supply_chain_transparency",
+                    "description": "Score reflecting the level of transparency a company provides about its supply chain, based on third-party audits and self-reporting."
+                },
+                {
+                    "name": "region_activism_score",
+                    "description": "Score based on environmental activism and related projects in the region"
+                },
+                {
+                    "name": "urban_region",
+                    "description": "Indicates if the region is classified primarily as urban."
+                },
+                {
+                    "name": "renewable_energy_usage",
+                    "description": "Percentage of renewable energy used by businesses in the region"
+                },
+                {
+                    "name": "public_backlash",
+                    "description": "Binary indicator of whether a company has faced significant public backlash regarding its environmental sustainability in the past year."
+                },
+                {
+                    "name": "sustainable_textile_mandate",
+                    "description": "Indicates if there is a local government policy requiring a minimum percentage of sustainable textiles in clothing manufacturing."
+                },
+                {
+                    "name": "region_sustainability_score",
+                    "description": "Score based on sustainable fashion availability and initiatives in the consumer's region"
+                },
+                {
+                    "name": "region",
+                    "description": "Region where the consumer lives"
+                },
+                {
+                    "name": "green_certification_participation",
+                    "description": "Indicates if businesses in the region participate in a voluntary program that certifies sustainable business practices."
+                },
+                {
+                    "name": "environmental_violations",
+                    "description": "Number of recorded environmental violations in the region"
+                },
+                {
+                    "name": "years_since_compliance_enforcement",
+                    "description": "Number of years since environmental compliance laws were forcibly enacted in the company's operating regions."
+                },
+                {
+                    "name": "corporate_social_responsibility",
+                    "description": "Score reflecting a company's commitment to sustainable practices, based on self-disclosure and third-party ratings"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 464,
+            "question": "Is there a relationship between the age of consumers and the combined impact of region sustainability score, willingness to pay premium for sustainable fashion, and region activism score?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "age",
+            "true_hypothesis": "Age of consumers is inversely related to the combined impact of region sustainability score, willingness to pay premium for sustainable fashion, and region activism score.",
+            "true_hypothesis_expr": "65 - (df['region_sustainability_score'] * 0.2 + df['willingness_to_pay_premium'] * 0.3 + df['region_activism_score'] * 0.1)",
+            "relevant_cols": [
+                "willingness_to_pay_premium",
+                "region_activism_score",
+                "region_sustainability_score",
+                "age"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "id": 0,
+    "domain": "puzzle-solving games",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to brain teasers, escape rooms, and puzzle-solving challenges.",
+            "columns": [
+                {
+                    "name": "profession",
+                    "description": "Type of profession of the individual"
+                },
+                {
+                    "name": "cognitive_game_percentage",
+                    "description": "Percentage of total leisure time spent on cognitive games"
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the individual"
+                },
+                {
+                    "name": "puzzle_solved_quickly",
+                    "description": "Whether an individual frequently solved puzzles quicker than peers"
+                },
+                {
+                    "name": "hours_of_sleep",
+                    "description": "Average number of hours the individual sleeps per day"
+                },
+                {
+                    "name": "hours_spent_reading",
+                    "description": "Number of hours the individual spends reading intellectually stimulating books each day"
+                },
+                {
+                    "name": "attention_span_score",
+                    "description": "Score that quantifies the ability to maintain focus on tasks involving cognitive activities"
+                },
+                {
+                    "name": "mental_fitness_apps_hours",
+                    "description": "Number of hours spent per week on apps designed to enhance cognitive skills"
+                },
+                {
+                    "name": "logic_puzzle_events_attended",
+                    "description": "Number of logic puzzle events attended per month"
+                },
+                {
+                    "name": "favorite_cuisine",
+                    "description": "Preferred cuisine of the individual"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 520,
+            "question": "What relationship, if any, exists between the hours spent on mental_fitness_apps per week and the cognitive_game_percentage, taking into account the attention_span_score?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "cognitive_game_percentage",
+            "true_hypothesis": "Individuals who spend more hours on mental_fitness_apps per week and who have a higher attention_span_score are likely to have a cognitive_game_percentage calculated as 5 times the mental_fitness_apps_hours plus 0.5 times the attention_span_score.",
+            "true_hypothesis_expr": "df['mental_fitness_apps_hours'] * 5 + df['attention_span_score'] * 0.5",
+            "relevant_cols": [
+                "mental_fitness_apps_hours",
+                "attention_span_score",
+                "cognitive_game_percentage"
+            ]
+        }
+    ]
+}

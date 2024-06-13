@@ -1,0 +1,94 @@
+{
+    "id": 0,
+    "domain": "sustainable fashion",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to eco-friendly clothing, ethical fashion, and sustainable design practices.",
+            "columns": [
+                {
+                    "name": "public_backlash",
+                    "description": "Binary indicator of whether a company has faced significant public backlash regarding its environmental sustainability in the past year."
+                },
+                {
+                    "name": "region",
+                    "description": "Region where the consumer lives"
+                },
+                {
+                    "name": "willingness_to_pay_premium",
+                    "description": "Consumer's willingness to pay a premium for sustainable fashion, scored out of 100"
+                },
+                {
+                    "name": "urban_region",
+                    "description": "Indicates if the region is classified primarily as urban."
+                },
+                {
+                    "name": "design_preference",
+                    "description": "Consumer preference for minimalist vs. patterned designs"
+                },
+                {
+                    "name": "renewable_energy_usage",
+                    "description": "Percentage of renewable energy used by businesses in the region"
+                },
+                {
+                    "name": "corporate_social_responsibility",
+                    "description": "Score reflecting a company's commitment to sustainable practices, based on self-disclosure and third-party ratings"
+                },
+                {
+                    "name": "years_since_compliance_enforcement",
+                    "description": "Number of years since environmental compliance laws were forcibly enacted in the company's operating regions."
+                },
+                {
+                    "name": "income_level",
+                    "description": "Annual income of the consumer"
+                },
+                {
+                    "name": "preference_for_organic_cotton",
+                    "description": "Consumer preference for clothing made from organic cotton over synthetics"
+                },
+                {
+                    "name": "green_certification_participation",
+                    "description": "Indicates if businesses in the region participate in a voluntary program that certifies sustainable business practices."
+                },
+                {
+                    "name": "supply_chain_transparency",
+                    "description": "Score reflecting the level of transparency a company provides about its supply chain, based on third-party audits and self-reporting."
+                },
+                {
+                    "name": "environmental_violations",
+                    "description": "Number of recorded environmental violations in the region"
+                },
+                {
+                    "name": "region_sustainability_score",
+                    "description": "Score based on sustainable fashion availability and initiatives in the consumer's region"
+                },
+                {
+                    "name": "sustainable_textile_mandate",
+                    "description": "Indicates if there is a local government policy requiring a minimum percentage of sustainable textiles in clothing manufacturing."
+                },
+                {
+                    "name": "region_activism_score",
+                    "description": "Score based on environmental activism and related projects in the region"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 457,
+            "question": "Is there a relationship between design preference, willingness to pay a premium, region activism score, total of these three factors, and preference for organic cotton that influences the likelihood of selecting organic cotton clothing over synthetic alternatives?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "preference_for_organic_cotton",
+            "true_hypothesis": "Consumers with a region sustainability score, willingness to pay premium, and region activism score contributing to a total above 25 and below 40, and who prefer minimalist designs, are 30% likely to select clothing made from organic cotton over synthetic alternatives.",
+            "true_hypothesis_expr": "np.where(((65 - (df['region_sustainability_score'] * 0.2 + df['willingness_to_pay_premium'] * 0.3 + df['region_activism_score'] * 0.1)) >= 25) & ((65 - (df['region_sustainability_score'] * 0.2 + df['willingness_to_pay_premium'] * 0.3 + df['region_activism_score'] * 0.1)) <= 40) & (df['design_preference'] == 'minimalist'), 0.3, 0)",
+            "relevant_cols": [
+                "design_preference",
+                "willingness_to_pay_premium",
+                "region_activism_score",
+                "preference_for_organic_cotton",
+                "region_sustainability_score"
+            ]
+        }
+    ]
+}

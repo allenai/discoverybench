@@ -1,0 +1,76 @@
+{
+    "id": 0,
+    "domain": "puzzle-solving games",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to brain teasers, escape rooms, and puzzle-solving challenges.",
+            "columns": [
+                {
+                    "name": "mental_fitness_apps_hours",
+                    "description": "Number of hours spent per week on apps designed to enhance cognitive skills"
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the individual"
+                },
+                {
+                    "name": "profession",
+                    "description": "Type of profession of the individual"
+                },
+                {
+                    "name": "cognitive_game_percentage",
+                    "description": "Percentage of total leisure time spent on cognitive games"
+                },
+                {
+                    "name": "hours_spent_reading",
+                    "description": "Number of hours the individual spends reading intellectually stimulating books each day"
+                },
+                {
+                    "name": "puzzle_solved_quickly",
+                    "description": "Whether an individual frequently solved puzzles quicker than peers"
+                },
+                {
+                    "name": "hours_of_sleep",
+                    "description": "Average number of hours the individual sleeps per day"
+                },
+                {
+                    "name": "attention_span_score",
+                    "description": "Score that quantifies the ability to maintain focus on tasks involving cognitive activities"
+                },
+                {
+                    "name": "daily_brain_teasers_solved",
+                    "description": "Number of brain teasers solved per day"
+                },
+                {
+                    "name": "logic_puzzle_events_attended",
+                    "description": "Number of logic puzzle events attended per month"
+                },
+                {
+                    "name": "favorite_cuisine",
+                    "description": "Preferred cuisine of the individual"
+                },
+                {
+                    "name": "strategy_games_played",
+                    "description": "Number of strategy-based games the individual plays each week"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 523,
+            "question": "What is the relationship between the number of brain teasers solved daily, hours spent reading, and the frequency of playing strategy-based games?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "daily_brain_teasers_solved",
+            "true_hypothesis": "Daily brain teasers solved can be predicted by the time spent reading intellectually stimulating books cubed plus two times the number of strategy-based games played per week.",
+            "true_hypothesis_expr": "(df['hours_spent_reading']**3) + (2 * df['strategy_games_played'])",
+            "relevant_cols": [
+                "hours_spent_reading",
+                "strategy_games_played",
+                "daily_brain_teasers_solved"
+            ]
+        }
+    ]
+}

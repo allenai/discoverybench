@@ -1,0 +1,104 @@
+{
+    "id": 0,
+    "domain": "virtual concerts",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to online music performances, digital shows, and live streaming.",
+            "columns": [
+                {
+                    "name": "streaming_platform",
+                    "description": "The platform on which the virtual concert was hosted."
+                },
+                {
+                    "name": "concert_length_minutes",
+                    "description": "Total duration of the concert in minutes."
+                },
+                {
+                    "name": "guest_artist_present",
+                    "description": "Indicates whether guest artists performed during the concert."
+                },
+                {
+                    "name": "advertising_budget",
+                    "description": "The amount of money spent on advertising the virtual concert."
+                },
+                {
+                    "name": "concert_time_slot",
+                    "description": "The time slot of the concert, categorized as morning, afternoon, or evening."
+                },
+                {
+                    "name": "audience_reach",
+                    "description": "Estimated number of potential viewers for the concert from around the world."
+                },
+                {
+                    "name": "target_audience_diversity",
+                    "description": "A binary indicator where 1 represents high diversity of the target audience in terms of global distribution and 0 represents low diversity."
+                },
+                {
+                    "name": "day_of_week",
+                    "description": "The day of the week the virtual concert took place."
+                },
+                {
+                    "name": "streaming_platforms_count",
+                    "description": "Number of different digital platforms where the concert will be streamed."
+                },
+                {
+                    "name": "concert_genre",
+                    "description": "Musical genre of the concert."
+                },
+                {
+                    "name": "production_team_size",
+                    "description": "The number of individuals in the production team organizing the concert."
+                },
+                {
+                    "name": "exclusive_content_offered",
+                    "description": "Whether exclusive downloadable content was offered with the concert ticket."
+                },
+                {
+                    "name": "artist_age_group",
+                    "description": "The predominant age group of the artist's audience."
+                },
+                {
+                    "name": "artist_time_zone",
+                    "description": "Primary time zone of the featured artists."
+                },
+                {
+                    "name": "engagement_rate",
+                    "description": "The percentage of engaged users among the viewers."
+                },
+                {
+                    "name": "interactive_features_available",
+                    "description": "Indicates whether interactive features (e.g., live polling, request a song) were available during the concert"
+                },
+                {
+                    "name": "viewer_count",
+                    "description": "The number of unique viewers who actively participated in the concert."
+                },
+                {
+                    "name": "total_viewer_count",
+                    "description": "Total number of people who watched the concert online."
+                },
+                {
+                    "name": "interactive_elements",
+                    "description": "Indicates if the virtual concert incorporated interactive features such as live chats, polls, or viewer choices."
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 666,
+            "question": "Is there a relationship between the day of the week and the presence of interactive elements in virtual concerts scheduled for evening time slots?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "day_of_week",
+            "true_hypothesis": "Virtual concerts that feature interactive elements and occur primarily in the evenings are more likely to be scheduled on Fridays than on Wednesdays.",
+            "true_hypothesis_expr": "np.where((df['interactive_elements'] == True) & (df['concert_time_slot'] == 'evening'), 'Friday', 'Wednesday')",
+            "relevant_cols": [
+                "concert_time_slot",
+                "interactive_elements",
+                "day_of_week"
+            ]
+        }
+    ]
+}

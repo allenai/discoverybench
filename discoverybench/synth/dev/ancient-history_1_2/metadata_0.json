@@ -1,0 +1,128 @@
+{
+    "id": 0,
+    "domain": "ancient history",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to civilizations, archaeological discoveries, and ancient cultures.",
+            "columns": [
+                {
+                    "name": "type_of_government",
+                    "description": "The governing system of the civilization, represented as a categorical type"
+                },
+                {
+                    "name": "distinct_societal_roles",
+                    "description": "Number of distinct roles recognized in the society"
+                },
+                {
+                    "name": "religious_education",
+                    "description": "Availability of religious education within the civilization"
+                },
+                {
+                    "name": "centralized_religious_structure",
+                    "description": "Existence of a structured, unified religious hierarchy within the civilization"
+                },
+                {
+                    "name": "settled_regions_count",
+                    "description": "Number of distinct regions settled by the civilization"
+                },
+                {
+                    "name": "distinct_religious_beliefs",
+                    "description": "Number of distinct religious beliefs systems recognized"
+                },
+                {
+                    "name": "main_language",
+                    "description": "Primary language of the civilization"
+                },
+                {
+                    "name": "legal_religious_diversity",
+                    "description": "Legality of practicing multiple religions within the civilization"
+                },
+                {
+                    "name": "technological_advancement_level",
+                    "description": "A numeric representation of the civilization's technological level based on known artifacts and tools"
+                },
+                {
+                    "name": "number_of_libraries",
+                    "description": "Count of libraries within the civilization"
+                },
+                {
+                    "name": "num_unique_artifacts",
+                    "description": "The number of unique artifacts discovered from a civilization."
+                },
+                {
+                    "name": "temples_per_capita",
+                    "description": "Number of religious temples per 1000 citizens"
+                },
+                {
+                    "name": "architectural_styles_count",
+                    "description": "Number of distinct architectural styles in the civilization"
+                },
+                {
+                    "name": "mythological_beliefs",
+                    "description": "Level of mythology influence in civilization, measured as a cultural imprint"
+                },
+                {
+                    "name": "number_of_religious_universities",
+                    "description": "Count of universities focused on religious studies within the civilization"
+                },
+                {
+                    "name": "language_diversity_index",
+                    "description": "A numerical index representing the diversity of official languages spoken within the civilization"
+                },
+                {
+                    "name": "region_climate",
+                    "description": "Predominant climate of the region inhabited"
+                },
+                {
+                    "name": "trade_routes",
+                    "description": "Number of major trade routes used by the civilization"
+                },
+                {
+                    "name": "population_in_thousands",
+                    "description": "Population of the civilization in thousands"
+                },
+                {
+                    "name": "predicted_religious_ritual_types",
+                    "description": "Prediction of the types of religious rituals practiced within the civilization"
+                },
+                {
+                    "name": "technological_level",
+                    "description": "Represents the technological advancement level of a civilization on a scale from 1 to 10"
+                },
+                {
+                    "name": "agricultural_productivity",
+                    "description": "A numeric representation of the civilization's agricultural output per capita"
+                },
+                {
+                    "name": "trade_network_size",
+                    "description": "Represents the extent of the civilization's trade network, coded as the number of external connections"
+                },
+                {
+                    "name": "has_advanced_agriculture",
+                    "description": "Indicates whether the civilization has advanced agricultural practices, with 1 for yes and 0 for no."
+                },
+                {
+                    "name": "has_documented_legal_system",
+                    "description": "Indicates whether the civilization had a formally documented legal system"
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 132,
+            "question": "Is there a relationship between the presence of a documented legal system in an ancient civilization and the number of distinct societal roles present?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "distinct_societal_roles",
+            "true_hypothesis": "The number of distinct societal roles in an ancient civilization can be predicted by a linear combination of the civilization's technological advancement level and whether it had a documented legal system. Specifically, the number of distinct societal roles is calculated by multiplying the technological advancement level by 5 and adding 20 times the presence of a documented legal system.",
+            "true_hypothesis_expr": "5 * df['technological_advancement_level'] + 20 * df['has_documented_legal_system'].astype(int)",
+            "relevant_cols": [
+                "has_documented_legal_system",
+                "technological_advancement_level",
+                "distinct_societal_roles"
+            ]
+        }
+    ]
+}

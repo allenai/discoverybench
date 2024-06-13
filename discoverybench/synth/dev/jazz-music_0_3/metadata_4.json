@@ -1,0 +1,153 @@
+{
+    "id": 4,
+    "domain": "jazz music",
+    "datasets": [
+        {
+            "name": "data.csv",
+            "description": "Related to improvisation, swing rhythms, and iconic jazz musicians.",
+            "columns": [
+                {
+                    "name": "stage_presence_intensity",
+                    "description": "Quantified measure of the musician's energy and engagement during live performances."
+                },
+                {
+                    "name": "artist_international_collaborations",
+                    "description": "Count of distinct international artists the ensemble has collaborated with."
+                },
+                {
+                    "name": "collaboration_count_with_known_jazz_musicians",
+                    "description": "Number of collaborations with musicians recognized in the jazz genre."
+                },
+                {
+                    "name": "uses_swing_rhythms",
+                    "description": "Indicator whether swing rhythms are used exclusively by the musician."
+                },
+                {
+                    "name": "total_music_awards_won",
+                    "description": "Total number of music awards won by the ensemble throughout their career."
+                },
+                {
+                    "name": "marketing_reach",
+                    "description": "Binary indicator whether the venue's marketing is local or global."
+                },
+                {
+                    "name": "avg_performance_duration",
+                    "description": "Average duration of setlist in hours per performance."
+                },
+                {
+                    "name": "latest_album_commercial_success",
+                    "description": "Indicates whether the ensemble's latest album was commercially successful (sold over 10,000 copies)."
+                },
+                {
+                    "name": "years_playing_jazz",
+                    "description": "Number of years the musician has been actively playing jazz music."
+                },
+                {
+                    "name": "percentage_sold_out_shows",
+                    "description": "The percentage of shows that are fully sold out in a season per venue."
+                },
+                {
+                    "name": "international_song_percentage",
+                    "description": "Percentage of songs in the ensemble's setlist that are international."
+                },
+                {
+                    "name": "region_jazz_popularity",
+                    "description": "Popularity of jazz in the musician's primary active region on a scale from low to high."
+                },
+                {
+                    "name": "overseas_performance_count",
+                    "description": "Total number of performances the ensemble has held outside their home country."
+                },
+                {
+                    "name": "number_of_improvisations_per_week",
+                    "description": "Number of improvisations the musician engages in during performances per week."
+                },
+                {
+                    "name": "artist_fame_level",
+                    "description": "A scale representing the fame of the artist, ranging from local to international recognition."
+                },
+                {
+                    "name": "ticket_price",
+                    "description": "The standard ticket price for the venue."
+                },
+                {
+                    "name": "festival_participation_count",
+                    "description": "Total number of jazz festivals the ensemble has participated in."
+                },
+                {
+                    "name": "avg_audience_size",
+                    "description": "Average audience size per festival."
+                },
+                {
+                    "name": "social_media_following",
+                    "description": "The total count of followers of the venue’s official social media accounts."
+                },
+                {
+                    "name": "unique_song_releases_last_year",
+                    "description": "Number of unique songs released by the ensemble in the previous year."
+                },
+                {
+                    "name": "average_income_area",
+                    "description": "Average income of the area where the venue is located."
+                },
+                {
+                    "name": "jazz_genre_historicity",
+                    "description": "Score representing the historic and cultural significance of the artist's primary jazz genre, scaled from 1 to 5."
+                },
+                {
+                    "name": "years_of_experience",
+                    "description": "The number of years the musician has been performing jazz."
+                },
+                {
+                    "name": "weekend_performance",
+                    "description": "Whether the performance is held on a weekend."
+                },
+                {
+                    "name": "original_compositions",
+                    "description": "Binary value indicating whether the artist primarily performs original compositions (True) or covers (False)."
+                },
+                {
+                    "name": "genre_specific_events",
+                    "description": "Number of genre-specific events (e.g., jazz) the venue hosts annually."
+                },
+                {
+                    "name": "music_style_complexity",
+                    "description": "Count of distinct jazz genres performed by the ensemble."
+                },
+                {
+                    "name": "performance_complexity",
+                    "description": "A quantifiable measure of the improvisational and technical complexity of the artist's performance, scaled from 1 to 10."
+                },
+                {
+                    "name": "experience_to_improvisation_ratio",
+                    "description": "Ratio of years of experience to the number of improvisations per week."
+                },
+                {
+                    "name": "total_jazz_albums",
+                    "description": "Total number of albums released by the musician that primarily feature jazz music."
+                },
+                {
+                    "name": "venue_type",
+                    "description": "The type of venue, categorizing its primary use and setting."
+                }
+            ]
+        }
+    ],
+    "queries": [
+        {
+            "qid": 989,
+            "question": "What relationship, if any, exists between the weekend performance schedule of venues and the ticket prices they charge?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "ticket_price",
+            "true_hypothesis": "Venues located in areas with higher average income levels and hosting performances on weekends attract larger crowds and charge higher ticket prices. Additionally, venues that frequently host genre-specific events like jazz festivals may charge more due to the specialized nature of the event.",
+            "true_hypothesis_expr": "df['average_income_area'] / 1000 + 50 * df['weekend_performance'] + 10 * df['genre_specific_events']",
+            "relevant_cols": [
+                "average_income_area",
+                "weekend_performance",
+                "genre_specific_events",
+                "ticket_price"
+            ]
+        }
+    ]
+}
