@@ -1,12 +1,12 @@
 {
     "id": 0,
     "domain": "meta science",
-    "workflow_tags": "data selection, meta regression, summary statistics, feature engineering,data standardization",
+    "workflow_tags": "data selection, meta regression, summary statistics, feature engineering, data standardization",
+    "domain_knowledge": "1. When working with multiple studies that are original and replicated, a preprocess & joining step is needed to gather the data required for metaregression analysis. 2. Combining such study data has to account for study & author names and may need multiple heuristics for the ideal join depending on the line of inquiry. 3. An extra step may also be required to handle duplicate values & missing pairs.",
     "datasets": [
         {
             "name": "meta-regression_joined_data_heterogeneity_in_replication_projects.csv",
             "description": "Data created by merging data.csv and RProjects.csv",
-            "domain_knowledge": "",
             "columns": {
                 "raw": [
                     {
