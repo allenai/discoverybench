@@ -11,7 +11,7 @@ Dataset and code for ["DiscoveryBench: Towards Data-Driven Discovery with Large 
 
 ---
 
-## 👋 Overview
+## 🗂️ Overview
 
 DiscoveryBench is designed to systematically assess current model capabilities in data-driven discovery tasks and provide a useful resource for improving them. Each DiscoveryBench task consists of a goal and dataset(s). Solving the task requires both statistical analysis and semantic reasoning. A faceted evaluation allows open-ended final answers to be rigorously evaluated.
 
@@ -76,7 +76,7 @@ Options:
 
 We welcome contributions to our repository of discovery agents. In case of any issues for the agents, evaluation, or any other bug, please follow our issue templates. We would try to respond to as soon as possible. 
 
-Reach out to us at: [Bodhisattwa Prasad Majumder]([url](https://www.majumderb.com/)) and [Harshit Surana]([url](https://harshitsurana.com/)) (Email: {bodhi, harshits}@allenai.org).
+Reach out to us at: [Bodhisattwa Prasad Majumder](https://www.majumderb.com) and [Harshit Surana]((https://harshitsurana.com) (Email: {bodhi, harshits}@allenai.org).
 
 
 ## ✍️ Citation
