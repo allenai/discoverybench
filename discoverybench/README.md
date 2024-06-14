@@ -1,3 +1,8 @@
+## Naming Convention
+
+Each directory within the train/dev/test splits represents a unique **task dataset** constructed by varying the origin and target levels within the semantic tree. Specifically, we use the following naming convention: `{hyphenated-domain-name}_{start_height}_{target_depth}`,
+where `start_height` means the height (from leaves) of the observed nodes in the semantic tree, and `target_depth` means the depth (from root) of the target variable of the query hypothesis.
+
 ## Metadata Structure
 
 The metadata provides info for understanding the datasets. Here's an overview of the structure:
