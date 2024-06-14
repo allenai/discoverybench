@@ -58,7 +58,6 @@
             }
         }
     ],
-    "intermediate": [],
     "hypotheses": {
         "main": [
             {
@@ -68,8 +67,7 @@
                 "expr_ind": "",
                 "text": "Increased ease of immigration has no significant effect on the share of native employment"
             }
-        ],
-        "intermediate": []
+        ]
     },
     "queries": [
         [

@@ -257,12 +257,10 @@
             }
         }
     ],
-    "intermediate": [],
     "hypotheses": {
         "main": [
             {}
-        ],
-        "intermediate": []
+        ]
     },
     "queries": [
         [

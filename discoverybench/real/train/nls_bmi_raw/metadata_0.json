@@ -319,7 +319,6 @@
             }
         }
     ],
-    "intermediate": [],
     "hypotheses": {
         "main": [
             {
@@ -329,8 +328,7 @@
                 "expr_ind": "",
                 "text": "Higher time preference associated with higher BMI for 1989 data."
             }
-        ],
-        "intermediate": []
+        ]
     },
     "queries": [
         [

@@ -319,7 +319,6 @@
             }
         }
     ],
-    "intermediate": [],
     "hypotheses": {
         "main": [
             {
@@ -329,8 +328,7 @@
                 "expr_ind": "",
                 "text": "Time preference positively associated with obesity in Black men."
             }
-        ],
-        "intermediate": []
+        ]
     },
     "queries": [
         [

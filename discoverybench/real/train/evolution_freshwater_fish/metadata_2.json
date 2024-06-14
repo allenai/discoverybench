@@ -119,7 +119,6 @@
             }
         }
     ],
-    "intermediate": [],
     "hypotheses": {
         "main": [
             {
@@ -129,8 +128,7 @@
                 "expr_ind": "",
                 "text": "The rate of body elongation evolution has no significant association with speciation rates."
             }
-        ],
-        "intermediate": []
+        ]
     },
     "queries": [
         [

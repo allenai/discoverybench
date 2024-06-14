@@ -58,7 +58,6 @@
             }
         }
     ],
-    "intermediate": [],
     "hypotheses": {
         "main": [
             {
@@ -68,8 +67,7 @@
                 "expr_ind": "",
                 "text": "Per unit increased ease of immigration reduces 0.1059 unit of the share of offshore employment"
             }
-        ],
-        "intermediate": []
+        ]
     },
     "queries": [
         [
