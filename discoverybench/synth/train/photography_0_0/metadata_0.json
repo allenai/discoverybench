@@ -1,160 +1,160 @@
 {
-  "id": 0,
-  "domain": "photography",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to capturing images, equipment, and techniques.",
-      "columns": [
+    "id": 0,
+    "domain": "photography",
+    "datasets": [
         {
-          "name": "advanced_technique_usage",
-          "description": "Indicates advanced technique usage combining HDR and manual white balance"
-        },
-        {
-          "name": "weekly_editing_hours",
-          "description": "Average number of hours a photographer spends on editing photos per week"
-        },
-        {
-          "name": "prefers_manual_settings",
-          "description": "Indicates whether the photographer prefers to use manual settings over automatic."
-        },
-        {
-          "name": "frequent_photo_editing",
-          "description": "Indicates whether the photographer frequently edits photos (more than 3 times a week)."
-        },
-        {
-          "name": "active_in_online_forums",
-          "description": "Whether the photographer is active in online photography forums"
-        },
-        {
-          "name": "technique_HDR",
-          "description": "Indicates whether the photographer uses High Dynamic Range techniques"
-        },
-        {
-          "name": "percentage_of_studio_work",
-          "description": "The percentage of total photography work that is done in a studio setting"
-        },
-        {
-          "name": "number_of_outdoor_shoots",
-          "description": "The total number of outdoor photography sessions conducted by the photographer per month"
-        },
-        {
-          "name": "awards_won",
-          "description": "The number of photography awards the photographer has won"
-        },
-        {
-          "name": "posts_on_social_media",
-          "description": "Indicates whether the photographer posts their work on social media"
-        },
-        {
-          "name": "social_media_popularity_percentile",
-          "description": "Indicates the percentile of the photographer's photos in terms of likes compared to others"
-        },
-        {
-          "name": "camera_weight_grams",
-          "description": "The weight of the primary camera used by the photographer in grams"
-        },
-        {
-          "name": "specialized_lenses_count",
-          "description": "Number of specialized lenses a photographer owns"
-        },
-        {
-          "name": "evening_shoots_count",
-          "description": "Number of photo shoots conducted in the evening hours"
-        },
-        {
-          "name": "competitions_participated",
-          "description": "Number of photography competitions a photographer participates in per year"
-        },
-        {
-          "name": "frequency_long_exposure",
-          "description": "The number of times the photographer uses long exposure techniques in a month."
-        },
-        {
-          "name": "specializes_in_wildlife",
-          "description": "Indicates if the photographer specializes in wildlife photography"
-        },
-        {
-          "name": "camera_resolution_megapixels",
-          "description": "The maximum image resolution of the photographer's primary camera, measured in megapixels"
-        },
-        {
-          "name": "equipment_budget",
-          "description": "Annual budget of the photographer for purchasing photography equipment in thousands of dollars"
-        },
-        {
-          "name": "post_processing_skill",
-          "description": "Rating of the photographer's skill in post-processing images on a scale from 1 to 10"
-        },
-        {
-          "name": "investment_in_equipment",
-          "description": "The total amount of money the photographer spent on photography equipment in the last year."
-        },
-        {
-          "name": "workshops_attended",
-          "description": "Number of photography related workshops the photographer attends annually"
-        },
-        {
-          "name": "photography_focus",
-          "description": "Primary focus of the photographer, categorized by subject matter"
-        },
-        {
-          "name": "is_professional",
-          "description": "Indicates if the photographer is a professional"
-        },
-        {
-          "name": "photography_experience_years",
-          "description": "The number of years of experience the photographer has"
-        },
-        {
-          "name": "hours_spent_photography_weekly",
-          "description": "Number of hours spent on photography per week"
-        },
-        {
-          "name": "sponsored_shoots",
-          "description": "Binary indicator if the photographer has participated in shoots sponsored by major brands"
-        },
-        {
-          "name": "client_rating",
-          "description": "Average client rating for the photographer on a scale of 1.0 to 5.0"
-        },
-        {
-          "name": "primary_shooting_condition",
-          "description": "Primary lighting condition the photographer usually shoots in"
+            "name": "data.csv",
+            "description": "Related to capturing images, equipment, and techniques.",
+            "columns": [
+                {
+                    "name": "advanced_technique_usage",
+                    "description": "Indicates advanced technique usage combining HDR and manual white balance"
+                },
+                {
+                    "name": "weekly_editing_hours",
+                    "description": "Average number of hours a photographer spends on editing photos per week"
+                },
+                {
+                    "name": "prefers_manual_settings",
+                    "description": "Indicates whether the photographer prefers to use manual settings over automatic."
+                },
+                {
+                    "name": "frequent_photo_editing",
+                    "description": "Indicates whether the photographer frequently edits photos (more than 3 times a week)."
+                },
+                {
+                    "name": "active_in_online_forums",
+                    "description": "Whether the photographer is active in online photography forums"
+                },
+                {
+                    "name": "technique_HDR",
+                    "description": "Indicates whether the photographer uses High Dynamic Range techniques"
+                },
+                {
+                    "name": "percentage_of_studio_work",
+                    "description": "The percentage of total photography work that is done in a studio setting"
+                },
+                {
+                    "name": "number_of_outdoor_shoots",
+                    "description": "The total number of outdoor photography sessions conducted by the photographer per month"
+                },
+                {
+                    "name": "awards_won",
+                    "description": "The number of photography awards the photographer has won"
+                },
+                {
+                    "name": "posts_on_social_media",
+                    "description": "Indicates whether the photographer posts their work on social media"
+                },
+                {
+                    "name": "social_media_popularity_percentile",
+                    "description": "Indicates the percentile of the photographer's photos in terms of likes compared to others"
+                },
+                {
+                    "name": "camera_weight_grams",
+                    "description": "The weight of the primary camera used by the photographer in grams"
+                },
+                {
+                    "name": "specialized_lenses_count",
+                    "description": "Number of specialized lenses a photographer owns"
+                },
+                {
+                    "name": "evening_shoots_count",
+                    "description": "Number of photo shoots conducted in the evening hours"
+                },
+                {
+                    "name": "competitions_participated",
+                    "description": "Number of photography competitions a photographer participates in per year"
+                },
+                {
+                    "name": "frequency_long_exposure",
+                    "description": "The number of times the photographer uses long exposure techniques in a month."
+                },
+                {
+                    "name": "specializes_in_wildlife",
+                    "description": "Indicates if the photographer specializes in wildlife photography"
+                },
+                {
+                    "name": "camera_resolution_megapixels",
+                    "description": "The maximum image resolution of the photographer's primary camera, measured in megapixels"
+                },
+                {
+                    "name": "equipment_budget",
+                    "description": "Annual budget of the photographer for purchasing photography equipment in thousands of dollars"
+                },
+                {
+                    "name": "post_processing_skill",
+                    "description": "Rating of the photographer's skill in post-processing images on a scale from 1 to 10"
+                },
+                {
+                    "name": "investment_in_equipment",
+                    "description": "The total amount of money the photographer spent on photography equipment in the last year."
+                },
+                {
+                    "name": "workshops_attended",
+                    "description": "Number of photography related workshops the photographer attends annually"
+                },
+                {
+                    "name": "photography_focus",
+                    "description": "Primary focus of the photographer, categorized by subject matter"
+                },
+                {
+                    "name": "is_professional",
+                    "description": "Indicates if the photographer is a professional"
+                },
+                {
+                    "name": "photography_experience_years",
+                    "description": "The number of years of experience the photographer has"
+                },
+                {
+                    "name": "hours_spent_photography_weekly",
+                    "description": "Number of hours spent on photography per week"
+                },
+                {
+                    "name": "sponsored_shoots",
+                    "description": "Binary indicator if the photographer has participated in shoots sponsored by major brands"
+                },
+                {
+                    "name": "client_rating",
+                    "description": "Average client rating for the photographer on a scale of 1.0 to 5.0"
+                },
+                {
+                    "name": "primary_shooting_condition",
+                    "description": "Primary lighting condition the photographer usually shoots in"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 570,
-      "question": "What is the relationship between evening shoots count, client rating, post-processing skill, and advanced technique usage in wildlife photographers?",
-      "question_type": "general",
-      "difficulty": 4,
-      "target_col": "advanced_technique_usage",
-      
-      
-      "relevant_cols": [
-        "technique_HDR",
-        "primary_shooting_condition",
-        "competitions_participated",
-        "weekly_editing_hours",
-        "active_in_online_forums",
-        "camera_weight_grams",
-        "specializes_in_wildlife",
-        "camera_resolution_megapixels",
-        "is_professional",
-        "post_processing_skill",
-        "client_rating",
-        "evening_shoots_count",
-        "awards_won",
-        "sponsored_shoots",
-        "investment_in_equipment",
-        "frequent_photo_editing",
-        "prefers_manual_settings",
-        "frequency_long_exposure",
-        "advanced_technique_usage"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 570,
+            "question": "What is the relationship between evening shoots count, client rating, post-processing skill, and advanced technique usage in wildlife photographers?",
+            "question_type": "general",
+            "difficulty": 4,
+            "target_col": "advanced_technique_usage",
+            "true_hypothesis": "Photographers who meet the specified low light shooting and camera weight conditions, and have a wildlife photography frequency raised to the power of 3, multiplied by 3, added to a combination of 2 times sponsored shoots and 20 times the square of awards won, subtracting 15 times awards won and adding 160, less a combination involving evening shoots count, client rating, and post-processing skill, all raised to the power of 2, square divided by 10 greater than 20, are more likely to have advanced technique usage.",
+            "true_hypothesis_expr": "np.where(((np.where(df['primary_shooting_condition'] == 'low_light', 25, 15) + (((np.where(df['is_professional'] & df['specializes_in_wildlife'], df['camera_resolution_megapixels'] * 3, 0)**3 + 2*(250 * df['sponsored_shoots'] + 20 * df['awards_won']**2 - 15 * df['awards_won'] + 160) - (2 * df['evening_shoots_count'] + df['client_rating'] * df['post_processing_skill']**2)**2)**2) + 5 * np.where((df['competitions_participated'] > 5) & (df['weekly_editing_hours'] > 10) & df['active_in_online_forums'], True, False).astype(int))**2) / 10) > 20) & np.where((df['camera_weight_grams'] < 500) & ((np.where(df['is_professional'] & df['specializes_in_wildlife'], df['camera_resolution_megapixels'] * 3, 0)**3 + 2*(250 * df['sponsored_shoots'] + 20 * df['awards_won']**2 - 15 * df['awards_won'] + 160) - (2 * df['evening_shoots_count'] + df['client_rating'] * df['post_processing_skill']**2)**2) > (np.where(df['is_professional'] & df['specializes_in_wildlife'], df['camera_resolution_megapixels'] * 3, 0)**3 + 2*(250 * df['sponsored_shoots'] + 20 * np.where(df['prefers_manual_settings'], df['frequency_long_exposure'] * 3.3, df['frequency_long_exposure'] * 1.5)**2 - 15 * np.where(df['prefers_manual_settings'], df['frequency_long_exposure'] * 3.3, df['frequency_long_exposure'] * 1.5) + 160) - (2 * df['evening_shoots_count'] + df['client_rating'] * df['post_processing_skill']**2)**2).quantile(0.5)), True, False), 0.5*(df['technique_HDR'].astype(float) + np.where(((df['investment_in_equipment'] // 500 + 5 * df['frequent_photo_editing'].astype(int) > 5) & (np.where(df['prefers_manual_settings'], df['frequency_long_exposure'] * 3.3, df['frequency_long_exposure'] * 1.5) >= 50)), True, False)), 0)",
+            "relevant_cols": [
+                "technique_HDR",
+                "primary_shooting_condition",
+                "competitions_participated",
+                "weekly_editing_hours",
+                "active_in_online_forums",
+                "camera_weight_grams",
+                "specializes_in_wildlife",
+                "camera_resolution_megapixels",
+                "is_professional",
+                "post_processing_skill",
+                "client_rating",
+                "evening_shoots_count",
+                "awards_won",
+                "sponsored_shoots",
+                "investment_in_equipment",
+                "frequent_photo_editing",
+                "prefers_manual_settings",
+                "frequency_long_exposure",
+                "advanced_technique_usage"
+            ]
+        }
+    ]
 }

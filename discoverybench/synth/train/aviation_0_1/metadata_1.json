@@ -1,125 +1,125 @@
 {
-  "id": 1,
-  "domain": "aviation",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to aircraft, pilots, and aviation history.",
-      "columns": [
+    "id": 1,
+    "domain": "aviation",
+    "datasets": [
         {
-          "name": "flight_hours_per_year_of_experience",
-          "description": "Total flight hours divided by the years of flying experience"
-        },
-        {
-          "name": "pilot_id",
-          "description": "Unique identifier for each pilot"
-        },
-        {
-          "name": "years_with_current_airline",
-          "description": "Number of years the pilot has been with their current airline"
-        },
-        {
-          "name": "employs_active_breaks",
-          "description": "Indicator if the pilot intentionally takes breaks that involve physical activity during gaming"
-        },
-        {
-          "name": "weekly_gaming_hours",
-          "description": "Number of hours a pilot spends on video gaming weekly"
-        },
-        {
-          "name": "advanced_navigation_system_training",
-          "description": "Whether the pilot has undergone specific training for advanced navigation systems."
-        },
-        {
-          "name": "international_flight_experience",
-          "description": "Indicates whether the pilot has experience flying internationally across different time zones."
-        },
-        {
-          "name": "advanced_aerodynamics_training_hours",
-          "description": "Total number of hours a pilot has spent in advanced aerodynamics training"
-        },
-        {
-          "name": "social_media_followers",
-          "description": "Number of followers a pilot has on aviation-related social media platforms"
-        },
-        {
-          "name": "education_level",
-          "description": "Highest academic qualification of the pilot"
-        },
-        {
-          "name": "airline_fleet_technology_level",
-          "description": "Technological advancement level of airline's fleet"
-        },
-        {
-          "name": "international_flights_frequency",
-          "description": "Number of international flights a pilot flies on average per year"
-        },
-        {
-          "name": "aviation_incident_awareness_score",
-          "description": "A score representing a pilot's awareness and understanding of previous aviation incidents, higher being better knowledgeable."
-        },
-        {
-          "name": "average_flight_altitude",
-          "description": "The average altitude at which the pilot operates, measured in feet."
-        },
-        {
-          "name": "international_flight_hours",
-          "description": "Total hours the pilot has flown on international routes"
-        },
-        {
-          "name": "age",
-          "description": "Age of the pilot"
-        },
-        {
-          "name": "years_of_flying_experience",
-          "description": "Total years of flying experience for the pilot"
-        },
-        {
-          "name": "predicted_type_of_aircraft_frequently_flew",
-          "description": "Likely type of aircraft frequently flown by the pilot based on certain criteria"
-        },
-        {
-          "name": "stress_management_type",
-          "description": "Type of stress management technique used by the pilot"
-        },
-        {
-          "name": "aircraft_type_size",
-          "description": "Size category of aircraft typically flown by the pilot"
-        },
-        {
-          "name": "flies_multi_engine_aircraft",
-          "description": "Whether the pilot flies multi-engine aircraft regularly"
-        },
-        {
-          "name": "mental_calculation_frequency",
-          "description": "Frequency of engaging in activities that require mental calculation per week"
-        },
-        {
-          "name": "frequency_of_simulation_training",
-          "description": "Number of simulation training sessions attended by the pilot per year"
+            "name": "data.csv",
+            "description": "Related to aircraft, pilots, and aviation history.",
+            "columns": [
+                {
+                    "name": "flight_hours_per_year_of_experience",
+                    "description": "Total flight hours divided by the years of flying experience"
+                },
+                {
+                    "name": "pilot_id",
+                    "description": "Unique identifier for each pilot"
+                },
+                {
+                    "name": "years_with_current_airline",
+                    "description": "Number of years the pilot has been with their current airline"
+                },
+                {
+                    "name": "employs_active_breaks",
+                    "description": "Indicator if the pilot intentionally takes breaks that involve physical activity during gaming"
+                },
+                {
+                    "name": "weekly_gaming_hours",
+                    "description": "Number of hours a pilot spends on video gaming weekly"
+                },
+                {
+                    "name": "advanced_navigation_system_training",
+                    "description": "Whether the pilot has undergone specific training for advanced navigation systems."
+                },
+                {
+                    "name": "international_flight_experience",
+                    "description": "Indicates whether the pilot has experience flying internationally across different time zones."
+                },
+                {
+                    "name": "advanced_aerodynamics_training_hours",
+                    "description": "Total number of hours a pilot has spent in advanced aerodynamics training"
+                },
+                {
+                    "name": "social_media_followers",
+                    "description": "Number of followers a pilot has on aviation-related social media platforms"
+                },
+                {
+                    "name": "education_level",
+                    "description": "Highest academic qualification of the pilot"
+                },
+                {
+                    "name": "airline_fleet_technology_level",
+                    "description": "Technological advancement level of airline's fleet"
+                },
+                {
+                    "name": "international_flights_frequency",
+                    "description": "Number of international flights a pilot flies on average per year"
+                },
+                {
+                    "name": "aviation_incident_awareness_score",
+                    "description": "A score representing a pilot's awareness and understanding of previous aviation incidents, higher being better knowledgeable."
+                },
+                {
+                    "name": "average_flight_altitude",
+                    "description": "The average altitude at which the pilot operates, measured in feet."
+                },
+                {
+                    "name": "international_flight_hours",
+                    "description": "Total hours the pilot has flown on international routes"
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the pilot"
+                },
+                {
+                    "name": "years_of_flying_experience",
+                    "description": "Total years of flying experience for the pilot"
+                },
+                {
+                    "name": "predicted_type_of_aircraft_frequently_flew",
+                    "description": "Likely type of aircraft frequently flown by the pilot based on certain criteria"
+                },
+                {
+                    "name": "stress_management_type",
+                    "description": "Type of stress management technique used by the pilot"
+                },
+                {
+                    "name": "aircraft_type_size",
+                    "description": "Size category of aircraft typically flown by the pilot"
+                },
+                {
+                    "name": "flies_multi_engine_aircraft",
+                    "description": "Whether the pilot flies multi-engine aircraft regularly"
+                },
+                {
+                    "name": "mental_calculation_frequency",
+                    "description": "Frequency of engaging in activities that require mental calculation per week"
+                },
+                {
+                    "name": "frequency_of_simulation_training",
+                    "description": "Number of simulation training sessions attended by the pilot per year"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 919,
-      "question": "What is the relationship between education level and years of flying experience, considering factors such as international flights frequency, airline fleet technology level, and years with the current airline?",
-      "question_type": "general",
-      "difficulty": 3,
-      "target_col": "years_of_flying_experience",
-      
-      
-      "relevant_cols": [
-        "education_level",
-        "international_flights_frequency",
-        "years_with_current_airline",
-        "airline_fleet_technology_level",
-        "international_flight_hours",
-        "aircraft_type_size",
-        "frequency_of_simulation_training",
-        "years_of_flying_experience"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 919,
+            "question": "What is the relationship between education level and years of flying experience, considering factors such as international flights frequency, airline fleet technology level, and years with the current airline?",
+            "question_type": "general",
+            "difficulty": 3,
+            "target_col": "years_of_flying_experience",
+            "true_hypothesis": "Pilots with a PhD in education level have 20 years of flying experience, pilots with a Master's degree have 15 years, pilots with a Bachelor's degree have 10 years, and pilots with an Associate degree have 5 years. This experience is further adjusted based on their international flights frequency, advanced navigation training, previous navigation errors, and a base value of 10. Additionally, pilots with more than 5 years with their current airline, high airline fleet technology level, and extensive international flight hours adjusted for aircraft type experience, have their experience adjusted based on certain criteria.",
+            "true_hypothesis_expr": "np.where(df['education_level'] == 'PhD', 20, np.where(df['education_level'] == 'Master', 15, np.where(df['education_level'] == 'Bachelor', 10, np.where(df['education_level'] == 'Associate', 5, 0)))) + df['international_flights_frequency']**0.5 + 10*np.where((df['years_with_current_airline'] > 5) & (df['airline_fleet_technology_level'] == 'High') & (np.where(df['aircraft_type_size']=='Large', df['international_flight_hours'] // 1000 - df['frequency_of_simulation_training'], df['international_flight_hours'] // 1500 - df['frequency_of_simulation_training']) > 5), True, False).astype(int)",
+            "relevant_cols": [
+                "education_level",
+                "international_flights_frequency",
+                "years_with_current_airline",
+                "airline_fleet_technology_level",
+                "international_flight_hours",
+                "aircraft_type_size",
+                "frequency_of_simulation_training",
+                "years_of_flying_experience"
+            ]
+        }
+    ]
 }

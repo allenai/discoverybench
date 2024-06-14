@@ -1,161 +1,161 @@
 {
-  "id": 0,
-  "domain": "robotic explorers",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to Mars rovers, space probes, and autonomous exploration vehicles.",
-      "columns": [
+    "id": 0,
+    "domain": "robotic explorers",
+    "datasets": [
         {
-          "name": "system_update_frequency",
-          "description": "Number of critical system updates received per year"
-        },
-        {
-          "name": "optical_imaging_resolution",
-          "description": "Resolution of the optical imaging system on the vehicle, measured in megapixels"
-        },
-        {
-          "name": "communication_success_ratio",
-          "description": "Ratio of successful communications sessions to total communication attempts with mission control"
-        },
-        {
-          "name": "communication_delay_tolerance",
-          "description": "Vehicle's ability to operate effectively despite communication delays with Earth-based control centers, important for autonomous decision-making."
-        },
-        {
-          "name": "communication_attempts",
-          "description": "Number of attempts made to communicate with the control station per day."
-        },
-        {
-          "name": "mission_duration_days",
-          "description": "Total duration of the mission expected or experienced, measured in days."
-        },
-        {
-          "name": "number_of_sensors",
-          "description": "Total number of sensors equipped on the vehicle"
-        },
-        {
-          "name": "task_complexity_score",
-          "description": "A numerical score that rates the complexity of tasks the vehicle can perform on a scale from 1 to 10."
-        },
-        {
-          "name": "power_fluctuations",
-          "description": "Count of significant power fluctuations per week detected in the vehicle."
-        },
-        {
-          "name": "communication_bandwidth",
-          "description": "The maximum data transmission capacity of the vehicle's communication system, measured in Mbps, which is crucial for high-speed data transmission to and from Earth."
-        },
-        {
-          "name": "sensor_technology_types",
-          "description": "Counts the types of sensor technologies equipped on the vehicle, indicating its capability to handle diverse environmental data."
-        },
-        {
-          "name": "average_daily_temperature",
-          "description": "Average daily temperature in Celsius degrees at the location of the vehicle."
-        },
-        {
-          "name": "historical_findings",
-          "description": "Binary indication if historical findings were previously reported in the current operational region of the vehicle"
-        },
-        {
-          "name": "max_daily_wind_speed",
-          "description": "Maximum wind speed recorded in kilometers per hour on a given day at the vehicle's location."
-        },
-        {
-          "name": "remote_control_capabilities",
-          "description": "Indicates the presence of remote control capabilities enabling distant manipulation and interventions."
-        },
-        {
-          "name": "AI_decision_making_capabilities",
-          "description": "Indicates whether the vehicle is equipped with artificial intelligence capabilities to make decisions independently."
-        },
-        {
-          "name": "vehicle_id",
-          "description": "Unique identifier for each exploration vehicle"
-        },
-        {
-          "name": "terrain_complexity",
-          "description": "A categorical ranking of the surveyed terrain's complexity, affecting navigation and survey capabilities."
-        },
-        {
-          "name": "seasonal_temperature_variation",
-          "description": "Categorical indication of the level of temperature changes observed over seasons"
-        },
-        {
-          "name": "has_autonomous_navigation",
-          "description": "Indicates whether the vehicle is capable of fully autonomous navigation without immediate Earth-based intervention."
-        },
-        {
-          "name": "ai_decision_making",
-          "description": "Whether the vehicle uses AI-based decision-making algorithms"
-        },
-        {
-          "name": "highly_successful_discovery",
-          "description": "Indicates if the exploration vehicle is classified as a highly successful discovery based on certain criteria."
-        },
-        {
-          "name": "robotic_maintenance_sessions",
-          "description": "Number of maintenance and repair sessions performed on-site by robotic systems."
-        },
-        {
-          "name": "energy_storage_capacity",
-          "description": "Represents the total energy storage capacity of the vehicle, which is crucial for supporting high-performance computing over long missions."
-        },
-        {
-          "name": "years_since_last_survey",
-          "description": "Number of years since the last survey was conducted in the area by any exploration vehicle."
-        },
-        {
-          "name": "operation_time_years",
-          "description": "Number of years the vehicle has been operational on Mars"
-        },
-        {
-          "name": "new_geographical_features_found",
-          "description": "Number of new geographical features discovered by the vehicle"
-        },
-        {
-          "name": "communication_system_frequency",
-          "description": "Operational frequency of the vehicle's communication system, measured in GHz."
-        },
-        {
-          "name": "past_turbulent_conditions",
-          "description": "Indicates if the vehicle has historically reported turbulent conditions, which include high wind speeds or extreme temperatures."
-        },
-        {
-          "name": "terrain_type",
-          "description": "Type of terrain where the vehicle is exploring"
-        },
-        {
-          "name": "mission_duration",
-          "description": "Specifies the planned operational timeline of the vehicle in days."
-        },
-        {
-          "name": "computational_power_rating",
-          "description": "Rating of the vehicle's onboard computational hardware, indicating its capability to process complex algorithms."
-        },
-        {
-          "name": "habitat_markers_found",
-          "description": "Count of biological or geological markers identified by the explorer that indicate past or potential habitats."
+            "name": "data.csv",
+            "description": "Related to Mars rovers, space probes, and autonomous exploration vehicles.",
+            "columns": [
+                {
+                    "name": "system_update_frequency",
+                    "description": "Number of critical system updates received per year"
+                },
+                {
+                    "name": "optical_imaging_resolution",
+                    "description": "Resolution of the optical imaging system on the vehicle, measured in megapixels"
+                },
+                {
+                    "name": "communication_success_ratio",
+                    "description": "Ratio of successful communications sessions to total communication attempts with mission control"
+                },
+                {
+                    "name": "communication_delay_tolerance",
+                    "description": "Vehicle's ability to operate effectively despite communication delays with Earth-based control centers, important for autonomous decision-making."
+                },
+                {
+                    "name": "communication_attempts",
+                    "description": "Number of attempts made to communicate with the control station per day."
+                },
+                {
+                    "name": "mission_duration_days",
+                    "description": "Total duration of the mission expected or experienced, measured in days."
+                },
+                {
+                    "name": "number_of_sensors",
+                    "description": "Total number of sensors equipped on the vehicle"
+                },
+                {
+                    "name": "task_complexity_score",
+                    "description": "A numerical score that rates the complexity of tasks the vehicle can perform on a scale from 1 to 10."
+                },
+                {
+                    "name": "power_fluctuations",
+                    "description": "Count of significant power fluctuations per week detected in the vehicle."
+                },
+                {
+                    "name": "communication_bandwidth",
+                    "description": "The maximum data transmission capacity of the vehicle's communication system, measured in Mbps, which is crucial for high-speed data transmission to and from Earth."
+                },
+                {
+                    "name": "sensor_technology_types",
+                    "description": "Counts the types of sensor technologies equipped on the vehicle, indicating its capability to handle diverse environmental data."
+                },
+                {
+                    "name": "average_daily_temperature",
+                    "description": "Average daily temperature in Celsius degrees at the location of the vehicle."
+                },
+                {
+                    "name": "historical_findings",
+                    "description": "Binary indication if historical findings were previously reported in the current operational region of the vehicle"
+                },
+                {
+                    "name": "max_daily_wind_speed",
+                    "description": "Maximum wind speed recorded in kilometers per hour on a given day at the vehicle's location."
+                },
+                {
+                    "name": "remote_control_capabilities",
+                    "description": "Indicates the presence of remote control capabilities enabling distant manipulation and interventions."
+                },
+                {
+                    "name": "AI_decision_making_capabilities",
+                    "description": "Indicates whether the vehicle is equipped with artificial intelligence capabilities to make decisions independently."
+                },
+                {
+                    "name": "vehicle_id",
+                    "description": "Unique identifier for each exploration vehicle"
+                },
+                {
+                    "name": "terrain_complexity",
+                    "description": "A categorical ranking of the surveyed terrain's complexity, affecting navigation and survey capabilities."
+                },
+                {
+                    "name": "seasonal_temperature_variation",
+                    "description": "Categorical indication of the level of temperature changes observed over seasons"
+                },
+                {
+                    "name": "has_autonomous_navigation",
+                    "description": "Indicates whether the vehicle is capable of fully autonomous navigation without immediate Earth-based intervention."
+                },
+                {
+                    "name": "ai_decision_making",
+                    "description": "Whether the vehicle uses AI-based decision-making algorithms"
+                },
+                {
+                    "name": "highly_successful_discovery",
+                    "description": "Indicates if the exploration vehicle is classified as a highly successful discovery based on certain criteria."
+                },
+                {
+                    "name": "robotic_maintenance_sessions",
+                    "description": "Number of maintenance and repair sessions performed on-site by robotic systems."
+                },
+                {
+                    "name": "energy_storage_capacity",
+                    "description": "Represents the total energy storage capacity of the vehicle, which is crucial for supporting high-performance computing over long missions."
+                },
+                {
+                    "name": "years_since_last_survey",
+                    "description": "Number of years since the last survey was conducted in the area by any exploration vehicle."
+                },
+                {
+                    "name": "operation_time_years",
+                    "description": "Number of years the vehicle has been operational on Mars"
+                },
+                {
+                    "name": "new_geographical_features_found",
+                    "description": "Number of new geographical features discovered by the vehicle"
+                },
+                {
+                    "name": "communication_system_frequency",
+                    "description": "Operational frequency of the vehicle's communication system, measured in GHz."
+                },
+                {
+                    "name": "past_turbulent_conditions",
+                    "description": "Indicates if the vehicle has historically reported turbulent conditions, which include high wind speeds or extreme temperatures."
+                },
+                {
+                    "name": "terrain_type",
+                    "description": "Type of terrain where the vehicle is exploring"
+                },
+                {
+                    "name": "mission_duration",
+                    "description": "Specifies the planned operational timeline of the vehicle in days."
+                },
+                {
+                    "name": "computational_power_rating",
+                    "description": "Rating of the vehicle's onboard computational hardware, indicating its capability to process complex algorithms."
+                },
+                {
+                    "name": "habitat_markers_found",
+                    "description": "Count of biological or geological markers identified by the explorer that indicate past or potential habitats."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 747,
-      "question": "Is there a relationship between the number of highly successful discoveries made by autonomous exploration vehicles and the terrain type they operate on, taking into account the usage of AI decision-making algorithms?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "highly_successful_discovery",
-      
-      
-      "relevant_cols": [
-        "new_geographical_features_found",
-        "highly_successful_discovery",
-        "ai_decision_making",
-        "terrain_type"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 747,
+            "question": "Is there a relationship between the number of highly successful discoveries made by autonomous exploration vehicles and the terrain type they operate on, taking into account the usage of AI decision-making algorithms?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "highly_successful_discovery",
+            "true_hypothesis": "Autonomous exploration vehicles that employ AI-based decision-making algorithms and operate on highly uneven terrain tend to discover new geographical features more frequently when they find more than 30 such features.",
+            "true_hypothesis_expr": "np.where((df['ai_decision_making'] == True) & (df['terrain_type'] == 'highly_uneven') & (df['new_geographical_features_found'] > 30), True, False)",
+            "relevant_cols": [
+                "new_geographical_features_found",
+                "highly_successful_discovery",
+                "ai_decision_making",
+                "terrain_type"
+            ]
+        }
+    ]
 }

@@ -1,154 +1,154 @@
 {
-  "id": 3,
-  "domain": "environmental activism",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to conservation efforts, climate change, and sustainability.",
-      "columns": [
+    "id": 3,
+    "domain": "environmental activism",
+    "datasets": [
         {
-          "name": "level_of_environmental_awareness",
-          "description": "Rating of environmental awareness on a scale from 1 to 10"
-        },
-        {
-          "name": "number_of_environmental_policies",
-          "description": "Total number of active environmental policies in the region"
-        },
-        {
-          "name": "recycling_rate",
-          "description": "Percentage of waste that is recycled in the region"
-        },
-        {
-          "name": "industry_pollution_level",
-          "description": "Rating of the pollution level from local industries, scaled 1 (least) to 5 (most)."
-        },
-        {
-          "name": "environmental_spending_per_capita",
-          "description": "Amount of money spent by the local government per capita on environmental initiatives annually"
-        },
-        {
-          "name": "annual_increase_in_activism",
-          "description": "Percentage increase in environmental activism per year"
-        },
-        {
-          "name": "average_income",
-          "description": "Average annual income per household in the region"
-        },
-        {
-          "name": "environmental_education_initiatives",
-          "description": "Number of environmental education programs active per 10,000 population"
-        },
-        {
-          "name": "public_transportation_usage_rate",
-          "description": "Percentage of the population that regularly uses public transportation"
-        },
-        {
-          "name": "local_environmental_organizations",
-          "description": "Number of environmental organizations active in the region"
-        },
-        {
-          "name": "population_density",
-          "description": "Number of people per square kilometer"
-        },
-        {
-          "name": "population_density_per_sq_km",
-          "description": "The number of people per square kilometer in the region"
-        },
-        {
-          "name": "environmental_NGO_count",
-          "description": "Number of registered environmental NGOs per 100,000 inhabitants in the region"
-        },
-        {
-          "name": "industry_emissions_percentile",
-          "description": "Local industries' emissions ranked by percentile compared to national levels"
-        },
-        {
-          "name": "carbon_tax_last_year",
-          "description": "Indicates whether a carbon tax was introduced in the region in the last year"
-        },
-        {
-          "name": "per_capita_green_investment",
-          "description": "Average investment in green technologies per capita in the region"
-        },
-        {
-          "name": "commercial_area",
-          "description": "Total area of commercial spaces in the region (in square kilometers)"
-        },
-        {
-          "name": "governance_efficiency_index",
-          "description": "A score out of 100 indicating the efficiency of local governance"
-        },
-        {
-          "name": "green_space_area_percentage",
-          "description": "Percentage of area covered by green spaces such as parks, forests, and gardens"
-        },
-        {
-          "name": "alternative_transport_ratio",
-          "description": "Percentage of public transportation vehicles using alternative fuels such as electricity or biofuels"
-        },
-        {
-          "name": "renewable_energy_usage_percentile",
-          "description": "The percentile rank of regions based on the extent of renewable energy usage."
-        },
-        {
-          "name": "environmental_education_index",
-          "description": "Index representing the level of environmental education, scaled to percentile within the dataset"
-        },
-        {
-          "name": "public_green_space_area",
-          "description": "Total area of public green spaces in the region (in square kilometers)"
-        },
-        {
-          "name": "is_above_renewable_threshold",
-          "description": "Indicator if the region's renewable energy usage exceeds a set threshold, denoted as a binary condition"
-        },
-        {
-          "name": "regulatory_compliance_percentage",
-          "description": "Percentage of environmental regulations complied with in a region"
-        },
-        {
-          "name": "environmental_protest_frequency",
-          "description": "The average number of environmental protests per year in the region."
-        },
-        {
-          "name": "proportion_of_recycled_waste",
-          "description": "Percentage of waste that is recycled in the region"
-        },
-        {
-          "name": "recycling_program_participation",
-          "description": "The percentage of households participating in local recycling programs."
-        },
-        {
-          "name": "number_of_local_environmental_ngos",
-          "description": "The number of local non-governmental organizations focused on environmental issues within the region"
-        },
-        {
-          "name": "plastic_consumption_change",
-          "description": "Percentage change in single-use plastic consumption over a 5-year period"
-        },
-        {
-          "name": "percentage_of_college_graduates",
-          "description": "The percentage of residents with a college degree or higher in the region."
+            "name": "data.csv",
+            "description": "Related to conservation efforts, climate change, and sustainability.",
+            "columns": [
+                {
+                    "name": "level_of_environmental_awareness",
+                    "description": "Rating of environmental awareness on a scale from 1 to 10"
+                },
+                {
+                    "name": "number_of_environmental_policies",
+                    "description": "Total number of active environmental policies in the region"
+                },
+                {
+                    "name": "recycling_rate",
+                    "description": "Percentage of waste that is recycled in the region"
+                },
+                {
+                    "name": "industry_pollution_level",
+                    "description": "Rating of the pollution level from local industries, scaled 1 (least) to 5 (most)."
+                },
+                {
+                    "name": "environmental_spending_per_capita",
+                    "description": "Amount of money spent by the local government per capita on environmental initiatives annually"
+                },
+                {
+                    "name": "annual_increase_in_activism",
+                    "description": "Percentage increase in environmental activism per year"
+                },
+                {
+                    "name": "average_income",
+                    "description": "Average annual income per household in the region"
+                },
+                {
+                    "name": "environmental_education_initiatives",
+                    "description": "Number of environmental education programs active per 10,000 population"
+                },
+                {
+                    "name": "public_transportation_usage_rate",
+                    "description": "Percentage of the population that regularly uses public transportation"
+                },
+                {
+                    "name": "local_environmental_organizations",
+                    "description": "Number of environmental organizations active in the region"
+                },
+                {
+                    "name": "population_density",
+                    "description": "Number of people per square kilometer"
+                },
+                {
+                    "name": "population_density_per_sq_km",
+                    "description": "The number of people per square kilometer in the region"
+                },
+                {
+                    "name": "environmental_NGO_count",
+                    "description": "Number of registered environmental NGOs per 100,000 inhabitants in the region"
+                },
+                {
+                    "name": "industry_emissions_percentile",
+                    "description": "Local industries' emissions ranked by percentile compared to national levels"
+                },
+                {
+                    "name": "carbon_tax_last_year",
+                    "description": "Indicates whether a carbon tax was introduced in the region in the last year"
+                },
+                {
+                    "name": "per_capita_green_investment",
+                    "description": "Average investment in green technologies per capita in the region"
+                },
+                {
+                    "name": "commercial_area",
+                    "description": "Total area of commercial spaces in the region (in square kilometers)"
+                },
+                {
+                    "name": "governance_efficiency_index",
+                    "description": "A score out of 100 indicating the efficiency of local governance"
+                },
+                {
+                    "name": "green_space_area_percentage",
+                    "description": "Percentage of area covered by green spaces such as parks, forests, and gardens"
+                },
+                {
+                    "name": "alternative_transport_ratio",
+                    "description": "Percentage of public transportation vehicles using alternative fuels such as electricity or biofuels"
+                },
+                {
+                    "name": "renewable_energy_usage_percentile",
+                    "description": "The percentile rank of regions based on the extent of renewable energy usage."
+                },
+                {
+                    "name": "environmental_education_index",
+                    "description": "Index representing the level of environmental education, scaled to percentile within the dataset"
+                },
+                {
+                    "name": "public_green_space_area",
+                    "description": "Total area of public green spaces in the region (in square kilometers)"
+                },
+                {
+                    "name": "is_above_renewable_threshold",
+                    "description": "Indicator if the region's renewable energy usage exceeds a set threshold, denoted as a binary condition"
+                },
+                {
+                    "name": "regulatory_compliance_percentage",
+                    "description": "Percentage of environmental regulations complied with in a region"
+                },
+                {
+                    "name": "environmental_protest_frequency",
+                    "description": "The average number of environmental protests per year in the region."
+                },
+                {
+                    "name": "proportion_of_recycled_waste",
+                    "description": "Percentage of waste that is recycled in the region"
+                },
+                {
+                    "name": "recycling_program_participation",
+                    "description": "The percentage of households participating in local recycling programs."
+                },
+                {
+                    "name": "number_of_local_environmental_ngos",
+                    "description": "The number of local non-governmental organizations focused on environmental issues within the region"
+                },
+                {
+                    "name": "plastic_consumption_change",
+                    "description": "Percentage change in single-use plastic consumption over a 5-year period"
+                },
+                {
+                    "name": "percentage_of_college_graduates",
+                    "description": "The percentage of residents with a college degree or higher in the region."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 717,
-      "question": "Can you determine if there is a relationship between the environmental education index and a combination of variables including the square of environmental protest frequency, recycling program participation, and cubic of industry pollution level?",
-      "question_type": "general",
-      "difficulty": 2,
-      "target_col": "environmental_education_index",
-      
-      
-      "relevant_cols": [
-        "public_transportation_usage_rate",
-        "environmental_protest_frequency",
-        "recycling_program_participation",
-        "industry_pollution_level",
-        "environmental_education_index"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 717,
+            "question": "Can you determine if there is a relationship between the environmental education index and a combination of variables including the square of environmental protest frequency, recycling program participation, and cubic of industry pollution level?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "environmental_education_index",
+            "true_hypothesis": "The environmental education index is calculated as twice the percentage of the population that regularly uses public transportation plus ten times a combination of variables including the square of environmental protest frequency, recycling program participation, and cubic of industry pollution level, with additional calculations applied to obtain a result. ",
+            "true_hypothesis_expr": "2 * df['public_transportation_usage_rate'] + 10 * (np.round((df['environmental_protest_frequency']**2 * 0.01 + df['recycling_program_participation'] * 0.03 + df['industry_pollution_level']**3 * 0.05) % 5 + 1)",
+            "relevant_cols": [
+                "public_transportation_usage_rate",
+                "environmental_protest_frequency",
+                "recycling_program_participation",
+                "industry_pollution_level",
+                "environmental_education_index"
+            ]
+        }
+    ]
 }

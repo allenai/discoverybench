@@ -1,124 +1,124 @@
 {
-  "id": 0,
-  "domain": "culinary arts",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to cooking techniques, gastronomy, and culinary traditions.",
-      "columns": [
+    "id": 0,
+    "domain": "culinary arts",
+    "datasets": [
         {
-          "name": "number_of_awards",
-          "description": "Total number of culinary awards won by the chef"
-        },
-        {
-          "name": "ingredients_diversity_score",
-          "description": "A score representing the diversity of ingredients used by the chef"
-        },
-        {
-          "name": "chef_experience",
-          "description": "Number of years of professional cooking experience the chef has"
-        },
-        {
-          "name": "number_of_signature_dishes",
-          "description": "Total number of signature dishes a chef has developed"
-        },
-        {
-          "name": "cooking_method_preference",
-          "description": "Primary cooking method preferred by the chef"
-        },
-        {
-          "name": "chef_innovation_score",
-          "description": "A numerical score from 1 to 100 representing the chef's tendency to innovate and try new culinary methods"
-        },
-        {
-          "name": "culinary_competition_participation",
-          "description": "Number of culinary competitions the chef participates in annually"
-        },
-        {
-          "name": "uses_international_flavors",
-          "description": "Indicates whether the chef incorporates international flavors into their cuisine"
-        },
-        {
-          "name": "has_formal_culinary_education",
-          "description": "Indicates whether the chef has formal culinary education"
-        },
-        {
-          "name": "participation_in_culinary_innovation_programs",
-          "description": "Binary indicator of the chef's involvement in any culinary innovation programs focused on modern cooking techniques and ingredients"
-        },
-        {
-          "name": "international_competitions_attended",
-          "description": "Number of international culinary competitions the chef has attended"
-        },
-        {
-          "name": "meal_preparation_time",
-          "description": "Average time taken to prepare a meal, measured in minutes"
-        },
-        {
-          "name": "seasonal_ingredient_usage",
-          "description": "Percentage of ingredients that are seasonal in the chef's dishes"
-        },
-        {
-          "name": "menu_items_count",
-          "description": "Total number of different dishes available on the chef's menu"
-        },
-        {
-          "name": "menu_change_frequency",
-          "description": "Number of times the chef changes the menu annually"
-        },
-        {
-          "name": "preferred_cooking_method",
-          "description": "Primary cooking method preferred by the chef"
-        },
-        {
-          "name": "kitchen_tool_variety",
-          "description": "Number of different types of kitchen tools used by the chef"
-        },
-        {
-          "name": "cuisine_specialty",
-          "description": "Type of cuisine the chef specializes in"
-        },
-        {
-          "name": "chef_id",
-          "description": "Unique identifier for each chef"
-        },
-        {
-          "name": "region_climate",
-          "description": "Climatic condition of the region the chef works in"
-        },
-        {
-          "name": "cuisine_complexity",
-          "description": "A score representing the complexity of the cuisine type the chef specializes in"
-        },
-        {
-          "name": "years_of_experience",
-          "description": "Number of years the chef has been professionally cooking"
-        },
-        {
-          "name": "local_supplier_partnerships",
-          "description": "Number of local suppliers from which the chef sources ingredients"
-        },
-        {
-          "name": "gastronomic_techniques_count",
-          "description": "The count of different gastronomic techniques used by the chef"
+            "name": "data.csv",
+            "description": "Related to cooking techniques, gastronomy, and culinary traditions.",
+            "columns": [
+                {
+                    "name": "number_of_awards",
+                    "description": "Total number of culinary awards won by the chef"
+                },
+                {
+                    "name": "ingredients_diversity_score",
+                    "description": "A score representing the diversity of ingredients used by the chef"
+                },
+                {
+                    "name": "chef_experience",
+                    "description": "Number of years of professional cooking experience the chef has"
+                },
+                {
+                    "name": "number_of_signature_dishes",
+                    "description": "Total number of signature dishes a chef has developed"
+                },
+                {
+                    "name": "cooking_method_preference",
+                    "description": "Primary cooking method preferred by the chef"
+                },
+                {
+                    "name": "chef_innovation_score",
+                    "description": "A numerical score from 1 to 100 representing the chef's tendency to innovate and try new culinary methods"
+                },
+                {
+                    "name": "culinary_competition_participation",
+                    "description": "Number of culinary competitions the chef participates in annually"
+                },
+                {
+                    "name": "uses_international_flavors",
+                    "description": "Indicates whether the chef incorporates international flavors into their cuisine"
+                },
+                {
+                    "name": "has_formal_culinary_education",
+                    "description": "Indicates whether the chef has formal culinary education"
+                },
+                {
+                    "name": "participation_in_culinary_innovation_programs",
+                    "description": "Binary indicator of the chef's involvement in any culinary innovation programs focused on modern cooking techniques and ingredients"
+                },
+                {
+                    "name": "international_competitions_attended",
+                    "description": "Number of international culinary competitions the chef has attended"
+                },
+                {
+                    "name": "meal_preparation_time",
+                    "description": "Average time taken to prepare a meal, measured in minutes"
+                },
+                {
+                    "name": "seasonal_ingredient_usage",
+                    "description": "Percentage of ingredients that are seasonal in the chef's dishes"
+                },
+                {
+                    "name": "menu_items_count",
+                    "description": "Total number of different dishes available on the chef's menu"
+                },
+                {
+                    "name": "menu_change_frequency",
+                    "description": "Number of times the chef changes the menu annually"
+                },
+                {
+                    "name": "preferred_cooking_method",
+                    "description": "Primary cooking method preferred by the chef"
+                },
+                {
+                    "name": "kitchen_tool_variety",
+                    "description": "Number of different types of kitchen tools used by the chef"
+                },
+                {
+                    "name": "cuisine_specialty",
+                    "description": "Type of cuisine the chef specializes in"
+                },
+                {
+                    "name": "chef_id",
+                    "description": "Unique identifier for each chef"
+                },
+                {
+                    "name": "region_climate",
+                    "description": "Climatic condition of the region the chef works in"
+                },
+                {
+                    "name": "cuisine_complexity",
+                    "description": "A score representing the complexity of the cuisine type the chef specializes in"
+                },
+                {
+                    "name": "years_of_experience",
+                    "description": "Number of years the chef has been professionally cooking"
+                },
+                {
+                    "name": "local_supplier_partnerships",
+                    "description": "Number of local suppliers from which the chef sources ingredients"
+                },
+                {
+                    "name": "gastronomic_techniques_count",
+                    "description": "The count of different gastronomic techniques used by the chef"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 1047,
-      "question": "What is the relationship between kitchen_tool_variety, meal_preparation_time, and cuisine_specialty in the culinary arts dataset?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "cuisine_specialty",
-      
-      
-      "relevant_cols": [
-        "kitchen_tool_variety",
-        "meal_preparation_time",
-        "cuisine_specialty"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 1047,
+            "question": "What is the relationship between kitchen_tool_variety, meal_preparation_time, and cuisine_specialty in the culinary arts dataset?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "cuisine_specialty",
+            "true_hypothesis": "Chefs who prefer more complex dishes have higher kitchen_tool_variety and longer meal_preparation_time. Chefs with kitchen_tool_variety greater than 25 and meal_preparation_time over 60 specialize in French cuisine, those with kitchen_tool_variety greater than 20 and meal_preparation_time over 45 specialize in Indian cuisine, while chefs with kitchen_tool_variety less than or equal to 20 and meal_preparation_time less than or equal to 45 tend to specialize in Chinese cuisine.",
+            "true_hypothesis_expr": "np.where((df['kitchen_tool_variety'] > 25) & (df['meal_preparation_time'] > 60), 'French', np.where((df['kitchen_tool_variety'] > 20) & (df['meal_preparation_time'] > 45), 'Indian', np.where((df['kitchen_tool_variety'] <= 20) & (df['meal_preparation_time'] <= 45), 'Chinese', 'Italian')))",
+            "relevant_cols": [
+                "kitchen_tool_variety",
+                "meal_preparation_time",
+                "cuisine_specialty"
+            ]
+        }
+    ]
 }

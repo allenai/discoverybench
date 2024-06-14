@@ -1,133 +1,133 @@
 {
-  "id": 0,
-  "domain": "robotic explorers",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to Mars rovers, space probes, and autonomous exploration vehicles.",
-      "columns": [
+    "id": 0,
+    "domain": "robotic explorers",
+    "datasets": [
         {
-          "name": "system_update_frequency",
-          "description": "Number of critical system updates received per year"
-        },
-        {
-          "name": "power_fluctuations",
-          "description": "Count of significant power fluctuations per week detected in the vehicle."
-        },
-        {
-          "name": "communication_success_ratio",
-          "description": "Ratio of successful communications sessions to total communication attempts with mission control"
-        },
-        {
-          "name": "terrain_complexity",
-          "description": "A categorical ranking of the surveyed terrain's complexity, affecting navigation and survey capabilities."
-        },
-        {
-          "name": "AI_decision_making_capabilities",
-          "description": "Indicates whether the vehicle is equipped with artificial intelligence capabilities to make decisions independently."
-        },
-        {
-          "name": "mission_duration_days",
-          "description": "Total duration of the mission expected or experienced, measured in days."
-        },
-        {
-          "name": "ai_decision_making",
-          "description": "Whether the vehicle uses AI-based decision-making algorithms"
-        },
-        {
-          "name": "operation_time_years",
-          "description": "Number of years the vehicle has been operational on Mars"
-        },
-        {
-          "name": "average_daily_temperature",
-          "description": "Average daily temperature in Celsius degrees at the location of the vehicle."
-        },
-        {
-          "name": "seasonal_temperature_variation",
-          "description": "Categorical indication of the level of temperature changes observed over seasons"
-        },
-        {
-          "name": "communication_system_frequency",
-          "description": "Operational frequency of the vehicle's communication system, measured in GHz."
-        },
-        {
-          "name": "robotic_maintenance_sessions",
-          "description": "Number of maintenance and repair sessions performed on-site by robotic systems."
-        },
-        {
-          "name": "terrain_type",
-          "description": "Type of terrain where the vehicle is exploring"
-        },
-        {
-          "name": "optical_imaging_resolution",
-          "description": "Resolution of the optical imaging system on the vehicle, measured in megapixels"
-        },
-        {
-          "name": "number_of_sensors",
-          "description": "Total number of sensors equipped on the vehicle"
-        },
-        {
-          "name": "communication_bandwidth",
-          "description": "The maximum data transmission capacity of the vehicle's communication system, measured in Mbps, which is crucial for high-speed data transmission to and from Earth."
-        },
-        {
-          "name": "mission_duration",
-          "description": "Specifies the planned operational timeline of the vehicle in days."
-        },
-        {
-          "name": "new_geographical_features_found",
-          "description": "Number of new geographical features discovered by the vehicle"
-        },
-        {
-          "name": "max_daily_wind_speed",
-          "description": "Maximum wind speed recorded in kilometers per hour on a given day at the vehicle's location."
-        },
-        {
-          "name": "vehicle_id",
-          "description": "Unique identifier for each exploration vehicle"
-        },
-        {
-          "name": "past_turbulent_conditions",
-          "description": "Indicates if the vehicle has historically reported turbulent conditions, which include high wind speeds or extreme temperatures."
-        },
-        {
-          "name": "task_complexity_score",
-          "description": "A numerical score that rates the complexity of tasks the vehicle can perform on a scale from 1 to 10."
-        },
-        {
-          "name": "communication_delay_tolerance",
-          "description": "Vehicle's ability to operate effectively despite communication delays with Earth-based control centers, important for autonomous decision-making."
-        },
-        {
-          "name": "remote_control_capabilities",
-          "description": "Indicates the presence of remote control capabilities enabling distant manipulation and interventions."
-        },
-        {
-          "name": "habitat_markers_found",
-          "description": "Count of biological or geological markers identified by the explorer that indicate past or potential habitats."
+            "name": "data.csv",
+            "description": "Related to Mars rovers, space probes, and autonomous exploration vehicles.",
+            "columns": [
+                {
+                    "name": "system_update_frequency",
+                    "description": "Number of critical system updates received per year"
+                },
+                {
+                    "name": "power_fluctuations",
+                    "description": "Count of significant power fluctuations per week detected in the vehicle."
+                },
+                {
+                    "name": "communication_success_ratio",
+                    "description": "Ratio of successful communications sessions to total communication attempts with mission control"
+                },
+                {
+                    "name": "terrain_complexity",
+                    "description": "A categorical ranking of the surveyed terrain's complexity, affecting navigation and survey capabilities."
+                },
+                {
+                    "name": "AI_decision_making_capabilities",
+                    "description": "Indicates whether the vehicle is equipped with artificial intelligence capabilities to make decisions independently."
+                },
+                {
+                    "name": "mission_duration_days",
+                    "description": "Total duration of the mission expected or experienced, measured in days."
+                },
+                {
+                    "name": "ai_decision_making",
+                    "description": "Whether the vehicle uses AI-based decision-making algorithms"
+                },
+                {
+                    "name": "operation_time_years",
+                    "description": "Number of years the vehicle has been operational on Mars"
+                },
+                {
+                    "name": "average_daily_temperature",
+                    "description": "Average daily temperature in Celsius degrees at the location of the vehicle."
+                },
+                {
+                    "name": "seasonal_temperature_variation",
+                    "description": "Categorical indication of the level of temperature changes observed over seasons"
+                },
+                {
+                    "name": "communication_system_frequency",
+                    "description": "Operational frequency of the vehicle's communication system, measured in GHz."
+                },
+                {
+                    "name": "robotic_maintenance_sessions",
+                    "description": "Number of maintenance and repair sessions performed on-site by robotic systems."
+                },
+                {
+                    "name": "terrain_type",
+                    "description": "Type of terrain where the vehicle is exploring"
+                },
+                {
+                    "name": "optical_imaging_resolution",
+                    "description": "Resolution of the optical imaging system on the vehicle, measured in megapixels"
+                },
+                {
+                    "name": "number_of_sensors",
+                    "description": "Total number of sensors equipped on the vehicle"
+                },
+                {
+                    "name": "communication_bandwidth",
+                    "description": "The maximum data transmission capacity of the vehicle's communication system, measured in Mbps, which is crucial for high-speed data transmission to and from Earth."
+                },
+                {
+                    "name": "mission_duration",
+                    "description": "Specifies the planned operational timeline of the vehicle in days."
+                },
+                {
+                    "name": "new_geographical_features_found",
+                    "description": "Number of new geographical features discovered by the vehicle"
+                },
+                {
+                    "name": "max_daily_wind_speed",
+                    "description": "Maximum wind speed recorded in kilometers per hour on a given day at the vehicle's location."
+                },
+                {
+                    "name": "vehicle_id",
+                    "description": "Unique identifier for each exploration vehicle"
+                },
+                {
+                    "name": "past_turbulent_conditions",
+                    "description": "Indicates if the vehicle has historically reported turbulent conditions, which include high wind speeds or extreme temperatures."
+                },
+                {
+                    "name": "task_complexity_score",
+                    "description": "A numerical score that rates the complexity of tasks the vehicle can perform on a scale from 1 to 10."
+                },
+                {
+                    "name": "communication_delay_tolerance",
+                    "description": "Vehicle's ability to operate effectively despite communication delays with Earth-based control centers, important for autonomous decision-making."
+                },
+                {
+                    "name": "remote_control_capabilities",
+                    "description": "Indicates the presence of remote control capabilities enabling distant manipulation and interventions."
+                },
+                {
+                    "name": "habitat_markers_found",
+                    "description": "Count of biological or geological markers identified by the explorer that indicate past or potential habitats."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 757,
-      "question": "Is there a relationship between the label of the exploration vehicles and the combination of average daily temperatures, maximum daily windspeed, past turbulent conditions, power fluctuations, negative habitat markers found, robotic maintenance sessions, and seasonal temperature variation?",
-      "question_type": "general",
-      "difficulty": 3,
-      "target_col": "vehicle_id",
-      
-      
-      "relevant_cols": [
-        "seasonal_temperature_variation",
-        "power_fluctuations",
-        "average_daily_temperature",
-        "max_daily_wind_speed",
-        "past_turbulent_conditions",
-        "habitat_markers_found",
-        "robotic_maintenance_sessions",
-        "vehicle_id"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 757,
+            "question": "Is there a relationship between the label of the exploration vehicles and the combination of average daily temperatures, maximum daily windspeed, past turbulent conditions, power fluctuations, negative habitat markers found, robotic maintenance sessions, and seasonal temperature variation?",
+            "question_type": "general",
+            "difficulty": 3,
+            "target_col": "vehicle_id",
+            "true_hypothesis": "Exploration vehicles that have average daily temperatures squared added to 5 times the maximum daily windspeed multiplied by 1 plus past turbulent conditions, which is greater than 50, and have power fluctuations greater than 10, and the sum of negative habitat markers found multiplied by -0.1, robotic maintenance sessions multiplied by -0.2, and 5 is greater than 5, are labeled 'V001' if the seasonal temperature variation is 'high'; otherwise, they are labeled 'V004'.",
+            "true_hypothesis_expr": "np.where((np.where((((df['average_daily_temperature']**2 + 5 * df['max_daily_wind_speed']) * (1 + df['past_turbulent_conditions']) > 50) & (df['power_fluctuations'] > 10) & ((df['habitat_markers_found'] * -0.1 + df['robotic_maintenance_sessions'] * -0.2 + 5) > 5), True, False) == True) & (df['seasonal_temperature_variation'] == 'high'), 'V001', 'V004')",
+            "relevant_cols": [
+                "seasonal_temperature_variation",
+                "power_fluctuations",
+                "average_daily_temperature",
+                "max_daily_wind_speed",
+                "past_turbulent_conditions",
+                "habitat_markers_found",
+                "robotic_maintenance_sessions",
+                "vehicle_id"
+            ]
+        }
+    ]
 }

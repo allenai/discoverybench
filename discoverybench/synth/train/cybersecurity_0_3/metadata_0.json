@@ -1,129 +1,129 @@
 {
-  "id": 0,
-  "domain": "cybersecurity",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to digital security, online threats, and safeguarding data.",
-      "columns": [
+    "id": 0,
+    "domain": "cybersecurity",
+    "datasets": [
         {
-          "name": "organization_sector",
-          "description": "The sector to which the organization belongs."
-        },
-        {
-          "name": "cybersecurity_training_budget",
-          "description": "Annual budget for cybersecurity training per employee in dollars"
-        },
-        {
-          "name": "incident_report_to_resolution_ratio",
-          "description": "Ratio of the number of cybersecurity incidents reported to the number of incidents resolved."
-        },
-        {
-          "name": "requires_regular_password_updates",
-          "description": "Whether the organization has a policy requiring employees to update their passwords regularly."
-        },
-        {
-          "name": "monthly_update_frequency",
-          "description": "Frequency of cybersecurity software updates per year."
-        },
-        {
-          "name": "two_factor_authentication",
-          "description": "Whether the organization uses two-factor authentication (Yes/No)."
-        },
-        {
-          "name": "annual_cyber_incidents",
-          "description": "Number of cyber incidents reported by the organization annually"
-        },
-        {
-          "name": "percentage_of_critical_data",
-          "description": "The percentage of total data handled by the organization that is classified as sensitive or critical."
-        },
-        {
-          "name": "total_employees",
-          "description": "Total number of employees in the organization"
-        },
-        {
-          "name": "previous_cyber_attacks",
-          "description": "Number of previous cyber attacks the organization has faced"
-        },
-        {
-          "name": "number_of_cybersecurity_incidents",
-          "description": "Total number of cybersecurity incidents reported by the organization in the past year."
-        },
-        {
-          "name": "uses_encryption_technologies",
-          "description": "Indicates if the organization uses encryption technologies for protecting data."
-        },
-        {
-          "name": "percent_employees_accessing_sensitive_data",
-          "description": "Percentage of employees who have access to sensitive or critical data."
-        },
-        {
-          "name": "annual_cyber_attacks",
-          "description": "The total number of externally originating cyber attacks an organization experiences each year."
-        },
-        {
-          "name": "security_employee_ratio",
-          "description": "Ratio of IT security staff to the total number of employees."
-        },
-        {
-          "name": "cyber_attack_frequency",
-          "description": "How often the organization experiences cyber attacks."
-        },
-        {
-          "name": "cybersecurity_software_updates",
-          "description": "Indicates whether the organization regularly updates its cybersecurity software."
-        },
-        {
-          "name": "mandatory_compliance_certification",
-          "description": "Indicates if all IT staff are required to have security compliance certifications."
-        },
-        {
-          "name": "security_update_frequency",
-          "description": "Frequency at which the organization performs security updates or patches."
-        },
-        {
-          "name": "industry_sector",
-          "description": "Sector of the industry the organization operates in"
-        },
-        {
-          "name": "regular_cybersecurity_audits",
-          "description": "Indicates whether regular cybersecurity audits are conducted."
-        },
-        {
-          "name": "annual_revenue",
-          "description": "Annual revenue of the organization"
-        },
-        {
-          "name": "number_of_IT_security_staff",
-          "description": "The total number of IT security staff employed by the organization."
-        },
-        {
-          "name": "frequency_of_software_updates",
-          "description": "The number of times the organization updates its software in a year."
-        },
-        {
-          "name": "mandatory_cybersecurity_training",
-          "description": "Indicates whether the organization requires all employees to undergo cybersecurity training."
+            "name": "data.csv",
+            "description": "Related to digital security, online threats, and safeguarding data.",
+            "columns": [
+                {
+                    "name": "organization_sector",
+                    "description": "The sector to which the organization belongs."
+                },
+                {
+                    "name": "cybersecurity_training_budget",
+                    "description": "Annual budget for cybersecurity training per employee in dollars"
+                },
+                {
+                    "name": "incident_report_to_resolution_ratio",
+                    "description": "Ratio of the number of cybersecurity incidents reported to the number of incidents resolved."
+                },
+                {
+                    "name": "requires_regular_password_updates",
+                    "description": "Whether the organization has a policy requiring employees to update their passwords regularly."
+                },
+                {
+                    "name": "monthly_update_frequency",
+                    "description": "Frequency of cybersecurity software updates per year."
+                },
+                {
+                    "name": "two_factor_authentication",
+                    "description": "Whether the organization uses two-factor authentication (Yes/No)."
+                },
+                {
+                    "name": "annual_cyber_incidents",
+                    "description": "Number of cyber incidents reported by the organization annually"
+                },
+                {
+                    "name": "percentage_of_critical_data",
+                    "description": "The percentage of total data handled by the organization that is classified as sensitive or critical."
+                },
+                {
+                    "name": "total_employees",
+                    "description": "Total number of employees in the organization"
+                },
+                {
+                    "name": "previous_cyber_attacks",
+                    "description": "Number of previous cyber attacks the organization has faced"
+                },
+                {
+                    "name": "number_of_cybersecurity_incidents",
+                    "description": "Total number of cybersecurity incidents reported by the organization in the past year."
+                },
+                {
+                    "name": "uses_encryption_technologies",
+                    "description": "Indicates if the organization uses encryption technologies for protecting data."
+                },
+                {
+                    "name": "percent_employees_accessing_sensitive_data",
+                    "description": "Percentage of employees who have access to sensitive or critical data."
+                },
+                {
+                    "name": "annual_cyber_attacks",
+                    "description": "The total number of externally originating cyber attacks an organization experiences each year."
+                },
+                {
+                    "name": "security_employee_ratio",
+                    "description": "Ratio of IT security staff to the total number of employees."
+                },
+                {
+                    "name": "cyber_attack_frequency",
+                    "description": "How often the organization experiences cyber attacks."
+                },
+                {
+                    "name": "cybersecurity_software_updates",
+                    "description": "Indicates whether the organization regularly updates its cybersecurity software."
+                },
+                {
+                    "name": "mandatory_compliance_certification",
+                    "description": "Indicates if all IT staff are required to have security compliance certifications."
+                },
+                {
+                    "name": "security_update_frequency",
+                    "description": "Frequency at which the organization performs security updates or patches."
+                },
+                {
+                    "name": "industry_sector",
+                    "description": "Sector of the industry the organization operates in"
+                },
+                {
+                    "name": "regular_cybersecurity_audits",
+                    "description": "Indicates whether regular cybersecurity audits are conducted."
+                },
+                {
+                    "name": "annual_revenue",
+                    "description": "Annual revenue of the organization"
+                },
+                {
+                    "name": "number_of_IT_security_staff",
+                    "description": "The total number of IT security staff employed by the organization."
+                },
+                {
+                    "name": "frequency_of_software_updates",
+                    "description": "The number of times the organization updates its software in a year."
+                },
+                {
+                    "name": "mandatory_cybersecurity_training",
+                    "description": "Indicates whether the organization requires all employees to undergo cybersecurity training."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 305,
-      "question": "How does the frequency of software updates, number of IT security staff, and use of encryption technologies relate to the number of reported cybersecurity incidents in organizations within the cybersecurity domain?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "number_of_cybersecurity_incidents",
-      
-      
-      "relevant_cols": [
-        "frequency_of_software_updates",
-        "number_of_IT_security_staff",
-        "uses_encryption_technologies",
-        "number_of_cybersecurity_incidents"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 305,
+            "question": "How does the frequency of software updates, number of IT security staff, and use of encryption technologies relate to the number of reported cybersecurity incidents in organizations within the cybersecurity domain?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "number_of_cybersecurity_incidents",
+            "true_hypothesis": "Organizations with a higher frequency of software updates, a greater number of IT security staff, and that use encryption technologies, experience more reported cybersecurity incidents with a base value of 50.",
+            "true_hypothesis_expr": "df['frequency_of_software_updates'] * df['number_of_IT_security_staff'] * 5 + 50 * df['uses_encryption_technologies']",
+            "relevant_cols": [
+                "frequency_of_software_updates",
+                "number_of_IT_security_staff",
+                "uses_encryption_technologies",
+                "number_of_cybersecurity_incidents"
+            ]
+        }
+    ]
 }

@@ -1,122 +1,122 @@
 {
-  "id": 1,
-  "domain": "aviation",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to aircraft, pilots, and aviation history.",
-      "columns": [
+    "id": 1,
+    "domain": "aviation",
+    "datasets": [
         {
-          "name": "employs_active_breaks",
-          "description": "Indicator if the pilot intentionally takes breaks that involve physical activity during gaming"
-        },
-        {
-          "name": "advanced_aerodynamics_training_hours",
-          "description": "Total number of hours a pilot has spent in advanced aerodynamics training"
-        },
-        {
-          "name": "aircraft_type_size",
-          "description": "Size category of aircraft typically flown by the pilot"
-        },
-        {
-          "name": "advanced_navigation_system_training",
-          "description": "Whether the pilot has undergone specific training for advanced navigation systems."
-        },
-        {
-          "name": "international_flight_experience",
-          "description": "Indicates whether the pilot has experience flying internationally across different time zones."
-        },
-        {
-          "name": "stress_management_type",
-          "description": "Type of stress management technique used by the pilot"
-        },
-        {
-          "name": "aviation_incident_awareness_score",
-          "description": "A score representing a pilot's awareness and understanding of previous aviation incidents, higher being better knowledgeable."
-        },
-        {
-          "name": "social_media_followers",
-          "description": "Number of followers a pilot has on aviation-related social media platforms"
-        },
-        {
-          "name": "international_flight_hours",
-          "description": "Total hours the pilot has flown on international routes"
-        },
-        {
-          "name": "education_level",
-          "description": "Highest academic qualification of the pilot"
-        },
-        {
-          "name": "average_flight_altitude",
-          "description": "The average altitude at which the pilot operates, measured in feet."
-        },
-        {
-          "name": "age",
-          "description": "Age of the pilot"
-        },
-        {
-          "name": "monthly_flight_simulation_hours",
-          "description": "Number of hours a pilot spends on flight simulation each month"
-        },
-        {
-          "name": "has_advanced_navigation_training",
-          "description": "Whether the pilot has received training in advanced navigation"
-        },
-        {
-          "name": "airline_fleet_technology_level",
-          "description": "Technological advancement level of airline's fleet"
-        },
-        {
-          "name": "flies_multi_engine_aircraft",
-          "description": "Whether the pilot flies multi-engine aircraft regularly"
-        },
-        {
-          "name": "flight_hours_per_year_of_experience",
-          "description": "Total flight hours divided by the years of flying experience"
-        },
-        {
-          "name": "international_flights_frequency",
-          "description": "Number of international flights a pilot flies on average per year"
-        },
-        {
-          "name": "pilot_id",
-          "description": "Unique identifier for each pilot"
-        },
-        {
-          "name": "frequency_of_simulation_training",
-          "description": "Number of simulation training sessions attended by the pilot per year"
-        },
-        {
-          "name": "years_with_current_airline",
-          "description": "Number of years the pilot has been with their current airline"
-        },
-        {
-          "name": "mental_calculation_frequency",
-          "description": "Frequency of engaging in activities that require mental calculation per week"
-        },
-        {
-          "name": "has_regular_flight_reviews",
-          "description": "Whether the pilot undertakes regular flight reviews as per aviation standards"
+            "name": "data.csv",
+            "description": "Related to aircraft, pilots, and aviation history.",
+            "columns": [
+                {
+                    "name": "employs_active_breaks",
+                    "description": "Indicator if the pilot intentionally takes breaks that involve physical activity during gaming"
+                },
+                {
+                    "name": "advanced_aerodynamics_training_hours",
+                    "description": "Total number of hours a pilot has spent in advanced aerodynamics training"
+                },
+                {
+                    "name": "aircraft_type_size",
+                    "description": "Size category of aircraft typically flown by the pilot"
+                },
+                {
+                    "name": "advanced_navigation_system_training",
+                    "description": "Whether the pilot has undergone specific training for advanced navigation systems."
+                },
+                {
+                    "name": "international_flight_experience",
+                    "description": "Indicates whether the pilot has experience flying internationally across different time zones."
+                },
+                {
+                    "name": "stress_management_type",
+                    "description": "Type of stress management technique used by the pilot"
+                },
+                {
+                    "name": "aviation_incident_awareness_score",
+                    "description": "A score representing a pilot's awareness and understanding of previous aviation incidents, higher being better knowledgeable."
+                },
+                {
+                    "name": "social_media_followers",
+                    "description": "Number of followers a pilot has on aviation-related social media platforms"
+                },
+                {
+                    "name": "international_flight_hours",
+                    "description": "Total hours the pilot has flown on international routes"
+                },
+                {
+                    "name": "education_level",
+                    "description": "Highest academic qualification of the pilot"
+                },
+                {
+                    "name": "average_flight_altitude",
+                    "description": "The average altitude at which the pilot operates, measured in feet."
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the pilot"
+                },
+                {
+                    "name": "monthly_flight_simulation_hours",
+                    "description": "Number of hours a pilot spends on flight simulation each month"
+                },
+                {
+                    "name": "has_advanced_navigation_training",
+                    "description": "Whether the pilot has received training in advanced navigation"
+                },
+                {
+                    "name": "airline_fleet_technology_level",
+                    "description": "Technological advancement level of airline's fleet"
+                },
+                {
+                    "name": "flies_multi_engine_aircraft",
+                    "description": "Whether the pilot flies multi-engine aircraft regularly"
+                },
+                {
+                    "name": "flight_hours_per_year_of_experience",
+                    "description": "Total flight hours divided by the years of flying experience"
+                },
+                {
+                    "name": "international_flights_frequency",
+                    "description": "Number of international flights a pilot flies on average per year"
+                },
+                {
+                    "name": "pilot_id",
+                    "description": "Unique identifier for each pilot"
+                },
+                {
+                    "name": "frequency_of_simulation_training",
+                    "description": "Number of simulation training sessions attended by the pilot per year"
+                },
+                {
+                    "name": "years_with_current_airline",
+                    "description": "Number of years the pilot has been with their current airline"
+                },
+                {
+                    "name": "mental_calculation_frequency",
+                    "description": "Frequency of engaging in activities that require mental calculation per week"
+                },
+                {
+                    "name": "has_regular_flight_reviews",
+                    "description": "Whether the pilot undertakes regular flight reviews as per aviation standards"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 922,
-      "question": "Is there a relationship between pilots' monthly flight simulation hours and their aviation incident awareness score, advanced navigation system training, international flight experience, and average flight altitude?",
-      "question_type": "general",
-      "difficulty": 2,
-      "target_col": "monthly_flight_simulation_hours",
-      
-      
-      "relevant_cols": [
-        "aviation_incident_awareness_score",
-        "advanced_navigation_system_training",
-        "international_flight_experience",
-        "average_flight_altitude",
-        "monthly_flight_simulation_hours"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 922,
+            "question": "Is there a relationship between pilots' monthly flight simulation hours and their aviation incident awareness score, advanced navigation system training, international flight experience, and average flight altitude?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "monthly_flight_simulation_hours",
+            "true_hypothesis": "Pilots with higher aviation incident awareness, more advanced navigation system training, international flight experience, and operate at average altitudes over 20,000 feet spend more hours on flight simulation. This is particularly true when the flight routes are over mountainous terrains where simulation training is crucial.",
+            "true_hypothesis_expr": "df['aviation_incident_awareness_score']**3 + 10 * df['aviation_incident_awareness_score'] * df['advanced_navigation_system_training'].astype(int) + 20*np.where(np.where((df['international_flight_experience'] == True) & (df['average_flight_altitude'] > 20000), 'mountainous', 'coastal') == 'mountainous', 1, 0)",
+            "relevant_cols": [
+                "aviation_incident_awareness_score",
+                "advanced_navigation_system_training",
+                "international_flight_experience",
+                "average_flight_altitude",
+                "monthly_flight_simulation_hours"
+            ]
+        }
+    ]
 }

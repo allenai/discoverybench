@@ -1,100 +1,100 @@
 {
-  "id": 0,
-  "domain": "biodiversity conservation",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to preserving species, habitats, and global biodiversity.",
-      "columns": [
+    "id": 0,
+    "domain": "biodiversity conservation",
+    "datasets": [
         {
-          "name": "region_type",
-          "description": "Categorizes each region as coastal or inland."
-        },
-        {
-          "name": "average_annual_temperature",
-          "description": "The average annual temperature of the region in degrees Celsius."
-        },
-        {
-          "name": "species_diversity",
-          "description": "A measure of species diversity in each region."
-        },
-        {
-          "name": "employment_rate",
-          "description": "Percentage of the eligible workforce that is employed, indicating labor market health."
-        },
-        {
-          "name": "average_annual_humidity",
-          "description": "The average annual relative humidity percentage in the region."
-        },
-        {
-          "name": "wildlife_policy_strength",
-          "description": "A numerical score from 1 to 10 that reflects the strength and enforcement of wildlife conservation policies in the region."
-        },
-        {
-          "name": "population_density",
-          "description": "The number of people per square kilometer in each region."
-        },
-        {
-          "name": "education_level",
-          "description": "Average education level in the region, on a scale from 1 (no formal education) to 10 (advanced degree)."
-        },
-        {
-          "name": "environmental_awareness_level",
-          "description": "The level of awareness and engagement with environmental issues in the region, measured as a score."
-        },
-        {
-          "name": "infrastructure_quality",
-          "description": "The quality of technological infrastructure available in the region, rated on a scale."
-        },
-        {
-          "name": "conservation_program_type",
-          "description": "Type of biodiversity conservation program implemented: community-led or government-led."
-        },
-        {
-          "name": "average_temperature",
-          "description": "Average annual temperature of the region."
-        },
-        {
-          "name": "healthcare_budget_per_capita",
-          "description": "Total healthcare budget per capita in the region, reflecting the investment in public health services."
-        },
-        {
-          "name": "frequency_of_natural_disasters",
-          "description": "Number of recorded natural disasters like earthquakes, floods, or storms per year in the region."
-        },
-        {
-          "name": "wildlife_sightings_per_capita",
-          "description": "Number of wildlife sightings reported per capita in the region annually."
-        },
-        {
-          "name": "economic_status",
-          "description": "The economic status of the region, categorized as low, middle, or high income."
-        },
-        {
-          "name": "recent_internet_promotions",
-          "description": "Binary indicator of whether there have been any significant promotional activities for internet services in the area within the past year."
-        },
-        {
-          "name": "protected_wildlife_areas_count",
-          "description": "Number of designated protected wildlife areas in the region."
+            "name": "data.csv",
+            "description": "Related to preserving species, habitats, and global biodiversity.",
+            "columns": [
+                {
+                    "name": "region_type",
+                    "description": "Categorizes each region as coastal or inland."
+                },
+                {
+                    "name": "average_annual_temperature",
+                    "description": "The average annual temperature of the region in degrees Celsius."
+                },
+                {
+                    "name": "species_diversity",
+                    "description": "A measure of species diversity in each region."
+                },
+                {
+                    "name": "employment_rate",
+                    "description": "Percentage of the eligible workforce that is employed, indicating labor market health."
+                },
+                {
+                    "name": "average_annual_humidity",
+                    "description": "The average annual relative humidity percentage in the region."
+                },
+                {
+                    "name": "wildlife_policy_strength",
+                    "description": "A numerical score from 1 to 10 that reflects the strength and enforcement of wildlife conservation policies in the region."
+                },
+                {
+                    "name": "population_density",
+                    "description": "The number of people per square kilometer in each region."
+                },
+                {
+                    "name": "education_level",
+                    "description": "Average education level in the region, on a scale from 1 (no formal education) to 10 (advanced degree)."
+                },
+                {
+                    "name": "environmental_awareness_level",
+                    "description": "The level of awareness and engagement with environmental issues in the region, measured as a score."
+                },
+                {
+                    "name": "infrastructure_quality",
+                    "description": "The quality of technological infrastructure available in the region, rated on a scale."
+                },
+                {
+                    "name": "conservation_program_type",
+                    "description": "Type of biodiversity conservation program implemented: community-led or government-led."
+                },
+                {
+                    "name": "average_temperature",
+                    "description": "Average annual temperature of the region."
+                },
+                {
+                    "name": "healthcare_budget_per_capita",
+                    "description": "Total healthcare budget per capita in the region, reflecting the investment in public health services."
+                },
+                {
+                    "name": "frequency_of_natural_disasters",
+                    "description": "Number of recorded natural disasters like earthquakes, floods, or storms per year in the region."
+                },
+                {
+                    "name": "wildlife_sightings_per_capita",
+                    "description": "Number of wildlife sightings reported per capita in the region annually."
+                },
+                {
+                    "name": "economic_status",
+                    "description": "The economic status of the region, categorized as low, middle, or high income."
+                },
+                {
+                    "name": "recent_internet_promotions",
+                    "description": "Binary indicator of whether there have been any significant promotional activities for internet services in the area within the past year."
+                },
+                {
+                    "name": "protected_wildlife_areas_count",
+                    "description": "Number of designated protected wildlife areas in the region."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 1032,
-      "question": "Is there a relationship between population density, conservation program type, and species diversity in regions? If so, what is the nature of that relationship?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "species_diversity",
-      
-      
-      "relevant_cols": [
-        "population_density",
-        "conservation_program_type",
-        "species_diversity"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 1032,
+            "question": "Is there a relationship between population density, conservation program type, and species diversity in regions? If so, what is the nature of that relationship?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "species_diversity",
+            "true_hypothesis": "In regions with a population density greater than 100 people per square kilometer and implementing community-led biodiversity conservation programs, the species diversity metric is 30% higher compared to regions with different conservation programs or lower population densities.",
+            "true_hypothesis_expr": "np.where((df['population_density'] > 100) & (df['conservation_program_type'] == 'community-led'), df.get('species_diversity', 0) * 1.3, df.get('species_diversity', 0))",
+            "relevant_cols": [
+                "population_density",
+                "conservation_program_type",
+                "species_diversity"
+            ]
+        }
+    ]
 }

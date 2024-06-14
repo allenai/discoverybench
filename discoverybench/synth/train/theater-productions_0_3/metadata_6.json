@@ -1,209 +1,209 @@
 {
-  "id": 6,
-  "domain": "theater productions",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to plays, acting, and stage performances.",
-      "columns": [
+    "id": 6,
+    "domain": "theater productions",
+    "datasets": [
         {
-          "name": "play_genre",
-          "description": "Genre of the play"
-        },
-        {
-          "name": "set_changes_per_scene",
-          "description": "Number of set changes each scene undergoes in a play"
-        },
-        {
-          "name": "season_of_production",
-          "description": "Season in which the play is produced"
-        },
-        {
-          "name": "original_content",
-          "description": "Indicates if the material is originally written for the stage"
-        },
-        {
-          "name": "theme_historical",
-          "description": "Indicates if the play has a historical theme."
-        },
-        {
-          "name": "historical_accuracy_focus",
-          "description": "Indicates if the production has a strong focus on historical accuracy"
-        },
-        {
-          "name": "play_duration_minutes",
-          "description": "Duration of the play in minutes"
-        },
-        {
-          "name": "average_ticket_price",
-          "description": "Average price of tickets sold for the play"
-        },
-        {
-          "name": "percentage_technology_used_scenes",
-          "description": "Percentage of scenes within a play that employ advanced technological effects, such as digital projections or automation."
-        },
-        {
-          "name": "average_scene_duration",
-          "description": "Average duration of scenes in minutes for a play"
-        },
-        {
-          "name": "number_of_actors",
-          "description": "Total number of actors involved in the play"
-        },
-        {
-          "name": "story_complexity_rating",
-          "description": "Rating of the storyline complexity on a scale from 1 to 5"
-        },
-        {
-          "name": "scene_complexity_index",
-          "description": "A numerical index rating the complexity of scenes in a play from simple (minimal props and effects) to complex (numerous props and special effects)"
-        },
-        {
-          "name": "venue_capacity",
-          "description": "Seating capacity of the venue where the play is performed."
-        },
-        {
-          "name": "licensed_content",
-          "description": "Indicates if the material is adapted from licensed content such as books or movies"
-        },
-        {
-          "name": "total_costume_changes",
-          "description": "Total number of costume changes throughout the play"
-        },
-        {
-          "name": "average_scene_complexity",
-          "description": "Average complexity score of scenes within the play, judged on factors such as stage setup, number of simultaneous actors, and scene changes"
-        },
-        {
-          "name": "director_experience_years",
-          "description": "Number of years the director has been directing plays."
-        },
-        {
-          "name": "number_of_lead_actors",
-          "description": "Count of lead actors in the play"
-        },
-        {
-          "name": "has_special_effects",
-          "description": "Indicates if the play includes special effects"
-        },
-        {
-          "name": "weekly_rehearsal_hours",
-          "description": "Average number of rehearsal hours per week for the current production"
-        },
-        {
-          "name": "special_guest_appearance",
-          "description": "Indicates whether there is a special guest appearing in the play"
-        },
-        {
-          "name": "ticket_pre_sales",
-          "description": "Number of tickets sold before the day of the play"
-        },
-        {
-          "name": "lead_actor_experience",
-          "description": "Captures the number of years of experience the lead actor has"
-        },
-        {
-          "name": "costume_complexity_level",
-          "description": "Indicates the complexity level of costumes used in the production"
-        },
-        {
-          "name": "duration_in_minutes",
-          "description": "Total duration of the play in minutes."
-        },
-        {
-          "name": "target_audience_family",
-          "description": "Indicates if the play is targeted primarily towards families and children"
-        },
-        {
-          "name": "number_of_complex_roles",
-          "description": "Count of complex roles in the play that require extensive prop usage or special skills"
-        },
-        {
-          "name": "promotional_discount",
-          "description": "Percentage discount offered on tickets for promotional purposes"
-        },
-        {
-          "name": "holiday_season",
-          "description": "Indicates whether the performance is during a holiday season"
-        },
-        {
-          "name": "number_of_cast_members",
-          "description": "The total number of cast members participating in the play."
-        },
-        {
-          "name": "set_complexity",
-          "description": "Complexity level of the set design, rated from 1 to 10."
-        },
-        {
-          "name": "past_success_count",
-          "description": "Total number of previously successful plays by the theater group"
-        },
-        {
-          "name": "has_sponsorship",
-          "description": "Indicates whether the play has financial sponsorship."
-        },
-        {
-          "name": "production_budget",
-          "description": "Total production budget of the play"
-        },
-        {
-          "name": "is_prime_time_performance",
-          "description": "Indicates whether the play is performed during prime time hours, usually evening, when audiences are larger."
-        },
-        {
-          "name": "audience_interaction",
-          "description": "Indicates if the play includes elements of audience interaction"
-        },
-        {
-          "name": "average_role_experience_years",
-          "description": "Average years of experience required for roles in the play"
-        },
-        {
-          "name": "number_of_performance_days",
-          "description": "Total number of days over which the play is performed."
-        },
-        {
-          "name": "total_play_duration_minutes",
-          "description": "Total duration of the play in minutes"
-        },
-        {
-          "name": "interactive_engagement_binary",
-          "description": "Indicates if the play involves direct interaction with the audience"
-        },
-        {
-          "name": "uses_special_effects",
-          "description": "Indicates whether the play uses special effects"
-        },
-        {
-          "name": "percentage_outdoor_scenes",
-          "description": "Percentage of scenes within a play that are set outdoors, typically requiring simpler setups."
-        },
-        {
-          "name": "lead_actor_availability_days",
-          "description": "Total days the lead actor is available to perform in a week"
-        },
-        {
-          "name": "total_cast_members",
-          "description": "Total number of cast members in the play"
+            "name": "data.csv",
+            "description": "Related to plays, acting, and stage performances.",
+            "columns": [
+                {
+                    "name": "play_genre",
+                    "description": "Genre of the play"
+                },
+                {
+                    "name": "set_changes_per_scene",
+                    "description": "Number of set changes each scene undergoes in a play"
+                },
+                {
+                    "name": "season_of_production",
+                    "description": "Season in which the play is produced"
+                },
+                {
+                    "name": "original_content",
+                    "description": "Indicates if the material is originally written for the stage"
+                },
+                {
+                    "name": "theme_historical",
+                    "description": "Indicates if the play has a historical theme."
+                },
+                {
+                    "name": "historical_accuracy_focus",
+                    "description": "Indicates if the production has a strong focus on historical accuracy"
+                },
+                {
+                    "name": "play_duration_minutes",
+                    "description": "Duration of the play in minutes"
+                },
+                {
+                    "name": "average_ticket_price",
+                    "description": "Average price of tickets sold for the play"
+                },
+                {
+                    "name": "percentage_technology_used_scenes",
+                    "description": "Percentage of scenes within a play that employ advanced technological effects, such as digital projections or automation."
+                },
+                {
+                    "name": "average_scene_duration",
+                    "description": "Average duration of scenes in minutes for a play"
+                },
+                {
+                    "name": "number_of_actors",
+                    "description": "Total number of actors involved in the play"
+                },
+                {
+                    "name": "story_complexity_rating",
+                    "description": "Rating of the storyline complexity on a scale from 1 to 5"
+                },
+                {
+                    "name": "scene_complexity_index",
+                    "description": "A numerical index rating the complexity of scenes in a play from simple (minimal props and effects) to complex (numerous props and special effects)"
+                },
+                {
+                    "name": "venue_capacity",
+                    "description": "Seating capacity of the venue where the play is performed."
+                },
+                {
+                    "name": "licensed_content",
+                    "description": "Indicates if the material is adapted from licensed content such as books or movies"
+                },
+                {
+                    "name": "total_costume_changes",
+                    "description": "Total number of costume changes throughout the play"
+                },
+                {
+                    "name": "average_scene_complexity",
+                    "description": "Average complexity score of scenes within the play, judged on factors such as stage setup, number of simultaneous actors, and scene changes"
+                },
+                {
+                    "name": "director_experience_years",
+                    "description": "Number of years the director has been directing plays."
+                },
+                {
+                    "name": "number_of_lead_actors",
+                    "description": "Count of lead actors in the play"
+                },
+                {
+                    "name": "has_special_effects",
+                    "description": "Indicates if the play includes special effects"
+                },
+                {
+                    "name": "weekly_rehearsal_hours",
+                    "description": "Average number of rehearsal hours per week for the current production"
+                },
+                {
+                    "name": "special_guest_appearance",
+                    "description": "Indicates whether there is a special guest appearing in the play"
+                },
+                {
+                    "name": "ticket_pre_sales",
+                    "description": "Number of tickets sold before the day of the play"
+                },
+                {
+                    "name": "lead_actor_experience",
+                    "description": "Captures the number of years of experience the lead actor has"
+                },
+                {
+                    "name": "costume_complexity_level",
+                    "description": "Indicates the complexity level of costumes used in the production"
+                },
+                {
+                    "name": "duration_in_minutes",
+                    "description": "Total duration of the play in minutes."
+                },
+                {
+                    "name": "target_audience_family",
+                    "description": "Indicates if the play is targeted primarily towards families and children"
+                },
+                {
+                    "name": "number_of_complex_roles",
+                    "description": "Count of complex roles in the play that require extensive prop usage or special skills"
+                },
+                {
+                    "name": "promotional_discount",
+                    "description": "Percentage discount offered on tickets for promotional purposes"
+                },
+                {
+                    "name": "holiday_season",
+                    "description": "Indicates whether the performance is during a holiday season"
+                },
+                {
+                    "name": "number_of_cast_members",
+                    "description": "The total number of cast members participating in the play."
+                },
+                {
+                    "name": "set_complexity",
+                    "description": "Complexity level of the set design, rated from 1 to 10."
+                },
+                {
+                    "name": "past_success_count",
+                    "description": "Total number of previously successful plays by the theater group"
+                },
+                {
+                    "name": "has_sponsorship",
+                    "description": "Indicates whether the play has financial sponsorship."
+                },
+                {
+                    "name": "production_budget",
+                    "description": "Total production budget of the play"
+                },
+                {
+                    "name": "is_prime_time_performance",
+                    "description": "Indicates whether the play is performed during prime time hours, usually evening, when audiences are larger."
+                },
+                {
+                    "name": "audience_interaction",
+                    "description": "Indicates if the play includes elements of audience interaction"
+                },
+                {
+                    "name": "average_role_experience_years",
+                    "description": "Average years of experience required for roles in the play"
+                },
+                {
+                    "name": "number_of_performance_days",
+                    "description": "Total number of days over which the play is performed."
+                },
+                {
+                    "name": "total_play_duration_minutes",
+                    "description": "Total duration of the play in minutes"
+                },
+                {
+                    "name": "interactive_engagement_binary",
+                    "description": "Indicates if the play involves direct interaction with the audience"
+                },
+                {
+                    "name": "uses_special_effects",
+                    "description": "Indicates whether the play uses special effects"
+                },
+                {
+                    "name": "percentage_outdoor_scenes",
+                    "description": "Percentage of scenes within a play that are set outdoors, typically requiring simpler setups."
+                },
+                {
+                    "name": "lead_actor_availability_days",
+                    "description": "Total days the lead actor is available to perform in a week"
+                },
+                {
+                    "name": "total_cast_members",
+                    "description": "Total number of cast members in the play"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 273,
-      "question": "Is there a relationship between the number of ticket pre-sales and the presence of a special guest appearance in the theater productions dataset?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "ticket_pre_sales",
-      
-      
-      "relevant_cols": [
-        "special_guest_appearance",
-        "holiday_season",
-        "promotional_discount",
-        "ticket_pre_sales"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 273,
+            "question": "Is there a relationship between the number of ticket pre-sales and the presence of a special guest appearance in the theater productions dataset?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "ticket_pre_sales",
+            "true_hypothesis": "The number of ticket pre-sales is determined by a calculation where a base value of 50 is increased to 100 if there is a special guest appearance and by 80 during holiday seasons. Additionally, the promotional discount is added to this value.",
+            "true_hypothesis_expr": "df.apply(lambda row: (100 if row['special_guest_appearance'] == True else 50) + (80 if row['holiday_season'] == True else 30) + row['promotional_discount'], axis=1)",
+            "relevant_cols": [
+                "special_guest_appearance",
+                "holiday_season",
+                "promotional_discount",
+                "ticket_pre_sales"
+            ]
+        }
+    ]
 }
