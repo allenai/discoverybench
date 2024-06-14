@@ -72,7 +72,6 @@
         ],
         "intermediate": []
     },
-    "workflow": "1. Two OLS regressions were ran to compared the differences betwen MALE & FEMALE\n\n2. OLS Regression on data with GENDER=\"MALE\" with DISSAVED and SAMESAVE as independent variables and BMI as dependent variable\n\n3. OLS Regression on data with GENDER=\"FEMALE\" with DISSAVED and SAMESAVE as independent variables and BMI as dependent variable",
     "queries": [
         [
             {

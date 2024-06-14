@@ -72,7 +72,6 @@
         ],
         "intermediate": []
     },
-    "workflow": "1. Chose BMI as dependent variable.\n2. Time preference (independent) variables as 'DISSAVED' and 'SAMESAVE'.\n3. Fit an OLS regression model and returned the model summary.",
     "queries": [
         [
             {

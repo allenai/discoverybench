@@ -72,7 +72,6 @@
         ],
         "intermediate": []
     },
-    "workflow": "OLS Regression on data with GENDER=\"FEMALE\" and BLACK=1\nWith DISSAVED and SAMESAVE as independent variables\nand BMI as dependent variable",
     "queries": [
         [
             {

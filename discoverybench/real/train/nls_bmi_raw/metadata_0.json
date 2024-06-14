@@ -332,7 +332,6 @@
         ],
         "intermediate": []
     },
-    "workflow": "1. Selected appropriate variables from the raw data\ne.g.: Height: Height of respondent on 1985 instead of 1981.\n      Income: Total net family income, 1989 (There are many other income variables in the raw data)\n      Age:    Age of respondent at 1989 (Derived from Age at 1979).\nData Transformation:\n2. Replaced -1 to -5 values (unavailable data) with NaN\n3. Imputed the missing values in the AGE and INCOME variable with mean.\n4. AGE_1989 had missing values, hence derived the variable as [AGE_1979 + 10]\n5. Created a BMI variable using: bmi = (weight) * 0.453592 / (height) * 0.0254\n6. Divided the Family income variable by 1000$ (Mentioned in the paper)\n7. Created an AGE^2 variable (From the paper)\n8. One-hot encoded RACE variable into BLACK and HISPANIC\n9. One-hot encooded GENDER variable into MALE and FEMALE\n10. Selected 'Was more money put into or taken out of R/spouse savings since last interview, 1989' as the Time Preference variable.\n  DISSAVED = 1 if 'TOOK MORE MONEY OUT' else 0\n  SAMESAVE = 1 if 'NO SAVINGS' or 'NO CHANGE' else 0\n11. Dropped the unimportant columns for replication\n12. DISSAVED and SAMESAVE as independent variables and BMI as dependent variable\n13. Fit an OLS Regression Model",
     "queries": [
         [
             {

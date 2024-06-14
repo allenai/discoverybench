@@ -132,7 +132,6 @@
         ],
         "intermediate": []
     },
-    "workflow": "1. OLS Regression with 10 independent varialbes\n['RML_evol','MBL_evol','OGP_evol','BEL_evol','diversity','runoff','Elevation','sgr','soil_div','area']\n2. And 'BAMM_speciation' as the dependent variable",
     "queries": [
         [
             {

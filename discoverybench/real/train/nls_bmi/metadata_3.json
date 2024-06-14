@@ -72,7 +72,6 @@
         ],
         "intermediate": []
     },
-    "workflow": "1. One-hot encode Gender variable into MALE and FEMALE\n2. Extract the independent variables ['AGE','INCOME', 'BMI', 'BLACK', 'HISPANIC', 'MALE', 'FEMALE']\n3. Add dependent variable (DISSAVED) from the df\n4. Add a constant term to the independent variable to account for the intercept term in the logistic regression model.\n5. Fit a logistic regression model",
     "queries": [
         [
             {

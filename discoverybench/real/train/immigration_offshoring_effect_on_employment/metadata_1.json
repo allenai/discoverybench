@@ -71,7 +71,6 @@
         ],
         "intermediate": []
     },
-    "workflow": "1. Merge the datasets offshore, immigration, and native_employment on the common columns 'year' and 'beaind'.\n2. Replace infinite values with NaNs and drop rows with NaNs in any column.\n3. Independent variables: 'iv_offshoring_1', 'penetration'\n4. Fit the OLS regression model",
     "queries": [
         [
             {
