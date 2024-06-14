@@ -1,261 +1,252 @@
 {
-  "id": 12,
-  "domain": "astronomy",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to celestial bodies, galaxies, and space phenomena.",
-      "columns": [
+    "id": 12,
+    "domain": "astronomy",
+    "datasets": [
         {
-          "name": "distance_to_nearest_star_forming_region",
-          "description": "Distance from the galactic center to the nearest star-forming region measured in light-years"
-        },
-        {
-          "name": "star_density",
-          "description": "Number of stars per unit volume in the galaxy"
-        },
-        {
-          "name": "passive_star_nuclei",
-          "description": "Count of galaxies in a cluster with passive or dormant galactic nuclei"
-        },
-        {
-          "name": "blue_signature_intensity",
-          "description": "Measure of blue light intensity from the galaxy"
-        },
-        {
-          "name": "gravitational_pull",
-          "description": "The combined gravitational force exerted by nearby celestial bodies, measured in multiples of Earth's gravity"
-        },
-        {
-          "name": "star_formation_rate",
-          "description": "Rate of star formation in the galaxy measured in solar masses per year"
-        },
-        {
-          "name": "gravity_rule_index",
-          "description": "A score indicating the strength of gravitational pull within the galaxy"
-        },
-        {
-          "name": "stellar_density",
-          "description": "Number of stars per cubic light year in the galaxy"
-        },
-        {
-          "name": "dominant_star_type",
-          "description": "Most common type of star within the galaxy"
-        },
-        {
-          "name": "orbital_companions",
-          "description": "Number of smaller celestial bodies or satellites orbiting the galaxy"
-        },
-        {
-          "name": "average_star_surface_temperature",
-          "description": "Average temperature on the surface of stars in the galaxy measured in Kelvin"
-        },
-        {
-          "name": "galaxy_mass",
-          "description": "The total mass of the galaxy measured in solar masses"
-        },
-        {
-          "name": "cosmic_ray_exposure",
-          "description": "Measure of the intensity of cosmic ray exposure in particles per square meter"
-        },
-        {
-          "name": "number_of_satellite_galaxies",
-          "description": "The count of smaller galaxies gravitationally bound to the main galaxy"
-        },
-        {
-          "name": "central_black_hole_presence",
-          "description": "Indicates whether there is a supermassive black hole at the center of the galaxy"
-        },
-        {
-          "name": "high_radiation_levels",
-          "description": "Binary indicator of whether the galaxy is exposed to high levels of cosmic radiation"
-        },
-        {
-          "name": "recent_supernova_events",
-          "description": "Number of supernova events in the galaxy's quadrant within the past million years"
-        },
-        {
-          "name": "average_surface_temperature_of_stars",
-          "description": "Average surface temperature of the dominant stars within the galaxy, in Kelvin"
-        },
-        {
-          "name": "supernova_rate",
-          "description": "Number of supernovae observed per year in the galaxy"
-        },
-        {
-          "name": "cosmic_radiation_level",
-          "description": "Average level of cosmic radiation in the galaxy, measured in microsieverts per hour (\u00b5Sv/h)"
-        },
-        {
-          "name": "average_orbital_velocity",
-          "description": "The average velocity at which celestial bodies orbit the center of the galaxy, measured in kilometers per second"
-        },
-        {
-          "name": "metallic_content_percentage",
-          "description": "Average percentage of metals found in stars within the galaxy."
-        },
-        {
-          "name": "has_active_galactic_nucleus",
-          "description": "Indicates whether the galaxy has an active galactic nucleus"
-        },
-        {
-          "name": "has_binary_star_system",
-          "description": "Binary status indicating if the galaxy contains a binary star system"
-        },
-        {
-          "name": "galaxy_type",
-          "description": "Classification of the galaxy based on its structure"
-        },
-        {
-          "name": "colder_cosmic_temperature",
-          "description": "Temperature of the cosmic environment of the galaxy measured in Kelvin"
-        },
-        {
-          "name": "intense_stellar_formation",
-          "description": "Binary indicator of whether the galaxy's cluster has a high rate of star formation"
-        },
-        {
-          "name": "galaxy_ID",
-          "description": "Unique identifier for each galaxy"
-        },
-        {
-          "name": "ultraviolet_emission",
-          "description": "Indicator whether the galaxy has significant ultraviolet emission, binary true/false"
-        },
-        {
-          "name": "binary_star_percentage",
-          "description": "The percentage of stars within a galaxy that are part of a binary system"
-        },
-        {
-          "name": "presence_exotic_matter",
-          "description": "Binary status indicating if exotic matter is significantly present within the galaxy"
-        },
-        {
-          "name": "cosmic_radiation_percentile",
-          "description": "Relative percentile rank of a galaxy based on detected cosmic radiation levels"
-        },
-        {
-          "name": "interstellar_magnetic_field_strength",
-          "description": "Strength of the galaxy's interstellar magnetic field, measured in gauss"
-        },
-        {
-          "name": "dark_matter_percentage",
-          "description": "The percentage of a galaxy's mass that is made up of dark matter"
-        },
-        {
-          "name": "velocity_dispersion_of_stars",
-          "description": "Statistical spread in velocities of stars within the galaxy, in km/s"
-        },
-        {
-          "name": "binary_star_systems",
-          "description": "Number of binary star systems observed in the galaxy"
-        },
-        {
-          "name": "proportion_of_red_stars",
-          "description": "Proportion of red stars compared to total stars in the galaxy"
-        },
-        {
-          "name": "active_star_nuclei",
-          "description": "Count of galaxies in a cluster with active galactic nuclei"
-        },
-        {
-          "name": "nova_light_emission_intensity",
-          "description": "Mean intensity of light emissions from nova events near the galaxy measured in lumens."
-        },
-        {
-          "name": "luminosity_variability",
-          "description": "Fluctuation degree of galaxy's luminosity over a 10-year period, measured as the standard deviation of luminosity"
-        },
-        {
-          "name": "central_black_hole_mass",
-          "description": "Mass of the central black hole in the galaxy, measured in solar masses"
-        },
-        {
-          "name": "galaxy_age",
-          "description": "Estimated age of the galaxy in billions of years"
-        },
-        {
-          "name": "variable_stellar_types_ratio",
-          "description": "The ratio of variable star types to total star count within the galaxy"
-        },
-        {
-          "name": "magnetic_field_strength",
-          "description": "Measure of the galaxy's average magnetic field strength in gauss"
-        },
-        {
-          "name": "dark_matter_anomaly_gravitational_effect",
-          "description": "Measured gravitational effect of the nearest dark matter anomaly on the galaxy, on a scale from weak to strong"
-        },
-        {
-          "name": "star_forming_region_proximity",
-          "description": "Closeness of the galaxy to nearest star-forming regions, measured in light years"
-        },
-        {
-          "name": "dominant_stellar_age",
-          "description": "Average age of the dominant stellar population in the galaxy, measured in millions of years"
-        },
-        {
-          "name": "binary_star_systems_percentage",
-          "description": "Percentage of star systems in the galaxy that are binary or multiple star systems"
-        },
-        {
-          "name": "dark_matter_density_classification",
-          "description": "Binary classification of dark matter density in the region"
-        },
-        {
-          "name": "is_in_orion_cluster",
-          "description": "Binary status indicating if the galaxy is located in the Orion cluster"
-        },
-        {
-          "name": "magnetic_field_presence",
-          "description": "Indicator of the presence of significant magnetic fields in the galaxy"
-        },
-        {
-          "name": "distance_to_galactic_core",
-          "description": "Distance of the galaxy from the nearest galactic core in light years"
-        },
-        {
-          "name": "galaxy_spectral_redshift",
-          "description": "Measure of the galaxy's redshift indicating the speed at which it is moving away"
-        },
-        {
-          "name": "number_of_nebulae",
-          "description": "Count of the nebulae within the galaxy"
-        },
-        {
-          "name": "interstellar_gas_mass",
-          "description": "Total mass of interstellar gas in the galaxy measured in solar masses"
-        },
-        {
-          "name": "distance_to_galactic_center",
-          "description": "The distance of the galaxy from the galactic center in light years"
-        },
-        {
-          "name": "cosmic_structures",
-          "description": "Number of larger cosmic structures within the vicinity of the galaxy"
-        },
-        {
-          "name": "proximity_to_black_hole",
-          "description": "Distance of the galaxy from the nearest black hole in light years"
+            "name": "data.csv",
+            "description": "Related to celestial bodies, galaxies, and space phenomena.",
+            "columns": [
+                {
+                    "name": "distance_to_nearest_star_forming_region",
+                    "description": "Distance from the galactic center to the nearest star-forming region measured in light-years"
+                },
+                {
+                    "name": "star_density",
+                    "description": "Number of stars per unit volume in the galaxy"
+                },
+                {
+                    "name": "passive_star_nuclei",
+                    "description": "Count of galaxies in a cluster with passive or dormant galactic nuclei"
+                },
+                {
+                    "name": "blue_signature_intensity",
+                    "description": "Measure of blue light intensity from the galaxy"
+                },
+                {
+                    "name": "gravitational_pull",
+                    "description": "The combined gravitational force exerted by nearby celestial bodies, measured in multiples of Earth's gravity"
+                },
+                {
+                    "name": "star_formation_rate",
+                    "description": "Rate of star formation in the galaxy measured in solar masses per year"
+                },
+                {
+                    "name": "gravity_rule_index",
+                    "description": "A score indicating the strength of gravitational pull within the galaxy"
+                },
+                {
+                    "name": "stellar_density",
+                    "description": "Number of stars per cubic light year in the galaxy"
+                },
+                {
+                    "name": "dominant_star_type",
+                    "description": "Most common type of star within the galaxy"
+                },
+                {
+                    "name": "orbital_companions",
+                    "description": "Number of smaller celestial bodies or satellites orbiting the galaxy"
+                },
+                {
+                    "name": "average_star_surface_temperature",
+                    "description": "Average temperature on the surface of stars in the galaxy measured in Kelvin"
+                },
+                {
+                    "name": "galaxy_mass",
+                    "description": "The total mass of the galaxy measured in solar masses"
+                },
+                {
+                    "name": "cosmic_ray_exposure",
+                    "description": "Measure of the intensity of cosmic ray exposure in particles per square meter"
+                },
+                {
+                    "name": "number_of_satellite_galaxies",
+                    "description": "The count of smaller galaxies gravitationally bound to the main galaxy"
+                },
+                {
+                    "name": "central_black_hole_presence",
+                    "description": "Indicates whether there is a supermassive black hole at the center of the galaxy"
+                },
+                {
+                    "name": "high_radiation_levels",
+                    "description": "Binary indicator of whether the galaxy is exposed to high levels of cosmic radiation"
+                },
+                {
+                    "name": "recent_supernova_events",
+                    "description": "Number of supernova events in the galaxy's quadrant within the past million years"
+                },
+                {
+                    "name": "average_surface_temperature_of_stars",
+                    "description": "Average surface temperature of the dominant stars within the galaxy, in Kelvin"
+                },
+                {
+                    "name": "supernova_rate",
+                    "description": "Number of supernovae observed per year in the galaxy"
+                },
+                {
+                    "name": "cosmic_radiation_level",
+                    "description": "Average level of cosmic radiation in the galaxy, measured in microsieverts per hour (µSv/h)"
+                },
+                {
+                    "name": "average_orbital_velocity",
+                    "description": "The average velocity at which celestial bodies orbit the center of the galaxy, measured in kilometers per second"
+                },
+                {
+                    "name": "metallic_content_percentage",
+                    "description": "Average percentage of metals found in stars within the galaxy."
+                },
+                {
+                    "name": "has_active_galactic_nucleus",
+                    "description": "Indicates whether the galaxy has an active galactic nucleus"
+                },
+                {
+                    "name": "has_binary_star_system",
+                    "description": "Binary status indicating if the galaxy contains a binary star system"
+                },
+                {
+                    "name": "galaxy_type",
+                    "description": "Classification of the galaxy based on its structure"
+                },
+                {
+                    "name": "colder_cosmic_temperature",
+                    "description": "Temperature of the cosmic environment of the galaxy measured in Kelvin"
+                },
+                {
+                    "name": "intense_stellar_formation",
+                    "description": "Binary indicator of whether the galaxy's cluster has a high rate of star formation"
+                },
+                {
+                    "name": "galaxy_ID",
+                    "description": "Unique identifier for each galaxy"
+                },
+                {
+                    "name": "ultraviolet_emission",
+                    "description": "Indicator whether the galaxy has significant ultraviolet emission, binary true/false"
+                },
+                {
+                    "name": "binary_star_percentage",
+                    "description": "The percentage of stars within a galaxy that are part of a binary system"
+                },
+                {
+                    "name": "presence_exotic_matter",
+                    "description": "Binary status indicating if exotic matter is significantly present within the galaxy"
+                },
+                {
+                    "name": "cosmic_radiation_percentile",
+                    "description": "Relative percentile rank of a galaxy based on detected cosmic radiation levels"
+                },
+                {
+                    "name": "interstellar_magnetic_field_strength",
+                    "description": "Strength of the galaxy's interstellar magnetic field, measured in gauss"
+                },
+                {
+                    "name": "dark_matter_percentage",
+                    "description": "The percentage of a galaxy's mass that is made up of dark matter"
+                },
+                {
+                    "name": "velocity_dispersion_of_stars",
+                    "description": "Statistical spread in velocities of stars within the galaxy, in km/s"
+                },
+                {
+                    "name": "binary_star_systems",
+                    "description": "Number of binary star systems observed in the galaxy"
+                },
+                {
+                    "name": "proportion_of_red_stars",
+                    "description": "Proportion of red stars compared to total stars in the galaxy"
+                },
+                {
+                    "name": "active_star_nuclei",
+                    "description": "Count of galaxies in a cluster with active galactic nuclei"
+                },
+                {
+                    "name": "nova_light_emission_intensity",
+                    "description": "Mean intensity of light emissions from nova events near the galaxy measured in lumens."
+                },
+                {
+                    "name": "luminosity_variability",
+                    "description": "Fluctuation degree of galaxy's luminosity over a 10-year period, measured as the standard deviation of luminosity"
+                },
+                {
+                    "name": "central_black_hole_mass",
+                    "description": "Mass of the central black hole in the galaxy, measured in solar masses"
+                },
+                {
+                    "name": "galaxy_age",
+                    "description": "Estimated age of the galaxy in billions of years"
+                },
+                {
+                    "name": "variable_stellar_types_ratio",
+                    "description": "The ratio of variable star types to total star count within the galaxy"
+                },
+                {
+                    "name": "magnetic_field_strength",
+                    "description": "Measure of the galaxy's average magnetic field strength in gauss"
+                },
+                {
+                    "name": "dark_matter_anomaly_gravitational_effect",
+                    "description": "Measured gravitational effect of the nearest dark matter anomaly on the galaxy, on a scale from weak to strong"
+                },
+                {
+                    "name": "star_forming_region_proximity",
+                    "description": "Closeness of the galaxy to nearest star-forming regions, measured in light years"
+                },
+                {
+                    "name": "dominant_stellar_age",
+                    "description": "Average age of the dominant stellar population in the galaxy, measured in millions of years"
+                },
+                {
+                    "name": "binary_star_systems_percentage",
+                    "description": "Percentage of star systems in the galaxy that are binary or multiple star systems"
+                },
+                {
+                    "name": "dark_matter_density_classification",
+                    "description": "Binary classification of dark matter density in the region"
+                },
+                {
+                    "name": "is_in_orion_cluster",
+                    "description": "Binary status indicating if the galaxy is located in the Orion cluster"
+                },
+                {
+                    "name": "magnetic_field_presence",
+                    "description": "Indicator of the presence of significant magnetic fields in the galaxy"
+                },
+                {
+                    "name": "distance_to_galactic_core",
+                    "description": "Distance of the galaxy from the nearest galactic core in light years"
+                },
+                {
+                    "name": "galaxy_spectral_redshift",
+                    "description": "Measure of the galaxy's redshift indicating the speed at which it is moving away"
+                },
+                {
+                    "name": "number_of_nebulae",
+                    "description": "Count of the nebulae within the galaxy"
+                },
+                {
+                    "name": "interstellar_gas_mass",
+                    "description": "Total mass of interstellar gas in the galaxy measured in solar masses"
+                },
+                {
+                    "name": "distance_to_galactic_center",
+                    "description": "The distance of the galaxy from the galactic center in light years"
+                },
+                {
+                    "name": "cosmic_structures",
+                    "description": "Number of larger cosmic structures within the vicinity of the galaxy"
+                },
+                {
+                    "name": "proximity_to_black_hole",
+                    "description": "Distance of the galaxy from the nearest black hole in light years"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 801,
-      "question": "What is the relationship between cosmic ray exposure in galaxies and the impact of supernova rate, magnetic field strength, and the presence of binary star systems?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "cosmic_ray_exposure",
-      
-      
-      "relevant_cols": [
-        "supernova_rate",
-        "magnetic_field_strength",
-        "has_binary_star_system",
-        "cosmic_ray_exposure"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 801,
+            "question": "What is the relationship between cosmic ray exposure in galaxies and the impact of supernova rate, magnetic field strength, and the presence of binary star systems?",
+            "question_type": "general",
+            "difficulty": 1
+        }
+    ]
 }

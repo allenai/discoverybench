@@ -1,116 +1,108 @@
 {
-  "id": 0,
-  "domain": "philosophical debates",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to ethics, metaphysics, and philosophical arguments.",
-      "columns": [
+    "id": 0,
+    "domain": "philosophical debates",
+    "datasets": [
         {
-          "name": "audience_interest_level",
-          "description": "Numerical value representing audience's interest in philosophical topics, scaled 1 to 10."
-        },
-        {
-          "name": "average_debate_duration",
-          "description": "Average duration of debates in minutes."
-        },
-        {
-          "name": "number_of_philosophical_books_sold",
-          "description": "Count of philosophical books sold in the month prior to the debate."
-        },
-        {
-          "name": "number_of_participants",
-          "description": "Total number of participants in the debate"
-        },
-        {
-          "name": "presence_of_recognized_philosophers",
-          "description": "Indicates whether any internationally recognized philosophers participated in debates held in that month."
-        },
-        {
-          "name": "moderator_ethical_stance",
-          "description": "Categorical value reflecting the ethical stance of the debate moderator, such as 'utilitarian', 'deontological', or 'virtue_ethics'."
-        },
-        {
-          "name": "average_audience_questions",
-          "description": "Average number of questions asked by the audience during a session"
-        },
-        {
-          "name": "number_of_sessions",
-          "description": "The total number of debate sessions."
-        },
-        {
-          "name": "special_guest_present",
-          "description": "Binary flag indicating whether a special guest relevant to the philosophical topic was present during the debate."
-        },
-        {
-          "name": "critical_event_occurred",
-          "description": "Binary flag indicating whether a critical event that could sway participants' opinions occurred during the debate."
-        },
-        {
-          "name": "day_of_week",
-          "description": "The day of the week on which the debate is scheduled"
-        },
-        {
-          "name": "external_temperature",
-          "description": "The outdoor temperature in degrees Celsius during the debate"
-        },
-        {
-          "name": "date_of_debate",
-          "description": "Date when the debate occurred"
-        },
-        {
-          "name": "philosophical_topic",
-          "description": "Type of philosophical topic being discussed in the debate"
-        },
-        {
-          "name": "number_of_philosophical_articles",
-          "description": "The count of philosophical articles published in the month before the debate."
-        },
-        {
-          "name": "digital_platform_used",
-          "description": "Indicates whether the debate session was held using a digital platform"
-        },
-        {
-          "name": "ethics_philosopher_present",
-          "description": "Indicates whether a professional ethics philosopher is present as a speaker"
-        },
-        {
-          "name": "argument_intensity",
-          "description": "Numerical value representing the intensity of arguments used during the debate, where higher values indicate more intense debates."
-        },
-        {
-          "name": "keynote_speaker_present",
-          "description": "Indicates whether a keynote speaker is present during the debate session"
-        },
-        {
-          "name": "topic_of_debate",
-          "description": "The main ethical topic discussed during the debate"
-        },
-        {
-          "name": "monthly_attendance_rate",
-          "description": "Percentage of seats filled at philosophical debate seminars each month."
-        },
-        {
-          "name": "month_of_debate",
-          "description": "Month when the debate occurred extracted from the full date"
+            "name": "data.csv",
+            "description": "Related to ethics, metaphysics, and philosophical arguments.",
+            "columns": [
+                {
+                    "name": "audience_interest_level",
+                    "description": "Numerical value representing audience's interest in philosophical topics, scaled 1 to 10."
+                },
+                {
+                    "name": "average_debate_duration",
+                    "description": "Average duration of debates in minutes."
+                },
+                {
+                    "name": "number_of_philosophical_books_sold",
+                    "description": "Count of philosophical books sold in the month prior to the debate."
+                },
+                {
+                    "name": "number_of_participants",
+                    "description": "Total number of participants in the debate"
+                },
+                {
+                    "name": "presence_of_recognized_philosophers",
+                    "description": "Indicates whether any internationally recognized philosophers participated in debates held in that month."
+                },
+                {
+                    "name": "moderator_ethical_stance",
+                    "description": "Categorical value reflecting the ethical stance of the debate moderator, such as 'utilitarian', 'deontological', or 'virtue_ethics'."
+                },
+                {
+                    "name": "average_audience_questions",
+                    "description": "Average number of questions asked by the audience during a session"
+                },
+                {
+                    "name": "number_of_sessions",
+                    "description": "The total number of debate sessions."
+                },
+                {
+                    "name": "special_guest_present",
+                    "description": "Binary flag indicating whether a special guest relevant to the philosophical topic was present during the debate."
+                },
+                {
+                    "name": "critical_event_occurred",
+                    "description": "Binary flag indicating whether a critical event that could sway participants' opinions occurred during the debate."
+                },
+                {
+                    "name": "day_of_week",
+                    "description": "The day of the week on which the debate is scheduled"
+                },
+                {
+                    "name": "external_temperature",
+                    "description": "The outdoor temperature in degrees Celsius during the debate"
+                },
+                {
+                    "name": "date_of_debate",
+                    "description": "Date when the debate occurred"
+                },
+                {
+                    "name": "philosophical_topic",
+                    "description": "Type of philosophical topic being discussed in the debate"
+                },
+                {
+                    "name": "number_of_philosophical_articles",
+                    "description": "The count of philosophical articles published in the month before the debate."
+                },
+                {
+                    "name": "digital_platform_used",
+                    "description": "Indicates whether the debate session was held using a digital platform"
+                },
+                {
+                    "name": "ethics_philosopher_present",
+                    "description": "Indicates whether a professional ethics philosopher is present as a speaker"
+                },
+                {
+                    "name": "argument_intensity",
+                    "description": "Numerical value representing the intensity of arguments used during the debate, where higher values indicate more intense debates."
+                },
+                {
+                    "name": "keynote_speaker_present",
+                    "description": "Indicates whether a keynote speaker is present during the debate session"
+                },
+                {
+                    "name": "topic_of_debate",
+                    "description": "The main ethical topic discussed during the debate"
+                },
+                {
+                    "name": "monthly_attendance_rate",
+                    "description": "Percentage of seats filled at philosophical debate seminars each month."
+                },
+                {
+                    "name": "month_of_debate",
+                    "description": "Month when the debate occurred extracted from the full date"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 285,
-      "question": "Is there a relationship between the presence of a keynote speaker, the philosophical topic being ethics, and the average number of audience questions in philosophical debates?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "average_audience_questions",
-      
-      
-      "relevant_cols": [
-        "philosophical_topic",
-        "keynote_speaker_present",
-        "average_audience_questions"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 285,
+            "question": "Is there a relationship between the presence of a keynote speaker, the philosophical topic being ethics, and the average number of audience questions in philosophical debates?",
+            "question_type": "general",
+            "difficulty": 1
+        }
+    ]
 }

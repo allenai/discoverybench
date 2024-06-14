@@ -1,109 +1,96 @@
 {
-  "id": 0,
-  "domain": "philosophical debates",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to ethics, metaphysics, and philosophical arguments.",
-      "columns": [
+    "id": 0,
+    "domain": "philosophical debates",
+    "datasets": [
         {
-          "name": "topic_of_debate",
-          "description": "The main ethical topic discussed during the debate"
-        },
-        {
-          "name": "percentage_increase_in_utilitarianism",
-          "description": "Percentage increase in participants advocating for utilitarianism in a moderated format compared to an unmoderated format"
-        },
-        {
-          "name": "number_of_philosophical_articles",
-          "description": "The count of philosophical articles published in the month before the debate."
-        },
-        {
-          "name": "number_of_philosophical_books_sold",
-          "description": "Count of philosophical books sold in the month prior to the debate."
-        },
-        {
-          "name": "ethics_philosopher_present",
-          "description": "Indicates whether a professional ethics philosopher is present as a speaker"
-        },
-        {
-          "name": "moderator_ethical_stance",
-          "description": "Categorical value reflecting the ethical stance of the debate moderator, such as 'utilitarian', 'deontological', or 'virtue_ethics'."
-        },
-        {
-          "name": "critical_event_occurred",
-          "description": "Binary flag indicating whether a critical event that could sway participants' opinions occurred during the debate."
-        },
-        {
-          "name": "external_temperature",
-          "description": "The outdoor temperature in degrees Celsius during the debate"
-        },
-        {
-          "name": "average_debate_duration",
-          "description": "Average duration of debates in minutes."
-        },
-        {
-          "name": "number_of_sessions",
-          "description": "The total number of debate sessions."
-        },
-        {
-          "name": "monthly_attendance_rate",
-          "description": "Percentage of seats filled at philosophical debate seminars each month."
-        },
-        {
-          "name": "audience_interest_level",
-          "description": "Numerical value representing audience's interest in philosophical topics, scaled 1 to 10."
-        },
-        {
-          "name": "day_of_week",
-          "description": "The day of the week on which the debate is scheduled"
-        },
-        {
-          "name": "argument_intensity",
-          "description": "Numerical value representing the intensity of arguments used during the debate, where higher values indicate more intense debates."
-        },
-        {
-          "name": "philosophical_topic",
-          "description": "Type of philosophical topic being discussed in the debate"
-        },
-        {
-          "name": "date_of_debate",
-          "description": "Date when the debate occurred"
-        },
-        {
-          "name": "month_of_debate",
-          "description": "Month when the debate occurred extracted from the full date"
-        },
-        {
-          "name": "number_of_participants",
-          "description": "Total number of participants in the debate"
-        },
-        {
-          "name": "keynote_speaker_present",
-          "description": "Indicates whether a keynote speaker is present during the debate session"
+            "name": "data.csv",
+            "description": "Related to ethics, metaphysics, and philosophical arguments.",
+            "columns": [
+                {
+                    "name": "topic_of_debate",
+                    "description": "The main ethical topic discussed during the debate"
+                },
+                {
+                    "name": "percentage_increase_in_utilitarianism",
+                    "description": "Percentage increase in participants advocating for utilitarianism in a moderated format compared to an unmoderated format"
+                },
+                {
+                    "name": "number_of_philosophical_articles",
+                    "description": "The count of philosophical articles published in the month before the debate."
+                },
+                {
+                    "name": "number_of_philosophical_books_sold",
+                    "description": "Count of philosophical books sold in the month prior to the debate."
+                },
+                {
+                    "name": "ethics_philosopher_present",
+                    "description": "Indicates whether a professional ethics philosopher is present as a speaker"
+                },
+                {
+                    "name": "moderator_ethical_stance",
+                    "description": "Categorical value reflecting the ethical stance of the debate moderator, such as 'utilitarian', 'deontological', or 'virtue_ethics'."
+                },
+                {
+                    "name": "critical_event_occurred",
+                    "description": "Binary flag indicating whether a critical event that could sway participants' opinions occurred during the debate."
+                },
+                {
+                    "name": "external_temperature",
+                    "description": "The outdoor temperature in degrees Celsius during the debate"
+                },
+                {
+                    "name": "average_debate_duration",
+                    "description": "Average duration of debates in minutes."
+                },
+                {
+                    "name": "number_of_sessions",
+                    "description": "The total number of debate sessions."
+                },
+                {
+                    "name": "monthly_attendance_rate",
+                    "description": "Percentage of seats filled at philosophical debate seminars each month."
+                },
+                {
+                    "name": "audience_interest_level",
+                    "description": "Numerical value representing audience's interest in philosophical topics, scaled 1 to 10."
+                },
+                {
+                    "name": "day_of_week",
+                    "description": "The day of the week on which the debate is scheduled"
+                },
+                {
+                    "name": "argument_intensity",
+                    "description": "Numerical value representing the intensity of arguments used during the debate, where higher values indicate more intense debates."
+                },
+                {
+                    "name": "philosophical_topic",
+                    "description": "Type of philosophical topic being discussed in the debate"
+                },
+                {
+                    "name": "date_of_debate",
+                    "description": "Date when the debate occurred"
+                },
+                {
+                    "name": "month_of_debate",
+                    "description": "Month when the debate occurred extracted from the full date"
+                },
+                {
+                    "name": "number_of_participants",
+                    "description": "Total number of participants in the debate"
+                },
+                {
+                    "name": "keynote_speaker_present",
+                    "description": "Indicates whether a keynote speaker is present during the debate session"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 284,
-      "question": "What is the relationship between argument intensity, moderator's ethical stance, audience interest level, average debate duration, number of sessions, and the occurrence of critical events in philosophical debates focused on ethics, and the resulting percentage increase in utilitarianism advocated by participants?",
-      "question_type": "general",
-      "difficulty": 4,
-      "target_col": "percentage_increase_in_utilitarianism",
-      
-      
-      "relevant_cols": [
-        "number_of_participants",
-        "critical_event_occurred",
-        "argument_intensity",
-        "moderator_ethical_stance",
-        "audience_interest_level",
-        "average_debate_duration",
-        "number_of_sessions",
-        "percentage_increase_in_utilitarianism"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 284,
+            "question": "What is the relationship between argument intensity, moderator's ethical stance, audience interest level, average debate duration, number of sessions, and the occurrence of critical events in philosophical debates focused on ethics, and the resulting percentage increase in utilitarianism advocated by participants?",
+            "question_type": "general",
+            "difficulty": 4
+        }
+    ]
 }

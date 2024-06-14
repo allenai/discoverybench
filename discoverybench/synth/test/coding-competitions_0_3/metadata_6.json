@@ -1,201 +1,192 @@
 {
-  "id": 6,
-  "domain": "coding competitions",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to hackathons, coding challenges, and programming contests.",
-      "columns": [
+    "id": 6,
+    "domain": "coding competitions",
+    "datasets": [
         {
-          "name": "participation_duration_years",
-          "description": "The number of years the participant has been participating in coding competitions."
-        },
-        {
-          "name": "tech_companies_using_advanced_tech",
-          "description": "Number of tech companies in the participant's country using advanced programming technologies"
-        },
-        {
-          "name": "average_stem_score",
-          "description": "Average score of students in STEM fields from the country's major universities"
-        },
-        {
-          "name": "technical_university_graduates",
-          "description": "Number of university graduates in technical studies like computer science, engineering, etc., per year."
-        },
-        {
-          "name": "modern_tech_education_practices",
-          "description": "Whether the country has implemented modern educational practices in teaching technology (yes/no)."
-        },
-        {
-          "name": "age",
-          "description": "Age of the participant"
-        },
-        {
-          "name": "coding_bootcamps",
-          "description": "Number of coding bootcamps in the participant's country"
-        },
-        {
-          "name": "internet_speed",
-          "description": "Average internet speed in the participant's country measured in Mbps"
-        },
-        {
-          "name": "government_investment_in_tech",
-          "description": "Amount of money invested by the government in technology sector annually (in millions USD)"
-        },
-        {
-          "name": "number_of_webinars_attended",
-          "description": "Number of coding-related webinars the participant has attended in the past year"
-        },
-        {
-          "name": "public_wifi_hotspots",
-          "description": "Number of public WiFi hotspots available in urban areas of the country"
-        },
-        {
-          "name": "collaborative_projects_frequency",
-          "description": "The frequency of collaborative projects the participant is involved in per month."
-        },
-        {
-          "name": "internet_education_programs",
-          "description": "Binary indicator of whether the country has active internet education programs"
-        },
-        {
-          "name": "number_of_engineering_graduates",
-          "description": "Total number of engineering graduates annually"
-        },
-        {
-          "name": "cs_degree_universities",
-          "description": "Indicator of whether the participant's country has renowned universities offering computer science degrees"
-        },
-        {
-          "name": "political_stability",
-          "description": "A numeric score representing the political stability of the country"
-        },
-        {
-          "name": "stem_higher_education_rate",
-          "description": "Percentage of the population with higher education degrees in STEM fields in the participant's country"
-        },
-        {
-          "name": "tech_degree_percentage",
-          "description": "Percentage of technology-related degrees out of all degrees awarded annually"
-        },
-        {
-          "name": "coding_proficiency_level",
-          "description": "Self-rated coding proficiency level of the participant"
-        },
-        {
-          "name": "has_full_time_non_coding_job",
-          "description": "Indicates if the participant has a full-time job that does not involve coding"
-        },
-        {
-          "name": "club_global_affiliation",
-          "description": "Indicates if the local programming club is affiliated with a global coding community"
-        },
-        {
-          "name": "digital_infrastructure_investment",
-          "description": "Amount of public and private investment in digital infrastructure in the participant's country"
-        },
-        {
-          "name": "tech_related_patent_filings",
-          "description": "Number of patent filings related to technology annually"
-        },
-        {
-          "name": "high_digital_consumption",
-          "description": "Binary value indicating if the country has high digital content and service consumption"
-        },
-        {
-          "name": "tech_startups",
-          "description": "Number of tech startups in the participant's country"
-        },
-        {
-          "name": "gdp_per_capita",
-          "description": "Gross Domestic Product per capita (in USD)"
-        },
-        {
-          "name": "weekly_problem_solving_sessions",
-          "description": "The number of problem-solving sessions attended by the participant per week"
-        },
-        {
-          "name": "percentage_population_internet_access",
-          "description": "Percentage of the country's population that has access to the internet"
-        },
-        {
-          "name": "programming_language",
-          "description": "The programming language used by the participant"
-        },
-        {
-          "name": "country",
-          "description": "The country from which a participant originates"
-        },
-        {
-          "name": "tech_startup_investment",
-          "description": "Total investment received by tech startups in millions USD per year."
-        },
-        {
-          "name": "predicted_number_of_tech_companies",
-          "description": "Expected count of technology companies in the participant's country"
-        },
-        {
-          "name": "has_critical_tech_cluster",
-          "description": "Indicates if the country has a critical mass of technology innovation clusters"
-        },
-        {
-          "name": "entrepreneurship_index",
-          "description": "Binomial index indicating high(1) or low(0) entrepreneurship conducive environment in the participant's country"
-        },
-        {
-          "name": "access_to_advanced_resources",
-          "description": "Indicates if the participant has access to advanced coding resources such as latest software tools and platforms"
-        },
-        {
-          "name": "high_speed_internet_access",
-          "description": "Percentage of population with access to high-speed internet"
-        },
-        {
-          "name": "top_20_innovation_index",
-          "description": "Indicates if the country is among the top 20 in global innovation indices"
-        },
-        {
-          "name": "internet_users_percentage",
-          "description": "Percentage of the population in the participant's country that uses the internet"
-        },
-        {
-          "name": "major_universities_cs",
-          "description": "Whether the country has major universities offering computer science programs"
-        },
-        {
-          "name": "rapid_digital_transformation",
-          "description": "Binary indicator of whether the country has undergone rapid digital transformation in the past decade"
-        },
-        {
-          "name": "programming_courses_completed",
-          "description": "The number of programming courses the participant has completed."
-        },
-        {
-          "name": "tech_interest",
-          "description": "Average interest in technology topics among the population, scaled from 1 to 10"
-        },
-        {
-          "name": "previous_contest_rank_percentile",
-          "description": "Percentile ranking of the participant based on previous contest performances"
+            "name": "data.csv",
+            "description": "Related to hackathons, coding challenges, and programming contests.",
+            "columns": [
+                {
+                    "name": "participation_duration_years",
+                    "description": "The number of years the participant has been participating in coding competitions."
+                },
+                {
+                    "name": "tech_companies_using_advanced_tech",
+                    "description": "Number of tech companies in the participant's country using advanced programming technologies"
+                },
+                {
+                    "name": "average_stem_score",
+                    "description": "Average score of students in STEM fields from the country's major universities"
+                },
+                {
+                    "name": "technical_university_graduates",
+                    "description": "Number of university graduates in technical studies like computer science, engineering, etc., per year."
+                },
+                {
+                    "name": "modern_tech_education_practices",
+                    "description": "Whether the country has implemented modern educational practices in teaching technology (yes/no)."
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the participant"
+                },
+                {
+                    "name": "coding_bootcamps",
+                    "description": "Number of coding bootcamps in the participant's country"
+                },
+                {
+                    "name": "internet_speed",
+                    "description": "Average internet speed in the participant's country measured in Mbps"
+                },
+                {
+                    "name": "government_investment_in_tech",
+                    "description": "Amount of money invested by the government in technology sector annually (in millions USD)"
+                },
+                {
+                    "name": "number_of_webinars_attended",
+                    "description": "Number of coding-related webinars the participant has attended in the past year"
+                },
+                {
+                    "name": "public_wifi_hotspots",
+                    "description": "Number of public WiFi hotspots available in urban areas of the country"
+                },
+                {
+                    "name": "collaborative_projects_frequency",
+                    "description": "The frequency of collaborative projects the participant is involved in per month."
+                },
+                {
+                    "name": "internet_education_programs",
+                    "description": "Binary indicator of whether the country has active internet education programs"
+                },
+                {
+                    "name": "number_of_engineering_graduates",
+                    "description": "Total number of engineering graduates annually"
+                },
+                {
+                    "name": "cs_degree_universities",
+                    "description": "Indicator of whether the participant's country has renowned universities offering computer science degrees"
+                },
+                {
+                    "name": "political_stability",
+                    "description": "A numeric score representing the political stability of the country"
+                },
+                {
+                    "name": "stem_higher_education_rate",
+                    "description": "Percentage of the population with higher education degrees in STEM fields in the participant's country"
+                },
+                {
+                    "name": "tech_degree_percentage",
+                    "description": "Percentage of technology-related degrees out of all degrees awarded annually"
+                },
+                {
+                    "name": "coding_proficiency_level",
+                    "description": "Self-rated coding proficiency level of the participant"
+                },
+                {
+                    "name": "has_full_time_non_coding_job",
+                    "description": "Indicates if the participant has a full-time job that does not involve coding"
+                },
+                {
+                    "name": "club_global_affiliation",
+                    "description": "Indicates if the local programming club is affiliated with a global coding community"
+                },
+                {
+                    "name": "digital_infrastructure_investment",
+                    "description": "Amount of public and private investment in digital infrastructure in the participant's country"
+                },
+                {
+                    "name": "tech_related_patent_filings",
+                    "description": "Number of patent filings related to technology annually"
+                },
+                {
+                    "name": "high_digital_consumption",
+                    "description": "Binary value indicating if the country has high digital content and service consumption"
+                },
+                {
+                    "name": "tech_startups",
+                    "description": "Number of tech startups in the participant's country"
+                },
+                {
+                    "name": "gdp_per_capita",
+                    "description": "Gross Domestic Product per capita (in USD)"
+                },
+                {
+                    "name": "weekly_problem_solving_sessions",
+                    "description": "The number of problem-solving sessions attended by the participant per week"
+                },
+                {
+                    "name": "percentage_population_internet_access",
+                    "description": "Percentage of the country's population that has access to the internet"
+                },
+                {
+                    "name": "programming_language",
+                    "description": "The programming language used by the participant"
+                },
+                {
+                    "name": "country",
+                    "description": "The country from which a participant originates"
+                },
+                {
+                    "name": "tech_startup_investment",
+                    "description": "Total investment received by tech startups in millions USD per year."
+                },
+                {
+                    "name": "predicted_number_of_tech_companies",
+                    "description": "Expected count of technology companies in the participant's country"
+                },
+                {
+                    "name": "has_critical_tech_cluster",
+                    "description": "Indicates if the country has a critical mass of technology innovation clusters"
+                },
+                {
+                    "name": "entrepreneurship_index",
+                    "description": "Binomial index indicating high(1) or low(0) entrepreneurship conducive environment in the participant's country"
+                },
+                {
+                    "name": "access_to_advanced_resources",
+                    "description": "Indicates if the participant has access to advanced coding resources such as latest software tools and platforms"
+                },
+                {
+                    "name": "high_speed_internet_access",
+                    "description": "Percentage of population with access to high-speed internet"
+                },
+                {
+                    "name": "top_20_innovation_index",
+                    "description": "Indicates if the country is among the top 20 in global innovation indices"
+                },
+                {
+                    "name": "internet_users_percentage",
+                    "description": "Percentage of the population in the participant's country that uses the internet"
+                },
+                {
+                    "name": "major_universities_cs",
+                    "description": "Whether the country has major universities offering computer science programs"
+                },
+                {
+                    "name": "rapid_digital_transformation",
+                    "description": "Binary indicator of whether the country has undergone rapid digital transformation in the past decade"
+                },
+                {
+                    "name": "programming_courses_completed",
+                    "description": "The number of programming courses the participant has completed."
+                },
+                {
+                    "name": "tech_interest",
+                    "description": "Average interest in technology topics among the population, scaled from 1 to 10"
+                },
+                {
+                    "name": "previous_contest_rank_percentile",
+                    "description": "Percentile ranking of the participant based on previous contest performances"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 540,
-      "question": "Can you predict a country's GDP per capita based on the percentage of technology-related degrees awarded annually, the proportion of the population with high-speed internet access, and an adjusted binary representation of the country's innovation index value?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "gdp_per_capita",
-      
-      
-      "relevant_cols": [
-        "tech_degree_percentage",
-        "high_speed_internet_access",
-        "top_20_innovation_index",
-        "gdp_per_capita"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 540,
+            "question": "Can you predict a country's GDP per capita based on the percentage of technology-related degrees awarded annually, the proportion of the population with high-speed internet access, and an adjusted binary representation of the country's innovation index value?",
+            "question_type": "general",
+            "difficulty": 1
+        }
+    ]
 }
