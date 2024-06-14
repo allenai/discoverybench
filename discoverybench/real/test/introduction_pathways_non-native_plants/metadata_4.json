@@ -2,11 +2,11 @@
     "id": 0,
     "domain": "biology",
     "workflow_tags": "interaction analysis, ecological modelling, statistical tests",
+    "domain_knowledge": "",
     "datasets": [
         {
             "name": "temporal-trends-contingency-table.csv",
             "description": "Dataset contains temporal trends in the introduction pathways of non-native flora (plants) in the region of Catalonia.",
-            "domain_knowledge": "",
             "columns": {
                 "raw": [
                     {
@@ -27,7 +27,6 @@
         {
             "name": "invaded-niche-pathways.csv",
             "description": "The data for the analysis of pathway-specific differences in the invaded niche.",
-            "domain_knowledge": "",
             "columns": {
                 "raw": [
                     {
@@ -176,7 +175,7 @@
                     },
                     {
                         "name": "annual.radiation",
-                        "description": "The mean annual solar radiation (in kJ/m²/day) of the sampled plot or location."
+                        "description": "The mean annual solar radiation (in kJ/m^2/day) of the sampled plot or location."
                     }
                 ]
             }
