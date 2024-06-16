@@ -15,13 +15,10 @@ The metadata provides info for understanding the datasets. Here's an overview of
 - **datasets**: Contains detailed information about the datasets used, including:
   - **name**: The name or filename of the dataset.
   - **description**: A summary of the dataset's contents and the type of data it includes.
-  - **max_depth**: The maximum hierarchical level of nested data structures within the dataset, indicating the complexity of the data.
   - **columns**: Detailed descriptions of each column in the dataset, including:
     - **name**: The column's name or header.
     - **description**: Explanation of the data contained in the column and its significance.
-    - **depth**: The hierarchical level of the column within the dataset, indicating its structural position.
 
 ## Synth Naming Convention
 
-For the `synth` dataset, directory within the train/dev/test splits represents a unique **task dataset** constructed by varying the origin and target levels within the semantic tree. Specifically, we use the following naming convention: `{hyphenated-domain-name}_{start_height}_{target_depth}`,
-where `start_height` means the height (from leaves) of the observed nodes in the semantic tree, and `target_depth` means the depth (from root) of the target variable of the query hypothesis.
+For the `synth` dataset, each directory within the train, dev, and test splits represents a unique **task dataset** constructed by varying the origin and target levels within the corresponding semantic tree. Specifically, we use the following naming convention: `{hyphenated-domain-name}_{start_height}_{target_depth}`, where `start_height` means the height (from leaves) of the observed nodes in the semantic tree, and `target_depth` means the depth (from root) of the target variable of the query hypothesis.
