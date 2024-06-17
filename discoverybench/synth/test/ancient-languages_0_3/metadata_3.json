@@ -1,193 +1,184 @@
 {
-  "id": 3,
-  "domain": "ancient languages",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to hieroglyphs, Sanskrit, Latin, and deciphering old scripts.",
-      "columns": [
+    "id": 3,
+    "domain": "ancient languages",
+    "datasets": [
         {
-          "name": "deciphering_tools_count",
-          "description": "Number of tools available specifically for deciphering scripts of each ancient language family."
-        },
-        {
-          "name": "script_complexity",
-          "description": "Complexity rating of the ancient script on a scale from 1 to 10, with 10 being the most complex."
-        },
-        {
-          "name": "current_academic_interest",
-          "description": "Indicates whether the academic interest in studying the language family is currently high, moderate, or low."
-        },
-        {
-          "name": "script_age_at_discovery_estimated",
-          "description": "Estimated age of the ancient script at the time of discovery."
-        },
-        {
-          "name": "recognized_in_cultural_practices",
-          "description": "Whether elements of the ancient language are recognized and used in current cultural or societal practices."
-        },
-        {
-          "name": "artifact_density",
-          "description": "Count of artifacts found per square kilometer in the immediate area of the script discovery"
-        },
-        {
-          "name": "has_modern_derivative",
-          "description": "Indicates if the ancient language has a modern derivative that is still in use."
-        },
-        {
-          "name": "accuracy_percentage",
-          "description": "The percentage of accuracy in the translations achieved by the method."
-        },
-        {
-          "name": "digital_resources_availability",
-          "description": "Indicates the amount of digital resources available, rated from 1 (least) to 5 (most)."
-        },
-        {
-          "name": "geopolitical_tension",
-          "description": "A measure of current geopolitical tensions in the region from where the script originated, on a scale from 1 to 10."
-        },
-        {
-          "name": "deciphering_method",
-          "description": "The method used for deciphering scripts: traditional or machine learning."
-        },
-        {
-          "name": "script_complexity_level",
-          "description": "The complexity level of the script to be translated, rated from 1 (least complex) to 5 (most complex)."
-        },
-        {
-          "name": "script_distinctiveness",
-          "description": "A measure of how unique the script is compared to others, on a scale from 1 to 10."
-        },
-        {
-          "name": "historical_significance_score",
-          "description": "A score that rates the historical importance of the language, based on findings tied to major historical events or civilizations."
-        },
-        {
-          "name": "academic_conferences_count",
-          "description": "Number of academic conferences held annually dedicated to the language."
-        },
-        {
-          "name": "is_currently_used",
-          "description": "Indicates whether the script is still in use today."
-        },
-        {
-          "name": "number_of_modern_speakers",
-          "description": "Approximate number of people who currently speak the language or its derivatives."
-        },
-        {
-          "name": "collaborative_effort",
-          "description": "Indicates whether the deciphering was a collaborative effort between multiple experts or not."
-        },
-        {
-          "name": "media_representation",
-          "description": "The number of appearances or features in mainstream media outlets over the past year."
-        },
-        {
-          "name": "preservation_quality",
-          "description": "Assessment of the script's condition on a scale from 1 (poor) to 10 (excellent)"
-        },
-        {
-          "name": "language_family",
-          "description": "The family to which the ancient language belongs."
-        },
-        {
-          "name": "archaeology_technology_index",
-          "description": "A quantitative index of the technological advancement of archaeological tools used in the excavation, on a scale from 1 to 100."
-        },
-        {
-          "name": "available_texts_count",
-          "description": "Count of deciphered texts available for study."
-        },
-        {
-          "name": "international_collaboration",
-          "description": "Indicates if there is any international collaboration in the translation project."
-        },
-        {
-          "name": "active_researchers_count",
-          "description": "Number of active researchers (academic and amateurs) dedicated to studying the language."
-        },
-        {
-          "name": "year_of_discovery",
-          "description": "The year in which the script was discovered."
-        },
-        {
-          "name": "vocabulary_size",
-          "description": "The estimated number of unique words used in the ancient language."
-        },
-        {
-          "name": "government_endorsement",
-          "description": "Whether the language receives official recognition and support from the government."
-        },
-        {
-          "name": "digitized_artifacts_count",
-          "description": "The number of digitized artifacts available for each language family."
-        },
-        {
-          "name": "sediment_accumulation_rate",
-          "description": "Average rate of sediment accumulation at the discovery site, in millimeters per year."
-        },
-        {
-          "name": "foundational_for_modern_languages",
-          "description": "The count of modern languages that are directly descended from or heavily influenced by the ancient language."
-        },
-        {
-          "name": "expert_translators_available",
-          "description": "The number of expert translators available for the project."
-        },
-        {
-          "name": "monthly_translation_requests",
-          "description": "The number of translation requests received per month."
-        },
-        {
-          "name": "estimated_origin_year",
-          "description": "Estimated year when the language first originated."
-        },
-        {
-          "name": "educational_program_availability",
-          "description": "Indicates if structured educational programs are available for the language."
-        },
-        {
-          "name": "use_of_ml",
-          "description": "Indicates if machine learning methods were used in the deciphering process."
-        },
-        {
-          "name": "percentage_of_deciphered_texts",
-          "description": "The percentage of known texts that have been successfully deciphered."
-        },
-        {
-          "name": "included_in_academic_curriculum",
-          "description": "Indicates whether the language is part of the academic curriculum in significant number of higher education institutions (more than 50% globally)."
-        },
-        {
-          "name": "script_characteristic_importance",
-          "description": "Importance of the script's characteristics on a scale from 1 (low) to 5 (high), e.g., uniqueness or historical significance"
-        },
-        {
-          "name": "high_accuracy_requirement_percentage",
-          "description": "The percentage of translation projects that need very high accuracy."
-        },
-        {
-          "name": "recent_publications",
-          "description": "Indicates if there has been a recent publication in the field of ancient languages within the last month."
+            "name": "data.csv",
+            "description": "Related to hieroglyphs, Sanskrit, Latin, and deciphering old scripts.",
+            "columns": [
+                {
+                    "name": "deciphering_tools_count",
+                    "description": "Number of tools available specifically for deciphering scripts of each ancient language family."
+                },
+                {
+                    "name": "script_complexity",
+                    "description": "Complexity rating of the ancient script on a scale from 1 to 10, with 10 being the most complex."
+                },
+                {
+                    "name": "current_academic_interest",
+                    "description": "Indicates whether the academic interest in studying the language family is currently high, moderate, or low."
+                },
+                {
+                    "name": "script_age_at_discovery_estimated",
+                    "description": "Estimated age of the ancient script at the time of discovery."
+                },
+                {
+                    "name": "recognized_in_cultural_practices",
+                    "description": "Whether elements of the ancient language are recognized and used in current cultural or societal practices."
+                },
+                {
+                    "name": "artifact_density",
+                    "description": "Count of artifacts found per square kilometer in the immediate area of the script discovery"
+                },
+                {
+                    "name": "has_modern_derivative",
+                    "description": "Indicates if the ancient language has a modern derivative that is still in use."
+                },
+                {
+                    "name": "accuracy_percentage",
+                    "description": "The percentage of accuracy in the translations achieved by the method."
+                },
+                {
+                    "name": "digital_resources_availability",
+                    "description": "Indicates the amount of digital resources available, rated from 1 (least) to 5 (most)."
+                },
+                {
+                    "name": "geopolitical_tension",
+                    "description": "A measure of current geopolitical tensions in the region from where the script originated, on a scale from 1 to 10."
+                },
+                {
+                    "name": "deciphering_method",
+                    "description": "The method used for deciphering scripts: traditional or machine learning."
+                },
+                {
+                    "name": "script_complexity_level",
+                    "description": "The complexity level of the script to be translated, rated from 1 (least complex) to 5 (most complex)."
+                },
+                {
+                    "name": "script_distinctiveness",
+                    "description": "A measure of how unique the script is compared to others, on a scale from 1 to 10."
+                },
+                {
+                    "name": "historical_significance_score",
+                    "description": "A score that rates the historical importance of the language, based on findings tied to major historical events or civilizations."
+                },
+                {
+                    "name": "academic_conferences_count",
+                    "description": "Number of academic conferences held annually dedicated to the language."
+                },
+                {
+                    "name": "is_currently_used",
+                    "description": "Indicates whether the script is still in use today."
+                },
+                {
+                    "name": "number_of_modern_speakers",
+                    "description": "Approximate number of people who currently speak the language or its derivatives."
+                },
+                {
+                    "name": "collaborative_effort",
+                    "description": "Indicates whether the deciphering was a collaborative effort between multiple experts or not."
+                },
+                {
+                    "name": "media_representation",
+                    "description": "The number of appearances or features in mainstream media outlets over the past year."
+                },
+                {
+                    "name": "preservation_quality",
+                    "description": "Assessment of the script's condition on a scale from 1 (poor) to 10 (excellent)"
+                },
+                {
+                    "name": "language_family",
+                    "description": "The family to which the ancient language belongs."
+                },
+                {
+                    "name": "archaeology_technology_index",
+                    "description": "A quantitative index of the technological advancement of archaeological tools used in the excavation, on a scale from 1 to 100."
+                },
+                {
+                    "name": "available_texts_count",
+                    "description": "Count of deciphered texts available for study."
+                },
+                {
+                    "name": "international_collaboration",
+                    "description": "Indicates if there is any international collaboration in the translation project."
+                },
+                {
+                    "name": "active_researchers_count",
+                    "description": "Number of active researchers (academic and amateurs) dedicated to studying the language."
+                },
+                {
+                    "name": "year_of_discovery",
+                    "description": "The year in which the script was discovered."
+                },
+                {
+                    "name": "vocabulary_size",
+                    "description": "The estimated number of unique words used in the ancient language."
+                },
+                {
+                    "name": "government_endorsement",
+                    "description": "Whether the language receives official recognition and support from the government."
+                },
+                {
+                    "name": "digitized_artifacts_count",
+                    "description": "The number of digitized artifacts available for each language family."
+                },
+                {
+                    "name": "sediment_accumulation_rate",
+                    "description": "Average rate of sediment accumulation at the discovery site, in millimeters per year."
+                },
+                {
+                    "name": "foundational_for_modern_languages",
+                    "description": "The count of modern languages that are directly descended from or heavily influenced by the ancient language."
+                },
+                {
+                    "name": "expert_translators_available",
+                    "description": "The number of expert translators available for the project."
+                },
+                {
+                    "name": "monthly_translation_requests",
+                    "description": "The number of translation requests received per month."
+                },
+                {
+                    "name": "estimated_origin_year",
+                    "description": "Estimated year when the language first originated."
+                },
+                {
+                    "name": "educational_program_availability",
+                    "description": "Indicates if structured educational programs are available for the language."
+                },
+                {
+                    "name": "use_of_ml",
+                    "description": "Indicates if machine learning methods were used in the deciphering process."
+                },
+                {
+                    "name": "percentage_of_deciphered_texts",
+                    "description": "The percentage of known texts that have been successfully deciphered."
+                },
+                {
+                    "name": "included_in_academic_curriculum",
+                    "description": "Indicates whether the language is part of the academic curriculum in significant number of higher education institutions (more than 50% globally)."
+                },
+                {
+                    "name": "script_characteristic_importance",
+                    "description": "Importance of the script's characteristics on a scale from 1 (low) to 5 (high), e.g., uniqueness or historical significance"
+                },
+                {
+                    "name": "high_accuracy_requirement_percentage",
+                    "description": "The percentage of translation projects that need very high accuracy."
+                },
+                {
+                    "name": "recent_publications",
+                    "description": "Indicates if there has been a recent publication in the field of ancient languages within the last month."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 201,
-      "question": "What is the relationship between the monthly translation requests in the field of ancient languages and the count of international collaboration, academic conferences held annually, and recent publications?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "monthly_translation_requests",
-      
-      
-      "relevant_cols": [
-        "academic_conferences_count",
-        "international_collaboration",
-        "recent_publications",
-        "monthly_translation_requests"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 201,
+            "question": "What is the relationship between the monthly translation requests in the field of ancient languages and the count of international collaboration, academic conferences held annually, and recent publications?",
+            "question_type": "general",
+            "difficulty": 1
+        }
+    ]
 }
