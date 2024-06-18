@@ -1,0 +1,7 @@
+click
+langchain
+langchain_experimental
+langchain_anthropic
+langchain_together
+langchain_google_genai
+grpcio
