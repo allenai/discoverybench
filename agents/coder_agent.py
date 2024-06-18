@@ -1,8 +1,9 @@
+import pdb
+from dotenv import load_dotenv
 from agents.coder_utils import create_agent
 from langchain_anthropic import ChatAnthropic
 from langchain_together import Together
 from langchain_openai import ChatOpenAI
-from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 import json
 from utils.dv_log import DVLogger
@@ -11,6 +12,8 @@ from langchain_core.callbacks import FileCallbackHandler, StdOutCallbackHandler
 
 # uncomment the following line to enable debug mode
 # langchain.debug = True
+
+load_dotenv()
 
 
 def get_prompt_data(
@@ -86,6 +89,7 @@ class BaseAgent():
         )
 
         # create agent
+
         self.agent = create_agent(
             llm=self.llm,
             handlers=[self.file_handler, self.stdout_handler],
@@ -118,20 +122,43 @@ class BaseAgent():
                 api_key=api_key,
                 **kwargs
             )
-        elif (api == "google"):
-            llm = ChatGoogleGenerativeAI(
-                model=model,
-                google_api_key=api_key,
-                **kwargs
-            )
+        # elif (api == "google"):
+        #     llm = ChatGoogleGenerativeAI(
+        #         model=model,
+        #         google_api_key=api_key,
+        #         **kwargs
+        #     )
         else:
             raise ValueError(f"Invalid API: {api}")
         return llm
 
     def generate(self, dataset_paths, query):
+        system_prompt = """You are a discovery agent who can execute a python code only once to answer a query based on one or more datasets. The datasets will be present in the current directory. Please write your code in the form of a `flowmason` directed acyclic graph: Here's an example of a flowmason graph:
+
+        from flowmason import Singletonstep, conduct 
+        CACHE_DIR="scratch/flowmason_cache"
+        LOG_DIR="discoveryagent_logs"
+
+        def _step_toy_fn(arg1: float, **kwargs):
+            print(arg1)
+            return 3.1 + arg1
+
+        step_dict = OrderedDict()
+        step_dict['step_singleton'] = SingletonStep(_step_toy_fn, {
+            'version': "001", 
+            'arg1': 2.9
+        })
+        step_dict['step_singleton_two'] = SingletonStep(_step_toy_fn, {
+            'version': "001", 
+            'arg1': 'step_singleton'
+        })
+        run_metadata = conduct(CACHE_DIR, step_dict, LOG_DIR)
+        output_step_singleton_two = load_artifact_with_step_name(run_metadata, 'step_singleton_two')
+        print(output_step_singleton_two) # 9.1
+        """
         try:
             output = self.agent.invoke(input={
-                "system_prompt": "You are a discovery agent who can execute a python code only once to answer a query based on one or more datasets. The datasets will be present in the current directory.",
+                "system_prompt": system_prompt,
                 "input": f"Load all datasets using python using provided paths. Paths: {dataset_paths}. {query}"
             })
             self.logger.log_json(output)

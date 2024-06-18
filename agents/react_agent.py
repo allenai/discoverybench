@@ -2,7 +2,7 @@ from agents.react_utils import create_agent
 from langchain_anthropic import ChatAnthropic
 from langchain_together import Together
 from langchain_openai import ChatOpenAI
-from langchain_google_genai import ChatGoogleGenerativeAI
+# from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 import json
 import langchain
@@ -120,12 +120,12 @@ class ReactAgent():
                 api_key=api_key,
                 **kwargs
             )
-        elif (api == "google"):
-            llm = ChatGoogleGenerativeAI(
-                model=model,
-                google_api_key=api_key,
-                **kwargs
-            )
+        # elif (api == "google"):
+        #     llm = ChatGoogleGenerativeAI(
+        #         model=model,
+        #         google_api_key=api_key,
+        #         **kwargs
+        #     )
         else:
             raise ValueError(f"Invalid API: {api}")
         return llm
