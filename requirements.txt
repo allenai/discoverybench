@@ -1,0 +1,9 @@
+ipython==8.22.1
+openai==1.2.4
+pyautogen==0.2.1
+pydantic==2.6.2
+pydantic_core==2.16.3
+pandas==2.2.1
+scikit-learn==1.4.1.post1
+sympy==1.12
+tenacity==8.3.0
