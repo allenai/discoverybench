@@ -7,3 +7,12 @@ pandas==2.2.1
 scikit-learn==1.4.1.post1
 sympy==1.12
 tenacity==8.3.0
+langchain==0.1.17
+langchain-anthropic==0.1.11
+langchain-community==0.0.36
+langchain-core==0.1.48
+langchain-experimental==0.0.57
+langchain-google-genai==1.0.3
+langchain-openai==0.1.5
+langchain-together==0.1.0
+langchainhub==0.1.15
