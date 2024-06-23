@@ -1,120 +1,120 @@
 {
-  "id": 0,
-  "domain": "medieval literature",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to knights, epic poems, and medieval storytelling.",
-      "columns": [
+    "id": 0,
+    "domain": "medieval literature",
+    "datasets": [
         {
-          "name": "regions_with_epic_traditions",
-          "description": "Whether the knight hails from a region known for strong traditions in epic poetry"
-        },
-        {
-          "name": "epic_poem_citations",
-          "description": "Number of times the knight is cited in different epic poems"
-        },
-        {
-          "name": "number_of_battles",
-          "description": "The number of battles the knight participated in"
-        },
-        {
-          "name": "forest_coverage_percent",
-          "description": "Percentage of forest coverage in the knight's region of origin"
-        },
-        {
-          "name": "castle_residencies",
-          "description": "Counts the number of castles a knight has resided in, reflecting their status and access to resources."
-        },
-        {
-          "name": "number_of_tourneys",
-          "description": "The number of tournaments in which the knight has participated."
-        },
-        {
-          "name": "literacy_level",
-          "description": "Estimates the ability of the knight to read and write based on references in literature, on a scale from 1 to 10."
-        },
-        {
-          "name": "handedness",
-          "description": "Whether the knight is left-handed or right-handed"
-        },
-        {
-          "name": "era_of_legend",
-          "description": "Era in which the knight's stories were popular, corresponds to a specific century"
-        },
-        {
-          "name": "roles_of_distinction",
-          "description": "Whether the knight has been depicted in roles of high distinction or not (e.g., kingdom leaders, quest leaders)"
-        },
-        {
-          "name": "knightly_vows",
-          "description": "Binary indicator of whether the knight has taken any specific knightly vows, reflecting adherence to chivalric codes."
-        },
-        {
-          "name": "literacy_rates",
-          "description": "Percentage representing the literacy rate of the knight's originating region"
-        },
-        {
-          "name": "jousting_tournaments",
-          "description": "Indicates the number of jousting tournaments the knight has participated in, showing their active participation in knightly culture."
-        },
-        {
-          "name": "can_recite_verses",
-          "description": "Whether the knight can recite verses from epic poems (true) or not (false)."
-        },
-        {
-          "name": "region_epic_tradition_score",
-          "description": "Score rating the richness of the knight's region in terms of epic poetry tradition."
-        },
-        {
-          "name": "regions_with_epic_centers",
-          "description": "Indicates whether the knight originates from a region known for significant epic literature and storytelling (true) or not (false)."
-        },
-        {
-          "name": "region_of_origin",
-          "description": "The geographical region where the knight originated"
-        },
-        {
-          "name": "accolade_count",
-          "description": "Total number of accolades received by the knight from tourneys and royal acknowledgments."
-        },
-        {
-          "name": "knight_tournaments",
-          "description": "Count of tournaments a knight has participated in"
-        },
-        {
-          "name": "battles_survived",
-          "description": "The number of battles survived by the knight"
-        },
-        {
-          "name": "manuscripts_collected",
-          "description": "Counts the number of medieval manuscripts collected by the knight, suggesting direct engagement with written material."
-        },
-        {
-          "name": "manuscript_contributions",
-          "description": "Number of contributions the knight has made to medieval manuscripts, either as stories or illustrations"
-        },
-        {
-          "name": "troubadour_friendships",
-          "description": "Indicates the number of troubadours the knight is closely associated with, reflecting exposure to lyrical and oral storytelling traditions."
+            "name": "data.csv",
+            "description": "Related to knights, epic poems, and medieval storytelling.",
+            "columns": [
+                {
+                    "name": "regions_with_epic_traditions",
+                    "description": "Whether the knight hails from a region known for strong traditions in epic poetry"
+                },
+                {
+                    "name": "epic_poem_citations",
+                    "description": "Number of times the knight is cited in different epic poems"
+                },
+                {
+                    "name": "number_of_battles",
+                    "description": "The number of battles the knight participated in"
+                },
+                {
+                    "name": "forest_coverage_percent",
+                    "description": "Percentage of forest coverage in the knight's region of origin"
+                },
+                {
+                    "name": "castle_residencies",
+                    "description": "Counts the number of castles a knight has resided in, reflecting their status and access to resources."
+                },
+                {
+                    "name": "number_of_tourneys",
+                    "description": "The number of tournaments in which the knight has participated."
+                },
+                {
+                    "name": "literacy_level",
+                    "description": "Estimates the ability of the knight to read and write based on references in literature, on a scale from 1 to 10."
+                },
+                {
+                    "name": "handedness",
+                    "description": "Whether the knight is left-handed or right-handed"
+                },
+                {
+                    "name": "era_of_legend",
+                    "description": "Era in which the knight's stories were popular, corresponds to a specific century"
+                },
+                {
+                    "name": "roles_of_distinction",
+                    "description": "Whether the knight has been depicted in roles of high distinction or not (e.g., kingdom leaders, quest leaders)"
+                },
+                {
+                    "name": "knightly_vows",
+                    "description": "Binary indicator of whether the knight has taken any specific knightly vows, reflecting adherence to chivalric codes."
+                },
+                {
+                    "name": "literacy_rates",
+                    "description": "Percentage representing the literacy rate of the knight's originating region"
+                },
+                {
+                    "name": "jousting_tournaments",
+                    "description": "Indicates the number of jousting tournaments the knight has participated in, showing their active participation in knightly culture."
+                },
+                {
+                    "name": "can_recite_verses",
+                    "description": "Whether the knight can recite verses from epic poems (true) or not (false)."
+                },
+                {
+                    "name": "region_epic_tradition_score",
+                    "description": "Score rating the richness of the knight's region in terms of epic poetry tradition."
+                },
+                {
+                    "name": "regions_with_epic_centers",
+                    "description": "Indicates whether the knight originates from a region known for significant epic literature and storytelling (true) or not (false)."
+                },
+                {
+                    "name": "region_of_origin",
+                    "description": "The geographical region where the knight originated"
+                },
+                {
+                    "name": "accolade_count",
+                    "description": "Total number of accolades received by the knight from tourneys and royal acknowledgments."
+                },
+                {
+                    "name": "knight_tournaments",
+                    "description": "Count of tournaments a knight has participated in"
+                },
+                {
+                    "name": "battles_survived",
+                    "description": "The number of battles survived by the knight"
+                },
+                {
+                    "name": "manuscripts_collected",
+                    "description": "Counts the number of medieval manuscripts collected by the knight, suggesting direct engagement with written material."
+                },
+                {
+                    "name": "manuscript_contributions",
+                    "description": "Number of contributions the knight has made to medieval manuscripts, either as stories or illustrations"
+                },
+                {
+                    "name": "troubadour_friendships",
+                    "description": "Indicates the number of troubadours the knight is closely associated with, reflecting exposure to lyrical and oral storytelling traditions."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 629,
-      "question": "Is there a relationship between the number of 'manuscripts_collected' by knights and their corresponding 'literacy_level' in medieval literature?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "literacy_level",
-      
-      
-      "relevant_cols": [
-        "troubadour_friendships",
-        "manuscripts_collected",
-        "literacy_level"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 629,
+            "question": "Is there a relationship between the number of 'manuscripts_collected' by knights and their corresponding 'literacy_level' in medieval literature?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "literacy_level",
+            "true_hypothesis": "Knights with a higher number of 'manuscripts_collected', reflecting engagement with written material, and 'troubadour_friendships', representing exposure to lyrical and oral storytelling traditions, have a higher 'literacy_level'.",
+            "true_hypothesis_expr": "df['manuscripts_collected']*0.2 + df['troubadour_friendships']*0.8",
+            "relevant_cols": [
+                "troubadour_friendships",
+                "manuscripts_collected",
+                "literacy_level"
+            ]
+        }
+    ]
 }

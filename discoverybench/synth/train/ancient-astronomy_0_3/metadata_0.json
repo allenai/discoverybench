@@ -1,96 +1,96 @@
 {
-  "id": 0,
-  "domain": "ancient astronomy",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to celestial observations, ancient star maps, and early astronomical practices.",
-      "columns": [
+    "id": 0,
+    "domain": "ancient astronomy",
+    "datasets": [
         {
-          "name": "frequency_of_clear_skies",
-          "description": "Measure of how often the sky is clear, on a scale from 1 (rare) to 10 (frequent)."
-        },
-        {
-          "name": "lunar_phase_records",
-          "description": "Number of documented lunar phases per century"
-        },
-        {
-          "name": "advanced_calendar_systems",
-          "description": "Indicates if the civilization has a sophisticated system for tracking time based on celestial events"
-        },
-        {
-          "name": "civilization_name",
-          "description": "Name of the ancient civilization"
-        },
-        {
-          "name": "metallic_ore_deposits",
-          "description": "Indicates the presence of significant metallic ore deposits in the region"
-        },
-        {
-          "name": "star_chart_references",
-          "description": "Number of star charts created by the civilization"
-        },
-        {
-          "name": "trade_activity_level",
-          "description": "Numeric score representing the level of trade activity, where higher values indicate greater activity"
-        },
-        {
-          "name": "seasonal_light_pollution_variation",
-          "description": "The degree of change in light pollution throughout different seasons, where higher values indicate greater variability."
-        },
-        {
-          "name": "star_charts_documented_percentile",
-          "description": "Percentile ranking of civilizations based on the number of documented star charts"
-        },
-        {
-          "name": "comet_sightings",
-          "description": "Number of comet sightings per century recorded by the civilization"
-        },
-        {
-          "name": "technological_advancement_level",
-          "description": "Rating of technological advancements of the civilization on a scale from 1 to 5"
-        },
-        {
-          "name": "number_of_clear_nights_per_year",
-          "description": "The total number of nights per year that experience clear skies, conducive for astronomical observations."
-        },
-        {
-          "name": "star_map_detail_level",
-          "description": "Detail level of star maps, rated from 10 to 100 with higher values indicating greater details"
-        },
-        {
-          "name": "astronomic_seasons_utilized",
-          "description": "Number of seasons in which the civilization made significant celestial observations"
-        },
-        {
-          "name": "star_map_complexity",
-          "description": "Complexity rating of the star maps used on a scale from 1 to 10"
-        },
-        {
-          "name": "celestial_navigation",
-          "description": "Indicates if the civilization used stars for navigation"
-        },
-        {
-          "name": "percentage_of_ancient_observatories",
-          "description": "The percentage of land area that contains ancient astronomical observatories."
+            "name": "data.csv",
+            "description": "Related to celestial observations, ancient star maps, and early astronomical practices.",
+            "columns": [
+                {
+                    "name": "frequency_of_clear_skies",
+                    "description": "Measure of how often the sky is clear, on a scale from 1 (rare) to 10 (frequent)."
+                },
+                {
+                    "name": "lunar_phase_records",
+                    "description": "Number of documented lunar phases per century"
+                },
+                {
+                    "name": "advanced_calendar_systems",
+                    "description": "Indicates if the civilization has a sophisticated system for tracking time based on celestial events"
+                },
+                {
+                    "name": "civilization_name",
+                    "description": "Name of the ancient civilization"
+                },
+                {
+                    "name": "metallic_ore_deposits",
+                    "description": "Indicates the presence of significant metallic ore deposits in the region"
+                },
+                {
+                    "name": "star_chart_references",
+                    "description": "Number of star charts created by the civilization"
+                },
+                {
+                    "name": "trade_activity_level",
+                    "description": "Numeric score representing the level of trade activity, where higher values indicate greater activity"
+                },
+                {
+                    "name": "seasonal_light_pollution_variation",
+                    "description": "The degree of change in light pollution throughout different seasons, where higher values indicate greater variability."
+                },
+                {
+                    "name": "star_charts_documented_percentile",
+                    "description": "Percentile ranking of civilizations based on the number of documented star charts"
+                },
+                {
+                    "name": "comet_sightings",
+                    "description": "Number of comet sightings per century recorded by the civilization"
+                },
+                {
+                    "name": "technological_advancement_level",
+                    "description": "Rating of technological advancements of the civilization on a scale from 1 to 5"
+                },
+                {
+                    "name": "number_of_clear_nights_per_year",
+                    "description": "The total number of nights per year that experience clear skies, conducive for astronomical observations."
+                },
+                {
+                    "name": "star_map_detail_level",
+                    "description": "Detail level of star maps, rated from 10 to 100 with higher values indicating greater details"
+                },
+                {
+                    "name": "astronomic_seasons_utilized",
+                    "description": "Number of seasons in which the civilization made significant celestial observations"
+                },
+                {
+                    "name": "star_map_complexity",
+                    "description": "Complexity rating of the star maps used on a scale from 1 to 10"
+                },
+                {
+                    "name": "celestial_navigation",
+                    "description": "Indicates if the civilization used stars for navigation"
+                },
+                {
+                    "name": "percentage_of_ancient_observatories",
+                    "description": "The percentage of land area that contains ancient astronomical observatories."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 852,
-      "question": "What is the relationship between the advancements in calendar systems, the percentage of documented star charts, and the number of comet sightings in ancient astronomy datasets?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "comet_sightings",
-      
-      
-      "relevant_cols": [
-        "advanced_calendar_systems",
-        "star_charts_documented_percentile",
-        "comet_sightings"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 852,
+            "question": "What is the relationship between the advancements in calendar systems, the percentage of documented star charts, and the number of comet sightings in ancient astronomy datasets?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "comet_sightings",
+            "true_hypothesis": "Regions with advanced calendar systems and higher star charts documentation tend to observe more comet sightings due to systematic recordings of celestial events. The number of comet sightings per century is calculated by taking the ceiling of the star charts documented percentile divided by 5 in civilizations with advanced calendar systems, with a minimum value of 0 for civilizations without advanced calendar systems.",
+            "true_hypothesis_expr": "np.where(df['advanced_calendar_systems'], np.ceil(df['star_charts_documented_percentile'] / 5), 0)",
+            "relevant_cols": [
+                "advanced_calendar_systems",
+                "star_charts_documented_percentile",
+                "comet_sightings"
+            ]
+        }
+    ]
 }

@@ -1,97 +1,97 @@
 {
-  "id": 2,
-  "domain": "ancient astronomy",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to celestial observations, ancient star maps, and early astronomical practices.",
-      "columns": [
+    "id": 2,
+    "domain": "ancient astronomy",
+    "datasets": [
         {
-          "name": "star_map_complexity",
-          "description": "Complexity rating of the star maps used on a scale from 1 to 10"
-        },
-        {
-          "name": "solar_eclipse_frequency",
-          "description": "The average number of observable solar eclipses per century"
-        },
-        {
-          "name": "lunar_phase_records",
-          "description": "Number of documented lunar phases per century"
-        },
-        {
-          "name": "metallic_ore_deposits",
-          "description": "Indicates the presence of significant metallic ore deposits in the region"
-        },
-        {
-          "name": "advanced_metallurgy",
-          "description": "Indicates if the civilization had access to advanced metallurgical techniques"
-        },
-        {
-          "name": "star_charts_documented_percentile",
-          "description": "Percentile ranking of civilizations based on the number of documented star charts"
-        },
-        {
-          "name": "frequency_of_clear_skies",
-          "description": "Measure of how often the sky is clear, on a scale from 1 (rare) to 10 (frequent)."
-        },
-        {
-          "name": "advanced_calendar_systems",
-          "description": "Indicates if the civilization has a sophisticated system for tracking time based on celestial events"
-        },
-        {
-          "name": "average_nighttime_visibility",
-          "description": "Average visibility score during nighttime on a scale from 1 to 10"
-        },
-        {
-          "name": "number_of_clear_nights_per_year",
-          "description": "The total number of nights per year that experience clear skies, conducive for astronomical observations."
-        },
-        {
-          "name": "technological_advancement_level",
-          "description": "Rating of technological advancements of the civilization on a scale from 1 to 5"
-        },
-        {
-          "name": "star_chart_references",
-          "description": "Number of star charts created by the civilization"
-        },
-        {
-          "name": "percentage_of_ancient_observatories",
-          "description": "The percentage of land area that contains ancient astronomical observatories."
-        },
-        {
-          "name": "astronomic_seasons_utilized",
-          "description": "Number of seasons in which the civilization made significant celestial observations"
-        },
-        {
-          "name": "civilization_name",
-          "description": "Name of the ancient civilization"
-        },
-        {
-          "name": "star_map_detail_level",
-          "description": "Detail level of star maps, rated from 10 to 100 with higher values indicating greater details"
-        },
-        {
-          "name": "trade_activity_level",
-          "description": "Numeric score representing the level of trade activity, where higher values indicate greater activity"
+            "name": "data.csv",
+            "description": "Related to celestial observations, ancient star maps, and early astronomical practices.",
+            "columns": [
+                {
+                    "name": "star_map_complexity",
+                    "description": "Complexity rating of the star maps used on a scale from 1 to 10"
+                },
+                {
+                    "name": "solar_eclipse_frequency",
+                    "description": "The average number of observable solar eclipses per century"
+                },
+                {
+                    "name": "lunar_phase_records",
+                    "description": "Number of documented lunar phases per century"
+                },
+                {
+                    "name": "metallic_ore_deposits",
+                    "description": "Indicates the presence of significant metallic ore deposits in the region"
+                },
+                {
+                    "name": "advanced_metallurgy",
+                    "description": "Indicates if the civilization had access to advanced metallurgical techniques"
+                },
+                {
+                    "name": "star_charts_documented_percentile",
+                    "description": "Percentile ranking of civilizations based on the number of documented star charts"
+                },
+                {
+                    "name": "frequency_of_clear_skies",
+                    "description": "Measure of how often the sky is clear, on a scale from 1 (rare) to 10 (frequent)."
+                },
+                {
+                    "name": "advanced_calendar_systems",
+                    "description": "Indicates if the civilization has a sophisticated system for tracking time based on celestial events"
+                },
+                {
+                    "name": "average_nighttime_visibility",
+                    "description": "Average visibility score during nighttime on a scale from 1 to 10"
+                },
+                {
+                    "name": "number_of_clear_nights_per_year",
+                    "description": "The total number of nights per year that experience clear skies, conducive for astronomical observations."
+                },
+                {
+                    "name": "technological_advancement_level",
+                    "description": "Rating of technological advancements of the civilization on a scale from 1 to 5"
+                },
+                {
+                    "name": "star_chart_references",
+                    "description": "Number of star charts created by the civilization"
+                },
+                {
+                    "name": "percentage_of_ancient_observatories",
+                    "description": "The percentage of land area that contains ancient astronomical observatories."
+                },
+                {
+                    "name": "astronomic_seasons_utilized",
+                    "description": "Number of seasons in which the civilization made significant celestial observations"
+                },
+                {
+                    "name": "civilization_name",
+                    "description": "Name of the ancient civilization"
+                },
+                {
+                    "name": "star_map_detail_level",
+                    "description": "Detail level of star maps, rated from 10 to 100 with higher values indicating greater details"
+                },
+                {
+                    "name": "trade_activity_level",
+                    "description": "Numeric score representing the level of trade activity, where higher values indicate greater activity"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 863,
-      "question": "Is there a relationship between the frequency of clear skies and the average nighttime visibility in ancient astronomy datasets?",
-      "question_type": "general",
-      "difficulty": 2,
-      "target_col": "average_nighttime_visibility",
-      
-      
-      "relevant_cols": [
-        "frequency_of_clear_skies",
-        "percentage_of_ancient_observatories",
-        "number_of_clear_nights_per_year",
-        "average_nighttime_visibility"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 863,
+            "question": "Is there a relationship between the frequency of clear skies and the average nighttime visibility in ancient astronomy datasets?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "average_nighttime_visibility",
+            "true_hypothesis": "Civilizations located in regions with higher percentage of ancient observatories and a high number of clear nights per year, along with frequent clear skies, are likely to have a higher average nighttime visibility score, where the visibility score is calculated based on a specific formula involving these factors.",
+            "true_hypothesis_expr": "np.where(((df['percentage_of_ancient_observatories'] ** 2) / 100 + 2 * df['number_of_clear_nights_per_year']) % 10 + 1 + df['frequency_of_clear_skies'] * 2 > 15, 10 - ((df['percentage_of_ancient_observatories'] ** 2) / 100 + 2 * df['number_of_clear_nights_per_year']) % 10 + 1, df['frequency_of_clear_skies'])",
+            "relevant_cols": [
+                "frequency_of_clear_skies",
+                "percentage_of_ancient_observatories",
+                "number_of_clear_nights_per_year",
+                "average_nighttime_visibility"
+            ]
+        }
+    ]
 }

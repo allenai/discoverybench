@@ -1,88 +1,88 @@
 {
-  "id": 1,
-  "domain": "underwater archaeology",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to submerged artifacts, shipwrecks, and sunken cities.",
-      "columns": [
+    "id": 1,
+    "domain": "underwater archaeology",
+    "datasets": [
         {
-          "name": "stone_structures_present",
-          "description": "Indicates whether stone structures are present at the site"
-        },
-        {
-          "name": "water_depth",
-          "description": "Depth of water at the site in meters"
-        },
-        {
-          "name": "current_speed",
-          "description": "Speed of the water current at the site, measured in meters per second"
-        },
-        {
-          "name": "depth_of_site",
-          "description": "Measure of depth at which the archaeological site is located, in meters"
-        },
-        {
-          "name": "permit_year",
-          "description": "Year when the excavation permit for the site was issued"
-        },
-        {
-          "name": "sediment_accumulation_rate",
-          "description": "Rate of sediment accumulation at the site in kilograms per square meter per year"
-        },
-        {
-          "name": "protected_marine_area",
-          "description": "Indicates whether the site is within a legally protected marine conservation area"
-        },
-        {
-          "name": "site_id",
-          "description": "Unique identifier for each archaeological site"
-        },
-        {
-          "name": "ocean_current_strength",
-          "description": "Measurement of ocean current strength at the site in knots"
-        },
-        {
-          "name": "coral_reefs_present",
-          "description": "Indicates whether coral reefs are present at the site"
-        },
-        {
-          "name": "light_penetration",
-          "description": "Percentage of light that penetrates to the site, measured as a percentage"
-        },
-        {
-          "name": "site_discovery_date",
-          "description": "Date when the archaeological site was discovered"
-        },
-        {
-          "name": "number_of_artifacts",
-          "description": "Number of artifacts recovered from the site"
-        },
-        {
-          "name": "site_depth",
-          "description": "Depth of the underwater site in meters"
-        },
-        {
-          "name": "sediment_concentration",
-          "description": "Amount of sediment in the water measured in grams per liter"
+            "name": "data.csv",
+            "description": "Related to submerged artifacts, shipwrecks, and sunken cities.",
+            "columns": [
+                {
+                    "name": "stone_structures_present",
+                    "description": "Indicates whether stone structures are present at the site"
+                },
+                {
+                    "name": "water_depth",
+                    "description": "Depth of water at the site in meters"
+                },
+                {
+                    "name": "current_speed",
+                    "description": "Speed of the water current at the site, measured in meters per second"
+                },
+                {
+                    "name": "depth_of_site",
+                    "description": "Measure of depth at which the archaeological site is located, in meters"
+                },
+                {
+                    "name": "permit_year",
+                    "description": "Year when the excavation permit for the site was issued"
+                },
+                {
+                    "name": "sediment_accumulation_rate",
+                    "description": "Rate of sediment accumulation at the site in kilograms per square meter per year"
+                },
+                {
+                    "name": "protected_marine_area",
+                    "description": "Indicates whether the site is within a legally protected marine conservation area"
+                },
+                {
+                    "name": "site_id",
+                    "description": "Unique identifier for each archaeological site"
+                },
+                {
+                    "name": "ocean_current_strength",
+                    "description": "Measurement of ocean current strength at the site in knots"
+                },
+                {
+                    "name": "coral_reefs_present",
+                    "description": "Indicates whether coral reefs are present at the site"
+                },
+                {
+                    "name": "light_penetration",
+                    "description": "Percentage of light that penetrates to the site, measured as a percentage"
+                },
+                {
+                    "name": "site_discovery_date",
+                    "description": "Date when the archaeological site was discovered"
+                },
+                {
+                    "name": "number_of_artifacts",
+                    "description": "Number of artifacts recovered from the site"
+                },
+                {
+                    "name": "site_depth",
+                    "description": "Depth of the underwater site in meters"
+                },
+                {
+                    "name": "sediment_concentration",
+                    "description": "Amount of sediment in the water measured in grams per liter"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 183,
-      "question": "Does the percentage of light penetration and the speed of the water current at an underwater site have a significant impact on the estimated site depth according to the dataset in the domain of underwater archaeology?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "site_depth",
-      
-      
-      "relevant_cols": [
-        "light_penetration",
-        "current_speed",
-        "site_depth"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 183,
+            "question": "Does the percentage of light penetration and the speed of the water current at an underwater site have a significant impact on the estimated site depth according to the dataset in the domain of underwater archaeology?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "site_depth",
+            "true_hypothesis": "The depth of an underwater site can be estimated based on a combination of the percentage of light that penetrates the site and the speed of the water current at the site using a logarithmic transformation and linear transformation. Site depth is inversely proportional to light penetration and logarithmically proportional to current speed, showing a relationship where shallower depths have higher light penetration and faster currents.",
+            "true_hypothesis_expr": "-0.5 * df['light_penetration'] + 40 * np.log(df['current_speed']) + 50",
+            "relevant_cols": [
+                "light_penetration",
+                "current_speed",
+                "site_depth"
+            ]
+        }
+    ]
 }

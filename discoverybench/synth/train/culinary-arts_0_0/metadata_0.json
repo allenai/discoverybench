@@ -1,96 +1,96 @@
 {
-  "id": 0,
-  "domain": "culinary arts",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to cooking techniques, gastronomy, and culinary traditions.",
-      "columns": [
+    "id": 0,
+    "domain": "culinary arts",
+    "datasets": [
         {
-          "name": "ingredients_diversity_score",
-          "description": "A score representing the diversity of ingredients used by the chef"
-        },
-        {
-          "name": "local_supplier_partnerships",
-          "description": "Number of local suppliers from which the chef sources ingredients"
-        },
-        {
-          "name": "cooking_method_preference",
-          "description": "Primary cooking method preferred by the chef"
-        },
-        {
-          "name": "menu_items_count",
-          "description": "Total number of different dishes available on the chef's menu"
-        },
-        {
-          "name": "chef_id",
-          "description": "Unique identifier for each chef"
-        },
-        {
-          "name": "gastronomic_techniques_count",
-          "description": "The count of different gastronomic techniques used by the chef"
-        },
-        {
-          "name": "culinary_competition_participation",
-          "description": "Number of culinary competitions the chef participates in annually"
-        },
-        {
-          "name": "participation_in_culinary_innovation_programs",
-          "description": "Binary indicator of the chef's involvement in any culinary innovation programs focused on modern cooking techniques and ingredients"
-        },
-        {
-          "name": "number_of_signature_dishes",
-          "description": "Total number of signature dishes a chef has developed"
-        },
-        {
-          "name": "chef_innovation_score",
-          "description": "A numerical score from 1 to 100 representing the chef's tendency to innovate and try new culinary methods"
-        },
-        {
-          "name": "number_of_awards",
-          "description": "Total number of culinary awards won by the chef"
-        },
-        {
-          "name": "chef_experience",
-          "description": "Number of years of professional cooking experience the chef has"
-        },
-        {
-          "name": "uses_international_flavors",
-          "description": "Indicates whether the chef incorporates international flavors into their cuisine"
-        },
-        {
-          "name": "region_climate",
-          "description": "Climatic condition of the region the chef works in"
-        },
-        {
-          "name": "international_competitions_attended",
-          "description": "Number of international culinary competitions the chef has attended"
-        },
-        {
-          "name": "has_formal_culinary_education",
-          "description": "Indicates whether the chef has formal culinary education"
-        },
-        {
-          "name": "preferred_cooking_method",
-          "description": "Primary cooking method preferred by the chef"
+            "name": "data.csv",
+            "description": "Related to cooking techniques, gastronomy, and culinary traditions.",
+            "columns": [
+                {
+                    "name": "ingredients_diversity_score",
+                    "description": "A score representing the diversity of ingredients used by the chef"
+                },
+                {
+                    "name": "local_supplier_partnerships",
+                    "description": "Number of local suppliers from which the chef sources ingredients"
+                },
+                {
+                    "name": "cooking_method_preference",
+                    "description": "Primary cooking method preferred by the chef"
+                },
+                {
+                    "name": "menu_items_count",
+                    "description": "Total number of different dishes available on the chef's menu"
+                },
+                {
+                    "name": "chef_id",
+                    "description": "Unique identifier for each chef"
+                },
+                {
+                    "name": "gastronomic_techniques_count",
+                    "description": "The count of different gastronomic techniques used by the chef"
+                },
+                {
+                    "name": "culinary_competition_participation",
+                    "description": "Number of culinary competitions the chef participates in annually"
+                },
+                {
+                    "name": "participation_in_culinary_innovation_programs",
+                    "description": "Binary indicator of the chef's involvement in any culinary innovation programs focused on modern cooking techniques and ingredients"
+                },
+                {
+                    "name": "number_of_signature_dishes",
+                    "description": "Total number of signature dishes a chef has developed"
+                },
+                {
+                    "name": "chef_innovation_score",
+                    "description": "A numerical score from 1 to 100 representing the chef's tendency to innovate and try new culinary methods"
+                },
+                {
+                    "name": "number_of_awards",
+                    "description": "Total number of culinary awards won by the chef"
+                },
+                {
+                    "name": "chef_experience",
+                    "description": "Number of years of professional cooking experience the chef has"
+                },
+                {
+                    "name": "uses_international_flavors",
+                    "description": "Indicates whether the chef incorporates international flavors into their cuisine"
+                },
+                {
+                    "name": "region_climate",
+                    "description": "Climatic condition of the region the chef works in"
+                },
+                {
+                    "name": "international_competitions_attended",
+                    "description": "Number of international culinary competitions the chef has attended"
+                },
+                {
+                    "name": "has_formal_culinary_education",
+                    "description": "Indicates whether the chef has formal culinary education"
+                },
+                {
+                    "name": "preferred_cooking_method",
+                    "description": "Primary cooking method preferred by the chef"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 1038,
-      "question": "What is the relationship between region climate, preferred cooking method, and cooking method preference in the culinary arts domain?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "cooking_method_preference",
-      
-      
-      "relevant_cols": [
-        "region_climate",
-        "preferred_cooking_method",
-        "cooking_method_preference"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 1038,
+            "question": "What is the relationship between region climate, preferred cooking method, and cooking method preference in the culinary arts domain?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "cooking_method_preference",
+            "true_hypothesis": "In an analysis of cooking techniques used in various regions, it is discovered that chefs in colder climates who prefer roasting as their primary cooking method also tend to favor dry-heat cooking methods over moist-heat methods. Conversely, chefs in warmer climates who prefer boiling as their primary cooking method tend to favor moist-heat methods over dry-heat methods, demonstrating a temperature-dependent preference for specific cooking methods in culinary traditions.",
+            "true_hypothesis_expr": "np.where((df['region_climate'] == 'cold') & (df['preferred_cooking_method'] == 'roasting') | (df['region_climate'] == 'warm') & (df['preferred_cooking_method'] == 'boiling'), True, False)",
+            "relevant_cols": [
+                "region_climate",
+                "preferred_cooking_method",
+                "cooking_method_preference"
+            ]
+        }
+    ]
 }

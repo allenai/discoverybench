@@ -1,139 +1,139 @@
 {
-  "id": 0,
-  "domain": "ancient architecture",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to historic buildings, architectural marvels, and ancient construction techniques.",
-      "columns": [
+    "id": 0,
+    "domain": "ancient architecture",
+    "datasets": [
         {
-          "name": "durability_material_percentage",
-          "description": "Percentage of nearby ancient structures that utilize highly durable construction materials."
-        },
-        {
-          "name": "neighbor_inscription_percentage",
-          "description": "Percentage of nearby ancient structures that have foundational inscriptions."
-        },
-        {
-          "name": "building_material_reflectivity",
-          "description": "Measure of how much sunlight the building's primary exterior materials can reflect"
-        },
-        {
-          "name": "daily_visitor_count",
-          "description": "Average number of visitors per day"
-        },
-        {
-          "name": "ratio_of_clear_to_cloudy_days",
-          "description": "The ratio of clear days to cloudy days annually at the building's location"
-        },
-        {
-          "name": "base_width_meters",
-          "description": "Width of the base of the structure in meters"
-        },
-        {
-          "name": "restoration_presence",
-          "description": "Binary indicator of whether the nearby area has ongoing or recent restoration efforts."
-        },
-        {
-          "name": "material_origin",
-          "description": "Indicates if the building materials were locally sourced"
-        },
-        {
-          "name": "structural_complexity",
-          "description": "A numerical score representing the complexity of the building's architecture."
-        },
-        {
-          "name": "modern_infrastructure",
-          "description": "Indicates whether the building is equipped with modern infrastructure such as electricity and plumbing."
-        },
-        {
-          "name": "structure_age",
-          "description": "Age of the structure in years"
-        },
-        {
-          "name": "architectural_style",
-          "description": "Style of architecture of the structure"
-        },
-        {
-          "name": "local_construction_materials",
-          "description": "The primary material used in the building's construction, categorized by local availability."
-        },
-        {
-          "name": "structure_id",
-          "description": "Unique identifier for each structure"
-        },
-        {
-          "name": "average_wall_thickness",
-          "description": "Average thickness of the walls measured in centimeters"
-        },
-        {
-          "name": "construction_year",
-          "description": "Year the structure was constructed"
-        },
-        {
-          "name": "average_tourist_visits_per_year",
-          "description": "Average number of tourists visiting the structure per year"
-        },
-        {
-          "name": "facade_complexity_index",
-          "description": "Score representing the complexity of geometric patterns and ornamental design on the structure's facade"
-        },
-        {
-          "name": "has_stone_foundation",
-          "description": "Indicates whether the building has a stone foundation or not"
-        },
-        {
-          "name": "reliance_on_natural_lighting",
-          "description": "Whether the building design primarily relies on natural lighting for illumination and temperature regulation"
-        },
-        {
-          "name": "ceremonial_use",
-          "description": "Indicates if the structure was used for ceremonial purposes"
-        },
-        {
-          "name": "preventive_measures",
-          "description": "Indicates if routine preventive measures against erosion and material degradation are applied"
-        },
-        {
-          "name": "site_location_region",
-          "description": "The geographical region the site is located in, like 'Tropical', 'Temperate', or 'Arid'"
-        },
-        {
-          "name": "in_historical_conservation_area",
-          "description": "Whether the structure is within a legally protected historical conservation area"
-        },
-        {
-          "name": "urban_shadowing",
-          "description": "Binary indicator if the building is in an urban area with significant shadowing by other tall buildings"
-        },
-        {
-          "name": "climate_harshness_score",
-          "description": "A numerical representation of the harshness of the climate where the structure is located, with higher values indicating more severe weather conditions"
-        },
-        {
-          "name": "height_meters",
-          "description": "Height of the structure in meters"
+            "name": "data.csv",
+            "description": "Related to historic buildings, architectural marvels, and ancient construction techniques.",
+            "columns": [
+                {
+                    "name": "durability_material_percentage",
+                    "description": "Percentage of nearby ancient structures that utilize highly durable construction materials."
+                },
+                {
+                    "name": "neighbor_inscription_percentage",
+                    "description": "Percentage of nearby ancient structures that have foundational inscriptions."
+                },
+                {
+                    "name": "building_material_reflectivity",
+                    "description": "Measure of how much sunlight the building's primary exterior materials can reflect"
+                },
+                {
+                    "name": "daily_visitor_count",
+                    "description": "Average number of visitors per day"
+                },
+                {
+                    "name": "ratio_of_clear_to_cloudy_days",
+                    "description": "The ratio of clear days to cloudy days annually at the building's location"
+                },
+                {
+                    "name": "base_width_meters",
+                    "description": "Width of the base of the structure in meters"
+                },
+                {
+                    "name": "restoration_presence",
+                    "description": "Binary indicator of whether the nearby area has ongoing or recent restoration efforts."
+                },
+                {
+                    "name": "material_origin",
+                    "description": "Indicates if the building materials were locally sourced"
+                },
+                {
+                    "name": "structural_complexity",
+                    "description": "A numerical score representing the complexity of the building's architecture."
+                },
+                {
+                    "name": "modern_infrastructure",
+                    "description": "Indicates whether the building is equipped with modern infrastructure such as electricity and plumbing."
+                },
+                {
+                    "name": "structure_age",
+                    "description": "Age of the structure in years"
+                },
+                {
+                    "name": "architectural_style",
+                    "description": "Style of architecture of the structure"
+                },
+                {
+                    "name": "local_construction_materials",
+                    "description": "The primary material used in the building's construction, categorized by local availability."
+                },
+                {
+                    "name": "structure_id",
+                    "description": "Unique identifier for each structure"
+                },
+                {
+                    "name": "average_wall_thickness",
+                    "description": "Average thickness of the walls measured in centimeters"
+                },
+                {
+                    "name": "construction_year",
+                    "description": "Year the structure was constructed"
+                },
+                {
+                    "name": "average_tourist_visits_per_year",
+                    "description": "Average number of tourists visiting the structure per year"
+                },
+                {
+                    "name": "facade_complexity_index",
+                    "description": "Score representing the complexity of geometric patterns and ornamental design on the structure's facade"
+                },
+                {
+                    "name": "has_stone_foundation",
+                    "description": "Indicates whether the building has a stone foundation or not"
+                },
+                {
+                    "name": "reliance_on_natural_lighting",
+                    "description": "Whether the building design primarily relies on natural lighting for illumination and temperature regulation"
+                },
+                {
+                    "name": "ceremonial_use",
+                    "description": "Indicates if the structure was used for ceremonial purposes"
+                },
+                {
+                    "name": "preventive_measures",
+                    "description": "Indicates if routine preventive measures against erosion and material degradation are applied"
+                },
+                {
+                    "name": "site_location_region",
+                    "description": "The geographical region the site is located in, like 'Tropical', 'Temperate', or 'Arid'"
+                },
+                {
+                    "name": "in_historical_conservation_area",
+                    "description": "Whether the structure is within a legally protected historical conservation area"
+                },
+                {
+                    "name": "urban_shadowing",
+                    "description": "Binary indicator if the building is in an urban area with significant shadowing by other tall buildings"
+                },
+                {
+                    "name": "climate_harshness_score",
+                    "description": "A numerical representation of the harshness of the climate where the structure is located, with higher values indicating more severe weather conditions"
+                },
+                {
+                    "name": "height_meters",
+                    "description": "Height of the structure in meters"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 122,
-      "question": "Is there a relationship between the ceremonial use of a historic structure and the average number of tourists that visit the site per year?",
-      "question_type": "general",
-      "difficulty": 3,
-      "target_col": "base_width_meters",
-      
-      
-      "relevant_cols": [
-        "average_tourist_visits_per_year",
-        "ceremonial_use",
-        "in_historical_conservation_area",
-        "structure_age",
-        "climate_harshness_score",
-        "base_width_meters"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 122,
+            "question": "Is there a relationship between the ceremonial use of a historic structure and the average number of tourists that visit the site per year?",
+            "question_type": "general",
+            "difficulty": 3,
+            "target_col": "base_width_meters",
+            "true_hypothesis": "The base width of the structure correlates with the average number of tourists that visit the site per year, the age of the structure, the harshness of the climate where the structure is located, whether the structure is within a legally protected historical conservation area, and whether the structure is used for ceremonial purposes.",
+            "true_hypothesis_expr": "((df['average_tourist_visits_per_year'] / 5000) + (50 - (50 - (np.where(df['structure_age'] > 500, df['climate_harshness_score'] * 1.1 + 2, df['climate_harshness_score'] * 0.9 + 2) * 3 + (df['in_historical_conservation_area'] * 10))) / 10 + (df['ceremonial_use'].astype(int)) * 5).clip(1, 100)",
+            "relevant_cols": [
+                "average_tourist_visits_per_year",
+                "ceremonial_use",
+                "in_historical_conservation_area",
+                "structure_age",
+                "climate_harshness_score",
+                "base_width_meters"
+            ]
+        }
+    ]
 }

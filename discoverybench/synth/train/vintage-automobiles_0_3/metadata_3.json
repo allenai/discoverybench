@@ -1,157 +1,157 @@
 {
-  "id": 3,
-  "domain": "vintage automobiles",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to classic cars, automotive history, and vintage car restoration.",
-      "columns": [
+    "id": 3,
+    "domain": "vintage automobiles",
+    "datasets": [
         {
-          "name": "original_equipment_quality",
-          "description": "Categorical rating of the original factory equipment's quality."
-        },
-        {
-          "name": "has_annual_car_event",
-          "description": "Indicates whether the country hosts at least one annual classic car event"
-        },
-        {
-          "name": "safety_feature_score",
-          "description": "Numerical score representing the level of advanced safety features in the car"
-        },
-        {
-          "name": "car_id",
-          "description": "Unique identifier for each car"
-        },
-        {
-          "name": "average_speed_limit",
-          "description": "The average speed limit on highways in the country (in km/h)"
-        },
-        {
-          "name": "popularity_in_exhibits",
-          "description": "The percentage of automotive exhibitions in which cars from the same decade as the car have appeared."
-        },
-        {
-          "name": "number_of_owners",
-          "description": "Total number of owners that the car has had"
-        },
-        {
-          "name": "year_of_manufacture",
-          "description": "Year the car was originally manufactured"
-        },
-        {
-          "name": "origin_country",
-          "description": "Country where the car was manufactured"
-        },
-        {
-          "name": "market_rarity_percentile",
-          "description": "The percentile that indicates how rare the car model is in the market, based on the number of surviving units"
-        },
-        {
-          "name": "is_convertible",
-          "description": "Indicates whether the car is a convertible model"
-        },
-        {
-          "name": "engine_displacement_percentile",
-          "description": "The percentile rank of the car's engine displacement compared to all other cars."
-        },
-        {
-          "name": "maintenance_cost_change",
-          "description": "Percentage change in maintenance costs for the car over the last 10 years"
-        },
-        {
-          "name": "region_performance_index",
-          "description": "Average performance index of cars from the same region"
-        },
-        {
-          "name": "certificate_of_authenticity",
-          "description": "Indicates if the car comes with a certified document verifying its authenticity and original components"
-        },
-        {
-          "name": "horsepower",
-          "description": "Engine power of the car measured in horsepower"
-        },
-        {
-          "name": "high_performance_region",
-          "description": "Indicates if the car was manufactured in a region historically known for high-performance vehicles"
-        },
-        {
-          "name": "resale_price",
-          "description": "Resale price of the car in USD"
-        },
-        {
-          "name": "car_age",
-          "description": "Age of the car in years"
-        },
-        {
-          "name": "has_won_awards",
-          "description": "Indicates whether the car has won any awards in car exhibitions"
-        },
-        {
-          "name": "region_demand_for_vintage",
-          "description": "Average annual demand for vintage cars in the car's region, measured in sales per year"
-        },
-        {
-          "name": "number_of_car_museums",
-          "description": "The total number of car museums in the country"
-        },
-        {
-          "name": "exhibition_count",
-          "description": "Number of times the car has been displayed in classic car exhibitions"
-        },
-        {
-          "name": "country_of_origin_precision_score",
-          "description": "Score representing the level of precision engineering of the country where the car was manufactured"
-        },
-        {
-          "name": "design_luxury_index",
-          "description": "A numerical index representing the luxury and aesthetic appeal of the car's design."
-        },
-        {
-          "name": "historical_value_index",
-          "description": "Numerical index representing the historical significance and value of the car"
-        },
-        {
-          "name": "vintage_value_category",
-          "description": "Categorical representation of the car's value based on its age and historical significance"
-        },
-        {
-          "name": "major_restoration_done",
-          "description": "Indicates whether the car has undergone major restoration"
-        },
-        {
-          "name": "country_has_racing_tradition",
-          "description": "Indicates if the car's country of origin has a historical tradition in car racing"
-        },
-        {
-          "name": "engine_performance_ratio",
-          "description": "A ratio of the engine's horsepower to its displacement, indicating overall performance efficiency."
-        },
-        {
-          "name": "car_show_participation_frequency",
-          "description": "Number of times the car has participated in vintage car shows annually"
-        },
-        {
-          "name": "restoration_method",
-          "description": "Type of restoration method used, traditional or modern"
+            "name": "data.csv",
+            "description": "Related to classic cars, automotive history, and vintage car restoration.",
+            "columns": [
+                {
+                    "name": "original_equipment_quality",
+                    "description": "Categorical rating of the original factory equipment's quality."
+                },
+                {
+                    "name": "has_annual_car_event",
+                    "description": "Indicates whether the country hosts at least one annual classic car event"
+                },
+                {
+                    "name": "safety_feature_score",
+                    "description": "Numerical score representing the level of advanced safety features in the car"
+                },
+                {
+                    "name": "car_id",
+                    "description": "Unique identifier for each car"
+                },
+                {
+                    "name": "average_speed_limit",
+                    "description": "The average speed limit on highways in the country (in km/h)"
+                },
+                {
+                    "name": "popularity_in_exhibits",
+                    "description": "The percentage of automotive exhibitions in which cars from the same decade as the car have appeared."
+                },
+                {
+                    "name": "number_of_owners",
+                    "description": "Total number of owners that the car has had"
+                },
+                {
+                    "name": "year_of_manufacture",
+                    "description": "Year the car was originally manufactured"
+                },
+                {
+                    "name": "origin_country",
+                    "description": "Country where the car was manufactured"
+                },
+                {
+                    "name": "market_rarity_percentile",
+                    "description": "The percentile that indicates how rare the car model is in the market, based on the number of surviving units"
+                },
+                {
+                    "name": "is_convertible",
+                    "description": "Indicates whether the car is a convertible model"
+                },
+                {
+                    "name": "engine_displacement_percentile",
+                    "description": "The percentile rank of the car's engine displacement compared to all other cars."
+                },
+                {
+                    "name": "maintenance_cost_change",
+                    "description": "Percentage change in maintenance costs for the car over the last 10 years"
+                },
+                {
+                    "name": "region_performance_index",
+                    "description": "Average performance index of cars from the same region"
+                },
+                {
+                    "name": "certificate_of_authenticity",
+                    "description": "Indicates if the car comes with a certified document verifying its authenticity and original components"
+                },
+                {
+                    "name": "horsepower",
+                    "description": "Engine power of the car measured in horsepower"
+                },
+                {
+                    "name": "high_performance_region",
+                    "description": "Indicates if the car was manufactured in a region historically known for high-performance vehicles"
+                },
+                {
+                    "name": "resale_price",
+                    "description": "Resale price of the car in USD"
+                },
+                {
+                    "name": "car_age",
+                    "description": "Age of the car in years"
+                },
+                {
+                    "name": "has_won_awards",
+                    "description": "Indicates whether the car has won any awards in car exhibitions"
+                },
+                {
+                    "name": "region_demand_for_vintage",
+                    "description": "Average annual demand for vintage cars in the car's region, measured in sales per year"
+                },
+                {
+                    "name": "number_of_car_museums",
+                    "description": "The total number of car museums in the country"
+                },
+                {
+                    "name": "exhibition_count",
+                    "description": "Number of times the car has been displayed in classic car exhibitions"
+                },
+                {
+                    "name": "country_of_origin_precision_score",
+                    "description": "Score representing the level of precision engineering of the country where the car was manufactured"
+                },
+                {
+                    "name": "design_luxury_index",
+                    "description": "A numerical index representing the luxury and aesthetic appeal of the car's design."
+                },
+                {
+                    "name": "historical_value_index",
+                    "description": "Numerical index representing the historical significance and value of the car"
+                },
+                {
+                    "name": "vintage_value_category",
+                    "description": "Categorical representation of the car's value based on its age and historical significance"
+                },
+                {
+                    "name": "major_restoration_done",
+                    "description": "Indicates whether the car has undergone major restoration"
+                },
+                {
+                    "name": "country_has_racing_tradition",
+                    "description": "Indicates if the car's country of origin has a historical tradition in car racing"
+                },
+                {
+                    "name": "engine_performance_ratio",
+                    "description": "A ratio of the engine's horsepower to its displacement, indicating overall performance efficiency."
+                },
+                {
+                    "name": "car_show_participation_frequency",
+                    "description": "Number of times the car has participated in vintage car shows annually"
+                },
+                {
+                    "name": "restoration_method",
+                    "description": "Type of restoration method used, traditional or modern"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 841,
-      "question": "Is there a relationship between car show participation frequency, country of origin precision score, possession of a certificate of authenticity, and safety feature score in vintage automobiles?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "safety_feature_score",
-      
-      
-      "relevant_cols": [
-        "car_show_participation_frequency",
-        "country_of_origin_precision_score",
-        "certificate_of_authenticity",
-        "safety_feature_score"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 841,
+            "question": "Is there a relationship between car show participation frequency, country of origin precision score, possession of a certificate of authenticity, and safety feature score in vintage automobiles?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "safety_feature_score",
+            "true_hypothesis": "Cars with a higher frequency of participation in vintage car shows and sourced from countries known for precision engineering, and possessing a certificate of authenticity have higher safety feature scores.",
+            "true_hypothesis_expr": "df['car_show_participation_frequency'] * 2 + df['country_of_origin_precision_score'] * 5 + np.where(df['certificate_of_authenticity'], 20, 0)",
+            "relevant_cols": [
+                "car_show_participation_frequency",
+                "country_of_origin_precision_score",
+                "certificate_of_authenticity",
+                "safety_feature_score"
+            ]
+        }
+    ]
 }

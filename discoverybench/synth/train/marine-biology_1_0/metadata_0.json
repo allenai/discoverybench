@@ -1,105 +1,105 @@
 {
-  "id": 0,
-  "domain": "marine biology",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
-      "columns": [
+    "id": 0,
+    "domain": "marine biology",
+    "datasets": [
         {
-          "name": "seasonal_current_variation",
-          "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
-        },
-        {
-          "name": "daily_sunlight_hours",
-          "description": "Average number of hours of sunlight received per day at the location"
-        },
-        {
-          "name": "pollution_level",
-          "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
-        },
-        {
-          "name": "fishing_activity",
-          "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
-        },
-        {
-          "name": "cloud_cover",
-          "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
-        },
-        {
-          "name": "coral_species_count",
-          "description": "Number of different coral species present"
-        },
-        {
-          "name": "water_clarity",
-          "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
-        },
-        {
-          "name": "ocean_depth",
-          "description": "Depth of the ocean at the reef location, measured in meters"
-        },
-        {
-          "name": "marine_predator_density",
-          "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
-        },
-        {
-          "name": "sea_surface_temperature",
-          "description": "Average sea surface temperature near the reef, measured in degrees Celsius"
-        },
-        {
-          "name": "shipping_route_presence",
-          "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
-        },
-        {
-          "name": "salinity_variation",
-          "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
-        },
-        {
-          "name": "reef_location",
-          "description": "Generalized location of the coral reef"
-        },
-        {
-          "name": "human_activity_score",
-          "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
-        },
-        {
-          "name": "reef_proximity_to_land",
-          "description": "Proximity of the reef to the nearest landmass, measured in kilometers"
-        },
-        {
-          "name": "water_temperature",
-          "description": "Average water temperature near the coral reef in Celsius"
-        },
-        {
-          "name": "bleaching_resistance",
-          "description": "Whether the coral reef resisted a bleaching event, 1 for resisted, 0 for not resisted"
-        },
-        {
-          "name": "reef_is_protected",
-          "description": "Binary indicator of whether the reef is in a legally protected conservation area"
+            "name": "data.csv",
+            "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
+            "columns": [
+                {
+                    "name": "seasonal_current_variation",
+                    "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
+                },
+                {
+                    "name": "daily_sunlight_hours",
+                    "description": "Average number of hours of sunlight received per day at the location"
+                },
+                {
+                    "name": "pollution_level",
+                    "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
+                },
+                {
+                    "name": "fishing_activity",
+                    "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
+                },
+                {
+                    "name": "cloud_cover",
+                    "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
+                },
+                {
+                    "name": "coral_species_count",
+                    "description": "Number of different coral species present"
+                },
+                {
+                    "name": "water_clarity",
+                    "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
+                },
+                {
+                    "name": "ocean_depth",
+                    "description": "Depth of the ocean at the reef location, measured in meters"
+                },
+                {
+                    "name": "marine_predator_density",
+                    "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
+                },
+                {
+                    "name": "sea_surface_temperature",
+                    "description": "Average sea surface temperature near the reef, measured in degrees Celsius"
+                },
+                {
+                    "name": "shipping_route_presence",
+                    "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
+                },
+                {
+                    "name": "salinity_variation",
+                    "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
+                },
+                {
+                    "name": "reef_location",
+                    "description": "Generalized location of the coral reef"
+                },
+                {
+                    "name": "human_activity_score",
+                    "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
+                },
+                {
+                    "name": "reef_proximity_to_land",
+                    "description": "Proximity of the reef to the nearest landmass, measured in kilometers"
+                },
+                {
+                    "name": "water_temperature",
+                    "description": "Average water temperature near the coral reef in Celsius"
+                },
+                {
+                    "name": "bleaching_resistance",
+                    "description": "Whether the coral reef resisted a bleaching event, 1 for resisted, 0 for not resisted"
+                },
+                {
+                    "name": "reef_is_protected",
+                    "description": "Binary indicator of whether the reef is in a legally protected conservation area"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 555,
-      "question": "Is there a relationship between bleaching resistance in coral reefs and daily sunlight hours when pollution level is low and seasonal current rate is low?",
-      "question_type": "general",
-      "difficulty": 3,
-      "target_col": "bleaching_resistance",
-      
-      
-      "relevant_cols": [
-        "coral_species_count",
-        "fishing_activity",
-        "pollution_level",
-        "seasonal_current_variation",
-        "bleaching_resistance",
-        "sea_surface_temperature",
-        "reef_proximity_to_land",
-        "daily_sunlight_hours"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 555,
+            "question": "Is there a relationship between bleaching resistance in coral reefs and daily sunlight hours when pollution level is low and seasonal current rate is low?",
+            "question_type": "general",
+            "difficulty": 3,
+            "target_col": "bleaching_resistance",
+            "true_hypothesis": "In marine ecosystems, when both the pollution level is 'low' and the seasonal current rate is 'low', then the combined influence of sea surface temperature, reef proximity to land, reef activities, fishing activity, and daily sunlight hours determines that bleaching resistance is likely when the coral reef has more than 100 species of coral.",
+            "true_hypothesis_expr": "np.where(((np.where(df['pollution_level']=='low', ((np.where(df['seasonal_current_variation'] == 'low', 200 / (1 + np.exp(-(df['sea_surface_temperature'] - 15) / 10)), 120 / (1 + np.exp(-(df['sea_surface_temperature'] - 15) / 10))) + 10 * np.exp(-df['reef_proximity_to_land'] / 100))*0.3 + (df['daily_sunlight_hours'] * 3 + (df['fishing_activity'].map({'none': 4, 'low': 3, 'moderate': 2, 'high': 1}) * 2))*2), 50) >= 90) & (df['coral_species_count'] > 100), 1, 0)",
+            "relevant_cols": [
+                "coral_species_count",
+                "fishing_activity",
+                "pollution_level",
+                "seasonal_current_variation",
+                "bleaching_resistance",
+                "sea_surface_temperature",
+                "reef_proximity_to_land",
+                "daily_sunlight_hours"
+            ]
+        }
+    ]
 }

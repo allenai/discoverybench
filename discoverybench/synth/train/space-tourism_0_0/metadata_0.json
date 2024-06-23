@@ -1,184 +1,184 @@
 {
-  "id": 0,
-  "domain": "space tourism",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to commercial space travel, space hotels, and cosmic vacations.",
-      "columns": [
+    "id": 0,
+    "domain": "space tourism",
+    "datasets": [
         {
-          "name": "has_travel_insurance",
-          "description": "Indicates whether the tourist has purchased travel insurance for space travel"
-        },
-        {
-          "name": "crew_size",
-          "description": "Total number of crew and passengers scheduled for a journey, influencing the preparation time for departure."
-        },
-        {
-          "name": "number_of_companions",
-          "description": "Total number of travel companions accompanying the tourist"
-        },
-        {
-          "name": "previous_space_travel",
-          "description": "Indicates if the tourist has traveled to space before."
-        },
-        {
-          "name": "nutritional_awareness_program",
-          "description": "Indicates if a nutritional awareness program is available on the spacecraft"
-        },
-        {
-          "name": "participated_in_promotional_events",
-          "description": "Indicates whether the tourist participated in any promotional events related to space tourism"
-        },
-        {
-          "name": "completed_space_travel_training",
-          "description": "Indicates whether the tourist has completed any formal training courses for space travel"
-        },
-        {
-          "name": "luxury_level",
-          "description": "Represents the luxury level of the trip, higher numbers indicate more luxurious."
-        },
-        {
-          "name": "age_group",
-          "description": "Age group of the tourist categorized as youth, adult, or senior"
-        },
-        {
-          "name": "length_of_stay_days",
-          "description": "The number of days the tourist has booked for their stay in a space hotel"
-        },
-        {
-          "name": "personal_items_count",
-          "description": "Number of personal items tourists are allowed to take with them"
-        },
-        {
-          "name": "international_travel_experience",
-          "description": "If the tourist has prior international travel experience, true or false"
-        },
-        {
-          "name": "home_country_GDP",
-          "description": "Gross Domestic Product of the tourist's home country, expressed in trillions of US dollars"
-        },
-        {
-          "name": "average_age_of_group",
-          "description": "Average age of passengers in the travel group"
-        },
-        {
-          "name": "tourist_wealth",
-          "description": "Estimated total wealth of the tourist."
-        },
-        {
-          "name": "solar_activity_index",
-          "description": "Index representing solar activity, including sunspots and solar flares, which could impact energy availability for launches."
-        },
-        {
-          "name": "home_country_aerospace_investment_percentage",
-          "description": "Percentage of GDP invested in aerospace and related high-tech industries in the tourist's home country"
-        },
-        {
-          "name": "average_tourist_age",
-          "description": "Average age of the tourists in years."
-        },
-        {
-          "name": "age_bracket",
-          "description": "The age range of the tourist."
-        },
-        {
-          "name": "daylight_hours_at_launch",
-          "description": "Average number of daylight hours at the launch site on the day of departure."
-        },
-        {
-          "name": "interest_in_celestial_events",
-          "description": "Whether the tourist booked the trip because of interest in celestial events, such as meteor showers or solar eclipses."
-        },
-        {
-          "name": "booking_source",
-          "description": "Source of the booking, either direct or agency"
-        },
-        {
-          "name": "space_membership",
-          "description": "Whether the tourist holds any membership with a space exploration organization"
-        },
-        {
-          "name": "government_space_budget_percent_gdp",
-          "description": "Percentage of the country's GDP allocated to space research and development"
-        },
-        {
-          "name": "pre_trip_training",
-          "description": "Indicates whether tourists attended a space simulation training before their trip"
-        },
-        {
-          "name": "is_weekend",
-          "description": "Boolean flag indicating whether the departure is scheduled on a weekend."
-        },
-        {
-          "name": "satisfaction_rating_higher",
-          "description": "Indicates whether the tourist reports a higher satisfaction rating."
-        },
-        {
-          "name": "proportion_income_spent_on_tech",
-          "description": "The percentage of a tourist's income spent on technological gadgets and subscriptions."
-        },
-        {
-          "name": "ratio_space_trips_to_earth_vacations",
-          "description": "The ratio of space trips to earth vacations taken by a tourist"
-        },
-        {
-          "name": "percent_population_with_space_education",
-          "description": "Percentage of the population that has received formal education relating to space or astronomy"
-        },
-        {
-          "name": "age_category",
-          "description": "Age group of the tourist, categorized into young, middle-aged, or senior"
-        },
-        {
-          "name": "marital_status",
-          "description": "Marital status of the tourist, categorized as single, married, or divorced"
-        },
-        {
-          "name": "interest_in_space_missions",
-          "description": "Score based on the interest level in historical and future space missions, measured through a survey"
-        },
-        {
-          "name": "satisfaction_rating",
-          "description": "Satisfaction rating on a scale from 1 to 10"
-        },
-        {
-          "name": "booking_language_english",
-          "description": "Indicates whether English was the primary language used during booking"
-        },
-        {
-          "name": "primary_travel_purpose",
-          "description": "Main reason for the tourist's space travel: leisure, research, or education"
-        },
-        {
-          "name": "has_children",
-          "description": "Indicates whether the tourist has children, true or false"
+            "name": "data.csv",
+            "description": "Related to commercial space travel, space hotels, and cosmic vacations.",
+            "columns": [
+                {
+                    "name": "has_travel_insurance",
+                    "description": "Indicates whether the tourist has purchased travel insurance for space travel"
+                },
+                {
+                    "name": "crew_size",
+                    "description": "Total number of crew and passengers scheduled for a journey, influencing the preparation time for departure."
+                },
+                {
+                    "name": "number_of_companions",
+                    "description": "Total number of travel companions accompanying the tourist"
+                },
+                {
+                    "name": "previous_space_travel",
+                    "description": "Indicates if the tourist has traveled to space before."
+                },
+                {
+                    "name": "nutritional_awareness_program",
+                    "description": "Indicates if a nutritional awareness program is available on the spacecraft"
+                },
+                {
+                    "name": "participated_in_promotional_events",
+                    "description": "Indicates whether the tourist participated in any promotional events related to space tourism"
+                },
+                {
+                    "name": "completed_space_travel_training",
+                    "description": "Indicates whether the tourist has completed any formal training courses for space travel"
+                },
+                {
+                    "name": "luxury_level",
+                    "description": "Represents the luxury level of the trip, higher numbers indicate more luxurious."
+                },
+                {
+                    "name": "age_group",
+                    "description": "Age group of the tourist categorized as youth, adult, or senior"
+                },
+                {
+                    "name": "length_of_stay_days",
+                    "description": "The number of days the tourist has booked for their stay in a space hotel"
+                },
+                {
+                    "name": "personal_items_count",
+                    "description": "Number of personal items tourists are allowed to take with them"
+                },
+                {
+                    "name": "international_travel_experience",
+                    "description": "If the tourist has prior international travel experience, true or false"
+                },
+                {
+                    "name": "home_country_GDP",
+                    "description": "Gross Domestic Product of the tourist's home country, expressed in trillions of US dollars"
+                },
+                {
+                    "name": "average_age_of_group",
+                    "description": "Average age of passengers in the travel group"
+                },
+                {
+                    "name": "tourist_wealth",
+                    "description": "Estimated total wealth of the tourist."
+                },
+                {
+                    "name": "solar_activity_index",
+                    "description": "Index representing solar activity, including sunspots and solar flares, which could impact energy availability for launches."
+                },
+                {
+                    "name": "home_country_aerospace_investment_percentage",
+                    "description": "Percentage of GDP invested in aerospace and related high-tech industries in the tourist's home country"
+                },
+                {
+                    "name": "average_tourist_age",
+                    "description": "Average age of the tourists in years."
+                },
+                {
+                    "name": "age_bracket",
+                    "description": "The age range of the tourist."
+                },
+                {
+                    "name": "daylight_hours_at_launch",
+                    "description": "Average number of daylight hours at the launch site on the day of departure."
+                },
+                {
+                    "name": "interest_in_celestial_events",
+                    "description": "Whether the tourist booked the trip because of interest in celestial events, such as meteor showers or solar eclipses."
+                },
+                {
+                    "name": "booking_source",
+                    "description": "Source of the booking, either direct or agency"
+                },
+                {
+                    "name": "space_membership",
+                    "description": "Whether the tourist holds any membership with a space exploration organization"
+                },
+                {
+                    "name": "government_space_budget_percent_gdp",
+                    "description": "Percentage of the country's GDP allocated to space research and development"
+                },
+                {
+                    "name": "pre_trip_training",
+                    "description": "Indicates whether tourists attended a space simulation training before their trip"
+                },
+                {
+                    "name": "is_weekend",
+                    "description": "Boolean flag indicating whether the departure is scheduled on a weekend."
+                },
+                {
+                    "name": "satisfaction_rating_higher",
+                    "description": "Indicates whether the tourist reports a higher satisfaction rating."
+                },
+                {
+                    "name": "proportion_income_spent_on_tech",
+                    "description": "The percentage of a tourist's income spent on technological gadgets and subscriptions."
+                },
+                {
+                    "name": "ratio_space_trips_to_earth_vacations",
+                    "description": "The ratio of space trips to earth vacations taken by a tourist"
+                },
+                {
+                    "name": "percent_population_with_space_education",
+                    "description": "Percentage of the population that has received formal education relating to space or astronomy"
+                },
+                {
+                    "name": "age_category",
+                    "description": "Age group of the tourist, categorized into young, middle-aged, or senior"
+                },
+                {
+                    "name": "marital_status",
+                    "description": "Marital status of the tourist, categorized as single, married, or divorced"
+                },
+                {
+                    "name": "interest_in_space_missions",
+                    "description": "Score based on the interest level in historical and future space missions, measured through a survey"
+                },
+                {
+                    "name": "satisfaction_rating",
+                    "description": "Satisfaction rating on a scale from 1 to 10"
+                },
+                {
+                    "name": "booking_language_english",
+                    "description": "Indicates whether English was the primary language used during booking"
+                },
+                {
+                    "name": "primary_travel_purpose",
+                    "description": "Main reason for the tourist's space travel: leisure, research, or education"
+                },
+                {
+                    "name": "has_children",
+                    "description": "Indicates whether the tourist has children, true or false"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 336,
-      "question": "Is there a relationship between the personal items count score and the satisfaction rating among space tourists?",
-      "question_type": "general",
-      "difficulty": 4,
-      "target_col": "satisfaction_rating_higher",
-      
-      
-      "relevant_cols": [
-        "participated_in_promotional_events",
-        "has_travel_insurance",
-        "completed_space_travel_training",
-        "interest_in_space_missions",
-        "percent_population_with_space_education",
-        "government_space_budget_percent_gdp",
-        "booking_language_english",
-        "length_of_stay_days",
-        "pre_trip_training",
-        "personal_items_count",
-        "satisfaction_rating_higher"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 336,
+            "question": "Is there a relationship between the personal items count score and the satisfaction rating among space tourists?",
+            "question_type": "general",
+            "difficulty": 4,
+            "target_col": "satisfaction_rating_higher",
+            "true_hypothesis": "Among space tourists, those who have participated in promotional events related to space tourism, have travel insurance, completed space travel training, high interest in space missions, come from a region with a high percentage of population with space education, and have a government with a significant space budget allocation, and have a personal items count score greater than 3 report a higher satisfaction rating.",
+            "true_hypothesis_expr": "np.where((np.where((df['participated_in_promotional_events'] == True) & ((5 + np.where((df['has_travel_insurance'] & df['completed_space_travel_training']) & (df['interest_in_space_missions'] >= 7), True, False)*2 + (50 - (df['percent_population_with_space_education'] // 2 + df['government_space_budget_percent_gdp'] * 5)*0.2 + (np.where((df['booking_language_english'] == True) & (df['length_of_stay_days'] > 10), True, False)*3*((50 - (df['percent_population_with_space_education'] // 2 + df['government_space_budget_percent_gdp'] * 5)*0.1)) >= 5), 'orbital', 'suborbital') == 'orbital') & (np.where(df['pre_trip_training'], 5 + df['personal_items_count']**2, df['personal_items_count']) > 3), True, False)",
+            "relevant_cols": [
+                "participated_in_promotional_events",
+                "has_travel_insurance",
+                "completed_space_travel_training",
+                "interest_in_space_missions",
+                "percent_population_with_space_education",
+                "government_space_budget_percent_gdp",
+                "booking_language_english",
+                "length_of_stay_days",
+                "pre_trip_training",
+                "personal_items_count",
+                "satisfaction_rating_higher"
+            ]
+        }
+    ]
 }

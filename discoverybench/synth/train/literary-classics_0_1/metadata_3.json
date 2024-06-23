@@ -1,176 +1,176 @@
 {
-  "id": 3,
-  "domain": "literary classics",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to timeless novels, renowned authors, and literary masterpieces.",
-      "columns": [
+    "id": 3,
+    "domain": "literary classics",
+    "datasets": [
         {
-          "name": "author_genre_diversity",
-          "description": "Number of different literary genres in which the author has published works."
-        },
-        {
-          "name": "is_part_of_series",
-          "description": "Indicates if the book is part of a series (1) or not (0)"
-        },
-        {
-          "name": "author_award_count",
-          "description": "Total number of literary awards received by the author up to the publication year of the book"
-        },
-        {
-          "name": "number_of_central_themes",
-          "description": "Count of central themes covered in the book"
-        },
-        {
-          "name": "symbol_richness_score",
-          "description": "A score reflecting the usage and depth of symbols in the novel."
-        },
-        {
-          "name": "symbolic_elements_index",
-          "description": "A quantitative measure, on a scale from 1 to 20, reflecting the richness of symbolic elements used in the classical novel."
-        },
-        {
-          "name": "historical_context_integration",
-          "description": "A boolean value indicating whether the novel directly incorporates actual historical events or settings."
-        },
-        {
-          "name": "character_complexity_index",
-          "description": "A numeric index representing the complexity of character development in the novel, rated by literary critics."
-        },
-        {
-          "name": "new_techniques_used",
-          "description": "Binary indicator of whether new literary techniques typical for the time period are used in the book."
-        },
-        {
-          "name": "main_character_arc_complexity",
-          "description": "Boolean indicating if the main character has a complex development arc."
-        },
-        {
-          "name": "average_age_of_main_characters",
-          "description": "Numeric average age of the main characters in the novel."
-        },
-        {
-          "name": "critical_review_score",
-          "description": "Average score of critical reviews on a scale of 1 to 10"
-        },
-        {
-          "name": "sentence_complexity",
-          "description": "Numerical indication of the syntactic complexity of sentences in the book"
-        },
-        {
-          "name": "number_of_pages",
-          "description": "Total number of pages in the book"
-        },
-        {
-          "name": "narrative_complexity_score",
-          "description": "A score assessing the structural and thematic complexity of the narrative in the novel."
-        },
-        {
-          "name": "battles",
-          "description": "Numerical representation of complexity and depth of life challenges addressed in the novel."
-        },
-        {
-          "name": "has_illustrations",
-          "description": "Indicates whether the book contains illustrations"
-        },
-        {
-          "name": "author_recognition_factor",
-          "description": "A composite score calculated from the frequency of author's mentions in literary magazines and academic citations, normalized on a scale from 1 to 50."
-        },
-        {
-          "name": "current_theme_popularity",
-          "description": "Score reflecting the popularity of the book's main theme based on recent movies and TV shows, normalized on a scale from 1 to 100."
-        },
-        {
-          "name": "literary_award_status",
-          "description": "Indicates if the book received a major literary award (e.g., Pulitzer, Booker)."
-        },
-        {
-          "name": "literary_award_winner",
-          "description": "Whether the book has won any major literary awards"
-        },
-        {
-          "name": "author_origin_western",
-          "description": "A boolean indicating whether the author originates from a Western country."
-        },
-        {
-          "name": "number_of_main_characters",
-          "description": "Count of main characters in the book"
-        },
-        {
-          "name": "unexpected_twists",
-          "description": "Binary indication of whether the novel contains major plot twists."
-        },
-        {
-          "name": "narrative_perspectives_count",
-          "description": "The count of different narrative perspectives employed within the classical novel."
-        },
-        {
-          "name": "narrative_style_relative_to_genre",
-          "description": "Numeric score assessing how the author's narrative style compares to prevailing styles within the same genre."
-        },
-        {
-          "name": "era_influence",
-          "description": "A numerical value representing the impact of the era on the novel's writing style."
-        },
-        {
-          "name": "influential_themes_count",
-          "description": "Count of major themes associated with different literary movements identified in the book."
-        },
-        {
-          "name": "period_language_style_factor",
-          "description": "Numeric indicator of language complexity typical for the period the book was written"
-        },
-        {
-          "name": "literary_classic_recognition",
-          "description": "Related to the recognition of a literary classic"
-        },
-        {
-          "name": "dynamic_characters",
-          "description": "Numeric count of characters in the novel who experience significant development or changes."
-        },
-        {
-          "name": "primary_themes",
-          "description": "Categorical depiction of the main themes of the novel, e.g., love, betrayal, war, friendship."
-        },
-        {
-          "name": "modern_slang_ratio",
-          "description": "Percentage of words categorized as modern slang per total word count in the book"
-        },
-        {
-          "name": "publication_year",
-          "description": "Year when the literary classic was published"
-        },
-        {
-          "name": "target_audience_age",
-          "description": "Defines the main age group the book is targeted at"
-        },
-        {
-          "name": "publication_century",
-          "description": "The century in which the novel was published, coded numerically (e.g., 18 for the 18th century, 19 for the 19th century, etc.)."
+            "name": "data.csv",
+            "description": "Related to timeless novels, renowned authors, and literary masterpieces.",
+            "columns": [
+                {
+                    "name": "author_genre_diversity",
+                    "description": "Number of different literary genres in which the author has published works."
+                },
+                {
+                    "name": "is_part_of_series",
+                    "description": "Indicates if the book is part of a series (1) or not (0)"
+                },
+                {
+                    "name": "author_award_count",
+                    "description": "Total number of literary awards received by the author up to the publication year of the book"
+                },
+                {
+                    "name": "number_of_central_themes",
+                    "description": "Count of central themes covered in the book"
+                },
+                {
+                    "name": "symbol_richness_score",
+                    "description": "A score reflecting the usage and depth of symbols in the novel."
+                },
+                {
+                    "name": "symbolic_elements_index",
+                    "description": "A quantitative measure, on a scale from 1 to 20, reflecting the richness of symbolic elements used in the classical novel."
+                },
+                {
+                    "name": "historical_context_integration",
+                    "description": "A boolean value indicating whether the novel directly incorporates actual historical events or settings."
+                },
+                {
+                    "name": "character_complexity_index",
+                    "description": "A numeric index representing the complexity of character development in the novel, rated by literary critics."
+                },
+                {
+                    "name": "new_techniques_used",
+                    "description": "Binary indicator of whether new literary techniques typical for the time period are used in the book."
+                },
+                {
+                    "name": "main_character_arc_complexity",
+                    "description": "Boolean indicating if the main character has a complex development arc."
+                },
+                {
+                    "name": "average_age_of_main_characters",
+                    "description": "Numeric average age of the main characters in the novel."
+                },
+                {
+                    "name": "critical_review_score",
+                    "description": "Average score of critical reviews on a scale of 1 to 10"
+                },
+                {
+                    "name": "sentence_complexity",
+                    "description": "Numerical indication of the syntactic complexity of sentences in the book"
+                },
+                {
+                    "name": "number_of_pages",
+                    "description": "Total number of pages in the book"
+                },
+                {
+                    "name": "narrative_complexity_score",
+                    "description": "A score assessing the structural and thematic complexity of the narrative in the novel."
+                },
+                {
+                    "name": "battles",
+                    "description": "Numerical representation of complexity and depth of life challenges addressed in the novel."
+                },
+                {
+                    "name": "has_illustrations",
+                    "description": "Indicates whether the book contains illustrations"
+                },
+                {
+                    "name": "author_recognition_factor",
+                    "description": "A composite score calculated from the frequency of author's mentions in literary magazines and academic citations, normalized on a scale from 1 to 50."
+                },
+                {
+                    "name": "current_theme_popularity",
+                    "description": "Score reflecting the popularity of the book's main theme based on recent movies and TV shows, normalized on a scale from 1 to 100."
+                },
+                {
+                    "name": "literary_award_status",
+                    "description": "Indicates if the book received a major literary award (e.g., Pulitzer, Booker)."
+                },
+                {
+                    "name": "literary_award_winner",
+                    "description": "Whether the book has won any major literary awards"
+                },
+                {
+                    "name": "author_origin_western",
+                    "description": "A boolean indicating whether the author originates from a Western country."
+                },
+                {
+                    "name": "number_of_main_characters",
+                    "description": "Count of main characters in the book"
+                },
+                {
+                    "name": "unexpected_twists",
+                    "description": "Binary indication of whether the novel contains major plot twists."
+                },
+                {
+                    "name": "narrative_perspectives_count",
+                    "description": "The count of different narrative perspectives employed within the classical novel."
+                },
+                {
+                    "name": "narrative_style_relative_to_genre",
+                    "description": "Numeric score assessing how the author's narrative style compares to prevailing styles within the same genre."
+                },
+                {
+                    "name": "era_influence",
+                    "description": "A numerical value representing the impact of the era on the novel's writing style."
+                },
+                {
+                    "name": "influential_themes_count",
+                    "description": "Count of major themes associated with different literary movements identified in the book."
+                },
+                {
+                    "name": "period_language_style_factor",
+                    "description": "Numeric indicator of language complexity typical for the period the book was written"
+                },
+                {
+                    "name": "literary_classic_recognition",
+                    "description": "Related to the recognition of a literary classic"
+                },
+                {
+                    "name": "dynamic_characters",
+                    "description": "Numeric count of characters in the novel who experience significant development or changes."
+                },
+                {
+                    "name": "primary_themes",
+                    "description": "Categorical depiction of the main themes of the novel, e.g., love, betrayal, war, friendship."
+                },
+                {
+                    "name": "modern_slang_ratio",
+                    "description": "Percentage of words categorized as modern slang per total word count in the book"
+                },
+                {
+                    "name": "publication_year",
+                    "description": "Year when the literary classic was published"
+                },
+                {
+                    "name": "target_audience_age",
+                    "description": "Defines the main age group the book is targeted at"
+                },
+                {
+                    "name": "publication_century",
+                    "description": "The century in which the novel was published, coded numerically (e.g., 18 for the 18th century, 19 for the 19th century, etc.)."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 172,
-      "question": "Is there a relationship between the count of main characters, the square of the count of central themes, and the number of pages in a book in the dataset?",
-      "question_type": "general",
-      "difficulty": 3,
-      "target_col": "number_of_pages",
-      
-      
-      "relevant_cols": [
-        "has_illustrations",
-        "number_of_main_characters",
-        "number_of_central_themes",
-        "is_part_of_series",
-        "period_language_style_factor",
-        "target_audience_age",
-        "number_of_pages"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 172,
+            "question": "Is there a relationship between the count of main characters, the square of the count of central themes, and the number of pages in a book in the dataset?",
+            "question_type": "general",
+            "difficulty": 3,
+            "target_col": "number_of_pages",
+            "true_hypothesis": "The number of pages in a book is calculated by raising the count of main characters to the power of 3, adding 5 times the square of the count of central themes, and also adding 5000 if the book is part of a series. This total is then divided by 4000. Next, the result is adjusted by subtracting the product of the language style factor and a factor based on the presence of illustrations and the target audience's age group. The adjusted value is multiplied by 20, and 30 pages are added if the book has illustrations. Finally, 100 pages are added to the result.",
+            "true_hypothesis_expr": "np.round((df['number_of_main_characters']**3 + 5 * df['number_of_central_themes']**2 + np.where(df['is_part_of_series'], 5000, 0)) / 4000 - (df['period_language_style_factor'] * (0.02 + (0.05 * df['has_illustrations'].astype(int))) / (df['target_audience_age'].map({'children': 3, 'teens': 2, 'adults': 1}))*100) * 20 + np.where(df['has_illustrations'], 30, 0) + 100",
+            "relevant_cols": [
+                "has_illustrations",
+                "number_of_main_characters",
+                "number_of_central_themes",
+                "is_part_of_series",
+                "period_language_style_factor",
+                "target_audience_age",
+                "number_of_pages"
+            ]
+        }
+    ]
 }

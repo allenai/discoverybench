@@ -1,134 +1,134 @@
 {
-  "id": 0,
-  "domain": "cryptocurrency",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to digital currencies, blockchain technology, and decentralized finance.",
-      "columns": [
+    "id": 0,
+    "domain": "cryptocurrency",
+    "datasets": [
         {
-          "name": "investment_likelihood",
-          "description": "Likelihood of the individual to invest in cryptocurrency based on unspecified factors"
-        },
-        {
-          "name": "types_of_cryptocurrencies_invested",
-          "description": "The count of different types of cryptocurrencies the individual has invested in"
-        },
-        {
-          "name": "job_sector",
-          "description": "Sector of employment of the individual"
-        },
-        {
-          "name": "research_hours_per_week",
-          "description": "Average number of hours per week the individual spends researching cryptocurrency markets"
-        },
-        {
-          "name": "digital_literacy_score",
-          "description": "Score assessing the individual's digital literacy, on a scale from 0 to 100"
-        },
-        {
-          "name": "uses_blockchain_technology",
-          "description": "Whether the individual uses blockchain technology actively in other domains than cryptocurrency trading"
-        },
-        {
-          "name": "monthly_blockchain_transactions",
-          "description": "The average number of blockchain transactions made by the individual per month"
-        },
-        {
-          "name": "number_of_cryptocurrencies_owned",
-          "description": "The number of different cryptocurrencies owned by the individual"
-        },
-        {
-          "name": "age",
-          "description": "Age of the individual participating in decentralized finance"
-        },
-        {
-          "name": "investment_experience_years",
-          "description": "The number of years the individual has been investing in cryptocurrencies"
-        },
-        {
-          "name": "has_crypto_certifications",
-          "description": "Whether the individual has any formal certifications related to cryptocurrencies"
-        },
-        {
-          "name": "follows_crypto_news",
-          "description": "Indicates whether the individual regularly follows news related to cryptocurrencies"
-        },
-        {
-          "name": "online_course_enrollment_frequency",
-          "description": "Number of online courses related to digital skills enrolled in per year"
-        },
-        {
-          "name": "forum_participation_level",
-          "description": "The degree of participation the individual has in online forums discussing cryptocurrencies, rated from 1 to 5"
-        },
-        {
-          "name": "has_regular_access_to_internet",
-          "description": "Indicates whether the individual has regular access to the internet"
-        },
-        {
-          "name": "decentralized_finance_participation",
-          "description": "Whether the individual participates in decentralized finance platforms"
-        },
-        {
-          "name": "economic_condition",
-          "description": "Current economic condition expressed as normal, upturn, or downturn"
-        },
-        {
-          "name": "blockchain_conference_attendances",
-          "description": "The number of blockchain-related conferences the individual has attended in the past year"
-        },
-        {
-          "name": "tech_workshops_attended",
-          "description": "Number of technology-focused workshops or webinars attended per year"
-        },
-        {
-          "name": "investment_in_crypto",
-          "description": "Amount of money invested in cryptocurrency"
-        },
-        {
-          "name": "annual_income",
-          "description": "The annual income of the individual in US dollars"
-        },
-        {
-          "name": "uses_defi_services",
-          "description": "Whether the individual uses any decentralized financial services"
-        },
-        {
-          "name": "trading_frequency_per_month",
-          "description": "The average number of times an individual makes crypto trades per month"
-        },
-        {
-          "name": "holds_multiple_currencies",
-          "description": "Whether the individual holds more than one type of cryptocurrency"
-        },
-        {
-          "name": "number_of_trading_platforms",
-          "description": "The count of different platforms on which the individual actively trades cryptocurrencies"
+            "name": "data.csv",
+            "description": "Related to digital currencies, blockchain technology, and decentralized finance.",
+            "columns": [
+                {
+                    "name": "investment_likelihood",
+                    "description": "Likelihood of the individual to invest in cryptocurrency based on unspecified factors"
+                },
+                {
+                    "name": "types_of_cryptocurrencies_invested",
+                    "description": "The count of different types of cryptocurrencies the individual has invested in"
+                },
+                {
+                    "name": "job_sector",
+                    "description": "Sector of employment of the individual"
+                },
+                {
+                    "name": "research_hours_per_week",
+                    "description": "Average number of hours per week the individual spends researching cryptocurrency markets"
+                },
+                {
+                    "name": "digital_literacy_score",
+                    "description": "Score assessing the individual's digital literacy, on a scale from 0 to 100"
+                },
+                {
+                    "name": "uses_blockchain_technology",
+                    "description": "Whether the individual uses blockchain technology actively in other domains than cryptocurrency trading"
+                },
+                {
+                    "name": "monthly_blockchain_transactions",
+                    "description": "The average number of blockchain transactions made by the individual per month"
+                },
+                {
+                    "name": "number_of_cryptocurrencies_owned",
+                    "description": "The number of different cryptocurrencies owned by the individual"
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the individual participating in decentralized finance"
+                },
+                {
+                    "name": "investment_experience_years",
+                    "description": "The number of years the individual has been investing in cryptocurrencies"
+                },
+                {
+                    "name": "has_crypto_certifications",
+                    "description": "Whether the individual has any formal certifications related to cryptocurrencies"
+                },
+                {
+                    "name": "follows_crypto_news",
+                    "description": "Indicates whether the individual regularly follows news related to cryptocurrencies"
+                },
+                {
+                    "name": "online_course_enrollment_frequency",
+                    "description": "Number of online courses related to digital skills enrolled in per year"
+                },
+                {
+                    "name": "forum_participation_level",
+                    "description": "The degree of participation the individual has in online forums discussing cryptocurrencies, rated from 1 to 5"
+                },
+                {
+                    "name": "has_regular_access_to_internet",
+                    "description": "Indicates whether the individual has regular access to the internet"
+                },
+                {
+                    "name": "decentralized_finance_participation",
+                    "description": "Whether the individual participates in decentralized finance platforms"
+                },
+                {
+                    "name": "economic_condition",
+                    "description": "Current economic condition expressed as normal, upturn, or downturn"
+                },
+                {
+                    "name": "blockchain_conference_attendances",
+                    "description": "The number of blockchain-related conferences the individual has attended in the past year"
+                },
+                {
+                    "name": "tech_workshops_attended",
+                    "description": "Number of technology-focused workshops or webinars attended per year"
+                },
+                {
+                    "name": "investment_in_crypto",
+                    "description": "Amount of money invested in cryptocurrency"
+                },
+                {
+                    "name": "annual_income",
+                    "description": "The annual income of the individual in US dollars"
+                },
+                {
+                    "name": "uses_defi_services",
+                    "description": "Whether the individual uses any decentralized financial services"
+                },
+                {
+                    "name": "trading_frequency_per_month",
+                    "description": "The average number of times an individual makes crypto trades per month"
+                },
+                {
+                    "name": "holds_multiple_currencies",
+                    "description": "Whether the individual holds more than one type of cryptocurrency"
+                },
+                {
+                    "name": "number_of_trading_platforms",
+                    "description": "The count of different platforms on which the individual actively trades cryptocurrencies"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 251,
-      "question": "What is the relationship between annual income and investment experience in the cryptocurrency domain, considering factors like digital literacy score, research hours per week, and involvement in blockchain technology and decentralized finance?",
-      "question_type": "general",
-      "difficulty": 2,
-      "target_col": "annual_income",
-      
-      
-      "relevant_cols": [
-        "has_crypto_certifications",
-        "research_hours_per_week",
-        "uses_blockchain_technology",
-        "uses_defi_services",
-        "blockchain_conference_attendances",
-        "digital_literacy_score",
-        "trading_frequency_per_month",
-        "investment_experience_years",
-        "annual_income"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 251,
+            "question": "What is the relationship between annual income and investment experience in the cryptocurrency domain, considering factors like digital literacy score, research hours per week, and involvement in blockchain technology and decentralized finance?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "annual_income",
+            "true_hypothesis": "Individuals with more research hours per week, higher digital literacy scores, active use of blockchain technology, and involvement in cryptocurrency-related activities such as attending blockchain conferences and having crypto certifications tend to have higher annual incomes.",
+            "true_hypothesis_expr": "(df['research_hours_per_week']*2 + df['digital_literacy_score']//2 + 10*df['uses_blockchain_technology'].astype(int)) * 1000 + np.where((df['blockchain_conference_attendances'] > 5) & (df['has_crypto_certifications']), 70000, 50000) + (df['investment_experience_years']**2 + 0.1 * df['trading_frequency_per_month'] + 3 * df['uses_defi_services'].astype(int)) * 5000",
+            "relevant_cols": [
+                "has_crypto_certifications",
+                "research_hours_per_week",
+                "uses_blockchain_technology",
+                "uses_defi_services",
+                "blockchain_conference_attendances",
+                "digital_literacy_score",
+                "trading_frequency_per_month",
+                "investment_experience_years",
+                "annual_income"
+            ]
+        }
+    ]
 }

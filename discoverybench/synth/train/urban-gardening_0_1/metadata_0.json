@@ -1,216 +1,216 @@
 {
-  "id": 0,
-  "domain": "urban gardening",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to planting in cities, community gardens, and sustainable urban landscapes.",
-      "columns": [
+    "id": 0,
+    "domain": "urban gardening",
+    "datasets": [
         {
-          "name": "number_of_local_food_markets",
-          "description": "The number of local food markets within a 5 km radius of the garden"
-        },
-        {
-          "name": "frequency_of_community_events",
-          "description": "Number of community events held in the garden per month"
-        },
-        {
-          "name": "annual_rainfall",
-          "description": "Annual rainfall measured in millimeters."
-        },
-        {
-          "name": "average_annual_temperature",
-          "description": "The average annual temperature in degrees Celsius of the city where the garden is located."
-        },
-        {
-          "name": "land_availability",
-          "description": "Indicates whether the area has ample available land for gardening."
-        },
-        {
-          "name": "has_educational_program",
-          "description": "Indicates if the garden includes an educational program."
-        },
-        {
-          "name": "garden_size",
-          "description": "The total area of the garden measured in square meters."
-        },
-        {
-          "name": "green_space_per_1000_residents",
-          "description": "Amount of green space in square meters available per 1000 residents."
-        },
-        {
-          "name": "public_funding",
-          "description": "The amount of funding received from governmental or public sources annually."
-        },
-        {
-          "name": "garden_accessibility_index",
-          "description": "A numeric score representing how accessible the garden is, considering factors like public transportation access and physical ease of entry."
-        },
-        {
-          "name": "volunteer_participation_rate",
-          "description": "Percentage of volunteers participating in garden activities compared to total volunteer pool."
-        },
-        {
-          "name": "garden_type_regulation",
-          "description": "A binary indicator of whether local regulations favor food-producing over ornamental types."
-        },
-        {
-          "name": "total_city_area",
-          "description": "Total area of the city in square kilometers."
-        },
-        {
-          "name": "sunlight_exposure_hours",
-          "description": "Average number of hours the garden receives direct sunlight per day."
-        },
-        {
-          "name": "sustainable_composting",
-          "description": "Whether sustainable composting methods are used in the garden. 'Yes' for gardens using sustainable composting, 'No' otherwise."
-        },
-        {
-          "name": "number_of_workshops",
-          "description": "The count of workshops and training sessions conducted in the garden."
-        },
-        {
-          "name": "late_night_business_count",
-          "description": "Number of businesses open until 9 PM or later in the area."
-        },
-        {
-          "name": "irrigation_system_quality",
-          "description": "Quality level of the garden's irrigation system, rated from low to high."
-        },
-        {
-          "name": "historical_visitation",
-          "description": "Average number of visitors per year over the past 5 years."
-        },
-        {
-          "name": "is_community_driven",
-          "description": "Indicates whether the garden is primarily managed and maintained by the community."
-        },
-        {
-          "name": "local_funding_amount",
-          "description": "Financial contributions from local entities or individuals, expressed in thousands of dollars."
-        },
-        {
-          "name": "garden_space_per_capita",
-          "description": "The amount of garden space available per capita in square meters."
-        },
-        {
-          "name": "vegetable_plots",
-          "description": "Whether the garden includes vegetable plots. 'Yes' for gardens with vegetable plots, 'No' for gardens without them."
-        },
-        {
-          "name": "percentage_native_plants",
-          "description": "Percentage of the garden area covered with native plants."
-        },
-        {
-          "name": "population_density",
-          "description": "Number of people per square kilometer in the city."
-        },
-        {
-          "name": "rare_plant_species_ratio",
-          "description": "Proportion of rare plant species in the garden."
-        },
-        {
-          "name": "funding_from_local_businesses",
-          "description": "Annual funding received from local businesses, in US dollars."
-        },
-        {
-          "name": "number_of_trees",
-          "description": "Number of trees in the garden."
-        },
-        {
-          "name": "daily_pedestrian_traffic",
-          "description": "Average number of pedestrians passing near the garden daily."
-        },
-        {
-          "name": "has_local_partnerships",
-          "description": "Indicates whether the garden has partnerships with local businesses or organizations."
-        },
-        {
-          "name": "number_of_community_events",
-          "description": "Annual number of community events held in the garden."
-        },
-        {
-          "name": "guest_expert_visits",
-          "description": "The number of times experts visited the garden for educational events in a year."
-        },
-        {
-          "name": "frequent_gardening_workshops",
-          "description": "Indicates if the city holds gardening workshops more than twice a month"
-        },
-        {
-          "name": "residential_land_percentage",
-          "description": "Percentage of total land used for residential purposes in the city."
-        },
-        {
-          "name": "public_green_space_area",
-          "description": "Total area of public green spaces in the city measured in square kilometers."
-        },
-        {
-          "name": "number_of_staff",
-          "description": "Number of full-time staff members who work in the garden."
-        },
-        {
-          "name": "green_space_area",
-          "description": "Total area of parks and green spaces within the city in square kilometers."
-        },
-        {
-          "name": "high_density_residential_area",
-          "description": "Indicates if the garden is located in a high density residential area."
-        },
-        {
-          "name": "sunlight_hours_per_day",
-          "description": "Average number of sunlight hours the garden receives per day"
-        },
-        {
-          "name": "average_income_level",
-          "description": "Average yearly income in the city, categorized as 'low', 'medium', or 'high'."
-        },
-        {
-          "name": "tourist_attraction_rating",
-          "description": "Rating of city as a tourist destination on a scale from 1 to 10."
-        },
-        {
-          "name": "average_rainfall_mm",
-          "description": "Average rainfall in millimeters the location of the garden receives annually."
-        },
-        {
-          "name": "focus_on_drought_resistant",
-          "description": "Indicates if the garden primarily focuses on drought-resistant plants."
-        },
-        {
-          "name": "has_school_affiliation",
-          "description": "Indicates if the garden is officially affiliated with a local school or educational institution."
-        },
-        {
-          "name": "specializes_in_ornamentals",
-          "description": "Indicates if the garden primarily focuses on ornamental plants."
-        },
-        {
-          "name": "green_jobs_available",
-          "description": "Number of job openings in green industries within the city."
-        },
-        {
-          "name": "number_of_local_volunteers",
-          "description": "The quantity of unpaid local individuals who help maintain the garden."
+            "name": "data.csv",
+            "description": "Related to planting in cities, community gardens, and sustainable urban landscapes.",
+            "columns": [
+                {
+                    "name": "number_of_local_food_markets",
+                    "description": "The number of local food markets within a 5 km radius of the garden"
+                },
+                {
+                    "name": "frequency_of_community_events",
+                    "description": "Number of community events held in the garden per month"
+                },
+                {
+                    "name": "annual_rainfall",
+                    "description": "Annual rainfall measured in millimeters."
+                },
+                {
+                    "name": "average_annual_temperature",
+                    "description": "The average annual temperature in degrees Celsius of the city where the garden is located."
+                },
+                {
+                    "name": "land_availability",
+                    "description": "Indicates whether the area has ample available land for gardening."
+                },
+                {
+                    "name": "has_educational_program",
+                    "description": "Indicates if the garden includes an educational program."
+                },
+                {
+                    "name": "garden_size",
+                    "description": "The total area of the garden measured in square meters."
+                },
+                {
+                    "name": "green_space_per_1000_residents",
+                    "description": "Amount of green space in square meters available per 1000 residents."
+                },
+                {
+                    "name": "public_funding",
+                    "description": "The amount of funding received from governmental or public sources annually."
+                },
+                {
+                    "name": "garden_accessibility_index",
+                    "description": "A numeric score representing how accessible the garden is, considering factors like public transportation access and physical ease of entry."
+                },
+                {
+                    "name": "volunteer_participation_rate",
+                    "description": "Percentage of volunteers participating in garden activities compared to total volunteer pool."
+                },
+                {
+                    "name": "garden_type_regulation",
+                    "description": "A binary indicator of whether local regulations favor food-producing over ornamental types."
+                },
+                {
+                    "name": "total_city_area",
+                    "description": "Total area of the city in square kilometers."
+                },
+                {
+                    "name": "sunlight_exposure_hours",
+                    "description": "Average number of hours the garden receives direct sunlight per day."
+                },
+                {
+                    "name": "sustainable_composting",
+                    "description": "Whether sustainable composting methods are used in the garden. 'Yes' for gardens using sustainable composting, 'No' otherwise."
+                },
+                {
+                    "name": "number_of_workshops",
+                    "description": "The count of workshops and training sessions conducted in the garden."
+                },
+                {
+                    "name": "late_night_business_count",
+                    "description": "Number of businesses open until 9 PM or later in the area."
+                },
+                {
+                    "name": "irrigation_system_quality",
+                    "description": "Quality level of the garden's irrigation system, rated from low to high."
+                },
+                {
+                    "name": "historical_visitation",
+                    "description": "Average number of visitors per year over the past 5 years."
+                },
+                {
+                    "name": "is_community_driven",
+                    "description": "Indicates whether the garden is primarily managed and maintained by the community."
+                },
+                {
+                    "name": "local_funding_amount",
+                    "description": "Financial contributions from local entities or individuals, expressed in thousands of dollars."
+                },
+                {
+                    "name": "garden_space_per_capita",
+                    "description": "The amount of garden space available per capita in square meters."
+                },
+                {
+                    "name": "vegetable_plots",
+                    "description": "Whether the garden includes vegetable plots. 'Yes' for gardens with vegetable plots, 'No' for gardens without them."
+                },
+                {
+                    "name": "percentage_native_plants",
+                    "description": "Percentage of the garden area covered with native plants."
+                },
+                {
+                    "name": "population_density",
+                    "description": "Number of people per square kilometer in the city."
+                },
+                {
+                    "name": "rare_plant_species_ratio",
+                    "description": "Proportion of rare plant species in the garden."
+                },
+                {
+                    "name": "funding_from_local_businesses",
+                    "description": "Annual funding received from local businesses, in US dollars."
+                },
+                {
+                    "name": "number_of_trees",
+                    "description": "Number of trees in the garden."
+                },
+                {
+                    "name": "daily_pedestrian_traffic",
+                    "description": "Average number of pedestrians passing near the garden daily."
+                },
+                {
+                    "name": "has_local_partnerships",
+                    "description": "Indicates whether the garden has partnerships with local businesses or organizations."
+                },
+                {
+                    "name": "number_of_community_events",
+                    "description": "Annual number of community events held in the garden."
+                },
+                {
+                    "name": "guest_expert_visits",
+                    "description": "The number of times experts visited the garden for educational events in a year."
+                },
+                {
+                    "name": "frequent_gardening_workshops",
+                    "description": "Indicates if the city holds gardening workshops more than twice a month"
+                },
+                {
+                    "name": "residential_land_percentage",
+                    "description": "Percentage of total land used for residential purposes in the city."
+                },
+                {
+                    "name": "public_green_space_area",
+                    "description": "Total area of public green spaces in the city measured in square kilometers."
+                },
+                {
+                    "name": "number_of_staff",
+                    "description": "Number of full-time staff members who work in the garden."
+                },
+                {
+                    "name": "green_space_area",
+                    "description": "Total area of parks and green spaces within the city in square kilometers."
+                },
+                {
+                    "name": "high_density_residential_area",
+                    "description": "Indicates if the garden is located in a high density residential area."
+                },
+                {
+                    "name": "sunlight_hours_per_day",
+                    "description": "Average number of sunlight hours the garden receives per day"
+                },
+                {
+                    "name": "average_income_level",
+                    "description": "Average yearly income in the city, categorized as 'low', 'medium', or 'high'."
+                },
+                {
+                    "name": "tourist_attraction_rating",
+                    "description": "Rating of city as a tourist destination on a scale from 1 to 10."
+                },
+                {
+                    "name": "average_rainfall_mm",
+                    "description": "Average rainfall in millimeters the location of the garden receives annually."
+                },
+                {
+                    "name": "focus_on_drought_resistant",
+                    "description": "Indicates if the garden primarily focuses on drought-resistant plants."
+                },
+                {
+                    "name": "has_school_affiliation",
+                    "description": "Indicates if the garden is officially affiliated with a local school or educational institution."
+                },
+                {
+                    "name": "specializes_in_ornamentals",
+                    "description": "Indicates if the garden primarily focuses on ornamental plants."
+                },
+                {
+                    "name": "green_jobs_available",
+                    "description": "Number of job openings in green industries within the city."
+                },
+                {
+                    "name": "number_of_local_volunteers",
+                    "description": "The quantity of unpaid local individuals who help maintain the garden."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 878,
-      "question": "Is there a relationship between the number of local food markets within a 5 km radius and the frequency of gardening workshops that could indicate the presence of vegetable plots in urban gardens?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "vegetable_plots",
-      
-      
-      "relevant_cols": [
-        "number_of_local_food_markets",
-        "frequent_gardening_workshops",
-        "vegetable_plots"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 878,
+            "question": "Is there a relationship between the number of local food markets within a 5 km radius and the frequency of gardening workshops that could indicate the presence of vegetable plots in urban gardens?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "vegetable_plots",
+            "true_hypothesis": "Gardens with more than 15 local food markets within a 5 km radius and in cities that hold gardening workshops more than twice a month are likely to include vegetable plots.",
+            "true_hypothesis_expr": "np.where((df['number_of_local_food_markets'] > 15) & (df['frequent_gardening_workshops']), 'Yes', 'No')",
+            "relevant_cols": [
+                "number_of_local_food_markets",
+                "frequent_gardening_workshops",
+                "vegetable_plots"
+            ]
+        }
+    ]
 }

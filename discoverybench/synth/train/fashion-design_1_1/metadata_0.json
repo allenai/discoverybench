@@ -1,107 +1,107 @@
 {
-  "id": 0,
-  "domain": "fashion design",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to clothing, style trends, and runway shows.",
-      "columns": [
+    "id": 0,
+    "domain": "fashion design",
+    "datasets": [
         {
-          "name": "fashion_show_location",
-          "description": "Location of the fashion show"
-        },
-        {
-          "name": "has_sponsorship",
-          "description": "Indicates if the fashion show has a financial or product sponsorship"
-        },
-        {
-          "name": "venue_type",
-          "description": "Type of venue where the fashion show is held"
-        },
-        {
-          "name": "design_innovation_score",
-          "description": "A calculated score based on the use of non-traditional materials and unique construction techniques"
-        },
-        {
-          "name": "percentage_new_designers",
-          "description": "Percentage of runway slots allocated to designers who debuted in the last five years"
-        },
-        {
-          "name": "local_fashion_magazine_circulation",
-          "description": "Annual circulation numbers of major fashion magazines within the designer's home country"
-        },
-        {
-          "name": "number_of_models",
-          "description": "Number of models in the show"
-        },
-        {
-          "name": "number_of_fashion_design_schools",
-          "description": "Total number of fashion design schools in the designer's home country"
-        },
-        {
-          "name": "audience_approval_rating",
-          "description": "Percentage of audience approval"
-        },
-        {
-          "name": "month_of_year",
-          "description": "Month in which the fashion show is held, as an integer (1-12)"
-        },
-        {
-          "name": "international_investor_presence",
-          "description": "Presence of investors from outside the fashion designer's origin country"
-        },
-        {
-          "name": "designer_origin_gdp_per_capita",
-          "description": "GDP per capita of the country from where the fashion designer originates"
-        },
-        {
-          "name": "count_international_designers",
-          "description": "Number of international designers participating in the fashion show"
-        },
-        {
-          "name": "predicted_season",
-          "description": "Forecasted season category of the fashion show"
-        },
-        {
-          "name": "percentage_luxury_brands",
-          "description": "Percentage of luxury brands featured in the fashion show"
-        },
-        {
-          "name": "external_temperature",
-          "description": "External temperature in degrees Celsius on the day of the fashion show"
-        },
-        {
-          "name": "num_designer_runway_appearances",
-          "description": "Number of appearances by the designer in major runway events"
-        },
-        {
-          "name": "average_profit_margin_previous_collections",
-          "description": "Average profit margin from the designer's previous collections"
-        },
-        {
-          "name": "ensemble_type",
-          "description": "Type of textile used in clothing ensemble"
+            "name": "data.csv",
+            "description": "Related to clothing, style trends, and runway shows.",
+            "columns": [
+                {
+                    "name": "fashion_show_location",
+                    "description": "Location of the fashion show"
+                },
+                {
+                    "name": "has_sponsorship",
+                    "description": "Indicates if the fashion show has a financial or product sponsorship"
+                },
+                {
+                    "name": "venue_type",
+                    "description": "Type of venue where the fashion show is held"
+                },
+                {
+                    "name": "design_innovation_score",
+                    "description": "A calculated score based on the use of non-traditional materials and unique construction techniques"
+                },
+                {
+                    "name": "percentage_new_designers",
+                    "description": "Percentage of runway slots allocated to designers who debuted in the last five years"
+                },
+                {
+                    "name": "local_fashion_magazine_circulation",
+                    "description": "Annual circulation numbers of major fashion magazines within the designer's home country"
+                },
+                {
+                    "name": "number_of_models",
+                    "description": "Number of models in the show"
+                },
+                {
+                    "name": "number_of_fashion_design_schools",
+                    "description": "Total number of fashion design schools in the designer's home country"
+                },
+                {
+                    "name": "audience_approval_rating",
+                    "description": "Percentage of audience approval"
+                },
+                {
+                    "name": "month_of_year",
+                    "description": "Month in which the fashion show is held, as an integer (1-12)"
+                },
+                {
+                    "name": "international_investor_presence",
+                    "description": "Presence of investors from outside the fashion designer's origin country"
+                },
+                {
+                    "name": "designer_origin_gdp_per_capita",
+                    "description": "GDP per capita of the country from where the fashion designer originates"
+                },
+                {
+                    "name": "count_international_designers",
+                    "description": "Number of international designers participating in the fashion show"
+                },
+                {
+                    "name": "predicted_season",
+                    "description": "Forecasted season category of the fashion show"
+                },
+                {
+                    "name": "percentage_luxury_brands",
+                    "description": "Percentage of luxury brands featured in the fashion show"
+                },
+                {
+                    "name": "external_temperature",
+                    "description": "External temperature in degrees Celsius on the day of the fashion show"
+                },
+                {
+                    "name": "num_designer_runway_appearances",
+                    "description": "Number of appearances by the designer in major runway events"
+                },
+                {
+                    "name": "average_profit_margin_previous_collections",
+                    "description": "Average profit margin from the designer's previous collections"
+                },
+                {
+                    "name": "ensemble_type",
+                    "description": "Type of textile used in clothing ensemble"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 454,
-      "question": "Is there a relationship between the venue type, percentage of luxury brands, and designer origin GDP per capita with the predicted season in fashion design datasets?",
-      "question_type": "general",
-      "difficulty": 2,
-      "target_col": "predicted_season",
-      
-      
-      "relevant_cols": [
-        "external_temperature",
-        "venue_type",
-        "percentage_luxury_brands",
-        "designer_origin_gdp_per_capita",
-        "international_investor_presence",
-        "predicted_season"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 454,
+            "question": "Is there a relationship between the venue type, percentage of luxury brands, and designer origin GDP per capita with the predicted season in fashion design datasets?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "predicted_season",
+            "true_hypothesis": "In fashion design, the GDP per capita of the country of the fashion designer combined with the presence of international investors and certain venue characteristics can predict the season of the fashion show. The relationship is observed in shows where high GDP per capita and the presence of international investors, combined with specific venue characteristics, result in the prediction of Winter or Summer seasons. For other cases, Autumn is predicted.",
+            "true_hypothesis_expr": "np.where((np.where((df['designer_origin_gdp_per_capita'] > 30000) & (df['international_investor_presence'] == True), True, False)) & ((df['percentage_luxury_brands'] * 0.9 + 20 * (df['venue_type'] == 'indoor')) > 50) & (df['external_temperature'] < 10), 'Winter', np.where((np.where((df['designer_origin_gdp_per_capita'] > 30000) & (df['international_investor_presence'] == True), True, False)) & ((df['percentage_luxury_brands'] * 0.9 + 20 * (df['venue_type'] == 'indoor')) < 50) & (df['external_temperature'] > 20), 'Summer', 'Autumn'))",
+            "relevant_cols": [
+                "external_temperature",
+                "venue_type",
+                "percentage_luxury_brands",
+                "designer_origin_gdp_per_capita",
+                "international_investor_presence",
+                "predicted_season"
+            ]
+        }
+    ]
 }

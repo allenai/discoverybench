@@ -1,117 +1,117 @@
 {
-  "id": 1,
-  "domain": "medieval literature",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to knights, epic poems, and medieval storytelling.",
-      "columns": [
+    "id": 1,
+    "domain": "medieval literature",
+    "datasets": [
         {
-          "name": "region_of_origin",
-          "description": "The geographical region where the knight originated"
-        },
-        {
-          "name": "region_epic_tradition_score",
-          "description": "Score rating the richness of the knight's region in terms of epic poetry tradition."
-        },
-        {
-          "name": "weapon_type",
-          "description": "Primary weapon used by the knight"
-        },
-        {
-          "name": "can_recite_verses",
-          "description": "Whether the knight can recite verses from epic poems (true) or not (false)."
-        },
-        {
-          "name": "troubadour_friendships",
-          "description": "Indicates the number of troubadours the knight is closely associated with, reflecting exposure to lyrical and oral storytelling traditions."
-        },
-        {
-          "name": "manuscripts_collected",
-          "description": "Counts the number of medieval manuscripts collected by the knight, suggesting direct engagement with written material."
-        },
-        {
-          "name": "knight_tournaments",
-          "description": "Count of tournaments a knight has participated in"
-        },
-        {
-          "name": "castle_residencies",
-          "description": "Counts the number of castles a knight has resided in, reflecting their status and access to resources."
-        },
-        {
-          "name": "number_of_tourneys",
-          "description": "The number of tournaments in which the knight has participated."
-        },
-        {
-          "name": "era_of_legend",
-          "description": "Era in which the knight's stories were popular, corresponds to a specific century"
-        },
-        {
-          "name": "literacy_rates",
-          "description": "Percentage representing the literacy rate of the knight's originating region"
-        },
-        {
-          "name": "battles_survived",
-          "description": "The number of battles survived by the knight"
-        },
-        {
-          "name": "knightly_vows",
-          "description": "Binary indicator of whether the knight has taken any specific knightly vows, reflecting adherence to chivalric codes."
-        },
-        {
-          "name": "accolade_count",
-          "description": "Total number of accolades received by the knight from tourneys and royal acknowledgments."
-        },
-        {
-          "name": "number_of_battles",
-          "description": "The number of battles the knight participated in"
-        },
-        {
-          "name": "regions_with_epic_traditions",
-          "description": "Whether the knight hails from a region known for strong traditions in epic poetry"
-        },
-        {
-          "name": "forest_coverage_percent",
-          "description": "Percentage of forest coverage in the knight's region of origin"
-        },
-        {
-          "name": "handedness",
-          "description": "Whether the knight is left-handed or right-handed"
-        },
-        {
-          "name": "knight_name_survivability_score",
-          "description": "Score indicating the survivability measure associated with the knight's name"
-        },
-        {
-          "name": "manuscript_contributions",
-          "description": "Number of contributions the knight has made to medieval manuscripts, either as stories or illustrations"
-        },
-        {
-          "name": "roles_of_distinction",
-          "description": "Whether the knight has been depicted in roles of high distinction or not (e.g., kingdom leaders, quest leaders)"
-        },
-        {
-          "name": "jousting_tournaments",
-          "description": "Indicates the number of jousting tournaments the knight has participated in, showing their active participation in knightly culture."
+            "name": "data.csv",
+            "description": "Related to knights, epic poems, and medieval storytelling.",
+            "columns": [
+                {
+                    "name": "region_of_origin",
+                    "description": "The geographical region where the knight originated"
+                },
+                {
+                    "name": "region_epic_tradition_score",
+                    "description": "Score rating the richness of the knight's region in terms of epic poetry tradition."
+                },
+                {
+                    "name": "weapon_type",
+                    "description": "Primary weapon used by the knight"
+                },
+                {
+                    "name": "can_recite_verses",
+                    "description": "Whether the knight can recite verses from epic poems (true) or not (false)."
+                },
+                {
+                    "name": "troubadour_friendships",
+                    "description": "Indicates the number of troubadours the knight is closely associated with, reflecting exposure to lyrical and oral storytelling traditions."
+                },
+                {
+                    "name": "manuscripts_collected",
+                    "description": "Counts the number of medieval manuscripts collected by the knight, suggesting direct engagement with written material."
+                },
+                {
+                    "name": "knight_tournaments",
+                    "description": "Count of tournaments a knight has participated in"
+                },
+                {
+                    "name": "castle_residencies",
+                    "description": "Counts the number of castles a knight has resided in, reflecting their status and access to resources."
+                },
+                {
+                    "name": "number_of_tourneys",
+                    "description": "The number of tournaments in which the knight has participated."
+                },
+                {
+                    "name": "era_of_legend",
+                    "description": "Era in which the knight's stories were popular, corresponds to a specific century"
+                },
+                {
+                    "name": "literacy_rates",
+                    "description": "Percentage representing the literacy rate of the knight's originating region"
+                },
+                {
+                    "name": "battles_survived",
+                    "description": "The number of battles survived by the knight"
+                },
+                {
+                    "name": "knightly_vows",
+                    "description": "Binary indicator of whether the knight has taken any specific knightly vows, reflecting adherence to chivalric codes."
+                },
+                {
+                    "name": "accolade_count",
+                    "description": "Total number of accolades received by the knight from tourneys and royal acknowledgments."
+                },
+                {
+                    "name": "number_of_battles",
+                    "description": "The number of battles the knight participated in"
+                },
+                {
+                    "name": "regions_with_epic_traditions",
+                    "description": "Whether the knight hails from a region known for strong traditions in epic poetry"
+                },
+                {
+                    "name": "forest_coverage_percent",
+                    "description": "Percentage of forest coverage in the knight's region of origin"
+                },
+                {
+                    "name": "handedness",
+                    "description": "Whether the knight is left-handed or right-handed"
+                },
+                {
+                    "name": "knight_name_survivability_score",
+                    "description": "Score indicating the survivability measure associated with the knight's name"
+                },
+                {
+                    "name": "manuscript_contributions",
+                    "description": "Number of contributions the knight has made to medieval manuscripts, either as stories or illustrations"
+                },
+                {
+                    "name": "roles_of_distinction",
+                    "description": "Whether the knight has been depicted in roles of high distinction or not (e.g., kingdom leaders, quest leaders)"
+                },
+                {
+                    "name": "jousting_tournaments",
+                    "description": "Indicates the number of jousting tournaments the knight has participated in, showing their active participation in knightly culture."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 642,
-      "question": "Is there a relationship between the roles of high distinction knights occupy, their manuscript contributions, the regions with epic traditions they come from in medieval literature, and their weapon type usage?",
-      "question_type": "general",
-      "difficulty": 2,
-      "target_col": "weapon_type",
-      
-      
-      "relevant_cols": [
-        "roles_of_distinction",
-        "regions_with_epic_traditions",
-        "manuscript_contributions",
-        "weapon_type"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 642,
+            "question": "Is there a relationship between the roles of high distinction knights occupy, their manuscript contributions, the regions with epic traditions they come from in medieval literature, and their weapon type usage?",
+            "question_type": "general",
+            "difficulty": 2,
+            "target_col": "weapon_type",
+            "true_hypothesis": "Knights with higher manuscript contributions and who hail from regions with epic traditions and occupy roles of high distinction within medieval literature are more likely to use swords. If the calculated value is greater than 50, then the knight is predicted to use a sword. If this value is between 30 and 50, the knight is predicted to use a spear. Otherwise, the knight is predicted to use an axe.",
+            "true_hypothesis_expr": "np.where((df['manuscript_contributions'] * 2 + df['regions_with_epic_traditions'].astype(int) * 30)**2 + 3*df['roles_of_distinction'] > 50, 'sword', np.where((df['manuscript_contributions'] * 2 + df['regions_with_epic_traditions'].astype(int) * 30)**2 + 3*df['roles_of_distinction'] > 30, 'spear', 'axe'))",
+            "relevant_cols": [
+                "roles_of_distinction",
+                "regions_with_epic_traditions",
+                "manuscript_contributions",
+                "weapon_type"
+            ]
+        }
+    ]
 }

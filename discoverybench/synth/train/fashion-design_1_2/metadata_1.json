@@ -1,108 +1,108 @@
 {
-  "id": 1,
-  "domain": "fashion design",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to clothing, style trends, and runway shows.",
-      "columns": [
+    "id": 1,
+    "domain": "fashion design",
+    "datasets": [
         {
-          "name": "fashion_show_location",
-          "description": "Location of the fashion show"
-        },
-        {
-          "name": "international_investor_presence",
-          "description": "Presence of investors from outside the fashion designer's origin country"
-        },
-        {
-          "name": "percentage_new_designers",
-          "description": "Percentage of runway slots allocated to designers who debuted in the last five years"
-        },
-        {
-          "name": "audience_approval_rating",
-          "description": "Percentage of audience approval"
-        },
-        {
-          "name": "design_innovation_score",
-          "description": "A calculated score based on the use of non-traditional materials and unique construction techniques"
-        },
-        {
-          "name": "count_international_designers",
-          "description": "Number of international designers participating in the fashion show"
-        },
-        {
-          "name": "num_designer_runway_appearances",
-          "description": "Number of appearances by the designer in major runway events"
-        },
-        {
-          "name": "local_fashion_magazine_circulation",
-          "description": "Annual circulation numbers of major fashion magazines within the designer's home country"
-        },
-        {
-          "name": "number_of_models",
-          "description": "Number of models in the show"
-        },
-        {
-          "name": "average_profit_margin_previous_collections",
-          "description": "Average profit margin from the designer's previous collections"
-        },
-        {
-          "name": "ensemble_type",
-          "description": "Type of textile used in clothing ensemble"
-        },
-        {
-          "name": "venue_type",
-          "description": "Type of venue where the fashion show is held"
-        },
-        {
-          "name": "is_in_europe",
-          "description": "Binary indicator if the fashion show is located in Europe"
-        },
-        {
-          "name": "external_temperature",
-          "description": "External temperature in degrees Celsius on the day of the fashion show"
-        },
-        {
-          "name": "number_of_fashion_design_schools",
-          "description": "Total number of fashion design schools in the designer's home country"
-        },
-        {
-          "name": "percentage_luxury_brands",
-          "description": "Percentage of luxury brands featured in the fashion show"
-        },
-        {
-          "name": "month_of_year",
-          "description": "Month in which the fashion show is held, as an integer (1-12)"
-        },
-        {
-          "name": "has_sponsorship",
-          "description": "Indicates if the fashion show has a financial or product sponsorship"
-        },
-        {
-          "name": "social_media_trend_popularity",
-          "description": "Popularity rating of the fashion show on social media platforms"
-        },
-        {
-          "name": "designer_origin_gdp_per_capita",
-          "description": "GDP per capita of the country from where the fashion designer originates"
+            "name": "data.csv",
+            "description": "Related to clothing, style trends, and runway shows.",
+            "columns": [
+                {
+                    "name": "fashion_show_location",
+                    "description": "Location of the fashion show"
+                },
+                {
+                    "name": "international_investor_presence",
+                    "description": "Presence of investors from outside the fashion designer's origin country"
+                },
+                {
+                    "name": "percentage_new_designers",
+                    "description": "Percentage of runway slots allocated to designers who debuted in the last five years"
+                },
+                {
+                    "name": "audience_approval_rating",
+                    "description": "Percentage of audience approval"
+                },
+                {
+                    "name": "design_innovation_score",
+                    "description": "A calculated score based on the use of non-traditional materials and unique construction techniques"
+                },
+                {
+                    "name": "count_international_designers",
+                    "description": "Number of international designers participating in the fashion show"
+                },
+                {
+                    "name": "num_designer_runway_appearances",
+                    "description": "Number of appearances by the designer in major runway events"
+                },
+                {
+                    "name": "local_fashion_magazine_circulation",
+                    "description": "Annual circulation numbers of major fashion magazines within the designer's home country"
+                },
+                {
+                    "name": "number_of_models",
+                    "description": "Number of models in the show"
+                },
+                {
+                    "name": "average_profit_margin_previous_collections",
+                    "description": "Average profit margin from the designer's previous collections"
+                },
+                {
+                    "name": "ensemble_type",
+                    "description": "Type of textile used in clothing ensemble"
+                },
+                {
+                    "name": "venue_type",
+                    "description": "Type of venue where the fashion show is held"
+                },
+                {
+                    "name": "is_in_europe",
+                    "description": "Binary indicator if the fashion show is located in Europe"
+                },
+                {
+                    "name": "external_temperature",
+                    "description": "External temperature in degrees Celsius on the day of the fashion show"
+                },
+                {
+                    "name": "number_of_fashion_design_schools",
+                    "description": "Total number of fashion design schools in the designer's home country"
+                },
+                {
+                    "name": "percentage_luxury_brands",
+                    "description": "Percentage of luxury brands featured in the fashion show"
+                },
+                {
+                    "name": "month_of_year",
+                    "description": "Month in which the fashion show is held, as an integer (1-12)"
+                },
+                {
+                    "name": "has_sponsorship",
+                    "description": "Indicates if the fashion show has a financial or product sponsorship"
+                },
+                {
+                    "name": "social_media_trend_popularity",
+                    "description": "Popularity rating of the fashion show on social media platforms"
+                },
+                {
+                    "name": "designer_origin_gdp_per_capita",
+                    "description": "GDP per capita of the country from where the fashion designer originates"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 451,
-      "question": "What is the relationship between the designers' origin country's GDP per capita, the presence of international investors, and the label 'is_in_europe' in the fashion design dataset?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "is_in_europe",
-      
-      
-      "relevant_cols": [
-        "designer_origin_gdp_per_capita",
-        "international_investor_presence",
-        "is_in_europe"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 451,
+            "question": "What is the relationship between the designers' origin country's GDP per capita, the presence of international investors, and the label 'is_in_europe' in the fashion design dataset?",
+            "question_type": "general",
+            "difficulty": 1,
+            "target_col": "is_in_europe",
+            "true_hypothesis": "The combination of the designers' origin country's GDP per capita above 30,000 and the presence of international investors positively correlates with the label 'is_in_europe'.",
+            "true_hypothesis_expr": "np.where((df['designer_origin_gdp_per_capita'] > 30000) & (df['international_investor_presence'] == True), True, False)",
+            "relevant_cols": [
+                "designer_origin_gdp_per_capita",
+                "international_investor_presence",
+                "is_in_europe"
+            ]
+        }
+    ]
 }
