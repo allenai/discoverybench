@@ -119,14 +119,7 @@
             "question": "Is there a relationship between the count of habitat markers found and the number of years since the last survey in an area for robotic explorers, particularly when also considering the frequency of robotic maintenance sessions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "years_since_last_survey",
-            "true_hypothesis": "The number of years since the last survey in an area tends to increase with fewer habitat markers found and when fewer robotic maintenance sessions are recorded, particularly as the count of habitat markers found decreases and the number of robotic maintenance sessions decreases, mitigated by a constant factor of 5.",
-            "true_hypothesis_expr": "df['habitat_markers_found'] * -0.1 + df['robotic_maintenance_sessions'] * -0.2 + 5",
-            "relevant_cols": [
-                "habitat_markers_found",
-                "robotic_maintenance_sessions",
-                "years_since_last_survey"
-            ]
+            "true_hypothesis": "The number of years since the last survey in an area tends to increase with fewer habitat markers found and when fewer robotic maintenance sessions are recorded, particularly as the count of habitat markers found decreases and the number of robotic maintenance sessions decreases, mitigated by a constant factor of 5."
         }
     ]
 }

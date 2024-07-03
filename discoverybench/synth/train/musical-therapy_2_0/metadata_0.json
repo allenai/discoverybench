@@ -171,19 +171,7 @@
             "question": "Is there a relationship between session duration, self-reported wellness score, relaxation during music, disturbance after music, initial emotional state rating, patient care unit, adjusted wellness score, and music genre preference match that influences patient's well-being in musical therapy?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "adjusted_wellness_score",
-            "true_hypothesis": "Patients who listen to classical music during sessions lasting at least 30 minutes, report a wellness score that is 1.4 times higher than their self-reported wellness score when certain conditions related to relaxation, disturbance, emotional state, music preference match, and care unit type are met.",
-            "true_hypothesis_expr": "np.where((df.get('music_type') == 'classical') & (40 + df['relaxation_during_music'] - df['disturbance_after_music'] > 65) & (df['session_duration'] >= 30) & ((df['initial_emotional_state_rating'] + df['music_genre_preference_match']*2 + (df['patient_care_unit'] == 'ICU').astype(int)*3) >= 3), df['self_reported_wellness_score'] * 1.4, df['self_reported_wellness_score'])",
-            "relevant_cols": [
-                "session_duration",
-                "self_reported_wellness_score",
-                "relaxation_during_music",
-                "disturbance_after_music",
-                "initial_emotional_state_rating",
-                "patient_care_unit",
-                "adjusted_wellness_score",
-                "music_genre_preference_match"
-            ]
+            "true_hypothesis": "Patients who listen to classical music during sessions lasting at least 30 minutes, report a wellness score that is 1.4 times higher than their self-reported wellness score when certain conditions related to relaxation, disturbance, emotional state, music preference match, and care unit type are met."
         }
     ]
 }

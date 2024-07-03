@@ -179,15 +179,7 @@
             "question": "What is the relationship between initial emotional state rating, patient care unit, degree of music genre preference match, and number of sessions per week in the context of musical therapy?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "sessions_per_week",
-            "true_hypothesis": "Patients who rate their initial emotional state higher, have a higher preference for music genre customized therapy, and belong to the ICU have a higher number of sessions per week compared to those in general wards.",
-            "true_hypothesis_expr": "df['initial_emotional_state_rating'] + df['music_genre_preference_match']*2 + (df['patient_care_unit'] == 'ICU').astype(int)*3",
-            "relevant_cols": [
-                "initial_emotional_state_rating",
-                "patient_care_unit",
-                "music_genre_preference_match",
-                "sessions_per_week"
-            ]
+            "true_hypothesis": "Patients who rate their initial emotional state higher, have a higher preference for music genre customized therapy, and belong to the ICU have a higher number of sessions per week compared to those in general wards."
         }
     ]
 }

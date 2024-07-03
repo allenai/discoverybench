@@ -83,14 +83,7 @@
             "question": "Is there a relationship between the number of star chart references and documented lunar phases per century with the likelihood of civilizations using celestial navigation in ancient astronomy?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "celestial_navigation",
-            "true_hypothesis": "Civilizations with more than 50 star chart references and more than 100 documented lunar phases per century are likely to use celestial navigation, indicating advanced observational skills.",
-            "true_hypothesis_expr": "np.where((df['star_chart_references'] > 50) & (df['lunar_phase_records'] > 100), True, False)",
-            "relevant_cols": [
-                "star_chart_references",
-                "lunar_phase_records",
-                "celestial_navigation"
-            ]
+            "true_hypothesis": "Civilizations with more than 50 star chart references and more than 100 documented lunar phases per century are likely to use celestial navigation, indicating advanced observational skills."
         }
     ]
 }

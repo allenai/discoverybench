@@ -75,20 +75,7 @@
             "question": "What is the relationship between the preference for binary star systems in ancient navigation and the civilization's advanced calendar systems, the percentile ranking of documented star charts, the number of star charts created, the presence of significant metallic ore deposits, the level of trade activity, the astronomic seasons utilized, the detail level of star maps, and the formula based on these factors?",
             "question_type": "general",
             "difficulty": 4,
-            "target_col": "binary_star_system_preference",
-            "true_hypothesis": "The preference for binary star systems in ancient navigation is influenced by the civilization's advanced calendar systems, the percentile ranking of documented star charts, the number of star charts created, the presence of significant metallic ore deposits, the level of trade activity, the astronomic seasons utilized, the detail level of star maps, and the formula based on these factors.",
-            "true_hypothesis_expr": "np.where(10 * (np.where(df['advanced_calendar_systems'], np.ceil(df['star_charts_documented_percentile'] / 5), 0) * np.where(np.where((df['star_chart_references'] > 50) & (df['lunar_phase_records'] > 100), True, False), 1, 0)) + 30 * np.where((df['metallic_ore_deposits'] == True) & (df['trade_activity_level'] > 50), True, False).astype(int) > 45, 50 + 2.0 * df['astronomic_seasons_utilized'] - 0.2 * df['star_map_detail_level'] ** 2 + 0.01 * df['astronomic_seasons_utilized'] * df['star_map_detail_level'] ** 2 * 1.3, 50 + 2.0 * df['astronomic_seasons_utilized'] - 0.2 * df['star_map_detail_level'] ** 2 + 0.01 * df['astronomic_seasons_utilized'] * df['star_map_detail_level'] ** 2 * 0.7)",
-            "relevant_cols": [
-                "advanced_calendar_systems",
-                "star_charts_documented_percentile",
-                "star_chart_references",
-                "lunar_phase_records",
-                "metallic_ore_deposits",
-                "trade_activity_level",
-                "astronomic_seasons_utilized",
-                "star_map_detail_level",
-                "binary_star_system_preference"
-            ]
+            "true_hypothesis": "The preference for binary star systems in ancient navigation is influenced by the civilization's advanced calendar systems, the percentile ranking of documented star charts, the number of star charts created, the presence of significant metallic ore deposits, the level of trade activity, the astronomic seasons utilized, the detail level of star maps, and the formula based on these factors."
         }
     ]
 }

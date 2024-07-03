@@ -147,14 +147,7 @@
             "question": "Is there a relationship between population density, governance efficiency, and the ratio of environmental programs in different regions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "environmental_program_ratio",
-            "true_hypothesis": "In regions where the population density is high (population_density_per_sq_km > 500) and local governance scores high on efficiency (governance_efficiency_index > 50), the ratio of environmental programs is lower due to balanced administrative capacities.",
-            "true_hypothesis_expr": "100 - (df['population_density_per_sq_km'] / 50) - (100 - df['governance_efficiency_index'])",
-            "relevant_cols": [
-                "population_density_per_sq_km",
-                "governance_efficiency_index",
-                "environmental_program_ratio"
-            ]
+            "true_hypothesis": "In regions where the population density is high (population_density_per_sq_km > 500) and local governance scores high on efficiency (governance_efficiency_index > 50), the ratio of environmental programs is lower due to balanced administrative capacities."
         }
     ]
 }

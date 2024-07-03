@@ -155,14 +155,7 @@
             "question": "What is the relationship between the number of awards won, engagement in sponsored shoots, and the average lens cost for photographers in the dataset?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "average_lens_cost",
-            "true_hypothesis": "Photographers who engage in sponsored shoots and have a high number of awards won tend to own lenses with an average cost that is calculated as 250 times the number of sponsored shoots plus 20 times the square of the number of awards won minus 15 times the number of awards won plus 160.",
-            "true_hypothesis_expr": "250 * df['sponsored_shoots'] + 20 * df['awards_won']**2 - 15 * df['awards_won'] + 160",
-            "relevant_cols": [
-                "awards_won",
-                "sponsored_shoots",
-                "average_lens_cost"
-            ]
+            "true_hypothesis": "Photographers who engage in sponsored shoots and have a high number of awards won tend to own lenses with an average cost that is calculated as 250 times the number of sponsored shoots plus 20 times the square of the number of awards won minus 15 times the number of awards won plus 160."
         }
     ]
 }

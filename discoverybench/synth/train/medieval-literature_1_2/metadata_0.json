@@ -107,14 +107,7 @@
             "question": "Is there a relationship between the number of 'manuscripts_collected' by knights and their corresponding 'literacy_level' in medieval literature?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "literacy_level",
-            "true_hypothesis": "Knights with a higher number of 'manuscripts_collected', reflecting engagement with written material, and 'troubadour_friendships', representing exposure to lyrical and oral storytelling traditions, have a higher 'literacy_level'.",
-            "true_hypothesis_expr": "df['manuscripts_collected']*0.2 + df['troubadour_friendships']*0.8",
-            "relevant_cols": [
-                "troubadour_friendships",
-                "manuscripts_collected",
-                "literacy_level"
-            ]
+            "true_hypothesis": "Knights with a higher number of 'manuscripts_collected', reflecting engagement with written material, and 'troubadour_friendships', representing exposure to lyrical and oral storytelling traditions, have a higher 'literacy_level'."
         }
     ]
 }

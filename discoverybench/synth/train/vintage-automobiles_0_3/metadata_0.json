@@ -143,15 +143,7 @@
             "question": "Given the dataset on vintage automobiles, is there a relationship between the existence of annual car events and the country's racing tradition, defined by a calculated value from specific columns exceeding a certain threshold?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "country_has_racing_tradition",
-            "true_hypothesis": "A country is considered to have a racing tradition if the calculated value from the expression: (number_of_car_museums squared + 3 times the average_speed_limit cubed + 9 times the has_annual_car_event) is greater than 1000.",
-            "true_hypothesis_expr": "np.where((df['number_of_car_museums']**2 + (3 * df['average_speed_limit']**3) + (9 * df['has_annual_car_event'])) > 1000, True, False)",
-            "relevant_cols": [
-                "number_of_car_museums",
-                "average_speed_limit",
-                "has_annual_car_event",
-                "country_has_racing_tradition"
-            ]
+            "true_hypothesis": "A country is considered to have a racing tradition if the calculated value from the expression: (number_of_car_museums squared + 3 times the average_speed_limit cubed + 9 times the has_annual_car_event) is greater than 1000."
         }
     ]
 }

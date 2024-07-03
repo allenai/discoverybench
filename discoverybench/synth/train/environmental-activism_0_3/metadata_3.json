@@ -147,14 +147,7 @@
             "question": "Given the dataset, can you determine if there is a relationship between the ratio of public green spaces to commercial areas and the type of region?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "region_type",
-            "true_hypothesis": "In regions where the ratio of public green spaces to commercial areas is higher than 1:3, the region is Urban. If the ratio is between 1:5 and 1:3, the region is Suburban; for ratios lower than 1:5, the region is Rural.",
-            "true_hypothesis_expr": "np.select([(df['public_green_space_area'] / df['commercial_area'] > (1/3)), (df['public_green_space_area'] / df['commercial_area'] <= (1/3)) & (df['public_green_space_area'] / df['commercial_area'] > (1/5)), (df['public_green_space_area'] / df['commercial_area'] <= (1/5))], ['Urban', 'Suburban', 'Rural'], default='Rural')",
-            "relevant_cols": [
-                "public_green_space_area",
-                "commercial_area",
-                "region_type"
-            ]
+            "true_hypothesis": "In regions where the ratio of public green spaces to commercial areas is higher than 1:3, the region is Urban. If the ratio is between 1:5 and 1:3, the region is Suburban; for ratios lower than 1:5, the region is Rural."
         }
     ]
 }

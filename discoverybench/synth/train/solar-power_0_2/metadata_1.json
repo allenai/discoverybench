@@ -131,15 +131,7 @@
             "question": "Is there a relationship between solar panel efficiency, average daylight duration, average daily temperature variation, and cloud cover ratio in the context of solar power systems?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "cloud_cover_ratio",
-            "true_hypothesis": "Higher values of ((average_daylight_duration ^ 2) - average_daily_temperature_variation) lead to higher cloud cover ratios, with a more significant decrease in the ratio associated with high solar panel efficiency.",
-            "true_hypothesis_expr": "np.where(np.where((df['average_daylight_duration'] ** 2 - df['average_daily_temperature_variation']) >= 50, 'high', np.where((df['average_daylight_duration'] ** 2 - df['average_daily_temperature_variation']) >= 20, 'medium', 'low')) == 'high', 1 - df['solar_panel_efficiency'] / 40, 1)",
-            "relevant_cols": [
-                "solar_panel_efficiency",
-                "average_daylight_duration",
-                "average_daily_temperature_variation",
-                "cloud_cover_ratio"
-            ]
+            "true_hypothesis": "Higher values of ((average_daylight_duration ^ 2) - average_daily_temperature_variation) lead to higher cloud cover ratios, with a more significant decrease in the ratio associated with high solar panel efficiency."
         }
     ]
 }

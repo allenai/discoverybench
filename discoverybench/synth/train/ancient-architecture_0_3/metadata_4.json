@@ -139,15 +139,7 @@
             "question": "Is there a relationship between a building's latitude and its structural complexity, local construction materials, presence of modern infrastructure?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "latitude",
-            "true_hypothesis": "The latitude of a building is determined by multiplying the structural complexity score by 5, subtracting 15 if the building is constructed with stone as the local materials, adding 30 if the building has modern infrastructure, and finally subtracting 90. These factors collectively contribute to the latitude of the building location.",
-            "true_hypothesis_expr": "5 * df['structural_complexity'] - 15 * np.where(df['local_construction_materials'] == 'stone', 1, 0) + 30 * np.where(df['modern_infrastructure'], 1, 0) - 90",
-            "relevant_cols": [
-                "structural_complexity",
-                "local_construction_materials",
-                "modern_infrastructure",
-                "latitude"
-            ]
+            "true_hypothesis": "The latitude of a building is determined by multiplying the structural complexity score by 5, subtracting 15 if the building is constructed with stone as the local materials, adding 30 if the building has modern infrastructure, and finally subtracting 90. These factors collectively contribute to the latitude of the building location."
         }
     ]
 }

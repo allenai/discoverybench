@@ -175,14 +175,7 @@
             "question": "Is there a relationship between motion sickness experience, ownership of interactive devices, and technology interaction frequency among participants in the virtual reality domain?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "tech_interaction_frequency",
-            "true_hypothesis": "Participants who often experience motion sickness and own interactive devices engage with technology at work with a frequency calculated by multiplying their motion sickness experience by 5 and their number of owned interactive devices by 2.",
-            "true_hypothesis_expr": "df['motion_sickness_experience'].astype(int) * 5 + df['owned_interactive_devices'] * 2",
-            "relevant_cols": [
-                "motion_sickness_experience",
-                "owned_interactive_devices",
-                "tech_interaction_frequency"
-            ]
+            "true_hypothesis": "Participants who often experience motion sickness and own interactive devices engage with technology at work with a frequency calculated by multiplying their motion sickness experience by 5 and their number of owned interactive devices by 2."
         }
     ]
 }

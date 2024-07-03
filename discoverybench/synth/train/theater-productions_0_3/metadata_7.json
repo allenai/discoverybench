@@ -195,15 +195,7 @@
             "question": "Is there a relationship between the number of cast members in a play and its duration in minutes that can determine if it is a prime time performance?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "is_prime_time_performance",
-            "true_hypothesis": "Plays with more than 10 cast members, a duration over 120 minutes, and financial sponsorship are considered prime time performances.",
-            "true_hypothesis_expr": "np.where((df['number_of_cast_members'] > 10) & (df['duration_in_minutes'] > 120) & (df['has_sponsorship'] == True), True, False)",
-            "relevant_cols": [
-                "number_of_cast_members",
-                "duration_in_minutes",
-                "has_sponsorship",
-                "is_prime_time_performance"
-            ]
+            "true_hypothesis": "Plays with more than 10 cast members, a duration over 120 minutes, and financial sponsorship are considered prime time performances."
         }
     ]
 }

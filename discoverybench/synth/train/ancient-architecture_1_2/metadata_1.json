@@ -155,14 +155,7 @@
             "question": "Is there a relationship between the percentage of neighbor inscriptions, the average age of neighbors, and the presence of foundational inscriptions in ancient architecture?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "has_foundational_inscription",
-            "true_hypothesis": "Structures where the neighbor inscription percentage is over 50% and the average age of neighbors is above 500 years are determined to have foundational inscriptions based on the provided data.",
-            "true_hypothesis_expr": "np.where((df['neighbor_inscription_percentage'] > 50) & (df['average_age_of_neighbors'] > 500), True, False)",
-            "relevant_cols": [
-                "neighbor_inscription_percentage",
-                "average_age_of_neighbors",
-                "has_foundational_inscription"
-            ]
+            "true_hypothesis": "Structures where the neighbor inscription percentage is over 50% and the average age of neighbors is above 500 years are determined to have foundational inscriptions based on the provided data."
         }
     ]
 }

@@ -155,14 +155,7 @@
             "question": "What is the relationship between the number of frequent photo editing sessions photographers do in a week and their participation in outdoor workshops?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "participation_in_outdoor_workshops",
-            "true_hypothesis": "The participation in outdoor workshops of photographers can be approximated by adding five times the number of frequent photo editing sessions they do in a week to the quotient of their equipment investment by 500.",
-            "true_hypothesis_expr": "df['investment_in_equipment'] // 500 + 5 * df['frequent_photo_editing'].astype(int)",
-            "relevant_cols": [
-                "investment_in_equipment",
-                "frequent_photo_editing",
-                "participation_in_outdoor_workshops"
-            ]
+            "true_hypothesis": "The participation in outdoor workshops of photographers can be approximated by adding five times the number of frequent photo editing sessions they do in a week to the quotient of their equipment investment by 500."
         }
     ]
 }

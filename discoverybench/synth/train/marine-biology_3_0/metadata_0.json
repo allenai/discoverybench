@@ -99,14 +99,7 @@
             "question": "Is there a relationship between the percentage of coral biodiversity being above 90, the number of coral species exceeding 100, and the resistance of coral reefs to bleaching events in marine ecosystems?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "bleaching_resistance",
-            "true_hypothesis": "In marine ecosystems, when the percentage of coral biodiversity is above 90 and the number of different coral species present is greater than 100, coral reefs are more likely to resist bleaching events compared to those that do not meet these criteria.",
-            "true_hypothesis_expr": "np.where((df['coral_biodiversity_percentile'] >= 90) & (df['coral_species_count'] > 100), 1, 0)",
-            "relevant_cols": [
-                "coral_species_count",
-                "bleaching_resistance",
-                "coral_biodiversity_percentile"
-            ]
+            "true_hypothesis": "In marine ecosystems, when the percentage of coral biodiversity is above 90 and the number of different coral species present is greater than 100, coral reefs are more likely to resist bleaching events compared to those that do not meet these criteria."
         }
     ]
 }

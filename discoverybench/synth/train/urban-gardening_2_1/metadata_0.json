@@ -287,15 +287,7 @@
             "question": "What is the relationship between the presence of educational programs in urban gardens and a combination of annual visitor count, number of annual events, and average annual temperature?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "has_educational_program",
-            "true_hypothesis": "Gardens with higher annual visitor counts and a greater number of annual events, as well as having an average annual temperature such that the calculated expression (visitor count cubed plus the square of the number of events multiplied by 5 minus the annual average temperature) is greater than 150000, are more likely to have educational programs.",
-            "true_hypothesis_expr": "np.where((df['annual_visitor_count']**3 + df['number_of_annual_events']**2 * 5 - df['average_annual_temperature']) > 150000, True, False)",
-            "relevant_cols": [
-                "average_annual_temperature",
-                "annual_visitor_count",
-                "number_of_annual_events",
-                "has_educational_program"
-            ]
+            "true_hypothesis": "Gardens with higher annual visitor counts and a greater number of annual events, as well as having an average annual temperature such that the calculated expression (visitor count cubed plus the square of the number of events multiplied by 5 minus the annual average temperature) is greater than 150000, are more likely to have educational programs."
         }
     ]
 }

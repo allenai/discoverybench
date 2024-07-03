@@ -163,16 +163,7 @@
             "question": "What is the relationship between efficiency gain and cell color in solar-powered systems during months with a high number of clear days and low cloud cover ratios?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "efficiency_gain",
-            "true_hypothesis": "Solar paneled homes with blue-colored photovoltaic cells record efficiency gains when the cell color is blue, the month is between October and March, and the cloud cover ratio is low.",
-            "true_hypothesis_expr": "np.where((df['cell_color'] == 'blue') & (df['month'] >= 10) & (df['month'] <= 3) & (((df['number_of_clear_days'] * (1 - df['cloud_cover_ratio'])) / 365 * 12) < 5), True, False)",
-            "relevant_cols": [
-                "cell_color",
-                "month",
-                "number_of_clear_days",
-                "efficiency_gain",
-                "cloud_cover_ratio"
-            ]
+            "true_hypothesis": "Solar paneled homes with blue-colored photovoltaic cells record efficiency gains when the cell color is blue, the month is between October and March, and the cloud cover ratio is low."
         }
     ]
 }

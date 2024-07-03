@@ -131,15 +131,7 @@
             "question": "Is there a relationship between the number of reported marine pollution incidents and the presence of marine conservation in school curricula?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "local_awareness_campaigns",
-            "true_hypothesis": "We hypothesize that the number of local awareness campaigns increases with the percentile ranking of eco-friendly businesses and the inclusion of marine conservation in school curricula, while decreasing with the number of reported marine pollution incidents.",
-            "true_hypothesis_expr": "df['eco_friendly_business_percentile'] * 1.5 - df['reported_marine_pollution_incidents'] * 0.75 + 20 * df['marine_conservation_in_schools'].astype(int)",
-            "relevant_cols": [
-                "eco_friendly_business_percentile",
-                "reported_marine_pollution_incidents",
-                "marine_conservation_in_schools",
-                "local_awareness_campaigns"
-            ]
+            "true_hypothesis": "We hypothesize that the number of local awareness campaigns increases with the percentile ranking of eco-friendly businesses and the inclusion of marine conservation in school curricula, while decreasing with the number of reported marine pollution incidents."
         }
     ]
 }

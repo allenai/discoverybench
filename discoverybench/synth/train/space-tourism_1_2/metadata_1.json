@@ -235,15 +235,7 @@
             "question": "Is there a relationship between age group, booking source, average ticket price, and frequent flyer status that can predict the likelihood of having frequent flyer status among space tourist?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "frequent_flyer_status",
-            "true_hypothesis": "Tourists classified as seniors, with an average ticket price over $5000, and booking directly are likely to have frequent flyer status.",
-            "true_hypothesis_expr": "np.where((df['age_group'] == 'senior') & (df['average_ticket_price'] > 5000) & (df['booking_source'] == 'direct'), True, False)",
-            "relevant_cols": [
-                "age_group",
-                "booking_source",
-                "average_ticket_price",
-                "frequent_flyer_status"
-            ]
+            "true_hypothesis": "Tourists classified as seniors, with an average ticket price over $5000, and booking directly are likely to have frequent flyer status."
         }
     ]
 }

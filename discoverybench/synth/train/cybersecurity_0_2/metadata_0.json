@@ -115,16 +115,7 @@
             "question": "What is the relationship between the number of IT security staff, frequency of software updates, use of encryption technologies, and policy on regular password updates in organizations that have a dedicated IT security team?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "has_dedicated_IT_security_team",
-            "true_hypothesis": "Organizations with a calculated value based on software update frequency, number of IT security staff, encryption technology usage, and password update policy have a dedicated IT security team.",
-            "true_hypothesis_expr": "np.where(((df['frequency_of_software_updates'] * df['number_of_IT_security_staff'] * 5 + 50 * df['uses_encryption_technologies']) > 10) & (df['requires_regular_password_updates'] == True), True, False)",
-            "relevant_cols": [
-                "requires_regular_password_updates",
-                "frequency_of_software_updates",
-                "number_of_IT_security_staff",
-                "uses_encryption_technologies",
-                "has_dedicated_IT_security_team"
-            ]
+            "true_hypothesis": "Organizations with a calculated value based on software update frequency, number of IT security staff, encryption technology usage, and password update policy have a dedicated IT security team."
         }
     ]
 }

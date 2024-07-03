@@ -183,17 +183,7 @@
             "question": "What relationship exists between a space tourist's marital status, age category, and proportion of income spent on tech to their socio-economic status in the context of space tourism?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "socioeconomic_status",
-            "true_hypothesis": "The calculation of the tourists' socioeconomic status is based on a complex formula that takes into account the age bracket, proportion of income spent on tech, marital status, having children, and age category. This suggests that tourists in certain age brackets who spend a significant portion of their income on tech, are married, fall into the middle-aged category, and have children tend to have a higher socioeconomic status.",
-            "true_hypothesis_expr": "3*np.where(np.where((df['age_bracket'].isin(['18-30', '31-45']) & (df['proportion_income_spent_on_tech'] >= 50)), True, False), 1, 0) + (np.where((df['marital_status'] == 'married') & (df['age_category'] == 'middle-aged') & (df['has_children']), 5, np.where((df['marital_status'] == 'married') & (df['has_children']), 3, 1))**2) / (1 + df['ratio_space_trips_to_earth_vacations)",
-            "relevant_cols": [
-                "age_bracket",
-                "proportion_income_spent_on_tech",
-                "age_category",
-                "has_children",
-                "marital_status",
-                "socioeconomic_status"
-            ]
+            "true_hypothesis": "The calculation of the tourists' socioeconomic status is based on a complex formula that takes into account the age bracket, proportion of income spent on tech, marital status, having children, and age category. This suggests that tourists in certain age brackets who spend a significant portion of their income on tech, are married, fall into the middle-aged category, and have children tend to have a higher socioeconomic status."
         }
     ]
 }

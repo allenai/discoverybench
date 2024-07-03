@@ -235,15 +235,7 @@
             "question": "What is the relationship between a space tourist's personal interest in space and their origin country's space program rank, considering the different weightings based on their preference for group travel and whether they are from North America?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "personal_interest_in_space",
-            "true_hypothesis": "Personal interest in space of a space tourist can be calculated by adding a base value of 5 with the preference for group travel multiplied by 2, also adding a fraction of the origin country's space program rank multiplied by 0.2. Additionally, if the tourist is from North America, the previous result is increased by 3 times the product of the country's space program rank and 0.1.",
-            "true_hypothesis_expr": "5 + df['prefers_group_travel']*2 + df['origin_country_space_program_rank']*0.2 + df['is_from_north_america']*3*(df['origin_country_space_program_rank']*0.1)",
-            "relevant_cols": [
-                "prefers_group_travel",
-                "origin_country_space_program_rank",
-                "is_from_north_america",
-                "personal_interest_in_space"
-            ]
+            "true_hypothesis": "Personal interest in space of a space tourist can be calculated by adding a base value of 5 with the preference for group travel multiplied by 2, also adding a fraction of the origin country's space program rank multiplied by 0.2. Additionally, if the tourist is from North America, the previous result is increased by 3 times the product of the country's space program rank and 0.1."
         }
     ]
 }

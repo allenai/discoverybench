@@ -167,15 +167,7 @@
             "question": "Is there a relationship between the percentage of environmental educational programs, the implementation of a carbon tax, being classified as an Urban region, and the proportion of recycled waste?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "proportion_of_recycled_waste",
-            "true_hypothesis": "In regions where more than 10% of educational programs are focused on environmental issues (environmental_program_ratio > 10), a carbon tax has been implemented (carbon_tax_implemented == True), and the region is classified as Urban (region_type == 'Urban'), the proportion of recycled waste is 50 plus half of the environmental program ratio.",
-            "true_hypothesis_expr": "np.where((df['environmental_program_ratio'] > 10) & (df['carbon_tax_implemented'] == True) & (df['region_type'] == 'Urban'), 50 + df['environmental_program_ratio'] * 0.5, 20)",
-            "relevant_cols": [
-                "environmental_program_ratio",
-                "carbon_tax_implemented",
-                "region_type",
-                "proportion_of_recycled_waste"
-            ]
+            "true_hypothesis": "In regions where more than 10% of educational programs are focused on environmental issues (environmental_program_ratio > 10), a carbon tax has been implemented (carbon_tax_implemented == True), and the region is classified as Urban (region_type == 'Urban'), the proportion of recycled waste is 50 plus half of the environmental program ratio."
         }
     ]
 }

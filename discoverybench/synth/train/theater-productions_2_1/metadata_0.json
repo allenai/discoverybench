@@ -227,14 +227,7 @@
             "question": "Is there a relationship between the square of the percentage of scenes with special effects, the presence of live music, and the number of lighting changes per scene in theater productions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "lighting_changes_per_scene",
-            "true_hypothesis": "The nonlinear relationship between the square of the percentage of scenes with special effects and the presence of live music significantly predicts the number of lighting changes per scene, suggesting that productions with a higher percentage of scenes with special effects and live music tend to have a higher number of lighting changes.",
-            "true_hypothesis_expr": "np.floor((df['special_effects_percentage']**2) / 20 + 30 * df['live_music_present'])",
-            "relevant_cols": [
-                "special_effects_percentage",
-                "live_music_present",
-                "lighting_changes_per_scene"
-            ]
+            "true_hypothesis": "The nonlinear relationship between the square of the percentage of scenes with special effects and the presence of live music significantly predicts the number of lighting changes per scene, suggesting that productions with a higher percentage of scenes with special effects and live music tend to have a higher number of lighting changes."
         }
     ]
 }

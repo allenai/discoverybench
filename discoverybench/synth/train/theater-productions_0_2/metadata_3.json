@@ -187,15 +187,7 @@
             "question": "What is the relationship between play genre, scene complexity, duration, audience interaction, and the presence of an intermission in theater productions?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "has_intermission",
-            "true_hypothesis": "Plays with drama genre or audience interaction, totaling more than 120 minutes, or plays with classical genre and average scene complexity of at least 7, totaling more than 5 minutes, are more likely to have an intermission.",
-            "true_hypothesis_expr": "np.where(((np.where((df['play_genre'] == 'drama') | (df['audience_interaction'] == True), 120, 90)) > 100) | ((np.where((df['play_genre'] == 'classical') & (df['average_scene_complexity'] >= 7), 5, 2)) > 3), True, False)",
-            "relevant_cols": [
-                "play_genre",
-                "average_scene_complexity",
-                "audience_interaction",
-                "has_intermission"
-            ]
+            "true_hypothesis": "Plays with drama genre or audience interaction, totaling more than 120 minutes, or plays with classical genre and average scene complexity of at least 7, totaling more than 5 minutes, are more likely to have an intermission."
         }
     ]
 }

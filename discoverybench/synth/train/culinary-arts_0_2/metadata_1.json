@@ -87,19 +87,7 @@
             "question": "What is the relationship between meal preparation time and the combination of chef_experience, number_of_signature_dishes, chef_innovation_score, local_supplier_partnerships, participation_in_culinary_innovation_programs, and menu_items_count in the culinary arts domain?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "meal_preparation_time",
-            "true_hypothesis": "Chefs who have a higher culinary competition participation rate, a greater number of signature dishes developed, a higher chef innovation score, more local supplier partnerships, more participation in culinary innovation programs, and a larger menu items count tend to have a longer meal preparation time, calculated as a complex mathematical formula involving these factors.",
-            "true_hypothesis_expr": "((df['culinary_competition_participation'] + df['number_of_signature_dishes'] // 5 + df['chef_innovation_score'] // 10) * 4 + (2 * df['local_supplier_partnerships']**3 + 30 * df['participation_in_culinary_innovation_programs'] + df['menu_items_count']**2) * 2 + (df['chef_experience'])) / 3",
-            "relevant_cols": [
-                "chef_experience",
-                "culinary_competition_participation",
-                "number_of_signature_dishes",
-                "chef_innovation_score",
-                "local_supplier_partnerships",
-                "participation_in_culinary_innovation_programs",
-                "menu_items_count",
-                "meal_preparation_time"
-            ]
+            "true_hypothesis": "Chefs who have a higher culinary competition participation rate, a greater number of signature dishes developed, a higher chef innovation score, more local supplier partnerships, more participation in culinary innovation programs, and a larger menu items count tend to have a longer meal preparation time, calculated as a complex mathematical formula involving these factors."
         }
     ]
 }

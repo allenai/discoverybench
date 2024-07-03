@@ -139,14 +139,7 @@
             "question": "Is there a relationship between patient age and the difference between relaxation during music therapy sessions and disturbance after music therapy sessions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "patient_age",
-            "true_hypothesis": "Patients with a tendency to be 40 years old plus their level of relaxation during music therapy sessions minus the disturbances experienced afterward correlates to the overall patient age, suggesting that the age of the patient is influenced by their relaxation levels during and after music therapy sessions.",
-            "true_hypothesis_expr": "40 + df['relaxation_during_music'] - df['disturbance_after_music']",
-            "relevant_cols": [
-                "relaxation_during_music",
-                "disturbance_after_music",
-                "patient_age"
-            ]
+            "true_hypothesis": "Patients with a tendency to be 40 years old plus their level of relaxation during music therapy sessions minus the disturbances experienced afterward correlates to the overall patient age, suggesting that the age of the patient is influenced by their relaxation levels during and after music therapy sessions."
         }
     ]
 }

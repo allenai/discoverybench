@@ -195,16 +195,7 @@
             "question": "Is there a relationship between the ratio of licensed_content to original_content, lead_actor_experience, and historical_accuracy_focus and the costume_complexity_level in theater productions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "costume_complexity_level",
-            "true_hypothesis": "The ratio of licensed_content to original_content, lead_actor_experience, and historical_accuracy_focus collectively influence the costume complexity level in productions. Productions with a higher ratio of licensed content, experienced lead actors, and strong historical accuracy focus tend to exhibit higher costume complexity levels.",
-            "true_hypothesis_expr": "(df['licensed_content'].astype(int) / (df['original_content'].astype(int) + 0.1)) + df['lead_actor_experience'] * 0.2 + df['historical_accuracy_focus'].astype(int) * 2",
-            "relevant_cols": [
-                "licensed_content",
-                "original_content",
-                "lead_actor_experience",
-                "historical_accuracy_focus",
-                "costume_complexity_level"
-            ]
+            "true_hypothesis": "The ratio of licensed_content to original_content, lead_actor_experience, and historical_accuracy_focus collectively influence the costume complexity level in productions. Productions with a higher ratio of licensed content, experienced lead actors, and strong historical accuracy focus tend to exhibit higher costume complexity levels."
         }
     ]
 }

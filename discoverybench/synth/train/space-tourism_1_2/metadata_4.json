@@ -235,14 +235,7 @@
             "question": "Is there a relationship between the level of technological advancement at launch sites and the likelihood of tourists who have previous international travel experience to participate in spacewalks?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "spacewalk_participation",
-            "true_hypothesis": "Tourists embarking from launch sites rated 4 or higher in technological level and those who have traveled internationally before are more likely to participate in spacewalks, influenced by familiarity with high-tech environments and adaptability to new experiences.",
-            "true_hypothesis_expr": "np.where((df['launch_site_technology_level'] >= 4) & (df['international_travel_experience']), True, False)",
-            "relevant_cols": [
-                "international_travel_experience",
-                "launch_site_technology_level",
-                "spacewalk_participation"
-            ]
+            "true_hypothesis": "Tourists embarking from launch sites rated 4 or higher in technological level and those who have traveled internationally before are more likely to participate in spacewalks, influenced by familiarity with high-tech environments and adaptability to new experiences."
         }
     ]
 }

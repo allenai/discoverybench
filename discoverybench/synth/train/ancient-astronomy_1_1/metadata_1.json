@@ -99,15 +99,7 @@
             "question": "What is the relationship between technological advancement level, frequency of clear skies, seasonal light pollution variation, and the usage of single star systems in ancient civilizations related to astronomy?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "single_star_usage",
-            "true_hypothesis": "Civilizations with higher technological advancements and better nighttime visibility, as well as a moderate to high frequency of clear skies and low to moderate seasonal light pollution variation, are more likely to use single star systems for navigation.",
-            "true_hypothesis_expr": "df['technological_advancement_level'] * 8 + np.where(df['seasonal_light_pollution_variation'] + df['frequency_of_clear_skies'] * 2 > 15, 10 - df['seasonal_light_pollution_variation'], df['frequency_of_clear_skies']) * 2",
-            "relevant_cols": [
-                "technological_advancement_level",
-                "frequency_of_clear_skies",
-                "seasonal_light_pollution_variation",
-                "single_star_usage"
-            ]
+            "true_hypothesis": "Civilizations with higher technological advancements and better nighttime visibility, as well as a moderate to high frequency of clear skies and low to moderate seasonal light pollution variation, are more likely to use single star systems for navigation."
         }
     ]
 }

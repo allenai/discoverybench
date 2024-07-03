@@ -119,15 +119,7 @@
             "question": "What is the relationship between the average daily temperature squared, 5 times max daily wind speed, and the number of communication attempts, taking into consideration past turbulent conditions? Can you identify any potential connection among these variables?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "communication_attempts",
-            "true_hypothesis": "As the average daily temperature squared and 5 times the max daily wind speed increase, the number of communication attempts is likely to rise, possibly influenced by past turbulent conditions.",
-            "true_hypothesis_expr": "(df['average_daily_temperature']**2 + 5 * df['max_daily_wind_speed']) * (1 + df['past_turbulent_conditions'])",
-            "relevant_cols": [
-                "average_daily_temperature",
-                "max_daily_wind_speed",
-                "past_turbulent_conditions",
-                "communication_attempts"
-            ]
+            "true_hypothesis": "As the average daily temperature squared and 5 times the max daily wind speed increase, the number of communication attempts is likely to rise, possibly influenced by past turbulent conditions."
         }
     ]
 }

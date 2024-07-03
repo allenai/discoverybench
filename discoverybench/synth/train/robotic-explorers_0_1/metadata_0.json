@@ -115,19 +115,7 @@
             "question": "Is there a relationship between the label of the exploration vehicles and the combination of average daily temperatures, maximum daily windspeed, past turbulent conditions, power fluctuations, negative habitat markers found, robotic maintenance sessions, and seasonal temperature variation?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "vehicle_id",
-            "true_hypothesis": "Exploration vehicles that have average daily temperatures squared added to 5 times the maximum daily windspeed multiplied by 1 plus past turbulent conditions, which is greater than 50, and have power fluctuations greater than 10, and the sum of negative habitat markers found multiplied by -0.1, robotic maintenance sessions multiplied by -0.2, and 5 is greater than 5, are labeled 'V001' if the seasonal temperature variation is 'high'; otherwise, they are labeled 'V004'.",
-            "true_hypothesis_expr": "np.where((np.where((((df['average_daily_temperature']**2 + 5 * df['max_daily_wind_speed']) * (1 + df['past_turbulent_conditions']) > 50) & (df['power_fluctuations'] > 10) & ((df['habitat_markers_found'] * -0.1 + df['robotic_maintenance_sessions'] * -0.2 + 5) > 5), True, False) == True) & (df['seasonal_temperature_variation'] == 'high'), 'V001', 'V004')",
-            "relevant_cols": [
-                "seasonal_temperature_variation",
-                "power_fluctuations",
-                "average_daily_temperature",
-                "max_daily_wind_speed",
-                "past_turbulent_conditions",
-                "habitat_markers_found",
-                "robotic_maintenance_sessions",
-                "vehicle_id"
-            ]
+            "true_hypothesis": "Exploration vehicles that have average daily temperatures squared added to 5 times the maximum daily windspeed multiplied by 1 plus past turbulent conditions, which is greater than 50, and have power fluctuations greater than 10, and the sum of negative habitat markers found multiplied by -0.1, robotic maintenance sessions multiplied by -0.2, and 5 is greater than 5, are labeled 'V001' if the seasonal temperature variation is 'high'; otherwise, they are labeled 'V004'."
         }
     ]
 }

@@ -219,15 +219,7 @@
             "question": "Is there a significant relationship between costume complexity level, interactive engagement, target audience type, and special effects percentage in theater productions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "special_effects_percentage",
-            "true_hypothesis": "The formula for special effects percentage involves a combination of costume complexity level, interactive engagement, and a conditional based on target audience type. When the play targets family audiences, a higher power of costume complexity level and interactive engagement is used compared to when the target audience is not families. Special effects percentage is influenced by both costume complexity and interactive engagement, with a stronger effect observed in family-oriented productions.",
-            "true_hypothesis_expr": "np.where(df['target_audience_family'], df['costume_complexity_level']**3 + 10*df['interactive_engagement_binary']*df['costume_complexity_level'], 0.5*df['costume_complexity_level']**3 + 5*df['interactive_engagement_binary']*df['costume_complexity_level'])",
-            "relevant_cols": [
-                "target_audience_family",
-                "costume_complexity_level",
-                "interactive_engagement_binary",
-                "special_effects_percentage"
-            ]
+            "true_hypothesis": "The formula for special effects percentage involves a combination of costume complexity level, interactive engagement, and a conditional based on target audience type. When the play targets family audiences, a higher power of costume complexity level and interactive engagement is used compared to when the target audience is not families. Special effects percentage is influenced by both costume complexity and interactive engagement, with a stronger effect observed in family-oriented productions."
         }
     ]
 }

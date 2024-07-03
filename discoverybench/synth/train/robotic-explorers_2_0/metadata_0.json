@@ -139,17 +139,7 @@
             "question": "Is there a relationship between the computational power rating to the power of three plus twice the communication delay tolerance, the optical imaging resolution, the communication success ratio, the number of new geographical features found, and the classification as highly successful discovery in the domain of robotic explorers?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "highly_successful_discovery",
-            "true_hypothesis": "Autonomous exploration vehicles that have a computational power rating to the power of three plus twice the communication delay tolerance greater than 20, combined with an optical imaging resolution above 30 and a communication success ratio over 80%, and discover more than 30 new geographical features, are classified as highly successful discoveries.",
-            "true_hypothesis_expr": "np.where((np.where(df['computational_power_rating']**3 + 2*df['communication_delay_tolerance'] > 20, True, False) == True) & (np.where(df['optical_imaging_resolution'] > 30, np.where(df['communication_success_ratio'] > 0.8, 'highly_uneven', 'uneven'), 'even') == 'highly_uneven') & (df['new_geographical_features_found'] > 30), True, False)",
-            "relevant_cols": [
-                "new_geographical_features_found",
-                "communication_delay_tolerance",
-                "optical_imaging_resolution",
-                "communication_success_ratio",
-                "highly_successful_discovery",
-                "computational_power_rating"
-            ]
+            "true_hypothesis": "Autonomous exploration vehicles that have a computational power rating to the power of three plus twice the communication delay tolerance greater than 20, combined with an optical imaging resolution above 30 and a communication success ratio over 80%, and discover more than 30 new geographical features, are classified as highly successful discoveries."
         }
     ]
 }

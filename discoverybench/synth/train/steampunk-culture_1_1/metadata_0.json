@@ -123,18 +123,7 @@
             "question": "Is there a relationship between the annual spending on regular clothing and the combination of monthly budget spent on steampunk items, attendance at steampunk conventions, having a steampunk hobby, and owning a steampunk credit card, especially for those who have been in the subculture for less than 3 years?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "annual_spending_on_themed_clothing",
-            "true_hypothesis": "Participants who spend more than $10 monthly on steampunk-related items, attend steampunk conventions, have a steampunk-related hobby, and own a steampunk-themed credit card, see a 20% increase in annual spending on regular, non-themed clothing, especially if they have been in the subculture for less than 3 years.",
-            "true_hypothesis_expr": "df['annual_spending_on_regular_clothing'] * (1.2 * df['has_steampunk_credit_card'] * np.where((df['attends_steampunk_convention'] & df['has_steampunk_hobby']) & (df['monthly_budget_spent_on_steampunk'] > 10), True, False) * (df['years_in_subculture'] < 3))",
-            "relevant_cols": [
-                "annual_spending_on_regular_clothing",
-                "has_steampunk_credit_card",
-                "years_in_subculture",
-                "attends_steampunk_convention",
-                "monthly_budget_spent_on_steampunk",
-                "has_steampunk_hobby",
-                "annual_spending_on_themed_clothing"
-            ]
+            "true_hypothesis": "Participants who spend more than $10 monthly on steampunk-related items, attend steampunk conventions, have a steampunk-related hobby, and own a steampunk-themed credit card, see a 20% increase in annual spending on regular, non-themed clothing, especially if they have been in the subculture for less than 3 years."
         }
     ]
 }

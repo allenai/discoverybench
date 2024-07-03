@@ -131,14 +131,7 @@
             "question": "What is the relationship between the involvement of local communities, pollution levels, and the average tourist rating for marine life visibility in the given dataset?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "average_tourist_rating_visibility",
-            "true_hypothesis": "We hypothesize that the average tourist rating for marine life visibility is positively associated with the involvement of local communities and inversely proportional to the pollution levels in the area.",
-            "true_hypothesis_expr": "(df['local_community_involvement'] / df['pollution_index']) * 5",
-            "relevant_cols": [
-                "local_community_involvement",
-                "pollution_index",
-                "average_tourist_rating_visibility"
-            ]
+            "true_hypothesis": "We hypothesize that the average tourist rating for marine life visibility is positively associated with the involvement of local communities and inversely proportional to the pollution levels in the area."
         }
     ]
 }

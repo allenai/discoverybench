@@ -107,14 +107,7 @@
             "question": "Is there a relationship between the number of cryptocurrencies owned by individuals and the frequency of blockchain conference attendances they participate in?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "blockchain_conference_attendances",
-            "true_hypothesis": "Individuals who attend more blockchain-related conferences tend to own a certain number of cryptocurrencies and engage in a specific monthly average of blockchain transactions.",
-            "true_hypothesis_expr": "np.floor(0.4 * df['number_of_cryptocurrencies_owned'] + 0.05 * df['monthly_blockchain_transactions'])",
-            "relevant_cols": [
-                "number_of_cryptocurrencies_owned",
-                "monthly_blockchain_transactions",
-                "blockchain_conference_attendances"
-            ]
+            "true_hypothesis": "Individuals who attend more blockchain-related conferences tend to own a certain number of cryptocurrencies and engage in a specific monthly average of blockchain transactions."
         }
     ]
 }

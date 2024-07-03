@@ -159,14 +159,7 @@
             "question": "What is the relationship between the region performance index, performance rating, and engine size in vintage automobiles?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "engine_size",
-            "true_hypothesis": "Vehicles with a higher performance rating have larger engine sizes. Additionally, cars with a higher region performance index tend to have larger engine sizes. The engine size of a car is influenced by both its performance rating and the performance of cars from the same region.",
-            "true_hypothesis_expr": "0.01 * df['performance_rating'] + 0.02 * df.get('region_performance_index', 0) + 0.03 * df.get('top_performance_percentile', 0)",
-            "relevant_cols": [
-                "region_performance_index",
-                "performance_rating",
-                "engine_size"
-            ]
+            "true_hypothesis": "Vehicles with a higher performance rating have larger engine sizes. Additionally, cars with a higher region performance index tend to have larger engine sizes. The engine size of a car is influenced by both its performance rating and the performance of cars from the same region."
         }
     ]
 }

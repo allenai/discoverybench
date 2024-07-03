@@ -159,14 +159,7 @@
             "question": "What is the relationship between sentence complexity in books, modern slang ratio, literary award winner status, and how these factors might influence each other?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "sentence_complexity",
-            "true_hypothesis": "The sentence complexity in books decreases by 10 minus 0.1 times the modern slang ratio percentage, and the influence of being a literary award winner is taken into account by subtracting twice the indicator of literary award winner status.",
-            "true_hypothesis_expr": "10 - 0.1 * df['modern_slang_ratio'] - 2 * df['literary_award_winner'].astype(int)",
-            "relevant_cols": [
-                "modern_slang_ratio",
-                "literary_award_winner",
-                "sentence_complexity"
-            ]
+            "true_hypothesis": "The sentence complexity in books decreases by 10 minus 0.1 times the modern slang ratio percentage, and the influence of being a literary award winner is taken into account by subtracting twice the indicator of literary award winner status."
         }
     ]
 }

@@ -227,16 +227,7 @@
             "question": "How does the presence of an intermission affect the relationship between the number of scenes in a play and the total number of costume changes, the set complexity score, and the day of the week the play is performed?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "number_of_scenes",
-            "true_hypothesis": "The number of scenes in a play is influenced by the complexity of the set design, the total number of costume changes, the presence of an intermission, and the day of the week the play is performed. Plays with more elaborate sets, frequent costume changes, intermissions, and performances on Fridays or Saturdays require more scenes to manage these transitions effectively.",
-            "true_hypothesis_expr": "df['set_complexity_score']**3 + 2*df['total_costume_changes']*df['set_complexity_score'] - 5*df['set_complexity_score'] + np.where(df['has_intermission'], 20, 0) + np.where(df['day_of_week'].isin(['Friday', 'Saturday']), 10, 0)",
-            "relevant_cols": [
-                "total_costume_changes",
-                "set_complexity_score",
-                "has_intermission",
-                "day_of_week",
-                "number_of_scenes"
-            ]
+            "true_hypothesis": "The number of scenes in a play is influenced by the complexity of the set design, the total number of costume changes, the presence of an intermission, and the day of the week the play is performed. Plays with more elaborate sets, frequent costume changes, intermissions, and performances on Fridays or Saturdays require more scenes to manage these transitions effectively."
         }
     ]
 }

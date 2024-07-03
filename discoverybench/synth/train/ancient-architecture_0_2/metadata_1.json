@@ -131,15 +131,7 @@
             "question": "Is there a relationship between the percentage of buildings in the neighborhood with foundational inscriptions, the utilization of highly durable construction materials, ongoing or recent restoration efforts, and the presence of foundational inscriptions in the given dataset?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "has_foundational_inscription",
-            "true_hypothesis": "Structures in the nearby area where over 50% have foundational inscriptions or utilize highly durable construction materials and have ongoing or recent restoration efforts are determined to have foundational inscriptions based on the provided data.",
-            "true_hypothesis_expr": "np.where((df['neighbor_inscription_percentage'] > 50) & ((50 * df['durability_material_percentage'] + 350 * df['restoration_presence']) > 500), True, False)",
-            "relevant_cols": [
-                "neighbor_inscription_percentage",
-                "durability_material_percentage",
-                "restoration_presence",
-                "has_foundational_inscription"
-            ]
+            "true_hypothesis": "Structures in the nearby area where over 50% have foundational inscriptions or utilize highly durable construction materials and have ongoing or recent restoration efforts are determined to have foundational inscriptions based on the provided data."
         }
     ]
 }

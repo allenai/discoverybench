@@ -203,24 +203,7 @@
             "question": "What is the relationship between the presence of educational programs in urban gardens and a combination of factors including the number of community events, funding from local businesses, being in a high density residential area, and historical visitation?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "has_educational_program",
-            "true_hypothesis": "Gardens with certain characteristics such as the number of community events, funding from local businesses, being located in a high density residential area, and historical visitation that meet the criteria of the complex calculated expression are more likely to have educational programs.",
-            "true_hypothesis_expr": "np.where((((((df['number_of_community_events'] * 1000 + df['funding_from_local_businesses'] * 0.5 - 10000 * df['high_density_residential_area'].astype(int)) * 0.3 + 2000 * (np.where((df['historical_visitation'] > 5000) & (df['number_of_staff'] / df['square_footage'] > 0.0005), True, False)) - df['percentage_native_plants'] * 50)**3 + (((df['population_density'] * 20 + np.where(df['land_availability']==True, 5000, 20000)) / df['public_funding']) * 10 + 20 * df['has_local_partnerships']).astype(int)**2 * 5 - df['average_annual_temperature']) > 150000, True, False)",
-            "relevant_cols": [
-                "population_density",
-                "average_annual_temperature",
-                "percentage_native_plants",
-                "number_of_community_events",
-                "funding_from_local_businesses",
-                "high_density_residential_area",
-                "number_of_staff",
-                "historical_visitation",
-                "public_funding",
-                "has_local_partnerships",
-                "land_availability",
-                "square_footage",
-                "has_educational_program"
-            ]
+            "true_hypothesis": "Gardens with certain characteristics such as the number of community events, funding from local businesses, being located in a high density residential area, and historical visitation that meet the criteria of the complex calculated expression are more likely to have educational programs."
         }
     ]
 }

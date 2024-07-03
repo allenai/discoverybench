@@ -99,15 +99,7 @@
             "question": "Given the dataset related to fashion design, can you determine if there is a relationship between the social media trend popularity, external temperature, and the predicted season of the fashion shows specifically in Europe?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "predicted_season",
-            "true_hypothesis": "In fashion design, the social media trend popularity and external temperature on the day of the fashion show have a significant effect on predicting the season of the fashion show. The relationship is observed specifically in shows located in Europe, where high social media trend popularity combined with lower temperatures indicates a Winter season, whereas low popularity and high temperatures indicate a Summer season. Additionally, Autumn is predicted for cases falling outside these conditions.",
-            "true_hypothesis_expr": "np.where((df['is_in_europe']) & (df['social_media_trend_popularity'] > 50) & (df['external_temperature'] < 10), 'Winter', np.where((df['is_in_europe']) & (df['social_media_trend_popularity'] < 50) & (df['external_temperature'] > 20), 'Summer', 'Autumn'))",
-            "relevant_cols": [
-                "external_temperature",
-                "social_media_trend_popularity",
-                "is_in_europe",
-                "predicted_season"
-            ]
+            "true_hypothesis": "In fashion design, the social media trend popularity and external temperature on the day of the fashion show have a significant effect on predicting the season of the fashion show. The relationship is observed specifically in shows located in Europe, where high social media trend popularity combined with lower temperatures indicates a Winter season, whereas low popularity and high temperatures indicate a Summer season. Additionally, Autumn is predicted for cases falling outside these conditions."
         }
     ]
 }

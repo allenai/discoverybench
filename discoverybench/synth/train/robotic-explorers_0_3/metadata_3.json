@@ -119,15 +119,7 @@
             "question": "Is there a relationship between the count of sensor technology types on a robotic explorer and its total mission duration in days, communication system frequency, and remote control capabilities?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "sensor_technology_types",
-            "true_hypothesis": "The count of sensor technology types on a vehicle can be predicted using a combination of the total mission duration in days, communication system frequency, and the presence of remote control capabilities.",
-            "true_hypothesis_expr": "df['mission_duration_days'] / 400 + 5 * df['communication_system_frequency'] / 10 + df['remote_control_capabilities'].astype(int) * 3",
-            "relevant_cols": [
-                "mission_duration_days",
-                "communication_system_frequency",
-                "remote_control_capabilities",
-                "sensor_technology_types"
-            ]
+            "true_hypothesis": "The count of sensor technology types on a vehicle can be predicted using a combination of the total mission duration in days, communication system frequency, and the presence of remote control capabilities."
         }
     ]
 }

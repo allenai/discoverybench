@@ -119,14 +119,7 @@
             "question": "Is there a relationship between the communication bandwidth of vehicles and their autonomous navigation capabilities?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "has_autonomous_navigation",
-            "true_hypothesis": "Vehicles with AI_decision_making_capabilities set to True and a communication bandwidth exceeding 500 Mbps are classified as having autonomous navigation capabilities.",
-            "true_hypothesis_expr": "np.where((df['AI_decision_making_capabilities'] == True) & (df['communication_bandwidth'] > 500), True, False)",
-            "relevant_cols": [
-                "AI_decision_making_capabilities",
-                "communication_bandwidth",
-                "has_autonomous_navigation"
-            ]
+            "true_hypothesis": "Vehicles with AI_decision_making_capabilities set to True and a communication bandwidth exceeding 500 Mbps are classified as having autonomous navigation capabilities."
         }
     ]
 }

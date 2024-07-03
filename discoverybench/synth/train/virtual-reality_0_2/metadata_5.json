@@ -167,15 +167,7 @@
             "question": "Is there a relationship between spending more hours in virtual reality on weekends, having a high immersion rating, and preferring realistic graphics with a preference for group activities over solitary activities?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "social_interaction",
-            "true_hypothesis": "Participants who report higher immersion ratings combined with a strong preference for realistic graphics in VR, as indicated by a calculated expression based on immersion ratings and graphic preference, and spend significant time in VR on weekends, are more likely to prefer group activities over solitary activities, indicating a preference for social interactions.",
-            "true_hypothesis_expr": "np.where(((df['immersion_rating'] * 5 + 10 * df['graphic_preference']) > 10) & (df['weekend_vr_hours'] > 4), True, False)",
-            "relevant_cols": [
-                "weekend_vr_hours",
-                "immersion_rating",
-                "graphic_preference",
-                "social_interaction"
-            ]
+            "true_hypothesis": "Participants who report higher immersion ratings combined with a strong preference for realistic graphics in VR, as indicated by a calculated expression based on immersion ratings and graphic preference, and spend significant time in VR on weekends, are more likely to prefer group activities over solitary activities, indicating a preference for social interactions."
         }
     ]
 }

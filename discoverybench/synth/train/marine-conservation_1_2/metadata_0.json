@@ -147,15 +147,7 @@
             "question": "What is the relationship between the number of local awareness campaigns and the presence of the fishing industry in areas with different marine conservation designations, particularly focusing on annual tourist visits?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "tourist_visits_annual",
-            "true_hypothesis": "We hypothesize that the number of annual tourist visits is positively correlated with the ratio of local awareness campaigns to fishing industry presence in the area, adjusted by whether the area is designated as a marine conservation zone with a weight of 500 if true, and 250 if false.",
-            "true_hypothesis_expr": "df['local_awareness_campaigns'] / df['fishing_industry_presence'] * np.where(df['is_marine_conservation_zone'], 500, 250)",
-            "relevant_cols": [
-                "local_awareness_campaigns",
-                "fishing_industry_presence",
-                "is_marine_conservation_zone",
-                "tourist_visits_annual"
-            ]
+            "true_hypothesis": "We hypothesize that the number of annual tourist visits is positively correlated with the ratio of local awareness campaigns to fishing industry presence in the area, adjusted by whether the area is designated as a marine conservation zone with a weight of 500 if true, and 250 if false."
         }
     ]
 }

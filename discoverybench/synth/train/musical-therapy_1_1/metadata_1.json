@@ -163,16 +163,7 @@
             "question": "Is there a relationship between initial emotional state rating, patient care unit, musical interest diversity, and interactive session participation in relation to the number of sessions per week for patients in the musical therapy domain?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "sessions_per_week",
-            "true_hypothesis": "Patients who rate their initial emotional state higher, have more interactive session participation, and belong to the ICU have a higher number of sessions per week compared to those in general wards.",
-            "true_hypothesis_expr": "df['initial_emotional_state_rating'] + np.where((df['interactive_session_participation'] > 3) & (df['musical_interest_diversity'] >= 5), 1, 0)*2 + (df['patient_care_unit'] == 'ICU').astype(int)*3",
-            "relevant_cols": [
-                "initial_emotional_state_rating",
-                "patient_care_unit",
-                "musical_interest_diversity",
-                "interactive_session_participation",
-                "sessions_per_week"
-            ]
+            "true_hypothesis": "Patients who rate their initial emotional state higher, have more interactive session participation, and belong to the ICU have a higher number of sessions per week compared to those in general wards."
         }
     ]
 }

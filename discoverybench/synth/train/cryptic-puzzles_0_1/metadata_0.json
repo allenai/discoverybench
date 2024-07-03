@@ -115,17 +115,7 @@
             "question": "What is the relationship between participants' logical preference score, preference for quick tasks, and the type of puzzles they choose in the dataset?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "puzzle_type",
-            "true_hypothesis": "Participants who have a logical preference score lower than the calculated preference threshold and prefer quick tasks are more likely to choose wordplay puzzles, while those with a higher preference score and enjoy a variety of puzzles tend to choose numeric puzzles.",
-            "true_hypothesis_expr": "np.where(((df['logical_preference_score'] > np.where((df['average_solve_time'] <= 10) & np.where((df['number_of_puzzles_solved'] > 50) & (df['difficulty_levels_encountered'] > 3), True, False), 3, 7)) & df['prefers_quick_tasks']), 'numeric', np.where(np.where((df['average_solve_time'] <= 10) & np.where((df['number_of_puzzles_solved'] > 50) & (df['difficulty_levels_encountered'] > 3), True, False), 3, 7) > df['logical_preference_score'], 'wordplay', 'visual'))",
-            "relevant_cols": [
-                "logical_preference_score",
-                "prefers_quick_tasks",
-                "average_solve_time",
-                "number_of_puzzles_solved",
-                "difficulty_levels_encountered",
-                "puzzle_type"
-            ]
+            "true_hypothesis": "Participants who have a logical preference score lower than the calculated preference threshold and prefer quick tasks are more likely to choose wordplay puzzles, while those with a higher preference score and enjoy a variety of puzzles tend to choose numeric puzzles."
         }
     ]
 }

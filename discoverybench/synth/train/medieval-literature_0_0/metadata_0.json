@@ -79,14 +79,7 @@
             "question": "Is there a relationship between a knight's handedness and the number of battles they engage in and survive in medieval literature?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "battles_survived",
-            "true_hypothesis": "Knights who are depicted as left-handed in medieval literature stand out due to their higher tendency to engage in battles more frequently compared to their right-handed counterparts, leading to a greater number of battles survived by left-handed knights.",
-            "true_hypothesis_expr": "np.where(df['handedness']=='left', 1.3 * df['number_of_battles'], df['number_of_battles']).astype(int)",
-            "relevant_cols": [
-                "handedness",
-                "number_of_battles",
-                "battles_survived"
-            ]
+            "true_hypothesis": "Knights who are depicted as left-handed in medieval literature stand out due to their higher tendency to engage in battles more frequently compared to their right-handed counterparts, leading to a greater number of battles survived by left-handed knights."
         }
     ]
 }

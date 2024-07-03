@@ -99,14 +99,7 @@
             "question": "Is there a relationship between the frequency of comet sightings and the practice of celestial navigation within ancient civilizations, and if so, how does it potentially impact the frequency of solar eclipses in those regions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "solar_eclipse_frequency",
-            "true_hypothesis": "In regions with higher occurrences of comet sightings and civilizations practicing celestial navigation, solar eclipse frequency tends to be greater as a product of sky observations indicated by the presence of comet sightings and celestial navigation practices.",
-            "true_hypothesis_expr": "df['comet_sightings'] * np.where(df['celestial_navigation'], 1, 0)",
-            "relevant_cols": [
-                "comet_sightings",
-                "celestial_navigation",
-                "solar_eclipse_frequency"
-            ]
+            "true_hypothesis": "In regions with higher occurrences of comet sightings and civilizations practicing celestial navigation, solar eclipse frequency tends to be greater as a product of sky observations indicated by the presence of comet sightings and celestial navigation practices."
         }
     ]
 }

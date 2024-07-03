@@ -187,14 +187,7 @@
             "question": "What is the relationship between play_genre, average_scene_duration, and has_live_music in theater productions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "has_live_music",
-            "true_hypothesis": "Plays with average scene durations of 45 minutes or less and classified as a musical genre are marked as having live music performances.",
-            "true_hypothesis_expr": "np.where((df['average_scene_duration'] <= 45) & (df['play_genre'] == 'musical'), True, False)",
-            "relevant_cols": [
-                "play_genre",
-                "average_scene_duration",
-                "has_live_music"
-            ]
+            "true_hypothesis": "Plays with average scene durations of 45 minutes or less and classified as a musical genre are marked as having live music performances."
         }
     ]
 }

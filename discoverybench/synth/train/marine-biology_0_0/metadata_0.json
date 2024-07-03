@@ -75,24 +75,7 @@
             "question": "What is the relationship between the salinity variation and the bleaching resistance of coral reefs in marine ecosystems?",
             "question_type": "general",
             "difficulty": 4,
-            "target_col": "bleaching_resistance",
-            "true_hypothesis": "In marine ecosystems, high bleaching resistance in coral reefs is predicted when the pollution level is 'low', the seasonal current variation is 'low', and a complex combination of environmental factors including ocean depth, human activity score, protection status, marine predator density, salinity variation, shipping route presence, water clarity, cloud cover, and fishing activity, as well as the number of coral species exceeding 100, are taken into account.",
-            "true_hypothesis_expr": "np.where(((np.where(df['pollution_level']=='low', ((np.where(df['seasonal_current_variation'] == 'low', 200 / (1 + np.exp(-(30 - 0.015 * df['ocean_depth'] - 0.8 * df['human_activity_score'] + 2 * (df['reef_is_protected'].astype(int)) - 15) / 10)), 120 / (1 + np.exp(-(30 - 0.015 * df['ocean_depth'] - 0.8 * df['human_activity_score'] + 2 * (df['reef_is_protected'].astype(int)) - 15) / 10))) + 10 * np.exp((df['marine_predator_density']*(-10) + df['salinity_variation']**3 - 50*np.where(df['shipping_route_presence'], 1, 0)) / 100))*0.3 + ((24 * (df['water_clarity']/100) * (1 - df['cloud_cover']/100)) * 3 + (df['fishing_activity'].map({'none': 4, 'low': 3, 'moderate': 2, 'high': 1}) * 2))*2), 50) >= 90) & (df['coral_species_count'] > 100), 1, 0)",
-            "relevant_cols": [
-                "coral_species_count",
-                "fishing_activity",
-                "pollution_level",
-                "seasonal_current_variation",
-                "ocean_depth",
-                "human_activity_score",
-                "reef_is_protected",
-                "marine_predator_density",
-                "salinity_variation",
-                "shipping_route_presence",
-                "water_clarity",
-                "cloud_cover",
-                "bleaching_resistance"
-            ]
+            "true_hypothesis": "In marine ecosystems, high bleaching resistance in coral reefs is predicted when the pollution level is 'low', the seasonal current variation is 'low', and a complex combination of environmental factors including ocean depth, human activity score, protection status, marine predator density, salinity variation, shipping route presence, water clarity, cloud cover, and fishing activity, as well as the number of coral species exceeding 100, are taken into account."
         }
     ]
 }

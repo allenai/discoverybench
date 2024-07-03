@@ -203,15 +203,7 @@
             "question": "Can the metaphor usage in classic novels be predicted based on the author's usage of foreshadowing, allegory, and emotional depth? How are these variables related?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "metaphor_usage",
-            "true_hypothesis": "The metaphor usage in classical novels can be predicted by analyzing the author's usage of narrative techniques, including the percentage use of foreshadowing raised to the power of 3, an additional value of 30 if allegory is used, and the square of the emotional depth percentile perceived in their work.",
-            "true_hypothesis_expr": "df['foreshadowing_percentage']**3 + np.where(df['allegory_usage'] == True, 30, 0) + df['emotional_depth_percentile']**2",
-            "relevant_cols": [
-                "foreshadowing_percentage",
-                "allegory_usage",
-                "emotional_depth_percentile",
-                "metaphor_usage"
-            ]
+            "true_hypothesis": "The metaphor usage in classical novels can be predicted by analyzing the author's usage of narrative techniques, including the percentage use of foreshadowing raised to the power of 3, an additional value of 30 if allegory is used, and the square of the emotional depth percentile perceived in their work."
         }
     ]
 }

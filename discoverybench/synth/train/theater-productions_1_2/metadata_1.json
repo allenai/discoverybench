@@ -219,15 +219,7 @@
             "question": "Is there a relationship between the presence of live music in theater productions and the product of the average ticket price to number of lead actors ratio and the production budget ratio as calculated in a specific way?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "live_music_present",
-            "true_hypothesis": "High-budget productions where the product of the ratio of average ticket price to the number of lead actors and the ratio of production budget to 100,000 is greater than 40 are more likely to feature live music.",
-            "true_hypothesis_expr": "np.where((df['average_ticket_price'] / df['number_of_lead_actors']) * (df['production_budget'] / 100000) > 40, True, False)",
-            "relevant_cols": [
-                "average_ticket_price",
-                "number_of_lead_actors",
-                "production_budget",
-                "live_music_present"
-            ]
+            "true_hypothesis": "High-budget productions where the product of the ratio of average ticket price to the number of lead actors and the ratio of production budget to 100,000 is greater than 40 are more likely to feature live music."
         }
     ]
 }

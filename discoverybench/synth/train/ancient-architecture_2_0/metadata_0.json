@@ -159,16 +159,7 @@
             "question": "What is the relationship between the distance of ancient structures to the nearest village and their material usage ratio, considering their ceremonial use and average tourist visits per year?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "material_usage_ratio",
-            "true_hypothesis": "Structures with a combination of higher average tourist visits per year, closer distance to the nearest village, and being used for ceremonial purposes tend to have a higher material usage ratio, possibly due to increased accessibility and cultural significance that influence material usage decisions.",
-            "true_hypothesis_expr": "((df['average_tourist_visits_per_year'] / 5000) + (50 - df['distance_to_nearest_village_km']) / 10 + (df['ceremonial_use'].astype(int)) * 5).clip(1, 100) / df['height_meters']",
-            "relevant_cols": [
-                "height_meters",
-                "average_tourist_visits_per_year",
-                "ceremonial_use",
-                "material_usage_ratio",
-                "distance_to_nearest_village_km"
-            ]
+            "true_hypothesis": "Structures with a combination of higher average tourist visits per year, closer distance to the nearest village, and being used for ceremonial purposes tend to have a higher material usage ratio, possibly due to increased accessibility and cultural significance that influence material usage decisions."
         }
     ]
 }

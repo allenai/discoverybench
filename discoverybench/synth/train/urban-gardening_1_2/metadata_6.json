@@ -275,14 +275,7 @@
             "question": "Is there a relationship between the number of sustainability workshops conducted and whether the garden offers green waste recycling facilities, taking into account the average plant age?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "offers_green_waste_recycling",
-            "true_hypothesis": "Gardens with more than 3 sustainability workshops conducted and where the average plant age is at least 5 years are likely to offer green waste recycling facilities.",
-            "true_hypothesis_expr": "np.where((df['number_of_sustainability_workshops'] > 3) & (df['average_plant_age_years'] >= 5), True, False)",
-            "relevant_cols": [
-                "number_of_sustainability_workshops",
-                "average_plant_age_years",
-                "offers_green_waste_recycling"
-            ]
+            "true_hypothesis": "Gardens with more than 3 sustainability workshops conducted and where the average plant age is at least 5 years are likely to offer green waste recycling facilities."
         }
     ]
 }

@@ -135,15 +135,7 @@
             "question": "What is the relationship between the frequency of pilot's flight simulation hours and the predicted type of aircraft they frequently fly, considering their social media followers?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "predicted_type_of_aircraft_frequently_flew",
-            "true_hypothesis": "Pilots who have a large number of followers on aviation-related social media channels, and who engage frequently in flight simulation activities, are more likely to fly Private or Commercial aircraft as these require a community engagement and flight precision that is practiced in simulations and shared on social media platforms. Additionally, pilots with fewer followers might be flying Cargo or Military aircraft based on the social media followers' thresholds used in the prediction.",
-            "true_hypothesis_expr": "np.where((df['social_media_followers'] > 50000) & (df['monthly_flight_simulation_hours'] > 50) & (df['has_regular_flight_reviews'] == True), 'Commercial', np.where((df['social_media_followers'] > 20000) & (df['monthly_flight_simulation_hours'] > 30), 'Private', np.where(df['social_media_followers'] < 5000, 'Cargo', 'Military')))",
-            "relevant_cols": [
-                "social_media_followers",
-                "monthly_flight_simulation_hours",
-                "has_regular_flight_reviews",
-                "predicted_type_of_aircraft_frequently_flew"
-            ]
+            "true_hypothesis": "Pilots who have a large number of followers on aviation-related social media channels, and who engage frequently in flight simulation activities, are more likely to fly Private or Commercial aircraft as these require a community engagement and flight precision that is practiced in simulations and shared on social media platforms. Additionally, pilots with fewer followers might be flying Cargo or Military aircraft based on the social media followers' thresholds used in the prediction."
         }
     ]
 }

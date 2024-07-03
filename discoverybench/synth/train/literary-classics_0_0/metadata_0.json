@@ -147,16 +147,7 @@
             "question": "What is the relationship between the average word count per sentence in literary classics and the influential themes count, new techniques used, modern slang ratio, and whether the book is a literary award winner?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "average_word_count_per_sentence",
-            "true_hypothesis": "There is a non-linear relationship between the average word count per sentence in literary classics and the influential themes count, new techniques used, modern slang ratio, and whether the book is a literary award winner, where the average word count per sentence is derived from a complex formula involving these factors.",
-            "true_hypothesis_expr": "60.5 - 0.003*(1700 + 10 * df['influential_themes_count'] + 20 * df['new_techniques_used'].astype(int))**3 - 0.2*(10 - 0.1 * df['modern_slang_ratio'] - 2 * df['literary_award_winner'].astype(int))**2 - 5",
-            "relevant_cols": [
-                "influential_themes_count",
-                "new_techniques_used",
-                "modern_slang_ratio",
-                "literary_award_winner",
-                "average_word_count_per_sentence"
-            ]
+            "true_hypothesis": "There is a non-linear relationship between the average word count per sentence in literary classics and the influential themes count, new techniques used, modern slang ratio, and whether the book is a literary award winner, where the average word count per sentence is derived from a complex formula involving these factors."
         }
     ]
 }

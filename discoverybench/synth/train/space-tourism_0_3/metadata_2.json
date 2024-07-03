@@ -207,15 +207,7 @@
             "question": "Is there a relationship between the time of departure and crew size, solar activity index, and whether it's a weekend or not in the space tourism dataset?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "time_of_departure",
-            "true_hypothesis": "The time of departure is likely impacted by the crew size, whether it's a weekend or not, and solar activity index. Higher crew sizes may prompt earlier departures to manage pre-launch procedures efficiently, while weekends and low solar activity could influence later departure times.",
-            "true_hypothesis_expr": "np.where(df['is_weekend'], 10, 5) + df['crew_size'] % 10 - (df['solar_activity_index'] // 10)",
-            "relevant_cols": [
-                "solar_activity_index",
-                "crew_size",
-                "is_weekend",
-                "time_of_departure"
-            ]
+            "true_hypothesis": "The time of departure is likely impacted by the crew size, whether it's a weekend or not, and solar activity index. Higher crew sizes may prompt earlier departures to manage pre-launch procedures efficiently, while weekends and low solar activity could influence later departure times."
         }
     ]
 }

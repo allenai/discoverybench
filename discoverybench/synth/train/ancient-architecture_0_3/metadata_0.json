@@ -139,15 +139,7 @@
             "question": "Is there a relationship between the daily visitor count, the implementation of preventive measures, and the site location region when predicting the preservation score for ancient buildings?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "preservation_score",
-            "true_hypothesis": "The preservation score for buildings located in Tropical regions can be predicted by considering the daily visitor count, the implementation of preventive measures, and adjusting for a base score value.",
-            "true_hypothesis_expr": "np.where((df['site_location_region'] == 'Tropical') & df['preventive_measures'], df['daily_visitor_count'] * 0.02 + 50, df.get('preservation_score', 0))",
-            "relevant_cols": [
-                "daily_visitor_count",
-                "preventive_measures",
-                "site_location_region",
-                "preservation_score"
-            ]
+            "true_hypothesis": "The preservation score for buildings located in Tropical regions can be predicted by considering the daily visitor count, the implementation of preventive measures, and adjusting for a base score value."
         }
     ]
 }

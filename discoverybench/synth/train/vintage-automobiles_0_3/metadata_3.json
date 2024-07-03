@@ -143,15 +143,7 @@
             "question": "Is there a relationship between car show participation frequency, country of origin precision score, possession of a certificate of authenticity, and safety feature score in vintage automobiles?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "safety_feature_score",
-            "true_hypothesis": "Cars with a higher frequency of participation in vintage car shows and sourced from countries known for precision engineering, and possessing a certificate of authenticity have higher safety feature scores.",
-            "true_hypothesis_expr": "df['car_show_participation_frequency'] * 2 + df['country_of_origin_precision_score'] * 5 + np.where(df['certificate_of_authenticity'], 20, 0)",
-            "relevant_cols": [
-                "car_show_participation_frequency",
-                "country_of_origin_precision_score",
-                "certificate_of_authenticity",
-                "safety_feature_score"
-            ]
+            "true_hypothesis": "Cars with a higher frequency of participation in vintage car shows and sourced from countries known for precision engineering, and possessing a certificate of authenticity have higher safety feature scores."
         }
     ]
 }

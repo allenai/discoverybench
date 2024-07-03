@@ -175,15 +175,7 @@
             "question": "Is there a relationship between the frequency of engaging in wildlife photography and the number of specialized camera lenses owned, annual travel count, and whether the photographer follows industry news?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "wildlife_photography_frequency",
-            "true_hypothesis": "The frequency of engaging in wildlife photography is positively correlated with an increase in the number of travels per year and owning specialized camera lenses for capturing distant subjects, along with following photography industry news, as represented by a polynomial function in the context of the dataset.",
-            "true_hypothesis_expr": "df['annual_travel_count']**3 + df['specialized_lenses_count']**2 + 5 * df['follows_industry_news'].astype(int)",
-            "relevant_cols": [
-                "specialized_lenses_count",
-                "annual_travel_count",
-                "follows_industry_news",
-                "wildlife_photography_frequency"
-            ]
+            "true_hypothesis": "The frequency of engaging in wildlife photography is positively correlated with an increase in the number of travels per year and owning specialized camera lenses for capturing distant subjects, along with following photography industry news, as represented by a polynomial function in the context of the dataset."
         }
     ]
 }

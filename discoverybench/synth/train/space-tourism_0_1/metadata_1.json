@@ -175,20 +175,7 @@
             "question": "What is the relationship between completing space travel training, having high interest in space missions, and booking language in English, regarding the choice of travel class?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "travel_class",
-            "true_hypothesis": "Space tourists who participated in promotional events, have travel insurance, completed space travel training, have high interest in space missions, come from countries with high space education levels, and book in English for longer stays are more likely to select orbital class.",
-            "true_hypothesis_expr": "np.where((df['participated_in_promotional_events'] == True) & ((5 + np.where((df['has_travel_insurance'] & df['completed_space_travel_training']) & (df['interest_in_space_missions'] >= 7), True, False)*2 + (50 - (df['percent_population_with_space_education'] // 2 + df['government_space_budget_percent_gdp'] * 5))*0.2 + np.where((df['booking_language_english'] == True) & (df['length_of_stay_days'] > 10)*3*((50 - (df['percent_population_with_space_education'] // 2 + df['government_space_budget_percent_gdp'] * 5))*0.1)) >= 5), 'orbital', 'suborbital')",
-            "relevant_cols": [
-                "participated_in_promotional_events",
-                "has_travel_insurance",
-                "completed_space_travel_training",
-                "interest_in_space_missions",
-                "percent_population_with_space_education",
-                "government_space_budget_percent_gdp",
-                "booking_language_english",
-                "length_of_stay_days",
-                "travel_class"
-            ]
+            "true_hypothesis": "Space tourists who participated in promotional events, have travel insurance, completed space travel training, have high interest in space missions, come from countries with high space education levels, and book in English for longer stays are more likely to select orbital class."
         }
     ]
 }

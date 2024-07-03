@@ -107,14 +107,7 @@
             "question": "Is there a relationship between technological advancement level, nighttime visibility, and the preference for single star usage in ancient astronomical practices?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "single_star_usage",
-            "true_hypothesis": "Civilizations with higher technological advancements and better nighttime visibility are more likely to use single star systems for navigation.",
-            "true_hypothesis_expr": "df['technological_advancement_level'] * 8 + df['average_nighttime_visibility'] * 2",
-            "relevant_cols": [
-                "technological_advancement_level",
-                "average_nighttime_visibility",
-                "single_star_usage"
-            ]
+            "true_hypothesis": "Civilizations with higher technological advancements and better nighttime visibility are more likely to use single star systems for navigation."
         }
     ]
 }

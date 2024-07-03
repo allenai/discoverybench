@@ -83,14 +83,7 @@
             "question": "Is there a relationship between the presence of significant metallic ore deposits, trade activity level greater than 50, and exhibiting advanced metallurgical techniques in ancient civilizations?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "advanced_metallurgy",
-            "true_hypothesis": "Civilizations with the presence of significant metallic ore deposits and a trade activity level greater than 50 were more likely to exhibit advanced metallurgical techniques.",
-            "true_hypothesis_expr": "np.where((df['metallic_ore_deposits'] == True) & (df['trade_activity_level'] > 50), True, False)",
-            "relevant_cols": [
-                "metallic_ore_deposits",
-                "trade_activity_level",
-                "advanced_metallurgy"
-            ]
+            "true_hypothesis": "Civilizations with the presence of significant metallic ore deposits and a trade activity level greater than 50 were more likely to exhibit advanced metallurgical techniques."
         }
     ]
 }

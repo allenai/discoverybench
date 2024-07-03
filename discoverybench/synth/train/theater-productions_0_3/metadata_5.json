@@ -195,14 +195,7 @@
             "question": "Is there a relationship between play genre, audience interaction, and total play duration in theater productions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "total_play_duration_minutes",
-            "true_hypothesis": "The total play duration is 120 minutes for dramas or plays with audience interaction, otherwise it is 90 minutes.",
-            "true_hypothesis_expr": "np.where((df['play_genre'] == 'drama') | (df['audience_interaction'] == True), 120, 90)",
-            "relevant_cols": [
-                "play_genre",
-                "audience_interaction",
-                "total_play_duration_minutes"
-            ]
+            "true_hypothesis": "The total play duration is 120 minutes for dramas or plays with audience interaction, otherwise it is 90 minutes."
         }
     ]
 }

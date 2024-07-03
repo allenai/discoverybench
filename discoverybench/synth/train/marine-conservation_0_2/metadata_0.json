@@ -115,20 +115,7 @@
             "question": "What is the relationship between the number of reported marine pollution incidents and the level of marine conservation funding in the context of marine conservation efforts?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "tourist_visits_annual",
-            "true_hypothesis": "We hypothesize that the number of annual tourist visits calculates using a complex formula that includes the influence of eco-friendly businesses, reported marine pollution incidents, marine conservation in schools, marine conservation funding, marine pollution incidents, illegal fishing rate, marine fauna disruptions, and local government environmental policy, with additional considerations for the impact of marine conservation zones.",
-            "true_hypothesis_expr": "((df['eco_friendly_business_percentile'] * 1.5 - df['reported_marine_pollution_incidents'] * 0.75 + 20 * df['marine_conservation_in_schools'].astype(int)) / ((df['marine_conservation_funding'] / df['marine_pollution_incidents']).fillna(0)).clip(lower=0, upper=10).astype(int)) * np.where(np.where(df['illegal_fishing_rate'] + df['marine_fauna_disruptions'] - 2*df['local_gov_environmental_policy_score'] > 50, False, True), 500, 250)",
-            "relevant_cols": [
-                "eco_friendly_business_percentile",
-                "reported_marine_pollution_incidents",
-                "marine_conservation_in_schools",
-                "marine_conservation_funding",
-                "marine_pollution_incidents",
-                "illegal_fishing_rate",
-                "marine_fauna_disruptions",
-                "local_gov_environmental_policy_score",
-                "tourist_visits_annual"
-            ]
+            "true_hypothesis": "We hypothesize that the number of annual tourist visits calculates using a complex formula that includes the influence of eco-friendly businesses, reported marine pollution incidents, marine conservation in schools, marine conservation funding, marine pollution incidents, illegal fishing rate, marine fauna disruptions, and local government environmental policy, with additional considerations for the impact of marine conservation zones."
         }
     ]
 }

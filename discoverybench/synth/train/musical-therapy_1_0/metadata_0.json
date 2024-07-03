@@ -151,20 +151,7 @@
             "question": "What is the relationship between session duration, self-reported wellness score, relaxation during music sessions, disturbance after music, initial emotional state rating, patient care unit, musical interest diversity, interactive session participation, and adjusted wellness score in the context of musical therapy?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "adjusted_wellness_score",
-            "true_hypothesis": "Patients who listen to classical music during sessions lasting at least 30 minutes, and have a relaxation score during music sessions higher than after-music disturbance by more than 25 points, an initial emotional state rating supported by interactive session participation and music interest diversity, and are in the ICU, have an adjusted wellness score calculated based on a specific formula involving various factors including their self-reported wellness score.",
-            "true_hypothesis_expr": "np.where((df.get('music_type') == 'classical') & (40 + df['relaxation_during_music'] - df['disturbance_after_music'] > 65) & (df['session_duration'] >= 30) & (((df['initial_emotional_state_rating'] + (np.where((df['interactive_session_participation'] > 3) & (df['musical_interest_diversity'] >= 5), 1, 0))*2 + (df['patient_care_unit'] == 'ICU').astype(int)*3) >= 3), df['self_reported_wellness_score'] * 1.4, df['self_reported_wellness_score'])",
-            "relevant_cols": [
-                "session_duration",
-                "self_reported_wellness_score",
-                "relaxation_during_music",
-                "disturbance_after_music",
-                "initial_emotional_state_rating",
-                "patient_care_unit",
-                "musical_interest_diversity",
-                "adjusted_wellness_score",
-                "interactive_session_participation"
-            ]
+            "true_hypothesis": "Patients who listen to classical music during sessions lasting at least 30 minutes, and have a relaxation score during music sessions higher than after-music disturbance by more than 25 points, an initial emotional state rating supported by interactive session participation and music interest diversity, and are in the ICU, have an adjusted wellness score calculated based on a specific formula involving various factors including their self-reported wellness score."
         }
     ]
 }

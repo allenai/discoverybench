@@ -83,14 +83,7 @@
             "question": "Is there a relationship between the count of anchor remains visible at a site and the depth of the site, taking into account whether coral reefs are present?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "visible_anchor_remains",
-            "true_hypothesis": "The count of anchor remains visible at a site is calculated as 20 times the indicator of whether coral reefs are present minus 0.5 times the depth of the site.",
-            "true_hypothesis_expr": "df['coral_reefs_present'] * 20 - df['depth_of_site'] * 0.5",
-            "relevant_cols": [
-                "depth_of_site",
-                "coral_reefs_present",
-                "visible_anchor_remains"
-            ]
+            "true_hypothesis": "The count of anchor remains visible at a site is calculated as 20 times the indicator of whether coral reefs are present minus 0.5 times the depth of the site."
         }
     ]
 }

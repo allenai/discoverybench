@@ -167,14 +167,7 @@
             "question": "What is the relationship between the squared per capita green investment divided by 1000 and the local pollution level in determining whether a region is above the renewable threshold?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "is_above_renewable_threshold",
-            "true_hypothesis": "Regions with a squared per capita green investment divided by 1000 minus the local pollution level greater than 250 are indicated as being above the renewable threshold.",
-            "true_hypothesis_expr": "np.where((df['per_capita_green_investment']**2 / 1000 - df['local_pollution_level']) > 250, True, False)",
-            "relevant_cols": [
-                "per_capita_green_investment",
-                "local_pollution_level",
-                "is_above_renewable_threshold"
-            ]
+            "true_hypothesis": "Regions with a squared per capita green investment divided by 1000 minus the local pollution level greater than 250 are indicated as being above the renewable threshold."
         }
     ]
 }

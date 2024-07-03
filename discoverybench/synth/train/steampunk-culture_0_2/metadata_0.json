@@ -103,17 +103,7 @@
             "question": "Is there a relationship between attending a steampunk convention, engaging in online steampunk discussions, having a steampunk-related hobby, and owning steampunk fashion items with the likelihood of owning steampunk decor?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "owns_steampunk_decor",
-            "true_hypothesis": "Participants who attend a steampunk convention, have a steampunk-related hobby, and if the ratio of steampunk literature written to steampunk art created plus one is greater than 0.5, along with engaging in online steampunk discussions or owning steampunk fashion items, are more likely to own steampunk decor.",
-            "true_hypothesis_expr": "np.where((df['attends_steampunk_convention'] & np.where((df['steampunk_literature_written'] / (df['steampunk_art_created'] + 1)) > 0.5, True, False)) & ((df['online_steampunk_discussion_frequency'] * 0.2 + np.where(df['owns_steampunk_fashion_items'], 20, 0)) > 10), True, False)",
-            "relevant_cols": [
-                "attends_steampunk_convention",
-                "online_steampunk_discussion_frequency",
-                "owns_steampunk_fashion_items",
-                "steampunk_literature_written",
-                "steampunk_art_created",
-                "owns_steampunk_decor"
-            ]
+            "true_hypothesis": "Participants who attend a steampunk convention, have a steampunk-related hobby, and if the ratio of steampunk literature written to steampunk art created plus one is greater than 0.5, along with engaging in online steampunk discussions or owning steampunk fashion items, are more likely to own steampunk decor."
         }
     ]
 }

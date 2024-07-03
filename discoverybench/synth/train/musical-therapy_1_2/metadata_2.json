@@ -163,14 +163,7 @@
             "question": "What is the relationship between the variety of music genres presented during therapy sessions, the occurrence of follow-up discussions, and the reported relaxation levels by patients?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "predicted_relaxation_level",
-            "true_hypothesis": "Patients who experience a greater variety in music genres during therapy sessions, and if they engage in follow-up discussions, they are expected to report higher relaxation levels.",
-            "true_hypothesis_expr": "df['music_genre_variety'] + 5 * np.where(df['post_session_discussion'], 1, 0)",
-            "relevant_cols": [
-                "music_genre_variety",
-                "post_session_discussion",
-                "predicted_relaxation_level"
-            ]
+            "true_hypothesis": "Patients who experience a greater variety in music genres during therapy sessions, and if they engage in follow-up discussions, they are expected to report higher relaxation levels."
         }
     ]
 }

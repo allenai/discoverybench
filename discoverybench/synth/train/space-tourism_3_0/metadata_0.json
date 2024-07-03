@@ -251,14 +251,7 @@
             "question": "Is there a relationship between satisfaction ratings and trip duration among space tourists who have traveled in orbital class?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "satisfaction_rating_higher",
-            "true_hypothesis": "Among space tourists, those who have traveled in orbital class and have a trip duration longer than 3 days report a higher satisfaction rating.",
-            "true_hypothesis_expr": "np.where((df['travel_class'] == 'orbital') & (df['trip_duration'] > 3), True, False)",
-            "relevant_cols": [
-                "satisfaction_rating_higher",
-                "travel_class",
-                "trip_duration"
-            ]
+            "true_hypothesis": "Among space tourists, those who have traveled in orbital class and have a trip duration longer than 3 days report a higher satisfaction rating."
         }
     ]
 }

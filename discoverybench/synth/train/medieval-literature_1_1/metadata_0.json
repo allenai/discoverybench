@@ -103,16 +103,7 @@
             "question": "Is there a relationship between the number of troubadour friendships and knight_name_survivability_score among knights who have participated in a high number of tourneys and collected many manuscripts?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "knight_name_survivability_score",
-            "true_hypothesis": "Knights with more troubadour friendships and who collect more manuscripts while having a higher number of tourneys participated in and accolades received tend to have higher survivability scores.",
-            "true_hypothesis_expr": "df['manuscripts_collected']*0.2 + df['troubadour_friendships']*0.8 * (np.where(df['number_of_tourneys'] * df['accolade_count'] > 25, True, False) + df['manuscripts_collected']*0.2 + df['troubadour_friendships']*0.8) / 2.0",
-            "relevant_cols": [
-                "troubadour_friendships",
-                "accolade_count",
-                "manuscripts_collected",
-                "number_of_tourneys",
-                "knight_name_survivability_score"
-            ]
+            "true_hypothesis": "Knights with more troubadour friendships and who collect more manuscripts while having a higher number of tourneys participated in and accolades received tend to have higher survivability scores."
         }
     ]
 }

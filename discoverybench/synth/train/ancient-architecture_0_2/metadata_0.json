@@ -131,18 +131,7 @@
             "question": "What factors influence the shape index of ancient structures in relation to their geographical region, preventive measures taken, and structural characteristics?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "shape_index",
-            "true_hypothesis": "The geographical region of the site, application of preventive measures, and the structure's dimensions impact the shape index of ancient structures.",
-            "true_hypothesis_expr": "np.where((df['site_location_region'] == 'Tropical') & df['preventive_measures'], df['daily_visitor_count'] * 0.02 + 50, df.get('preservation_score', 0)) * 0.5 + (np.where((df['average_wall_thickness'] > 100) & (df['has_stone_foundation'] == True), 20, np.where((df['average_wall_thickness'] > 50) & (df['has_stone_foundation'] == False), 15, 10)))",
-            "relevant_cols": [
-                "daily_visitor_count",
-                "preventive_measures",
-                "site_location_region",
-                "average_wall_thickness",
-                "has_stone_foundation",
-                "preservation_score",
-                "shape_index"
-            ]
+            "true_hypothesis": "The geographical region of the site, application of preventive measures, and the structure's dimensions impact the shape index of ancient structures."
         }
     ]
 }

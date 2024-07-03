@@ -79,19 +79,7 @@
             "question": "Is there a relationship between the frequency of nutrient upwelling near reefs and the T variable calculated from seasonal current variation, ocean depth, human activity score, reef protection, marine predator density, salinity variation, and presence of major shipping routes?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "nutrient_upwelling_frequency",
-            "true_hypothesis": "The frequency of nutrient upwelling near reefs is likely influenced by the T variable derived from the Pandas expression, relating to seasonal current variation, ocean depth, human activity score, reef protection, marine predator density, salinity variation, and presence of major shipping routes.",
-            "true_hypothesis_expr": "np.where(df['seasonal_current_variation'] == 'low', 200 / (1 + np.exp(-(30 - 0.015 * df['ocean_depth'] - 0.8 * df['human_activity_score'] + 2 * (df['reef_is_protected'].astype(int)) - 15) / 10)), 120 / (1 + np.exp(-(30 - 0.015 * df['ocean_depth'] - 0.8 * df['human_activity_score'] + 2 * (df['reef_is_protected'].astype(int)) - 15) / 10))) + 10 * np.exp(-(df['marine_predator_density']*(-10) + df['salinity_variation']**3 - 50*np.where(df['shipping_route_presence'], 1, 0)) / 100)",
-            "relevant_cols": [
-                "seasonal_current_variation",
-                "ocean_depth",
-                "human_activity_score",
-                "reef_is_protected",
-                "marine_predator_density",
-                "salinity_variation",
-                "shipping_route_presence",
-                "nutrient_upwelling_frequency"
-            ]
+            "true_hypothesis": "The frequency of nutrient upwelling near reefs is likely influenced by the T variable derived from the Pandas expression, relating to seasonal current variation, ocean depth, human activity score, reef protection, marine predator density, salinity variation, and presence of major shipping routes."
         }
     ]
 }

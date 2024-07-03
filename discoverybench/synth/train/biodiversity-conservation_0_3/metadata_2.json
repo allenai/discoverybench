@@ -95,15 +95,7 @@
             "question": "What is the relationship between average annual temperature, average annual humidity, wildlife policy strength, and tourism revenue in the context of biodiversity conservation?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "tourism_revenue",
-            "true_hypothesis": "Regions with higher average annual temperature, average annual humidity, and wildlife policy strength result in higher tourism revenue.",
-            "true_hypothesis_expr": "df['average_annual_temperature'] * df['average_annual_humidity'] * 0.1 + df['wildlife_policy_strength']**2 * 10",
-            "relevant_cols": [
-                "average_annual_temperature",
-                "average_annual_humidity",
-                "wildlife_policy_strength",
-                "tourism_revenue"
-            ]
+            "true_hypothesis": "Regions with higher average annual temperature, average annual humidity, and wildlife policy strength result in higher tourism revenue."
         }
     ]
 }

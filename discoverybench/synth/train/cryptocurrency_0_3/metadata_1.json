@@ -107,15 +107,7 @@
             "question": "Given the dataset with columns 'online_course_enrollment_frequency', 'tech_workshops_attended', and 'has_regular_access_to_internet', what is the relationship between these variables and the 'digital_literacy_score'?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "digital_literacy_score",
-            "true_hypothesis": "The digital literacy score is calculated by multiplying the number of online course enrollments by 2, adding the product of the number of tech workshops attended multiplied by 3, and then further multiplying the sum by 1 if the individual has regular internet access, resulting in a comprehensive assessment of an individual's digital literacy.",
-            "true_hypothesis_expr": "((df['online_course_enrollment_frequency'] * 2) + (df['tech_workshops_attended'] * 3)) * df['has_regular_access_to_internet'].astype(int)",
-            "relevant_cols": [
-                "online_course_enrollment_frequency",
-                "tech_workshops_attended",
-                "has_regular_access_to_internet",
-                "digital_literacy_score"
-            ]
+            "true_hypothesis": "The digital literacy score is calculated by multiplying the number of online course enrollments by 2, adding the product of the number of tech workshops attended multiplied by 3, and then further multiplying the sum by 1 if the individual has regular internet access, resulting in a comprehensive assessment of an individual's digital literacy."
         }
     ]
 }

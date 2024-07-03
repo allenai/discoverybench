@@ -167,17 +167,7 @@
             "question": "Is there a relationship between the number of tech devices owned and the derived stress level reported?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "derived_stress_level",
-            "true_hypothesis": "Individuals with higher technical training levels, frequently updating equipment, belonging to younger age groups, owning more tech devices, and using tech for leisure are more likely to report derived stress levels within a moderate range, potentially influenced by a combination of the aforementioned factors.",
-            "true_hypothesis_expr": "np.clip(1 + ((df['technical_training_level']**3 + df['frequent_equipment_updates'] * 5 + df['age_group'].replace({'18-25': 5, '26-35': 4, '36-45': 3, '46-55': 2, '56+': 1}) )**2 / 10) + ((df['number_of_tech_devices_owned'] ** 2 + 3 * df['uses_tech_for_leisure']) / 4), 1, 5)",
-            "relevant_cols": [
-                "technical_training_level",
-                "frequent_equipment_updates",
-                "age_group",
-                "number_of_tech_devices_owned",
-                "uses_tech_for_leisure",
-                "derived_stress_level"
-            ]
+            "true_hypothesis": "Individuals with higher technical training levels, frequently updating equipment, belonging to younger age groups, owning more tech devices, and using tech for leisure are more likely to report derived stress levels within a moderate range, potentially influenced by a combination of the aforementioned factors."
         }
     ]
 }

@@ -235,15 +235,7 @@
             "question": "Is there a relationship between the level of sunlight exposure, average rainfall, and the focus on drought-resistant plants in community gardens that might impact the average growth time of plants?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "average_growth_time",
-            "true_hypothesis": "The average growth time of plants in community gardens is affected by the level of sunlight exposure, average rainfall, and the focus on drought-resistant plants. Gardens focusing on drought-resistant plants could exhibit a different growth pattern than those that do not.",
-            "true_hypothesis_expr": "np.where(df['focus_on_drought_resistant'], np.maximum(3, 24 - 2 * df['sunlight_exposure_hours']), 24 - df['average_rainfall_mm'] // 100)",
-            "relevant_cols": [
-                "sunlight_exposure_hours",
-                "average_rainfall_mm",
-                "focus_on_drought_resistant",
-                "average_growth_time"
-            ]
+            "true_hypothesis": "The average growth time of plants in community gardens is affected by the level of sunlight exposure, average rainfall, and the focus on drought-resistant plants. Gardens focusing on drought-resistant plants could exhibit a different growth pattern than those that do not."
         }
     ]
 }

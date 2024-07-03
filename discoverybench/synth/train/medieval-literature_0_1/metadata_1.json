@@ -87,14 +87,7 @@
             "question": "Is there a relationship between the era of knight legends and the percentage of forest coverage based on different regions of origin?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "era_of_legend",
-            "true_hypothesis": "Knights from regions with a high percentage of forest coverage above 50% in Northlands or Westlands regions are more likely to belong to the 12th century, while knights from regions with forest coverage below or equal to 50% in Southlands or Eastlands regions are more likely to belong to the 14th century. The era of a knight's legend seems to be influenced by the combination of forest coverage percentage and region of origin.",
-            "true_hypothesis_expr": "np.where((df['forest_coverage_percent'] > 50) & (df['region_of_origin'].isin(['Northlands', 'Westlands'])), '12th century', np.where((df['forest_coverage_percent'] <= 50) & (df['region_of_origin'].isin(['Southlands', 'Eastlands'])), '14th century', '13th century'))",
-            "relevant_cols": [
-                "region_of_origin",
-                "forest_coverage_percent",
-                "era_of_legend"
-            ]
+            "true_hypothesis": "Knights from regions with a high percentage of forest coverage above 50% in Northlands or Westlands regions are more likely to belong to the 12th century, while knights from regions with forest coverage below or equal to 50% in Southlands or Eastlands regions are more likely to belong to the 14th century. The era of a knight's legend seems to be influenced by the combination of forest coverage percentage and region of origin."
         }
     ]
 }

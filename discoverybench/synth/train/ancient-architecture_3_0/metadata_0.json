@@ -167,14 +167,7 @@
             "question": "Is there a relationship between the base width to height ratio of ancient structures and their material usage ratio?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "material_usage_ratio",
-            "true_hypothesis": "Structures with a base width to height ratio greater than 5:1 are more likely to have a higher material usage ratio, potentially due to the design aspects favoring the use of more materials to support wider bases.",
-            "true_hypothesis_expr": "df['base_width_meters'] / df['height_meters']",
-            "relevant_cols": [
-                "height_meters",
-                "material_usage_ratio",
-                "base_width_meters"
-            ]
+            "true_hypothesis": "Structures with a base width to height ratio greater than 5:1 are more likely to have a higher material usage ratio, potentially due to the design aspects favoring the use of more materials to support wider bases."
         }
     ]
 }

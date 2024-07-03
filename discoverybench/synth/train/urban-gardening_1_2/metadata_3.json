@@ -275,15 +275,7 @@
             "question": "What is the relationship between the ratio of private funding to public funding, the presence of local partnerships, and the number of annual events hosted by urban gardens in the dataset?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "number_of_annual_events",
-            "true_hypothesis": "Gardens with a higher ratio of private funding to public funding and a presence of local partnerships tend to host annual events as calculated by the formula: ((private_funding / public_funding) * 10 + 20 * has_local_partnerships).",
-            "true_hypothesis_expr": "((df['private_funding'] / df['public_funding']) * 10 + 20 * df['has_local_partnerships']).astype(int)",
-            "relevant_cols": [
-                "public_funding",
-                "has_local_partnerships",
-                "private_funding",
-                "number_of_annual_events"
-            ]
+            "true_hypothesis": "Gardens with a higher ratio of private funding to public funding and a presence of local partnerships tend to host annual events as calculated by the formula: ((private_funding / public_funding) * 10 + 20 * has_local_partnerships)."
         }
     ]
 }

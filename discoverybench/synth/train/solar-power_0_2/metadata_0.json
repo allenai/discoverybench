@@ -131,17 +131,7 @@
             "question": "Can you determine if there is a statistically significant relationship between the presence of industrial areas, wind speed, sunlight hours, day length, and insolation level in the context of solar power?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "insolation_level",
-            "true_hypothesis": "With the given information, a new consistent hypothesis can be stated as: As the presence of industrial areas and wind speed increase, while the sunlight hours and length of the day decrease, the insolation level is expected to increase as per the formula provided.",
-            "true_hypothesis_expr": "1000 - 10 * (np.where(df['industrial_area_presence'], 75, 25) + (100 - df['wind_speed']) * 0.5) - 5 * ((df['sunlight_hours'] / df['day_length']) * 50 + 20 * df['has_solar_panels'].astype(int) - 10)",
-            "relevant_cols": [
-                "industrial_area_presence",
-                "wind_speed",
-                "sunlight_hours",
-                "day_length",
-                "has_solar_panels",
-                "insolation_level"
-            ]
+            "true_hypothesis": "With the given information, a new consistent hypothesis can be stated as: As the presence of industrial areas and wind speed increase, while the sunlight hours and length of the day decrease, the insolation level is expected to increase as per the formula provided."
         }
     ]
 }

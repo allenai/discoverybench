@@ -147,14 +147,7 @@
             "question": "Is there a relationship between the percentage of public transportation that uses alternative fuels, the emissions ranking of local industries compared to national levels, and the implementation of a carbon tax in certain regions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "carbon_tax_implemented",
-            "true_hypothesis": "In regions where more than 30% of public transportation uses alternative, environmentally friendly fuels (alternative_transport_ratio > 30) and where local industries' emissions rank below the 40th percentile compared to national levels (industry_emissions_percentile < 40), carbon tax is more likely to be implemented.",
-            "true_hypothesis_expr": "np.where((df['alternative_transport_ratio'] > 30) & (df['industry_emissions_percentile'] < 40), True, False)",
-            "relevant_cols": [
-                "alternative_transport_ratio",
-                "industry_emissions_percentile",
-                "carbon_tax_implemented"
-            ]
+            "true_hypothesis": "In regions where more than 30% of public transportation uses alternative, environmentally friendly fuels (alternative_transport_ratio > 30) and where local industries' emissions rank below the 40th percentile compared to national levels (industry_emissions_percentile < 40), carbon tax is more likely to be implemented."
         }
     ]
 }

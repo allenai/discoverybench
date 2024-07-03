@@ -203,14 +203,7 @@
             "question": "Is there a relationship between the author recognition factor and the likelihood of a book having a movie adaptation when the public interest score is less than the author recognition factor score?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "has_movie_adaptation",
-            "true_hypothesis": "Books are more likely to have a movie adaptation if the public interest score is more than double the author recognition factor score.",
-            "true_hypothesis_expr": "np.where(df['public_interest_score'] / df['author_recognition_factor'] > 2, True, False)",
-            "relevant_cols": [
-                "author_recognition_factor",
-                "public_interest_score",
-                "has_movie_adaptation"
-            ]
+            "true_hypothesis": "Books are more likely to have a movie adaptation if the public interest score is more than double the author recognition factor score."
         }
     ]
 }

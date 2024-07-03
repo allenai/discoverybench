@@ -115,14 +115,7 @@
             "question": "Is there a relationship between the frequency of annual cyber attacks experienced by organizations and how often they update their security systems?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "security_update_frequency",
-            "true_hypothesis": "Organizations experiencing over three cyber attacks per year and requiring mandatory cybersecurity training for all employees are more likely to update their security systems yearly. Specifically, organizations with a high incidence of external security threats or attacks, and a policy of mandatory employee cybersecurity training, predominantly update their security systems on a yearly basis.",
-            "true_hypothesis_expr": "np.where((df['annual_cyber_attacks'] > 3) & (df['mandatory_cybersecurity_training']), 'weekly', 'yearly')",
-            "relevant_cols": [
-                "annual_cyber_attacks",
-                "mandatory_cybersecurity_training",
-                "security_update_frequency"
-            ]
+            "true_hypothesis": "Organizations experiencing over three cyber attacks per year and requiring mandatory cybersecurity training for all employees are more likely to update their security systems yearly. Specifically, organizations with a high incidence of external security threats or attacks, and a policy of mandatory employee cybersecurity training, predominantly update their security systems on a yearly basis."
         }
     ]
 }

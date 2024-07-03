@@ -83,14 +83,7 @@
             "question": "Is there a relationship between sediment concentration, site depth, and underwater visibility in the context of underwater archaeology sites? If so, how are these variables related to each other?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "underwater_visibility",
-            "true_hypothesis": "At underwater sites, the visibility is predicted by the level of sediment concentration and the site depth. Specifically, visibility is inversely affected by the square of the site depth and directly affected by sediment concentration, inversely proportional to the detected values.",
-            "true_hypothesis_expr": "100 - df['site_depth']**2 + 10 / df['sediment_concentration']",
-            "relevant_cols": [
-                "sediment_concentration",
-                "site_depth",
-                "underwater_visibility"
-            ]
+            "true_hypothesis": "At underwater sites, the visibility is predicted by the level of sediment concentration and the site depth. Specifically, visibility is inversely affected by the square of the site depth and directly affected by sediment concentration, inversely proportional to the detected values."
         }
     ]
 }

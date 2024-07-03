@@ -155,16 +155,7 @@
             "question": "Is there a relationship between the region_id and the local pollution level across different regions?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "region_id",
-            "true_hypothesis": "The region_id is calculated as 100 times the square root of the square of the regulatory compliance percentage plus the cube of the number of local environmental organizations, added to 10 times the binary indicator based on the per capita green investment exceeding a certain threshold.",
-            "true_hypothesis_expr": "100*np.sqrt(df['regulatory_compliance_percentage']**2 + df['local_environmental_organizations']**3) + 10*np.where((df['per_capita_green_investment']**2 / 1000 - df['local_pollution_level']) > 250, True, False)",
-            "relevant_cols": [
-                "regulatory_compliance_percentage",
-                "local_environmental_organizations",
-                "per_capita_green_investment",
-                "local_pollution_level",
-                "region_id"
-            ]
+            "true_hypothesis": "The region_id is calculated as 100 times the square root of the square of the regulatory compliance percentage plus the cube of the number of local environmental organizations, added to 10 times the binary indicator based on the per capita green investment exceeding a certain threshold."
         }
     ]
 }

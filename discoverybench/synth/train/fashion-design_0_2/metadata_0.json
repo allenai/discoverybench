@@ -79,16 +79,7 @@
             "question": "What is the relationship between the social media trend popularity of a fashion show and the venue type in the dataset?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "social_media_trend_popularity",
-            "true_hypothesis": "The social media trend popularity of a fashion show is calculated by subtracting 60% of the percentage of new designers from 100, then adding 80% of the count of international designers, and finally subtracting 90% of the month of the year. An additional 20 is added if the show is held indoors.",
-            "true_hypothesis_expr": "100 - df['percentage_new_designers'] * 0.6 + df['count_international_designers'] * 0.8 - df['month_of_year'] * 0.9 + 20 * (df['venue_type'] == 'indoor')",
-            "relevant_cols": [
-                "venue_type",
-                "percentage_new_designers",
-                "count_international_designers",
-                "month_of_year",
-                "social_media_trend_popularity"
-            ]
+            "true_hypothesis": "The social media trend popularity of a fashion show is calculated by subtracting 60% of the percentage of new designers from 100, then adding 80% of the count of international designers, and finally subtracting 90% of the month of the year. An additional 20 is added if the show is held indoors."
         }
     ]
 }

@@ -163,22 +163,7 @@
             "question": "Is there a relationship between the personal items count score and the satisfaction rating among space tourists?",
             "question_type": "general",
             "difficulty": 4,
-            "target_col": "satisfaction_rating_higher",
-            "true_hypothesis": "Among space tourists, those who have participated in promotional events related to space tourism, have travel insurance, completed space travel training, high interest in space missions, come from a region with a high percentage of population with space education, and have a government with a significant space budget allocation, and have a personal items count score greater than 3 report a higher satisfaction rating.",
-            "true_hypothesis_expr": "np.where((np.where((df['participated_in_promotional_events'] == True) & ((5 + np.where((df['has_travel_insurance'] & df['completed_space_travel_training']) & (df['interest_in_space_missions'] >= 7), True, False)*2 + (50 - (df['percent_population_with_space_education'] // 2 + df['government_space_budget_percent_gdp'] * 5)*0.2 + (np.where((df['booking_language_english'] == True) & (df['length_of_stay_days'] > 10), True, False)*3*((50 - (df['percent_population_with_space_education'] // 2 + df['government_space_budget_percent_gdp'] * 5)*0.1)) >= 5), 'orbital', 'suborbital') == 'orbital') & (np.where(df['pre_trip_training'], 5 + df['personal_items_count']**2, df['personal_items_count']) > 3), True, False)",
-            "relevant_cols": [
-                "participated_in_promotional_events",
-                "has_travel_insurance",
-                "completed_space_travel_training",
-                "interest_in_space_missions",
-                "percent_population_with_space_education",
-                "government_space_budget_percent_gdp",
-                "booking_language_english",
-                "length_of_stay_days",
-                "pre_trip_training",
-                "personal_items_count",
-                "satisfaction_rating_higher"
-            ]
+            "true_hypothesis": "Among space tourists, those who have participated in promotional events related to space tourism, have travel insurance, completed space travel training, high interest in space missions, come from a region with a high percentage of population with space education, and have a government with a significant space budget allocation, and have a personal items count score greater than 3 report a higher satisfaction rating."
         }
     ]
 }

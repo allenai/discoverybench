@@ -235,15 +235,7 @@
             "question": "Is there a relationship between the number of staff in urban gardens and the historical visitation that could indicate public transit access within a 0.5-mile radius?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "public_transit_access",
-            "true_hypothesis": "Gardens with historical visitation greater than 5000 and a staff-to-square-footage ratio exceeding 0.05% are labeled as having public transit access within a 0.5-mile radius.",
-            "true_hypothesis_expr": "np.where((df['historical_visitation'] > 5000) & (df['number_of_staff'] / df['square_footage'] > 0.0005), True, False)",
-            "relevant_cols": [
-                "number_of_staff",
-                "historical_visitation",
-                "square_footage",
-                "public_transit_access"
-            ]
+            "true_hypothesis": "Gardens with historical visitation greater than 5000 and a staff-to-square-footage ratio exceeding 0.05% are labeled as having public transit access within a 0.5-mile radius."
         }
     ]
 }

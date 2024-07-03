@@ -143,21 +143,7 @@
             "question": "Is there a relationship between the weight of a camera and the likelihood of a photographer using a smartphone as a secondary device? If so, what factors might influence this relationship?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "uses_smartphone_secondary",
-            "true_hypothesis": "Photographers who use lightweight cameras (less than 500 grams) and have a specific combination of camera resolution, awards won, sponsored shoots, post-processing skill, evening shoots count, client rating, and whether they are professionals and specialize in wildlife, are more likely to use smartphones as secondary devices. The likelihood of using smartphones as secondary devices is determined by these specific criteria.",
-            "true_hypothesis_expr": "np.where((df['camera_weight_grams'] < 500) & (((np.where(df['is_professional'] & df['specializes_in_wildlife'], df['camera_resolution_megapixels'] * 3, 0))**3 + 2*(250 * df['sponsored_shoots'] + 20 * df['awards_won']**2 - 15 * df['awards_won'] + 160) - (2 * df['evening_shoots_count'] + df['client_rating'] * df['post_processing_skill']**2)**2) > ((np.where(df['is_professional'] & df['specializes_in_wildlife'], df['camera_resolution_megapixels'] * 3, 0))**3 + 2*(250 * df['sponsored_shoots'] + 20 * df['awards_won']**2 - 15 * df['awards_won'] + 160) - (2 * df['evening_shoots_count'] + df['client_rating'] * df['post_processing_skill']**2)**2).quantile(0.5)), True, False)",
-            "relevant_cols": [
-                "camera_weight_grams",
-                "specializes_in_wildlife",
-                "camera_resolution_megapixels",
-                "is_professional",
-                "post_processing_skill",
-                "client_rating",
-                "evening_shoots_count",
-                "awards_won",
-                "sponsored_shoots",
-                "uses_smartphone_secondary"
-            ]
+            "true_hypothesis": "Photographers who use lightweight cameras (less than 500 grams) and have a specific combination of camera resolution, awards won, sponsored shoots, post-processing skill, evening shoots count, client rating, and whether they are professionals and specialize in wildlife, are more likely to use smartphones as secondary devices. The likelihood of using smartphones as secondary devices is determined by these specific criteria."
         }
     ]
 }

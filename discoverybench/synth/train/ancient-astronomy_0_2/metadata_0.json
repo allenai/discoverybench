@@ -83,16 +83,7 @@
             "question": "Is there a relationship between the number of advanced calendar systems and the frequency of solar eclipses in ancient civilizations with a high percentage of documented star charts?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "solar_eclipse_frequency",
-            "true_hypothesis": "In civilizations with advanced calendar systems and an abundance of documented star charts, the solar eclipse frequency increases. Additionally, if a civilization has more than 50 star charts and over 100 lunar phase records, the solar eclipse frequency is further enhanced.",
-            "true_hypothesis_expr": "np.where(df['advanced_calendar_systems'], np.ceil(df['star_charts_documented_percentile'] / 5), 0) * np.where(np.where((df['star_chart_references'] > 50) & (df['lunar_phase_records'] > 100), True, False), 1, 0)",
-            "relevant_cols": [
-                "advanced_calendar_systems",
-                "star_charts_documented_percentile",
-                "star_chart_references",
-                "lunar_phase_records",
-                "solar_eclipse_frequency"
-            ]
+            "true_hypothesis": "In civilizations with advanced calendar systems and an abundance of documented star charts, the solar eclipse frequency increases. Additionally, if a civilization has more than 50 star charts and over 100 lunar phase records, the solar eclipse frequency is further enhanced."
         }
     ]
 }

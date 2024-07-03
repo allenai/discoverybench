@@ -119,15 +119,7 @@
             "question": "Can you discover a pattern in the dataset that reveals the cognitive skill levels of participants based on the number of puzzles solved, their preferred puzzle themes, and whether they use guided help?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "cognitive_skill_level",
-            "true_hypothesis": "Cognitive skill levels are categorized as 'beginner', 'intermediate', 'advanced', and 'expert' based on the total number of puzzles solved, the participant's preferred puzzle themes, and whether they use guided help. The relationship between these factors is represented by a complex formula.",
-            "true_hypothesis_expr": "np.where((df['number_of_puzzles_solved'] ** 2 + (df['prefers_puzzle_themes'].map({'logical': 3, 'abstract': 2, 'sequential': 1})) * 5 + (df['uses_guided_help'] * 10)) > 20, 'expert', np.where((df['number_of_puzzles_solved'] ** 2 + (df['prefers_puzzle_themes'].map({'logical': 3, 'abstract': 2, 'sequential': 1})) * 5 + (df['uses_guided_help'] * 10)) > 15, 'advanced', np.where((df['number_of_puzzles_solved'] ** 2 + (df['prefers_puzzle_themes'].map({'logical': 3, 'abstract': 2, 'sequential': 1})) * 5 + (df['uses_guided_help'] * 10)) > 10, 'intermediate', 'beginner')))",
-            "relevant_cols": [
-                "number_of_puzzles_solved",
-                "prefers_puzzle_themes",
-                "uses_guided_help",
-                "cognitive_skill_level"
-            ]
+            "true_hypothesis": "Cognitive skill levels are categorized as 'beginner', 'intermediate', 'advanced', and 'expert' based on the total number of puzzles solved, the participant's preferred puzzle themes, and whether they use guided help. The relationship between these factors is represented by a complex formula."
         }
     ]
 }

@@ -107,14 +107,7 @@
             "question": "Is there a relationship between the regions with epic traditions of knights and the number of manuscript contributions they have made, which also affects the frequency of citations in epic poems?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "epic_poem_citations",
-            "true_hypothesis": "Knights with more manuscript_contributions and those from regions_with_epic_traditions are cited more frequently in epic poems. There is a positive correlation where knights who made more contributions to manuscripts and come from regions with strong epic traditions have increased epic_poem_citations.",
-            "true_hypothesis_expr": "df['manuscript_contributions'] * 2 + df['regions_with_epic_traditions'].astype(int) * 30",
-            "relevant_cols": [
-                "regions_with_epic_traditions",
-                "manuscript_contributions",
-                "epic_poem_citations"
-            ]
+            "true_hypothesis": "Knights with more manuscript_contributions and those from regions_with_epic_traditions are cited more frequently in epic poems. There is a positive correlation where knights who made more contributions to manuscripts and come from regions with strong epic traditions have increased epic_poem_citations."
         }
     ]
 }

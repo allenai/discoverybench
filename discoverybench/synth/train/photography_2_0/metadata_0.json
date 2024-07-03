@@ -183,19 +183,7 @@
             "question": "Is there a relationship between photographers who frequently use a tripod and photographers who prefer landscape photography while also experimenting with a combination of High Dynamic Range (HDR) techniques and manual white balance?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "advanced_technique_usage",
-            "true_hypothesis": "Photographers who primarily shoot in low light conditions with a wildlife photography frequency squared divided by 10 greater than 20, and use a camera weighing less than 500 grams and have won more photography contests than the median number of contests won among photographers, are 50% more likely to experiment with a combination of High Dynamic Range (HDR) techniques and manual white balance when they also have a preference for landscape photography and frequently use a tripod.",
-            "true_hypothesis_expr": "np.where(((np.where(df['primary_shooting_condition'] == 'low_light', 25, 15) + (df['wildlife_photography_frequency']**2) / 10) > 20) & np.where((df['camera_weight_grams'] < 500) & (df['photography_contests_won'] > df['photography_contests_won'].quantile(0.5)), True, False), 0.5*(df['technique_HDR'].astype(float) + np.where((df['prefers_landscape_photography'] == True) & (df['frequent_tripod_use'] >= 7), True, False)), 0)",
-            "relevant_cols": [
-                "technique_HDR",
-                "primary_shooting_condition",
-                "camera_weight_grams",
-                "advanced_technique_usage",
-                "wildlife_photography_frequency",
-                "photography_contests_won",
-                "prefers_landscape_photography",
-                "frequent_tripod_use"
-            ]
+            "true_hypothesis": "Photographers who primarily shoot in low light conditions with a wildlife photography frequency squared divided by 10 greater than 20, and use a camera weighing less than 500 grams and have won more photography contests than the median number of contests won among photographers, are 50% more likely to experiment with a combination of High Dynamic Range (HDR) techniques and manual white balance when they also have a preference for landscape photography and frequently use a tripod."
         }
     ]
 }

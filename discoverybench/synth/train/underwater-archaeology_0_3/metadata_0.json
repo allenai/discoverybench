@@ -75,15 +75,7 @@
             "question": "What patterns can be observed when examining the relationship between the presence of coral reefs at underwater archaeology sites and the variables such as ocean current strength, being within a protected marine area, and sediment accumulation rate?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "coral_reefs_present",
-            "true_hypothesis": "The presence of coral reefs at an underwater archaeology site is more likely where there are ocean currents with a strength of 2 knots or higher, the site is within a protected marine area, and the sediment accumulation rate is less than 5 kilograms per square meter per year.",
-            "true_hypothesis_expr": "np.where((df['ocean_current_strength'] >= 2) & (df['protected_marine_area'] == True) & (df['sediment_accumulation_rate'] < 5), True, False)",
-            "relevant_cols": [
-                "ocean_current_strength",
-                "protected_marine_area",
-                "sediment_accumulation_rate",
-                "coral_reefs_present"
-            ]
+            "true_hypothesis": "The presence of coral reefs at an underwater archaeology site is more likely where there are ocean currents with a strength of 2 knots or higher, the site is within a protected marine area, and the sediment accumulation rate is less than 5 kilograms per square meter per year."
         }
     ]
 }

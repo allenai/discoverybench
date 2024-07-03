@@ -155,15 +155,7 @@
             "question": "Is there a relationship between the amount of natural lighting a building relies on and the calculated opening area percentage?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "opening_area_percentage",
-            "true_hypothesis": "The opening area percentage of a building is calculated as 10 times the absolute latitude value divided by 90, plus 5 times the average daily sunlight hours divided by 24, and an additional 15 times the reliance on natural lighting factor.",
-            "true_hypothesis_expr": "10 * np.abs(df['latitude'])/90 + 5 * df['average_daily_sunlight_hours']/24 + 15 * df['reliance_on_natural_lighting']",
-            "relevant_cols": [
-                "reliance_on_natural_lighting",
-                "latitude",
-                "average_daily_sunlight_hours",
-                "opening_area_percentage"
-            ]
+            "true_hypothesis": "The opening area percentage of a building is calculated as 10 times the absolute latitude value divided by 90, plus 5 times the average daily sunlight hours divided by 24, and an additional 15 times the reliance on natural lighting factor."
         }
     ]
 }

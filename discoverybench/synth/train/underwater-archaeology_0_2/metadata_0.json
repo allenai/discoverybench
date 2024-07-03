@@ -75,16 +75,7 @@
             "question": "Is there a relationship between the count of visible anchor remains at a site and the sediment accumulation rate, when considering the site being in a protected marine area and the depth of the site?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "visible_anchor_remains",
-            "true_hypothesis": "The count of visible anchor remains at a site is determined by a function where the site is in a protected marine area, has ocean current strength of 2 or more, and sediment accumulation rate is less than 5. The count is then adjusted by subtracting 0.5 times the depth of the site from 20.",
-            "true_hypothesis_expr": "np.where((df['ocean_current_strength'] >= 2) & (df['protected_marine_area'] == True) & (df['sediment_accumulation_rate'] < 5), True, False) * 20 - df['depth_of_site'] * 0.5",
-            "relevant_cols": [
-                "depth_of_site",
-                "ocean_current_strength",
-                "protected_marine_area",
-                "sediment_accumulation_rate",
-                "visible_anchor_remains"
-            ]
+            "true_hypothesis": "The count of visible anchor remains at a site is determined by a function where the site is in a protected marine area, has ocean current strength of 2 or more, and sediment accumulation rate is less than 5. The count is then adjusted by subtracting 0.5 times the depth of the site from 20."
         }
     ]
 }

@@ -275,14 +275,7 @@
             "question": "Is there a relationship between the ratio of public green space area to city population and the number of annual cultural events held in a city?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "annual_cultural_events",
-            "true_hypothesis": "The number of annual cultural events in a city is directly proportional to the ratio of public green space area to city population, calculated as the quotient of public green space area by city population multiplied by 100.",
-            "true_hypothesis_expr": "df['public_green_space_area'] / df['city_population'] * 100",
-            "relevant_cols": [
-                "public_green_space_area",
-                "city_population",
-                "annual_cultural_events"
-            ]
+            "true_hypothesis": "The number of annual cultural events in a city is directly proportional to the ratio of public green space area to city population, calculated as the quotient of public green space area by city population multiplied by 100."
         }
     ]
 }

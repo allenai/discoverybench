@@ -107,14 +107,7 @@
             "question": "Is there a relationship between mental calculation frequency, active breaks during gaming, and weekly gaming hours among pilots in the aviation industry?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "weekly_gaming_hours",
-            "true_hypothesis": "Pilots who exercise mental calculation skills more frequently and employ active breaks during gaming tend to spend more hours on video gaming weekly.",
-            "true_hypothesis_expr": "df['mental_calculation_frequency']*1.5 + np.where(df['employs_active_breaks'], 5, 0)",
-            "relevant_cols": [
-                "mental_calculation_frequency",
-                "employs_active_breaks",
-                "weekly_gaming_hours"
-            ]
+            "true_hypothesis": "Pilots who exercise mental calculation skills more frequently and employ active breaks during gaming tend to spend more hours on video gaming weekly."
         }
     ]
 }

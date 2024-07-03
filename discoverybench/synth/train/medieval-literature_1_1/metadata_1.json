@@ -103,15 +103,7 @@
             "question": "Is there a relationship between the roles of high distinction knights occupy, their manuscript contributions, the regions with epic traditions they come from in medieval literature, and their weapon type usage?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "weapon_type",
-            "true_hypothesis": "Knights with higher manuscript contributions and who hail from regions with epic traditions and occupy roles of high distinction within medieval literature are more likely to use swords. If the calculated value is greater than 50, then the knight is predicted to use a sword. If this value is between 30 and 50, the knight is predicted to use a spear. Otherwise, the knight is predicted to use an axe.",
-            "true_hypothesis_expr": "np.where((df['manuscript_contributions'] * 2 + df['regions_with_epic_traditions'].astype(int) * 30)**2 + 3*df['roles_of_distinction'] > 50, 'sword', np.where((df['manuscript_contributions'] * 2 + df['regions_with_epic_traditions'].astype(int) * 30)**2 + 3*df['roles_of_distinction'] > 30, 'spear', 'axe'))",
-            "relevant_cols": [
-                "roles_of_distinction",
-                "regions_with_epic_traditions",
-                "manuscript_contributions",
-                "weapon_type"
-            ]
+            "true_hypothesis": "Knights with higher manuscript contributions and who hail from regions with epic traditions and occupy roles of high distinction within medieval literature are more likely to use swords. If the calculated value is greater than 50, then the knight is predicted to use a sword. If this value is between 30 and 50, the knight is predicted to use a spear. Otherwise, the knight is predicted to use an axe."
         }
     ]
 }

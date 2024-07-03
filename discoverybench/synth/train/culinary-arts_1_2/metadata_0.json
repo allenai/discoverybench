@@ -107,14 +107,7 @@
             "question": "What is the relationship between the complexity of a cuisine type, the presence of formal culinary education, and the number of kitchen tools used by a chef in the culinary arts domain?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "kitchen_tool_variety",
-            "true_hypothesis": "The number of kitchen tools used by a chef is calculated by multiplying the complexity of the cuisine type they specialize in by 5 and adding three times the presence of formal culinary education.",
-            "true_hypothesis_expr": "df['cuisine_complexity'] * 5 + (df['has_formal_culinary_education'] * 3)",
-            "relevant_cols": [
-                "has_formal_culinary_education",
-                "cuisine_complexity",
-                "kitchen_tool_variety"
-            ]
+            "true_hypothesis": "The number of kitchen tools used by a chef is calculated by multiplying the complexity of the cuisine type they specialize in by 5 and adding three times the presence of formal culinary education."
         }
     ]
 }

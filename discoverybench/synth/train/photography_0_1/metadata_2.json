@@ -143,18 +143,7 @@
             "question": "Is there a relationship between the investment in equipment, frequency of photo editing, preference for manual settings, and frequency of long exposure shots with the technique of white balance adjustment in photography?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "technique_manual_white_balance",
-            "true_hypothesis": "Photographers who invest more than $500 on equipment and frequently edit photos, and have a combination of preferring manual settings and a certain frequency of long exposure usage, are more likely to use manual white balance for their photography.",
-            "true_hypothesis_expr": "np.where((np.where((df['investment_in_equipment'] // 500 + 5 * df['frequent_photo_editing'].astype(int) > 5) & (np.where(df['prefers_manual_settings'], df['frequency_long_exposure'] * 3.3, df['frequency_long_exposure'] * 1.5) >= 50), True, False) == True) & (((df['number_of_outdoor_shoots'] / df['percentage_of_studio_work']) * 10 if not df[df['percentage_of_studio_work'] != 0].empty else 0) >= 7), True, False)",
-            "relevant_cols": [
-                "investment_in_equipment",
-                "frequent_photo_editing",
-                "prefers_manual_settings",
-                "frequency_long_exposure",
-                "number_of_outdoor_shoots",
-                "percentage_of_studio_work",
-                "technique_manual_white_balance"
-            ]
+            "true_hypothesis": "Photographers who invest more than $500 on equipment and frequently edit photos, and have a combination of preferring manual settings and a certain frequency of long exposure usage, are more likely to use manual white balance for their photography."
         }
     ]
 }

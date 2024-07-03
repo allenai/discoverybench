@@ -147,16 +147,7 @@
             "question": "Is there a relationship between the material durability score and whether the structure is located within a legally protected historical conservation area?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "base_width_meters",
-            "true_hypothesis": "The base width of the structure correlates with the average number of tourists that visit the site per year, the material durability score, being within a legally protected historical conservation area, and whether the structure is used for ceremonial purposes.",
-            "true_hypothesis_expr": "((df['average_tourist_visits_per_year'] / 5000) + (50 - (50 - (df['material_durability_score'] * 3 + (df['in_historical_conservation_area'] * 10)))) / 10 + (df['ceremonial_use'].astype(int)) * 5).clip(1, 100)",
-            "relevant_cols": [
-                "average_tourist_visits_per_year",
-                "ceremonial_use",
-                "in_historical_conservation_area",
-                "material_durability_score",
-                "base_width_meters"
-            ]
+            "true_hypothesis": "The base width of the structure correlates with the average number of tourists that visit the site per year, the material durability score, being within a legally protected historical conservation area, and whether the structure is used for ceremonial purposes."
         }
     ]
 }

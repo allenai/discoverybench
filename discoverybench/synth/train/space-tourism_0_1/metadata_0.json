@@ -175,23 +175,7 @@
             "question": "Is there a relationship between tourist IDs and the combination of their view orientation, crew size, solar activity index, booking source, age of the group, awareness program, and vegetarian preferences?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "tourist_id",
-            "true_hypothesis": "Tourist IDs can be uniquely determined by the combination of their view orientation (Earth-facing or star-facing), crew size, solar activity index, booking source, age of the group, awareness program, and vegetarian preferences. The unique identification is performed by calculating a composite value using these factors. Each tourist ID is calculated based on a complex formula incorporating these factors.",
-            "true_hypothesis_expr": "np.where(((np.where((df['interest_in_celestial_events'] == True), np.ceil(df['daylight_hours_at_launch'] / 2), np.floor(12 - df['daylight_hours_at_launch'] / 2))) < 7) & ((np.where(df['is_weekend'], 10, 5) + df['crew_size'] % 10 - (df['solar_activity_index'] // 10)) >= 6) & ((np.where(df['is_weekend'], 10, 5) + df['crew_size'] % 10 - (df['solar_activity_index'] // 10)) <= 18), 'Earth-facing', 'star-facing').astype('category').cat.codes * 100 + np.where((1000 + 1500 * df['number_of_companions'] + 2000 * df['space_membership'].astype(int) + np.where(df['primary_travel_purpose'] == 'research', 3000, np.where(df['primary_travel_purpose'] == 'education', 2000, 0))) == 'senior') & ((1000 + 1500 * df['number_of_companions'] + 2000 * df['space_membership'].astype(int) + np.where(df['primary_travel_purpose'] == 'research', 3000, np.where(df['primary_travel_purpose'] == 'education', 2000, 0))) > 5000) & (df['booking_source'] == 'direct'), True, False).astype(int) * 10 + np.where(50 * (df['average_age_of_group'] / 80) + 50 * df['nutritional_awareness_program'].astype(int) > 50, 'vegetarian', 'non-vegetarian').astype('category').cat.codes",
-            "relevant_cols": [
-                "daylight_hours_at_launch",
-                "interest_in_celestial_events",
-                "solar_activity_index",
-                "crew_size",
-                "is_weekend",
-                "booking_source",
-                "number_of_companions",
-                "space_membership",
-                "primary_travel_purpose",
-                "average_age_of_group",
-                "nutritional_awareness_program",
-                "tourist_id"
-            ]
+            "true_hypothesis": "Tourist IDs can be uniquely determined by the combination of their view orientation (Earth-facing or star-facing), crew size, solar activity index, booking source, age of the group, awareness program, and vegetarian preferences. The unique identification is performed by calculating a composite value using these factors. Each tourist ID is calculated based on a complex formula incorporating these factors."
         }
     ]
 }

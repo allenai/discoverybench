@@ -235,14 +235,7 @@
             "question": "What is the relationship between the number of plant types in urban gardens, the garden space available per capita, and local regulations favoring food-producing over ornamental types?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "number_of_plant_types",
-            "true_hypothesis": "The number of plant types in urban gardens is determined by multiplying the garden space available per capita by 5 and adding ten times the binary indicator showing if local regulations favor food-producing over ornamental types.",
-            "true_hypothesis_expr": "(df['garden_space_per_capita'] * 5) + (df['garden_type_regulation'] * 10)",
-            "relevant_cols": [
-                "garden_space_per_capita",
-                "garden_type_regulation",
-                "number_of_plant_types"
-            ]
+            "true_hypothesis": "The number of plant types in urban gardens is determined by multiplying the garden space available per capita by 5 and adding ten times the binary indicator showing if local regulations favor food-producing over ornamental types."
         }
     ]
 }

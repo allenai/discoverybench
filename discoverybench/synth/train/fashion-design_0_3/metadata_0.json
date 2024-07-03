@@ -83,15 +83,7 @@
             "question": "Is there a relationship between the month of the year and the percentage of luxury brands featured in the fashion shows?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "percentage_luxury_brands",
-            "true_hypothesis": "The percentage of luxury brands featured in a fashion show can be calculated using a formula that includes subtracting 60% of the percentage of new designers from 100, adding 80% of the count of international designers, and subtracting the month of the year. Thus, the percentage of luxury brands may be influenced by a combination of fewer new designers and more international designers participating in the show.",
-            "true_hypothesis_expr": "100 - df['percentage_new_designers'] * 0.6 + df['count_international_designers'] * 0.8 - df['month_of_year']",
-            "relevant_cols": [
-                "percentage_new_designers",
-                "count_international_designers",
-                "month_of_year",
-                "percentage_luxury_brands"
-            ]
+            "true_hypothesis": "The percentage of luxury brands featured in a fashion show can be calculated using a formula that includes subtracting 60% of the percentage of new designers from 100, adding 80% of the count of international designers, and subtracting the month of the year. Thus, the percentage of luxury brands may be influenced by a combination of fewer new designers and more international designers participating in the show."
         }
     ]
 }

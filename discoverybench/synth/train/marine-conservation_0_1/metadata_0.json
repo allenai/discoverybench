@@ -107,31 +107,7 @@
             "question": "Is there a relationship between the marine biodiversity index, environmental surveillance frequency, local community involvement, pollution levels, fishing restrictions, illegal fishing rates, marine patrol interventions, international cooperation, and the count of different species found in marine protected areas?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "number_of_species",
-            "true_hypothesis": "In marine protected areas where the number of different species found in the area is calculated using a complex combination of environmental variables and conservation indicators, the resulting count is influenced by factors such as the marine biodiversity index, environmental surveillance frequency, local community involvement, and pollution levels. Additionally, the effect of these variables on the observed number of species is modulated by the presence of marine conservation measures, fishing restrictions, illegal fishing rates, marine patrol interventions, and international cooperation.",
-            "true_hypothesis_expr": "np.where(np.where((((df['marine_biodiversity_index'] * 1000 + df['environmental_surveillance_count'] * 500 + df['recent_environmental_violations'] * 10000)**3 + 2*df['commercial_fishing_restrictions']**2 + ((df['local_community_involvement'] / df['pollution_index']) * 5)*3) > 25000000), True, False), ((df['eco_friendly_business_percentile'] * 1.5 - df['reported_marine_pollution_incidents'] * 0.75 + 20 * df['marine_conservation_in_schools'].astype(int)) / ((df['marine_conservation_funding'] / df['marine_pollution_incidents']).fillna(0)).clip(lower=0, upper=10).astype(int) * np.where((df['illegal_fishing_rate'] + df['marine_fauna_disruptions'] - 2*df['local_gov_environmental_policy_score'] > 50), False, True) * 0.05 + (((df['marine_patrol_interventions_per_month'] * 0.75) - (df['illegal_fishing_reports'] * 0.25)) * 0.5 + (50 - df['fishing_vessels_count']**0.5 + 2.5 * df['protected_marine_reserves_count']) * 1.8 + 20 * ((df['has_international_cooperation'] == True))) * 50, 0)",
-            "relevant_cols": [
-                "eco_friendly_business_percentile",
-                "reported_marine_pollution_incidents",
-                "marine_conservation_in_schools",
-                "marine_conservation_funding",
-                "marine_pollution_incidents",
-                "illegal_fishing_rate",
-                "marine_fauna_disruptions",
-                "local_gov_environmental_policy_score",
-                "has_international_cooperation",
-                "marine_patrol_interventions_per_month",
-                "illegal_fishing_reports",
-                "fishing_vessels_count",
-                "protected_marine_reserves_count",
-                "commercial_fishing_restrictions",
-                "marine_biodiversity_index",
-                "environmental_surveillance_count",
-                "recent_environmental_violations",
-                "local_community_involvement",
-                "pollution_index",
-                "number_of_species"
-            ]
+            "true_hypothesis": "In marine protected areas where the number of different species found in the area is calculated using a complex combination of environmental variables and conservation indicators, the resulting count is influenced by factors such as the marine biodiversity index, environmental surveillance frequency, local community involvement, and pollution levels. Additionally, the effect of these variables on the observed number of species is modulated by the presence of marine conservation measures, fishing restrictions, illegal fishing rates, marine patrol interventions, and international cooperation."
         }
     ]
 }

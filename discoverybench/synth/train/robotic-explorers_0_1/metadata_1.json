@@ -115,20 +115,7 @@
             "question": "Is there a relationship between AI decision-making capabilities, communication bandwidth, mission duration, task complexity score, mission duration in days, communication system frequency, and remote control capabilities in determining the efficacy of advanced computation methods for autonomous decision-making processes for vehicles in the domain of robotic explorers?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "ai_decision_making",
-            "true_hypothesis": "Vehicles with AI decision-making capabilities and high communication bandwidth performing longer missions with higher task complexity scores, mission duration, communication system frequency, and remote control capabilities are expected to leverage advanced computation methods to enhance autonomous decision-making processes.",
-            "true_hypothesis_expr": "np.where((np.where((df['AI_decision_making_capabilities'] == True) & (df['communication_bandwidth'] > 500), (df['mission_duration'] * 1.5 + df['task_complexity_score'] * 80) / 100 + (df['mission_duration_days'] / 400 + 5 * df['communication_system_frequency'] / 10 + df['remote_control_capabilities'].astype(int) * 3), df['mission_duration_days'] / 400 + 5 * df['communication_system_frequency'] / 10 + df['remote_control_capabilities'].astype(int) * 3))**3 + 2*df['communication_delay_tolerance'] > 20, True, False)",
-            "relevant_cols": [
-                "communication_delay_tolerance",
-                "mission_duration",
-                "task_complexity_score",
-                "mission_duration_days",
-                "communication_system_frequency",
-                "remote_control_capabilities",
-                "AI_decision_making_capabilities",
-                "communication_bandwidth",
-                "ai_decision_making"
-            ]
+            "true_hypothesis": "Vehicles with AI decision-making capabilities and high communication bandwidth performing longer missions with higher task complexity scores, mission duration, communication system frequency, and remote control capabilities are expected to leverage advanced computation methods to enhance autonomous decision-making processes."
         }
     ]
 }

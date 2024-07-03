@@ -131,14 +131,7 @@
             "question": "What is the relationship between the fishery compliance score and the number of marine patrol interventions per month, taking into account the reports of illegal fishing activities in a specific region?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "fishery_compliance_score",
-            "true_hypothesis": "We hypothesize that the fishery compliance score in a region is calculated as 75% of the number of marine patrol interventions conducted per month minus 25% of the number of reports filed for illegal fishing activities per month. This formula assesses compliance level based on intervention frequency and reports of illegal fishing, aiming to quantify regulatory enforcement impact on compliance scores.",
-            "true_hypothesis_expr": "(df['marine_patrol_interventions_per_month'] * 0.75) - (df['illegal_fishing_reports'] * 0.25)",
-            "relevant_cols": [
-                "marine_patrol_interventions_per_month",
-                "illegal_fishing_reports",
-                "fishery_compliance_score"
-            ]
+            "true_hypothesis": "We hypothesize that the fishery compliance score in a region is calculated as 75% of the number of marine patrol interventions conducted per month minus 25% of the number of reports filed for illegal fishing activities per month. This formula assesses compliance level based on intervention frequency and reports of illegal fishing, aiming to quantify regulatory enforcement impact on compliance scores."
         }
     ]
 }

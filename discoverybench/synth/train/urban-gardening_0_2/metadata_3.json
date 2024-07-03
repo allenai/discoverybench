@@ -223,16 +223,7 @@
             "question": "What is the relationship between the number of annual events held at the garden each year and factors such as population density, public funding, presence of local partnerships, and land availability in urban gardening datasets?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "number_of_annual_events",
-            "true_hypothesis": "The number of annual events held at the garden each year is determined by a complex calculation considering factors such as population density, land availability, public funding, and the presence of local partnerships.",
-            "true_hypothesis_expr": "(((df['population_density'] * 20 + np.where(df['land_availability']==True, 5000, 20000)) / df['public_funding']) * 10 + 20 * df['has_local_partnerships']).astype(int)",
-            "relevant_cols": [
-                "population_density",
-                "public_funding",
-                "has_local_partnerships",
-                "land_availability",
-                "number_of_annual_events"
-            ]
+            "true_hypothesis": "The number of annual events held at the garden each year is determined by a complex calculation considering factors such as population density, land availability, public funding, and the presence of local partnerships."
         }
     ]
 }

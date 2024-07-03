@@ -191,16 +191,7 @@
             "question": "Is there a relationship between the total number of literary awards received by an author up to the publication year of a book and the recognition of that book as a literary classic, considering the average score of critical reviews, public interest, author recognition factor, and a predetermined threshold?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "literary_classic_recognition",
-            "true_hypothesis": "The recognition of a book as a literary classic is determined by a combined metric of the total number of literary awards received by the author up to the publication year of the book, the average score of critical reviews, and the public interest score, weighed against the author's recognition factor and a base threshold of 30.",
-            "true_hypothesis_expr": "np.where((df['author_award_count']*df['critical_review_score'] + 5*np.where(df['public_interest_score'] / df['author_recognition_factor'] > 2, True, False)) > 30, 'Classic', 'Not Classic')",
-            "relevant_cols": [
-                "author_award_count",
-                "critical_review_score",
-                "author_recognition_factor",
-                "public_interest_score",
-                "literary_classic_recognition"
-            ]
+            "true_hypothesis": "The recognition of a book as a literary classic is determined by a combined metric of the total number of literary awards received by the author up to the publication year of the book, the average score of critical reviews, and the public interest score, weighed against the author's recognition factor and a base threshold of 30."
         }
     ]
 }

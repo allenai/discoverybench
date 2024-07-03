@@ -91,15 +91,7 @@
             "question": "Find the relationship between the cubic value of the number of artifacts and the water depth minus 3 at underwater archaeological sites and the likelihood of finding gold artifacts.",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "contains_gold",
-            "true_hypothesis": "Analysis of 1000 underwater archaeological sites reveals that sites where the cube of the number of artifacts recovered plus the depth of water minus 3, when compared to 500, is true, are more likely to contain gold artifacts.",
-            "true_hypothesis_expr": "np.where((df['preserved_road_layout'] == 'yes') & (df['number_of_artifacts'] ** 3 + df['water_depth'] ** 0 - 3 > 500), True, False)",
-            "relevant_cols": [
-                "water_depth",
-                "number_of_artifacts",
-                "contains_gold",
-                "preserved_road_layout"
-            ]
+            "true_hypothesis": "Analysis of 1000 underwater archaeological sites reveals that sites where the cube of the number of artifacts recovered plus the depth of water minus 3, when compared to 500, is true, are more likely to contain gold artifacts."
         }
     ]
 }

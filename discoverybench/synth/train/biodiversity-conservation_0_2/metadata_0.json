@@ -87,16 +87,7 @@
             "question": "Is there a relationship between the ratio of wildlife sightings per capita to a derived environmental indicator and the presence of environmental NGOs in different regions?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "ngo_presence",
-            "true_hypothesis": "Regions where the ratio of wildlife sightings per capita to a derived environmental indicator is greater than 0.02 are more likely to have an environmental NGO presence.",
-            "true_hypothesis_expr": "np.where(df['wildlife_sightings_per_capita'] / (df['average_annual_temperature'] * df['average_annual_humidity'] * 0.1 + df['wildlife_policy_strength']**2 * 10) > 0.02, True, False)",
-            "relevant_cols": [
-                "wildlife_sightings_per_capita",
-                "average_annual_temperature",
-                "average_annual_humidity",
-                "wildlife_policy_strength",
-                "ngo_presence"
-            ]
+            "true_hypothesis": "Regions where the ratio of wildlife sightings per capita to a derived environmental indicator is greater than 0.02 are more likely to have an environmental NGO presence."
         }
     ]
 }

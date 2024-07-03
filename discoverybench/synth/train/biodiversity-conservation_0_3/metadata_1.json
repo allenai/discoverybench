@@ -95,15 +95,7 @@
             "question": "What is the relationship between the environmental awareness level, infrastructure quality, recent internet promotions, and internet access rate in a region?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "internet_access_rate",
-            "true_hypothesis": "Internet access rate in a region is calculated based on the region's environmental awareness level, infrastructure quality, and recent internet promotions. A higher level of environmental awareness, better infrastructure quality, and recent internet promotions are positively associated with an increased internet access rate. The calculation considers a weighted sum of environmental awareness level, infrastructure quality, and recent internet promotions while ensuring the final rate is between 0 and 100.",
-            "true_hypothesis_expr": "(df['environmental_awareness_level'] * 0.4 + df['infrastructure_quality'] * 0.5 + 20 * df['recent_internet_promotions']).clip(0, 100)",
-            "relevant_cols": [
-                "environmental_awareness_level",
-                "infrastructure_quality",
-                "recent_internet_promotions",
-                "internet_access_rate"
-            ]
+            "true_hypothesis": "Internet access rate in a region is calculated based on the region's environmental awareness level, infrastructure quality, and recent internet promotions. A higher level of environmental awareness, better infrastructure quality, and recent internet promotions are positively associated with an increased internet access rate. The calculation considers a weighted sum of environmental awareness level, infrastructure quality, and recent internet promotions while ensuring the final rate is between 0 and 100."
         }
     ]
 }

@@ -95,16 +95,7 @@
             "question": "Is there a relationship between the number of different coral species present and the resistance of coral reefs to bleaching events in marine ecosystems?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "bleaching_resistance",
-            "true_hypothesis": "In marine ecosystems, when the condition of (if the pollution level is 'low', then a combination of nutrient upwelling frequency and plankton density based on provided coefficients is greater than or equal to 90) and the number of different coral species present is greater than 100, the coral reefs are more likely to resist bleaching events compared to those that do not meet these criteria.",
-            "true_hypothesis_expr": "np.where(((np.where(df['pollution_level']=='low', (df['nutrient_upwelling_frequency']*0.3 + df['plankton_density']*2), 50) >= 90) & (df['coral_species_count'] > 100), 1, 0)",
-            "relevant_cols": [
-                "coral_species_count",
-                "pollution_level",
-                "bleaching_resistance",
-                "nutrient_upwelling_frequency",
-                "plankton_density"
-            ]
+            "true_hypothesis": "In marine ecosystems, when the condition of (if the pollution level is 'low', then a combination of nutrient upwelling frequency and plankton density based on provided coefficients is greater than or equal to 90) and the number of different coral species present is greater than 100, the coral reefs are more likely to resist bleaching events compared to those that do not meet these criteria."
         }
     ]
 }

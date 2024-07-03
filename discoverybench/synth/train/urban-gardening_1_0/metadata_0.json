@@ -247,23 +247,7 @@
             "question": "Is there a relationship between the rating of composting effectiveness in urban gardening and the number of local food markets within a 5 km radius, the presence of frequent gardening workshops, and the use of sustainable composting methods with specific conditions met?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "composting_effectiveness_rating",
-            "true_hypothesis": "Community gardens in cities with populations over 500,000, using sustainable composting methods, having more than 15 local food markets within a 5 km radius, offering frequent gardening workshops, and with composting effectiveness conditions met as specified, are rated 1 point higher in composting effectiveness.",
-            "true_hypothesis_expr": "np.where((df['city_population'] > 500000) & (np.where((((df['square_footage'] * 0.3 + 2000 * df['public_transit_access'] - df['percentage_native_plants'] * 50)**3 + ((df['private_funding'] / df['public_funding']) * 10 + 20 * df['has_local_partnerships']).astype(int)**2 * 5 - df['average_annual_temperature']) > 150000), True, False) & (df['sustainable_composting'] == 'Yes'), 1, 0) & (np.where((df['number_of_local_food_markets'] > 15) & (df['frequent_gardening_workshops']), 'Yes', 'No') == 'Yes'), 9, df.get('composting_effectiveness_rating', 0)) + np.where(np.where((((df['square_footage'] * 0.3 + 2000 * df['public_transit_access'] - df['percentage_native_plants'] * 50)**3 + ((df['private_funding'] / df['public_funding']) * 10 + 20 * df['has_local_partnerships']).astype(int)**2 * 5 - df['average_annual_temperature']) > 150000), True, False) & (df['sustainable_composting'] == 'Yes'), 1, 0)",
-            "relevant_cols": [
-                "sustainable_composting",
-                "number_of_local_food_markets",
-                "frequent_gardening_workshops",
-                "average_annual_temperature",
-                "percentage_native_plants",
-                "public_funding",
-                "has_local_partnerships",
-                "composting_effectiveness_rating",
-                "city_population",
-                "square_footage",
-                "public_transit_access",
-                "private_funding"
-            ]
+            "true_hypothesis": "Community gardens in cities with populations over 500,000, using sustainable composting methods, having more than 15 local food markets within a 5 km radius, offering frequent gardening workshops, and with composting effectiveness conditions met as specified, are rated 1 point higher in composting effectiveness."
         }
     ]
 }

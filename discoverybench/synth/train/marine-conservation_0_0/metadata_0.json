@@ -107,14 +107,7 @@
             "question": "What is the relationship between protection_status indicating protection from commercial fishing and the average lifespan of predatory fish species in relation to water temperature?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "predatory_fish_lifespan_years",
-            "true_hypothesis": "In areas where protection_status indicates protection from commercial fishing, the average lifespan of predatory fish species is related to a function of water temperature, suggesting a possible link between water temperature and fish lifespan.",
-            "true_hypothesis_expr": "np.where(df['protection_status'], (1.3 * df['water_temperature_celsius'])**2, df['water_temperature_celsius']**2)",
-            "relevant_cols": [
-                "protection_status",
-                "water_temperature_celsius",
-                "predatory_fish_lifespan_years"
-            ]
+            "true_hypothesis": "In areas where protection_status indicates protection from commercial fishing, the average lifespan of predatory fish species is related to a function of water temperature, suggesting a possible link between water temperature and fish lifespan."
         }
     ]
 }

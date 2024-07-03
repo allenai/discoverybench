@@ -235,13 +235,7 @@
             "question": "Is there a relationship between the vegetarian meal preference of space tourists and the percentage of vegetarian meals within their travel group exceeding 50%?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "meal_preference",
-            "true_hypothesis": "The meal preference of a tourist depends solely on whether the vegetarian meal percentage within their travel group is greater than 50%.",
-            "true_hypothesis_expr": "np.where(df['group_vegetarian_meal_percentage'] > 50, 'vegetarian', 'non-vegetarian')",
-            "relevant_cols": [
-                "group_vegetarian_meal_percentage",
-                "meal_preference"
-            ]
+            "true_hypothesis": "The meal preference of a tourist depends solely on whether the vegetarian meal percentage within their travel group is greater than 50%."
         }
     ]
 }

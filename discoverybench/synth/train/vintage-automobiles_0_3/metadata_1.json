@@ -143,14 +143,7 @@
             "question": "Is there a relationship between the design luxury index and the engine performance ratio for cars labeled as convertible in the vintage automobiles dataset?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "is_convertible",
-            "true_hypothesis": "A car is labeled as convertible in the dataset if its design luxury index is above 70 and its engine performance ratio is above 3.",
-            "true_hypothesis_expr": "np.where((df['design_luxury_index'] > 70) & (df['engine_performance_ratio'] > 3), True, False)",
-            "relevant_cols": [
-                "design_luxury_index",
-                "engine_performance_ratio",
-                "is_convertible"
-            ]
+            "true_hypothesis": "A car is labeled as convertible in the dataset if its design luxury index is above 70 and its engine performance ratio is above 3."
         }
     ]
 }

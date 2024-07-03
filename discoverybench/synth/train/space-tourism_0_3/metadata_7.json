@@ -207,14 +207,7 @@
             "question": "Is there a relationship between the rank of a country's space program and the percentage of GDP allocated to space research, considering the population percentage with space education?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "origin_country_space_program_rank",
-            "true_hypothesis": "The rank of a space program in a tourist's home country is lower when the population with space education is high but the government allocates a lower percentage of GDP to space research.",
-            "true_hypothesis_expr": "50 - (df['percent_population_with_space_education'] // 2 + df['government_space_budget_percent_gdp'] * 5)",
-            "relevant_cols": [
-                "percent_population_with_space_education",
-                "government_space_budget_percent_gdp",
-                "origin_country_space_program_rank"
-            ]
+            "true_hypothesis": "The rank of a space program in a tourist's home country is lower when the population with space education is high but the government allocates a lower percentage of GDP to space research."
         }
     ]
 }

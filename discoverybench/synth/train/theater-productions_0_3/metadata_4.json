@@ -195,14 +195,7 @@
             "question": "Is there a relationship between the production budget of a play and the number of complex roles, considering the season of production?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "production_budget",
-            "true_hypothesis": "The production budget of a play can be calculated as the product of the number of complex roles and $15,000, adjusted for the season of production. When a play is produced during the summer season, an additional $20,000 is added to the budget, and during the winter season, an extra $10,000 is added.",
-            "true_hypothesis_expr": "df['number_of_complex_roles'] * 15000 + (np.where(df['season_of_production'] == 'summer', 20000, 0) + np.where(df['season_of_production'] == 'winter', 10000, 0))",
-            "relevant_cols": [
-                "number_of_complex_roles",
-                "season_of_production",
-                "production_budget"
-            ]
+            "true_hypothesis": "The production budget of a play can be calculated as the product of the number of complex roles and $15,000, adjusted for the season of production. When a play is produced during the summer season, an additional $20,000 is added to the budget, and during the winter season, an extra $10,000 is added."
         }
     ]
 }

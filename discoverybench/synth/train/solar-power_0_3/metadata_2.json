@@ -147,14 +147,7 @@
             "question": "What is the relationship between the squared average daylight duration and the average daily temperature variation in determining solar intensity zones?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "solar_intensity_zone",
-            "true_hypothesis": "Regions with an average daylight duration squared minus the average daily temperature variation greater than or equal to 50 are classified as high solar intensity zones, those greater than or equal to 20 and less than 50 are medium solar intensity zones, while the rest are low solar intensity zones.",
-            "true_hypothesis_expr": "np.where((df['average_daylight_duration'] ** 2 - df['average_daily_temperature_variation']) >= 50, 'high', np.where((df['average_daylight_duration'] ** 2 - df['average_daily_temperature_variation']) >= 20, 'medium', 'low'))",
-            "relevant_cols": [
-                "average_daylight_duration",
-                "average_daily_temperature_variation",
-                "solar_intensity_zone"
-            ]
+            "true_hypothesis": "Regions with an average daylight duration squared minus the average daily temperature variation greater than or equal to 50 are classified as high solar intensity zones, those greater than or equal to 20 and less than 50 are medium solar intensity zones, while the rest are low solar intensity zones."
         }
     ]
 }

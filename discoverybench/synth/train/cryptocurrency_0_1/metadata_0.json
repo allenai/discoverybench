@@ -95,25 +95,7 @@
             "question": "Is there a relationship between the level of engagement in cryptocurrency-related activities and annual income?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "annual_income",
-            "true_hypothesis": "Individuals with high research hours per week, frequent enrollment in online courses for digital skills, active use of blockchain technology, and engagement in various cryptocurrency-related activities such as having crypto certifications, high forum participation levels, following crypto news, and using decentralized financial services are predicted to have higher annual incomes.",
-            "true_hypothesis_expr": "((df['research_hours_per_week']*2 + ((df['online_course_enrollment_frequency'] * 2) + (df['tech_workshops_attended'] * 3)) * df['has_regular_access_to_internet'].astype(int)//2 + 10*df['uses_blockchain_technology'].astype(int)) * 1000 + np.where(((np.floor(0.4 * (df['number_of_trading_platforms']**2 + df['types_of_cryptocurrencies_invested']) + 0.05 * df['monthly_blockchain_transactions']) > 5) & (df['has_crypto_certifications']), 70000, 50000) + (((df['number_of_trading_platforms']**2 + df['types_of_cryptocurrencies_invested'])**2 + 0.1 * (5 * df['forum_participation_level']**3 + 50 * df['follows_crypto_news'] + 30 * df['holds_multiple_currencies']) + 3 * df['uses_defi_services'].astype(int)) * 5000)",
-            "relevant_cols": [
-                "has_crypto_certifications",
-                "monthly_blockchain_transactions",
-                "research_hours_per_week",
-                "uses_blockchain_technology",
-                "online_course_enrollment_frequency",
-                "tech_workshops_attended",
-                "has_regular_access_to_internet",
-                "uses_defi_services",
-                "follows_crypto_news",
-                "forum_participation_level",
-                "holds_multiple_currencies",
-                "number_of_trading_platforms",
-                "types_of_cryptocurrencies_invested",
-                "annual_income"
-            ]
+            "true_hypothesis": "Individuals with high research hours per week, frequent enrollment in online courses for digital skills, active use of blockchain technology, and engagement in various cryptocurrency-related activities such as having crypto certifications, high forum participation levels, following crypto news, and using decentralized financial services are predicted to have higher annual incomes."
         }
     ]
 }

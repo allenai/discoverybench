@@ -223,18 +223,7 @@
             "question": "Is there a relationship between the composite value calculated from view orientation, time of departure, age group, average ticket price, booking source, and group vegetarian meal percentage columns and the tourist IDs in the dataset?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "tourist_id",
-            "true_hypothesis": "Tourist IDs can be uniquely determined by the combination of their view orientation (Earth-facing or star-facing), time of departure, age group, average ticket price, booking source, and vegetarian meal preferences. The unique identification is performed by calculating a composite value using the view orientation, time of departure, age group, booking source, and group vegetarian meal percentage columns. Each tourist ID is calculated based on a complex formula incorporating these factors.",
-            "true_hypothesis_expr": "np.where((df['travel_month'] < 7) & (df['time_of_departure'] >= 6) & (df['time_of_departure'] <= 18), 'Earth-facing', 'star-facing').astype('category').cat.codes * 100 + np.where((df['age_group'] == 'senior') & (df['average_ticket_price'] > 5000) & (df['booking_source'] == 'direct'), True, False).astype(int) * 10 + np.where(df['group_vegetarian_meal_percentage'] > 50, 'vegetarian', 'non-vegetarian').astype('category').cat.codes",
-            "relevant_cols": [
-                "age_group",
-                "booking_source",
-                "travel_month",
-                "time_of_departure",
-                "average_ticket_price",
-                "group_vegetarian_meal_percentage",
-                "tourist_id"
-            ]
+            "true_hypothesis": "Tourist IDs can be uniquely determined by the combination of their view orientation (Earth-facing or star-facing), time of departure, age group, average ticket price, booking source, and vegetarian meal preferences. The unique identification is performed by calculating a composite value using the view orientation, time of departure, age group, booking source, and group vegetarian meal percentage columns. Each tourist ID is calculated based on a complex formula incorporating these factors."
         }
     ]
 }

@@ -83,14 +83,7 @@
             "question": "What is the relationship between the advancements in calendar systems, the percentage of documented star charts, and the number of comet sightings in ancient astronomy datasets?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "comet_sightings",
-            "true_hypothesis": "Regions with advanced calendar systems and higher star charts documentation tend to observe more comet sightings due to systematic recordings of celestial events. The number of comet sightings per century is calculated by taking the ceiling of the star charts documented percentile divided by 5 in civilizations with advanced calendar systems, with a minimum value of 0 for civilizations without advanced calendar systems.",
-            "true_hypothesis_expr": "np.where(df['advanced_calendar_systems'], np.ceil(df['star_charts_documented_percentile'] / 5), 0)",
-            "relevant_cols": [
-                "advanced_calendar_systems",
-                "star_charts_documented_percentile",
-                "comet_sightings"
-            ]
+            "true_hypothesis": "Regions with advanced calendar systems and higher star charts documentation tend to observe more comet sightings due to systematic recordings of celestial events. The number of comet sightings per century is calculated by taking the ceiling of the star charts documented percentile divided by 5 in civilizations with advanced calendar systems, with a minimum value of 0 for civilizations without advanced calendar systems."
         }
     ]
 }

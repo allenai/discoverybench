@@ -119,18 +119,7 @@
             "question": "Is there a relationship between a pilot's number of social media followers, their aviation incident awareness score, and the type of aircraft they are likely to fly?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "predicted_type_of_aircraft_frequently_flew",
-            "true_hypothesis": "Pilots who have a large number of followers on aviation-related social media channels and a high aviation incident awareness score, along with specific advanced navigation system training, are more likely to fly Commercial aircraft. Pilots with fewer social media followers, especially those who also attend fewer aviation safety seminars, are more likely to fly Private aircraft. Pilots with even lower social media followers and possibly focused flying over mountainous terrain may be inclined to fly Cargo aircraft.",
-            "true_hypothesis_expr": "np.where((df['social_media_followers'] > 50000) & ((df['aviation_incident_awareness_score']**3 + 10 * df['aviation_incident_awareness_score'] * df['advanced_navigation_system_training'].astype(int) + 20*np.where(df['primary_flying_terrain'] == 'mountainous', 1, 0)) > 50) & (np.where(df['advanced_aerodynamics_training_hours']**3 / (df['aviation_safety_seminars_attended_per_year'] + 1) > 125, True, False) == True), 'Commercial', np.where((df['social_media_followers'] > 20000) & ((df['aviation_incident_awareness_score']**3 + 10 * df['aviation_incident_awareness_score'] * df['advanced_navigation_system_training'].astype(int) + 20*np.where(df['primary_flying_terrain'] == 'mountainous', 1, 0)) > 30), 'Private', np.where(df['social_media_followers'] < 5000, 'Cargo', 'Military')))",
-            "relevant_cols": [
-                "social_media_followers",
-                "aviation_incident_awareness_score",
-                "advanced_navigation_system_training",
-                "advanced_aerodynamics_training_hours",
-                "primary_flying_terrain",
-                "aviation_safety_seminars_attended_per_year",
-                "predicted_type_of_aircraft_frequently_flew"
-            ]
+            "true_hypothesis": "Pilots who have a large number of followers on aviation-related social media channels and a high aviation incident awareness score, along with specific advanced navigation system training, are more likely to fly Commercial aircraft. Pilots with fewer social media followers, especially those who also attend fewer aviation safety seminars, are more likely to fly Private aircraft. Pilots with even lower social media followers and possibly focused flying over mountainous terrain may be inclined to fly Cargo aircraft."
         }
     ]
 }

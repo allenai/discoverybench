@@ -99,14 +99,7 @@
             "question": "Is there a relationship between pilots who engage in mental calculation activities at a frequency 1.5 times their mental calculation frequency plus 5 (if they employ active breaks) greater than 3 and their likelihood of scoring in the top 10th percentile on spatial awareness tests?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "top_10th_percentile_on_spatial_awareness",
-            "true_hypothesis": "Pilots who engage in mental calculation activities at a frequency 1.5 times their mental calculation frequency plus 5 (if they employ active breaks) greater than 3 are more likely to score in the top 10th percentile on spatial awareness tests compared to pilots who do not meet this criterium.",
-            "true_hypothesis_expr": "np.where(df['mental_calculation_frequency']*1.5 + np.where(df['employs_active_breaks'], 5, 0) > 3, True, False)",
-            "relevant_cols": [
-                "mental_calculation_frequency",
-                "employs_active_breaks",
-                "top_10th_percentile_on_spatial_awareness"
-            ]
+            "true_hypothesis": "Pilots who engage in mental calculation activities at a frequency 1.5 times their mental calculation frequency plus 5 (if they employ active breaks) greater than 3 are more likely to score in the top 10th percentile on spatial awareness tests compared to pilots who do not meet this criterium."
         }
     ]
 }

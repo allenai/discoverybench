@@ -107,15 +107,7 @@
             "question": "Is there a relationship between the total number of training hours in advanced aerodynamics, a calculation involving flight hours per year of experience and multi-engine aircraft flying, and whether pilots have regular flight reviews?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "has_regular_flight_reviews",
-            "true_hypothesis": "Pilots who have spent a total number of hours in advanced aerodynamics training, their cubes divided by 5 times the flight hours per year of experience plus 10 times if they regularly fly multi-engine aircraft, then compared if greater than 125, will undertake regular flight reviews as per aviation standards.",
-            "true_hypothesis_expr": "np.where(df['advanced_aerodynamics_training_hours']**3 / (5 * df['flight_hours_per_year_of_experience'] + 10 * df['flies_multi_engine_aircraft'].astype(int) + 1) > 125, True, False)",
-            "relevant_cols": [
-                "advanced_aerodynamics_training_hours",
-                "flight_hours_per_year_of_experience",
-                "flies_multi_engine_aircraft",
-                "has_regular_flight_reviews"
-            ]
+            "true_hypothesis": "Pilots who have spent a total number of hours in advanced aerodynamics training, their cubes divided by 5 times the flight hours per year of experience plus 10 times if they regularly fly multi-engine aircraft, then compared if greater than 125, will undertake regular flight reviews as per aviation standards."
         }
     ]
 }

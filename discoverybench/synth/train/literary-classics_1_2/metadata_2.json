@@ -203,14 +203,7 @@
             "question": "Is there a relationship between the publication century of a literary classic and the author's award recognition?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "influential_period",
-            "true_hypothesis": "The likelihood of a novel being from an influential period can be predicted by author_award_recognition, reflecting the percentage of lifetime awards received relative to nominations. If the author's award recognition is over 50% and the publication century is 18 or later, then the novel is from an influential period.",
-            "true_hypothesis_expr": "np.where(((df['author_award_recognition'] > 50) & (df['publication_century'] >= 18)), True, False)",
-            "relevant_cols": [
-                "publication_century",
-                "author_award_recognition",
-                "influential_period"
-            ]
+            "true_hypothesis": "The likelihood of a novel being from an influential period can be predicted by author_award_recognition, reflecting the percentage of lifetime awards received relative to nominations. If the author's award recognition is over 50% and the publication century is 18 or later, then the novel is from an influential period."
         }
     ]
 }

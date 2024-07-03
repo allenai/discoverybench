@@ -207,15 +207,7 @@
             "question": "Can you identify the factors that seem to have a significant impact on the average ticket price in the space tourism dataset?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "average_ticket_price",
-            "true_hypothesis": "The average ticket price can be predicted based on a formula that includes a base price, additional costs based on the number of travel companions, membership in a space exploration organization, and the primary travel purpose of the tourist. The formula indicates that an increase in the number of travel companions, holding a membership in a space-related organization, and traveling for research or education purposes will likely lead to higher ticket prices due to the associated cost factors.",
-            "true_hypothesis_expr": "1000 + 1500 * df['number_of_companions'] + 2000 * df['space_membership'].astype(int) + np.where(df['primary_travel_purpose'] == 'research', 3000, np.where(df['primary_travel_purpose'] == 'education', 2000, 0))",
-            "relevant_cols": [
-                "number_of_companions",
-                "space_membership",
-                "primary_travel_purpose",
-                "average_ticket_price"
-            ]
+            "true_hypothesis": "The average ticket price can be predicted based on a formula that includes a base price, additional costs based on the number of travel companions, membership in a space exploration organization, and the primary travel purpose of the tourist. The formula indicates that an increase in the number of travel companions, holding a membership in a space-related organization, and traveling for research or education purposes will likely lead to higher ticket prices due to the associated cost factors."
         }
     ]
 }

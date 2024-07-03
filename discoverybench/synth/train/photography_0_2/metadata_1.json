@@ -147,20 +147,7 @@
             "question": "Is there a relationship between the number of photography contests won and a specific combination of factors such as being a professional, specializing in wildlife photography, camera resolution, awards won, sponsored shoots, evening shoots count, client rating, and post-processing skill?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "photography_contests_won",
-            "true_hypothesis": "Photographers who are professionals and specialize in wildlife photography are likely to win more photography contests. The resolution of the primary camera multiplied by 3 is cubed, added to a function of sponsored shoots and awards won squared, and subtracted by a function of evening shoots count, client rating, and post-processing skill squared, influences the number of contests won.",
-            "true_hypothesis_expr": "np.where(df['is_professional'] & df['specializes_in_wildlife'], df['camera_resolution_megapixels'] * 3, 0)**3 + 2*(250 * df['sponsored_shoots'] + 20 * df['awards_won']**2 - 15 * df['awards_won'] + 160) - (2 * df['evening_shoots_count'] + df['client_rating'] * df['post_processing_skill']**2)**2",
-            "relevant_cols": [
-                "specializes_in_wildlife",
-                "camera_resolution_megapixels",
-                "is_professional",
-                "post_processing_skill",
-                "client_rating",
-                "evening_shoots_count",
-                "awards_won",
-                "sponsored_shoots",
-                "photography_contests_won"
-            ]
+            "true_hypothesis": "Photographers who are professionals and specialize in wildlife photography are likely to win more photography contests. The resolution of the primary camera multiplied by 3 is cubed, added to a function of sponsored shoots and awards won squared, and subtracted by a function of evening shoots count, client rating, and post-processing skill squared, influences the number of contests won."
         }
     ]
 }

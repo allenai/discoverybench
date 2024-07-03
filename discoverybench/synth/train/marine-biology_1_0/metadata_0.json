@@ -87,19 +87,7 @@
             "question": "Is there a relationship between bleaching resistance in coral reefs and daily sunlight hours when pollution level is low and seasonal current rate is low?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "bleaching_resistance",
-            "true_hypothesis": "In marine ecosystems, when both the pollution level is 'low' and the seasonal current rate is 'low', then the combined influence of sea surface temperature, reef proximity to land, reef activities, fishing activity, and daily sunlight hours determines that bleaching resistance is likely when the coral reef has more than 100 species of coral.",
-            "true_hypothesis_expr": "np.where(((np.where(df['pollution_level']=='low', ((np.where(df['seasonal_current_variation'] == 'low', 200 / (1 + np.exp(-(df['sea_surface_temperature'] - 15) / 10)), 120 / (1 + np.exp(-(df['sea_surface_temperature'] - 15) / 10))) + 10 * np.exp(-df['reef_proximity_to_land'] / 100))*0.3 + (df['daily_sunlight_hours'] * 3 + (df['fishing_activity'].map({'none': 4, 'low': 3, 'moderate': 2, 'high': 1}) * 2))*2), 50) >= 90) & (df['coral_species_count'] > 100), 1, 0)",
-            "relevant_cols": [
-                "coral_species_count",
-                "fishing_activity",
-                "pollution_level",
-                "seasonal_current_variation",
-                "bleaching_resistance",
-                "sea_surface_temperature",
-                "reef_proximity_to_land",
-                "daily_sunlight_hours"
-            ]
+            "true_hypothesis": "In marine ecosystems, when both the pollution level is 'low' and the seasonal current rate is 'low', then the combined influence of sea surface temperature, reef proximity to land, reef activities, fishing activity, and daily sunlight hours determines that bleaching resistance is likely when the coral reef has more than 100 species of coral."
         }
     ]
 }

@@ -163,21 +163,7 @@
             "question": "Is there a relationship between the metaphor usage in classical novels and the character complexity index, era influence, author's origin (Western), narrative complexity score, richness of symbols used, integration of historical context, number of narrative perspectives, richness of symbolic elements, complexity of the main character's arc, and utilization of narrative techniques?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "metaphor_usage",
-            "true_hypothesis": "The metaphor usage in classical novels is influenced by the complexity of character development, the impact of the era on the writing style, the author's Western origin, the narrative complexity score, the richness of symbols used, the integration of historical context, the count of narrative perspectives, the richness of symbolic elements, the complexity of the main character's arc, and the author's utilization of narrative techniques.",
-            "true_hypothesis_expr": "((df['character_complexity_index']**2 + 10 * df['era_influence']) * (df['author_origin_western'] * 1.2 + 0.8))**3 + np.where(np.where((df['narrative_complexity_score'] + df['symbol_richness_score']) / 2 > 60, ~df['historical_context_integration'], False) == True, 30, 0) + (10 * df['narrative_perspectives_count'] + 5 * df['symbolic_elements_index'] + 20 * df['main_character_arc_complexity'].astype(int))**2",
-            "relevant_cols": [
-                "character_complexity_index",
-                "era_influence",
-                "author_origin_western",
-                "narrative_complexity_score",
-                "symbol_richness_score",
-                "historical_context_integration",
-                "narrative_perspectives_count",
-                "symbolic_elements_index",
-                "main_character_arc_complexity",
-                "metaphor_usage"
-            ]
+            "true_hypothesis": "The metaphor usage in classical novels is influenced by the complexity of character development, the impact of the era on the writing style, the author's Western origin, the narrative complexity score, the richness of symbols used, the integration of historical context, the count of narrative perspectives, the richness of symbolic elements, the complexity of the main character's arc, and the author's utilization of narrative techniques."
         }
     ]
 }

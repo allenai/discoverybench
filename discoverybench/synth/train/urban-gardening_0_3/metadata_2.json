@@ -235,15 +235,7 @@
             "question": "How does the average income level in a city impact the proportion of green space area to total city area, after adjusting for residential area percentage?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "residential_area_percentage",
-            "true_hypothesis": "The percentage of residential area in the city is computed by dividing the green space area by the total city area, then multiplying by 100 while adjusting for income levels.",
-            "true_hypothesis_expr": "df['green_space_area'] / df['total_city_area'] * 100 + np.where(df['average_income_level']=='high', 20, -10)",
-            "relevant_cols": [
-                "green_space_area",
-                "total_city_area",
-                "average_income_level",
-                "residential_area_percentage"
-            ]
+            "true_hypothesis": "The percentage of residential area in the city is computed by dividing the green space area by the total city area, then multiplying by 100 while adjusting for income levels."
         }
     ]
 }

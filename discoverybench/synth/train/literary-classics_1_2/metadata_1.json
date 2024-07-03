@@ -203,15 +203,7 @@
             "question": "What is the relationship between the lauded_author_factor and the numeric score assessing narrative style relative to genre, the binary indicator for tragic endings, and the categorical representation of primary themes in the dataset?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "lauded_author_factor",
-            "true_hypothesis": "The lauded_author_factor is influenced by a combination of the numeric score assessing narrative style relative to genre, the binary indicator for tragic endings, and the categorical representation of primary themes, each contributing different weights to the overall estimation.",
-            "true_hypothesis_expr": "df['narrative_style_relative_to_genre'] * 10 + (df['tragic_ending'] * 20) + (df['primary_themes'].map({'love': 5, 'betrayal': 8, 'war': 12, 'friendship': 3, 'adventure': 4, 'mystery': 15, 'historical': 10, 'fantasy': 7}))",
-            "relevant_cols": [
-                "narrative_style_relative_to_genre",
-                "primary_themes",
-                "tragic_ending",
-                "lauded_author_factor"
-            ]
+            "true_hypothesis": "The lauded_author_factor is influenced by a combination of the numeric score assessing narrative style relative to genre, the binary indicator for tragic endings, and the categorical representation of primary themes, each contributing different weights to the overall estimation."
         }
     ]
 }

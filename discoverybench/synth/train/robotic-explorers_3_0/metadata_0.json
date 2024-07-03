@@ -147,15 +147,7 @@
             "question": "Is there a relationship between the number of highly successful discoveries made by autonomous exploration vehicles and the terrain type they operate on, taking into account the usage of AI decision-making algorithms?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "highly_successful_discovery",
-            "true_hypothesis": "Autonomous exploration vehicles that employ AI-based decision-making algorithms and operate on highly uneven terrain tend to discover new geographical features more frequently when they find more than 30 such features.",
-            "true_hypothesis_expr": "np.where((df['ai_decision_making'] == True) & (df['terrain_type'] == 'highly_uneven') & (df['new_geographical_features_found'] > 30), True, False)",
-            "relevant_cols": [
-                "new_geographical_features_found",
-                "highly_successful_discovery",
-                "ai_decision_making",
-                "terrain_type"
-            ]
+            "true_hypothesis": "Autonomous exploration vehicles that employ AI-based decision-making algorithms and operate on highly uneven terrain tend to discover new geographical features more frequently when they find more than 30 such features."
         }
     ]
 }

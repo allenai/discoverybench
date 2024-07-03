@@ -207,14 +207,7 @@
             "question": "Is there a relationship between tourists' likelihood of choosing a technologically advanced launch site and their home country's GDP and investment in aerospace industries?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "launch_site_technology_level",
-            "true_hypothesis": "Tourists from countries with higher GDP and greater investment in aerospace industries are more likely to use technologically advanced launch sites, as the launch site technology level is determined by a formula that considers the GDP and aerospace investment percentage of the tourist's home country.",
-            "true_hypothesis_expr": "np.clip(np.ceil(2 * df['home_country_GDP']**(1/3) + 3 * df['home_country_aerospace_investment_percentage']), 1, 5)",
-            "relevant_cols": [
-                "home_country_GDP",
-                "home_country_aerospace_investment_percentage",
-                "launch_site_technology_level"
-            ]
+            "true_hypothesis": "Tourists from countries with higher GDP and greater investment in aerospace industries are more likely to use technologically advanced launch sites, as the launch site technology level is determined by a formula that considers the GDP and aerospace investment percentage of the tourist's home country."
         }
     ]
 }

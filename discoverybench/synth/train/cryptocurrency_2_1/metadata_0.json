@@ -127,15 +127,7 @@
             "question": "Is there a relationship between education level, diversity of cryptocurrency portfolios, risk tolerance, and annual income?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "annual_income",
-            "true_hypothesis": "Individuals with higher education levels, more diversified cryptocurrency portfolios, and higher risk tolerance scores tend to have higher annual incomes.",
-            "true_hypothesis_expr": "df['crypto_portfolio_diversity'] * 1000 + df['education_level'].map({'High_School': 30000, 'Bachelors': 50000, 'Masters': 70000, 'PhD': 90000}) + df['risk_tolerance'] * 5000",
-            "relevant_cols": [
-                "education_level",
-                "crypto_portfolio_diversity",
-                "risk_tolerance",
-                "annual_income"
-            ]
+            "true_hypothesis": "Individuals with higher education levels, more diversified cryptocurrency portfolios, and higher risk tolerance scores tend to have higher annual incomes."
         }
     ]
 }

@@ -147,15 +147,7 @@
             "question": "What is the relationship between the average temperature, annual snowfall, hours of sunlight, and the classification as winter for homes in the dataset related to solar power?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "is_winter",
-            "true_hypothesis": "A home is recorded as being in winter if the average temperature is below 5 degrees Celsius, annual snowfall is above 40 cm, and the hours of sunlight are below 8.",
-            "true_hypothesis_expr": "np.where((df['average_temperature'] < 5) & (df['annual_snowfall'] > 40) & (df['hours_of_sunlight'] < 8), True, False)",
-            "relevant_cols": [
-                "average_temperature",
-                "annual_snowfall",
-                "hours_of_sunlight",
-                "is_winter"
-            ]
+            "true_hypothesis": "A home is recorded as being in winter if the average temperature is below 5 degrees Celsius, annual snowfall is above 40 cm, and the hours of sunlight are below 8."
         }
     ]
 }

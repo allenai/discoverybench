@@ -167,18 +167,7 @@
             "question": "Is there a relationship between age group, tech meetup attendance, reading tech articles, motion sickness experience in VR, ownership of interactive devices, interaction with technology at work, and familiarity with VR technology?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "vr_technology_familiarity",
-            "true_hypothesis": "Individuals who are in the 18-25 age group, attend tech meetups regularly, read tech articles, have some experience with motion sickness in VR, own interactive devices, and interact frequently with technology at work tend to show greater familiarity with VR technology.",
-            "true_hypothesis_expr": "((df['technical_job_experience']//8 + df['tech_meetup_attendance']//10 + df['reads_tech_articles'].astype(int))**3 + (df['motion_sickness_experience'].astype(int) * 5 + df['owned_interactive_devices'] * 2)*2 + (df['age_group'] == '18-25').astype(int) * 3)",
-            "relevant_cols": [
-                "technical_job_experience",
-                "tech_meetup_attendance",
-                "reads_tech_articles",
-                "motion_sickness_experience",
-                "owned_interactive_devices",
-                "age_group",
-                "vr_technology_familiarity"
-            ]
+            "true_hypothesis": "Individuals who are in the 18-25 age group, attend tech meetups regularly, read tech articles, have some experience with motion sickness in VR, own interactive devices, and interact frequently with technology at work tend to show greater familiarity with VR technology."
         }
     ]
 }

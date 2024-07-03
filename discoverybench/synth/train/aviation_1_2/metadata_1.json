@@ -123,15 +123,7 @@
             "question": "Is there a significant correlation between a pilot's aviation incident awareness score, level of training with advanced navigation systems, primary flying terrain, and the number of monthly flight simulation hours they engage in?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "monthly_flight_simulation_hours",
-            "true_hypothesis": "Pilots with higher aviation incident awareness and advanced navigation system familiarity spend more hours on flight simulation. This is particularly true for pilots primarily flying over mountainous terrains where simulation training is crucial.",
-            "true_hypothesis_expr": "df['aviation_incident_awareness_score']**3 + 10 * df['aviation_incident_awareness_score'] * df['advanced_navigation_system_training'].astype(int) + 20*np.where(df['primary_flying_terrain'] == 'mountainous', 1, 0)",
-            "relevant_cols": [
-                "aviation_incident_awareness_score",
-                "advanced_navigation_system_training",
-                "primary_flying_terrain",
-                "monthly_flight_simulation_hours"
-            ]
+            "true_hypothesis": "Pilots with higher aviation incident awareness and advanced navigation system familiarity spend more hours on flight simulation. This is particularly true for pilots primarily flying over mountainous terrains where simulation training is crucial."
         }
     ]
 }

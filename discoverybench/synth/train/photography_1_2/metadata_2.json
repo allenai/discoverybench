@@ -175,14 +175,7 @@
             "question": "Is there a relationship between the number of outdoor photography workshops attended and the percentage of nature-themed photos in a photographer's portfolio that might influence their preference for landscape photography?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "prefers_landscape_photography",
-            "true_hypothesis": "Photographers who have attended more than 5 outdoor photography workshops and have at least 50% nature-themed photos in their portfolio are likely to prefer landscape photography.",
-            "true_hypothesis_expr": "np.where((df['participation_in_outdoor_workshops'] > 5) & (df['percentage_nature_photos'] >= 50), True, False)",
-            "relevant_cols": [
-                "participation_in_outdoor_workshops",
-                "percentage_nature_photos",
-                "prefers_landscape_photography"
-            ]
+            "true_hypothesis": "Photographers who have attended more than 5 outdoor photography workshops and have at least 50% nature-themed photos in their portfolio are likely to prefer landscape photography."
         }
     ]
 }

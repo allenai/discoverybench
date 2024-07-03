@@ -139,18 +139,7 @@
             "question": "Is there a relationship between the proportion of recycled waste and a combination of population density, governance efficiency, alternative transport ratio, industry emissions, and the ratio of public green space to commercial area in regions focused on environmental activism?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "proportion_of_recycled_waste",
-            "true_hypothesis": "In regions where the difference between 100 and half the population density per square kilometer and the governance efficiency index is greater than 10, where the alternative transport ratio is greater than 30 and the industry emissions percentile is less than 40, and the public green space area divided by commercial area is greater than one-third, the proportion of recycled waste is calculated as 50 plus half the difference between 100 and half the population density per square kilometer and the governance efficiency index. If the public green space area divided by commercial area is not greater than one-third but is greater than one-fifth, the region is classified as Suburban.",
-            "true_hypothesis_expr": "np.where((100 - (df['population_density_per_sq_km'] / 50) - (100 - df['governance_efficiency_index']) > 10) & (np.where((df['alternative_transport_ratio'] > 30) & (df['industry_emissions_percentile'] < 40), True, False) == True) & (np.select([(df['public_green_space_area'] / df['commercial_area'] > (1/3)), (df['public_green_space_area'] / df['commercial_area'] <= (1/3)) & (df['public_green_space_area'] / df['commercial_area'] > (1/5)), (df['public_green_space_area'] / df['commercial_area'] <= (1/5))], ['Urban', 'Suburban', 'Rural'], default='Rural') == 'Urban'), 50 + (100 - (df['population_density_per_sq_km'] / 50) - (100 - df['governance_efficiency_index'])) * 0.5, 20)",
-            "relevant_cols": [
-                "population_density_per_sq_km",
-                "governance_efficiency_index",
-                "alternative_transport_ratio",
-                "industry_emissions_percentile",
-                "public_green_space_area",
-                "commercial_area",
-                "proportion_of_recycled_waste"
-            ]
+            "true_hypothesis": "In regions where the difference between 100 and half the population density per square kilometer and the governance efficiency index is greater than 10, where the alternative transport ratio is greater than 30 and the industry emissions percentile is less than 40, and the public green space area divided by commercial area is greater than one-third, the proportion of recycled waste is calculated as 50 plus half the difference between 100 and half the population density per square kilometer and the governance efficiency index. If the public green space area divided by commercial area is not greater than one-third but is greater than one-fifth, the region is classified as Suburban."
         }
     ]
 }

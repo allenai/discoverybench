@@ -275,14 +275,7 @@
             "question": "What is the relationship between the number of plant types in a garden and the presence of a water feature, considering the amount of annual rainfall?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "has_water_feature",
-            "true_hypothesis": "Gardens with more than 10 plant types and an annual rainfall greater than 800 millimeters are likely to have water features like fountains or ponds.",
-            "true_hypothesis_expr": "np.where((df['number_of_plant_types'] > 10) & (df['annual_rainfall'] > 800), True, False)",
-            "relevant_cols": [
-                "annual_rainfall",
-                "number_of_plant_types",
-                "has_water_feature"
-            ]
+            "true_hypothesis": "Gardens with more than 10 plant types and an annual rainfall greater than 800 millimeters are likely to have water features like fountains or ponds."
         }
     ]
 }

@@ -131,17 +131,7 @@
             "question": "What is the relationship between the average wind speed and the combination of high-efficiency appliance usage, locality solar energy usage, region type, average temperature, and altitude in the context of solar power systems?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "average_wind_speed",
-            "true_hypothesis": "The average wind speed is calculated based on a combination of high-efficiency appliance usage, locality solar energy usage, region type, average temperature, and altitude. Specifically, the formula considers the presence of high-efficiency appliances, locality solar energy usage, region being semi-urban, average temperature below 10 degrees Celsius, and altitude above 1500 meters.",
-            "true_hypothesis_expr": "((5 + 20 * df['high_efficiency_appliances'] + 0.3 * df['locality_solar_energy_usage_percentile']) * 2) + 10 * (np.where((df['average_temperature'] < 10) & (df['altitude'] > 1500), True, False) * 2) + 20 * (df['region_type'] == 'semi-urban')",
-            "relevant_cols": [
-                "region_type",
-                "high_efficiency_appliances",
-                "locality_solar_energy_usage_percentile",
-                "average_temperature",
-                "altitude",
-                "average_wind_speed"
-            ]
+            "true_hypothesis": "The average wind speed is calculated based on a combination of high-efficiency appliance usage, locality solar energy usage, region type, average temperature, and altitude. Specifically, the formula considers the presence of high-efficiency appliances, locality solar energy usage, region being semi-urban, average temperature below 10 degrees Celsius, and altitude above 1500 meters."
         }
     ]
 }

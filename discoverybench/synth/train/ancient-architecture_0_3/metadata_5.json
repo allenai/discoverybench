@@ -139,15 +139,7 @@
             "question": "Is there a relationship between the ratio of clear to cloudy days in a year and the average daily sunlight hours at a location known for its ancient architecture?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "average_daily_sunlight_hours",
-            "true_hypothesis": "The average daily sunlight hours are calculated by multiplying the ratio of clear days to cloudy days annually at the building's location, the measure of how much sunlight the building's primary exterior materials can reflect, and the complement of the binary indicator if the building is in an urban area with significant shadowing by other tall buildings, and then multiplying the result by 3.",
-            "true_hypothesis_expr": "df['ratio_of_clear_to_cloudy_days'] * df['building_material_reflectivity'] * (1 - df['urban_shadowing']) * 3",
-            "relevant_cols": [
-                "ratio_of_clear_to_cloudy_days",
-                "building_material_reflectivity",
-                "urban_shadowing",
-                "average_daily_sunlight_hours"
-            ]
+            "true_hypothesis": "The average daily sunlight hours are calculated by multiplying the ratio of clear days to cloudy days annually at the building's location, the measure of how much sunlight the building's primary exterior materials can reflect, and the complement of the binary indicator if the building is in an urban area with significant shadowing by other tall buildings, and then multiplying the result by 3."
         }
     ]
 }

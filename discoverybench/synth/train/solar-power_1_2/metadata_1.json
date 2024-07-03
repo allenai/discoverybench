@@ -159,14 +159,7 @@
             "question": "What is the relationship between solar panel efficiency, solar intensity in different zones, and cloud cover ratio in a dataset related to harnessing solar energy?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "cloud_cover_ratio",
-            "true_hypothesis": "In regions utilizing high-efficiency solar panels, the cloud cover ratio is lower on average.",
-            "true_hypothesis_expr": "np.where(df['solar_intensity_zone'] == 'high', 1 - df['solar_panel_efficiency'] / 40, 1)",
-            "relevant_cols": [
-                "solar_panel_efficiency",
-                "solar_intensity_zone",
-                "cloud_cover_ratio"
-            ]
+            "true_hypothesis": "In regions utilizing high-efficiency solar panels, the cloud cover ratio is lower on average."
         }
     ]
 }

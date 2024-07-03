@@ -187,14 +187,7 @@
             "question": "Is there a relationship between the average word count per sentence in literary classics and the publication year cubed, the square of the sentence complexity, and a constant decrease?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "average_word_count_per_sentence",
-            "true_hypothesis": "There is a non-linear relationship between the average word count per sentence in literary classics and the publication year and sentence complexity, where the average word count decreases by 0.003 times the publication year cubed, decreases by 0.2 times the square of the sentence complexity, and a constant decrease of 5.",
-            "true_hypothesis_expr": "60.5 - 0.003*df['publication_year']**3 - 0.2*df['sentence_complexity']**2 - 5",
-            "relevant_cols": [
-                "average_word_count_per_sentence",
-                "publication_year",
-                "sentence_complexity"
-            ]
+            "true_hypothesis": "There is a non-linear relationship between the average word count per sentence in literary classics and the publication year and sentence complexity, where the average word count decreases by 0.003 times the publication year cubed, decreases by 0.2 times the square of the sentence complexity, and a constant decrease of 5."
         }
     ]
 }

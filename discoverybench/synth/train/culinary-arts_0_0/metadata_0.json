@@ -83,14 +83,7 @@
             "question": "What is the relationship between region climate, preferred cooking method, and cooking method preference in the culinary arts domain?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "cooking_method_preference",
-            "true_hypothesis": "In an analysis of cooking techniques used in various regions, it is discovered that chefs in colder climates who prefer roasting as their primary cooking method also tend to favor dry-heat cooking methods over moist-heat methods. Conversely, chefs in warmer climates who prefer boiling as their primary cooking method tend to favor moist-heat methods over dry-heat methods, demonstrating a temperature-dependent preference for specific cooking methods in culinary traditions.",
-            "true_hypothesis_expr": "np.where((df['region_climate'] == 'cold') & (df['preferred_cooking_method'] == 'roasting') | (df['region_climate'] == 'warm') & (df['preferred_cooking_method'] == 'boiling'), True, False)",
-            "relevant_cols": [
-                "region_climate",
-                "preferred_cooking_method",
-                "cooking_method_preference"
-            ]
+            "true_hypothesis": "In an analysis of cooking techniques used in various regions, it is discovered that chefs in colder climates who prefer roasting as their primary cooking method also tend to favor dry-heat cooking methods over moist-heat methods. Conversely, chefs in warmer climates who prefer boiling as their primary cooking method tend to favor moist-heat methods over dry-heat methods, demonstrating a temperature-dependent preference for specific cooking methods in culinary traditions."
         }
     ]
 }

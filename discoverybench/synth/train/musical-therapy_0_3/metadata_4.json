@@ -139,15 +139,7 @@
             "question": "What is the relationship between musical taste variety and therapy session frequency, preference for live music, and frequency of sadness in the context of musical therapy?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "musical_taste_variety",
-            "true_hypothesis": "Musical taste variety is positively associated with the number of therapy sessions attended and the strength of preference for live music performances, while being negatively influenced by the frequency of experiencing sadness during therapy.",
-            "true_hypothesis_expr": "(df['therapy_session_frequency'] + 2*df['preference_for_live_music']) / (1 + df['frequency_of_sadness'])",
-            "relevant_cols": [
-                "therapy_session_frequency",
-                "preference_for_live_music",
-                "frequency_of_sadness",
-                "musical_taste_variety"
-            ]
+            "true_hypothesis": "Musical taste variety is positively associated with the number of therapy sessions attended and the strength of preference for live music performances, while being negatively influenced by the frequency of experiencing sadness during therapy."
         }
     ]
 }

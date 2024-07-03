@@ -207,15 +207,7 @@
             "question": "Is there a relationship between the number of previous space trips taken by tourists and their age category, marital status, and whether they have children?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "number_previous_space_trips",
-            "true_hypothesis": "The number of previous space trips is determined by a tourist's marital status, age category, and the presence of children.",
-            "true_hypothesis_expr": "np.where((df['marital_status'] == 'married') & (df['age_category'] == 'middle-aged') & (df['has_children']), 5, np.where((df['marital_status'] == 'married') & (df['has_children']), 3, 1))",
-            "relevant_cols": [
-                "age_category",
-                "has_children",
-                "marital_status",
-                "number_previous_space_trips"
-            ]
+            "true_hypothesis": "The number of previous space trips is determined by a tourist's marital status, age category, and the presence of children."
         }
     ]
 }

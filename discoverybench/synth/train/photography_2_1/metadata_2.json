@@ -191,14 +191,7 @@
             "question": "Is there a relationship between preferring landscape photography, frequent tripod use, and technique preference for white balance in photography?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "technique_manual_white_balance",
-            "true_hypothesis": "Photographers who prefer landscape photography and use tripods frequently are more likely to use manual white balance for their photography.",
-            "true_hypothesis_expr": "np.where((df['prefers_landscape_photography'] == True) & (df['frequent_tripod_use'] >= 7), True, False)",
-            "relevant_cols": [
-                "prefers_landscape_photography",
-                "frequent_tripod_use",
-                "technique_manual_white_balance"
-            ]
+            "true_hypothesis": "Photographers who prefer landscape photography and use tripods frequently are more likely to use manual white balance for their photography."
         }
     ]
 }

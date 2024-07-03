@@ -155,15 +155,7 @@
             "question": "Is there a relationship between the type of photography focus, camera equipment budget, workshops attended, and the number of annual travels for photography projects?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "annual_travel_count",
-            "true_hypothesis": "The number of annual travels for photography is influenced by the type of photography, camera equipment budget, and the presence of photography workshops attended. Specifically, photographers focused on wildlife photography, with higher equipment budgets, and the presence of wildlife photography focus, tend to travel more frequently for photography projects.",
-            "true_hypothesis_expr": "(df['equipment_budget']**3 + 5*df['workshops_attended']**2) * (df['photography_focus'] == 'wildlife')",
-            "relevant_cols": [
-                "photography_focus",
-                "equipment_budget",
-                "workshops_attended",
-                "annual_travel_count"
-            ]
+            "true_hypothesis": "The number of annual travels for photography is influenced by the type of photography, camera equipment budget, and the presence of photography workshops attended. Specifically, photographers focused on wildlife photography, with higher equipment budgets, and the presence of wildlife photography focus, tend to travel more frequently for photography projects."
         }
     ]
 }

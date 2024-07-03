@@ -275,15 +275,7 @@
             "question": "What is the relationship between the number of fruit trees in urban gardens and the garden accessibility index, presence of educational programs, and whether the garden is in a residential area?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "number_of_fruit_trees",
-            "true_hypothesis": "The number of fruit trees in urban gardens is determined by the formula: garden_accessibility_index x 5 + 10 (if has_educational_programs) + 5 (if is_residential_area).",
-            "true_hypothesis_expr": "df['garden_accessibility_index'] * 5 + np.where(df['has_educational_programs'], 10, 0) + np.where(df['is_residential_area'], 5, 0)",
-            "relevant_cols": [
-                "garden_accessibility_index",
-                "has_educational_programs",
-                "is_residential_area",
-                "number_of_fruit_trees"
-            ]
+            "true_hypothesis": "The number of fruit trees in urban gardens is determined by the formula: garden_accessibility_index x 5 + 10 (if has_educational_programs) + 5 (if is_residential_area)."
         }
     ]
 }

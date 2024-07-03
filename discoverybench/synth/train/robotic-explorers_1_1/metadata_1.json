@@ -135,16 +135,7 @@
             "question": "Is there a relationship between the computational value derived from the energy storage capacity, sensor technology types, and autonomous navigation capability, cubed and added to twice the communication delay tolerance, and the implementation of AI-based decision-making algorithms in robotic explorers of the dataset?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "ai_decision_making",
-            "true_hypothesis": "Vehicles with a computation derived from the energy storage capacity, sensor technology types, and autonomous navigation capability, cubed and added to twice the communication delay tolerance exceeding 20, are expected to implement AI-based decision-making algorithms.",
-            "true_hypothesis_expr": "np.where((np.where(df['has_autonomous_navigation'], df['energy_storage_capacity'] / 100 + df['sensor_technology_types'], df['sensor_technology_types']))**3 + 2*df['communication_delay_tolerance'] > 20, True, False)",
-            "relevant_cols": [
-                "communication_delay_tolerance",
-                "energy_storage_capacity",
-                "sensor_technology_types",
-                "has_autonomous_navigation",
-                "ai_decision_making"
-            ]
+            "true_hypothesis": "Vehicles with a computation derived from the energy storage capacity, sensor technology types, and autonomous navigation capability, cubed and added to twice the communication delay tolerance exceeding 20, are expected to implement AI-based decision-making algorithms."
         }
     ]
 }

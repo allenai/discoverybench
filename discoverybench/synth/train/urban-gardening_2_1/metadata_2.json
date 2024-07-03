@@ -287,14 +287,7 @@
             "question": "Is there a relationship between the percentage of flower beds in urban gardens and the presence of water features with the number of trees planted in those gardens?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "number_of_trees",
-            "true_hypothesis": "Gardens with a higher percentage of land dedicated to flower beds and those with water features tend to have fewer trees, resulting from a calculation based on the percentage of flower beds and the presence of water features.",
-            "true_hypothesis_expr": "100 - df['percentage_of_flower_beds'] + 20 * df['has_water_feature'].astype(int)",
-            "relevant_cols": [
-                "percentage_of_flower_beds",
-                "has_water_feature",
-                "number_of_trees"
-            ]
+            "true_hypothesis": "Gardens with a higher percentage of land dedicated to flower beds and those with water features tend to have fewer trees, resulting from a calculation based on the percentage of flower beds and the presence of water features."
         }
     ]
 }

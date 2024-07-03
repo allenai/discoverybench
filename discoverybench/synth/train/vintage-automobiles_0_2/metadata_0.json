@@ -131,18 +131,7 @@
             "question": "Is there a relationship between the performance rating of vintage automobiles and the design luxury index, engine performance ratio, and the presence of an annual car event in the country?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "performance_rating",
-            "true_hypothesis": "The performance rating of automobiles is calculated as follows: Start with 10 and add 90% of the market rarity percentile. Then, add 10 if the sum of the square of the number of car museums, 3 times the cube of the average speed limit, and 9 if the country has an annual car event is greater than 1000. Finally, add 5 if the design luxury index is over 70 and the engine performance ratio exceeds 3.",
-            "true_hypothesis_expr": "10 + (0.9 * df['market_rarity_percentile']) + (10 * np.where((df['number_of_car_museums']**2 + (3 * df['average_speed_limit']**3) + (9 * df['has_annual_car_event'])) > 1000, True, False)) + (5 * np.where((df['design_luxury_index'] > 70) & (df['engine_performance_ratio'] > 3), True, False))",
-            "relevant_cols": [
-                "market_rarity_percentile",
-                "number_of_car_museums",
-                "average_speed_limit",
-                "has_annual_car_event",
-                "design_luxury_index",
-                "engine_performance_ratio",
-                "performance_rating"
-            ]
+            "true_hypothesis": "The performance rating of automobiles is calculated as follows: Start with 10 and add 90% of the market rarity percentile. Then, add 10 if the sum of the square of the number of car museums, 3 times the cube of the average speed limit, and 9 if the country has an annual car event is greater than 1000. Finally, add 5 if the design luxury index is over 70 and the engine performance ratio exceeds 3."
         }
     ]
 }

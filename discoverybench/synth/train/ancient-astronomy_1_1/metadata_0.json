@@ -99,16 +99,7 @@
             "question": "Is there a relationship between the frequency of comet sightings and the level of trade activity in ancient civilizations, and if so, how does this relate to the latitude where these civilizations developed?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "latitude",
-            "true_hypothesis": "Civilizations with a high frequency of comet sightings and advanced metallurgical technology tended to develop at higher latitudes due to the specific conditions in those regions.",
-            "true_hypothesis_expr": "10 * (df['comet_sightings'] * np.where(df['celestial_navigation'], 1, 0)) + 30 * np.where((df['metallic_ore_deposits'] == True) & (df['trade_activity_level'] > 50), True, False).astype(int)",
-            "relevant_cols": [
-                "metallic_ore_deposits",
-                "trade_activity_level",
-                "comet_sightings",
-                "celestial_navigation",
-                "latitude"
-            ]
+            "true_hypothesis": "Civilizations with a high frequency of comet sightings and advanced metallurgical technology tended to develop at higher latitudes due to the specific conditions in those regions."
         }
     ]
 }

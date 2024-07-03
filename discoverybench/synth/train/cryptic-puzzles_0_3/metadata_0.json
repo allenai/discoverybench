@@ -119,14 +119,7 @@
             "question": "What is the relationship between the number of puzzles solved and the enjoyment of variety in cryptic puzzles?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "enjoys_variety",
-            "true_hypothesis": "Participants who have solved over 50 puzzles and encountered more than 3 difficulty levels tend to enjoy a variety of puzzles.",
-            "true_hypothesis_expr": "np.where((df['number_of_puzzles_solved'] > 50) & (df['difficulty_levels_encountered'] > 3), True, False)",
-            "relevant_cols": [
-                "number_of_puzzles_solved",
-                "difficulty_levels_encountered",
-                "enjoys_variety"
-            ]
+            "true_hypothesis": "Participants who have solved over 50 puzzles and encountered more than 3 difficulty levels tend to enjoy a variety of puzzles."
         }
     ]
 }

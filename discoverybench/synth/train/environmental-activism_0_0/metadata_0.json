@@ -127,14 +127,7 @@
             "question": "Is there a relationship between the calculated value derived from the annual increase in environmental activism, average income, and predicted plastic reduction, and the observed amount of single-use plastic consumption over a 5-year period in different regions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "predicted_plastic_reduction",
-            "true_hypothesis": "In regions where the cubic root of the product of the percentage increase in environmental activism per year and the average annual income per household in the region, minus 50, is interpreted as the predicted reduction in plastic consumption, there is a significant relationship between the calculated value and the actual amount of single-use plastic consumption observed over a 5-year period.",
-            "true_hypothesis_expr": "np.cbrt(df['annual_increase_in_activism']*df['average_income']) - 50",
-            "relevant_cols": [
-                "annual_increase_in_activism",
-                "average_income",
-                "predicted_plastic_reduction"
-            ]
+            "true_hypothesis": "In regions where the cubic root of the product of the percentage increase in environmental activism per year and the average annual income per household in the region, minus 50, is interpreted as the predicted reduction in plastic consumption, there is a significant relationship between the calculated value and the actual amount of single-use plastic consumption observed over a 5-year period."
         }
     ]
 }

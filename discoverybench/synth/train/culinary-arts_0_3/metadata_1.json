@@ -91,15 +91,7 @@
             "question": "Is there a relationship between the frequency of menu changes in restaurants and the chefs' innovation scores?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "menu_change_frequency",
-            "true_hypothesis": "Chefs who participate in more culinary competitions, have a higher number of signature dishes, and possess a higher chef innovation score tend to change their menu more frequently.",
-            "true_hypothesis_expr": "df['culinary_competition_participation'] + df['number_of_signature_dishes'] // 5 + df['chef_innovation_score'] // 10",
-            "relevant_cols": [
-                "culinary_competition_participation",
-                "number_of_signature_dishes",
-                "chef_innovation_score",
-                "menu_change_frequency"
-            ]
+            "true_hypothesis": "Chefs who participate in more culinary competitions, have a higher number of signature dishes, and possess a higher chef innovation score tend to change their menu more frequently."
         }
     ]
 }

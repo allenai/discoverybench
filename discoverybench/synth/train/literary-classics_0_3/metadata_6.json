@@ -175,15 +175,7 @@
             "question": "What is the relationship between the total word count of a literary classic and the number of main characters, the number of central themes, and whether the book is part of a series?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "total_word_count",
-            "true_hypothesis": "The total word count of a literary classic is influenced by the cube of the number of main characters, the square of the number of central themes, and it increases by 5000 if the book is part of a series. These factors contribute to shaping the length of the book.",
-            "true_hypothesis_expr": "df['number_of_main_characters']**3 + 5 * df['number_of_central_themes']**2 + np.where(df['is_part_of_series'], 5000, 0)",
-            "relevant_cols": [
-                "number_of_main_characters",
-                "number_of_central_themes",
-                "is_part_of_series",
-                "total_word_count"
-            ]
+            "true_hypothesis": "The total word count of a literary classic is influenced by the cube of the number of main characters, the square of the number of central themes, and it increases by 5000 if the book is part of a series. These factors contribute to shaping the length of the book."
         }
     ]
 }

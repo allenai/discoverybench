@@ -191,15 +191,7 @@
             "question": "Can you determine a formula that predicts the number of pages in a book based on the total word count, lexical density, and the presence of illustrations?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "number_of_pages",
-            "true_hypothesis": "The number of pages in a book is determined by rounding the total word count divided by 4000 minus the lexical density multiplied by 100, then multiplying by 20. Additionally, 30 pages are added if the book contains illustrations, and finally, 100 pages are added.",
-            "true_hypothesis_expr": "np.round(df['total_word_count'] / 4000 - df['lexical_density'] * 100) * 20 + np.where(df['has_illustrations'], 30, 0) + 100",
-            "relevant_cols": [
-                "has_illustrations",
-                "total_word_count",
-                "lexical_density",
-                "number_of_pages"
-            ]
+            "true_hypothesis": "The number of pages in a book is determined by rounding the total word count divided by 4000 minus the lexical density multiplied by 100, then multiplying by 20. Additionally, 30 pages are added if the book contains illustrations, and finally, 100 pages are added."
         }
     ]
 }

@@ -147,15 +147,7 @@
             "question": "Is there a relationship between the calculated combined value of commercial fishing restrictions, conservation funding, and the average tourist rating on visibility of marine life, and the likelihood of marine areas being designated as eco-tourism areas?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "is_eco_tourism_area",
-            "true_hypothesis": "We hypothesize that marine areas with a combined calculated value, based on the third power of annual conservation funding, twice the square of the rating on commercial fishing restrictions, and three times the average tourist rating on the visibility of marine life, exceeding $25,000,000 are more likely to be designated as eco-tourism areas.",
-            "true_hypothesis_expr": "np.where((df['conservation_funding']**3 + 2*df['commercial_fishing_restrictions']**2 + df['average_tourist_rating_visibility']*3) > 25000000, True, False)",
-            "relevant_cols": [
-                "commercial_fishing_restrictions",
-                "conservation_funding",
-                "average_tourist_rating_visibility",
-                "is_eco_tourism_area"
-            ]
+            "true_hypothesis": "We hypothesize that marine areas with a combined calculated value, based on the third power of annual conservation funding, twice the square of the rating on commercial fishing restrictions, and three times the average tourist rating on the visibility of marine life, exceeding $25,000,000 are more likely to be designated as eco-tourism areas."
         }
     ]
 }

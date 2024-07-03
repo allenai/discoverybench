@@ -195,15 +195,7 @@
             "question": "Is there a relationship between the number of ticket pre-sales and the presence of a special guest appearance in the theater productions dataset?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "ticket_pre_sales",
-            "true_hypothesis": "The number of ticket pre-sales is determined by a calculation where a base value of 50 is increased to 100 if there is a special guest appearance and by 80 during holiday seasons. Additionally, the promotional discount is added to this value.",
-            "true_hypothesis_expr": "df.apply(lambda row: (100 if row['special_guest_appearance'] == True else 50) + (80 if row['holiday_season'] == True else 30) + row['promotional_discount'], axis=1)",
-            "relevant_cols": [
-                "special_guest_appearance",
-                "holiday_season",
-                "promotional_discount",
-                "ticket_pre_sales"
-            ]
+            "true_hypothesis": "The number of ticket pre-sales is determined by a calculation where a base value of 50 is increased to 100 if there is a special guest appearance and by 80 during holiday seasons. Additionally, the promotional discount is added to this value."
         }
     ]
 }

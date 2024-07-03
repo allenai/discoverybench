@@ -123,14 +123,7 @@
             "question": "What is the relationship between the total number of hours spent in advanced aerodynamics training by pilots and the cubes of this number divided by the total number of aviation safety seminars attended per year added by 1? Are there any thresholds that can be observed in relation to the pilot undertaking regular flight reviews?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "has_regular_flight_reviews",
-            "true_hypothesis": "Pilots who have spent a total number of hours in advanced aerodynamics training and their cubes divided by the number of aviation safety seminars attended per year added by 1, then compared if greater than 125, will undertake regular flight reviews as per aviation standards.",
-            "true_hypothesis_expr": "np.where(df['advanced_aerodynamics_training_hours']**3 / (df['aviation_safety_seminars_attended_per_year'] + 1) > 125, True, False)",
-            "relevant_cols": [
-                "advanced_aerodynamics_training_hours",
-                "aviation_safety_seminars_attended_per_year",
-                "has_regular_flight_reviews"
-            ]
+            "true_hypothesis": "Pilots who have spent a total number of hours in advanced aerodynamics training and their cubes divided by the number of aviation safety seminars attended per year added by 1, then compared if greater than 125, will undertake regular flight reviews as per aviation standards."
         }
     ]
 }

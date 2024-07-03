@@ -103,14 +103,7 @@
             "question": "Is there a relationship between the ratio of wildlife sightings per capita to tourism revenue and the presence of environmental NGOs in different regions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "ngo_presence",
-            "true_hypothesis": "Regions with a ratio of wildlife sightings per capita to tourism revenue greater than 0.02 are more likely to have an environmental NGO presence.",
-            "true_hypothesis_expr": "np.where(df['wildlife_sightings_per_capita'] / df['tourism_revenue'] > 0.02, True, False)",
-            "relevant_cols": [
-                "wildlife_sightings_per_capita",
-                "tourism_revenue",
-                "ngo_presence"
-            ]
+            "true_hypothesis": "Regions with a ratio of wildlife sightings per capita to tourism revenue greater than 0.02 are more likely to have an environmental NGO presence."
         }
     ]
 }

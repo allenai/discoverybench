@@ -91,15 +91,7 @@
             "question": "What is the relationship between the complexity of a cuisine and the diversity of ingredients used, the number of gastronomic techniques employed, and the presence of international flavors?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "cuisine_complexity",
-            "true_hypothesis": "The complexity of the cuisine a chef specializes in (cuisine_complexity) is calculated based on the diversity of ingredients used (ingredients_diversity_score), adjusted by the number of gastronomic techniques employed (gastronomic_techniques_count) and accounting for the presence of international flavors (uses_international_flavors).",
-            "true_hypothesis_expr": "df['ingredients_diversity_score'] + df['gastronomic_techniques_count']*2 + 3*(df['uses_international_flavors']==True)",
-            "relevant_cols": [
-                "ingredients_diversity_score",
-                "gastronomic_techniques_count",
-                "uses_international_flavors",
-                "cuisine_complexity"
-            ]
+            "true_hypothesis": "The complexity of the cuisine a chef specializes in (cuisine_complexity) is calculated based on the diversity of ingredients used (ingredients_diversity_score), adjusted by the number of gastronomic techniques employed (gastronomic_techniques_count) and accounting for the presence of international flavors (uses_international_flavors)."
         }
     ]
 }

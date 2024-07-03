@@ -127,18 +127,7 @@
             "question": "What is the relationship between the predicted snowfall and the combination of the region being semi-urban, use of high-efficiency appliances, percentile of solar energy usage in the locality, average temperature, altitude, and whether the home's energy storage capacity is below 500 kilowatt-hours?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "predicted_snowfall",
-            "true_hypothesis": "In regions classified as semi-urban, where high-efficiency appliances are used, with a high percentile ranking of solar energy usage in the locality and low average temperatures, the predicted snowfall increases by 20% when the combined rating, based on the energy-efficient appliances, solar energy usage percentile, temperature, altitude, and region type, is greater than 5 and the home's energy storage capacity is below 500 kilowatt-hours.",
-            "true_hypothesis_expr": "np.where((((5 + 20 * df['high_efficiency_appliances'] + 0.3 * df['locality_solar_energy_usage_percentile']) * 2 + 10 * ((df['average_temperature'] < 10) & (df['altitude'] > 1500)) * 2) + 20 * (df['region_type'] == 'semi-urban')) > 5) & (df.get('home_energy_storage_capacity', 0) < 500), df.get('snowfall', 0)*1.2, df.get('snowfall', 0))",
-            "relevant_cols": [
-                "region_type",
-                "high_efficiency_appliances",
-                "locality_solar_energy_usage_percentile",
-                "average_temperature",
-                "altitude",
-                "home_energy_storage_capacity",
-                "predicted_snowfall"
-            ]
+            "true_hypothesis": "In regions classified as semi-urban, where high-efficiency appliances are used, with a high percentile ranking of solar energy usage in the locality and low average temperatures, the predicted snowfall increases by 20% when the combined rating, based on the energy-efficient appliances, solar energy usage percentile, temperature, altitude, and region type, is greater than 5 and the home's energy storage capacity is below 500 kilowatt-hours."
         }
     ]
 }

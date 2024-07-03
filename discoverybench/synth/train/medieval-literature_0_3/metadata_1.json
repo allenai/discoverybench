@@ -87,14 +87,7 @@
             "question": "Is there a relationship between the richness of a knight's region in terms of epic poetry tradition, the knight's ability to recite verses, and the number of tournaments they participate in, and if so, what is the nature of this relationship?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "number_of_tourneys",
-            "true_hypothesis": "Knights' participation in tournaments increases as a function of the square of the score rating the richness of the knight's region in terms of epic poetry tradition and the ability to recite verses from epic poems. The number of tournaments they join is related to both factors in a mathematical model.",
-            "true_hypothesis_expr": "3*df['region_epic_tradition_score']**2 + 15*df['can_recite_verses']",
-            "relevant_cols": [
-                "region_epic_tradition_score",
-                "can_recite_verses",
-                "number_of_tourneys"
-            ]
+            "true_hypothesis": "Knights' participation in tournaments increases as a function of the square of the score rating the richness of the knight's region in terms of epic poetry tradition and the ability to recite verses from epic poems. The number of tournaments they join is related to both factors in a mathematical model."
         }
     ]
 }

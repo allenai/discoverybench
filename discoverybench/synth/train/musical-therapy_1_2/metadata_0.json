@@ -163,14 +163,7 @@
             "question": "What is the relationship between the frequency of interactive music session participation, diversity of musical interests, and the match of music genre preferences in therapy sessions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "music_genre_preference_match",
-            "true_hypothesis": "Patients who participate in interactive music sessions more than three times a week and express interest in at least five different musical genres are more likely to have their genre preferences matched in therapy sessions.",
-            "true_hypothesis_expr": "np.where((df['interactive_session_participation'] > 3) & (df['musical_interest_diversity'] >= 5), 1, 0)",
-            "relevant_cols": [
-                "musical_interest_diversity",
-                "interactive_session_participation",
-                "music_genre_preference_match"
-            ]
+            "true_hypothesis": "Patients who participate in interactive music sessions more than three times a week and express interest in at least five different musical genres are more likely to have their genre preferences matched in therapy sessions."
         }
     ]
 }

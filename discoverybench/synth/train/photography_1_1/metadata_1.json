@@ -179,16 +179,7 @@
             "question": "Is there a relationship between the weight of the camera and the average lens cost that influences the likelihood of photographers using smartphones as secondary devices?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "uses_smartphone_secondary",
-            "true_hypothesis": "Photographers who use lightweight cameras (less than 500 grams) and have a specific combination of outdoor and indoor shoot counts, average lens cost, and camera weight, are more likely to use smartphones as secondary devices. The likelihood of using smartphones as secondary devices is determined by these specific criteria.",
-            "true_hypothesis_expr": "np.where((df['camera_weight_grams'] < 500) & ((df['outdoor_shoots_count']**3 + 2*df['average_lens_cost'] - df['indoor_shoots_count']**2) > (df['outdoor_shoots_count']**3 + 2*df['average_lens_cost'] - df['indoor_shoots_count']**2).quantile(0.5)), True, False)",
-            "relevant_cols": [
-                "camera_weight_grams",
-                "outdoor_shoots_count",
-                "indoor_shoots_count",
-                "average_lens_cost",
-                "uses_smartphone_secondary"
-            ]
+            "true_hypothesis": "Photographers who use lightweight cameras (less than 500 grams) and have a specific combination of outdoor and indoor shoot counts, average lens cost, and camera weight, are more likely to use smartphones as secondary devices. The likelihood of using smartphones as secondary devices is determined by these specific criteria."
         }
     ]
 }

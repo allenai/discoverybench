@@ -83,15 +83,7 @@
             "question": "Is there a relationship between the frequency of clear skies and the average nighttime visibility in ancient astronomy datasets?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "average_nighttime_visibility",
-            "true_hypothesis": "Civilizations located in regions with higher percentage of ancient observatories and a high number of clear nights per year, along with frequent clear skies, are likely to have a higher average nighttime visibility score, where the visibility score is calculated based on a specific formula involving these factors.",
-            "true_hypothesis_expr": "np.where(((df['percentage_of_ancient_observatories'] ** 2) / 100 + 2 * df['number_of_clear_nights_per_year']) % 10 + 1 + df['frequency_of_clear_skies'] * 2 > 15, 10 - ((df['percentage_of_ancient_observatories'] ** 2) / 100 + 2 * df['number_of_clear_nights_per_year']) % 10 + 1, df['frequency_of_clear_skies'])",
-            "relevant_cols": [
-                "frequency_of_clear_skies",
-                "percentage_of_ancient_observatories",
-                "number_of_clear_nights_per_year",
-                "average_nighttime_visibility"
-            ]
+            "true_hypothesis": "Civilizations located in regions with higher percentage of ancient observatories and a high number of clear nights per year, along with frequent clear skies, are likely to have a higher average nighttime visibility score, where the visibility score is calculated based on a specific formula involving these factors."
         }
     ]
 }

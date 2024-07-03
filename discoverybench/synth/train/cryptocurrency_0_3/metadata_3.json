@@ -107,14 +107,7 @@
             "question": "What is the relationship between the square of the number of trading platforms used, the count of types of cryptocurrencies invested, and the investment experience years in the provided dataset?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "investment_experience_years",
-            "true_hypothesis": "The square of the number of trading platforms used plus the count of types of cryptocurrencies invested explains the investment experience years. More trading platforms utilized and a higher number of cryptocurrencies invested in result in an increase in the investment experience years.",
-            "true_hypothesis_expr": "df['number_of_trading_platforms']**2 + df['types_of_cryptocurrencies_invested']",
-            "relevant_cols": [
-                "number_of_trading_platforms",
-                "types_of_cryptocurrencies_invested",
-                "investment_experience_years"
-            ]
+            "true_hypothesis": "The square of the number of trading platforms used plus the count of types of cryptocurrencies invested explains the investment experience years. More trading platforms utilized and a higher number of cryptocurrencies invested in result in an increase in the investment experience years."
         }
     ]
 }

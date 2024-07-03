@@ -139,14 +139,7 @@
             "question": "Is there a relationship between the average age of neighbors and a composite score calculated from the percentage of nearby ancient structures using durable construction materials and the restoration presence?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "average_age_of_neighbors",
-            "true_hypothesis": "The average age of neighbors can be estimated by multiplying the percentage of nearby ancient structures that utilize highly durable construction materials by 50 and adding the restoration presence indicator multiplied by 350.",
-            "true_hypothesis_expr": "50 * df['durability_material_percentage'] + 350 * df['restoration_presence']",
-            "relevant_cols": [
-                "durability_material_percentage",
-                "restoration_presence",
-                "average_age_of_neighbors"
-            ]
+            "true_hypothesis": "The average age of neighbors can be estimated by multiplying the percentage of nearby ancient structures that utilize highly durable construction materials by 50 and adding the restoration presence indicator multiplied by 350."
         }
     ]
 }

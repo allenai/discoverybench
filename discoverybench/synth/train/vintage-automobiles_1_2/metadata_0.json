@@ -155,15 +155,7 @@
             "question": "What is the relationship between the performance rating of vintage automobiles and the market rarity percentile, the presence of a racing tradition in the country of origin, and whether the car is a convertible model?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "performance_rating",
-            "true_hypothesis": "The performance rating of automobiles is calculated as 10 plus 90% of the market rarity percentile, plus 10 times if the car's country has a racing tradition, plus 5 times if the car is a convertible model.",
-            "true_hypothesis_expr": "10 + (0.9 * df['market_rarity_percentile']) + (10 * df['country_has_racing_tradition']) + (5 * df['is_convertible'])",
-            "relevant_cols": [
-                "market_rarity_percentile",
-                "country_has_racing_tradition",
-                "is_convertible",
-                "performance_rating"
-            ]
+            "true_hypothesis": "The performance rating of automobiles is calculated as 10 plus 90% of the market rarity percentile, plus 10 times if the car's country has a racing tradition, plus 5 times if the car is a convertible model."
         }
     ]
 }

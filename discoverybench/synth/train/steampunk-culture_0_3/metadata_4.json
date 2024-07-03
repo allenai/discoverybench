@@ -115,14 +115,7 @@
             "question": "Is there a relationship between residence type, technology fair attendance, and the distance to the nearest major steampunk event according to the dataset?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "distance_to_nearest_event",
-            "true_hypothesis": "The distance to the nearest major steampunk event decreases by a fixed amount based on the participant's residence type, with urban residents being 300 km closer, suburban residents being 700 km closer, and others being 1500 km closer. Additionally, the distance decreases by 30 km for each technology fair attended by the participant.",
-            "true_hypothesis_expr": "np.where(df['residence_type'] == 'urban', 300, np.where(df['residence_type'] == 'suburban', 700, 1500)) - df['technology_fair_attendance'] * 30",
-            "relevant_cols": [
-                "residence_type",
-                "technology_fair_attendance",
-                "distance_to_nearest_event"
-            ]
+            "true_hypothesis": "The distance to the nearest major steampunk event decreases by a fixed amount based on the participant's residence type, with urban residents being 300 km closer, suburban residents being 700 km closer, and others being 1500 km closer. Additionally, the distance decreases by 30 km for each technology fair attended by the participant."
         }
     ]
 }

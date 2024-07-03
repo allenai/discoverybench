@@ -163,15 +163,7 @@
             "question": "Is there a relationship between the combination of literary award status, current theme popularity, and author recognition factor and the likelihood of a book having a movie adaptation?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "has_movie_adaptation",
-            "true_hypothesis": "Books are more likely to have a movie adaptation if the combined score derived from the literary award status and current theme popularity, adjusted by the author recognition factor, exceeds 2.",
-            "true_hypothesis_expr": "np.where((10 * df['literary_award_status'] + df['current_theme_popularity']) / df['author_recognition_factor'] > 2, True, False)",
-            "relevant_cols": [
-                "author_recognition_factor",
-                "literary_award_status",
-                "current_theme_popularity",
-                "has_movie_adaptation"
-            ]
+            "true_hypothesis": "Books are more likely to have a movie adaptation if the combined score derived from the literary award status and current theme popularity, adjusted by the author recognition factor, exceeds 2."
         }
     ]
 }

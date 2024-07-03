@@ -155,14 +155,7 @@
             "question": "What is the relationship between the distance to the nearest village and the material durability score of the structures, as well as whether they are in historical conservation areas?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "distance_to_nearest_village_km",
-            "true_hypothesis": "The distance to the nearest village is influenced by the material durability of the structure and whether it is located within a declared historical conservation area. The distance is calculated by subtracting three times the material durability score from 50 and subtracting 10 if the structure is within a historical conservation area. This implies that structures made of more durable materials and located in conservation areas may be closer to villages based on the combined influence of material durability and location in a conservation area on the distance to the nearest village.",
-            "true_hypothesis_expr": "50 - (df['material_durability_score'] * 3 + (df['in_historical_conservation_area'] * 10))",
-            "relevant_cols": [
-                "in_historical_conservation_area",
-                "material_durability_score",
-                "distance_to_nearest_village_km"
-            ]
+            "true_hypothesis": "The distance to the nearest village is influenced by the material durability of the structure and whether it is located within a declared historical conservation area. The distance is calculated by subtracting three times the material durability score from 50 and subtracting 10 if the structure is within a historical conservation area. This implies that structures made of more durable materials and located in conservation areas may be closer to villages based on the combined influence of material durability and location in a conservation area on the distance to the nearest village."
         }
     ]
 }

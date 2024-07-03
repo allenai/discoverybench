@@ -111,19 +111,7 @@
             "question": "Is there a relationship between participant age, average solve time, preference for quick tasks, variety in encountered difficulty levels, and logical inclination with the accuracy rate in solving cryptic puzzles?",
             "question_type": "general",
             "difficulty": 4,
-            "target_col": "accuracy_rate",
-            "true_hypothesis": "Participants aged between 25-34, with an average solve time of 10 minutes or less, enjoying variety in puzzles, preferring quick tasks, and having a logical inclination, tend to excel in wordplay puzzles, showcasing a higher accuracy rate compared to other age groups.",
-            "true_hypothesis_expr": "np.where((df['participant_age'] >= 25) & (df['participant_age'] <= 34) & (np.where((((np.where((df['average_solve_time'] <= 10) & np.where((df['number_of_puzzles_solved'] > 50) & (df['difficulty_levels_encountered'] > 3), True, False), 3, 7)) > df['creative_preference_score']) & df['prefers_quick_tasks']), 'numeric', np.where(np.where((df['average_solve_time'] <= 10) & np.where((df['number_of_puzzles_solved'] > 50) & (df['difficulty_levels_encountered'] > 3), True, False), 3, 7) > df['logical_preference_score'], 'wordplay', 'visual')) == 'wordplay'), df['participant_age'], 0)",
-            "relevant_cols": [
-                "logical_preference_score",
-                "prefers_quick_tasks",
-                "average_solve_time",
-                "number_of_puzzles_solved",
-                "difficulty_levels_encountered",
-                "participant_age",
-                "accuracy_rate",
-                "creative_preference_score"
-            ]
+            "true_hypothesis": "Participants aged between 25-34, with an average solve time of 10 minutes or less, enjoying variety in puzzles, preferring quick tasks, and having a logical inclination, tend to excel in wordplay puzzles, showcasing a higher accuracy rate compared to other age groups."
         }
     ]
 }

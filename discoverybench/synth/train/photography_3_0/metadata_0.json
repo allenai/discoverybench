@@ -195,16 +195,7 @@
             "question": "Is there a relationship between the camera resolution and the likelihood of using High Dynamic Range (HDR) and manual white balance techniques, when considering smartphone usage as a secondary device?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "advanced_technique_usage",
-            "true_hypothesis": "Photographers who use cameras with more than 20 megapixels and smartphones as a secondary device are 50% more likely to experiment with a combination of High Dynamic Range (HDR) and manual white balance techniques, when compared to others, regardless of their familiarity with photography.",
-            "true_hypothesis_expr": "np.where((df['camera_megapixels'] > 20) & df['uses_smartphone_secondary'], 0.5*(df['technique_HDR'].astype(float) + df['technique_manual_white_balance'].astype(float)), 0)",
-            "relevant_cols": [
-                "technique_HDR",
-                "advanced_technique_usage",
-                "camera_megapixels",
-                "uses_smartphone_secondary",
-                "technique_manual_white_balance"
-            ]
+            "true_hypothesis": "Photographers who use cameras with more than 20 megapixels and smartphones as a secondary device are 50% more likely to experiment with a combination of High Dynamic Range (HDR) and manual white balance techniques, when compared to others, regardless of their familiarity with photography."
         }
     ]
 }

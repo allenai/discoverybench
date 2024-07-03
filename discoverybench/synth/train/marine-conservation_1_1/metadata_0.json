@@ -139,21 +139,7 @@
             "question": "Do marine protected areas with extensive conservation funding, stringent commercial fishing restrictions, and robust local awareness campaigns coupled with effective fishery compliance, research grants, and strong international cooperation exhibit a significantly higher biodiversity as measured by the number of species present?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "number_of_species",
-            "true_hypothesis": "In marine protected areas with high conservation funding, strict commercial fishing regulations, and active local awareness campaigns, the increasing presence of marine conservation measures enhances the biodiversity as indicated by the number of species observed. This correlation is especially prominent when these conservation efforts are coupled with effective fishery compliance, research grants, and strong international cooperation.",
-            "true_hypothesis_expr": "np.where(np.where((df['conservation_funding']**3 + 2*df['commercial_fishing_restrictions']**2 + df['average_tourist_rating_visibility']*3) > 25000000, True, False), df['local_awareness_campaigns'] / df['fishing_industry_presence'] * np.where(df['is_marine_conservation_zone'], 500, 250) * 0.05 + (df['fishery_compliance_score'] * 0.5 + df['research_grants_count'] * 1.8 + 20 * (df['has_international_cooperation'] == True)) * 50, 0)",
-            "relevant_cols": [
-                "has_international_cooperation",
-                "commercial_fishing_restrictions",
-                "local_awareness_campaigns",
-                "fishing_industry_presence",
-                "is_marine_conservation_zone",
-                "fishery_compliance_score",
-                "research_grants_count",
-                "conservation_funding",
-                "average_tourist_rating_visibility",
-                "number_of_species"
-            ]
+            "true_hypothesis": "In marine protected areas with high conservation funding, strict commercial fishing regulations, and active local awareness campaigns, the increasing presence of marine conservation measures enhances the biodiversity as indicated by the number of species observed. This correlation is especially prominent when these conservation efforts are coupled with effective fishery compliance, research grants, and strong international cooperation."
         }
     ]
 }

@@ -131,14 +131,7 @@
             "question": "Is there a relationship between the number of registered fishing vessels and the count of protected marine reserves in a marine conservation area that affects the amount of active research grants allocated for environmental studies?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "research_grants_count",
-            "true_hypothesis": "We hypothesize that a higher number of registered fishing vessels and a greater count of protected marine reserves tend to increase the number of active environmental research grants in the marine area.",
-            "true_hypothesis_expr": "50 - df['fishing_vessels_count']**0.5 + 2.5 * df['protected_marine_reserves_count']",
-            "relevant_cols": [
-                "fishing_vessels_count",
-                "protected_marine_reserves_count",
-                "research_grants_count"
-            ]
+            "true_hypothesis": "We hypothesize that a higher number of registered fishing vessels and a greater count of protected marine reserves tend to increase the number of active environmental research grants in the marine area."
         }
     ]
 }

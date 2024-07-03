@@ -71,17 +71,7 @@
             "question": "Is there a relationship between the presence of stone structures along with specific oceanic and site conditions and the existence of preserved road layouts at underwater archaeological sites?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "preserved_road_layout",
-            "true_hypothesis": "In locations where the combination of ocean current strength, the existence of a protected marine area with low sediment accumulation rate, and specific site depth considerations are met along with stone structures present, preserved road layouts are indicated with 'yes' at underwater archaeological sites.",
-            "true_hypothesis_expr": "np.where(((np.where((df['ocean_current_strength'] >= 2) & (df['protected_marine_area'] == True) & (df['sediment_accumulation_rate'] < 5), True, False)) * 20 - df['depth_of_site'] * 0.5 > 10) & (df['stone_structures_present']), 'yes', 'no')",
-            "relevant_cols": [
-                "stone_structures_present",
-                "depth_of_site",
-                "ocean_current_strength",
-                "protected_marine_area",
-                "sediment_accumulation_rate",
-                "preserved_road_layout"
-            ]
+            "true_hypothesis": "In locations where the combination of ocean current strength, the existence of a protected marine area with low sediment accumulation rate, and specific site depth considerations are met along with stone structures present, preserved road layouts are indicated with 'yes' at underwater archaeological sites."
         }
     ]
 }

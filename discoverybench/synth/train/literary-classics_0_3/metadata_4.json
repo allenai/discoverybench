@@ -175,15 +175,7 @@
             "question": "Can the probability of historical context integration in literary classics be estimated based on the narrative complexity and symbol richness scores?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "allegory_usage",
-            "true_hypothesis": "The likelihood of allegory usage in literary classics can be predicted based on an average score derived from the narrative complexity and symbol richness. If this average score exceeds 60, the indicator for historical context integration is used; otherwise, the indicator for allegory usage is set to False.",
-            "true_hypothesis_expr": "np.where((df['narrative_complexity_score'] + df['symbol_richness_score']) / 2 > 60, ~df['historical_context_integration'], False)",
-            "relevant_cols": [
-                "narrative_complexity_score",
-                "symbol_richness_score",
-                "historical_context_integration",
-                "allegory_usage"
-            ]
+            "true_hypothesis": "The likelihood of allegory usage in literary classics can be predicted based on an average score derived from the narrative complexity and symbol richness. If this average score exceeds 60, the indicator for historical context integration is used; otherwise, the indicator for allegory usage is set to False."
         }
     ]
 }

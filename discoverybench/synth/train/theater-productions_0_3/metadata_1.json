@@ -195,14 +195,7 @@
             "question": "Is there a relationship between the number of past successful plays, the average weekly rehearsal hours, and the decision to involve direct audience interaction in theater productions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "interactive_engagement_binary",
-            "true_hypothesis": "The new hypothesis indicates that theater groups with more than 20 prior successful plays (past_success_count) and average more than 20 rehearsal hours per week (weekly_rehearsal_hours) are more likely to choose to involve direct audience interaction (interactive_engagement_binary).",
-            "true_hypothesis_expr": "np.where((df['past_success_count'] > 20) & (df['weekly_rehearsal_hours'] > 20), True, False)",
-            "relevant_cols": [
-                "past_success_count",
-                "weekly_rehearsal_hours",
-                "interactive_engagement_binary"
-            ]
+            "true_hypothesis": "The new hypothesis indicates that theater groups with more than 20 prior successful plays (past_success_count) and average more than 20 rehearsal hours per week (weekly_rehearsal_hours) are more likely to choose to involve direct audience interaction (interactive_engagement_binary)."
         }
     ]
 }

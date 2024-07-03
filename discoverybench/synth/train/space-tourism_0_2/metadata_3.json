@@ -183,19 +183,7 @@
             "question": "Is there a relationship between a space tourist's personal interest in space and the factors of having travel insurance, completion of space travel training, interest in space missions, percentage of population with space education, government space budget percentage of GDP, booking language, and length of stay in the space hotel?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "personal_interest_in_space",
-            "true_hypothesis": "The personal interest in space of a space tourist can be calculated by starting with a base value of 5 and then adding a component based on travel insurance, completed space travel training, and interest in space missions. Further, it considers the percentage of population with space education and government space budget allocation. The algorithm also accounts for the booking language and the length of stay in the space hotel.",
-            "true_hypothesis_expr": "5 + np.where((df['has_travel_insurance'] & df['completed_space_travel_training']) & (df['interest_in_space_missions'] >= 7), True, False)*2 + (50 - (df['percent_population_with_space_education'] // 2 + df['government_space_budget_percent_gdp'] * 5))*0.2 + np.where((df['booking_language_english'] == True) & (df['length_of_stay_days'] > 10), True, False)*3*((50 - (df['percent_population_with_space_education'] // 2 + df['government_space_budget_percent_gdp'] * 5))*0.1)",
-            "relevant_cols": [
-                "has_travel_insurance",
-                "completed_space_travel_training",
-                "interest_in_space_missions",
-                "percent_population_with_space_education",
-                "government_space_budget_percent_gdp",
-                "booking_language_english",
-                "length_of_stay_days",
-                "personal_interest_in_space"
-            ]
+            "true_hypothesis": "The personal interest in space of a space tourist can be calculated by starting with a base value of 5 and then adding a component based on travel insurance, completed space travel training, and interest in space missions. Further, it considers the percentage of population with space education and government space budget allocation. The algorithm also accounts for the booking language and the length of stay in the space hotel."
         }
     ]
 }

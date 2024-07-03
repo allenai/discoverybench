@@ -139,16 +139,7 @@
             "question": "Is there a relationship between emotional stability score, live classical concert attendance, relaxation level, emotional status positivity, and patient gender in the context of musical therapy?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "patient_gender",
-            "true_hypothesis": "Patients with a high emotional stability score and a history of live classical concert attendance, combined with a significant positive emotional status and relaxation level during the session, are more likely to be female.",
-            "true_hypothesis_expr": "np.where((np.where(np.where((df['emotional_stability_score']**2 + df['live_classical_concert_attendance']) > 0, True, False) & ((df['relaxation_level']**3 + (df['relaxation_level'] * df['emotional_status_positive']*5)) ** 2 > 25), True, False) == True) & (df.get('relaxation_level_post_session', 0) > 7), 'female', 'other')",
-            "relevant_cols": [
-                "emotional_stability_score",
-                "live_classical_concert_attendance",
-                "relaxation_level",
-                "emotional_status_positive",
-                "patient_gender"
-            ]
+            "true_hypothesis": "Patients with a high emotional stability score and a history of live classical concert attendance, combined with a significant positive emotional status and relaxation level during the session, are more likely to be female."
         }
     ]
 }

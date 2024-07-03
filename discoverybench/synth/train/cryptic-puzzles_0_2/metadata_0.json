@@ -119,15 +119,7 @@
             "question": "What is the relationship between average solve time, number of puzzles solved, difficulty levels encountered, and creative preference score in the cryptic puzzles domain?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "creative_preference_score",
-            "true_hypothesis": "Participants who quickly solve time-bound puzzles after solving more than 50 puzzles and encountering more than 3 difficulty levels have a creative preference score of 3, indicating a moderate inclination towards creative thinking.",
-            "true_hypothesis_expr": "np.where((df['average_solve_time'] <= 10) & (np.where((df['number_of_puzzles_solved'] > 50) & (df['difficulty_levels_encountered'] > 3), True, False)), 3, 7)",
-            "relevant_cols": [
-                "average_solve_time",
-                "number_of_puzzles_solved",
-                "difficulty_levels_encountered",
-                "creative_preference_score"
-            ]
+            "true_hypothesis": "Participants who quickly solve time-bound puzzles after solving more than 50 puzzles and encountering more than 3 difficulty levels have a creative preference score of 3, indicating a moderate inclination towards creative thinking."
         }
     ]
 }

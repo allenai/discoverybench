@@ -215,14 +215,7 @@
             "question": "Is there a relationship between the presence of illustrations in a book and the total number of pages, considering the number of chapters?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "number_of_pages",
-            "true_hypothesis": "The number of pages in a book is calculated by multiplying the number of chapters by 20, adding 30 if the book has illustrations, and then adding 100.",
-            "true_hypothesis_expr": "df['number_of_chapters'] * 20 + np.where(df['has_illustrations'], 30, 0) + 100",
-            "relevant_cols": [
-                "has_illustrations",
-                "number_of_chapters",
-                "number_of_pages"
-            ]
+            "true_hypothesis": "The number of pages in a book is calculated by multiplying the number of chapters by 20, adding 30 if the book has illustrations, and then adding 100."
         }
     ]
 }

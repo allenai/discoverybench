@@ -151,16 +151,7 @@
             "question": "Is there a relationship between a vehicle's market rarity percentile and its engine size?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "engine_size",
-            "true_hypothesis": "Vehicles with a higher performance rating have larger engine sizes. Additionally, cars with a higher region performance index, rarity in the market, presence in a country with a racing tradition, and convertibility tend to have larger engine sizes.",
-            "true_hypothesis_expr": "0.01 * (10 + (0.9 * df['market_rarity_percentile']) + (10 * df['country_has_racing_tradition']) + (5 * df['is_convertible'])) + 0.02 * df.get('region_performance_index', 0) + 0.03 * df.get('top_performance_percentile', 0)",
-            "relevant_cols": [
-                "market_rarity_percentile",
-                "region_performance_index",
-                "country_has_racing_tradition",
-                "is_convertible",
-                "engine_size"
-            ]
+            "true_hypothesis": "Vehicles with a higher performance rating have larger engine sizes. Additionally, cars with a higher region performance index, rarity in the market, presence in a country with a racing tradition, and convertibility tend to have larger engine sizes."
         }
     ]
 }

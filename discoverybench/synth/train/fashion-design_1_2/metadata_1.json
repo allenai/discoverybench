@@ -95,14 +95,7 @@
             "question": "What is the relationship between the designers' origin country's GDP per capita, the presence of international investors, and the label 'is_in_europe' in the fashion design dataset?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "is_in_europe",
-            "true_hypothesis": "The combination of the designers' origin country's GDP per capita above 30,000 and the presence of international investors positively correlates with the label 'is_in_europe'.",
-            "true_hypothesis_expr": "np.where((df['designer_origin_gdp_per_capita'] > 30000) & (df['international_investor_presence'] == True), True, False)",
-            "relevant_cols": [
-                "designer_origin_gdp_per_capita",
-                "international_investor_presence",
-                "is_in_europe"
-            ]
+            "true_hypothesis": "The combination of the designers' origin country's GDP per capita above 30,000 and the presence of international investors positively correlates with the label 'is_in_europe'."
         }
     ]
 }

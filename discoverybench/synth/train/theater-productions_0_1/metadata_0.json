@@ -171,26 +171,7 @@
             "question": "Is there a relationship between the average scene complexity and the number of lighting changes per scene in theater productions?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "lighting_changes_per_scene",
-            "true_hypothesis": "Productions with higher complexity, historical accuracy focus, and successful tracks, targeted towards families, and with experienced lead actors, tend to have a higher number of lighting changes per scene.",
-            "true_hypothesis_expr": "np.floor((np.where(df['target_audience_family'], ((df['licensed_content'].astype(int) / (df['original_content'].astype(int) + 0.1)) + df['lead_actor_experience'] * 0.2 + df['historical_accuracy_focus'].astype(int) * 2)**3 + 10*np.where((df['past_success_count'] > 20) & (df['weekly_rehearsal_hours'] > 20), True, False)*((df['licensed_content'].astype(int) / (df['original_content'].astype(int) + 0.1)) + df['lead_actor_experience'] * 0.2 + df['historical_accuracy_focus'].astype(int) * 2), 0.5*((df['licensed_content'].astype(int) / (df['original_content'].astype(int) + 0.1)) + df['lead_actor_experience'] * 0.2 + df['historical_accuracy_focus'].astype(int) * 2)**3 + 5*np.where((df['past_success_count'] > 20) & (df['weekly_rehearsal_hours'] > 20), True, False)*((df['licensed_content'].astype(int) / (df['original_content'].astype(int) + 0.1)) + df['lead_actor_experience'] * 0.2 + df['historical_accuracy_focus'].astype(int) * 2), 0.5*((df['licensed_content'].astype(int) / (df['original_content'].astype(int) + 0.1)) + np.where((df['play_genre'] == 'classical') & (df['average_scene_complexity'] >= 7), 5, 2) * 0.2 + df['historical_accuracy_focus'].astype(int) * 2)**3 + 5*np.where((df['past_success_count'] > 20) & (df['weekly_rehearsal_hours'] > 20), True, False)*((df['licensed_content'].astype(int) / (df['original_content'].astype(int) + 0.1)) + np.where((df['play_genre'] == 'classical') & (df['average_scene_complexity'] >= 7), 5, 2) * 0.2 + df['historical_accuracy_focus'].astype(int) * 2))**2) / 20 + 30 * np.where(((df['set_complexity'] ** 2) * df['venue_capacity'] / (np.where((df['play_genre'] == 'classical') & (df['average_scene_complexity'] >= 7), 5, 2)) / (df['number_of_performance_days'] * 15000 + (np.where(df['season_of_production'] == 'summer', 20000, 0) + np.where(df['season_of_production'] == 'winter', 10000, 0))) ) * ( (df['number_of_complex_roles'] * 15000 + (np.where(df['season_of_production'] == 'summer', 20000, 0) + np.where(df['season_of_production'] == 'winter', 10000, 0))) / 100000) > 40, True, False))",
-            "relevant_cols": [
-                "target_audience_family",
-                "licensed_content",
-                "original_content",
-                "lead_actor_experience",
-                "historical_accuracy_focus",
-                "past_success_count",
-                "weekly_rehearsal_hours",
-                "set_complexity",
-                "venue_capacity",
-                "number_of_performance_days",
-                "play_genre",
-                "average_scene_complexity",
-                "number_of_complex_roles",
-                "season_of_production",
-                "lighting_changes_per_scene"
-            ]
+            "true_hypothesis": "Productions with higher complexity, historical accuracy focus, and successful tracks, targeted towards families, and with experienced lead actors, tend to have a higher number of lighting changes per scene."
         }
     ]
 }

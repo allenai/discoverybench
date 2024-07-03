@@ -139,14 +139,7 @@
             "question": "Is there a relationship between the relaxation level of patients in musical therapy and their cognitive response scores when considering their emotional status?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "cognitive_response_score",
-            "true_hypothesis": "Patients exhibiting a cubic relationship between relaxation level and cognitive response scores, where higher relaxation levels combined with positive emotional status reports result in higher cognitive response scores. These factors are anticipated to interact non-linearly, with a stronger effect on cognitive response scores when relaxation and positive emotions both increase simultaneously.",
-            "true_hypothesis_expr": "df['relaxation_level']**3 + (df['relaxation_level'] * df['emotional_status_positive']*5)",
-            "relevant_cols": [
-                "relaxation_level",
-                "emotional_status_positive",
-                "cognitive_response_score"
-            ]
+            "true_hypothesis": "Patients exhibiting a cubic relationship between relaxation level and cognitive response scores, where higher relaxation levels combined with positive emotional status reports result in higher cognitive response scores. These factors are anticipated to interact non-linearly, with a stronger effect on cognitive response scores when relaxation and positive emotions both increase simultaneously."
         }
     ]
 }

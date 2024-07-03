@@ -119,17 +119,7 @@
             "question": "What is the relationship between a pilot's education level, international flights frequency, years with their current airline, airline fleet technology level, previous navigation errors, years of flying experience, and the adjusted flying experience according to the true hypothesis?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "years_of_flying_experience",
-            "true_hypothesis": "Pilots with a PhD in education level have 20 years of flying experience, pilots with a Master's degree have 15 years, pilots with a Bachelor's degree have 10 years, and pilots with an Associate degree have 5 years. This experience is further adjusted based on their international flights frequency, advanced navigation training, previous navigation errors, and a base value of 10.",
-            "true_hypothesis_expr": "np.where(df['education_level'] == 'PhD', 20, np.where(df['education_level'] == 'Master', 15, np.where(df['education_level'] == 'Bachelor', 10, np.where(df['education_level'] == 'Associate', 5, 0)))) + df['international_flights_frequency']**0.5 + 10*np.where((df['years_with_current_airline'] > 5) & (df['airline_fleet_technology_level'] == 'High') & (df['previous_navigation_errors'] > 5), True, False).astype(int)",
-            "relevant_cols": [
-                "education_level",
-                "international_flights_frequency",
-                "years_with_current_airline",
-                "airline_fleet_technology_level",
-                "previous_navigation_errors",
-                "years_of_flying_experience"
-            ]
+            "true_hypothesis": "Pilots with a PhD in education level have 20 years of flying experience, pilots with a Master's degree have 15 years, pilots with a Bachelor's degree have 10 years, and pilots with an Associate degree have 5 years. This experience is further adjusted based on their international flights frequency, advanced navigation training, previous navigation errors, and a base value of 10."
         }
     ]
 }

@@ -107,14 +107,7 @@
             "question": "What is the relationship between the origin regions of knights, their participation in tournaments, the number of accolades they have, and the presence of epic storytelling centers?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "regions_with_epic_centers",
-            "true_hypothesis": "Knights who have participated in more tournaments and have accrued a high number of accolades are classified as originating from regions known for significant epic literature and storytelling when the product of their accolade count and number of tournaments exceeds 25.",
-            "true_hypothesis_expr": "np.where(df['number_of_tourneys'] * df['accolade_count'] > 25, True, False)",
-            "relevant_cols": [
-                "accolade_count",
-                "number_of_tourneys",
-                "regions_with_epic_centers"
-            ]
+            "true_hypothesis": "Knights who have participated in more tournaments and have accrued a high number of accolades are classified as originating from regions known for significant epic literature and storytelling when the product of their accolade count and number of tournaments exceeds 25."
         }
     ]
 }

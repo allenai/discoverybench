@@ -123,21 +123,7 @@
             "question": "Is there a relationship between the length of the music therapy sessions, the difference in relaxation levels during and after music, and the adjusted wellness score of patients with diverse musical interests?",
             "question_type": "general",
             "difficulty": 4,
-            "target_col": "adjusted_wellness_score",
-            "true_hypothesis": "Patients who listen to classical music during sessions lasting at least 30 minutes, with higher relaxation during music compared to after-music disturbance by more than 25 points, an initial emotional state rating combined with session enjoyment and work hour access satisfaction, and having diverse musical interests, achieve an adjusted wellness score calculated using a formula considering their self-reported wellness score along with other session related factors.",
-            "true_hypothesis_expr": "np.where((df.get('music_type') == 'classical') & (40 + df['relaxation_during_music'] - df['disturbance_after_music'] > 65) & (df['session_duration'] >= 30) & (((df['initial_emotional_state_rating'] + (np.where((df['session_enjoyment_rating'] + 5 * df['non_work_hour_access'].astype(int) > 3) & (df['musical_interest_diversity'] >= 5), 1, 0))*2 + (df['patient_care_unit'] == 'ICU').astype(int)*3) >= 3), df['self_reported_wellness_score'] * 1.4, df['self_reported_wellness_score'])",
-            "relevant_cols": [
-                "session_duration",
-                "self_reported_wellness_score",
-                "relaxation_during_music",
-                "disturbance_after_music",
-                "initial_emotional_state_rating",
-                "patient_care_unit",
-                "musical_interest_diversity",
-                "session_enjoyment_rating",
-                "non_work_hour_access",
-                "adjusted_wellness_score"
-            ]
+            "true_hypothesis": "Patients who listen to classical music during sessions lasting at least 30 minutes, with higher relaxation during music compared to after-music disturbance by more than 25 points, an initial emotional state rating combined with session enjoyment and work hour access satisfaction, and having diverse musical interests, achieve an adjusted wellness score calculated using a formula considering their self-reported wellness score along with other session related factors."
         }
     ]
 }

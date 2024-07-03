@@ -115,14 +115,7 @@
             "question": "Is there a relationship between the amount of steampunk literature written and the amount of steampunk art created by participants?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "has_steampunk_hobby",
-            "true_hypothesis": "Participants who have a ratio of steampunk literature written to steampunk art created greater than 0.5 are likely to have a hobby in steampunk culture.",
-            "true_hypothesis_expr": "np.where((df['steampunk_literature_written'] / (df['steampunk_art_created'] + 1)) > 0.5, True, False)",
-            "relevant_cols": [
-                "steampunk_literature_written",
-                "steampunk_art_created",
-                "has_steampunk_hobby"
-            ]
+            "true_hypothesis": "Participants who have a ratio of steampunk literature written to steampunk art created greater than 0.5 are likely to have a hobby in steampunk culture."
         }
     ]
 }

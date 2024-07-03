@@ -119,18 +119,7 @@
             "question": "Is there a relationship between the average number of tourist visits per year and the material usage ratio in historic structures?",
             "question_type": "general",
             "difficulty": 4,
-            "target_col": "material_usage_ratio",
-            "true_hypothesis": "Structures with a combination of lower average tourist visits per year, higher material durability scores, being in a historical conservation area, and not being used for ceremonial purposes tend to have a higher material usage ratio, possibly due to better material quality and preservation efforts in historical areas.",
-            "true_hypothesis_expr": "((df['average_tourist_visits_per_year'] / 5000) + ((50 - ((np.where(df['structure_age'] > 500, df['climate_harshness_score'] * 1.1 + 2, df['climate_harshness_score'] * 0.9 + 2) * 3 + (df['in_historical_conservation_area'] * 10))) / 10 + (df['ceremonial_use'].astype(int)) * 5).clip(1, 100) / df['height_meters']",
-            "relevant_cols": [
-                "height_meters",
-                "average_tourist_visits_per_year",
-                "ceremonial_use",
-                "in_historical_conservation_area",
-                "structure_age",
-                "climate_harshness_score",
-                "material_usage_ratio"
-            ]
+            "true_hypothesis": "Structures with a combination of lower average tourist visits per year, higher material durability scores, being in a historical conservation area, and not being used for ceremonial purposes tend to have a higher material usage ratio, possibly due to better material quality and preservation efforts in historical areas."
         }
     ]
 }

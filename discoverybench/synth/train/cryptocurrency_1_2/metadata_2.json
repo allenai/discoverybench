@@ -123,15 +123,7 @@
             "question": "Is there a relationship between the risk tolerance score and a combination of investment experience, trading frequency, and the use of decentralized financial services in the cryptocurrency domain?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "risk_tolerance",
-            "true_hypothesis": "Individuals with a higher number of years of investment experience squared and who participate in frequent crypto trading, as well as use decentralized financial services, tend to have a higher risk tolerance score.",
-            "true_hypothesis_expr": "df['investment_experience_years']**2 + 0.1 * df['trading_frequency_per_month'] + 3 * df['uses_defi_services'].astype(int)",
-            "relevant_cols": [
-                "uses_defi_services",
-                "trading_frequency_per_month",
-                "investment_experience_years",
-                "risk_tolerance"
-            ]
+            "true_hypothesis": "Individuals with a higher number of years of investment experience squared and who participate in frequent crypto trading, as well as use decentralized financial services, tend to have a higher risk tolerance score."
         }
     ]
 }

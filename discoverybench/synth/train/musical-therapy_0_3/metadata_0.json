@@ -139,14 +139,7 @@
             "question": "Is there a relationship between patients' session enjoyment ratings, availability of non-work hour access, and their participation in interactive music therapy sessions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "interactive_session_participation",
-            "true_hypothesis": "Patients who rate their session enjoyment highly and have the opportunity for non-work hour access to therapy sessions are more likely to participate frequently in interactive music sessions.",
-            "true_hypothesis_expr": "df['session_enjoyment_rating'] + 5 * df['non_work_hour_access'].astype(int)",
-            "relevant_cols": [
-                "session_enjoyment_rating",
-                "non_work_hour_access",
-                "interactive_session_participation"
-            ]
+            "true_hypothesis": "Patients who rate their session enjoyment highly and have the opportunity for non-work hour access to therapy sessions are more likely to participate frequently in interactive music sessions."
         }
     ]
 }

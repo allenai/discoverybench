@@ -163,14 +163,7 @@
             "question": "Is there a relationship between the preference for structured musical genres, cognitive response scores, and the presence of harmonic music in therapy sessions?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "harmonic_music_presence",
-            "true_hypothesis": "The presence of harmonic music in therapy sessions increases when patients prefer structured musical genres and have cognitive response scores greater than 5, indicating that patients with a preference for structured musical genres and average to high cognitive response scores tend to have more harmonic music during therapy.",
-            "true_hypothesis_expr": "np.where(df['musical_genre_preference_structured'] & (df['cognitive_response_score'] ** 2 > 25), True, False)",
-            "relevant_cols": [
-                "musical_genre_preference_structured",
-                "cognitive_response_score",
-                "harmonic_music_presence"
-            ]
+            "true_hypothesis": "The presence of harmonic music in therapy sessions increases when patients prefer structured musical genres and have cognitive response scores greater than 5, indicating that patients with a preference for structured musical genres and average to high cognitive response scores tend to have more harmonic music during therapy."
         }
     ]
 }

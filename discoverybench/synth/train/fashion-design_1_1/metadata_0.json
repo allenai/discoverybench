@@ -91,17 +91,7 @@
             "question": "Is there a relationship between the venue type, percentage of luxury brands, and designer origin GDP per capita with the predicted season in fashion design datasets?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "predicted_season",
-            "true_hypothesis": "In fashion design, the GDP per capita of the country of the fashion designer combined with the presence of international investors and certain venue characteristics can predict the season of the fashion show. The relationship is observed in shows where high GDP per capita and the presence of international investors, combined with specific venue characteristics, result in the prediction of Winter or Summer seasons. For other cases, Autumn is predicted.",
-            "true_hypothesis_expr": "np.where((np.where((df['designer_origin_gdp_per_capita'] > 30000) & (df['international_investor_presence'] == True), True, False)) & ((df['percentage_luxury_brands'] * 0.9 + 20 * (df['venue_type'] == 'indoor')) > 50) & (df['external_temperature'] < 10), 'Winter', np.where((np.where((df['designer_origin_gdp_per_capita'] > 30000) & (df['international_investor_presence'] == True), True, False)) & ((df['percentage_luxury_brands'] * 0.9 + 20 * (df['venue_type'] == 'indoor')) < 50) & (df['external_temperature'] > 20), 'Summer', 'Autumn'))",
-            "relevant_cols": [
-                "external_temperature",
-                "venue_type",
-                "percentage_luxury_brands",
-                "designer_origin_gdp_per_capita",
-                "international_investor_presence",
-                "predicted_season"
-            ]
+            "true_hypothesis": "In fashion design, the GDP per capita of the country of the fashion designer combined with the presence of international investors and certain venue characteristics can predict the season of the fashion show. The relationship is observed in shows where high GDP per capita and the presence of international investors, combined with specific venue characteristics, result in the prediction of Winter or Summer seasons. For other cases, Autumn is predicted."
         }
     ]
 }

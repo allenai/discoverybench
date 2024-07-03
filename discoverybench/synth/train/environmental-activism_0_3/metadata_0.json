@@ -147,14 +147,7 @@
             "question": "Is there a relationship between the number of environmental policies and local pollution levels in regions with varied public transportation usage rates?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "local_pollution_level",
-            "true_hypothesis": "The local pollution level in a region is determined by subtracting 5 times the number of active environmental policies and 2 times the public transportation usage rate from 500. Thus, higher numbers of environmental policies and increased public transportation usage are associated with lower pollution levels in the region.",
-            "true_hypothesis_expr": "500 - (df['number_of_environmental_policies'] * 5) - (df['public_transportation_usage_rate'] * 2)",
-            "relevant_cols": [
-                "number_of_environmental_policies",
-                "public_transportation_usage_rate",
-                "local_pollution_level"
-            ]
+            "true_hypothesis": "The local pollution level in a region is determined by subtracting 5 times the number of active environmental policies and 2 times the public transportation usage rate from 500. Thus, higher numbers of environmental policies and increased public transportation usage are associated with lower pollution levels in the region."
         }
     ]
 }

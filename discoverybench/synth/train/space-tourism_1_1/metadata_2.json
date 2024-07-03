@@ -223,17 +223,7 @@
             "question": "Is there a relationship between the number of previous space trips relative to earth vacations and age in the context of space tourism?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "age",
-            "true_hypothesis": "Tourists who have a higher launch site technology level and international travel experience, willing to use advanced tech, and have a history of space trips, especially those with more space trips relative to earth vacations, tend to have higher ages. This effect may arise from the requirements and experiences associated with these factors.",
-            "true_hypothesis_expr": "np.where((df['launch_site_technology_level'] >= 4) & (df['international_travel_experience']), True, False) * 15 + (3*np.where(df['advanced_tech_use'], 1, 0) + (df['number_previous_space_trips']**2) / (1 + df['ratio_space_trips_to_earth_vacations'])) * 2 + 18",
-            "relevant_cols": [
-                "international_travel_experience",
-                "ratio_space_trips_to_earth_vacations",
-                "launch_site_technology_level",
-                "advanced_tech_use",
-                "number_previous_space_trips",
-                "age"
-            ]
+            "true_hypothesis": "Tourists who have a higher launch site technology level and international travel experience, willing to use advanced tech, and have a history of space trips, especially those with more space trips relative to earth vacations, tend to have higher ages. This effect may arise from the requirements and experiences associated with these factors."
         }
     ]
 }

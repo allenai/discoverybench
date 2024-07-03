@@ -99,14 +99,7 @@
             "question": "Is there a relationship between the frequency of clear skies and the average nighttime visibility in regions with varying degrees of seasonal light pollution?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "average_nighttime_visibility",
-            "true_hypothesis": "Civilizations located in regions with higher seasonal variability in light pollution are likely to have a visibility score during nighttime, calculated based on the seasonal light pollution variation and frequency of clear skies as described by a specific formula.",
-            "true_hypothesis_expr": "np.where(df['seasonal_light_pollution_variation'] + df['frequency_of_clear_skies'] * 2 > 15, 10 - df['seasonal_light_pollution_variation'], df['frequency_of_clear_skies'])",
-            "relevant_cols": [
-                "frequency_of_clear_skies",
-                "seasonal_light_pollution_variation",
-                "average_nighttime_visibility"
-            ]
+            "true_hypothesis": "Civilizations located in regions with higher seasonal variability in light pollution are likely to have a visibility score during nighttime, calculated based on the seasonal light pollution variation and frequency of clear skies as described by a specific formula."
         }
     ]
 }

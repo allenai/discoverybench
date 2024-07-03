@@ -183,15 +183,7 @@
             "question": "Is there a relationship between spacewalk participation and the percentage of home country GDP invested in aerospace and related high-tech industries for tourists who have prior international travel experience?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "spacewalk_participation",
-            "true_hypothesis": "Tourists with home countries where a higher proportion of GDP is invested in aerospace and related high-tech industries and who have prior international travel experience are more likely to participate in spacewalks.",
-            "true_hypothesis_expr": "np.where((np.clip(np.ceil(2 * df['home_country_GDP']**(1/3) + 3 * df['home_country_aerospace_investment_percentage']), 1, 5) >= 4) & (df['international_travel_experience']), True, False)",
-            "relevant_cols": [
-                "international_travel_experience",
-                "home_country_GDP",
-                "home_country_aerospace_investment_percentage",
-                "spacewalk_participation"
-            ]
+            "true_hypothesis": "Tourists with home countries where a higher proportion of GDP is invested in aerospace and related high-tech industries and who have prior international travel experience are more likely to participate in spacewalks."
         }
     ]
 }

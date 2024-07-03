@@ -223,15 +223,7 @@
             "question": "Is there a relationship between the presence of water features in urban gardens and a calculated metric involving garden space per capita, garden type regulation, and annual rainfall exceeding 800 millimeters?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "has_water_feature",
-            "true_hypothesis": "Gardens with a calculated metric involving garden space per capita and garden type regulation, and an annual rainfall greater than 800 millimeters are likely to have water features like fountains or ponds.",
-            "true_hypothesis_expr": "np.where(((df['garden_space_per_capita'] * 5) + (df['garden_type_regulation'] * 10) > 10) & (df['annual_rainfall'] > 800), True, False)",
-            "relevant_cols": [
-                "annual_rainfall",
-                "garden_space_per_capita",
-                "garden_type_regulation",
-                "has_water_feature"
-            ]
+            "true_hypothesis": "Gardens with a calculated metric involving garden space per capita and garden type regulation, and an annual rainfall greater than 800 millimeters are likely to have water features like fountains or ponds."
         }
     ]
 }

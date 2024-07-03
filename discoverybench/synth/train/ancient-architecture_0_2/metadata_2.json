@@ -131,15 +131,7 @@
             "question": "Can you determine if the distance to the nearest village for structures in the dataset is influenced by a combination of their age, climate harshness score, and whether they are located within a historical conservation area?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "distance_to_nearest_village_km",
-            "true_hypothesis": "The distance to the nearest village is influenced by the age of the structure, the harshness of the climate where it is located, and whether it is within a legally protected historical conservation area. The distance is calculated based on specific conditions related to the structure's age, climate harshness score, and its location regarding historical conservation areas. Structures with older age and higher climate harshness scores may be closer to villages, and being located within a historical conservation area could also affect the distance to the nearest village due to the associated factors considered in the calculation.",
-            "true_hypothesis_expr": "50 - ((np.where(df['structure_age'] > 500, df['climate_harshness_score'] * 1.1 + 2, df['climate_harshness_score'] * 0.9 + 2) * 3 + (df['in_historical_conservation_area'] * 10))",
-            "relevant_cols": [
-                "in_historical_conservation_area",
-                "structure_age",
-                "climate_harshness_score",
-                "distance_to_nearest_village_km"
-            ]
+            "true_hypothesis": "The distance to the nearest village is influenced by the age of the structure, the harshness of the climate where it is located, and whether it is within a legally protected historical conservation area. The distance is calculated based on specific conditions related to the structure's age, climate harshness score, and its location regarding historical conservation areas. Structures with older age and higher climate harshness scores may be closer to villages, and being located within a historical conservation area could also affect the distance to the nearest village due to the associated factors considered in the calculation."
         }
     ]
 }

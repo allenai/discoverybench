@@ -171,15 +171,7 @@
             "question": "What is the relationship between the region_id and the regulatory_compliance_percentage, number of local_environmental_organizations, and whether the region is above the renewable energy threshold?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "region_id",
-            "true_hypothesis": "The region_id is derived from 100 times the square root of the square of the regulatory compliance percentage plus the cube of the number of local environmental organizations, added to 10 times the binary indicator of whether the region surpasses the renewable energy usage threshold.",
-            "true_hypothesis_expr": "100*np.sqrt(df['regulatory_compliance_percentage']**2 + df['local_environmental_organizations']**3) + 10*df['is_above_renewable_threshold']",
-            "relevant_cols": [
-                "regulatory_compliance_percentage",
-                "local_environmental_organizations",
-                "is_above_renewable_threshold",
-                "region_id"
-            ]
+            "true_hypothesis": "The region_id is derived from 100 times the square root of the square of the regulatory compliance percentage plus the cube of the number of local environmental organizations, added to 10 times the binary indicator of whether the region surpasses the renewable energy usage threshold."
         }
     ]
 }

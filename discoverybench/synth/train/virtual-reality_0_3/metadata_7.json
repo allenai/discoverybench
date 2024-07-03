@@ -175,14 +175,7 @@
             "question": "Is there a relationship between immersion rating, graphic preference, and positive VR interactions reported per week in the virtual reality domain?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "positive_vr_interactions",
-            "true_hypothesis": "Participants who rate immersion higher find their VR experience more immersive and have a stronger preference for realistic graphics are more likely to report a higher number of positive interactions per week in VR.",
-            "true_hypothesis_expr": "df['immersion_rating'] * 5 + 10 * df['graphic_preference']",
-            "relevant_cols": [
-                "immersion_rating",
-                "graphic_preference",
-                "positive_vr_interactions"
-            ]
+            "true_hypothesis": "Participants who rate immersion higher find their VR experience more immersive and have a stronger preference for realistic graphics are more likely to report a higher number of positive interactions per week in VR."
         }
     ]
 }

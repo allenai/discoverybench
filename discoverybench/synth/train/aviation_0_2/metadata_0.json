@@ -107,17 +107,7 @@
             "question": "Is there a relationship between the number of years a pilot has worked at their current airline, the technological level of the airline's fleet, the total international flight hours, the aircraft type size, the frequency of simulation training, and the likelihood of receiving advanced navigation training?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "has_advanced_navigation_training",
-            "true_hypothesis": "Pilots who have worked for more than 5 years at airlines with high technological fleet level and have total international flight hours divided by 1500 minus the frequency of simulation training greater than 5 are likely to have received advanced navigation training.",
-            "true_hypothesis_expr": "np.where((df['years_with_current_airline'] > 5) & (df['airline_fleet_technology_level'] == 'High') & (np.where(df['aircraft_type_size']=='Large', df['international_flight_hours'] // 1000 - df['frequency_of_simulation_training'], df['international_flight_hours'] // 1500 - df['frequency_of_simulation_training']) > 5), True, False)",
-            "relevant_cols": [
-                "years_with_current_airline",
-                "airline_fleet_technology_level",
-                "international_flight_hours",
-                "aircraft_type_size",
-                "frequency_of_simulation_training",
-                "has_advanced_navigation_training"
-            ]
+            "true_hypothesis": "Pilots who have worked for more than 5 years at airlines with high technological fleet level and have total international flight hours divided by 1500 minus the frequency of simulation training greater than 5 are likely to have received advanced navigation training."
         }
     ]
 }

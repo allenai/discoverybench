@@ -203,14 +203,7 @@
             "question": "What is the relationship between the number of chapters in a literary classic and the total word count adjusted by lexical density?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "number_of_chapters",
-            "true_hypothesis": "The number of chapters in a literary classic is determined by the total word count of the book adjusted by lexical density. The derived result from the pandas expression indicates that the number of chapters is calculated based on the total word count divided by 4000 minus the product of lexical density and 100.",
-            "true_hypothesis_expr": "np.round(df['total_word_count'] / 4000 - df['lexical_density'] * 100)",
-            "relevant_cols": [
-                "total_word_count",
-                "lexical_density",
-                "number_of_chapters"
-            ]
+            "true_hypothesis": "The number of chapters in a literary classic is determined by the total word count of the book adjusted by lexical density. The derived result from the pandas expression indicates that the number of chapters is calculated based on the total word count divided by 4000 minus the product of lexical density and 100."
         }
     ]
 }

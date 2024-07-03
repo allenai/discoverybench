@@ -219,14 +219,7 @@
             "question": "Is there a relationship between the total play duration and the presence of an intermission in theater productions with a varying number of lead actors?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "has_intermission",
-            "true_hypothesis": "Plays with a total duration exceeding 100 minutes or with more than 3 lead actors are more likely to have an intermission.",
-            "true_hypothesis_expr": "np.where((df['total_play_duration_minutes'] > 100) | (df['number_of_lead_actors'] > 3), True, False)",
-            "relevant_cols": [
-                "number_of_lead_actors",
-                "total_play_duration_minutes",
-                "has_intermission"
-            ]
+            "true_hypothesis": "Plays with a total duration exceeding 100 minutes or with more than 3 lead actors are more likely to have an intermission."
         }
     ]
 }

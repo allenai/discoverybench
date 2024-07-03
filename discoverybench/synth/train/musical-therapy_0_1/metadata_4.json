@@ -139,19 +139,7 @@
             "question": "How do the program length in weeks, patient stress level, therapy session frequency, preference for live music, frequency of sadness, session time of day, preference for popular music, and the calculated number of therapists involved in the sessions relate to each other in the context of musical therapy?",
             "question_type": "general",
             "difficulty": 3,
-            "target_col": "number_of_therapists",
-            "true_hypothesis": "The number of therapists needed during sessions is calculated by taking the ceiling of the program length in weeks divided by the sum of the therapy session frequency, twice the preference for live music, adjusted for the frequency of sadness, subtracting the encoding of the session time of day, and finally accounting for twice the preference for popular music and then adding the square of the difference between the patient's stress level and 5.",
-            "true_hypothesis_expr": "np.ceil(df['program_length_weeks'] / ((df['therapy_session_frequency'] + 2*df['preference_for_live_music']) / (1 + df['frequency_of_sadness']) - df['session_time_of_day'].apply(lambda x: 0 if x == 'morning' else (1 if x=='afternoon' else 2)) - 2 * df['preference_for_popular_music'] - 2)) + (df['patient_stress_level'] - 5)**2",
-            "relevant_cols": [
-                "program_length_weeks",
-                "patient_stress_level",
-                "session_time_of_day",
-                "preference_for_popular_music",
-                "therapy_session_frequency",
-                "preference_for_live_music",
-                "frequency_of_sadness",
-                "number_of_therapists"
-            ]
+            "true_hypothesis": "The number of therapists needed during sessions is calculated by taking the ceiling of the program length in weeks divided by the sum of the therapy session frequency, twice the preference for live music, adjusted for the frequency of sadness, subtracting the encoding of the session time of day, and finally accounting for twice the preference for popular music and then adding the square of the difference between the patient's stress level and 5."
         }
     ]
 }

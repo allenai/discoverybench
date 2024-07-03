@@ -87,15 +87,7 @@
             "question": "What is the relationship between accolade count, region epic tradition score, and the ability to recite verses from epic poems that may indicate a connection to regions recognized for significant epic literature and storytelling?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "regions_with_epic_centers",
-            "true_hypothesis": "Knights who have a high region epic tradition score and can recite verses from epic poems are classified as originating from regions known for significant epic literature and storytelling when the product of 3 times the region epic tradition score squared plus 15 times the can recite verses value, multiplied by the accolade count, exceeds 25.",
-            "true_hypothesis_expr": "np.where((3*df['region_epic_tradition_score']**2 + 15*df['can_recite_verses']) * df['accolade_count'] > 25, True, False)",
-            "relevant_cols": [
-                "accolade_count",
-                "region_epic_tradition_score",
-                "can_recite_verses",
-                "regions_with_epic_centers"
-            ]
+            "true_hypothesis": "Knights who have a high region epic tradition score and can recite verses from epic poems are classified as originating from regions known for significant epic literature and storytelling when the product of 3 times the region epic tradition score squared plus 15 times the can recite verses value, multiplied by the accolade count, exceeds 25."
         }
     ]
 }

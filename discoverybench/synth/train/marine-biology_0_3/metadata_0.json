@@ -83,15 +83,7 @@
             "question": "Is there a relationship between the sea surface temperature near a reef and the depth of the ocean where the reef is located, the human activity score in the area, and whether the reef is in a legally protected conservation area?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "sea_surface_temperature",
-            "true_hypothesis": "The average sea surface temperature near the reef is influenced by the depth of the ocean where the reef is located, the amount of human activity in the area, and whether the reef is in a legally protected conservation area. Deeper waters may exhibit lower temperatures due to less sunlight penetration, more human activity might lead to higher temperatures, and protected reefs may experience different temperature patterns.",
-            "true_hypothesis_expr": "30 - 0.015 * df['ocean_depth'] - 0.8 * df['human_activity_score'] + 2 * (df['reef_is_protected'].astype(int))",
-            "relevant_cols": [
-                "ocean_depth",
-                "human_activity_score",
-                "reef_is_protected",
-                "sea_surface_temperature"
-            ]
+            "true_hypothesis": "The average sea surface temperature near the reef is influenced by the depth of the ocean where the reef is located, the amount of human activity in the area, and whether the reef is in a legally protected conservation area. Deeper waters may exhibit lower temperatures due to less sunlight penetration, more human activity might lead to higher temperatures, and protected reefs may experience different temperature patterns."
         }
     ]
 }

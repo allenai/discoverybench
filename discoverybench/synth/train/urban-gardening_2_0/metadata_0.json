@@ -279,19 +279,7 @@
             "question": "Is there a relationship between composting effectiveness ratings and the combination of city population, number of local food markets, frequent gardening workshops, sustainable composting methods, annual visitor count, number of annual events, and average annual temperature in urban gardening contexts?",
             "question_type": "general",
             "difficulty": 2,
-            "target_col": "composting_effectiveness_rating",
-            "true_hypothesis": "Community gardens in cities with populations over 500,000 and more than 15 local food markets within a 5 km radius, offering frequent gardening workshops, are rated 1 point higher in composting effectiveness if they use sustainable composting methods and have an annual visitor count to the power of 3 plus the square of the number of annual events multiplied by 5 minus the average annual temperature greater than 150,000.",
-            "true_hypothesis_expr": "np.where((df['city_population'] > 500000) & (np.where((df['number_of_local_food_markets'] > 15) & (df['frequent_gardening_workshops']), 'Yes', 'No') == 'Yes'), 9, df.get('composting_effectiveness_rating', 0)) + np.where(np.where((df['annual_visitor_count']**3 + df['number_of_annual_events']**2 * 5 - df['average_annual_temperature']) > 150000, True, False) & (df['sustainable_composting'] == 'Yes'), 1, 0)",
-            "relevant_cols": [
-                "sustainable_composting",
-                "number_of_local_food_markets",
-                "frequent_gardening_workshops",
-                "average_annual_temperature",
-                "composting_effectiveness_rating",
-                "city_population",
-                "annual_visitor_count",
-                "number_of_annual_events"
-            ]
+            "true_hypothesis": "Community gardens in cities with populations over 500,000 and more than 15 local food markets within a 5 km radius, offering frequent gardening workshops, are rated 1 point higher in composting effectiveness if they use sustainable composting methods and have an annual visitor count to the power of 3 plus the square of the number of annual events multiplied by 5 minus the average annual temperature greater than 150,000."
         }
     ]
 }

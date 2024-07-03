@@ -291,16 +291,7 @@
             "question": "Is there a relationship between the presence of educational programs and composting effectiveness ratings in community gardens?",
             "question_type": "general",
             "difficulty": 1,
-            "target_col": "composting_effectiveness_rating",
-            "true_hypothesis": "Community gardens in cities with populations over 500,000 are rated 1 point higher in composting effectiveness if they include vegetable plots compared to those in cities with smaller populations. Additionally, gardens with educational programs but not necessarily in larger cities are rated 1 point higher in composting effectiveness if they use sustainable composting methods compared to those without educational programs.",
-            "true_hypothesis_expr": "np.where((df['city_population'] > 500000) & (df['vegetable_plots'] == 'Yes'), 9, df.get('composting_effectiveness_rating', 0)) + np.where(df['has_educational_program'] & (df['sustainable_composting'] == 'Yes'), 1, 0)",
-            "relevant_cols": [
-                "sustainable_composting",
-                "composting_effectiveness_rating",
-                "city_population",
-                "vegetable_plots",
-                "has_educational_program"
-            ]
+            "true_hypothesis": "Community gardens in cities with populations over 500,000 are rated 1 point higher in composting effectiveness if they include vegetable plots compared to those in cities with smaller populations. Additionally, gardens with educational programs but not necessarily in larger cities are rated 1 point higher in composting effectiveness if they use sustainable composting methods compared to those without educational programs."
         }
     ]
 }
