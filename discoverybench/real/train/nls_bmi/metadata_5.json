@@ -78,31 +78,13 @@
             {
                 "qid": 0,
                 "true_hypothesis": "Higher time preference associated with higher BMI is more pronounced for men with coefficient for withdrawing more than saving being 0.5256, and coefficient for same amount of saving being 0.4715",
-                "relevant_cols": [
-                    "GENDER",
-                    "BMI",
-                    "DISSAVED",
-                    "SAMESAVE"
-                ],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "context",
-                "question_specificity": null,
                 "question": "How does higher time preference relate to BMI across different genders?"
             },
             {
                 "qid": 1,
                 "true_hypothesis": "Higher time preference associated with higher BMI is more pronounced for men with coefficient for withdrawing more than saving being 0.5256, and coefficient for same amount of saving being 0.4715",
-                "relevant_cols": [
-                    "GENDER",
-                    "BMI",
-                    "DISSAVED",
-                    "SAMESAVE"
-                ],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "relationship",
-                "question_specificity": null,
                 "question": "In what way is higher time preference linked to higher BMI among men?"
             }
         ]

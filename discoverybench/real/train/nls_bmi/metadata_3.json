@@ -78,27 +78,13 @@
             {
                 "qid": 0,
                 "true_hypothesis": "Younger individuals are more likely to withdraw more money from savings than they had put in and with a negative coefficient between age and withdrawing more than putting into savings (-0.0422).",
-                "relevant_cols": [
-                    "AGE",
-                    "DISSAVED"
-                ],
-                "target_col": "DISSAVED",
-                "prior_findings": "",
                 "question_type": "relationship",
-                "question_specificity": null,
                 "question": "How does age influence the likelihood of withdrawing more money from savings than putting in?"
             },
             {
                 "qid": 1,
                 "true_hypothesis": "Younger individuals are more likely to withdraw more money from savings than they had put in and with a negative coefficient between age and withdrawing more than putting into savings (-0.0422).",
-                "relevant_cols": [
-                    "AGE",
-                    "DISSAVED"
-                ],
-                "target_col": "DISSAVED",
-                "prior_findings": "",
                 "question_type": "context",
-                "question_specificity": null,
                 "question": "What behaviors regarding withdrawal of savings have been observed in relation to age?"
             }
         ]
