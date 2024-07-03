@@ -1,140 +1,129 @@
 {
-  "id": 0,
-  "domain": "solar power",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to harnessing solar energy, photovoltaic technology, and sustainable power systems.",
-      "columns": [
+    "id": 0,
+    "domain": "solar power",
+    "datasets": [
         {
-          "name": "home_energy_storage_capacity",
-          "description": "Home's energy storage system capacity in kilowatt-hours"
-        },
-        {
-          "name": "average_daylight_duration",
-          "description": "The average number of sunlight hours per day in the region."
-        },
-        {
-          "name": "average_daily_temperature_variation",
-          "description": "The average daily temperature fluctuation in degrees Celsius."
-        },
-        {
-          "name": "number_of_clear_days",
-          "description": "Annual count of days classified as clear with minimal cloud cover"
-        },
-        {
-          "name": "solar_panel_efficiency",
-          "description": "The efficiency rating of solar panels commonly used in the region, expressed as a percentage."
-        },
-        {
-          "name": "wind_speed",
-          "description": "Average wind speed in km/h."
-        },
-        {
-          "name": "roof_orientation",
-          "description": "Orientation of the roof primarily installed with solar panels"
-        },
-        {
-          "name": "day_length",
-          "description": "Total day length in hours."
-        },
-        {
-          "name": "efficiency_gain",
-          "description": "Represents the efficiency improvement or gain observed in the solar panel system"
-        },
-        {
-          "name": "region_type",
-          "description": "The classification of the region where the house is located"
-        },
-        {
-          "name": "hours_of_sunlight",
-          "description": "Average daily hours of sunlight"
-        },
-        {
-          "name": "altitude",
-          "description": "The elevation of the location of the house in meters"
-        },
-        {
-          "name": "month",
-          "description": "Month during which the electricity generation data was recorded"
-        },
-        {
-          "name": "industrial_area_presence",
-          "description": "Indicator if the area has significant industrial activity."
-        },
-        {
-          "name": "sunlight_hours",
-          "description": "Total hours of sunlight received per day."
-        },
-        {
-          "name": "locality_solar_energy_usage_percentile",
-          "description": "Percentile ranking of solar energy usage in the locality"
-        },
-        {
-          "name": "daylight_to_night_ratio",
-          "description": "The ratio of daylight hours to night hours"
-        },
-        {
-          "name": "region",
-          "description": "Geographic region of the solar paneled home"
-        },
-        {
-          "name": "cell_color",
-          "description": "Color of the photovoltaic cells in the solar panels"
-        },
-        {
-          "name": "temperature",
-          "description": "Average temperature during the month"
-        },
-        {
-          "name": "high_efficiency_appliances",
-          "description": "Indicates whether the household uses high-efficiency appliances (true or false)"
-        },
-        {
-          "name": "season",
-          "description": "The season of the year"
-        },
-        {
-          "name": "inverter_type",
-          "description": "Type of inverter used in the solar panel system"
-        },
-        {
-          "name": "annual_snowfall",
-          "description": "Annual snowfall measured in centimeters"
-        },
-        {
-          "name": "has_solar_panels",
-          "description": "Whether the location has solar panels installed."
-        },
-        {
-          "name": "average_temperature",
-          "description": "The annual average temperature in degrees Celsius where the house is located"
-        },
-        {
-          "name": "electricity_generated",
-          "description": "Amount of electricity generated in kilowatt-hours"
+            "name": "data.csv",
+            "description": "Related to harnessing solar energy, photovoltaic technology, and sustainable power systems.",
+            "columns": [
+                {
+                    "name": "home_energy_storage_capacity",
+                    "description": "Home's energy storage system capacity in kilowatt-hours"
+                },
+                {
+                    "name": "average_daylight_duration",
+                    "description": "The average number of sunlight hours per day in the region."
+                },
+                {
+                    "name": "average_daily_temperature_variation",
+                    "description": "The average daily temperature fluctuation in degrees Celsius."
+                },
+                {
+                    "name": "number_of_clear_days",
+                    "description": "Annual count of days classified as clear with minimal cloud cover"
+                },
+                {
+                    "name": "solar_panel_efficiency",
+                    "description": "The efficiency rating of solar panels commonly used in the region, expressed as a percentage."
+                },
+                {
+                    "name": "wind_speed",
+                    "description": "Average wind speed in km/h."
+                },
+                {
+                    "name": "roof_orientation",
+                    "description": "Orientation of the roof primarily installed with solar panels"
+                },
+                {
+                    "name": "day_length",
+                    "description": "Total day length in hours."
+                },
+                {
+                    "name": "efficiency_gain",
+                    "description": "Represents the efficiency improvement or gain observed in the solar panel system"
+                },
+                {
+                    "name": "region_type",
+                    "description": "The classification of the region where the house is located"
+                },
+                {
+                    "name": "hours_of_sunlight",
+                    "description": "Average daily hours of sunlight"
+                },
+                {
+                    "name": "altitude",
+                    "description": "The elevation of the location of the house in meters"
+                },
+                {
+                    "name": "month",
+                    "description": "Month during which the electricity generation data was recorded"
+                },
+                {
+                    "name": "industrial_area_presence",
+                    "description": "Indicator if the area has significant industrial activity."
+                },
+                {
+                    "name": "sunlight_hours",
+                    "description": "Total hours of sunlight received per day."
+                },
+                {
+                    "name": "locality_solar_energy_usage_percentile",
+                    "description": "Percentile ranking of solar energy usage in the locality"
+                },
+                {
+                    "name": "daylight_to_night_ratio",
+                    "description": "The ratio of daylight hours to night hours"
+                },
+                {
+                    "name": "region",
+                    "description": "Geographic region of the solar paneled home"
+                },
+                {
+                    "name": "cell_color",
+                    "description": "Color of the photovoltaic cells in the solar panels"
+                },
+                {
+                    "name": "temperature",
+                    "description": "Average temperature during the month"
+                },
+                {
+                    "name": "high_efficiency_appliances",
+                    "description": "Indicates whether the household uses high-efficiency appliances (true or false)"
+                },
+                {
+                    "name": "season",
+                    "description": "The season of the year"
+                },
+                {
+                    "name": "inverter_type",
+                    "description": "Type of inverter used in the solar panel system"
+                },
+                {
+                    "name": "annual_snowfall",
+                    "description": "Annual snowfall measured in centimeters"
+                },
+                {
+                    "name": "has_solar_panels",
+                    "description": "Whether the location has solar panels installed."
+                },
+                {
+                    "name": "average_temperature",
+                    "description": "The annual average temperature in degrees Celsius where the house is located"
+                },
+                {
+                    "name": "electricity_generated",
+                    "description": "Amount of electricity generated in kilowatt-hours"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 69,
-      "question": "What is the relationship between solar panel efficiency gains and the interaction of cell color being blue, the month falling between October and March, the calculation of average daylight duration squared minus the average daily temperature variation, and the number of clear days, considering the data specific to this domain?",
-      "question_type": "general",
-      "difficulty": 4,
-      "target_col": "efficiency_gain",
-      
-      
-      "relevant_cols": [
-        "cell_color",
-        "month",
-        "number_of_clear_days",
-        "solar_panel_efficiency",
-        "average_daylight_duration",
-        "average_daily_temperature_variation",
-        "efficiency_gain"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 69,
+            "question": "What is the relationship between solar panel efficiency gains and the interaction of cell color being blue, the month falling between October and March, the calculation of average daylight duration squared minus the average daily temperature variation, and the number of clear days, considering the data specific to this domain?",
+            "question_type": "general",
+            "difficulty": 4,
+            "true_hypothesis": "Solar paneled homes with blue-colored photovoltaic cells record efficiency gains when the cell color is blue, the month is between October and March, and the average daylight duration squared minus the average daily temperature variation is categorized as not high or medium, also considering the number of clear days."
+        }
+    ]
 }

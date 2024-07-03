@@ -1,133 +1,125 @@
 {
-  "id": 2,
-  "domain": "cryptic puzzles",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to riddles, brain teasers, and mystery challenges.",
-      "columns": [
+    "id": 2,
+    "domain": "cryptic puzzles",
+    "datasets": [
         {
-          "name": "country_of_participant",
-          "description": "Country from which the participant is"
-        },
-        {
-          "name": "difficulty_levels_encountered",
-          "description": "Number of different difficulty levels encountered by the participant"
-        },
-        {
-          "name": "daily_puzzle_time_percentage",
-          "description": "Percentage of daily free time the participant devotes to solving puzzles"
-        },
-        {
-          "name": "cognitive_skill_level",
-          "description": "Assessed cognitive skill level of the participant, ranging from beginner to expert."
-        },
-        {
-          "name": "english_fluency_level",
-          "description": "Fluency level of English language of the participant, on a scale of 1 to 10"
-        },
-        {
-          "name": "education_level",
-          "description": "Highest level of education attained by the participant"
-        },
-        {
-          "name": "time_dedication",
-          "description": "Estimated time in minutes the participant is willing to dedicate to solving a single puzzle session."
-        },
-        {
-          "name": "uses_guided_help",
-          "description": "Indicates whether the participant prefers using guided help while solving puzzles."
-        },
-        {
-          "name": "days_since_last_puzzle",
-          "description": "Number of days since the participant last solved a puzzle"
-        },
-        {
-          "name": "participation_in_puzzle_competitions",
-          "description": "Whether the participant regularly competes in puzzle competitions"
-        },
-        {
-          "name": "brain_training_frequency",
-          "description": "Number of times per week the participant engages in brain training activities"
-        },
-        {
-          "name": "previous_experience",
-          "description": "Whether the participant has solved similar puzzles in the past"
-        },
-        {
-          "name": "average_solve_time",
-          "description": "Average time taken by the participant to solve puzzles, in minutes"
-        },
-        {
-          "name": "frequent_mind_games",
-          "description": "Indicates whether the participant frequently engages in mind-challenging games like chess, sudoku, etc."
-        },
-        {
-          "name": "problem_solving_score",
-          "description": "Score obtained in problem-solving games, scaled from 0 to 100"
-        },
-        {
-          "name": "number_of_puzzles_solved",
-          "description": "Total number of puzzles solved by the participant"
-        },
-        {
-          "name": "linguistic_interest",
-          "description": "Indicates whether the participant has a higher interest in linguistic activities"
-        },
-        {
-          "name": "prefers_quick_tasks",
-          "description": "Indicates if the participant prefers quick tasks over detailed ones"
-        },
-        {
-          "name": "prefers_puzzle_themes",
-          "description": "The types of puzzle themes preferred by the participant, ranging from logical, abstract, to sequential."
-        },
-        {
-          "name": "enjoys_variety",
-          "description": "Indicates if the participant enjoys a variety of puzzles"
-        },
-        {
-          "name": "active_in_puzzle_community",
-          "description": "Whether the participant is active in online or local puzzle-solving communities"
-        },
-        {
-          "name": "puzzle_complexity_preference",
-          "description": "Participant's preference for puzzle complexity on a scale from 1 (simple) to 10 (most complex)."
-        },
-        {
-          "name": "puzzle_solving_frequency",
-          "description": "How often the participant engages in solving puzzles per week"
-        },
-        {
-          "name": "participant_age",
-          "description": "Age of the participant."
-        },
-        {
-          "name": "logical_thinking_activity",
-          "description": "Indicates if the participant engages in activities that involve logical thinking."
-        },
-        {
-          "name": "logical_preference_score",
-          "description": "Score that reflects the participant's preference for logical reasoning, between 1 to 10"
+            "name": "data.csv",
+            "description": "Related to riddles, brain teasers, and mystery challenges.",
+            "columns": [
+                {
+                    "name": "country_of_participant",
+                    "description": "Country from which the participant is"
+                },
+                {
+                    "name": "difficulty_levels_encountered",
+                    "description": "Number of different difficulty levels encountered by the participant"
+                },
+                {
+                    "name": "daily_puzzle_time_percentage",
+                    "description": "Percentage of daily free time the participant devotes to solving puzzles"
+                },
+                {
+                    "name": "cognitive_skill_level",
+                    "description": "Assessed cognitive skill level of the participant, ranging from beginner to expert."
+                },
+                {
+                    "name": "english_fluency_level",
+                    "description": "Fluency level of English language of the participant, on a scale of 1 to 10"
+                },
+                {
+                    "name": "education_level",
+                    "description": "Highest level of education attained by the participant"
+                },
+                {
+                    "name": "time_dedication",
+                    "description": "Estimated time in minutes the participant is willing to dedicate to solving a single puzzle session."
+                },
+                {
+                    "name": "uses_guided_help",
+                    "description": "Indicates whether the participant prefers using guided help while solving puzzles."
+                },
+                {
+                    "name": "days_since_last_puzzle",
+                    "description": "Number of days since the participant last solved a puzzle"
+                },
+                {
+                    "name": "participation_in_puzzle_competitions",
+                    "description": "Whether the participant regularly competes in puzzle competitions"
+                },
+                {
+                    "name": "brain_training_frequency",
+                    "description": "Number of times per week the participant engages in brain training activities"
+                },
+                {
+                    "name": "previous_experience",
+                    "description": "Whether the participant has solved similar puzzles in the past"
+                },
+                {
+                    "name": "average_solve_time",
+                    "description": "Average time taken by the participant to solve puzzles, in minutes"
+                },
+                {
+                    "name": "frequent_mind_games",
+                    "description": "Indicates whether the participant frequently engages in mind-challenging games like chess, sudoku, etc."
+                },
+                {
+                    "name": "problem_solving_score",
+                    "description": "Score obtained in problem-solving games, scaled from 0 to 100"
+                },
+                {
+                    "name": "number_of_puzzles_solved",
+                    "description": "Total number of puzzles solved by the participant"
+                },
+                {
+                    "name": "linguistic_interest",
+                    "description": "Indicates whether the participant has a higher interest in linguistic activities"
+                },
+                {
+                    "name": "prefers_quick_tasks",
+                    "description": "Indicates if the participant prefers quick tasks over detailed ones"
+                },
+                {
+                    "name": "prefers_puzzle_themes",
+                    "description": "The types of puzzle themes preferred by the participant, ranging from logical, abstract, to sequential."
+                },
+                {
+                    "name": "enjoys_variety",
+                    "description": "Indicates if the participant enjoys a variety of puzzles"
+                },
+                {
+                    "name": "active_in_puzzle_community",
+                    "description": "Whether the participant is active in online or local puzzle-solving communities"
+                },
+                {
+                    "name": "puzzle_complexity_preference",
+                    "description": "Participant's preference for puzzle complexity on a scale from 1 (simple) to 10 (most complex)."
+                },
+                {
+                    "name": "puzzle_solving_frequency",
+                    "description": "How often the participant engages in solving puzzles per week"
+                },
+                {
+                    "name": "participant_age",
+                    "description": "Age of the participant."
+                },
+                {
+                    "name": "logical_thinking_activity",
+                    "description": "Indicates if the participant engages in activities that involve logical thinking."
+                },
+                {
+                    "name": "logical_preference_score",
+                    "description": "Score that reflects the participant's preference for logical reasoning, between 1 to 10"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 410,
-      "question": "Is there a relationship between participant age, puzzle complexity preference, puzzle solving frequency, and frequency of engaging in mind-challenging games?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "frequent_mind_games",
-      
-      
-      "relevant_cols": [
-        "puzzle_solving_frequency",
-        "puzzle_complexity_preference",
-        "participant_age",
-        "frequent_mind_games"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 410,
+            "question": "Is there a relationship between participant age, puzzle complexity preference, puzzle solving frequency, and frequency of engaging in mind-challenging games?",
+            "question_type": "general",
+            "difficulty": 1,
+            "true_hypothesis": "Participants with a puzzle complexity preference of 5 or higher, a puzzle solving frequency of 10 or more times per week, and aged 30 years or older are more likely to frequently engage in mind-challenging games."
+        }
+    ]
 }

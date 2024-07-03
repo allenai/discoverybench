@@ -1,165 +1,157 @@
 {
-  "id": 0,
-  "domain": "marine conservation",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to protecting oceans, marine life, and sustainable fishing practices.",
-      "columns": [
+    "id": 0,
+    "domain": "marine conservation",
+    "datasets": [
         {
-          "name": "marine_conservation_in_schools",
-          "description": "Binary indicator if the local schools' curriculum includes marine conservation topics"
-        },
-        {
-          "name": "fishing_industry_presence",
-          "description": "A score from 0 to 10 indicating the presence of the fishing industry"
-        },
-        {
-          "name": "local_community_involvement",
-          "description": "The involvement of local communities in conservation efforts, rated from 1 (least involved) to 5 (most involved)"
-        },
-        {
-          "name": "water_temperature_celsius",
-          "description": "Average water temperature in Celsius"
-        },
-        {
-          "name": "illegal_fishing_rate",
-          "description": "The average number of illegal fishing activities reported per month"
-        },
-        {
-          "name": "protection_status",
-          "description": "Indicates if the area is protected from commercial fishing"
-        },
-        {
-          "name": "pollution_control_index",
-          "description": "Index rating from 0 to 100 indicating the level of pollution control measures in place"
-        },
-        {
-          "name": "conservation_funding",
-          "description": "Annual conservation funding received in US dollars"
-        },
-        {
-          "name": "local_awareness_campaigns",
-          "description": "Number of local awareness campaigns for marine conservation per year"
-        },
-        {
-          "name": "is_marine_conservation_zone",
-          "description": "Binary indicator if the area is designated as a marine conservation zone"
-        },
-        {
-          "name": "illegal_fishing_reports",
-          "description": "Number of reports filed for illegal fishing activities in the marine area per month."
-        },
-        {
-          "name": "local_gov_environmental_policy_score",
-          "description": "A score from 0 to 10 evaluating the degree of involvement of local governments in enforcing environmental policies"
-        },
-        {
-          "name": "marine_biodiversity_index",
-          "description": "A numeric index representing the variety of species found in a region, where higher numbers indicate greater biodiversity."
-        },
-        {
-          "name": "average_tourist_rating_visibility",
-          "description": "Average rating provided by tourists on the visibility of marine life, scale from 1 to 5"
-        },
-        {
-          "name": "reported_marine_pollution_incidents",
-          "description": "Number of reported incidents of marine pollution in the area per year"
-        },
-        {
-          "name": "predatory_fish_lifespan_years",
-          "description": "Average lifespan of predatory fish species in years"
-        },
-        {
-          "name": "area_id",
-          "description": "Unique identifier for a marine protected area"
-        },
-        {
-          "name": "number_of_species",
-          "description": "Number of different species found in the area"
-        },
-        {
-          "name": "research_grants_count",
-          "description": "Number of active environmental research grants in the marine area"
-        },
-        {
-          "name": "pollution_index",
-          "description": "Numerical index representing the level of pollution, from 1 (least polluted) to 100 (most polluted)"
-        },
-        {
-          "name": "has_international_cooperation",
-          "description": "Binary indicating whether there is international cooperation in marine conservation efforts"
-        },
-        {
-          "name": "environmental_surveillance_count",
-          "description": "The number of times environmental surveillance patrols occurred in a region within a year."
-        },
-        {
-          "name": "tourist_visits_annual",
-          "description": "Annual number of tourists visiting the marine area"
-        },
-        {
-          "name": "marine_pollution_incidents",
-          "description": "Number of recorded marine pollution incidents per year in the area."
-        },
-        {
-          "name": "eco_friendly_business_percentile",
-          "description": "The percentile ranking of the area based on the percentage of businesses that are eco-friendly and support marine conservation"
-        },
-        {
-          "name": "protected_marine_reserves_count",
-          "description": "Number of marine reserves officially designated as protected areas"
-        },
-        {
-          "name": "marine_patrol_interventions_per_month",
-          "description": "Number of marine patrol interventions conducted per month in the marine area."
-        },
-        {
-          "name": "marine_conservation_funding",
-          "description": "Total annual funding (in thousands of dollars) allocated for marine conservation in the area."
-        },
-        {
-          "name": "marine_fauna_disruptions",
-          "description": "The monthly count of events that negatively affect marine life, such as pollution or unauthorized sea traffic"
-        },
-        {
-          "name": "is_eco_tourism_area",
-          "description": "Binary indicator if the area is recognized for eco-tourism"
-        },
-        {
-          "name": "fishing_vessels_count",
-          "description": "Number of registered fishing vessels operating in the marine area"
-        },
-        {
-          "name": "commercial_fishing_restrictions",
-          "description": "Categorical rating of the strictness of fishing regulations, from 1 (least strict) to 5 (most strict)"
-        },
-        {
-          "name": "fishery_compliance_score",
-          "description": "Score from 0 to 100 indicating the compliance level of fisheries with local regulations"
-        },
-        {
-          "name": "recent_environmental_violations",
-          "description": "A binary indicator where 1 means environmental violations were reported in the past year and 0 means no violations."
+            "name": "data.csv",
+            "description": "Related to protecting oceans, marine life, and sustainable fishing practices.",
+            "columns": [
+                {
+                    "name": "marine_conservation_in_schools",
+                    "description": "Binary indicator if the local schools' curriculum includes marine conservation topics"
+                },
+                {
+                    "name": "fishing_industry_presence",
+                    "description": "A score from 0 to 10 indicating the presence of the fishing industry"
+                },
+                {
+                    "name": "local_community_involvement",
+                    "description": "The involvement of local communities in conservation efforts, rated from 1 (least involved) to 5 (most involved)"
+                },
+                {
+                    "name": "water_temperature_celsius",
+                    "description": "Average water temperature in Celsius"
+                },
+                {
+                    "name": "illegal_fishing_rate",
+                    "description": "The average number of illegal fishing activities reported per month"
+                },
+                {
+                    "name": "protection_status",
+                    "description": "Indicates if the area is protected from commercial fishing"
+                },
+                {
+                    "name": "pollution_control_index",
+                    "description": "Index rating from 0 to 100 indicating the level of pollution control measures in place"
+                },
+                {
+                    "name": "conservation_funding",
+                    "description": "Annual conservation funding received in US dollars"
+                },
+                {
+                    "name": "local_awareness_campaigns",
+                    "description": "Number of local awareness campaigns for marine conservation per year"
+                },
+                {
+                    "name": "is_marine_conservation_zone",
+                    "description": "Binary indicator if the area is designated as a marine conservation zone"
+                },
+                {
+                    "name": "illegal_fishing_reports",
+                    "description": "Number of reports filed for illegal fishing activities in the marine area per month."
+                },
+                {
+                    "name": "local_gov_environmental_policy_score",
+                    "description": "A score from 0 to 10 evaluating the degree of involvement of local governments in enforcing environmental policies"
+                },
+                {
+                    "name": "marine_biodiversity_index",
+                    "description": "A numeric index representing the variety of species found in a region, where higher numbers indicate greater biodiversity."
+                },
+                {
+                    "name": "average_tourist_rating_visibility",
+                    "description": "Average rating provided by tourists on the visibility of marine life, scale from 1 to 5"
+                },
+                {
+                    "name": "reported_marine_pollution_incidents",
+                    "description": "Number of reported incidents of marine pollution in the area per year"
+                },
+                {
+                    "name": "predatory_fish_lifespan_years",
+                    "description": "Average lifespan of predatory fish species in years"
+                },
+                {
+                    "name": "area_id",
+                    "description": "Unique identifier for a marine protected area"
+                },
+                {
+                    "name": "number_of_species",
+                    "description": "Number of different species found in the area"
+                },
+                {
+                    "name": "research_grants_count",
+                    "description": "Number of active environmental research grants in the marine area"
+                },
+                {
+                    "name": "pollution_index",
+                    "description": "Numerical index representing the level of pollution, from 1 (least polluted) to 100 (most polluted)"
+                },
+                {
+                    "name": "has_international_cooperation",
+                    "description": "Binary indicating whether there is international cooperation in marine conservation efforts"
+                },
+                {
+                    "name": "environmental_surveillance_count",
+                    "description": "The number of times environmental surveillance patrols occurred in a region within a year."
+                },
+                {
+                    "name": "tourist_visits_annual",
+                    "description": "Annual number of tourists visiting the marine area"
+                },
+                {
+                    "name": "marine_pollution_incidents",
+                    "description": "Number of recorded marine pollution incidents per year in the area."
+                },
+                {
+                    "name": "eco_friendly_business_percentile",
+                    "description": "The percentile ranking of the area based on the percentage of businesses that are eco-friendly and support marine conservation"
+                },
+                {
+                    "name": "protected_marine_reserves_count",
+                    "description": "Number of marine reserves officially designated as protected areas"
+                },
+                {
+                    "name": "marine_patrol_interventions_per_month",
+                    "description": "Number of marine patrol interventions conducted per month in the marine area."
+                },
+                {
+                    "name": "marine_conservation_funding",
+                    "description": "Total annual funding (in thousands of dollars) allocated for marine conservation in the area."
+                },
+                {
+                    "name": "marine_fauna_disruptions",
+                    "description": "The monthly count of events that negatively affect marine life, such as pollution or unauthorized sea traffic"
+                },
+                {
+                    "name": "is_eco_tourism_area",
+                    "description": "Binary indicator if the area is recognized for eco-tourism"
+                },
+                {
+                    "name": "fishing_vessels_count",
+                    "description": "Number of registered fishing vessels operating in the marine area"
+                },
+                {
+                    "name": "commercial_fishing_restrictions",
+                    "description": "Categorical rating of the strictness of fishing regulations, from 1 (least strict) to 5 (most strict)"
+                },
+                {
+                    "name": "fishery_compliance_score",
+                    "description": "Score from 0 to 100 indicating the compliance level of fisheries with local regulations"
+                },
+                {
+                    "name": "recent_environmental_violations",
+                    "description": "A binary indicator where 1 means environmental violations were reported in the past year and 0 means no violations."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 103,
-      "question": "Is there a relationship between the levels of tourist activity, pollution control, and eco-tourism in marine conservation areas, and the number of species found in those areas?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "number_of_species",
-      
-      
-      "relevant_cols": [
-        "tourist_visits_annual",
-        "pollution_control_index",
-        "is_eco_tourism_area",
-        "number_of_species"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 103,
+            "question": "Is there a relationship between the levels of tourist activity, pollution control, and eco-tourism in marine conservation areas, and the number of species found in those areas?",
+            "question_type": "general",
+            "difficulty": 1,
+            "true_hypothesis": "In marine protected areas where there is a high level of tourist activity, measured by the number of tourist visits annually, and a high level of pollution control, indicated by pollution control index, we hypothesize that these factors significantly increase the number of species. This relationship holds mainly in areas recognized for eco-tourism."
+        }
+    ]
 }

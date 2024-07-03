@@ -1,113 +1,105 @@
 {
-  "id": 0,
-  "domain": "fashion design",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to clothing, style trends, and runway shows.",
-      "columns": [
+    "id": 0,
+    "domain": "fashion design",
+    "datasets": [
         {
-          "name": "audience_approval_rating",
-          "description": "Percentage of audience approval"
-        },
-        {
-          "name": "ensemble_type",
-          "description": "Type of textile used in clothing ensemble"
-        },
-        {
-          "name": "percentage_new_designers",
-          "description": "Percentage of runway slots allocated to designers who debuted in the last five years"
-        },
-        {
-          "name": "fashion_show_location",
-          "description": "Location of the fashion show"
-        },
-        {
-          "name": "predicted_season",
-          "description": "Forecasted season category of the fashion show"
-        },
-        {
-          "name": "local_fashion_magazine_circulation",
-          "description": "Annual circulation numbers of major fashion magazines within the designer's home country"
-        },
-        {
-          "name": "percentage_luxury_brands",
-          "description": "Percentage of luxury brands featured in the fashion show"
-        },
-        {
-          "name": "venue_type",
-          "description": "Type of venue where the fashion show is held"
-        },
-        {
-          "name": "has_sponsorship",
-          "description": "Indicates if the fashion show has a financial or product sponsorship"
-        },
-        {
-          "name": "count_international_designers",
-          "description": "Number of international designers participating in the fashion show"
-        },
-        {
-          "name": "design_innovation_score",
-          "description": "A calculated score based on the use of non-traditional materials and unique construction techniques"
-        },
-        {
-          "name": "designer_origin_gdp_per_capita",
-          "description": "GDP per capita of the country from where the fashion designer originates"
-        },
-        {
-          "name": "average_profit_margin_previous_collections",
-          "description": "Average profit margin from the designer's previous collections"
-        },
-        {
-          "name": "month_of_year",
-          "description": "Month in which the fashion show is held, as an integer (1-12)"
-        },
-        {
-          "name": "social_media_trend_popularity",
-          "description": "Popularity rating of the fashion show on social media platforms"
-        },
-        {
-          "name": "external_temperature",
-          "description": "External temperature in degrees Celsius on the day of the fashion show"
-        },
-        {
-          "name": "num_designer_runway_appearances",
-          "description": "Number of appearances by the designer in major runway events"
-        },
-        {
-          "name": "international_investor_presence",
-          "description": "Presence of investors from outside the fashion designer's origin country"
-        },
-        {
-          "name": "number_of_models",
-          "description": "Number of models in the show"
-        },
-        {
-          "name": "number_of_fashion_design_schools",
-          "description": "Total number of fashion design schools in the designer's home country"
-        },
-        {
-          "name": "is_in_europe",
-          "description": "Binary indicator if the fashion show is located in Europe"
+            "name": "data.csv",
+            "description": "Related to clothing, style trends, and runway shows.",
+            "columns": [
+                {
+                    "name": "audience_approval_rating",
+                    "description": "Percentage of audience approval"
+                },
+                {
+                    "name": "ensemble_type",
+                    "description": "Type of textile used in clothing ensemble"
+                },
+                {
+                    "name": "percentage_new_designers",
+                    "description": "Percentage of runway slots allocated to designers who debuted in the last five years"
+                },
+                {
+                    "name": "fashion_show_location",
+                    "description": "Location of the fashion show"
+                },
+                {
+                    "name": "predicted_season",
+                    "description": "Forecasted season category of the fashion show"
+                },
+                {
+                    "name": "local_fashion_magazine_circulation",
+                    "description": "Annual circulation numbers of major fashion magazines within the designer's home country"
+                },
+                {
+                    "name": "percentage_luxury_brands",
+                    "description": "Percentage of luxury brands featured in the fashion show"
+                },
+                {
+                    "name": "venue_type",
+                    "description": "Type of venue where the fashion show is held"
+                },
+                {
+                    "name": "has_sponsorship",
+                    "description": "Indicates if the fashion show has a financial or product sponsorship"
+                },
+                {
+                    "name": "count_international_designers",
+                    "description": "Number of international designers participating in the fashion show"
+                },
+                {
+                    "name": "design_innovation_score",
+                    "description": "A calculated score based on the use of non-traditional materials and unique construction techniques"
+                },
+                {
+                    "name": "designer_origin_gdp_per_capita",
+                    "description": "GDP per capita of the country from where the fashion designer originates"
+                },
+                {
+                    "name": "average_profit_margin_previous_collections",
+                    "description": "Average profit margin from the designer's previous collections"
+                },
+                {
+                    "name": "month_of_year",
+                    "description": "Month in which the fashion show is held, as an integer (1-12)"
+                },
+                {
+                    "name": "social_media_trend_popularity",
+                    "description": "Popularity rating of the fashion show on social media platforms"
+                },
+                {
+                    "name": "external_temperature",
+                    "description": "External temperature in degrees Celsius on the day of the fashion show"
+                },
+                {
+                    "name": "num_designer_runway_appearances",
+                    "description": "Number of appearances by the designer in major runway events"
+                },
+                {
+                    "name": "international_investor_presence",
+                    "description": "Presence of investors from outside the fashion designer's origin country"
+                },
+                {
+                    "name": "number_of_models",
+                    "description": "Number of models in the show"
+                },
+                {
+                    "name": "number_of_fashion_design_schools",
+                    "description": "Total number of fashion design schools in the designer's home country"
+                },
+                {
+                    "name": "is_in_europe",
+                    "description": "Binary indicator if the fashion show is located in Europe"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 453,
-      "question": "Given the dataset related to fashion design, can you determine if there is a relationship between the social media trend popularity, external temperature, and the predicted season of the fashion shows specifically in Europe?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "predicted_season",
-      
-      
-      "relevant_cols": [
-        "external_temperature",
-        "social_media_trend_popularity",
-        "is_in_europe",
-        "predicted_season"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 453,
+            "question": "Given the dataset related to fashion design, can you determine if there is a relationship between the social media trend popularity, external temperature, and the predicted season of the fashion shows specifically in Europe?",
+            "question_type": "general",
+            "difficulty": 1,
+            "true_hypothesis": "In fashion design, the social media trend popularity and external temperature on the day of the fashion show have a significant effect on predicting the season of the fashion show. The relationship is observed specifically in shows located in Europe, where high social media trend popularity combined with lower temperatures indicates a Winter season, whereas low popularity and high temperatures indicate a Summer season. Additionally, Autumn is predicted for cases falling outside these conditions."
+        }
+    ]
 }

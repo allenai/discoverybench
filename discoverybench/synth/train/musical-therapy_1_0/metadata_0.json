@@ -1,170 +1,157 @@
 {
-  "id": 0,
-  "domain": "musical therapy",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to using music for healing, relaxation, and emotional well-being.",
-      "columns": [
+    "id": 0,
+    "domain": "musical therapy",
+    "datasets": [
         {
-          "name": "mood_improvement_post_session",
-          "description": "Change in patient's mood rated on a scale from -5 to 5, where a positive number indicates an improvement."
-        },
-        {
-          "name": "program_length_weeks",
-          "description": "Total length of the musical therapy program in weeks"
-        },
-        {
-          "name": "disturbance_after_music",
-          "description": "Scale from 1 to 10 measuring any negative effects or disturbances felt by the patient after the music therapy session"
-        },
-        {
-          "name": "feelings_of_calmness",
-          "description": "Self-reported rating of calmness after the session on a scale of 1 to 10"
-        },
-        {
-          "name": "patient_care_unit",
-          "description": "Type of care unit the patient is in (ICU, general ward)"
-        },
-        {
-          "name": "session_duration",
-          "description": "Duration of each musical therapy session in minutes"
-        },
-        {
-          "name": "session_enjoyment_rating",
-          "description": "Patient's self-rated enjoyment of the therapy sessions on a scale of 1 to 10"
-        },
-        {
-          "name": "non_work_hour_access",
-          "description": "Whether the patient has access to therapy sessions outside of standard working hours"
-        },
-        {
-          "name": "emotional_status_positive",
-          "description": "Boolean representation of whether the patient reported a positive emotional status post-session"
-        },
-        {
-          "name": "post_session_discussion",
-          "description": "Indicates if the patient engaged in a discussion about their emotional state after the session (yes/no)"
-        },
-        {
-          "name": "structured_activity_preference",
-          "description": "Patient's preference for structured vs. unstructured activities, rated from 1 to 10."
-        },
-        {
-          "name": "live_classical_concert_attendance",
-          "description": "Number of live classical music concerts the patient attends per year."
-        },
-        {
-          "name": "patient_stress_level",
-          "description": "Self-reported stress level of the patient before starting the therapy program, on a scale from 1 to 10"
-        },
-        {
-          "name": "stress_level_pre_session",
-          "description": "Patient's self-reported stress level before the therapy session, on a scale from 1 to 10."
-        },
-        {
-          "name": "session_time_of_day",
-          "description": "Categorical indicator of when the therapy session is held (morning, afternoon, evening)"
-        },
-        {
-          "name": "interactive_session_participation",
-          "description": "Frequency of participation in interactive music sessions per week"
-        },
-        {
-          "name": "musical_interest_diversity",
-          "description": "Number of different musical genres the patient expresses interest in"
-        },
-        {
-          "name": "cognitive_response_score",
-          "description": "Score measuring the patient's cognitive response to music on a scale from 1 to 10"
-        },
-        {
-          "name": "preference_for_popular_music",
-          "description": "Binary indicator if the participant prefers popular music genres (1 = yes, 0 = no)"
-        },
-        {
-          "name": "musical_taste_variety",
-          "description": "Quantitative measure of the participant's variety in musical preferences across different genres"
-        },
-        {
-          "name": "therapy_session_frequency",
-          "description": "Number of therapy sessions attended per month"
-        },
-        {
-          "name": "preference_for_live_music",
-          "description": "Binary indicator if the participant prefers live music performances (1 = yes, 0 = no)"
-        },
-        {
-          "name": "patient_age",
-          "description": "Age of the patient in years"
-        },
-        {
-          "name": "emotional_stability_score",
-          "description": "Score measuring the patient's emotional stability on a scale from 1 to 10, related to how music affects their emotional state."
-        },
-        {
-          "name": "heart_rate_variability_percentage",
-          "description": "Percentage of change in heart rate variability during the music therapy session compared to baseline"
-        },
-        {
-          "name": "music_genre_variety",
-          "description": "Number of different music genres used during therapy sessions"
-        },
-        {
-          "name": "initial_emotional_state_rating",
-          "description": "Patient's self-reported emotional state before starting the therapy sessions"
-        },
-        {
-          "name": "self_reported_wellness_score",
-          "description": "Average self-reported wellness score after the sessions"
-        },
-        {
-          "name": "adjusted_wellness_score",
-          "description": "Adjusted score related to patient's overall well-being"
-        },
-        {
-          "name": "musical_genre_preference_structured",
-          "description": "Indicates whether the patient prefers structured musical genres like classical or jazz (yes/no)"
-        },
-        {
-          "name": "relaxation_level",
-          "description": "Score indicating the level of relaxation the patient feels during the session, on a scale from 1 to 10"
-        },
-        {
-          "name": "session_frequency_per_week",
-          "description": "Number of therapy sessions attended by the patient per week."
-        },
-        {
-          "name": "relaxation_during_music",
-          "description": "Scale from 1 to 10 measuring how relaxed the patient feels during the music therapy session"
-        },
-        {
-          "name": "frequency_of_sadness",
-          "description": "Average number of times the participant felt sadness during the sessions per month"
+            "name": "data.csv",
+            "description": "Related to using music for healing, relaxation, and emotional well-being.",
+            "columns": [
+                {
+                    "name": "mood_improvement_post_session",
+                    "description": "Change in patient's mood rated on a scale from -5 to 5, where a positive number indicates an improvement."
+                },
+                {
+                    "name": "program_length_weeks",
+                    "description": "Total length of the musical therapy program in weeks"
+                },
+                {
+                    "name": "disturbance_after_music",
+                    "description": "Scale from 1 to 10 measuring any negative effects or disturbances felt by the patient after the music therapy session"
+                },
+                {
+                    "name": "feelings_of_calmness",
+                    "description": "Self-reported rating of calmness after the session on a scale of 1 to 10"
+                },
+                {
+                    "name": "patient_care_unit",
+                    "description": "Type of care unit the patient is in (ICU, general ward)"
+                },
+                {
+                    "name": "session_duration",
+                    "description": "Duration of each musical therapy session in minutes"
+                },
+                {
+                    "name": "session_enjoyment_rating",
+                    "description": "Patient's self-rated enjoyment of the therapy sessions on a scale of 1 to 10"
+                },
+                {
+                    "name": "non_work_hour_access",
+                    "description": "Whether the patient has access to therapy sessions outside of standard working hours"
+                },
+                {
+                    "name": "emotional_status_positive",
+                    "description": "Boolean representation of whether the patient reported a positive emotional status post-session"
+                },
+                {
+                    "name": "post_session_discussion",
+                    "description": "Indicates if the patient engaged in a discussion about their emotional state after the session (yes/no)"
+                },
+                {
+                    "name": "structured_activity_preference",
+                    "description": "Patient's preference for structured vs. unstructured activities, rated from 1 to 10."
+                },
+                {
+                    "name": "live_classical_concert_attendance",
+                    "description": "Number of live classical music concerts the patient attends per year."
+                },
+                {
+                    "name": "patient_stress_level",
+                    "description": "Self-reported stress level of the patient before starting the therapy program, on a scale from 1 to 10"
+                },
+                {
+                    "name": "stress_level_pre_session",
+                    "description": "Patient's self-reported stress level before the therapy session, on a scale from 1 to 10."
+                },
+                {
+                    "name": "session_time_of_day",
+                    "description": "Categorical indicator of when the therapy session is held (morning, afternoon, evening)"
+                },
+                {
+                    "name": "interactive_session_participation",
+                    "description": "Frequency of participation in interactive music sessions per week"
+                },
+                {
+                    "name": "musical_interest_diversity",
+                    "description": "Number of different musical genres the patient expresses interest in"
+                },
+                {
+                    "name": "cognitive_response_score",
+                    "description": "Score measuring the patient's cognitive response to music on a scale from 1 to 10"
+                },
+                {
+                    "name": "preference_for_popular_music",
+                    "description": "Binary indicator if the participant prefers popular music genres (1 = yes, 0 = no)"
+                },
+                {
+                    "name": "musical_taste_variety",
+                    "description": "Quantitative measure of the participant's variety in musical preferences across different genres"
+                },
+                {
+                    "name": "therapy_session_frequency",
+                    "description": "Number of therapy sessions attended per month"
+                },
+                {
+                    "name": "preference_for_live_music",
+                    "description": "Binary indicator if the participant prefers live music performances (1 = yes, 0 = no)"
+                },
+                {
+                    "name": "patient_age",
+                    "description": "Age of the patient in years"
+                },
+                {
+                    "name": "emotional_stability_score",
+                    "description": "Score measuring the patient's emotional stability on a scale from 1 to 10, related to how music affects their emotional state."
+                },
+                {
+                    "name": "heart_rate_variability_percentage",
+                    "description": "Percentage of change in heart rate variability during the music therapy session compared to baseline"
+                },
+                {
+                    "name": "music_genre_variety",
+                    "description": "Number of different music genres used during therapy sessions"
+                },
+                {
+                    "name": "initial_emotional_state_rating",
+                    "description": "Patient's self-reported emotional state before starting the therapy sessions"
+                },
+                {
+                    "name": "self_reported_wellness_score",
+                    "description": "Average self-reported wellness score after the sessions"
+                },
+                {
+                    "name": "adjusted_wellness_score",
+                    "description": "Adjusted score related to patient's overall well-being"
+                },
+                {
+                    "name": "musical_genre_preference_structured",
+                    "description": "Indicates whether the patient prefers structured musical genres like classical or jazz (yes/no)"
+                },
+                {
+                    "name": "relaxation_level",
+                    "description": "Score indicating the level of relaxation the patient feels during the session, on a scale from 1 to 10"
+                },
+                {
+                    "name": "session_frequency_per_week",
+                    "description": "Number of therapy sessions attended by the patient per week."
+                },
+                {
+                    "name": "relaxation_during_music",
+                    "description": "Scale from 1 to 10 measuring how relaxed the patient feels during the music therapy session"
+                },
+                {
+                    "name": "frequency_of_sadness",
+                    "description": "Average number of times the participant felt sadness during the sessions per month"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 488,
-      "question": "What is the relationship between session duration, self-reported wellness score, relaxation during music sessions, disturbance after music, initial emotional state rating, patient care unit, musical interest diversity, interactive session participation, and adjusted wellness score in the context of musical therapy?",
-      "question_type": "general",
-      "difficulty": 3,
-      "target_col": "adjusted_wellness_score",
-      
-      
-      "relevant_cols": [
-        "session_duration",
-        "self_reported_wellness_score",
-        "relaxation_during_music",
-        "disturbance_after_music",
-        "initial_emotional_state_rating",
-        "patient_care_unit",
-        "musical_interest_diversity",
-        "adjusted_wellness_score",
-        "interactive_session_participation"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 488,
+            "question": "What is the relationship between session duration, self-reported wellness score, relaxation during music sessions, disturbance after music, initial emotional state rating, patient care unit, musical interest diversity, interactive session participation, and adjusted wellness score in the context of musical therapy?",
+            "question_type": "general",
+            "difficulty": 3,
+            "true_hypothesis": "Patients who listen to classical music during sessions lasting at least 30 minutes, and have a relaxation score during music sessions higher than after-music disturbance by more than 25 points, an initial emotional state rating supported by interactive session participation and music interest diversity, and are in the ICU, have an adjusted wellness score calculated based on a specific formula involving various factors including their self-reported wellness score."
+        }
+    ]
 }

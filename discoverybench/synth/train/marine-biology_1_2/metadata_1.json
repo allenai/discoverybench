@@ -1,104 +1,97 @@
 {
-  "id": 1,
-  "domain": "marine biology",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
-      "columns": [
+    "id": 1,
+    "domain": "marine biology",
+    "datasets": [
         {
-          "name": "pollution_level",
-          "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
-        },
-        {
-          "name": "reef_location",
-          "description": "Generalized location of the coral reef"
-        },
-        {
-          "name": "fishing_activity",
-          "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
-        },
-        {
-          "name": "water_temperature",
-          "description": "Average water temperature near the coral reef in Celsius"
-        },
-        {
-          "name": "daily_sunlight_hours",
-          "description": "Average number of hours of sunlight received per day at the location"
-        },
-        {
-          "name": "reef_is_protected",
-          "description": "Binary indicator of whether the reef is in a legally protected conservation area"
-        },
-        {
-          "name": "reef_proximity_to_land",
-          "description": "Proximity of the reef to the nearest landmass, measured in kilometers"
-        },
-        {
-          "name": "nutrient_upwelling_frequency",
-          "description": "Frequency of nutrient-rich water upwelling near the reef, measured in number of events per year"
-        },
-        {
-          "name": "cloud_cover",
-          "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
-        },
-        {
-          "name": "human_activity_score",
-          "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
-        },
-        {
-          "name": "seasonal_current_variation",
-          "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
-        },
-        {
-          "name": "shipping_route_presence",
-          "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
-        },
-        {
-          "name": "salinity_variation",
-          "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
-        },
-        {
-          "name": "coral_species_count",
-          "description": "Number of different coral species present"
-        },
-        {
-          "name": "sea_surface_temperature",
-          "description": "Average sea surface temperature near the reef, measured in degrees Celsius"
-        },
-        {
-          "name": "plankton_density",
-          "description": "Average density of plankton in parts per million near the reef"
-        },
-        {
-          "name": "marine_predator_density",
-          "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
-        },
-        {
-          "name": "ocean_depth",
-          "description": "Depth of the ocean at the reef location, measured in meters"
-        },
-        {
-          "name": "water_clarity",
-          "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
+            "name": "data.csv",
+            "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
+            "columns": [
+                {
+                    "name": "pollution_level",
+                    "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
+                },
+                {
+                    "name": "reef_location",
+                    "description": "Generalized location of the coral reef"
+                },
+                {
+                    "name": "fishing_activity",
+                    "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
+                },
+                {
+                    "name": "water_temperature",
+                    "description": "Average water temperature near the coral reef in Celsius"
+                },
+                {
+                    "name": "daily_sunlight_hours",
+                    "description": "Average number of hours of sunlight received per day at the location"
+                },
+                {
+                    "name": "reef_is_protected",
+                    "description": "Binary indicator of whether the reef is in a legally protected conservation area"
+                },
+                {
+                    "name": "reef_proximity_to_land",
+                    "description": "Proximity of the reef to the nearest landmass, measured in kilometers"
+                },
+                {
+                    "name": "nutrient_upwelling_frequency",
+                    "description": "Frequency of nutrient-rich water upwelling near the reef, measured in number of events per year"
+                },
+                {
+                    "name": "cloud_cover",
+                    "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
+                },
+                {
+                    "name": "human_activity_score",
+                    "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
+                },
+                {
+                    "name": "seasonal_current_variation",
+                    "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
+                },
+                {
+                    "name": "shipping_route_presence",
+                    "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
+                },
+                {
+                    "name": "salinity_variation",
+                    "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
+                },
+                {
+                    "name": "coral_species_count",
+                    "description": "Number of different coral species present"
+                },
+                {
+                    "name": "sea_surface_temperature",
+                    "description": "Average sea surface temperature near the reef, measured in degrees Celsius"
+                },
+                {
+                    "name": "plankton_density",
+                    "description": "Average density of plankton in parts per million near the reef"
+                },
+                {
+                    "name": "marine_predator_density",
+                    "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
+                },
+                {
+                    "name": "ocean_depth",
+                    "description": "Depth of the ocean at the reef location, measured in meters"
+                },
+                {
+                    "name": "water_clarity",
+                    "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 562,
-      "question": "Is there a relationship between fishing activity, daily sunlight hours, and plankton density in marine ecosystems?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "plankton_density",
-      
-      
-      "relevant_cols": [
-        "fishing_activity",
-        "daily_sunlight_hours",
-        "plankton_density"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 562,
+            "question": "Is there a relationship between fishing activity, daily sunlight hours, and plankton density in marine ecosystems?",
+            "question_type": "general",
+            "difficulty": 1,
+            "true_hypothesis": "The plankton density near a reef is likely to be higher if the location experiences longer periods of sunlight, coupled with moderate to low fishing activity, enabling optimal photosynthesis to occur, as well as a reduced disruption of the plankton population resulting from fishing."
+        }
+    ]
 }

@@ -1,102 +1,93 @@
 {
-  "id": 0,
-  "domain": "biodiversity conservation",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to preserving species, habitats, and global biodiversity.",
-      "columns": [
+    "id": 0,
+    "domain": "biodiversity conservation",
+    "datasets": [
         {
-          "name": "healthcare_budget_per_capita",
-          "description": "Total healthcare budget per capita in the region, reflecting the investment in public health services."
-        },
-        {
-          "name": "wildlife_sightings_per_capita",
-          "description": "Number of wildlife sightings reported per capita in the region annually."
-        },
-        {
-          "name": "average_annual_temperature",
-          "description": "The average annual temperature of the region in degrees Celsius."
-        },
-        {
-          "name": "ngo_presence",
-          "description": "Indicates whether there is at least one environmental NGO active in the region."
-        },
-        {
-          "name": "average_temperature",
-          "description": "Average annual temperature of the region."
-        },
-        {
-          "name": "average_annual_humidity",
-          "description": "The average annual relative humidity percentage in the region."
-        },
-        {
-          "name": "recent_internet_promotions",
-          "description": "Binary indicator of whether there have been any significant promotional activities for internet services in the area within the past year."
-        },
-        {
-          "name": "protected_wildlife_areas_count",
-          "description": "Number of designated protected wildlife areas in the region."
-        },
-        {
-          "name": "environmental_awareness_level",
-          "description": "The level of awareness and engagement with environmental issues in the region, measured as a score."
-        },
-        {
-          "name": "education_level",
-          "description": "Average education level in the region, on a scale from 1 (no formal education) to 10 (advanced degree)."
-        },
-        {
-          "name": "region_type",
-          "description": "Categorizes each region as coastal or inland."
-        },
-        {
-          "name": "economic_status",
-          "description": "The economic status of the region, categorized as low, middle, or high income."
-        },
-        {
-          "name": "frequency_of_natural_disasters",
-          "description": "Number of recorded natural disasters like earthquakes, floods, or storms per year in the region."
-        },
-        {
-          "name": "wildlife_policy_strength",
-          "description": "A numerical score from 1 to 10 that reflects the strength and enforcement of wildlife conservation policies in the region."
-        },
-        {
-          "name": "population_density",
-          "description": "The number of people per square kilometer in each region."
-        },
-        {
-          "name": "infrastructure_quality",
-          "description": "The quality of technological infrastructure available in the region, rated on a scale."
-        },
-        {
-          "name": "conservation_program_type",
-          "description": "Type of biodiversity conservation program implemented: community-led or government-led."
-        },
-        {
-          "name": "employment_rate",
-          "description": "Percentage of the eligible workforce that is employed, indicating labor market health."
+            "name": "data.csv",
+            "description": "Related to preserving species, habitats, and global biodiversity.",
+            "columns": [
+                {
+                    "name": "healthcare_budget_per_capita",
+                    "description": "Total healthcare budget per capita in the region, reflecting the investment in public health services."
+                },
+                {
+                    "name": "wildlife_sightings_per_capita",
+                    "description": "Number of wildlife sightings reported per capita in the region annually."
+                },
+                {
+                    "name": "average_annual_temperature",
+                    "description": "The average annual temperature of the region in degrees Celsius."
+                },
+                {
+                    "name": "ngo_presence",
+                    "description": "Indicates whether there is at least one environmental NGO active in the region."
+                },
+                {
+                    "name": "average_temperature",
+                    "description": "Average annual temperature of the region."
+                },
+                {
+                    "name": "average_annual_humidity",
+                    "description": "The average annual relative humidity percentage in the region."
+                },
+                {
+                    "name": "recent_internet_promotions",
+                    "description": "Binary indicator of whether there have been any significant promotional activities for internet services in the area within the past year."
+                },
+                {
+                    "name": "protected_wildlife_areas_count",
+                    "description": "Number of designated protected wildlife areas in the region."
+                },
+                {
+                    "name": "environmental_awareness_level",
+                    "description": "The level of awareness and engagement with environmental issues in the region, measured as a score."
+                },
+                {
+                    "name": "education_level",
+                    "description": "Average education level in the region, on a scale from 1 (no formal education) to 10 (advanced degree)."
+                },
+                {
+                    "name": "region_type",
+                    "description": "Categorizes each region as coastal or inland."
+                },
+                {
+                    "name": "economic_status",
+                    "description": "The economic status of the region, categorized as low, middle, or high income."
+                },
+                {
+                    "name": "frequency_of_natural_disasters",
+                    "description": "Number of recorded natural disasters like earthquakes, floods, or storms per year in the region."
+                },
+                {
+                    "name": "wildlife_policy_strength",
+                    "description": "A numerical score from 1 to 10 that reflects the strength and enforcement of wildlife conservation policies in the region."
+                },
+                {
+                    "name": "population_density",
+                    "description": "The number of people per square kilometer in each region."
+                },
+                {
+                    "name": "infrastructure_quality",
+                    "description": "The quality of technological infrastructure available in the region, rated on a scale."
+                },
+                {
+                    "name": "conservation_program_type",
+                    "description": "Type of biodiversity conservation program implemented: community-led or government-led."
+                },
+                {
+                    "name": "employment_rate",
+                    "description": "Percentage of the eligible workforce that is employed, indicating labor market health."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 1037,
-      "question": "Is there a relationship between the ratio of wildlife sightings per capita to a derived environmental indicator and the presence of environmental NGOs in different regions?",
-      "question_type": "general",
-      "difficulty": 2,
-      "target_col": "ngo_presence",
-      
-      
-      "relevant_cols": [
-        "wildlife_sightings_per_capita",
-        "average_annual_temperature",
-        "average_annual_humidity",
-        "wildlife_policy_strength",
-        "ngo_presence"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 1037,
+            "question": "Is there a relationship between the ratio of wildlife sightings per capita to a derived environmental indicator and the presence of environmental NGOs in different regions?",
+            "question_type": "general",
+            "difficulty": 2,
+            "true_hypothesis": "Regions where the ratio of wildlife sightings per capita to a derived environmental indicator is greater than 0.02 are more likely to have an environmental NGO presence."
+        }
+    ]
 }

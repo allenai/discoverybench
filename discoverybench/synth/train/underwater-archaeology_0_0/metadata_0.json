@@ -1,89 +1,77 @@
 {
-  "id": 0,
-  "domain": "underwater archaeology",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to submerged artifacts, shipwrecks, and sunken cities.",
-      "columns": [
+    "id": 0,
+    "domain": "underwater archaeology",
+    "datasets": [
         {
-          "name": "site_discovery_date",
-          "description": "Date when the archaeological site was discovered"
-        },
-        {
-          "name": "light_penetration",
-          "description": "Percentage of light that penetrates to the site, measured as a percentage"
-        },
-        {
-          "name": "protected_marine_area",
-          "description": "Indicates whether the site is within a legally protected marine conservation area"
-        },
-        {
-          "name": "site_id",
-          "description": "Unique identifier for each archaeological site"
-        },
-        {
-          "name": "sediment_concentration",
-          "description": "Amount of sediment in the water measured in grams per liter"
-        },
-        {
-          "name": "sediment_accumulation_rate",
-          "description": "Rate of sediment accumulation at the site in kilograms per square meter per year"
-        },
-        {
-          "name": "ocean_current_strength",
-          "description": "Measurement of ocean current strength at the site in knots"
-        },
-        {
-          "name": "number_of_artifacts",
-          "description": "Number of artifacts recovered from the site"
-        },
-        {
-          "name": "current_speed",
-          "description": "Speed of the water current at the site, measured in meters per second"
-        },
-        {
-          "name": "permit_year",
-          "description": "Year when the excavation permit for the site was issued"
-        },
-        {
-          "name": "stone_structures_present",
-          "description": "Indicates whether stone structures are present at the site"
-        },
-        {
-          "name": "depth_of_site",
-          "description": "Measure of depth at which the archaeological site is located, in meters"
-        },
-        {
-          "name": "water_depth",
-          "description": "Depth of water at the site in meters"
-        },
-        {
-          "name": "contains_gold",
-          "description": "Indicates if the archaeological site contains gold artifacts"
+            "name": "data.csv",
+            "description": "Related to submerged artifacts, shipwrecks, and sunken cities.",
+            "columns": [
+                {
+                    "name": "site_discovery_date",
+                    "description": "Date when the archaeological site was discovered"
+                },
+                {
+                    "name": "light_penetration",
+                    "description": "Percentage of light that penetrates to the site, measured as a percentage"
+                },
+                {
+                    "name": "protected_marine_area",
+                    "description": "Indicates whether the site is within a legally protected marine conservation area"
+                },
+                {
+                    "name": "site_id",
+                    "description": "Unique identifier for each archaeological site"
+                },
+                {
+                    "name": "sediment_concentration",
+                    "description": "Amount of sediment in the water measured in grams per liter"
+                },
+                {
+                    "name": "sediment_accumulation_rate",
+                    "description": "Rate of sediment accumulation at the site in kilograms per square meter per year"
+                },
+                {
+                    "name": "ocean_current_strength",
+                    "description": "Measurement of ocean current strength at the site in knots"
+                },
+                {
+                    "name": "number_of_artifacts",
+                    "description": "Number of artifacts recovered from the site"
+                },
+                {
+                    "name": "current_speed",
+                    "description": "Speed of the water current at the site, measured in meters per second"
+                },
+                {
+                    "name": "permit_year",
+                    "description": "Year when the excavation permit for the site was issued"
+                },
+                {
+                    "name": "stone_structures_present",
+                    "description": "Indicates whether stone structures are present at the site"
+                },
+                {
+                    "name": "depth_of_site",
+                    "description": "Measure of depth at which the archaeological site is located, in meters"
+                },
+                {
+                    "name": "water_depth",
+                    "description": "Depth of water at the site in meters"
+                },
+                {
+                    "name": "contains_gold",
+                    "description": "Indicates if the archaeological site contains gold artifacts"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 176,
-      "question": "What is the relationship between ocean current strength, presence of stone structures, sediment accumulation rate, depth of the site, protected marine area, number of artifacts, and water depth with the existence of gold artifacts at underwater archaeological sites?",
-      "question_type": "general",
-      "difficulty": 4,
-      "target_col": "contains_gold",
-      
-      
-      "relevant_cols": [
-        "water_depth",
-        "number_of_artifacts",
-        "stone_structures_present",
-        "depth_of_site",
-        "ocean_current_strength",
-        "protected_marine_area",
-        "sediment_accumulation_rate",
-        "contains_gold"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 176,
+            "question": "What is the relationship between ocean current strength, presence of stone structures, sediment accumulation rate, depth of the site, protected marine area, number of artifacts, and water depth with the existence of gold artifacts at underwater archaeological sites?",
+            "question_type": "general",
+            "difficulty": 4,
+            "true_hypothesis": "When the ocean current strength is greater than or equal to 2, the site is located within a protected marine area, the sediment accumulation rate is less than 5, and the multiplying factor of 20 times the condition-based value of True subtracted by 0.5 times the depth of the site exceeds 10, with stone structures present, and the total number of artifacts cubed plus zero to the power of the water depth subtracted by 3 is greater than 500, then the site contains gold artifacts."
+        }
+    ]
 }

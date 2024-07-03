@@ -1,95 +1,81 @@
 {
-  "id": 0,
-  "domain": "fashion design",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to clothing, style trends, and runway shows.",
-      "columns": [
+    "id": 0,
+    "domain": "fashion design",
+    "datasets": [
         {
-          "name": "percentage_new_designers",
-          "description": "Percentage of runway slots allocated to designers who debuted in the last five years"
-        },
-        {
-          "name": "ensemble_type",
-          "description": "Type of textile used in clothing ensemble"
-        },
-        {
-          "name": "average_profit_margin_previous_collections",
-          "description": "Average profit margin from the designer's previous collections"
-        },
-        {
-          "name": "predicted_season",
-          "description": "Forecasted season category of the fashion show"
-        },
-        {
-          "name": "venue_type",
-          "description": "Type of venue where the fashion show is held"
-        },
-        {
-          "name": "count_international_designers",
-          "description": "Number of international designers participating in the fashion show"
-        },
-        {
-          "name": "has_sponsorship",
-          "description": "Indicates if the fashion show has a financial or product sponsorship"
-        },
-        {
-          "name": "number_of_fashion_design_schools",
-          "description": "Total number of fashion design schools in the designer's home country"
-        },
-        {
-          "name": "num_designer_runway_appearances",
-          "description": "Number of appearances by the designer in major runway events"
-        },
-        {
-          "name": "number_of_models",
-          "description": "Number of models in the show"
-        },
-        {
-          "name": "design_innovation_score",
-          "description": "A calculated score based on the use of non-traditional materials and unique construction techniques"
-        },
-        {
-          "name": "month_of_year",
-          "description": "Month in which the fashion show is held, as an integer (1-12)"
-        },
-        {
-          "name": "local_fashion_magazine_circulation",
-          "description": "Annual circulation numbers of major fashion magazines within the designer's home country"
-        },
-        {
-          "name": "fashion_show_location",
-          "description": "Location of the fashion show"
-        },
-        {
-          "name": "external_temperature",
-          "description": "External temperature in degrees Celsius on the day of the fashion show"
+            "name": "data.csv",
+            "description": "Related to clothing, style trends, and runway shows.",
+            "columns": [
+                {
+                    "name": "percentage_new_designers",
+                    "description": "Percentage of runway slots allocated to designers who debuted in the last five years"
+                },
+                {
+                    "name": "ensemble_type",
+                    "description": "Type of textile used in clothing ensemble"
+                },
+                {
+                    "name": "average_profit_margin_previous_collections",
+                    "description": "Average profit margin from the designer's previous collections"
+                },
+                {
+                    "name": "predicted_season",
+                    "description": "Forecasted season category of the fashion show"
+                },
+                {
+                    "name": "venue_type",
+                    "description": "Type of venue where the fashion show is held"
+                },
+                {
+                    "name": "count_international_designers",
+                    "description": "Number of international designers participating in the fashion show"
+                },
+                {
+                    "name": "has_sponsorship",
+                    "description": "Indicates if the fashion show has a financial or product sponsorship"
+                },
+                {
+                    "name": "number_of_fashion_design_schools",
+                    "description": "Total number of fashion design schools in the designer's home country"
+                },
+                {
+                    "name": "num_designer_runway_appearances",
+                    "description": "Number of appearances by the designer in major runway events"
+                },
+                {
+                    "name": "number_of_models",
+                    "description": "Number of models in the show"
+                },
+                {
+                    "name": "design_innovation_score",
+                    "description": "A calculated score based on the use of non-traditional materials and unique construction techniques"
+                },
+                {
+                    "name": "month_of_year",
+                    "description": "Month in which the fashion show is held, as an integer (1-12)"
+                },
+                {
+                    "name": "local_fashion_magazine_circulation",
+                    "description": "Annual circulation numbers of major fashion magazines within the designer's home country"
+                },
+                {
+                    "name": "fashion_show_location",
+                    "description": "Location of the fashion show"
+                },
+                {
+                    "name": "external_temperature",
+                    "description": "External temperature in degrees Celsius on the day of the fashion show"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 455,
-      "question": "Is there a relationship between the temperature outside, venue type, and the number of international designers with the predicted season of fashion shows in this dataset?",
-      "question_type": "general",
-      "difficulty": 3,
-      "target_col": "predicted_season",
-      
-      
-      "relevant_cols": [
-        "external_temperature",
-        "venue_type",
-        "percentage_new_designers",
-        "count_international_designers",
-        "month_of_year",
-        "local_fashion_magazine_circulation",
-        "number_of_fashion_design_schools",
-        "num_designer_runway_appearances",
-        "average_profit_margin_previous_collections",
-        "predicted_season"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 455,
+            "question": "Is there a relationship between the temperature outside, venue type, and the number of international designers with the predicted season of fashion shows in this dataset?",
+            "question_type": "general",
+            "difficulty": 3,
+            "true_hypothesis": "In fashion design, the number of local fashion magazine circulation per fashion design school, designer's runway appearances, and profit margin from previous collections combine with temperature, venue type, percentage of new designers, number of international designers, and month of the year to predict the season of the fashion show. The relationship is observed in shows where specific criteria regarding these factors are met, resulting in the prediction of Winter or Summer seasons. For other cases, Autumn is predicted."
+        }
+    ]
 }

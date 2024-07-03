@@ -1,98 +1,81 @@
 {
-  "id": 0,
-  "domain": "marine biology",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
-      "columns": [
+    "id": 0,
+    "domain": "marine biology",
+    "datasets": [
         {
-          "name": "bleaching_resistance",
-          "description": "Whether the coral reef resisted a bleaching event, 1 for resisted, 0 for not resisted"
-        },
-        {
-          "name": "seasonal_current_variation",
-          "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
-        },
-        {
-          "name": "reef_location",
-          "description": "Generalized location of the coral reef"
-        },
-        {
-          "name": "fishing_activity",
-          "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
-        },
-        {
-          "name": "water_temperature",
-          "description": "Average water temperature near the coral reef in Celsius"
-        },
-        {
-          "name": "salinity_variation",
-          "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
-        },
-        {
-          "name": "pollution_level",
-          "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
-        },
-        {
-          "name": "coral_species_count",
-          "description": "Number of different coral species present"
-        },
-        {
-          "name": "marine_predator_density",
-          "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
-        },
-        {
-          "name": "ocean_depth",
-          "description": "Depth of the ocean at the reef location, measured in meters"
-        },
-        {
-          "name": "cloud_cover",
-          "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
-        },
-        {
-          "name": "human_activity_score",
-          "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
-        },
-        {
-          "name": "water_clarity",
-          "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
-        },
-        {
-          "name": "shipping_route_presence",
-          "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
-        },
-        {
-          "name": "reef_is_protected",
-          "description": "Binary indicator of whether the reef is in a legally protected conservation area"
+            "name": "data.csv",
+            "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
+            "columns": [
+                {
+                    "name": "bleaching_resistance",
+                    "description": "Whether the coral reef resisted a bleaching event, 1 for resisted, 0 for not resisted"
+                },
+                {
+                    "name": "seasonal_current_variation",
+                    "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
+                },
+                {
+                    "name": "reef_location",
+                    "description": "Generalized location of the coral reef"
+                },
+                {
+                    "name": "fishing_activity",
+                    "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
+                },
+                {
+                    "name": "water_temperature",
+                    "description": "Average water temperature near the coral reef in Celsius"
+                },
+                {
+                    "name": "salinity_variation",
+                    "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
+                },
+                {
+                    "name": "pollution_level",
+                    "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
+                },
+                {
+                    "name": "coral_species_count",
+                    "description": "Number of different coral species present"
+                },
+                {
+                    "name": "marine_predator_density",
+                    "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
+                },
+                {
+                    "name": "ocean_depth",
+                    "description": "Depth of the ocean at the reef location, measured in meters"
+                },
+                {
+                    "name": "cloud_cover",
+                    "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
+                },
+                {
+                    "name": "human_activity_score",
+                    "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
+                },
+                {
+                    "name": "water_clarity",
+                    "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
+                },
+                {
+                    "name": "shipping_route_presence",
+                    "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
+                },
+                {
+                    "name": "reef_is_protected",
+                    "description": "Binary indicator of whether the reef is in a legally protected conservation area"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 556,
-      "question": "What is the relationship between the salinity variation and the bleaching resistance of coral reefs in marine ecosystems?",
-      "question_type": "general",
-      "difficulty": 4,
-      "target_col": "bleaching_resistance",
-      
-      
-      "relevant_cols": [
-        "coral_species_count",
-        "fishing_activity",
-        "pollution_level",
-        "seasonal_current_variation",
-        "ocean_depth",
-        "human_activity_score",
-        "reef_is_protected",
-        "marine_predator_density",
-        "salinity_variation",
-        "shipping_route_presence",
-        "water_clarity",
-        "cloud_cover",
-        "bleaching_resistance"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 556,
+            "question": "What is the relationship between the salinity variation and the bleaching resistance of coral reefs in marine ecosystems?",
+            "question_type": "general",
+            "difficulty": 4,
+            "true_hypothesis": "In marine ecosystems, high bleaching resistance in coral reefs is predicted when the pollution level is 'low', the seasonal current variation is 'low', and a complex combination of environmental factors including ocean depth, human activity score, protection status, marine predator density, salinity variation, shipping route presence, water clarity, cloud cover, and fishing activity, as well as the number of coral species exceeding 100, are taken into account."
+        }
+    ]
 }
