@@ -138,31 +138,19 @@
             {
                 "qid": 0,
                 "true_hypothesis": "Evolutionary rates of oral gape position and relative maxillary length both exhibit a negative relationship with speciation rates. Their respective coefficient of relation is -4.6 and -4.9.",
-                "relevant_cols": [],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "variables",
-                "question_specificity": null,
                 "question": "Which evolutionary traits exhibit a negative relationship with speciation rates, with respective coefficients of -4.6 and -4.9?"
             },
             {
                 "qid": 1,
                 "true_hypothesis": "Evolutionary rates of oral gape position and relative maxillary length both exhibit a negative relationship with speciation rates. Their respective coefficient of relation is -4.6 and -4.9.",
-                "relevant_cols": [],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "variables",
-                "question_specificity": null,
                 "question": "Which factors exhibit a negative relationship with speciation rates?"
             },
             {
                 "qid": 2,
                 "true_hypothesis": "Evolutionary rates of oral gape position and relative maxillary length both exhibited a negative relationship with speciation rates. Their respective coefficient of relation is -4.6 and -4.9.",
-                "relevant_cols": [],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "relationship",
-                "question_specificity": null,
                 "question": "What relationship did the evolutionary rates of oral gape position and relative maxillary length have with speciation rates, and what were their coefficients?"
             }
         ]

@@ -138,31 +138,19 @@
             {
                 "qid": 0,
                 "true_hypothesis": "The rate of maximum body length evolution emerged as the most influential factor explaining spatial variation in speciation rates. The relationship is positive with linear coefficient 0.82.",
-                "relevant_cols": [],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "variable",
-                "question_specificity": null,
                 "question": "Is the maximum body length evolution the most impactful factor in explaining the speciation rates?"
             },
             {
                 "qid": 1,
                 "true_hypothesis": "The rate of maximum body length evolution emerged as the most influential factor explaining spatial variation in speciation rates. The relationship is positive with linear coefficient 0.82.",
-                "relevant_cols": [],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "variable",
-                "question_specificity": null,
                 "question": "What explained the spatial variation in speciation rates, where the rate of maximum body length evolution was identified as the most influential factor with a positive relationship coefficient of 0.82?"
             },
             {
                 "qid": 2,
                 "true_hypothesis": "The rate of maximum body length evolution emerged as the most influential factor explaining spatial variation in speciation rates. The relationship is positive with linear coefficient 0.82.",
-                "relevant_cols": [],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "relationhsip",
-                "question_specificity": null,
                 "question": "What is the linear coefficient that describes the positive relationship between the rate of maximum body length evolution and spatial variation in speciation rates, where the former emerges as the most influential factor?"
             }
         ]

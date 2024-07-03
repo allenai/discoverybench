@@ -138,21 +138,13 @@
             {
                 "qid": 0,
                 "true_hypothesis": "There is a weak but significant, positive relationship between speciation rates and species diversity. The weak relationship is determined by a very small coefficient 0.00003018.",
-                "relevant_cols": [],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "variables",
-                "question_specificity": null,
                 "question": "What entities show a weak but significant, positive relationship with a coefficient of 0.00003018?"
             },
             {
                 "qid": 1,
                 "true_hypothesis": "There is a weak but significant, positive relationship between speciation rates and species diversity. The weak relationship is determined by a very small coefficient 0.00003018.",
-                "relevant_cols": [],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "relationship",
-                "question_specificity": null,
                 "question": "What type of relationship exists between speciation rates and species diversity?"
             }
         ]

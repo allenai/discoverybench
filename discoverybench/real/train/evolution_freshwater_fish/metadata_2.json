@@ -138,21 +138,13 @@
             {
                 "qid": 0,
                 "true_hypothesis": "The rate of body elongation evolution has no significant association with speciation rates.",
-                "relevant_cols": [],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "variables",
-                "question_specificity": null,
                 "question": "Which two aspects of evolutionary biology have been found to have no significant association?"
             },
             {
                 "qid": 1,
                 "true_hypothesis": "The rate of body elongation evolution has no significant association with speciation rates.",
-                "relevant_cols": [],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "relationship",
-                "question_specificity": null,
                 "question": "What is the nature of the relationship between the rate of body elongation evolution and speciation rates?"
             }
         ]
