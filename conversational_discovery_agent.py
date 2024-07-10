@@ -148,6 +148,10 @@ def generate_exploration_prompt(metadata_path, query):
           " Write some code to perform this exploration."
     return init_message
 
+def remove_print_statements(code):
+    # TODO: if there are indented print statements, that code will still be executed. We should address this later
+    return '\n'.join([line for line in code.split('\n') if not line.startswith('print')]) 
+
 def extract_code(response):
     # the code should be encapsulated with ```python and ```.
     # extract the code from the response and return it as a multiline string.
@@ -314,9 +318,9 @@ def prompt_for_code_w_error_history(
 # TODO: implement retries for the code.
 def process_code_step(history: List[Dict[str, str]], 
                             user_code_prompt, 
-                            num_retries = 2) -> str:
+                            current_code: str = "",
+                            num_retries = 3) -> str:
     messages = history.copy()
-
 
     successful_execution = False
     attempt_num = 0
@@ -337,14 +341,16 @@ def process_code_step(history: List[Dict[str, str]],
         stdout = sys.stdout
         sys.stdout = StringIO()
         try:
-            exec(extracted_code, locals(), locals())
+            complete_code = remove_print_statements(current_code) + "\n" + extracted_code
+            exec(complete_code, locals(), locals())
             exec_output = sys.stdout.getvalue()
             successful_execution = True
         except Exception as e:
             sys.stdout = stdout
             # TODO: is there a way to get a stack trace? 
             tb = traceback.format_exc()
-            logger.info(f"An error occurred: {tb}. Attempt number: {attempt_num}")
+            logger.info(f"An error occurred for attempt {attempt_num}: {tb}.")
+            logger.info(f"extracted code for attempt {attempt_num}: {extracted_code}")
             tracebacks.append(tb)
             prior_implementations.append(extracted_code)
             messages = messages[:-1] # remove the last message, since the code was incorrect.
@@ -375,14 +381,17 @@ def process_workflow(system_prompt: str,
     messages = [{"role": "system", "content": system_prompt}]
     execution_results = []
     workflow_results = []
+    all_code_snippets = [] 
     for i in range(len(workflow)):
         workflow_step = workflow[i]
         if isinstance(workflow_step, CodeRequestPrompt):
-            result_dict = process_code_step(messages, workflow_step.prompt)
+            result_dict = process_code_step(messages, workflow_step.prompt, "\n\n".join(all_code_snippets), num_retries=3)
+            extracted_code = extract_code(result_dict['agent_response']) # NOTE: Hopefully we don't get duplicate code snippets.
             messages.extend([
                 {"role": "user", "content": workflow_step.prompt},
                 {"role": "assistant", "content": result_dict['agent_response']}
             ])
+            all_code_snippets.append(extracted_code)
             execution_results.append(result_dict['execution_output'])
             workflow_results.append(
                 {
@@ -394,19 +403,23 @@ def process_workflow(system_prompt: str,
         elif isinstance(workflow_step, SynthResultPrompt):
             prompt = workflow_step.prompt_template(execution_results[-1])
             if workflow_step.is_code_req:
-                result_dict = process_code_step(messages, prompt)
+                result_dict = process_code_step(messages, prompt, "\n\n".join(all_code_snippets), num_retries=3)
                 messages.extend([
                     {"role": "user", "content": prompt},
                     {"role": "assistant", "content": result_dict['agent_response']}
                 ]) # not quite correct, because the next step(s) might also be a code execution. We need to specify this.
+                extracted_code = extract_code(result_dict['agent_response'])
+                all_code_snippets.append(
+                    extracted_code
+                )
                 workflow_results.append(
                     {
                         "prompt": prompt,
                         "response": result_dict['agent_response'],
                         "execution_output": result_dict['execution_output'], 
-
                     }
                 )
+                execution_results.append(result_dict["execution_output"])
             else:
                 response = process_regular_prompt(messages, prompt)
                 messages.extend([
@@ -440,6 +453,10 @@ def display_results_explore_workflow(workflow, workflow_results):
             print(f"Agent code: {agent_code}")
             print(f"Execution output: {execution_output}")
 
+def clear_dir(path: str):
+    for fname in os.listdir(path):
+        os.remove(f"{path}/{fname}")
+
 @click.command()
 @click.argument('dataset_path')
 @click.argument('query')
@@ -465,14 +482,17 @@ def analyze_dataset(dataset_path: str, query: str,
             " In the final answer, please write down a scientific hypothesis in natural language" +\
             " derived from the provided dataset, clearly stating the context of hypothesis (if any)" +\
             " , variables chosen (if any) and relationship between those variables (if any). Include implementations" +\
-            " of any statistical significance tests (if applicable). Don't assume that imports from the previous code are available."
+            " of any statistical significance tests (if applicable)." 
         rev_second_prompt_template = lambda exec_result: f"The output of the previous code is:" +\
             f"\n{exec_result}\n\nBased on this analysis output, what is your scientific hypothesis for the query '{query}'?" +\
-            f" Limit your response to 1-2 sentences."
+            f"Ground your answer in the context of the analysis (including any metrics or statistical significance tests)." +\
+            f"Keep your response succinct and clear."
         workflow = [CodeRequestPrompt(exploration_step), SynthResultPrompt(exploration_passback, True), 
                     SynthResultPrompt(rev_second_prompt_template, False)]
         execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
         display_results_explore_workflow(workflow, execution_results)
+        # clear the floma cache at scratch/flowmason_cache
+        clear_dir("scratch/flowmason_cache")
     else:
         first_message = construct_first_message(dataset_path, query, structure_type)
         rev_second_prompt_template = lambda exec_result: f"The output of the previous code is:\n{exec_result}\n\nBased on this output, what is your scientific hypothesis?"
