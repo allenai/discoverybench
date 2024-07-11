@@ -82,8 +82,12 @@ Reach out to us at: [Bodhisattwa Prasad Majumder](https://www.majumderb.com) and
 ## ✍️ Citation
 If you find our work helpful, please use the following citations.
 ```
-@inproceedings{
-TBA
+@article{majumder2024discoverybench,
+  author    = "Bodhisattwa Prasad Majumder, Harshit Surana, Dhruv Agarwal, Bhavana Dalvi Mishra, Abhijeetsingh Meena, Aryan Prakhar, Tirth Vora, Tushar Khot, Ashish Sabharwal, Peter Clark",
+  title     = "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models",
+  journal   = "arXiv",
+  year      = "2024",
 }
+
 ```
 
