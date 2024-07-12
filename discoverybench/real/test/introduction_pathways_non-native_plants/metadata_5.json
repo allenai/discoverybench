@@ -123,7 +123,7 @@
         },        
         {
             "name": "invaded_niche_pathways.csv",
-            "description": "The data for the analysis of pathway-specific differences in the invaded niche.",
+            "description": "The dataset contains information about the different pathways in the invaded niche.",
             "columns": {
                 "raw": [
                     {
