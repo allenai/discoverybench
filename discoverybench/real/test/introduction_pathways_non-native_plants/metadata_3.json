@@ -32,7 +32,7 @@
             }
         },
         {
-            "name": "invasion_success_pathways.tsv",
+            "name": "invasion_success_pathways.csv",
             "description": "This dataset provides comprehensive information on various non-native plant species that have invaded plots in the Barcelona province. The dataset includes detailed information on the ecological and biological characteristics of each species, the extent of their invasion, and the pathways through which they were introduced.",
             "columns": {
                 "raw": [
