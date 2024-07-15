@@ -28,7 +28,10 @@
             "name": "phylogenetic_tree.txt",
             "description": "This file contains a phylogenetic tree in Newick format, illustrating the evolutionary relationships among diverse plant species. It features species from multiple families, with branch lengths denoting genetic distances or evolutionary times.",
             "columns": {
-                "raw": []
+                "raw": [{
+                    "name": "",
+                    "description": ""
+                }]
             }
         },
         {
