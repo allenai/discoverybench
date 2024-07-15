@@ -1,0 +1,82 @@
+Scientific_name,family,number.of.invaded.plots,area.of.occupancy.10km,habitat.range,invaded.niche.breadth,mrt,native.niche.breadth,intro.pathway,growth.form,dispersal,vegetative,height,genus,species,genus.relative,duplicated,species.relative,phylo.tip.label
+Acer negundo L.,Sapindaceae,3,3,3,0.86,119,0.966,Gardening,Shrub/tree,Wind,No,20,Acer,Acer negundo,NA,FALSE,NA,Acer_negundo
+Agave americana L.,Asparagaceae,3,3,3,0.785,250,0.567,Gardening,Shrub/tree,Unspecific,Yes,10,Agave,Agave americana,NA,FALSE,NA,Agave_americana
+Ailanthus altissima (Mill.) Swingle,Simaroubaceae,3,2,2,0.968,110,0.706,Gardening,Shrub/tree,Wind,Yes,20,Ailanthus,Ailanthus altissima,NA,FALSE,NA,Ailanthus_altissima
+Amaranthus blitoides S. Watson,Amaranthaceae,11,9,3,0.898,100,0.839,Unintentional,Annual fg,Unspecific,No,0.5,Amaranthus,Amaranthus blitoides,NA,FALSE,NA,Amaranthus_blitoides
+Amaranthus deflexus L.,Amaranthaceae,5,4,2,1.382,145,0.743,Unintentional,Perennial fg,Unspecific,No,0.6,Amaranthus,Amaranthus deflexus,NA,FALSE,NA,Amaranthus_deflexus
+Amaranthus hybridus L.,Amaranthaceae,1,1,1,0,132,1.138,Unintentional,Annual fg,Unspecific,No,2.2,Amaranthus,Amaranthus hybridus,NA,FALSE,NA,Amaranthus_hybridus
+Amaranthus muricatus Moq.,Amaranthaceae,1,1,1,0,103,0.71,Unintentional,Perennial fg,Unspecific,Yes,0.5,Amaranthus,Amaranthus muricatus,NA,FALSE,NA,Amaranthus_muricatus
+Amaranthus retroflexus L.,Amaranthaceae,35,25,5,1.279,165,0.574,Unintentional,Annual fg,Unspecific,No,1,Amaranthus,Amaranthus retroflexus,NA,FALSE,NA,Amaranthus_retroflexus
+Amaranthus viridis L.,Amaranthaceae,2,1,1,0.088,108,1.03,Unintentional,Annual fg,Unspecific,No,0.6,Amaranthus,Amaranthus viridis,NA,FALSE,NA,Amaranthus_viridis
+Araujia sericifera Brot.,Apocynaceae,11,6,4,0.391,50,0.588,Gardening,Perennial fg,Wind,Yes,5,Araujia,Araujia sericifera,NA,FALSE,NA,Araujia_sericifera
+Artemisia verlotiorum Lamotte,Asteraceae,9,9,4,1.577,99,0.98,Unintentional,Perennial fg,Unspecific,Yes,1.5,Artemisia,Artemisia verlotiorum,NA,FALSE,NA,Artemisia_verlotiorum
+Bidens frondosus L.,Asteraceae,2,1,1,0.085,68,0.858,Unintentional,Annual fg,Animal,No,1.5,Bidens,Bidens frondosus,NA,FALSE,NA,Bidens_frondosus
+Bidens subalternans DC.,Asteraceae,2,2,2,1.199,77,0.776,Unintentional,Annual fg,Animal,No,2.2,Bidens,Bidens subalternans,NA,FALSE,NA,Bidens_subalternans
+Bromus catharticus Vahl,Poaceae,1,1,1,0,100,1.125,Unintentional,Perennial fg,Unspecific,Yes,1.5,Bromus,Bromus catharticus,NA,FALSE,NA,Bromus_catharticus
+Canna indica L.,Cannaceae,1,1,1,0,23,1.056,Gardening,Perennial fg,Unspecific,Yes,2,Canna,Canna indica,NA,FALSE,NA,Canna_indica
+Carpobrotus edulis (L.) N.E. Br.,Aizoaceae,2,2,1,0.531,100,0.373,Gardening,Perennial fg,Animal,Yes,0.05,Carpobrotus,Carpobrotus edulis,NA,FALSE,NA,Carpobrotus_edulis
+Cenchrus longisetus M.C.Johnst. [Pennisetum villosum Fresen.],Poaceae,2,1,1,0,108,0.711,Gardening,Perennial fg,Unspecific,Yes,0.6,Cenchrus,Cenchrus longisetus,NA,FALSE,NA,Cenchrus_longisetus
+Cenchrus spinifex Cav.,Poaceae,2,1,1,0.391,40,0.854,Unintentional,Annual fg,Animal,Yes,0.6,Cenchrus,Cenchrus spinifex,NA,FALSE,NA,Cenchrus_spinifex
+Cercis siliquastrum L.,Fabaceae,2,2,2,1.39,166,0.54,Gardening,Shrub/tree,Unspecific,No,10,Cercis,Cercis siliquastrum,NA,FALSE,NA,Cercis_siliquastrum
+Convolvulus sabatius Viv.,Convolvulaceae,5,4,3,0.943,23,0.754,Gardening,Perennial fg,Unspecific,Yes,0.8,Convolvulus,Convolvulus sabatius,NA,FALSE,NA,Convolvulus_sabatius
+Cortaderia selloana (Schult. & Schult. f.) Asch. & Graebn.,Poaceae,5,2,2,0.221,28,1.014,Gardening,Perennial fg,Wind,No,4,Cortaderia,Cortaderia selloana,NA,FALSE,NA,Cortaderia_selloana
+Cuscuta campestris Yunck.,Convolvulaceae,3,3,3,1.759,47,1.054,Unintentional,Annual fg,Unspecific,No,1,Cuscuta,Cuscuta campestris,NA,FALSE,NA,Cuscuta_campestris
+Cyperus eragrostis Lam.,Cyperaceae,7,5,4,1.096,75,0.831,Unintentional,Perennial fg,Unspecific,Yes,1,Cyperus,Cyperus eragrostis,NA,FALSE,NA,Cyperus_eragrostis
+Datura stramonium L.,Solanaceae,1,1,1,0,166,0.784,Gardening,Annual fg,Unspecific,No,2,Datura,Datura stramonium,NA,FALSE,NA,Datura_stramonium
+Dichondra micrantha Urb.,Convolvulaceae,1,1,1,0,23,0.794,Gardening,Perennial fg,Unspecific,Yes,0.04,Dichondra,Dichondra micrantha,NA,FALSE,NA,Dichondra_micrantha
+Dysphania ambrosioides (L.) Mosyakin & Clemants,Amaranthaceae,15,12,4,1.152,248,1.092,Gardening,Annual fg,Unspecific,No,0.8,Dysphania,Dysphania ambrosioides,NA,FALSE,NA,Dysphania_ambrosioides
+Eleusine indica (L.) Gaertn. subsp. indica,Poaceae,1,1,1,0,104,1.248,Unintentional,Annual fg,Unspecific,Yes,0.8,Eleusine,Eleusine indica,NA,FALSE,NA,Eleusine_indica
+Eleusine tristachya (Lam.) Lam.,Poaceae,3,3,1,0.701,135,0.683,Unintentional,Perennial fg,Unspecific,No,0.4,Eleusine,Eleusine tristachya,NA,FALSE,NA,Eleusine_tristachya
+Erigeron bonariensis L. [Conyza bonariensis (L.) Cronq.],Asteraceae,15,10,4,1.295,142,1.092,Unintentional,Annual fg,Wind,No,0.6,Erigeron,Erigeron bonariensis,NA,FALSE,NA,Erigeron_bonariensis
+Erigeron canadensis L. [Conyza canadensis (L.) Cronq.],Asteraceae,29,17,7,1.12,228,1.215,Unintentional,Annual fg,Wind,No,0.8,Erigeron,Erigeron canadensis,NA,FALSE,NA,Erigeron_canadensis
+Erigeron sumatrensis Retz. [Conyza sumatrensis (Retz.) E. Walker],Asteraceae,53,25,6,1.005,108,1.147,Unintentional,Annual fg,Wind,No,2.5,Erigeron,Erigeron sumatrensis,NA,FALSE,NA,Erigeron_sumatrensis
+Eriobotrya japonica (Thunb.) Lindl.,Rosaceae,2,2,2,0.863,97,0.705,AgriForest,Shrub/tree,Animal,No,10,Eriobotrya,Eriobotrya japonica,NA,FALSE,NA,Eriobotrya_japonica
+Eucalyptus camaldulensis Dehnh.,Myrtaceae,1,1,1,0,35,0.454,AgriForest,Shrub/tree,Unspecific,Yes,20,Eucalyptus,Eucalyptus camaldulensis,NA,FALSE,NA,Eucalyptus_camaldulensis
+Eucalyptus camaldulensis Dehnh.,Myrtaceae,1,1,1,0,35,0.454,Gardening,Shrub/tree,Unspecific,Yes,20,Eucalyptus,Eucalyptus camaldulensis2,NA,TRUE,Eucalyptus camaldulensis,Eucalyptus_camaldulensis2
+Euphorbia prostrata Aiton,Euphorbiaceae,4,3,1,0.871,100,1.093,Unintentional,Annual fg,Unspecific,No,0.3,Euphorbia,Euphorbia prostrata,NA,FALSE,NA,Euphorbia_prostrata
+Galinsoga parviflora Cav.,Asteraceae,2,2,2,1.303,40,0.777,Unintentional,Annual fg,Unspecific,No,0.8,Galinsoga,Galinsoga parviflora,NA,FALSE,NA,Galinsoga_parviflora
+Gomphocarpus fruticosus (L.) W.T. Aiton,Apocynaceae,2,2,2,1.046,166,0.67,Gardening,Shrub/tree,Wind,No,2,Gomphocarpus,Gomphocarpus fruticosus,NA,FALSE,NA,Gomphocarpus_fruticosus
+Helianthus tuberosus L.,Asteraceae,2,2,2,0.774,228,0.628,AgriForest,Perennial fg,Unspecific,Yes,3,Helianthus,Helianthus tuberosus,NA,FALSE,NA,Helianthus_tuberosus
+Iris ×germanica L.,Iridaceae,1,1,1,0,135,0.529,Gardening,Perennial fg,Unspecific,Yes,0.9,Iris,Iris x germanica,NA,FALSE,NA,Iris_x_germanica
+Jarava plumosa (Spreng.) S.W.L. Jacobs & J. Everet,Poaceae,1,1,1,0,29,0.526,Unintentional,Perennial fg,Animal,Yes,0.5,Jarava,Jarava plumosa,Calamagrostis,FALSE,NA,Jarava_plumosa
+Lepidium didymum L. [Coronopus didymus (L.) Sm.],Brassicaceae,3,2,3,0.277,166,0.969,Unintentional,Annual fg,Unspecific,No,0.4,Lepidium,Lepidium didymum,NA,FALSE,NA,Lepidium_didymum
+Ligustrum lucidum W.T. Aiton,Oleaceae,5,5,3,0.61,19,0.653,Gardening,Shrub/tree,Animal,No,10,Ligustrum,Ligustrum lucidum,NA,FALSE,NA,Ligustrum_lucidum
+Lonicera japonica Thunb.,Caprifoliaceae,7,5,4,0.68,51,0.683,Gardening,Perennial fg,Animal,Yes,5,Lonicera,Lonicera japonica,NA,FALSE,NA,Lonicera_japonica
+Lunaria annua L. subsp. annua,Brassicaceae,1,1,1,0,166,0.38,Gardening,Perennial fg,Wind,No,1,Lunaria,Lunaria annua,NA,FALSE,NA,Lunaria_annua
+Malcolmia maritima (L.) R. Br.,Brassicaceae,1,1,1,0,138,0.262,Gardening,Annual fg,Unspecific,No,0.35,Malcolmia,Malcolmia maritima,NA,FALSE,NA,Malcolmia_maritima
+Mirabilis jalapa L.,Nyctaginaceae,5,4,1,0.729,127,0.988,Gardening,Perennial fg,Unspecific,Yes,1,Mirabilis,Mirabilis jalapa,NA,FALSE,NA,Mirabilis_jalapa
+Myoporum laetum G. Forst.,Scrophulariaceae,2,1,1,0,6,0.497,Gardening,Shrub/tree,Animal,No,8,Myoporum,Myoporum laetum,NA,FALSE,NA,Myoporum_laetum
+Nicotiana glauca Graham,Solanaceae,1,1,1,0,104,0.873,Gardening,Shrub/tree,Wind,Yes,5,Nicotiana,Nicotiana glauca,NA,FALSE,NA,Nicotiana_glauca
+Opuntia ficus-indica (L.) Mill.,Cactaceae,2,2,2,0.625,228,0.441,AgriForest,Shrub/tree,Animal,Yes,5,Opuntia,Opuntia ficus-indica,NA,FALSE,NA,Opuntia_ficus-indica
+Opuntia ficus-indica (L.) Mill.,Cactaceae,2,2,2,0.625,228,0.441,Gardening,Shrub/tree,Animal,Yes,5,Opuntia,Opuntia ficus-indica2,NA,TRUE,Opuntia ficus-indica,Opuntia_ficus-indica2
+Oxalis articulata Savigny,Oxalidaceae,3,2,3,0.849,95,0.713,Gardening,Perennial fg,Unspecific,Yes,0.3,Oxalis,Oxalis articulata,NA,FALSE,NA,Oxalis_articulata
+Oxalis corniculata L.,Oxalidaceae,3,3,2,1.071,100,0.92,Unintentional,Perennial fg,Unspecific,Yes,0.3,Oxalis,Oxalis corniculata,NA,FALSE,NA,Oxalis_corniculata
+Oxalis debilis Kunth,Oxalidaceae,12,7,4,0.762,86,0.881,Gardening,Perennial fg,Unspecific,Yes,0.3,Oxalis,Oxalis debilis,NA,FALSE,NA,Oxalis_debilis
+Oxalis debilis Kunth,Oxalidaceae,12,7,4,0.762,86,0.881,Unintentional,Perennial fg,Unspecific,Yes,0.3,Oxalis,Oxalis debilis2,NA,TRUE,Oxalis debilis,Oxalis_debilis2
+Parthenocissus inserta (A. Kern.) Fritsch,Vitaceae,2,2,2,0.363,36,0.82,Gardening,Perennial fg,Animal,Yes,3,Parthenocissus,Parthenocissus inserta,NA,FALSE,NA,Parthenocissus_inserta
+Phoenix canariensis Chabaud,Arecaceae,4,2,2,0.767,23,0.305,Gardening,Shrub/tree,Animal,No,20,Phoenix,Phoenix canariensis,NA,FALSE,NA,Phoenix_canariensis
+Phytolacca americana L.,Phytolaccaceae,12,8,3,1.307,166,0.781,Gardening,Perennial fg,Animal,No,3,Phytolacca,Phytolacca americana,NA,FALSE,NA,Phytolacca_americana
+Pinus radiata D. Don,Pinaceae,1,1,1,0,62,0.578,AgriForest,Shrub/tree,Wind,No,40,Pinus,Pinus radiata,NA,FALSE,NA,Pinus_radiata
+Pittosporum tobira (Thunb.) W.T. Aiton,Pittosporaceae,6,2,2,0.122,23,0.726,Gardening,Shrub/tree,Animal,No,6,Pittosporum,Pittosporum tobira,NA,FALSE,NA,Pittosporum_tobira
+Populus deltoides Marshall,Salicaceae,5,5,1,0.952,48,0.92,AgriForest,Shrub/tree,Wind,No,10,Populus,Populus deltoides,NA,FALSE,NA,Populus_deltoides
+Populus deltoides Marshall,Salicaceae,5,5,1,0.952,48,0.92,Gardening,Shrub/tree,Wind,No,10,Populus,Populus deltoides2,NA,TRUE,Populus deltoides,Populus_deltoides2
+Portulaca grandiflora Hook.,Portulacaceae,3,1,2,0.147,23,0.844,Gardening,Annual fg,Unspecific,No,0.2,Portulaca,Portulaca grandiflora,NA,FALSE,NA,Portulaca_grandiflora
+Prunus armeniaca L.,Rosaceae,1,1,1,0,28,0.715,AgriForest,Shrub/tree,Animal,No,10,Prunus,Prunus armeniaca,NA,FALSE,NA,Prunus_armeniaca
+Prunus cerasifera Ehrh.,Rosaceae,1,1,1,0,36,0.671,Gardening,Shrub/tree,Animal,No,8,Prunus,Prunus cerasifera,NA,FALSE,NA,Prunus_cerasifera
+Ricinus communis L.,Euphorbiaceae,1,1,1,0,109,0.663,Gardening,Shrub/tree,Unspecific,No,10,Ricinus,Ricinus communis,NA,FALSE,NA,Ricinus_communis
+Robinia pseudoacacia L.,Fabaceae,20,13,5,1.076,140,0.31,Gardening,Shrub/tree,Unspecific,Yes,25,Robinia,Robinia pseudoacacia,NA,FALSE,NA,Robinia_pseudoacacia
+Rumex cristatus DC.,Polygonaceae,2,2,2,0.586,16,0.398,Unintentional,Perennial fg,Unspecific,No,2,Rumex,Rumex cristatus,Rheum,FALSE,NA,Rumex_cristatus
+Salix babylonica L.,Salicaceae,1,1,1,0,48,0.681,Gardening,Shrub/tree,Wind,No,15,Salix,Salix babylonica,NA,FALSE,NA,Salix_babylonica
+Senecio angulatus L. f.,Asteraceae,2,2,2,0.695,23,0.408,Gardening,Perennial fg,Wind,Yes,2,Senecio,Senecio angulatus,NA,FALSE,NA,Senecio_angulatus
+Senecio pterophorus DC.,Asteraceae,1,1,1,0,30,0.405,Unintentional,Shrub/tree,Wind,No,2,Senecio,Senecio pterophorus,NA,FALSE,NA,Senecio_pterophorus
+Solanum lycopersicum L.,Solanaceae,4,4,3,1.513,139,1.216,AgriForest,Annual fg,Animal,No,2,Solanum,Solanum lycopersicum,NA,FALSE,NA,Solanum_lycopersicum
+Sorghum halepense (L.) Pers.,Poaceae,16,11,5,0.799,166,0.947,Unintentional,Perennial fg,Unspecific,Yes,2.2,Sorghum,Sorghum halepense,NA,FALSE,NA,Sorghum_halepense
+Stenotaphrum secundatum (Walter) Kuntze,Poaceae,3,2,2,0.117,31,1.02,Gardening,Perennial fg,Unspecific,Yes,0.4,Stenotaphrum,Stenotaphrum secundatum,NA,FALSE,NA,Stenotaphrum_secundatum
+Symphyotrichum pilosum (Willd.) G.L. Nesom,Asteraceae,1,1,1,0,80,0.521,Gardening,Perennial fg,Wind,Yes,2,Symphyotrichum,Symphyotrichum pilosum,NA,FALSE,NA,Symphyotrichum_pilosum
+Symphyotrichum squamatum (Spreng.) G.L. Nesom,Asteraceae,34,17,6,1.041,100,0.783,Unintentional,Annual fg,Wind,No,1,Symphyotrichum,Symphyotrichum squamatum,NA,FALSE,NA,Symphyotrichum_squamatum
+Tamarix parviflora DC.,Tamaricaceae,1,1,1,0,23,0.44,Gardening,Shrub/tree,Unspecific,No,3,Tamarix,Tamarix parviflora,NA,FALSE,NA,Tamarix_parviflora
+Washingtonia filifera (André) de Bary [incl. W. robusta H. Wendl.],Arecaceae,1,1,1,0,23,0.445,Gardening,Shrub/tree,Animal,No,25,Washingtonia,Washingtonia filifera,NA,FALSE,NA,Washingtonia_filifera
+Xanthium orientale L.,Asteraceae,13,8,4,0.789,135,1.02,Unintentional,Annual fg,Animal,No,0.8,Xanthium,Xanthium orientale,NA,FALSE,NA,Xanthium_orientale
+Xanthium spinosum L.,Asteraceae,15,11,4,1.1,166,0.873,Unintentional,Annual fg,Animal,No,1,Xanthium,Xanthium spinosum,NA,FALSE,NA,Xanthium_spinosum
+Yucca aloifolia L.,Asparagaceae,3,2,2,1.015,23,0.456,Gardening,Shrub/tree,Unspecific,Yes,8,Yucca,Yucca aloifolia,NA,FALSE,NA,Yucca_aloifolia
+Zea mays L. subsp. mays,Poaceae,3,2,1,0.881,93,0.818,AgriForest,Annual fg,Unspecific,No,4,Zea,Zea mays,NA,FALSE,NA,Zea_mays
