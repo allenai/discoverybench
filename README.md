@@ -7,7 +7,7 @@
   
 ---
 
-Dataset and code for ["DiscoveryBench: Towards Data-Driven Discovery with Large Language Models"](#)
+Dataset and code for ["DiscoveryBench: Towards Data-Driven Discovery with Large Language Models"](https://arxiv.org/pdf/2407.01725v1)
 
 ---
 
