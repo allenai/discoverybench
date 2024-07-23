@@ -1,23 +1,27 @@
 import traceback
 import polars as pl
+import pandas as pd
+from typing import Union
 from dataclasses import dataclass
+import random
 from typing import Callable
 import ipdb
 import loguru
 import re
+from sklearn.metrics import accuracy_score
 from dotenv import load_dotenv
 import sys
 import pdb
 from openai import OpenAI
-from flowmason import conduct, load_artifact_with_step_name
-from collections import OrderedDict
+from flowmason import conduct, load_artifact_with_step_name, SingletonStep, MapReduceStep
+from collections import OrderedDict, Counter
 from typing import List, Dict
 import click
 from io import StringIO
 import json
 import os
 
-from packages.constants import SCRATCH_DIR
+from packages.constants import SCRATCH_DIR, MY_CACHE_DIR, MY_LOG_DIR
 
 
 @dataclass
@@ -28,6 +32,24 @@ class CodeRequestPrompt:
 class SynthResultPrompt:
     prompt_template: Callable[[str], str]
     is_code_req: bool
+
+@dataclass
+class ExperimentResult:
+    status: str
+    workflow: List[Dict]
+    num_prompt_tokens: int
+    num_response_tokens: int
+    answer: Union[str, float]
+    num_errors: int
+
+# create an exception class CodeRetryException(Exception):
+class CodeRetryException(Exception):
+
+    def __init__(self, workflow_i, message, prior_implementations, prior_tracebacks):
+        self.workflow_i = workflow_i
+        self.message = message
+        self.prior_implementations = prior_implementations
+        self.prior_tracebacks = prior_tracebacks
 
 load_dotenv()
 api_key = os.environ['THE_KEY']
@@ -48,18 +70,20 @@ def dag_system_prompt():
         return 3.1 + arg1
 
     step_dict = OrderedDict()
-    # NOTE: for iterable arguments, use a (hashable) tuple rather than a list
+    # NOTE: mutable objects (lists and dictionaries most commonly) cannot serve as arguments for flowmason steps (since they can't be pickled). Consider using tuples or json strings in those cases.
     step_dict['step_singleton'] = SingletonStep(_step_toy_fn, {
         'version': "001", # don't forget to supply version
         'arg1': 2.9
     })
     step_dict['step_singleton_two'] = SingletonStep(_step_toy_fn, {
         'version': "001", 
-        'arg1': 'step_singleton'
+        'arg1': 'step_singleton' # reference the output of a previous step
     })
     run_metadata = conduct(CACHE_DIR, step_dict, LOG_DIR)
+    # NOTE: if the step function has a print statement, it will be printed to the console. 
+    # NOTE: if the step has no return statement, then loading an artifact will result in a FileNotFoundError. 
     output_step_singleton_two = load_artifact_with_step_name(run_metadata, 'step_singleton_two')
-    print(output_step_singleton_two) # 9.1
+    print(output_step_singleton_two) # 9.1. Make sure to print. Simply writing the variable name will not print the output.
     ``` 
 
     Answer the questions in the format:
@@ -148,15 +172,64 @@ def generate_exploration_prompt(metadata_path, query):
           " Write some code to perform this exploration."
     return init_message
 
+def qrdata_generate_exploration_prompt(qrdata_block: Dict):
+    # the qrdata block is a dictionary containing the following:
+    # data_description, question, data_files (List), question_type (multiple_choice/numerical)
+    # when the question type is multiple choice, there is also a multiple_choices key (List), enumerating
+    # the options.
+    data_description = qrdata_block['data_description']
+    question = qrdata_block['question']
+    data_files = qrdata_block['data_files'] # usually a list with one element, but sometimes more.
+    question_type = qrdata_block['meta_data']['question_type']
+    # if question_type == 'multiple_choice':
+    #     possible_answers = f" (possible answers): {str(qrdata_block['meta_data']['multiple_choices'])}"
+    # else:
+    #     possible_answers = ""
+
+    dataset_prefix = "data/qrdata/"
+    # data_paths = "\n".join(data_files)
+    data_paths = "\n".join([f"{dataset_prefix}{data_file}" for data_file in data_files])
+    dataset_columns = []
+    for data_path in data_paths.split("\n"):
+        columns = list(pd.read_csv(data_path).columns)
+        dataset_columns.extend(columns)
+    init_message = f"Suppose you had a dataset saved at {data_paths}." +\
+        f" The dataset is described as follows: {data_description}" +\
+        f" The columns in the dataset are: {dataset_columns}." +\
+        f" You are asked the following question: {question}.\n\n" +\
+        " Perform an initial exploration of the distributions of the relevant columns in the dataset." +\
+        " For continuous variables, consider the 5 number summary (median, 1st quartile, 3rd quartile, min, max)." +\
+        " For categorical variables, consider the frequency of each category (both absolute and relative; pareto distribution)." +\
+        " Write some code to perform this initial exploration. Do not try to answer the question yet. Don't draw any plots though, and don't use df.info."
+    return init_message
+
+def generate_dataset_description_and_query_only_prompt(metadatapath, query):
+    column_explanations = get_column_descriptions(metadatapath)
+    csv_path = get_csv_path(metadatapath)
+    query_expanded = f"'{query}'"
+    query_expanded = query_expanded + f" Here are the explanations of the columns in the dataset:\n\n{column_explanations}\n"
+    init_message = f"Suppose you had a dataset saved at {csv_path}" +\
+        f" and you wanted to answer the following query: {query_expanded}\n"
+    return init_message
+
 def remove_print_statements(code):
     # TODO: if there are indented print statements, that code will still be executed. We should address this later
     return '\n'.join([line for line in code.split('\n') if not line.startswith('print')]) 
+
+def obtain_num_errors(workflow_results):
+    # use the 'num_attempts' key in the workflow_results to obtain the number of errors.
+    # if that key is present
+    return sum([result['num_attempts'] for result in workflow_results if 'num_attempts' in result])
 
 def extract_code(response):
     # the code should be encapsulated with ```python and ```.
     # extract the code from the response and return it as a multiline string.
     # find the first occurence of ```python
-    response = response[response.index("```"): ]
+    try:
+        response = response[response.index("```"): ]
+    except ValueError:
+        logger.error(f"``` backticks not found")
+        ipdb.set_trace()
     if response.startswith("```python"):
         start = response.find("```python") + len("```python")
     elif response.startswith("``` python"):
@@ -311,13 +384,14 @@ def prompt_for_code_w_error_history(
             "====================\n".join(prior_implementations) +\
             f"\n\n But the following errors were encountered for the prior implementation(s) :\n" +\
             "====================\n".join(prior_tracebacks) +\
-            "\n\n Please provide a new and correct code implementation."
+            "\n\n Please provide a new and correct code implementation. Remember to update the version number of the function if you update its implementation."
     return message
 
 
 # TODO: implement retries for the code.
 def process_code_step(history: List[Dict[str, str]], 
                             user_code_prompt, 
+                            workflow_i: int,
                             current_code: str = "",
                             num_retries = 3) -> str:
     messages = history.copy()
@@ -327,6 +401,8 @@ def process_code_step(history: List[Dict[str, str]],
     prior_implementations = []
     tracebacks = []
 
+    total_prompt_tokens = 0
+    total_response_tokens = 0
     while (not successful_execution) and (attempt_num < num_retries):
         messages.append({"role": "user", "content": prompt_for_code_w_error_history(prior_implementations, 
                                                                                     tracebacks, 
@@ -336,6 +412,8 @@ def process_code_step(history: List[Dict[str, str]],
             messages=messages,
             max_tokens=2000
         )
+        total_prompt_tokens += response.usage.prompt_tokens
+        total_response_tokens += response.usage.completion_tokens
         response = response.choices[0].message.content
         extracted_code = extract_code(response)
         stdout = sys.stdout
@@ -343,7 +421,7 @@ def process_code_step(history: List[Dict[str, str]],
         try:
             complete_code = remove_print_statements(current_code) + "\n" + extracted_code
             exec(complete_code, locals(), locals())
-            exec_output = sys.stdout.getvalue()
+            exec_output = sys.stdout.getvalue() # TODO: there might be warnings that are predicted to stderr, which we should also try to capture.
             successful_execution = True
         except Exception as e:
             sys.stdout = stdout
@@ -361,11 +439,16 @@ def process_code_step(history: List[Dict[str, str]],
             if sys.stdout != stdout:
                 sys.stdout = stdout
     if not successful_execution:
-        raise Exception(f"Failed to execute the code after {num_retries} attempts.")
-    return {'agent_response': response, 'execution_output': exec_output, 'num_attempts': attempt_num}
+        raise CodeRetryException(workflow_i, f"Failed to execute the code after {num_retries} attempts.", 
+                                 prior_implementations, tracebacks)
+    return {'agent_response': response, 
+            'execution_output': exec_output, 
+            'num_attempts': attempt_num, 
+            'total_prompt_tokens': total_prompt_tokens,
+            'total_response_tokens': total_response_tokens}
 
 def process_regular_prompt(history: List[Dict[str, str]],
-                           prompt: str) -> str:
+                           prompt: str) -> Dict:
     messages = history.copy()
     messages.append({"role": "user", "content": prompt})
     response = client.chat.completions.create(
@@ -373,7 +456,12 @@ def process_regular_prompt(history: List[Dict[str, str]],
         messages=messages,
         max_tokens=2000
     )
-    return response.choices[0].message.content
+    num_prompt_tokens = response.usage.prompt_tokens
+    num_response_tokens = response.usage.completion_tokens
+    # return response.choices[0].message.content
+    return {'agent_response': response.choices[0].message.content,
+            'num_prompt_tokens': num_prompt_tokens,
+            'num_response_tokens': num_response_tokens}
 
 # TODO: need to modify this to return the right structure, so we can probe it.
 def process_workflow(system_prompt: str, 
@@ -385,7 +473,10 @@ def process_workflow(system_prompt: str,
     for i in range(len(workflow)):
         workflow_step = workflow[i]
         if isinstance(workflow_step, CodeRequestPrompt):
-            result_dict = process_code_step(messages, workflow_step.prompt, "\n\n".join(all_code_snippets), num_retries=3)
+            try:
+                result_dict = process_code_step(messages, workflow_step.prompt, i, "\n\n".join(all_code_snippets), num_retries=3)
+            except CodeRetryException as e:
+                raise e
             extracted_code = extract_code(result_dict['agent_response']) # NOTE: Hopefully we don't get duplicate code snippets.
             messages.extend([
                 {"role": "user", "content": workflow_step.prompt},
@@ -397,13 +488,16 @@ def process_workflow(system_prompt: str,
                 {
                     "prompt": workflow_step.prompt,
                     "response": result_dict['agent_response'],
-                    "execution_output": result_dict['execution_output']
+                    "execution_output": result_dict['execution_output'],
+                    "num_attempts": result_dict['num_attempts'],
+                    "total_prompt_tokens": result_dict['total_prompt_tokens'],
+                    "total_response_tokens": result_dict['total_response_tokens']
                  }
             )
         elif isinstance(workflow_step, SynthResultPrompt):
             prompt = workflow_step.prompt_template(execution_results[-1])
             if workflow_step.is_code_req:
-                result_dict = process_code_step(messages, prompt, "\n\n".join(all_code_snippets), num_retries=3)
+                result_dict = process_code_step(messages, prompt, i, "\n\n".join(all_code_snippets), num_retries=3)
                 messages.extend([
                     {"role": "user", "content": prompt},
                     {"role": "assistant", "content": result_dict['agent_response']}
@@ -417,18 +511,25 @@ def process_workflow(system_prompt: str,
                         "prompt": prompt,
                         "response": result_dict['agent_response'],
                         "execution_output": result_dict['execution_output'], 
+                        "num_attempts": result_dict['num_attempts'],
+                        "total_prompt_tokens": result_dict['total_prompt_tokens'],
+                        "total_response_tokens": result_dict['total_response_tokens']
                     }
                 )
                 execution_results.append(result_dict["execution_output"])
             else:
-                response = process_regular_prompt(messages, prompt)
+                response_dict = process_regular_prompt(messages, prompt)
                 messages.extend([
                     {"role": "user", "content": prompt},
-                    {"role": "assistant", "content": response}
+                    {"role": "assistant", "content": response_dict['agent_response']}
                 ])
                 workflow_results.append(
-                    {"prompt": prompt,
-                    "response": response}
+                    { 
+                        "prompt": prompt,
+                        "response": response_dict['agent_response'],
+                        "total_prompt_tokens": response_dict['num_prompt_tokens'],
+                        "total_response_tokens": response_dict['num_response_tokens']
+                    }
                 )
         else:
             raise ValueError("Unimplemented workflow step.")
@@ -457,6 +558,147 @@ def clear_dir(path: str):
     for fname in os.listdir(path):
         os.remove(f"{path}/{fname}")
 
+def generate_self_consistency_prompt(initial_q: str, final_answers: List[str]) -> str:
+    final_answers_str = ""
+    # add ====== Answer {i} ====== for each final answer
+    # {final_answer i}
+    for i, final_answer in enumerate(final_answers):
+        final_answers_str += f"====== Answer {i} ======\n{final_answer}\n"
+    
+    final_answers_str += "\n\nWhich of the above answers is most preferred? Return your answer and your rationale for picking that answer in the form: '({i}) {rationale}'. Use 0 based indexing."
+    return final_answers_str
+
+    # response = client.chat.completions.create(
+    #     model="gpt-4",
+    #     messages=[
+    #         {'role': 'user', 'content': f""}
+
+def represent_analysis(workflow_results: List[Dict[str, str]]) -> str:
+    # TODO: implement this so the whole experiment code is represented.
+    # code_response_one = extract_code(workflow_results[0]['response'])
+    code_response_two = extract_code(workflow_results[1]['response'])
+    execution_output_two = workflow_results[1]['execution_output']
+    final_interpretation = workflow_results[-1]['response']
+
+    analysis_representation = f"=== Analysis code ===\n{code_response_two}\n\n=== Execution output ===\n{execution_output_two}\n\n=== Final interpretation ===\n{final_interpretation}"
+    return analysis_representation
+
+def _extract_json(response):
+    # the response might be of the form 
+    # ```json
+    # {
+    # ...
+    # }
+    # or just the json object itself.
+    if "```" not in response:
+        response = response.strip()
+        assert response.startswith("{") and response.endswith("}"), ipdb.set_trace()
+        return response
+    response = response[response.index("```"): ]
+    if response.startswith("```json"):
+        start = response.find("```json") + len("```json")
+        end = response.find("```", start)
+        return response[start:end]
+    elif response.startswith("```python"):
+        start = response.find("```python") + len("```python")
+        end = response.find("```", start)
+        return response[start:end]
+    else:
+        ipdb.set_trace()
+
+
+def analyze_qrdata(structure_type: bool, add_exploration_step: bool, 
+                   generate_visual: bool, 
+                   self_consistency: bool, index: int, 
+                   **kwargs):
+    # with open("data/qrdata/QRDataClean.json", 'r') as file:
+    with open("data/qrdata/QRData.json", 'r') as file:
+        qrdata = json.load(file)
+    if index == -1:
+        random_ind = random.randint(0, len(qrdata)- 1)
+    else:
+        random_ind = index
+    qr_datapoint = qrdata[random_ind]
+    query = qr_datapoint['question']
+    exploration_step = qrdata_generate_exploration_prompt(qr_datapoint)
+    # TODO: for the unstructured version, need to change the exploration passback.
+    if structure_type == 'dag':
+        exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
+            f"Now, how would you go about performing an analysis of the query '{query}' using a flowmason graph?"
+    elif structure_type == 'loose':
+        exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
+        f"Now, how would you go about performing an analysis of the query '{query}'?"
+    else:
+        raise ValueError("Unimplemented structure type.")
+    analysis_passback = lambda exec_result: f"The output of the previous code is:\n{exec_result}\n\nBased on this output, write the final answer" +\
+        " in a JSON dictionary, with two keys: 'answer' and 'rationale'. The 'answer' key should contain the final answer to the query" +\
+        " and the 'rationale' key should contain the rationale for the answer (make sure the rationale value doesn't have internal quotes). The answer should be a numeric value or a short phrase for the question. Don't write anything else."
+        # " as a numeric value or a short phrase for the question. Don't write anything else." 
+    workflow = [
+                CodeRequestPrompt(exploration_step), 
+                SynthResultPrompt(exploration_passback, True), 
+                SynthResultPrompt(analysis_passback, False)
+                ] 
+    if not self_consistency:
+        try:
+            execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
+            if add_exploration_step:
+                display_results_explore_workflow(workflow, execution_results)
+            elif not add_exploration_step:
+                display_results_basic_workflow(workflow, execution_results)
+            clear_dir("scratch/flowmason_cache")
+        except CodeRetryException as e: 
+            message = e.message
+            prior_implementations = e.prior_implementations
+            prior_tracebacks = e.prior_tracebacks
+            workflow_i = e.workflow_i
+            logger.error(f"Error occurred during workflow step {workflow_i}: {message}.\nThe most recent implementation was: {prior_implementations[-1]}.")
+            # did it fail on the exploration step or the analysis step?
+            # we want to see what it failed on too.
+            ipdb.set_trace()
+        try:
+            answer_dict = eval(_extract_json(execution_results[-1]['response'])) 
+        except SyntaxError as e:
+            logger.error(f"Syntax error occurred: {e}.")
+            ipdb.set_trace()
+        total_prompt_tokens = sum([result['total_prompt_tokens'] for result in execution_results])
+        total_response_tokens = sum([result['total_response_tokens'] for result in execution_results])
+        total_errors = obtain_num_errors(execution_results)
+    #         status: str
+    # workflow: List[Dict]
+    # num_prompt_tokens: int
+    # num_response_tokens: int
+    # answer: Union[str, float]
+    # num_errors: int
+        return ExperimentResult("success", 
+                                workflow=execution_results,
+                                num_prompt_tokens=total_prompt_tokens,
+                                num_response_tokens=total_response_tokens,
+                                answer = answer_dict['answer'], 
+                                num_errors=total_errors)
+    else:
+        SELF_CONSISTENCY_ITERS = 5
+        final_analyses = []
+        for _ in range(SELF_CONSISTENCY_ITERS):
+            logger.info(f"Starting self-consistency iteration {_}.")
+            try:
+                execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
+                # final_analysis = execution_results[-1]['response']
+                analysis_representation = represent_analysis(execution_results)
+                final_analyses.append(analysis_representation)
+                logger.info(f"Completing self-consistency iteration {_}.")
+            except ValueError as e:
+                logger.error(f"Error occurred during self-consistency iteration {_}: {e}.")
+            except CodeRetryException as e:
+                ipdb.set_trace()
+            finally:
+                clear_dir("scratch/flowmason_cache")
+        self_consistency_prompt = generate_self_consistency_prompt(exploration_step, final_analyses)
+        sc_response = process_regular_prompt([], self_consistency_prompt)
+        ipdb.set_trace()
+    # TODO: need to add a return statement, and put this into a floma graph itself.
+    return 
+
 @click.command()
 @click.argument('dataset_path')
 @click.argument('query')
@@ -465,11 +707,15 @@ def clear_dir(path: str):
               type=click.Choice(['loose', 'functions', 'dag'], case_sensitive=False))
 @click.option('--add_exploration_step', is_flag=True, help='Have the agent first explore the univariate distributions of the dataset.')
 @click.option('--generate_visual',is_flag=True) 
-def analyze_dataset(dataset_path: str, query: str, 
+@click.option('--self_consistency',is_flag=True) 
+def analyze_db_dataset(dataset_path: str, query: str, 
                     save_response: bool, 
                     structure_type: str, 
                     generate_visual: bool, 
-                    add_exploration_step: bool):
+                    add_exploration_step: bool, 
+                    self_consistency: bool):
+    # qr_dataset =  
+
     # the workflow is a list of the form [str, Function[str] -> str, Function[str] -> str, ...]
     past_traces = retrieve_past_dags(extract_dataset_name(dataset_path))
     # identify the workflow to use:
@@ -487,20 +733,47 @@ def analyze_dataset(dataset_path: str, query: str,
             f"\n{exec_result}\n\nBased on this analysis output, what is your scientific hypothesis for the query '{query}'?" +\
             f"Ground your answer in the context of the analysis (including any metrics or statistical significance tests)." +\
             f"Keep your response succinct and clear."
-        workflow = [CodeRequestPrompt(exploration_step), SynthResultPrompt(exploration_passback, True), 
-                    SynthResultPrompt(rev_second_prompt_template, False)]
-        execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
-        display_results_explore_workflow(workflow, execution_results)
-        # clear the floma cache at scratch/flowmason_cache
-        clear_dir("scratch/flowmason_cache")
+        workflow = [
+                    CodeRequestPrompt(exploration_step), 
+                    SynthResultPrompt(exploration_passback, True), 
+                    SynthResultPrompt(rev_second_prompt_template, False)
+                    ]
     else:
         first_message = construct_first_message(dataset_path, query, structure_type)
         rev_second_prompt_template = lambda exec_result: f"The output of the previous code is:\n{exec_result}\n\nBased on this output, what is your scientific hypothesis?"
         workflow = [CodeRequestPrompt(first_message), SynthResultPrompt(rev_second_prompt_template, False)] 
-        execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
-        display_results_basic_workflow(workflow, execution_results)
-        ipdb.set_trace()
 
+    if not self_consistency:
+        execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
+        if add_exploration_step:
+            display_results_explore_workflow(workflow, execution_results)
+        elif not add_exploration_step:
+            display_results_basic_workflow(workflow, execution_results)
+        clear_dir("scratch/flowmason_cache")
+    else: 
+        SELF_CONSISTENCY_ITERS = 5
+        final_analyses = []
+        for _ in range(SELF_CONSISTENCY_ITERS):
+            logger.info(f"Starting self-consistency iteration {_}.")
+            try:
+                execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
+                ipdb.set_trace()
+
+                final_analysis = execution_results[-1]['response']
+                final_analyses.append(final_analysis)
+                logger.info(f"Completing self-consistency iteration {_}.")
+            except ValueError as e:
+                logger.error(f"Error occurred during self-consistency iteration {_}: {e}.")
+            finally:
+                clear_dir("scratch/flowmason_cache")
+        print("=====Final analyses=====")
+        for i in range(SELF_CONSISTENCY_ITERS):
+            print(f"=====Iteration {i}=====")
+            print(final_analyses)
+        dataset_and_query_prompt = generate_dataset_description_and_query_only_prompt(dataset_path, query) 
+        self_consistency_prompt = generate_self_consistency_prompt(dataset_and_query_prompt, final_analyses)
+        ipdb.set_trace()
+        sc_response = process_regular_prompt([], self_consistency_prompt)
     # # hypothesis = second_response.choices[0].message.content
     # print("=====Agent observation + code=====")
     # print(code_res_dict['rev_agent_first_response'])
@@ -513,7 +786,6 @@ def analyze_dataset(dataset_path: str, query: str,
     dataset_name = extract_dataset_name(dataset_path)
     if save_response:
         _store_successful_floma_dag(dataset_name, query, extract_code(code_res_dict['rev_execution_res']))
-    
     if generate_visual:
         if structure_type == 'dag':
             generate_visual_message = f"Visualize the data with respect to your prior hypothesis. Do this by appending a visualization step (or multiple steps) to the flowmason graphs. Save the visual to 'visual.png'. Generate a caption for the visual"
@@ -531,5 +803,93 @@ def analyze_dataset(dataset_path: str, query: str,
         print("=====Agent visualization output=====")
         print(visual_output)
 
+def get_qr_data_split(**kwargs):
+    with open("data/qrdata/QRData.json", 'r') as file:
+        qrdata = json.load(file)
+    # split into train (10%) and test set (90%)
+    # get the indices of the train and test set
+    indices = list(range(len(qrdata)))
+    random.Random(4).shuffle(indices)
+    train_indices = indices[:len(indices) // 10]
+    test_indices = indices[len(indices) // 10:]
+    return train_indices
+
+def compute_metrics_qrdata(indices: List[int], 
+                           workflow_results: List[Dict[str, str]], 
+                           **kwargs):
+    predictions = []
+    ground_truth_answers = []
+    with open("data/qrdata/QRData.json", 'r') as file:
+        qrdata = json.load(file)
+
+    for i in range(len(workflow_results)):
+        index = indices[i]
+        instance = qrdata[index]
+        predicted_answer = workflow_results[i].answer
+        gt_answer = instance['answer']
+        print(f"=====Instance {i}=====")
+        print(f"Predicted answer: {predicted_answer}")
+        print(f"Ground truth answer: {gt_answer}")
+        predictions.append(predicted_answer)
+        ground_truth_answers.append(gt_answer)
+    # compute accuracy. For percentages, count +/- 3% as correct.
+    num_correct = 0
+    for i in range(len(predictions)):
+        if isinstance(predictions[i], float):
+            ground_truth_answers[i] = float(ground_truth_answers[i])
+            if abs(predictions[i] - ground_truth_answers[i]) <= 0.03:
+                num_correct += 1
+        elif predictions[i] == ground_truth_answers[i]:
+            num_correct += 1
+    logger.info(f"Accuracy: {num_correct/len(predictions)}")
+
+    # compute the average number of errors in a workflow
+    total_errors = sum([result.num_errors for result in workflow_results])
+    avg_errors = total_errors / len(workflow_results)
+    logger.info(f"Average number of errors: {avg_errors:.3f}")
+    # what is the mode of the number of errors?
+    error_counts = Counter([result.num_errors for result in workflow_results])
+    mode_errors = max(error_counts, key=error_counts.get)
+
+    ipdb.set_trace()
+
+@click.command()
+@click.option('--structure-type',
+              type=click.Choice(['loose', 'functions', 'dag'], case_sensitive=False))
+@click.option('--add_exploration_step', is_flag=True, help='Have the agent first explore the univariate distributions of the dataset.')
+@click.option('--generate_visual',is_flag=True) 
+@click.option('--self_consistency',is_flag=True) 
+# @click.option('--index', type=int, help='The index of the QR data to analyze.', default=-1)
+def execute_qrdata_map_dict(structure_type: bool, add_exploration_step: bool, 
+                            generate_visual: bool, 
+                            self_consistency: bool):
+    qr_data_datapoint_dict = OrderedDict()
+    qr_data_datapoint_dict['step_complete_datapoint'] = SingletonStep(analyze_qrdata, {
+        "version": "001"
+    })
+    map_dict = OrderedDict()
+    map_dict['map_step'] = MapReduceStep(qr_data_datapoint_dict, {
+        # supply the parameters for the analyze_qrdata function here
+        "index": get_qr_data_split()
+    },
+    {
+        "structure_type": structure_type,
+        "add_exploration_step": add_exploration_step,
+        "generate_visual": generate_visual,
+        "self_consistency": self_consistency,
+        "generate_visual": False,
+        "version": "001"
+    }, list, 'index', [])
+    map_dict['compute_metrics'] = SingletonStep(compute_metrics_qrdata, {
+        "indices": tuple(get_qr_data_split()),
+        "workflow_results": 'map_step',
+        "version": "001"
+    })
+    map_dict['write_analysis_results_to_json'] = 
+    run_metadata = conduct(MY_CACHE_DIR, map_dict, MY_LOG_DIR)
+    workflow_results = load_artifact_with_step_name(run_metadata, 'map_step')
+    max_errors = list(filter(lambda x: x.num_errors == 3, workflow_results))
+    ipdb.set_trace()
+
 if __name__ == '__main__':
-    analyze_dataset()
+    execute_qrdata_map_dict()
