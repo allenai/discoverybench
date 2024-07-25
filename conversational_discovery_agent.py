@@ -1,7 +1,8 @@
 import traceback
 import polars as pl
+import openai
 import pandas as pd
-from typing import Union
+from typing import Union, Tuple
 from dataclasses import dataclass
 import random
 from typing import Callable
@@ -14,7 +15,7 @@ import sys
 import pdb
 from openai import OpenAI
 from flowmason import conduct, load_artifact_with_step_name, SingletonStep, MapReduceStep
-from collections import OrderedDict, Counter
+from collections import OrderedDict, Counter 
 from typing import List, Dict
 import click
 from io import StringIO
@@ -42,14 +43,33 @@ class ExperimentResult:
     answer: Union[str, float]
     num_errors: int
 
+@dataclass
+class SelfConsistencyExperimentResult:
+    individual_runs: Tuple[ExperimentResult]
+    final_answer: str
+
+class CodeExtractionException(Exception):
+    def __init__(self, message, workflow):
+        super().__init__(message)
+        self.message = message
+        self.workflow_so_far = workflow
+
 # create an exception class CodeRetryException(Exception):
 class CodeRetryException(Exception):
 
-    def __init__(self, workflow_i, message, prior_implementations, prior_tracebacks):
+    def __init__(self, 
+                 workflow_so_far,
+                 workflow_i, message, prior_implementations, prior_tracebacks):
+        self.workflow_so_far = workflow_so_far
         self.workflow_i = workflow_i
         self.message = message
         self.prior_implementations = prior_implementations
         self.prior_tracebacks = prior_tracebacks
+
+class ExtractJSONException(Exception):
+    def __init__(self, response_object, message):
+        self.response_object = response_object
+        self.message = message
 
 load_dotenv()
 api_key = os.environ['THE_KEY']
@@ -61,36 +81,58 @@ def dag_system_prompt():
     floma_example = """
     ```
     from flowmason import SingletonStep, conduct, load_artifact_with_step_name  # make sure to import flowmason definitions
+    from typing import Tuple
     from collections import OrderedDict
     CACHE_DIR="scratch/flowmason_cache"
     LOG_DIR="discoveryagent_logs"
 
-    def _step_toy_fn(arg1: float, **kwargs): # all flowmason step functions must have **kwargs for supplying metadata
-        print(arg1)
-        return 3.1 + arg1
+    def _step_toy_fn(arg1: float, **kwargs) -> Tuple[float]: # all flowmason step functions must have **kwargs for supplying metadata
+        return (3.1 + arg1, 3.1 + arg1)
+    
+    def _step_intransitive_fn(**kwargs) -> float:
+        return 3.0
+
+    def _step_toy_fn_two(arg1: Tuple[float, float], **kwargs) -> float:
+        element1, element2 = arg1
+        return element1 + element2
+    
+    def _step_toy_fn_three(arg1: float, arg2: float, arg3: float, **kwargs) -> float:
+        return arg1 + arg2
 
     step_dict = OrderedDict()
     # NOTE: mutable objects (lists and dictionaries most commonly) cannot serve as arguments for flowmason steps (since they can't be pickled). Consider using tuples or json strings in those cases.
+    # If you must use a mutable object (e.g. list or dict) for a python function, write a different function that can be called by the flowmason step function.
     step_dict['step_singleton'] = SingletonStep(_step_toy_fn, {
-        'version': "001", # don't forget to supply version
+        'version': "001", # don't forget to supply version, it is a mandatory argument
         'arg1': 2.9
     })
-    step_dict['step_singleton_two'] = SingletonStep(_step_toy_fn, {
-        'version': "001", 
-        'arg1': 'step_singleton' # reference the output of a previous step
+    step_dict['step_intransitive'] = SingletonStep(_step_intransitive_fn, {
+        'version': "001" # required even when there are no arguments
     })
-    run_metadata = conduct(CACHE_DIR, step_dict, LOG_DIR)
+    step_dict['step_singleton_two'] = SingletonStep(_step_toy_fn_two, {
+        'version': "001", 
+        'arg1': 'step_singleton' # this will supply the return value of the previous step as an argument for 'arg1'
+        # note that the return value of 'step_singleton' matches the type signature of arg1 for 'step_singleton_two'
+    })
+    step_dict['step_singleton_three'] = SingletonStep(_step_toy_fn_three, {
+        'version': "001",
+        'arg1': 'step_singleton',
+        'arg2': 'step_intransitive',
+        'arg3': 3.0
+    })
+
+    run_metadata = conduct(CACHE_DIR, step_dict, LOG_DIR) # this will run the flowmason graph, executing each step in order. It will substitute any step name parameters with the actual return values of the steps.
     # NOTE: if the step function has a print statement, it will be printed to the console. 
     # NOTE: if the step has no return statement, then loading an artifact will result in a FileNotFoundError. 
     output_step_singleton_two = load_artifact_with_step_name(run_metadata, 'step_singleton_two')
-    print(output_step_singleton_two) # 9.1. Make sure to print. Simply writing the variable name will not print the output.
+    print(output_step_singleton_two) # 18.0. Make sure to print. Simply writing the variable name will not print the output.
     ``` 
 
     Answer the questions in the format:
 
     Observation: {Full analysis plan in natural language}.
     Code: 
-    ```python
+    ```pytho
     {All code to act on observation.}
     ```
     """
@@ -193,11 +235,13 @@ def qrdata_generate_exploration_prompt(qrdata_block: Dict):
     for data_path in data_paths.split("\n"):
         columns = list(pd.read_csv(data_path).columns)
         dataset_columns.extend(columns)
+    dtypes = pd.read_csv(data_paths).dtypes
     init_message = f"Suppose you had a dataset saved at {data_paths}." +\
         f" The dataset is described as follows: {data_description}" +\
         f" The columns in the dataset are: {dataset_columns}." +\
         f" You are asked the following question: {question}.\n\n" +\
         " Perform an initial exploration of the distributions of the relevant columns in the dataset." +\
+        f" The data types of the columns are: {dtypes}." +\
         " For continuous variables, consider the 5 number summary (median, 1st quartile, 3rd quartile, min, max)." +\
         " For categorical variables, consider the frequency of each category (both absolute and relative; pareto distribution)." +\
         " Write some code to perform this initial exploration. Do not try to answer the question yet. Don't draw any plots though, and don't use df.info."
@@ -229,7 +273,7 @@ def extract_code(response):
         response = response[response.index("```"): ]
     except ValueError:
         logger.error(f"``` backticks not found")
-        ipdb.set_trace()
+        raise CodeExtractionException("``` backticks not found", "n/a")
     if response.startswith("```python"):
         start = response.find("```python") + len("```python")
     elif response.startswith("``` python"):
@@ -237,7 +281,7 @@ def extract_code(response):
     elif response.startswith("```"):
         start = response.find("```") + len("```")
     else:
-        ipdb.set_trace()
+        raise CodeExtractionException("The code block does not start with ```python or ```", "n/a")
     # find the first occurence of ```
     end = response.find("```", start)
     # return the code
@@ -384,7 +428,9 @@ def prompt_for_code_w_error_history(
             "====================\n".join(prior_implementations) +\
             f"\n\n But the following errors were encountered for the prior implementation(s) :\n" +\
             "====================\n".join(prior_tracebacks) +\
-            "\n\n Please provide a new and correct code implementation. Remember to update the version number of the function if you update its implementation."
+            "\n\n Please provide a new and correct code implementation." + \
+            "Remember to update the version number of the function if you update its implementation." +\
+            "If there is a ModuleNotFoundError on an import statement, then it is mispelled or it is not installed (more likely). If it is not installed, you should not try to use it in the code." 
     return message
 
 
@@ -407,15 +453,23 @@ def process_code_step(history: List[Dict[str, str]],
         messages.append({"role": "user", "content": prompt_for_code_w_error_history(prior_implementations, 
                                                                                     tracebacks, 
                                                                                     user_code_prompt)})
-        response = client.chat.completions.create(
-            model="gpt-4",
-            messages=messages,
-            max_tokens=2000
-        )
+        try:
+            response = client.chat.completions.create(
+                model="gpt-4",
+                messages=messages,
+                max_tokens=2000
+            )
+        except openai.BadRequestError as e:
+            assert "Please reduce the length" in e.message
+            ipdb.set_trace()
+            raise openai.BadRequestError()
         total_prompt_tokens += response.usage.prompt_tokens
         total_response_tokens += response.usage.completion_tokens
         response = response.choices[0].message.content
-        extracted_code = extract_code(response)
+        try:
+            extracted_code = extract_code(response)
+        except CodeExtractionException:
+            raise CodeExtractionException(f"Code could not be extracted from the response:\n\n{response} .", "n/a")
         stdout = sys.stdout
         sys.stdout = StringIO()
         try:
@@ -439,7 +493,7 @@ def process_code_step(history: List[Dict[str, str]],
             if sys.stdout != stdout:
                 sys.stdout = stdout
     if not successful_execution:
-        raise CodeRetryException(workflow_i, f"Failed to execute the code after {num_retries} attempts.", 
+        raise CodeRetryException("n/a", workflow_i, f"Failed to execute the code after {num_retries} attempts.", 
                                  prior_implementations, tracebacks)
     return {'agent_response': response, 
             'execution_output': exec_output, 
@@ -476,7 +530,9 @@ def process_workflow(system_prompt: str,
             try:
                 result_dict = process_code_step(messages, workflow_step.prompt, i, "\n\n".join(all_code_snippets), num_retries=3)
             except CodeRetryException as e:
-                raise e
+                raise CodeRetryException(workflow_results, i, e.message, e.prior_implementations, e.prior_tracebacks)
+            except CodeExtractionException as e:
+                raise CodeExtractionException(e.message, workflow_results)
             extracted_code = extract_code(result_dict['agent_response']) # NOTE: Hopefully we don't get duplicate code snippets.
             messages.extend([
                 {"role": "user", "content": workflow_step.prompt},
@@ -497,7 +553,12 @@ def process_workflow(system_prompt: str,
         elif isinstance(workflow_step, SynthResultPrompt):
             prompt = workflow_step.prompt_template(execution_results[-1])
             if workflow_step.is_code_req:
-                result_dict = process_code_step(messages, prompt, i, "\n\n".join(all_code_snippets), num_retries=3)
+                try:
+                    result_dict = process_code_step(messages, prompt, i, "\n\n".join(all_code_snippets), num_retries=3)
+                except CodeRetryException as e:
+                    raise CodeRetryException(workflow_results, i, e.message, e.prior_implementations, e.prior_tracebacks)
+                except CodeExtractionException as e:
+                    raise CodeExtractionException(e.message, workflow_results)
                 messages.extend([
                     {"role": "user", "content": prompt},
                     {"role": "assistant", "content": result_dict['agent_response']}
@@ -583,29 +644,68 @@ def represent_analysis(workflow_results: List[Dict[str, str]]) -> str:
     analysis_representation = f"=== Analysis code ===\n{code_response_two}\n\n=== Execution output ===\n{execution_output_two}\n\n=== Final interpretation ===\n{final_interpretation}"
     return analysis_representation
 
-def _extract_json(response):
+def _extract_json(orig_response):
     # the response might be of the form 
     # ```json
     # {
     # ...
     # }
     # or just the json object itself.
-    if "```" not in response:
-        response = response.strip()
-        assert response.startswith("{") and response.endswith("}"), ipdb.set_trace()
-        return response
-    response = response[response.index("```"): ]
-    if response.startswith("```json"):
-        start = response.find("```json") + len("```json")
-        end = response.find("```", start)
-        return response[start:end]
-    elif response.startswith("```python"):
-        start = response.find("```python") + len("```python")
-        end = response.find("```", start)
-        return response[start:end]
-    else:
+    response = orig_response
+    final_response = response
+    try:
+        if response.startswith("`{"):
+            response = response[1:-1]
+            final_response = response
+        elif "```" not in response:
+            response = response.strip()
+            assert response.startswith("{") and response.endswith("}"), ipdb.set_trace()
+            final_response = response
+        else:
+            if response.startswith("```") and not response.endswith("```"): # see test case 2 for this function
+                response = response + "```"
+            # find the second last occurrence of ``` in the response, since the last one is the closing backticks.
+            # s[:s.rfind("b")].rfind("b")
+            index = response.rfind("```", 0, response.rfind("```"))
+            if "=" in response[index:]:
+                index = response.find("{")
+            response = response[index:]
+            if response.startswith("```json"):
+                start = response.find("```json") + len("```json")
+                if response.endswith("```"):
+                    end = response.rfind("```")
+                    end = response.find("```", start)
+                else:
+                    end = response.find("}") + 1
+                final_response = response[start:end]
+            elif response.startswith("```python"):
+                start = response.find("```python") + len("```python")
+                end = response.find("```", start)
+                final_response = response[start:end]
+            else:
+                ipdb.set_trace()
+    except Exception as e:
+        logger.error(f"Error occurred: {e}.")
+        # TODO: try printing the stacktrace?
         ipdb.set_trace()
+        raise ExtractJSONException(response, "Error occurred during JSON extraction.")
+    try:
+        return eval(final_response)
+    except Exception as e:
+        logger.error(f"Error occurred: {e}.")
+        ipdb.set_trace()
+        raise ExtractJSONException(final_response, "Error occurred during eval call.")
 
+def build_experiment_result(execution_results, answer_dict) -> ExperimentResult:
+    total_prompt_tokens = sum([result['total_prompt_tokens'] for result in execution_results])
+    total_response_tokens = sum([result['total_response_tokens'] for result in execution_results])
+    total_errors = obtain_num_errors(execution_results)
+    return ExperimentResult("success", 
+                            workflow=execution_results,
+                            num_prompt_tokens=total_prompt_tokens,
+                            num_response_tokens=total_response_tokens,
+                            answer = answer_dict['answer'], 
+                            num_errors=total_errors)
 
 def analyze_qrdata(structure_type: bool, add_exploration_step: bool, 
                    generate_visual: bool, 
@@ -632,7 +732,7 @@ def analyze_qrdata(structure_type: bool, add_exploration_step: bool,
         raise ValueError("Unimplemented structure type.")
     analysis_passback = lambda exec_result: f"The output of the previous code is:\n{exec_result}\n\nBased on this output, write the final answer" +\
         " in a JSON dictionary, with two keys: 'answer' and 'rationale'. The 'answer' key should contain the final answer to the query" +\
-        " and the 'rationale' key should contain the rationale for the answer (make sure the rationale value doesn't have internal quotes). The answer should be a numeric value or a short phrase for the question. Don't write anything else."
+        " and the 'rationale' key should contain the rationale for the answer (make sure the rationale value doesn't have internal quotes). The answer should be a numeric value or a short phrase for the question. Don't write anything else except for the JSON object."
         # " as a numeric value or a short phrase for the question. Don't write anything else." 
     workflow = [
                 CodeRequestPrompt(exploration_step), 
@@ -657,45 +757,74 @@ def analyze_qrdata(structure_type: bool, add_exploration_step: bool,
             # we want to see what it failed on too.
             ipdb.set_trace()
         try:
-            answer_dict = eval(_extract_json(execution_results[-1]['response'])) 
+            answer_dict = _extract_json(execution_results[-1]['response'])
+            return build_experiment_result(execution_results, answer_dict)
         except SyntaxError as e:
             logger.error(f"Syntax error occurred: {e}.")
             ipdb.set_trace()
-        total_prompt_tokens = sum([result['total_prompt_tokens'] for result in execution_results])
-        total_response_tokens = sum([result['total_response_tokens'] for result in execution_results])
-        total_errors = obtain_num_errors(execution_results)
-    #         status: str
     # workflow: List[Dict]
     # num_prompt_tokens: int
     # num_response_tokens: int
     # answer: Union[str, float]
     # num_errors: int
-        return ExperimentResult("success", 
-                                workflow=execution_results,
-                                num_prompt_tokens=total_prompt_tokens,
-                                num_response_tokens=total_response_tokens,
-                                answer = answer_dict['answer'], 
-                                num_errors=total_errors)
+        # return ExperimentResult("success", 
+        #                         workflow=execution_results,
+        #                         num_prompt_tokens=total_prompt_tokens,
+        #                         num_response_tokens=total_response_tokens,
+        #                         answer = answer_dict['answer'], 
+        #                         num_errors=total_errors)
     else:
         SELF_CONSISTENCY_ITERS = 5
         final_analyses = []
+        sc_runs = []
         for _ in range(SELF_CONSISTENCY_ITERS):
             logger.info(f"Starting self-consistency iteration {_}.")
             try:
                 execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
                 # final_analysis = execution_results[-1]['response']
                 analysis_representation = represent_analysis(execution_results)
+                answer_dict = _extract_json(execution_results[-1]['response'])
+                sc_runs.append(build_experiment_result(execution_results, answer_dict))
                 final_analyses.append(analysis_representation)
                 logger.info(f"Completing self-consistency iteration {_}.")
             except ValueError as e:
                 logger.error(f"Error occurred during self-consistency iteration {_}: {e}.")
-            except CodeRetryException as e:
+                sc_runs.append(e)
+                # TODO: not sure what to do here..
                 ipdb.set_trace()
+                continue
+            except CodeRetryException as e:
+                # TODO: we should add a partial workflow to the sc_runs list.
+                logger.info(f"Code for iteration {_} failed too many times.")
+                message = e.message
+                prior_implementations = e.prior_implementations
+                workflow_so_far = e.workflow_so_far
+                sc_runs.append(e)
+                ipdb.set_trace()
+                continue
+            except CodeExtractionException as e:
+                workflow_so_far = e.workflow_so_far
+                sc_runs.append(e)
+                ipdb.set_trace()
+                continue
+            except openai.BadRequestError as e:
+                # TODO: we should add a partial workflow to the sc_runs list.
+                logger.error(f"BadRequestError occurred during self-consistency iteration {_}: {e}.")
+                sc_runs.append(e)
+                ipdb.set_trace()
+                continue
+            except ExtractJSONException as e:
+                logger.error(f"Error occurred during JSON extraction: {e}.")
+                sc_runs.append(e)
+                ipdb.set_trace()
+                continue
             finally:
                 clear_dir("scratch/flowmason_cache")
+        assert len(sc_runs) == SELF_CONSISTENCY_ITERS
+        assert len(final_analyses) >= 1  and len(final_analyses) <= SELF_CONSISTENCY_ITERS # at least one needs to be successful.
         self_consistency_prompt = generate_self_consistency_prompt(exploration_step, final_analyses)
         sc_response = process_regular_prompt([], self_consistency_prompt)
-        ipdb.set_trace()
+        return SelfConsistencyExperimentResult(tuple(sc_runs), sc_response)
     # TODO: need to add a return statement, and put this into a floma graph itself.
     return 
 
@@ -850,8 +979,61 @@ def compute_metrics_qrdata(indices: List[int],
     # what is the mode of the number of errors?
     error_counts = Counter([result.num_errors for result in workflow_results])
     mode_errors = max(error_counts, key=error_counts.get)
+    # the most common number of errors
+    logger.info(f"Mode of the number of errors: {mode_errors}")
 
-    ipdb.set_trace()
+def step_write_analysis_results_to_json(workflow_results: List[ExperimentResult], 
+                                        structure_type: str,
+                                        dataset: str,
+                                        **kwargs):
+    # need two more datapoints: exploration code
+    # and the final analysis code
+    def _extract_exploration_code(result: ExperimentResult):
+        return extract_code(result.workflow[0]['response'])
+
+    def _extract_exploration_output(result: ExperimentResult):
+        return result.workflow[0]['execution_output']
+
+    def _extract_analysis_code(result: ExperimentResult):
+        return extract_code(result.workflow[1]['response'])
+
+    def _extract_analysis_output(result: ExperimentResult):
+        return result.workflow[1]['execution_output']
+
+    def _construct_json_obj(result):
+        analysis_code = _extract_analysis_code(result)
+        exploration_code = _extract_exploration_code(result)
+        exploration_output = _extract_exploration_output(result)
+        analysis_output = _extract_analysis_output(result)
+        return {
+            # TODO: add question and ground-truth answer?
+            "exploration_code": exploration_code,
+            "exploration_output": exploration_output, 
+            "analysis_code": analysis_code,
+            "analysis_output": analysis_output,
+            "answer": result.answer,
+            "num_errors": result.num_errors,
+            "num_prompt_tokens": result.num_prompt_tokens,
+            "num_response_tokens": result.num_response_tokens,
+            "complete_workflow": result.workflow
+        }
+    presentable_results = [_construct_json_obj(result) for result in workflow_results]
+    fname = f"{dataset}_{structure_type}.json"
+    with open(fname, 'w') as file:
+        json.dump(presentable_results, file)
+    return fname
+    # with open("data/qrdata/analysis_results.json", 'w') as file:
+    #     json.dump(workflow_results, file)
+
+def sample_exploratory_analyses(results_fname: str, **kwargs):
+    with open(results_fname, 'r') as file:
+        results = json.load(file)
+    # sample 5 exploratory analyses
+    sample_indices = random.sample(range(len(results)), 5)
+    for i in sample_indices:
+        print(f"=====Exploratory analysis {i}=====")
+        print(f"----Exploration code----\n {results[i]['exploration_code']}")
+        print(f"----Exploration output----\n {results[i]['exploration_output']}")
 
 @click.command()
 @click.option('--structure-type',
@@ -885,11 +1067,17 @@ def execute_qrdata_map_dict(structure_type: bool, add_exploration_step: bool,
         "workflow_results": 'map_step',
         "version": "001"
     })
-    map_dict['write_analysis_results_to_json'] = 
+    map_dict['write_analysis_results_to_json'] = SingletonStep(step_write_analysis_results_to_json, {
+        "workflow_results": 'map_step',
+        "structure_type": structure_type,
+        "dataset": "qrdata",
+        "version": "001"
+    })
+    map_dict['sample_exploratory_analyses'] = SingletonStep(sample_exploratory_analyses, {
+        "results_fname": 'write_analysis_results_to_json', 
+        "version": "001",
+    })
     run_metadata = conduct(MY_CACHE_DIR, map_dict, MY_LOG_DIR)
-    workflow_results = load_artifact_with_step_name(run_metadata, 'map_step')
-    max_errors = list(filter(lambda x: x.num_errors == 3, workflow_results))
-    ipdb.set_trace()
 
 if __name__ == '__main__':
     execute_qrdata_map_dict()
