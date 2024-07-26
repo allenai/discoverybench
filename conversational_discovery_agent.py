@@ -21,9 +21,9 @@ import click
 from io import StringIO
 import json
 import os
+import dill
 
 from packages.constants import SCRATCH_DIR, MY_CACHE_DIR, MY_LOG_DIR
-
 
 @dataclass
 class CodeRequestPrompt:
@@ -56,7 +56,6 @@ class CodeExtractionException(Exception):
 
 # create an exception class CodeRetryException(Exception):
 class CodeRetryException(Exception):
-
     def __init__(self, 
                  workflow_so_far,
                  workflow_i, message, prior_implementations, prior_tracebacks):
@@ -70,6 +69,7 @@ class ExtractJSONException(Exception):
     def __init__(self, response_object, message):
         self.response_object = response_object
         self.message = message
+
 
 load_dotenv()
 api_key = os.environ['THE_KEY']
@@ -117,13 +117,14 @@ def dag_system_prompt():
     step_dict['step_singleton_three'] = SingletonStep(_step_toy_fn_three, {
         'version': "001",
         'arg1': 'step_singleton',
-        'arg2': 'step_intransitive',
+        'arg2': 'step_intransitive', 
         'arg3': 3.0
     })
 
     run_metadata = conduct(CACHE_DIR, step_dict, LOG_DIR) # this will run the flowmason graph, executing each step in order. It will substitute any step name parameters with the actual return values of the steps.
     # NOTE: if the step function has a print statement, it will be printed to the console. 
     # NOTE: if the step has no return statement, then loading an artifact will result in a FileNotFoundError. 
+    # NOTE: when supplying a step name as an argument, make sure that the step has already been defined in the step_dict (otherwise you will just be passing a string).
     output_step_singleton_two = load_artifact_with_step_name(run_metadata, 'step_singleton_two')
     print(output_step_singleton_two) # 18.0. Make sure to print. Simply writing the variable name will not print the output.
     ``` 
@@ -230,18 +231,24 @@ def qrdata_generate_exploration_prompt(qrdata_block: Dict):
 
     dataset_prefix = "data/qrdata/"
     # data_paths = "\n".join(data_files)
-    data_paths = "\n".join([f"{dataset_prefix}{data_file}" for data_file in data_files])
-    dataset_columns = []
-    for data_path in data_paths.split("\n"):
-        columns = list(pd.read_csv(data_path).columns)
-        dataset_columns.extend(columns)
-    dtypes = pd.read_csv(data_paths).dtypes
-    init_message = f"Suppose you had a dataset saved at {data_paths}." +\
-        f" The dataset is described as follows: {data_description}" +\
-        f" The columns in the dataset are: {dataset_columns}." +\
+    # data_paths = "\n".join([f"{dataset_prefix}{data_file}" for data_file in data_files])
+    data_paths = [f"{dataset_prefix}{data_file}" for data_file in data_files]
+    all_columns = []
+    for data_path in data_paths:
+        all_columns.append(pd.read_csv(data_path).columns.to_list())
+    dtypes_str = ""
+    for i in range(len(data_files)):
+        dtypes = pd.read_csv(data_paths[i]).dtypes.to_dict()
+        dtypes_str += f"Dataset {i+1}: {str(dtypes)}\n"
+    determiner = "a" if len(data_files) == 1 else f"{len(data_files)}"
+    plural_aux = "is" if len(data_files) == 1 else "are"
+    plural_nom = "s" if len(data_files) == 1 else ""
+    init_message = f"Suppose you had {determiner} dataset{plural_nom} saved at {data_paths}." +\
+        f" The dataset{plural_nom} {plural_aux} described as follows: {data_description}" +\
+        f" The columns in the dataset{plural_nom} are: {all_columns}." +\
         f" You are asked the following question: {question}.\n\n" +\
-        " Perform an initial exploration of the distributions of the relevant columns in the dataset." +\
-        f" The data types of the columns are: {dtypes}." +\
+        f" Perform an initial exploration of the distributions of the relevant columns in the dataset{plural_nom}." +\
+        f" The data types of the columns are:\n{dtypes}." +\
         " For continuous variables, consider the 5 number summary (median, 1st quartile, 3rd quartile, min, max)." +\
         " For categorical variables, consider the frequency of each category (both absolute and relative; pareto distribution)." +\
         " Write some code to perform this initial exploration. Do not try to answer the question yet. Don't draw any plots though, and don't use df.info."
@@ -687,7 +694,6 @@ def _extract_json(orig_response):
     except Exception as e:
         logger.error(f"Error occurred: {e}.")
         # TODO: try printing the stacktrace?
-        ipdb.set_trace()
         raise ExtractJSONException(response, "Error occurred during JSON extraction.")
     try:
         return eval(final_response)
@@ -747,6 +753,7 @@ def analyze_qrdata(structure_type: bool, add_exploration_step: bool,
             elif not add_exploration_step:
                 display_results_basic_workflow(workflow, execution_results)
             clear_dir("scratch/flowmason_cache")
+
         except CodeRetryException as e: 
             message = e.message
             prior_implementations = e.prior_implementations
@@ -755,13 +762,11 @@ def analyze_qrdata(structure_type: bool, add_exploration_step: bool,
             logger.error(f"Error occurred during workflow step {workflow_i}: {message}.\nThe most recent implementation was: {prior_implementations[-1]}.")
             # did it fail on the exploration step or the analysis step?
             # we want to see what it failed on too.
-            ipdb.set_trace()
         try:
             answer_dict = _extract_json(execution_results[-1]['response'])
             return build_experiment_result(execution_results, answer_dict)
         except SyntaxError as e:
             logger.error(f"Syntax error occurred: {e}.")
-            ipdb.set_trace()
     # workflow: List[Dict]
     # num_prompt_tokens: int
     # num_response_tokens: int
@@ -790,9 +795,10 @@ def analyze_qrdata(structure_type: bool, add_exploration_step: bool,
             except ValueError as e:
                 logger.error(f"Error occurred during self-consistency iteration {_}: {e}.")
                 sc_runs.append(e)
-                # TODO: not sure what to do here..
-                ipdb.set_trace()
                 continue
+            except openai.BadRequestError as e:
+                logger.error(f"BadRequestError occurred: {e}.")
+                sc_runs.append(e) # TODO: this doesn't contain the full workflow.
             except CodeRetryException as e:
                 # TODO: we should add a partial workflow to the sc_runs list.
                 logger.info(f"Code for iteration {_} failed too many times.")
@@ -800,23 +806,19 @@ def analyze_qrdata(structure_type: bool, add_exploration_step: bool,
                 prior_implementations = e.prior_implementations
                 workflow_so_far = e.workflow_so_far
                 sc_runs.append(e)
-                ipdb.set_trace()
                 continue
             except CodeExtractionException as e:
                 workflow_so_far = e.workflow_so_far
                 sc_runs.append(e)
-                ipdb.set_trace()
                 continue
             except openai.BadRequestError as e:
                 # TODO: we should add a partial workflow to the sc_runs list.
                 logger.error(f"BadRequestError occurred during self-consistency iteration {_}: {e}.")
                 sc_runs.append(e)
-                ipdb.set_trace()
                 continue
             except ExtractJSONException as e:
                 logger.error(f"Error occurred during JSON extraction: {e}.")
                 sc_runs.append(e)
-                ipdb.set_trace()
                 continue
             finally:
                 clear_dir("scratch/flowmason_cache")
@@ -943,9 +945,43 @@ def get_qr_data_split(**kwargs):
     test_indices = indices[len(indices) // 10:]
     return train_indices
 
+def _retrieve_individual_run_answer(workflow_results, index):
+    return workflow_results[index].answer
+
+def _retrieve_sc_run_answer(sc_results, index):
+    sc_result = sc_results[index]
+    agent_response = sc_result.final_answer['agent_response']
+    try:
+        # get the first integer in the response
+        preferred_answer_i = int(re.search(r'\d+', agent_response).group())
+    except ValueError:
+        print(f"Error occurred: {agent_response}.")
+        ipdb.set_trace()
+    if len(sc_result.individual_runs) == 10:
+        # set individual runs to every even number
+        individual_runs = sc_result.individual_runs[::2]
+        assert len(individual_runs) == 5
+    elif len(sc_result.individual_runs) == 5:
+        individual_runs = sc_result.individual_runs
+    else:
+        raise ValueError("Unimplemented number of individual runs.")
+    successful_runs = list(filter(lambda x: hasattr(x, 'answer'), sc_result.individual_runs))
+    prediction = successful_runs[preferred_answer_i].answer
+    return prediction
+
 def compute_metrics_qrdata(indices: List[int], 
                            workflow_results: List[Dict[str, str]], 
+                           self_consistency: bool,
                            **kwargs):
+    def _filter_indices(bad_indices):
+        # remove the indices at positions in bad_indices
+        new_indices = []
+        for i in range(len(indices)):
+            if i in bad_indices:
+                continue
+            new_indices.append(indices[i])
+        return new_indices
+    indices = _filter_indices([6, 13, 18, 21, 28])
     predictions = []
     ground_truth_answers = []
     with open("data/qrdata/QRData.json", 'r') as file:
@@ -954,7 +990,10 @@ def compute_metrics_qrdata(indices: List[int],
     for i in range(len(workflow_results)):
         index = indices[i]
         instance = qrdata[index]
-        predicted_answer = workflow_results[i].answer
+        if not self_consistency:
+            predicted_answer = _retrieve_individual_run_answer(workflow_results, i)
+        else:
+            predicted_answer = _retrieve_sc_run_answer(workflow_results, i)
         gt_answer = instance['answer']
         print(f"=====Instance {i}=====")
         print(f"Predicted answer: {predicted_answer}")
@@ -963,6 +1002,7 @@ def compute_metrics_qrdata(indices: List[int],
         ground_truth_answers.append(gt_answer)
     # compute accuracy. For percentages, count +/- 3% as correct.
     num_correct = 0
+    ipdb.set_trace()
     for i in range(len(predictions)):
         if isinstance(predictions[i], float):
             ground_truth_answers[i] = float(ground_truth_answers[i])
@@ -971,6 +1011,7 @@ def compute_metrics_qrdata(indices: List[int],
         elif predictions[i] == ground_truth_answers[i]:
             num_correct += 1
     logger.info(f"Accuracy: {num_correct/len(predictions)}")
+    ipdb.set_trace()
 
     # compute the average number of errors in a workflow
     total_errors = sum([result.num_errors for result in workflow_results])
@@ -1065,7 +1106,8 @@ def execute_qrdata_map_dict(structure_type: bool, add_exploration_step: bool,
     map_dict['compute_metrics'] = SingletonStep(compute_metrics_qrdata, {
         "indices": tuple(get_qr_data_split()),
         "workflow_results": 'map_step',
-        "version": "001"
+        "version": "001", 
+        "self_consistency": self_consistency
     })
     map_dict['write_analysis_results_to_json'] = SingletonStep(step_write_analysis_results_to_json, {
         "workflow_results": 'map_step',
@@ -1078,6 +1120,7 @@ def execute_qrdata_map_dict(structure_type: bool, add_exploration_step: bool,
         "version": "001",
     })
     run_metadata = conduct(MY_CACHE_DIR, map_dict, MY_LOG_DIR)
+    ipdb.set_trace()
 
 if __name__ == '__main__':
     execute_qrdata_map_dict()
