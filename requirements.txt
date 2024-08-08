@@ -5,3 +5,7 @@ langchain_anthropic
 langchain_together
 langchain_google_genai
 grpcio
+openai
+pandas
+scipy
+scikit-learn
