@@ -1,117 +1,108 @@
 {
-  "id": 0,
-  "domain": "robotics",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to automated machines, artificial intelligence, and industrial applications.",
-      "columns": [
+    "id": 0,
+    "domain": "robotics",
+    "datasets": [
         {
-          "name": "system_updates",
-          "description": "Number of system updates the robot has received in the last year"
-        },
-        {
-          "name": "ambient_temperature",
-          "description": "The average operating temperature of the environment where the robot operates, measured in degrees Celsius"
-        },
-        {
-          "name": "operational_uptime_percent",
-          "description": "The percentage of time the robot is operational in a given period, measures how long the robot works as compared to how long it could have worked, measured as a percentage."
-        },
-        {
-          "name": "energy_efficiency",
-          "description": "Energy efficiency rating of the robot on a scale from 1 to 10, where 10 is the most efficient"
-        },
-        {
-          "name": "task_success_rate",
-          "description": "Percentage of tasks successfully completed by the robot"
-        },
-        {
-          "name": "processing_speed_GHz",
-          "description": "The clock speed of the robot's central processing unit in gigahertz"
-        },
-        {
-          "name": "continuous_operation_need",
-          "description": "Indicates if the robot needs to operate continuously, with true requiring continuous operation."
-        },
-        {
-          "name": "continuous_operation_capable",
-          "description": "Indicates whether the robot is designed to operate without breaks or not"
-        },
-        {
-          "name": "training_schedule_frequency",
-          "description": "Number of training sessions per month"
-        },
-        {
-          "name": "robot_id",
-          "description": "Unique identifier for each robot"
-        },
-        {
-          "name": "task_designation",
-          "description": "Indicates if the robot is designed for light-duty tasks, where true means light-duty."
-        },
-        {
-          "name": "has_dual_core_processor",
-          "description": "Indicates whether the robot's system uses a dual-core processor"
-        },
-        {
-          "name": "timed_task_sequence_count",
-          "description": "Number of tasks a robot is programmed to perform in a specific time order"
-        },
-        {
-          "name": "primary_operational_focus",
-          "description": "The primary field of task the robot is designed for, e.g., industrial, service, research"
-        },
-        {
-          "name": "AI_model_complexity_index",
-          "description": "A numerical value representing the complexity of the AI model used by the robot, where a higher value indicates a more complex model"
-        },
-        {
-          "name": "has_advanced_cooling",
-          "description": "Indicates whether the robot has advanced cooling mechanisms"
-        },
-        {
-          "name": "system_update_received",
-          "description": "Whether the robot has received a system update before the training commenced"
-        },
-        {
-          "name": "tool_complexity_level",
-          "description": "Categorical rating of the tooling complexity on the robot, ranked from 1 to 5, where 5 indicates highly complex mechanisms."
-        },
-        {
-          "name": "number_of_sensors",
-          "description": "Number of sensors installed on the robot"
-        },
-        {
-          "name": "training_complexity",
-          "description": "Rating of training complexity based on required skills and tasks"
-        },
-        {
-          "name": "market_sector",
-          "description": "The primary market sector where the robot is deployed, e.g., consumer, industrial, research."
-        },
-        {
-          "name": "sensor_input_count",
-          "description": "The number of sensors from which the robot receives input"
+            "name": "data.csv",
+            "description": "Related to automated machines, artificial intelligence, and industrial applications.",
+            "columns": [
+                {
+                    "name": "system_updates",
+                    "description": "Number of system updates the robot has received in the last year"
+                },
+                {
+                    "name": "ambient_temperature",
+                    "description": "The average operating temperature of the environment where the robot operates, measured in degrees Celsius"
+                },
+                {
+                    "name": "operational_uptime_percent",
+                    "description": "The percentage of time the robot is operational in a given period, measures how long the robot works as compared to how long it could have worked, measured as a percentage."
+                },
+                {
+                    "name": "energy_efficiency",
+                    "description": "Energy efficiency rating of the robot on a scale from 1 to 10, where 10 is the most efficient"
+                },
+                {
+                    "name": "task_success_rate",
+                    "description": "Percentage of tasks successfully completed by the robot"
+                },
+                {
+                    "name": "processing_speed_GHz",
+                    "description": "The clock speed of the robot's central processing unit in gigahertz"
+                },
+                {
+                    "name": "continuous_operation_need",
+                    "description": "Indicates if the robot needs to operate continuously, with true requiring continuous operation."
+                },
+                {
+                    "name": "continuous_operation_capable",
+                    "description": "Indicates whether the robot is designed to operate without breaks or not"
+                },
+                {
+                    "name": "training_schedule_frequency",
+                    "description": "Number of training sessions per month"
+                },
+                {
+                    "name": "robot_id",
+                    "description": "Unique identifier for each robot"
+                },
+                {
+                    "name": "task_designation",
+                    "description": "Indicates if the robot is designed for light-duty tasks, where true means light-duty."
+                },
+                {
+                    "name": "has_dual_core_processor",
+                    "description": "Indicates whether the robot's system uses a dual-core processor"
+                },
+                {
+                    "name": "timed_task_sequence_count",
+                    "description": "Number of tasks a robot is programmed to perform in a specific time order"
+                },
+                {
+                    "name": "primary_operational_focus",
+                    "description": "The primary field of task the robot is designed for, e.g., industrial, service, research"
+                },
+                {
+                    "name": "AI_model_complexity_index",
+                    "description": "A numerical value representing the complexity of the AI model used by the robot, where a higher value indicates a more complex model"
+                },
+                {
+                    "name": "has_advanced_cooling",
+                    "description": "Indicates whether the robot has advanced cooling mechanisms"
+                },
+                {
+                    "name": "system_update_received",
+                    "description": "Whether the robot has received a system update before the training commenced"
+                },
+                {
+                    "name": "tool_complexity_level",
+                    "description": "Categorical rating of the tooling complexity on the robot, ranked from 1 to 5, where 5 indicates highly complex mechanisms."
+                },
+                {
+                    "name": "number_of_sensors",
+                    "description": "Number of sensors installed on the robot"
+                },
+                {
+                    "name": "training_complexity",
+                    "description": "Rating of training complexity based on required skills and tasks"
+                },
+                {
+                    "name": "market_sector",
+                    "description": "The primary market sector where the robot is deployed, e.g., consumer, industrial, research."
+                },
+                {
+                    "name": "sensor_input_count",
+                    "description": "The number of sensors from which the robot receives input"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 319,
-      "question": "Is there a relationship between the number of sensor inputs on a robot and its primary operational focus along with the capability for continuous operation? If so, what patterns can be observed?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "sensor_input_count",
-      
-      
-      "relevant_cols": [
-        "timed_task_sequence_count",
-        "primary_operational_focus",
-        "continuous_operation_capable",
-        "sensor_input_count"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 319,
+            "question": "Is there a relationship between the number of sensor inputs on a robot and its primary operational focus along with the capability for continuous operation? If so, what patterns can be observed?",
+            "question_type": "general",
+            "difficulty": 1
+        }
+    ]
 }

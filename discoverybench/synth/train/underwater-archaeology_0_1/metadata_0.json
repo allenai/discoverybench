@@ -1,87 +1,77 @@
 {
-  "id": 0,
-  "domain": "underwater archaeology",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to submerged artifacts, shipwrecks, and sunken cities.",
-      "columns": [
+    "id": 0,
+    "domain": "underwater archaeology",
+    "datasets": [
         {
-          "name": "ocean_current_strength",
-          "description": "Measurement of ocean current strength at the site in knots"
-        },
-        {
-          "name": "light_penetration",
-          "description": "Percentage of light that penetrates to the site, measured as a percentage"
-        },
-        {
-          "name": "sediment_concentration",
-          "description": "Amount of sediment in the water measured in grams per liter"
-        },
-        {
-          "name": "site_discovery_date",
-          "description": "Date when the archaeological site was discovered"
-        },
-        {
-          "name": "number_of_artifacts",
-          "description": "Number of artifacts recovered from the site"
-        },
-        {
-          "name": "depth_of_site",
-          "description": "Measure of depth at which the archaeological site is located, in meters"
-        },
-        {
-          "name": "current_speed",
-          "description": "Speed of the water current at the site, measured in meters per second"
-        },
-        {
-          "name": "stone_structures_present",
-          "description": "Indicates whether stone structures are present at the site"
-        },
-        {
-          "name": "preserved_road_layout",
-          "description": "Indicates if the archaeological site has preserved road layouts"
-        },
-        {
-          "name": "permit_year",
-          "description": "Year when the excavation permit for the site was issued"
-        },
-        {
-          "name": "protected_marine_area",
-          "description": "Indicates whether the site is within a legally protected marine conservation area"
-        },
-        {
-          "name": "water_depth",
-          "description": "Depth of water at the site in meters"
-        },
-        {
-          "name": "site_id",
-          "description": "Unique identifier for each archaeological site"
-        },
-        {
-          "name": "sediment_accumulation_rate",
-          "description": "Rate of sediment accumulation at the site in kilograms per square meter per year"
+            "name": "data.csv",
+            "description": "Related to submerged artifacts, shipwrecks, and sunken cities.",
+            "columns": [
+                {
+                    "name": "ocean_current_strength",
+                    "description": "Measurement of ocean current strength at the site in knots"
+                },
+                {
+                    "name": "light_penetration",
+                    "description": "Percentage of light that penetrates to the site, measured as a percentage"
+                },
+                {
+                    "name": "sediment_concentration",
+                    "description": "Amount of sediment in the water measured in grams per liter"
+                },
+                {
+                    "name": "site_discovery_date",
+                    "description": "Date when the archaeological site was discovered"
+                },
+                {
+                    "name": "number_of_artifacts",
+                    "description": "Number of artifacts recovered from the site"
+                },
+                {
+                    "name": "depth_of_site",
+                    "description": "Measure of depth at which the archaeological site is located, in meters"
+                },
+                {
+                    "name": "current_speed",
+                    "description": "Speed of the water current at the site, measured in meters per second"
+                },
+                {
+                    "name": "stone_structures_present",
+                    "description": "Indicates whether stone structures are present at the site"
+                },
+                {
+                    "name": "preserved_road_layout",
+                    "description": "Indicates if the archaeological site has preserved road layouts"
+                },
+                {
+                    "name": "permit_year",
+                    "description": "Year when the excavation permit for the site was issued"
+                },
+                {
+                    "name": "protected_marine_area",
+                    "description": "Indicates whether the site is within a legally protected marine conservation area"
+                },
+                {
+                    "name": "water_depth",
+                    "description": "Depth of water at the site in meters"
+                },
+                {
+                    "name": "site_id",
+                    "description": "Unique identifier for each archaeological site"
+                },
+                {
+                    "name": "sediment_accumulation_rate",
+                    "description": "Rate of sediment accumulation at the site in kilograms per square meter per year"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 182,
-      "question": "Is there a relationship between the presence of stone structures along with specific oceanic and site conditions and the existence of preserved road layouts at underwater archaeological sites?",
-      "question_type": "general",
-      "difficulty": 3,
-      "target_col": "preserved_road_layout",
-      
-      
-      "relevant_cols": [
-        "stone_structures_present",
-        "depth_of_site",
-        "ocean_current_strength",
-        "protected_marine_area",
-        "sediment_accumulation_rate",
-        "preserved_road_layout"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 182,
+            "question": "Is there a relationship between the presence of stone structures along with specific oceanic and site conditions and the existence of preserved road layouts at underwater archaeological sites?",
+            "question_type": "general",
+            "difficulty": 3,
+            "true_hypothesis": "In locations where the combination of ocean current strength, the existence of a protected marine area with low sediment accumulation rate, and specific site depth considerations are met along with stone structures present, preserved road layouts are indicated with 'yes' at underwater archaeological sites."
+        }
+    ]
 }

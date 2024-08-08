@@ -1,229 +1,220 @@
 {
-  "id": 5,
-  "domain": "impressionist art",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to the impressionist movement, Monet, Renoir, and landscape paintings.",
-      "columns": [
+    "id": 5,
+    "domain": "impressionist art",
+    "datasets": [
         {
-          "name": "has_signature",
-          "description": "Boolean flag indicating whether the painting is signed by the artist"
-        },
-        {
-          "name": "elevation",
-          "description": "Elevation of the location where the painting was created in meters"
-        },
-        {
-          "name": "diversity_of_works",
-          "description": "A measure from 0 to 1 representing the diversity of types of paintings the artist has produced, calculated as the ratio of unique painting types to total works."
-        },
-        {
-          "name": "artist_popularity_percentile",
-          "description": "The percentile ranking of the artist's popularity based on contemporary records"
-        },
-        {
-          "name": "average_sale_price",
-          "description": "The average sale price of the artist's paintings in thousands of dollars."
-        },
-        {
-          "name": "year_of_creation",
-          "description": "The year the painting was created."
-        },
-        {
-          "name": "active_in_paris",
-          "description": "Binary flag indicating whether the artist was primarily active in Paris during the Impressionist period."
-        },
-        {
-          "name": "modern_elements_count",
-          "description": "Number of modern elements such as buildings, vehicles, and roads identified in the painting"
-        },
-        {
-          "name": "industrial_elements_presence",
-          "description": "Presence of industrial elements such as factories and smokestacks in the painting"
-        },
-        {
-          "name": "season_created",
-          "description": "The season in which the painting was created"
-        },
-        {
-          "name": "tourist_season",
-          "description": "Represents whether the count was done during the high tourist season."
-        },
-        {
-          "name": "brush_stroke_detail_level",
-          "description": "Score representing the level of detail in the brush strokes, higher scores indicate more detailed brushwork."
-        },
-        {
-          "name": "landscape_elements_count",
-          "description": "Number of landscape elements such as trees, water bodies, and fields identified in the painting"
-        },
-        {
-          "name": "technique_popularity",
-          "description": "Popularity of the painting technique during the era measured on a scale"
-        },
-        {
-          "name": "artist_period",
-          "description": "Categorical label of the artistic period the artist was most active in"
-        },
-        {
-          "name": "historical_importance",
-          "description": "An index of the painting's historical importance"
-        },
-        {
-          "name": "exhibition_frequency",
-          "description": "Number of times the painting has been exhibited in the last decade"
-        },
-        {
-          "name": "period_of_impressionism",
-          "description": "Categorizes the period of the impressionist movement when the painting was created"
-        },
-        {
-          "name": "volcanic_activity",
-          "description": "Level of volcanic activity during the year of painting"
-        },
-        {
-          "name": "artist_prolificacy_score",
-          "description": "A score based on the number of paintings an artist produced during the Impressionist period, higher scores indicate higher prolificacy"
-        },
-        {
-          "name": "is_landscape",
-          "description": "Indicates if the painting belongs to the landscape category"
-        },
-        {
-          "name": "scene_setting",
-          "description": "Whether the painting depicts an indoor or outdoor scene"
-        },
-        {
-          "name": "style_popularity_index",
-          "description": "A numerical index representing the popularity of the impressionist art style"
-        },
-        {
-          "name": "artist_influence_score",
-          "description": "Score from 0 to 10, reflecting the overall impact and recognition of the artist at the time the painting was created"
-        },
-        {
-          "name": "artist_popularity",
-          "description": "Popularity level of the artist on a scale from 1 to 10"
-        },
-        {
-          "name": "brush_stroke_type",
-          "description": "Categorical descriptor of the brush stroke type used predominantly in the painting (fine, broad, dabbed, etc.)."
-        },
-        {
-          "name": "associated_art_movements_count",
-          "description": "The count of major art movements that the artist was a part of."
-        },
-        {
-          "name": "is_international",
-          "description": "Indicates if the painting is sourced from an international location."
-        },
-        {
-          "name": "is_temporary_exhibition",
-          "description": "Indicates if the painting is on temporary exhibition."
-        },
-        {
-          "name": "number_of_visitors",
-          "description": "Number of visitors to the gallery where the painting is displayed per year"
-        },
-        {
-          "name": "artworks_sold",
-          "description": "Number of artworks sold during the artist's lifetime."
-        },
-        {
-          "name": "artist_notoriety",
-          "description": "A numerical value representing the overall fame and recognition of the artist"
-        },
-        {
-          "name": "urbanization_level",
-          "description": "Assessed urbanization level of the depicted location, ranging from rural to urban"
-        },
-        {
-          "name": "time_period",
-          "description": "The period when the painting was created, categorized as before or after 1890"
-        },
-        {
-          "name": "non_prestigious_gallery_displays",
-          "description": "Count of how many times the painting has been displayed in non-prestigious galleries"
-        },
-        {
-          "name": "spring_exhibition_day",
-          "description": "Day of the year when painting was first exhibited in spring"
-        },
-        {
-          "name": "gallery_visibility_score",
-          "description": "A score representing how visible the painting is in public galleries, higher values indicate higher visibility"
-        },
-        {
-          "name": "critics_positive_reviews",
-          "description": "Number of positive reviews received from critics"
-        },
-        {
-          "name": "painting_age",
-          "description": "Age of the painting calculated from the current year minus the year the painting was created."
-        },
-        {
-          "name": "painting_year_estimation",
-          "description": "Estimated year in which the painting was created"
-        },
-        {
-          "name": "artist_name",
-          "description": "Name of the artist"
-        },
-        {
-          "name": "number_of_exhibitions",
-          "description": "The total number of exhibitions featuring the artist's paintings."
-        },
-        {
-          "name": "awards_count",
-          "description": "Number of prestigious art awards received by the artist."
-        },
-        {
-          "name": "contains_landscape",
-          "description": "Indicates whether the painting features a landscape"
-        },
-        {
-          "name": "symposium_exposures",
-          "description": "Number of times the artist's works have been exposed at major art symposiums"
-        },
-        {
-          "name": "light_source",
-          "description": "Type of light source used in the painting, either natural or artificial"
-        },
-        {
-          "name": "part_of_series",
-          "description": "Boolean flag indicating if the painting is part of a recognized series."
-        },
-        {
-          "name": "count_natural_elements",
-          "description": "Number of recognizably natural elements such as trees, water, or flowers depicted in the painting"
-        },
-        {
-          "name": "painting_style",
-          "description": "Artistic style of the painting"
-        },
-        {
-          "name": "exhibitions_count",
-          "description": "Total number of exhibitions where the artist's works have been shown."
+            "name": "data.csv",
+            "description": "Related to the impressionist movement, Monet, Renoir, and landscape paintings.",
+            "columns": [
+                {
+                    "name": "has_signature",
+                    "description": "Boolean flag indicating whether the painting is signed by the artist"
+                },
+                {
+                    "name": "elevation",
+                    "description": "Elevation of the location where the painting was created in meters"
+                },
+                {
+                    "name": "diversity_of_works",
+                    "description": "A measure from 0 to 1 representing the diversity of types of paintings the artist has produced, calculated as the ratio of unique painting types to total works."
+                },
+                {
+                    "name": "artist_popularity_percentile",
+                    "description": "The percentile ranking of the artist's popularity based on contemporary records"
+                },
+                {
+                    "name": "average_sale_price",
+                    "description": "The average sale price of the artist's paintings in thousands of dollars."
+                },
+                {
+                    "name": "year_of_creation",
+                    "description": "The year the painting was created."
+                },
+                {
+                    "name": "active_in_paris",
+                    "description": "Binary flag indicating whether the artist was primarily active in Paris during the Impressionist period."
+                },
+                {
+                    "name": "modern_elements_count",
+                    "description": "Number of modern elements such as buildings, vehicles, and roads identified in the painting"
+                },
+                {
+                    "name": "industrial_elements_presence",
+                    "description": "Presence of industrial elements such as factories and smokestacks in the painting"
+                },
+                {
+                    "name": "season_created",
+                    "description": "The season in which the painting was created"
+                },
+                {
+                    "name": "tourist_season",
+                    "description": "Represents whether the count was done during the high tourist season."
+                },
+                {
+                    "name": "brush_stroke_detail_level",
+                    "description": "Score representing the level of detail in the brush strokes, higher scores indicate more detailed brushwork."
+                },
+                {
+                    "name": "landscape_elements_count",
+                    "description": "Number of landscape elements such as trees, water bodies, and fields identified in the painting"
+                },
+                {
+                    "name": "technique_popularity",
+                    "description": "Popularity of the painting technique during the era measured on a scale"
+                },
+                {
+                    "name": "artist_period",
+                    "description": "Categorical label of the artistic period the artist was most active in"
+                },
+                {
+                    "name": "historical_importance",
+                    "description": "An index of the painting's historical importance"
+                },
+                {
+                    "name": "exhibition_frequency",
+                    "description": "Number of times the painting has been exhibited in the last decade"
+                },
+                {
+                    "name": "period_of_impressionism",
+                    "description": "Categorizes the period of the impressionist movement when the painting was created"
+                },
+                {
+                    "name": "volcanic_activity",
+                    "description": "Level of volcanic activity during the year of painting"
+                },
+                {
+                    "name": "artist_prolificacy_score",
+                    "description": "A score based on the number of paintings an artist produced during the Impressionist period, higher scores indicate higher prolificacy"
+                },
+                {
+                    "name": "is_landscape",
+                    "description": "Indicates if the painting belongs to the landscape category"
+                },
+                {
+                    "name": "scene_setting",
+                    "description": "Whether the painting depicts an indoor or outdoor scene"
+                },
+                {
+                    "name": "style_popularity_index",
+                    "description": "A numerical index representing the popularity of the impressionist art style"
+                },
+                {
+                    "name": "artist_influence_score",
+                    "description": "Score from 0 to 10, reflecting the overall impact and recognition of the artist at the time the painting was created"
+                },
+                {
+                    "name": "artist_popularity",
+                    "description": "Popularity level of the artist on a scale from 1 to 10"
+                },
+                {
+                    "name": "brush_stroke_type",
+                    "description": "Categorical descriptor of the brush stroke type used predominantly in the painting (fine, broad, dabbed, etc.)."
+                },
+                {
+                    "name": "associated_art_movements_count",
+                    "description": "The count of major art movements that the artist was a part of."
+                },
+                {
+                    "name": "is_international",
+                    "description": "Indicates if the painting is sourced from an international location."
+                },
+                {
+                    "name": "is_temporary_exhibition",
+                    "description": "Indicates if the painting is on temporary exhibition."
+                },
+                {
+                    "name": "number_of_visitors",
+                    "description": "Number of visitors to the gallery where the painting is displayed per year"
+                },
+                {
+                    "name": "artworks_sold",
+                    "description": "Number of artworks sold during the artist's lifetime."
+                },
+                {
+                    "name": "artist_notoriety",
+                    "description": "A numerical value representing the overall fame and recognition of the artist"
+                },
+                {
+                    "name": "urbanization_level",
+                    "description": "Assessed urbanization level of the depicted location, ranging from rural to urban"
+                },
+                {
+                    "name": "time_period",
+                    "description": "The period when the painting was created, categorized as before or after 1890"
+                },
+                {
+                    "name": "non_prestigious_gallery_displays",
+                    "description": "Count of how many times the painting has been displayed in non-prestigious galleries"
+                },
+                {
+                    "name": "spring_exhibition_day",
+                    "description": "Day of the year when painting was first exhibited in spring"
+                },
+                {
+                    "name": "gallery_visibility_score",
+                    "description": "A score representing how visible the painting is in public galleries, higher values indicate higher visibility"
+                },
+                {
+                    "name": "critics_positive_reviews",
+                    "description": "Number of positive reviews received from critics"
+                },
+                {
+                    "name": "painting_age",
+                    "description": "Age of the painting calculated from the current year minus the year the painting was created."
+                },
+                {
+                    "name": "painting_year_estimation",
+                    "description": "Estimated year in which the painting was created"
+                },
+                {
+                    "name": "artist_name",
+                    "description": "Name of the artist"
+                },
+                {
+                    "name": "number_of_exhibitions",
+                    "description": "The total number of exhibitions featuring the artist's paintings."
+                },
+                {
+                    "name": "awards_count",
+                    "description": "Number of prestigious art awards received by the artist."
+                },
+                {
+                    "name": "contains_landscape",
+                    "description": "Indicates whether the painting features a landscape"
+                },
+                {
+                    "name": "symposium_exposures",
+                    "description": "Number of times the artist's works have been exposed at major art symposiums"
+                },
+                {
+                    "name": "light_source",
+                    "description": "Type of light source used in the painting, either natural or artificial"
+                },
+                {
+                    "name": "part_of_series",
+                    "description": "Boolean flag indicating if the painting is part of a recognized series."
+                },
+                {
+                    "name": "count_natural_elements",
+                    "description": "Number of recognizably natural elements such as trees, water, or flowers depicted in the painting"
+                },
+                {
+                    "name": "painting_style",
+                    "description": "Artistic style of the painting"
+                },
+                {
+                    "name": "exhibitions_count",
+                    "description": "Total number of exhibitions where the artist's works have been shown."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 1012,
-      "question": "Is there a relationship between the artist prolificacy score and the cube of the number of art exhibitions, the average sale prices of their paintings, and whether they were active in Paris?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "artist_prolificacy_score",
-      
-      
-      "relevant_cols": [
-        "number_of_exhibitions",
-        "average_sale_price",
-        "active_in_paris",
-        "artist_prolificacy_score"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 1012,
+            "question": "Is there a relationship between the artist prolificacy score and the cube of the number of art exhibitions, the average sale prices of their paintings, and whether they were active in Paris?",
+            "question_type": "general",
+            "difficulty": 1
+        }
+    ]
 }

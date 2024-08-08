@@ -338,11 +338,7 @@
             {
                 "qid": 0,
                 "true_hypothesis": "Time preference positively associated with obesity in Black men.",
-                "relevant_cols": [],
-                "target_col": "",
-                "prior_findings": "",
                 "question_type": "relationship",
-                "question_specificity": null,
                 "question": "Is time preference positively associated with obesity in black men?"
             }
         ]

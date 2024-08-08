@@ -2,11 +2,11 @@
     "id": 0,
     "domain": "biology",
     "workflow_tags": "regression",
+    "domain_knowledge": "",
     "datasets": [
         {
             "name": "temporal_trends_contingency_table.csv",
             "description": "Dataset contains temporal trends in the introduction pathways of non-native flora (plants) in the region of Catalonia.",
-            "domain_knowledge": "",
             "columns": {
                 "raw": [
                     {
@@ -25,9 +25,102 @@
             }
         },
         {
+            "name": "phylogenetic_tree.txt",
+            "description": "This file contains a phylogenetic tree in Newick format, illustrating the evolutionary relationships among diverse plant species. It features species from multiple families, with branch lengths denoting genetic distances or evolutionary times.",
+            "columns": {
+                "raw": [{
+                    "name": "",
+                    "description": ""
+                }]
+            }
+        },
+        {
+            "name": "invasion_success_pathways.csv",
+            "description": "This dataset provides comprehensive information on various non-native plant species that have invaded plots in the Barcelona province. The dataset includes detailed information on the ecological and biological characteristics of each species, the extent of their invasion, and the pathways through which they were introduced.",
+            "columns": {
+                "raw": [
+                    {
+                        "name": "Scientific_name",
+                        "description": "The full scientific name of the non-native plant species, including the author citation."
+                    },
+                    {
+                        "name": "family",
+                        "description": "The botanical family to which the species belongs."
+                    },
+                    {
+                        "name": "number.of.invaded.plots",
+                        "description": "The number of different plots in the Barcelona province where the species has been observed to invade."
+                    },
+                    {
+                        "name": "area.of.occupancy.10km",
+                        "description": "The area of occupancy at a 10 km scale, indicating how widespread the species is within the studied region."
+                    },
+                    {
+                        "name": "habitat.range",
+                        "description": "The number of different habitat types the species can occupy."
+                    },
+                    {
+                        "name": "invaded.niche.breadth",
+                        "description": "A measure (index) of the ecological niche breadth of the species within the invaded region, indicating its ecological versatility."
+                    },
+                    {
+                        "name": "mrt",
+                        "description": "The mean residence time of the species, indicating how long the species has been present in the new region (in years)."
+                    },
+                    {
+                        "name": "native.niche.breadth",
+                        "description": "A measure (index) of the ecological niche breadth of the species in its native range."
+                    },
+                    {
+                        "name": "intro.pathway",
+                        "description": "The pathway through which the species was introduced to the new region."
+                    },
+                    {
+                        "name": "growth.form",
+                        "description": "The growth form of the plant species, describing its general structural category."
+                    },
+                    {
+                        "name": "dispersal",
+                        "description": "The primary method of dispersal for the species."
+                    },
+                    {
+                        "name": "vegetative",
+                        "description": "Indicates whether the species can reproduce vegetatively (Yes or No)."
+                    },
+                    {
+                        "name": "height",
+                        "description": "The typical height of the species in meters."
+                    },
+                    {
+                        "name": "genus",
+                        "description": "The genus to which the species belongs."
+                    },
+                    {
+                        "name": "species",
+                        "description": "The specific epithet of the species."
+                    },
+                    {
+                        "name": "genus.relative",
+                        "description": "Data relative to the genus, if applicable (specific data not provided, thus marked as NA)."
+                    },
+                    {
+                        "name": "duplicated",
+                        "description": "Indicates if the species data is duplicated within the dataset (TRUE or FALSE)."
+                    },
+                    {
+                        "name": "species.relative",
+                        "description": "Data relative to the species, if applicable (specific data not provided, thus marked as NA)."
+                    },
+                    {
+                        "name": "phylo.tip.label",
+                        "description": "The label used for the species in the phylogenetic tree included in the dataset."
+                    }
+                ]
+            }
+        },        
+        {
             "name": "invaded_niche_pathways.csv",
-            "description": "The dataset contains information about the different pathways in the invaded niche.",
-            "domain_knowledge": "",
+            "description": "The data for the analysis of pathway-specific differences in the invaded niche.",
             "columns": {
                 "raw": [
                     {
@@ -176,7 +269,7 @@
                     },
                     {
                         "name": "annual.radiation",
-                        "description": "The mean annual solar radiation (in kJ/m²/day) of the sampled plot or location."
+                        "description": "The mean annual solar radiation (in kJ/m^2/day) of the sampled plot or location."
                     }
                 ]
             }

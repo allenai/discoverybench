@@ -1,109 +1,101 @@
 {
-  "id": 2,
-  "domain": "biodiversity conservation",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to preserving species, habitats, and global biodiversity.",
-      "columns": [
+    "id": 2,
+    "domain": "biodiversity conservation",
+    "datasets": [
         {
-          "name": "environmental_awareness_level",
-          "description": "The level of awareness and engagement with environmental issues in the region, measured as a score."
-        },
-        {
-          "name": "employment_rate",
-          "description": "Percentage of the eligible workforce that is employed, indicating labor market health."
-        },
-        {
-          "name": "gdp_per_capita",
-          "description": "Average gross domestic product per capita in the region, measuring economic productivity and standard of living."
-        },
-        {
-          "name": "average_temperature",
-          "description": "Average annual temperature of the region."
-        },
-        {
-          "name": "tourism_revenue",
-          "description": "Annual tourism revenue in the region in millions of dollars."
-        },
-        {
-          "name": "conservation_program_type",
-          "description": "Type of biodiversity conservation program implemented: community-led or government-led."
-        },
-        {
-          "name": "education_level",
-          "description": "Average education level in the region, on a scale from 1 (no formal education) to 10 (advanced degree)."
-        },
-        {
-          "name": "average_annual_temperature",
-          "description": "The average annual temperature of the region in degrees Celsius."
-        },
-        {
-          "name": "economic_status",
-          "description": "The economic status of the region, categorized as low, middle, or high income."
-        },
-        {
-          "name": "wildlife_policy_strength",
-          "description": "A numerical score from 1 to 10 that reflects the strength and enforcement of wildlife conservation policies in the region."
-        },
-        {
-          "name": "wildlife_sightings_per_capita",
-          "description": "Number of wildlife sightings reported per capita in the region annually."
-        },
-        {
-          "name": "recent_internet_promotions",
-          "description": "Binary indicator of whether there have been any significant promotional activities for internet services in the area within the past year."
-        },
-        {
-          "name": "region_type",
-          "description": "Categorizes each region as coastal or inland."
-        },
-        {
-          "name": "infrastructure_quality",
-          "description": "The quality of technological infrastructure available in the region, rated on a scale."
-        },
-        {
-          "name": "population_density",
-          "description": "The number of people per square kilometer in each region."
-        },
-        {
-          "name": "internet_access_rate",
-          "description": "Percentage of the population with access to the internet, an indicator of technological penetration."
-        },
-        {
-          "name": "average_annual_humidity",
-          "description": "The average annual relative humidity percentage in the region."
-        },
-        {
-          "name": "protected_wildlife_areas_count",
-          "description": "Number of designated protected wildlife areas in the region."
-        },
-        {
-          "name": "healthcare_budget_per_capita",
-          "description": "Total healthcare budget per capita in the region, reflecting the investment in public health services."
-        },
-        {
-          "name": "frequency_of_natural_disasters",
-          "description": "Number of recorded natural disasters like earthquakes, floods, or storms per year in the region."
+            "name": "data.csv",
+            "description": "Related to preserving species, habitats, and global biodiversity.",
+            "columns": [
+                {
+                    "name": "environmental_awareness_level",
+                    "description": "The level of awareness and engagement with environmental issues in the region, measured as a score."
+                },
+                {
+                    "name": "employment_rate",
+                    "description": "Percentage of the eligible workforce that is employed, indicating labor market health."
+                },
+                {
+                    "name": "gdp_per_capita",
+                    "description": "Average gross domestic product per capita in the region, measuring economic productivity and standard of living."
+                },
+                {
+                    "name": "average_temperature",
+                    "description": "Average annual temperature of the region."
+                },
+                {
+                    "name": "tourism_revenue",
+                    "description": "Annual tourism revenue in the region in millions of dollars."
+                },
+                {
+                    "name": "conservation_program_type",
+                    "description": "Type of biodiversity conservation program implemented: community-led or government-led."
+                },
+                {
+                    "name": "education_level",
+                    "description": "Average education level in the region, on a scale from 1 (no formal education) to 10 (advanced degree)."
+                },
+                {
+                    "name": "average_annual_temperature",
+                    "description": "The average annual temperature of the region in degrees Celsius."
+                },
+                {
+                    "name": "economic_status",
+                    "description": "The economic status of the region, categorized as low, middle, or high income."
+                },
+                {
+                    "name": "wildlife_policy_strength",
+                    "description": "A numerical score from 1 to 10 that reflects the strength and enforcement of wildlife conservation policies in the region."
+                },
+                {
+                    "name": "wildlife_sightings_per_capita",
+                    "description": "Number of wildlife sightings reported per capita in the region annually."
+                },
+                {
+                    "name": "recent_internet_promotions",
+                    "description": "Binary indicator of whether there have been any significant promotional activities for internet services in the area within the past year."
+                },
+                {
+                    "name": "region_type",
+                    "description": "Categorizes each region as coastal or inland."
+                },
+                {
+                    "name": "infrastructure_quality",
+                    "description": "The quality of technological infrastructure available in the region, rated on a scale."
+                },
+                {
+                    "name": "population_density",
+                    "description": "The number of people per square kilometer in each region."
+                },
+                {
+                    "name": "internet_access_rate",
+                    "description": "Percentage of the population with access to the internet, an indicator of technological penetration."
+                },
+                {
+                    "name": "average_annual_humidity",
+                    "description": "The average annual relative humidity percentage in the region."
+                },
+                {
+                    "name": "protected_wildlife_areas_count",
+                    "description": "Number of designated protected wildlife areas in the region."
+                },
+                {
+                    "name": "healthcare_budget_per_capita",
+                    "description": "Total healthcare budget per capita in the region, reflecting the investment in public health services."
+                },
+                {
+                    "name": "frequency_of_natural_disasters",
+                    "description": "Number of recorded natural disasters like earthquakes, floods, or storms per year in the region."
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 1035,
-      "question": "What is the relationship between average annual temperature, average annual humidity, wildlife policy strength, and tourism revenue in the context of biodiversity conservation?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "tourism_revenue",
-      
-      
-      "relevant_cols": [
-        "average_annual_temperature",
-        "average_annual_humidity",
-        "wildlife_policy_strength",
-        "tourism_revenue"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 1035,
+            "question": "What is the relationship between average annual temperature, average annual humidity, wildlife policy strength, and tourism revenue in the context of biodiversity conservation?",
+            "question_type": "general",
+            "difficulty": 1,
+            "true_hypothesis": "Regions with higher average annual temperature, average annual humidity, and wildlife policy strength result in higher tourism revenue."
+        }
+    ]
 }

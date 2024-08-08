@@ -1,189 +1,181 @@
 {
-  "id": 5,
-  "domain": "virtual reality",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to immersive simulations, VR technology, and applications.",
-      "columns": [
+    "id": 5,
+    "domain": "virtual reality",
+    "datasets": [
         {
-          "name": "VR_interest_level",
-          "description": "A rating of how interested the participant is in VR technology, from not interested to highly interested"
-        },
-        {
-          "name": "daily_computer_usage_hours",
-          "description": "Number of hours a participant uses a computer each day"
-        },
-        {
-          "name": "gender",
-          "description": "Gender of the participant"
-        },
-        {
-          "name": "motion_sickness_experience",
-          "description": "Whether the participant often experiences motion sickness in VR"
-        },
-        {
-          "name": "tech_meetup_attendance",
-          "description": "Number of tech-related meetups attended per year"
-        },
-        {
-          "name": "positive_vr_interactions",
-          "description": "Number of positive interactions user reports having per week in VR"
-        },
-        {
-          "name": "daily_tech_usage_hours",
-          "description": "Average number of hours spent using technology devices daily"
-        },
-        {
-          "name": "age_group",
-          "description": "Age group of the individual."
-        },
-        {
-          "name": "has_young_children",
-          "description": "Whether the participant has young children under the age of 6"
-        },
-        {
-          "name": "number_of_tech_devices_owned",
-          "description": "Number of different technology devices an individual owns"
-        },
-        {
-          "name": "has_gaming_experience",
-          "description": "Whether the participant has experience with video games"
-        },
-        {
-          "name": "owns_advanced_VR",
-          "description": "Indicates ownership of high-end VR devices, enhancing immersive experiences (true) or not (false)"
-        },
-        {
-          "name": "VR_community_belonging",
-          "description": "Participant's sense of belonging to the VR community, rated on a scale"
-        },
-        {
-          "name": "immersion_rating",
-          "description": "Subjective rating of how immersive participants find their VR experience"
-        },
-        {
-          "name": "weekend_vr_hours",
-          "description": "Total hours spent in VR on weekends"
-        },
-        {
-          "name": "top_tech_user",
-          "description": "Indicates whether the individual is in the top 25th percentile of technology users"
-        },
-        {
-          "name": "frequent_equipment_updates",
-          "description": "Whether the individual updates their VR equipment frequently (at least once a year)."
-        },
-        {
-          "name": "VR_apps_usage",
-          "description": "The number of VR applications used by the participant per week"
-        },
-        {
-          "name": "technology_usage_percent",
-          "description": "Percentage of daily entertainment time spent using technology"
-        },
-        {
-          "name": "number_of_languages_spoken",
-          "description": "Total number of languages spoken by the participant"
-        },
-        {
-          "name": "reads_tech_articles",
-          "description": "Indicates whether the participant regularly reads technology-related articles"
-        },
-        {
-          "name": "VR_exposure_frequency",
-          "description": "Number of times per week an individual is exposed to VR environments"
-        },
-        {
-          "name": "education_app_satisfaction",
-          "description": "Satisfaction level with VR educational applications"
-        },
-        {
-          "name": "tech_interaction_frequency",
-          "description": "Frequency of technology interaction at work per day"
-        },
-        {
-          "name": "VR_content_creation",
-          "description": "The number of VR content items (like games, experiences, or applications) created by the participant per month"
-        },
-        {
-          "name": "technical_job_experience",
-          "description": "Number of years working in a technical field"
-        },
-        {
-          "name": "vr_usage_duration",
-          "description": "Duration of VR usage in minutes"
-        },
-        {
-          "name": "leisure_time_reading_books_percentage",
-          "description": "Percentage of leisure time spent on reading books"
-        },
-        {
-          "name": "owns_VR_device",
-          "description": "Indicates ownership of a Virtual Reality device (true) or not (false)"
-        },
-        {
-          "name": "education_level",
-          "description": "Highest level of education attained, ranked from high school to postgraduate"
-        },
-        {
-          "name": "cognitive_task_frequency",
-          "description": "Frequency of engaging in cognitive demanding tasks per week"
-        },
-        {
-          "name": "VR_gaming_frequency",
-          "description": "The frequency of playing virtual reality games per week"
-        },
-        {
-          "name": "immersiveness_preference",
-          "description": "Rate of preference for immersive environments on a scale from 1 (lowest) to 5 (highest)"
-        },
-        {
-          "name": "owned_interactive_devices",
-          "description": "Number of interactive devices owned by the participant"
-        },
-        {
-          "name": "uses_tech_for_leisure",
-          "description": "Indicates if the individual uses technology devices for leisure purposes like gaming"
-        },
-        {
-          "name": "graphic_preference",
-          "description": "Indicates if the participant prefers realistic graphics in VR (1 for yes, 0 for no)"
-        },
-        {
-          "name": "technical_training_level",
-          "description": "The individual's level of formal training related to virtual technology, rated from novice to expert."
-        },
-        {
-          "name": "VR_accessibility",
-          "description": "Binary value where 1 represents high accessibility to VR equipment and facilities, and 0 represents low accessibility"
-        },
-        {
-          "name": "gaming_frequency",
-          "description": "How often the participant plays video games"
-        },
-        {
-          "name": "leisure_time_immersive_tech_percentage",
-          "description": "Percentage of leisure time spent on immersive technologies like VR"
+            "name": "data.csv",
+            "description": "Related to immersive simulations, VR technology, and applications.",
+            "columns": [
+                {
+                    "name": "VR_interest_level",
+                    "description": "A rating of how interested the participant is in VR technology, from not interested to highly interested"
+                },
+                {
+                    "name": "daily_computer_usage_hours",
+                    "description": "Number of hours a participant uses a computer each day"
+                },
+                {
+                    "name": "gender",
+                    "description": "Gender of the participant"
+                },
+                {
+                    "name": "motion_sickness_experience",
+                    "description": "Whether the participant often experiences motion sickness in VR"
+                },
+                {
+                    "name": "tech_meetup_attendance",
+                    "description": "Number of tech-related meetups attended per year"
+                },
+                {
+                    "name": "positive_vr_interactions",
+                    "description": "Number of positive interactions user reports having per week in VR"
+                },
+                {
+                    "name": "daily_tech_usage_hours",
+                    "description": "Average number of hours spent using technology devices daily"
+                },
+                {
+                    "name": "age_group",
+                    "description": "Age group of the individual."
+                },
+                {
+                    "name": "has_young_children",
+                    "description": "Whether the participant has young children under the age of 6"
+                },
+                {
+                    "name": "number_of_tech_devices_owned",
+                    "description": "Number of different technology devices an individual owns"
+                },
+                {
+                    "name": "has_gaming_experience",
+                    "description": "Whether the participant has experience with video games"
+                },
+                {
+                    "name": "owns_advanced_VR",
+                    "description": "Indicates ownership of high-end VR devices, enhancing immersive experiences (true) or not (false)"
+                },
+                {
+                    "name": "VR_community_belonging",
+                    "description": "Participant's sense of belonging to the VR community, rated on a scale"
+                },
+                {
+                    "name": "immersion_rating",
+                    "description": "Subjective rating of how immersive participants find their VR experience"
+                },
+                {
+                    "name": "weekend_vr_hours",
+                    "description": "Total hours spent in VR on weekends"
+                },
+                {
+                    "name": "top_tech_user",
+                    "description": "Indicates whether the individual is in the top 25th percentile of technology users"
+                },
+                {
+                    "name": "frequent_equipment_updates",
+                    "description": "Whether the individual updates their VR equipment frequently (at least once a year)."
+                },
+                {
+                    "name": "VR_apps_usage",
+                    "description": "The number of VR applications used by the participant per week"
+                },
+                {
+                    "name": "technology_usage_percent",
+                    "description": "Percentage of daily entertainment time spent using technology"
+                },
+                {
+                    "name": "number_of_languages_spoken",
+                    "description": "Total number of languages spoken by the participant"
+                },
+                {
+                    "name": "reads_tech_articles",
+                    "description": "Indicates whether the participant regularly reads technology-related articles"
+                },
+                {
+                    "name": "VR_exposure_frequency",
+                    "description": "Number of times per week an individual is exposed to VR environments"
+                },
+                {
+                    "name": "education_app_satisfaction",
+                    "description": "Satisfaction level with VR educational applications"
+                },
+                {
+                    "name": "tech_interaction_frequency",
+                    "description": "Frequency of technology interaction at work per day"
+                },
+                {
+                    "name": "VR_content_creation",
+                    "description": "The number of VR content items (like games, experiences, or applications) created by the participant per month"
+                },
+                {
+                    "name": "technical_job_experience",
+                    "description": "Number of years working in a technical field"
+                },
+                {
+                    "name": "vr_usage_duration",
+                    "description": "Duration of VR usage in minutes"
+                },
+                {
+                    "name": "leisure_time_reading_books_percentage",
+                    "description": "Percentage of leisure time spent on reading books"
+                },
+                {
+                    "name": "owns_VR_device",
+                    "description": "Indicates ownership of a Virtual Reality device (true) or not (false)"
+                },
+                {
+                    "name": "education_level",
+                    "description": "Highest level of education attained, ranked from high school to postgraduate"
+                },
+                {
+                    "name": "cognitive_task_frequency",
+                    "description": "Frequency of engaging in cognitive demanding tasks per week"
+                },
+                {
+                    "name": "VR_gaming_frequency",
+                    "description": "The frequency of playing virtual reality games per week"
+                },
+                {
+                    "name": "immersiveness_preference",
+                    "description": "Rate of preference for immersive environments on a scale from 1 (lowest) to 5 (highest)"
+                },
+                {
+                    "name": "owned_interactive_devices",
+                    "description": "Number of interactive devices owned by the participant"
+                },
+                {
+                    "name": "uses_tech_for_leisure",
+                    "description": "Indicates if the individual uses technology devices for leisure purposes like gaming"
+                },
+                {
+                    "name": "graphic_preference",
+                    "description": "Indicates if the participant prefers realistic graphics in VR (1 for yes, 0 for no)"
+                },
+                {
+                    "name": "technical_training_level",
+                    "description": "The individual's level of formal training related to virtual technology, rated from novice to expert."
+                },
+                {
+                    "name": "VR_accessibility",
+                    "description": "Binary value where 1 represents high accessibility to VR equipment and facilities, and 0 represents low accessibility"
+                },
+                {
+                    "name": "gaming_frequency",
+                    "description": "How often the participant plays video games"
+                },
+                {
+                    "name": "leisure_time_immersive_tech_percentage",
+                    "description": "Percentage of leisure time spent on immersive technologies like VR"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 620,
-      "question": "Is there a relationship between technical training level, frequency of equipment updates, age group, and VR exposure frequency in the dataset provided?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "VR_exposure_frequency",
-      
-      
-      "relevant_cols": [
-        "technical_training_level",
-        "frequent_equipment_updates",
-        "age_group",
-        "VR_exposure_frequency"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 620,
+            "question": "Is there a relationship between technical training level, frequency of equipment updates, age group, and VR exposure frequency in the dataset provided?",
+            "question_type": "general",
+            "difficulty": 1,
+            "true_hypothesis": "Higher values of technical training level, frequent equipment updates, and younger age group are positively associated with a greater VR exposure frequency, represented by a combination that involves the cube of technical training level, frequent equipment updates multiplied by 5, and age groups translated to numerical values."
+        }
+    ]
 }

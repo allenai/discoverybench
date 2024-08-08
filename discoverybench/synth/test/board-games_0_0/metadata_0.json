@@ -1,190 +1,168 @@
 {
-  "id": 0,
-  "domain": "board games",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to strategy games, cards, and dice games.",
-      "columns": [
+    "id": 0,
+    "domain": "board games",
+    "datasets": [
         {
-          "name": "efficiency_ratio",
-          "description": "Ratio of total wins to hours played"
-        },
-        {
-          "name": "solitary_play_preference",
-          "description": "Player's preference for playing games alone"
-        },
-        {
-          "name": "quick_decision_games_frequency",
-          "description": "A count of how often a player engages in games that require quick decision-making annually"
-        },
-        {
-          "name": "strategic_complexity_preference",
-          "description": "Indicates the player's preference for strategic complexity in a game on a scale from 1 to 10"
-        },
-        {
-          "name": "game_complexity_score",
-          "description": "Average complexity score of the games played, rated from 1 to 10"
-        },
-        {
-          "name": "increase_in_win_probability",
-          "description": "Increase in win probability in unrelated card games by dice game players"
-        },
-        {
-          "name": "average_game_duration",
-          "description": "The average duration of a game session in minutes preferred by the player"
-        },
-        {
-          "name": "card_to_dice_win_ratio",
-          "description": "Ratio of the number of card game victories to the number of dice game victories over a year"
-        },
-        {
-          "name": "online_strategy_tournament_participation",
-          "description": "Tracks whether the player participates in online strategy game tournaments"
-        },
-        {
-          "name": "risk_preference",
-          "description": "Player's preference for risky decisions"
-        },
-        {
-          "name": "strategy_success_rate",
-          "description": "Percentage that measures strategy success in non-primary games"
-        },
-        {
-          "name": "forum_interaction_frequency",
-          "description": "The number of times a player posts or interacts in online game forums per month"
-        },
-        {
-          "name": "games_borrowed_frequency",
-          "description": "How frequently the player borrows games from friends, measured in times per month"
-        },
-        {
-          "name": "game_diversity",
-          "description": "Number of different types of games played in a session"
-        },
-        {
-          "name": "card_game_preference",
-          "description": "Player's preference for card games on a scale from 1 to 10"
-        },
-        {
-          "name": "cooperative_game_frequency",
-          "description": "Rate at which a player engages in cooperative board games annually"
-        },
-        {
-          "name": "board_game_genre_preference",
-          "description": "Indicates the player's preferred board game genre"
-        },
-        {
-          "name": "session_length",
-          "description": "Duration of the playing session in hours"
-        },
-        {
-          "name": "average_game_duration_hours",
-          "description": "Average duration of a game session in hours"
-        },
-        {
-          "name": "average_game_duration_minutes",
-          "description": "Average duration in minutes of games played by the player annually"
-        },
-        {
-          "name": "win_rate",
-          "description": "Percentage of games won by the player"
-        },
-        {
-          "name": "game_types_owned",
-          "description": "Count of different types of games owned by the player"
-        },
-        {
-          "name": "card_game_engagement_level",
-          "description": "Measures the engagement level of a player in card games on a scale from 1 to 10"
-        },
-        {
-          "name": "frequent_high_stakes_player",
-          "description": "Binary indicator whether the player frequently participates in high-stakes games"
-        },
-        {
-          "name": "plays_in_tournaments",
-          "description": "Indicates whether the player regularly participates in tournaments"
-        },
-        {
-          "name": "tournament_participation_frequency",
-          "description": "A count of how often a player participates in tournaments annually"
-        },
-        {
-          "name": "strategy_preference",
-          "description": "Indicates if a player prefers strategy components in games, where 1 means yes and 0 means no"
-        },
-        {
-          "name": "player_age_group",
-          "description": "Categorizes player age into groups"
-        },
-        {
-          "name": "engagement_score",
-          "description": "Score measuring engagement in learning new games, based on duration of sessions and feedback scores"
-        },
-        {
-          "name": "online_community_active",
-          "description": "Binary indicator if the player is active in online gaming communities"
-        },
-        {
-          "name": "likes_short_games",
-          "description": "Binary indicator if the player prefers games with a shorter playtime (less than 60 minutes)"
-        },
-        {
-          "name": "strategic_complexity_rating",
-          "description": "Player's average rating of strategic complexity for the games they play, on a scale from 1 to 10"
-        },
-        {
-          "name": "number_of_game_genres_played",
-          "description": "Number of different game genres the player has played over the past year"
-        },
-        {
-          "name": "social_media_presence",
-          "description": "Binary indicator if a player is active on social media related to board games"
-        },
-        {
-          "name": "age",
-          "description": "Age of the player"
-        },
-        {
-          "name": "game_experience_level",
-          "description": "Categorical rating of the player's overall experience from novice to expert"
-        },
-        {
-          "name": "tournament_win_ratio",
-          "description": "Ratio of tournaments won to total tournaments participated in"
+            "name": "data.csv",
+            "description": "Related to strategy games, cards, and dice games.",
+            "columns": [
+                {
+                    "name": "efficiency_ratio",
+                    "description": "Ratio of total wins to hours played"
+                },
+                {
+                    "name": "solitary_play_preference",
+                    "description": "Player's preference for playing games alone"
+                },
+                {
+                    "name": "quick_decision_games_frequency",
+                    "description": "A count of how often a player engages in games that require quick decision-making annually"
+                },
+                {
+                    "name": "strategic_complexity_preference",
+                    "description": "Indicates the player's preference for strategic complexity in a game on a scale from 1 to 10"
+                },
+                {
+                    "name": "game_complexity_score",
+                    "description": "Average complexity score of the games played, rated from 1 to 10"
+                },
+                {
+                    "name": "increase_in_win_probability",
+                    "description": "Increase in win probability in unrelated card games by dice game players"
+                },
+                {
+                    "name": "average_game_duration",
+                    "description": "The average duration of a game session in minutes preferred by the player"
+                },
+                {
+                    "name": "card_to_dice_win_ratio",
+                    "description": "Ratio of the number of card game victories to the number of dice game victories over a year"
+                },
+                {
+                    "name": "online_strategy_tournament_participation",
+                    "description": "Tracks whether the player participates in online strategy game tournaments"
+                },
+                {
+                    "name": "risk_preference",
+                    "description": "Player's preference for risky decisions"
+                },
+                {
+                    "name": "strategy_success_rate",
+                    "description": "Percentage that measures strategy success in non-primary games"
+                },
+                {
+                    "name": "forum_interaction_frequency",
+                    "description": "The number of times a player posts or interacts in online game forums per month"
+                },
+                {
+                    "name": "games_borrowed_frequency",
+                    "description": "How frequently the player borrows games from friends, measured in times per month"
+                },
+                {
+                    "name": "game_diversity",
+                    "description": "Number of different types of games played in a session"
+                },
+                {
+                    "name": "card_game_preference",
+                    "description": "Player's preference for card games on a scale from 1 to 10"
+                },
+                {
+                    "name": "cooperative_game_frequency",
+                    "description": "Rate at which a player engages in cooperative board games annually"
+                },
+                {
+                    "name": "board_game_genre_preference",
+                    "description": "Indicates the player's preferred board game genre"
+                },
+                {
+                    "name": "session_length",
+                    "description": "Duration of the playing session in hours"
+                },
+                {
+                    "name": "average_game_duration_hours",
+                    "description": "Average duration of a game session in hours"
+                },
+                {
+                    "name": "average_game_duration_minutes",
+                    "description": "Average duration in minutes of games played by the player annually"
+                },
+                {
+                    "name": "win_rate",
+                    "description": "Percentage of games won by the player"
+                },
+                {
+                    "name": "game_types_owned",
+                    "description": "Count of different types of games owned by the player"
+                },
+                {
+                    "name": "card_game_engagement_level",
+                    "description": "Measures the engagement level of a player in card games on a scale from 1 to 10"
+                },
+                {
+                    "name": "frequent_high_stakes_player",
+                    "description": "Binary indicator whether the player frequently participates in high-stakes games"
+                },
+                {
+                    "name": "plays_in_tournaments",
+                    "description": "Indicates whether the player regularly participates in tournaments"
+                },
+                {
+                    "name": "tournament_participation_frequency",
+                    "description": "A count of how often a player participates in tournaments annually"
+                },
+                {
+                    "name": "strategy_preference",
+                    "description": "Indicates if a player prefers strategy components in games, where 1 means yes and 0 means no"
+                },
+                {
+                    "name": "player_age_group",
+                    "description": "Categorizes player age into groups"
+                },
+                {
+                    "name": "engagement_score",
+                    "description": "Score measuring engagement in learning new games, based on duration of sessions and feedback scores"
+                },
+                {
+                    "name": "online_community_active",
+                    "description": "Binary indicator if the player is active in online gaming communities"
+                },
+                {
+                    "name": "likes_short_games",
+                    "description": "Binary indicator if the player prefers games with a shorter playtime (less than 60 minutes)"
+                },
+                {
+                    "name": "strategic_complexity_rating",
+                    "description": "Player's average rating of strategic complexity for the games they play, on a scale from 1 to 10"
+                },
+                {
+                    "name": "number_of_game_genres_played",
+                    "description": "Number of different game genres the player has played over the past year"
+                },
+                {
+                    "name": "social_media_presence",
+                    "description": "Binary indicator if a player is active on social media related to board games"
+                },
+                {
+                    "name": "age",
+                    "description": "Age of the player"
+                },
+                {
+                    "name": "game_experience_level",
+                    "description": "Categorical rating of the player's overall experience from novice to expert"
+                },
+                {
+                    "name": "tournament_win_ratio",
+                    "description": "Ratio of tournaments won to total tournaments participated in"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 3,
-      "question": "Is there a relationship between card game engagement level, strategic preference, strategic complexity preference, participation in online strategy game tournaments, and an increase in win probability in unrelated card games as indicated by a specific multiplier factor?",
-      "question_type": "general",
-      "difficulty": 4,
-      "target_col": "increase_in_win_probability",
-      
-      
-      "relevant_cols": [
-        "card_game_engagement_level",
-        "strategy_preference",
-        "strategic_complexity_preference",
-        "average_game_duration",
-        "online_strategy_tournament_participation",
-        "card_game_preference",
-        "plays_in_tournaments",
-        "player_age_group",
-        "card_to_dice_win_ratio",
-        "game_experience_level",
-        "frequent_high_stakes_player",
-        "average_game_duration_minutes",
-        "number_of_game_genres_played",
-        "likes_short_games",
-        "cooperative_game_frequency",
-        "online_community_active",
-        "increase_in_win_probability"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 3,
+            "question": "Is there a relationship between card game engagement level, strategic preference, strategic complexity preference, participation in online strategy game tournaments, and an increase in win probability in unrelated card games as indicated by a specific multiplier factor?",
+            "question_type": "general",
+            "difficulty": 4
+        }
+    ]
 }

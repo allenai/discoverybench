@@ -341,11 +341,11 @@ def run_eval_gold_vs_gen_NL_subhypo(query, gold_hypo, gold_workflow, gen_hypo, g
 
 def run_eval_gold_vs_gen_NL_hypo_workflow(query, gold_hypo, gold_workflow, gen_hypo, gen_workflow, dataset_meta, llm_used, dataset_type, use_column_metadata=True):
     # Input: Dataset Metadata, Query, Gold {Hg, Wg}, Predicted {Hp, Wp}
-    # Output: score
+    # Output: eval_rec json includes final_score
 
     # Procedure:
         # Dataset Metadata, Query, Gold {Hg, Wg}, Pred {Hg, Wg}
-            # Gold: [Hg1, Hg2] (pre-store) Hg1 is a NL form of subhypothesis
+            # Gold: [Hg1, Hg2] (compute on the fly) Hg1 is a NL form of subhypothesis
             # Predicted: [Hp1, Hp2] (compute on the fly)
 
         # Compute Intersection: [(Hg_i, Hp_j), …]  # tuples of (gold,pred) that matched with context (do this w/o explicit extraction)
@@ -359,6 +359,7 @@ def run_eval_gold_vs_gen_NL_hypo_workflow(query, gold_hypo, gold_workflow, gen_h
             # 	r_v_list ← f1_v * score_r
         # accuracy_score = mean(r_v_list)
         # score =   [ recall_context * mean over predicted context(context_score * var_score *rel_score )]
+    
     recall_context = 1.0
     eval_rec = {
         "query": query,
@@ -402,11 +403,6 @@ def run_eval_gold_vs_gen_NL_hypo_workflow(query, gold_hypo, gold_workflow, gen_h
                 context_score = 1.0
             else:
                 context_score = 0.0
-
-
-            # question, answer, context_score = ask_dimension_question(query, gold_subh, gold_workflow,
-            #                    gen_subh, gen_workflow, dataset_meta, llm_used,
-            #                    dimension="context")
 
             if context_score == 1.0: # match only when context_score = 1.0
                 gen_subh_to_gold_subh[p_id] = g_id

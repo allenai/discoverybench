@@ -1,97 +1,89 @@
 {
-  "id": 1,
-  "domain": "marine biology",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
-      "columns": [
+    "id": 1,
+    "domain": "marine biology",
+    "datasets": [
         {
-          "name": "human_activity_score",
-          "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
-        },
-        {
-          "name": "water_clarity",
-          "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
-        },
-        {
-          "name": "reef_proximity_to_land",
-          "description": "Proximity of the reef to the nearest landmass, measured in kilometers"
-        },
-        {
-          "name": "marine_predator_density",
-          "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
-        },
-        {
-          "name": "reef_location",
-          "description": "Generalized location of the coral reef"
-        },
-        {
-          "name": "daily_sunlight_hours",
-          "description": "Average number of hours of sunlight received per day at the location"
-        },
-        {
-          "name": "cloud_cover",
-          "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
-        },
-        {
-          "name": "reef_is_protected",
-          "description": "Binary indicator of whether the reef is in a legally protected conservation area"
-        },
-        {
-          "name": "sea_surface_temperature",
-          "description": "Average sea surface temperature near the reef, measured in degrees Celsius"
-        },
-        {
-          "name": "coral_species_count",
-          "description": "Number of different coral species present"
-        },
-        {
-          "name": "water_temperature",
-          "description": "Average water temperature near the coral reef in Celsius"
-        },
-        {
-          "name": "ocean_depth",
-          "description": "Depth of the ocean at the reef location, measured in meters"
-        },
-        {
-          "name": "pollution_level",
-          "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
-        },
-        {
-          "name": "salinity_variation",
-          "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
-        },
-        {
-          "name": "seasonal_current_variation",
-          "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
-        },
-        {
-          "name": "shipping_route_presence",
-          "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
-        },
-        {
-          "name": "fishing_activity",
-          "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
+            "name": "data.csv",
+            "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
+            "columns": [
+                {
+                    "name": "human_activity_score",
+                    "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
+                },
+                {
+                    "name": "water_clarity",
+                    "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
+                },
+                {
+                    "name": "reef_proximity_to_land",
+                    "description": "Proximity of the reef to the nearest landmass, measured in kilometers"
+                },
+                {
+                    "name": "marine_predator_density",
+                    "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
+                },
+                {
+                    "name": "reef_location",
+                    "description": "Generalized location of the coral reef"
+                },
+                {
+                    "name": "daily_sunlight_hours",
+                    "description": "Average number of hours of sunlight received per day at the location"
+                },
+                {
+                    "name": "cloud_cover",
+                    "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
+                },
+                {
+                    "name": "reef_is_protected",
+                    "description": "Binary indicator of whether the reef is in a legally protected conservation area"
+                },
+                {
+                    "name": "sea_surface_temperature",
+                    "description": "Average sea surface temperature near the reef, measured in degrees Celsius"
+                },
+                {
+                    "name": "coral_species_count",
+                    "description": "Number of different coral species present"
+                },
+                {
+                    "name": "water_temperature",
+                    "description": "Average water temperature near the coral reef in Celsius"
+                },
+                {
+                    "name": "ocean_depth",
+                    "description": "Depth of the ocean at the reef location, measured in meters"
+                },
+                {
+                    "name": "pollution_level",
+                    "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
+                },
+                {
+                    "name": "salinity_variation",
+                    "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
+                },
+                {
+                    "name": "seasonal_current_variation",
+                    "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
+                },
+                {
+                    "name": "shipping_route_presence",
+                    "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
+                },
+                {
+                    "name": "fishing_activity",
+                    "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 558,
-      "question": "Is there a relationship between the proximity of reefs to land and the variables representing marine predator density, salinity variation, and shipping route presence?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "reef_proximity_to_land",
-      
-      
-      "relevant_cols": [
-        "marine_predator_density",
-        "salinity_variation",
-        "shipping_route_presence",
-        "reef_proximity_to_land"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 558,
+            "question": "Is there a relationship between the proximity of reefs to land and the variables representing marine predator density, salinity variation, and shipping route presence?",
+            "question_type": "general",
+            "difficulty": 1,
+            "true_hypothesis": "Reef proximity to land is influenced by the presence of large marine predators, salinity levels in the nearby ocean, and the presence of shipping routes. Specifically, a reef closer to areas with higher marine predator density, lower salinity variation, and no active shipping routes will be closer to the land."
+        }
+    ]
 }

@@ -1,172 +1,165 @@
 {
-  "id": 0,
-  "domain": "vintage automobiles",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to classic cars, automotive history, and vintage car restoration.",
-      "columns": [
+    "id": 0,
+    "domain": "vintage automobiles",
+    "datasets": [
         {
-          "name": "has_annual_car_event",
-          "description": "Indicates whether the country hosts at least one annual classic car event"
-        },
-        {
-          "name": "market_rarity_percentile",
-          "description": "The percentile that indicates how rare the car model is in the market, based on the number of surviving units"
-        },
-        {
-          "name": "has_won_awards",
-          "description": "Indicates whether the car has won any awards in car exhibitions"
-        },
-        {
-          "name": "performance_rating",
-          "description": "Rating of the car's performance on a scale of 1 to 100"
-        },
-        {
-          "name": "restoration_method",
-          "description": "Type of restoration method used, traditional or modern"
-        },
-        {
-          "name": "exhibition_count",
-          "description": "Number of times the car has been displayed in classic car exhibitions"
-        },
-        {
-          "name": "vintage_value_category",
-          "description": "Categorical representation of the car's value based on its age and historical significance"
-        },
-        {
-          "name": "certificate_of_authenticity",
-          "description": "Indicates if the car comes with a certified document verifying its authenticity and original components"
-        },
-        {
-          "name": "original_equipment_quality",
-          "description": "Categorical rating of the original factory equipment's quality."
-        },
-        {
-          "name": "historical_value_index",
-          "description": "Numerical index representing the historical significance and value of the car"
-        },
-        {
-          "name": "resale_price",
-          "description": "Resale price of the car in USD"
-        },
-        {
-          "name": "number_of_owners",
-          "description": "Total number of owners that the car has had"
-        },
-        {
-          "name": "car_show_participation_frequency",
-          "description": "Number of times the car has participated in vintage car shows annually"
-        },
-        {
-          "name": "country_has_racing_tradition",
-          "description": "Indicates if the car's country of origin has a historical tradition in car racing"
-        },
-        {
-          "name": "average_speed_limit",
-          "description": "The average speed limit on highways in the country (in km/h)"
-        },
-        {
-          "name": "predicted_performance_percentile",
-          "description": "An estimated percentile rank related to the car's expected performance."
-        },
-        {
-          "name": "is_convertible",
-          "description": "Indicates whether the car is a convertible model"
-        },
-        {
-          "name": "safety_feature_score",
-          "description": "Numerical score representing the level of advanced safety features in the car"
-        },
-        {
-          "name": "number_of_car_museums",
-          "description": "The total number of car museums in the country"
-        },
-        {
-          "name": "popularity_in_exhibits",
-          "description": "The percentage of automotive exhibitions in which cars from the same decade as the car have appeared."
-        },
-        {
-          "name": "major_restoration_done",
-          "description": "Indicates whether the car has undergone major restoration"
-        },
-        {
-          "name": "region_performance_index",
-          "description": "Average performance index of cars from the same region"
-        },
-        {
-          "name": "engine_displacement_percentile",
-          "description": "The percentile rank of the car's engine displacement compared to all other cars."
-        },
-        {
-          "name": "origin_country",
-          "description": "Country where the car was manufactured"
-        },
-        {
-          "name": "country_of_origin_precision_score",
-          "description": "Score representing the level of precision engineering of the country where the car was manufactured"
-        },
-        {
-          "name": "engine_performance_ratio",
-          "description": "A ratio of the engine's horsepower to its displacement, indicating overall performance efficiency."
-        },
-        {
-          "name": "engine_size",
-          "description": "Size of the car's engine in liters"
-        },
-        {
-          "name": "design_luxury_index",
-          "description": "A numerical index representing the luxury and aesthetic appeal of the car's design."
-        },
-        {
-          "name": "horsepower",
-          "description": "Engine power of the car measured in horsepower"
-        },
-        {
-          "name": "high_performance_region",
-          "description": "Indicates if the car was manufactured in a region historically known for high-performance vehicles"
-        },
-        {
-          "name": "high_resale_price",
-          "description": "Cars with a resale price in the top 25% of the distribution are flagged as high resale price cars."
-        },
-        {
-          "name": "car_age",
-          "description": "Age of the car in years"
-        },
-        {
-          "name": "year_of_manufacture",
-          "description": "Year the car was originally manufactured"
-        },
-        {
-          "name": "region_demand_for_vintage",
-          "description": "Average annual demand for vintage cars in the car's region, measured in sales per year"
-        },
-        {
-          "name": "car_id",
-          "description": "Unique identifier for each car"
-        },
-        {
-          "name": "maintenance_cost_change",
-          "description": "Percentage change in maintenance costs for the car over the last 10 years"
+            "name": "data.csv",
+            "description": "Related to classic cars, automotive history, and vintage car restoration.",
+            "columns": [
+                {
+                    "name": "has_annual_car_event",
+                    "description": "Indicates whether the country hosts at least one annual classic car event"
+                },
+                {
+                    "name": "market_rarity_percentile",
+                    "description": "The percentile that indicates how rare the car model is in the market, based on the number of surviving units"
+                },
+                {
+                    "name": "has_won_awards",
+                    "description": "Indicates whether the car has won any awards in car exhibitions"
+                },
+                {
+                    "name": "performance_rating",
+                    "description": "Rating of the car's performance on a scale of 1 to 100"
+                },
+                {
+                    "name": "restoration_method",
+                    "description": "Type of restoration method used, traditional or modern"
+                },
+                {
+                    "name": "exhibition_count",
+                    "description": "Number of times the car has been displayed in classic car exhibitions"
+                },
+                {
+                    "name": "vintage_value_category",
+                    "description": "Categorical representation of the car's value based on its age and historical significance"
+                },
+                {
+                    "name": "certificate_of_authenticity",
+                    "description": "Indicates if the car comes with a certified document verifying its authenticity and original components"
+                },
+                {
+                    "name": "original_equipment_quality",
+                    "description": "Categorical rating of the original factory equipment's quality."
+                },
+                {
+                    "name": "historical_value_index",
+                    "description": "Numerical index representing the historical significance and value of the car"
+                },
+                {
+                    "name": "resale_price",
+                    "description": "Resale price of the car in USD"
+                },
+                {
+                    "name": "number_of_owners",
+                    "description": "Total number of owners that the car has had"
+                },
+                {
+                    "name": "car_show_participation_frequency",
+                    "description": "Number of times the car has participated in vintage car shows annually"
+                },
+                {
+                    "name": "country_has_racing_tradition",
+                    "description": "Indicates if the car's country of origin has a historical tradition in car racing"
+                },
+                {
+                    "name": "average_speed_limit",
+                    "description": "The average speed limit on highways in the country (in km/h)"
+                },
+                {
+                    "name": "predicted_performance_percentile",
+                    "description": "An estimated percentile rank related to the car's expected performance."
+                },
+                {
+                    "name": "is_convertible",
+                    "description": "Indicates whether the car is a convertible model"
+                },
+                {
+                    "name": "safety_feature_score",
+                    "description": "Numerical score representing the level of advanced safety features in the car"
+                },
+                {
+                    "name": "number_of_car_museums",
+                    "description": "The total number of car museums in the country"
+                },
+                {
+                    "name": "popularity_in_exhibits",
+                    "description": "The percentage of automotive exhibitions in which cars from the same decade as the car have appeared."
+                },
+                {
+                    "name": "major_restoration_done",
+                    "description": "Indicates whether the car has undergone major restoration"
+                },
+                {
+                    "name": "region_performance_index",
+                    "description": "Average performance index of cars from the same region"
+                },
+                {
+                    "name": "engine_displacement_percentile",
+                    "description": "The percentile rank of the car's engine displacement compared to all other cars."
+                },
+                {
+                    "name": "origin_country",
+                    "description": "Country where the car was manufactured"
+                },
+                {
+                    "name": "country_of_origin_precision_score",
+                    "description": "Score representing the level of precision engineering of the country where the car was manufactured"
+                },
+                {
+                    "name": "engine_performance_ratio",
+                    "description": "A ratio of the engine's horsepower to its displacement, indicating overall performance efficiency."
+                },
+                {
+                    "name": "engine_size",
+                    "description": "Size of the car's engine in liters"
+                },
+                {
+                    "name": "design_luxury_index",
+                    "description": "A numerical index representing the luxury and aesthetic appeal of the car's design."
+                },
+                {
+                    "name": "horsepower",
+                    "description": "Engine power of the car measured in horsepower"
+                },
+                {
+                    "name": "high_performance_region",
+                    "description": "Indicates if the car was manufactured in a region historically known for high-performance vehicles"
+                },
+                {
+                    "name": "high_resale_price",
+                    "description": "Cars with a resale price in the top 25% of the distribution are flagged as high resale price cars."
+                },
+                {
+                    "name": "car_age",
+                    "description": "Age of the car in years"
+                },
+                {
+                    "name": "year_of_manufacture",
+                    "description": "Year the car was originally manufactured"
+                },
+                {
+                    "name": "region_demand_for_vintage",
+                    "description": "Average annual demand for vintage cars in the car's region, measured in sales per year"
+                },
+                {
+                    "name": "car_id",
+                    "description": "Unique identifier for each car"
+                },
+                {
+                    "name": "maintenance_cost_change",
+                    "description": "Percentage change in maintenance costs for the car over the last 10 years"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 845,
-      "question": "What is the relationship between the region performance index, performance rating, and engine size in vintage automobiles?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "engine_size",
-      
-      
-      "relevant_cols": [
-        "region_performance_index",
-        "performance_rating",
-        "engine_size"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 845,
+            "question": "What is the relationship between the region performance index, performance rating, and engine size in vintage automobiles?",
+            "question_type": "general",
+            "difficulty": 1,
+            "true_hypothesis": "Vehicles with a higher performance rating have larger engine sizes. Additionally, cars with a higher region performance index tend to have larger engine sizes. The engine size of a car is influenced by both its performance rating and the performance of cars from the same region."
+        }
+    ]
 }

@@ -1,102 +1,93 @@
 {
-  "id": 0,
-  "domain": "underwater archaeology",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to submerged artifacts, shipwrecks, and sunken cities.",
-      "columns": [
+    "id": 0,
+    "domain": "underwater archaeology",
+    "datasets": [
         {
-          "name": "permit_year",
-          "description": "Year when the excavation permit for the site was issued"
-        },
-        {
-          "name": "site_depth",
-          "description": "Depth of the underwater site in meters"
-        },
-        {
-          "name": "site_id",
-          "description": "Unique identifier for each archaeological site"
-        },
-        {
-          "name": "light_penetration",
-          "description": "Percentage of light that penetrates to the site, measured as a percentage"
-        },
-        {
-          "name": "depth_of_site",
-          "description": "Measure of depth at which the archaeological site is located, in meters"
-        },
-        {
-          "name": "coral_reefs_present",
-          "description": "Indicates whether coral reefs are present at the site"
-        },
-        {
-          "name": "stone_structures_present",
-          "description": "Indicates whether stone structures are present at the site"
-        },
-        {
-          "name": "sediment_accumulation_rate",
-          "description": "Rate of sediment accumulation at the site in kilograms per square meter per year"
-        },
-        {
-          "name": "current_speed",
-          "description": "Speed of the water current at the site, measured in meters per second"
-        },
-        {
-          "name": "ocean_current_strength",
-          "description": "Measurement of ocean current strength at the site in knots"
-        },
-        {
-          "name": "number_of_artifacts",
-          "description": "Number of artifacts recovered from the site"
-        },
-        {
-          "name": "water_depth",
-          "description": "Depth of water at the site in meters"
-        },
-        {
-          "name": "sediment_concentration",
-          "description": "Amount of sediment in the water measured in grams per liter"
-        },
-        {
-          "name": "protected_marine_area",
-          "description": "Indicates whether the site is within a legally protected marine conservation area"
-        },
-        {
-          "name": "underwater_visibility",
-          "description": "Visibility underwater at the site in meters"
-        },
-        {
-          "name": "contains_gold",
-          "description": "Indicates if the archaeological site contains gold artifacts"
-        },
-        {
-          "name": "visible_anchor_remains",
-          "description": "Count of anchor remains visible at the site"
-        },
-        {
-          "name": "site_discovery_date",
-          "description": "Date when the archaeological site was discovered"
+            "name": "data.csv",
+            "description": "Related to submerged artifacts, shipwrecks, and sunken cities.",
+            "columns": [
+                {
+                    "name": "permit_year",
+                    "description": "Year when the excavation permit for the site was issued"
+                },
+                {
+                    "name": "site_depth",
+                    "description": "Depth of the underwater site in meters"
+                },
+                {
+                    "name": "site_id",
+                    "description": "Unique identifier for each archaeological site"
+                },
+                {
+                    "name": "light_penetration",
+                    "description": "Percentage of light that penetrates to the site, measured as a percentage"
+                },
+                {
+                    "name": "depth_of_site",
+                    "description": "Measure of depth at which the archaeological site is located, in meters"
+                },
+                {
+                    "name": "coral_reefs_present",
+                    "description": "Indicates whether coral reefs are present at the site"
+                },
+                {
+                    "name": "stone_structures_present",
+                    "description": "Indicates whether stone structures are present at the site"
+                },
+                {
+                    "name": "sediment_accumulation_rate",
+                    "description": "Rate of sediment accumulation at the site in kilograms per square meter per year"
+                },
+                {
+                    "name": "current_speed",
+                    "description": "Speed of the water current at the site, measured in meters per second"
+                },
+                {
+                    "name": "ocean_current_strength",
+                    "description": "Measurement of ocean current strength at the site in knots"
+                },
+                {
+                    "name": "number_of_artifacts",
+                    "description": "Number of artifacts recovered from the site"
+                },
+                {
+                    "name": "water_depth",
+                    "description": "Depth of water at the site in meters"
+                },
+                {
+                    "name": "sediment_concentration",
+                    "description": "Amount of sediment in the water measured in grams per liter"
+                },
+                {
+                    "name": "protected_marine_area",
+                    "description": "Indicates whether the site is within a legally protected marine conservation area"
+                },
+                {
+                    "name": "underwater_visibility",
+                    "description": "Visibility underwater at the site in meters"
+                },
+                {
+                    "name": "contains_gold",
+                    "description": "Indicates if the archaeological site contains gold artifacts"
+                },
+                {
+                    "name": "visible_anchor_remains",
+                    "description": "Count of anchor remains visible at the site"
+                },
+                {
+                    "name": "site_discovery_date",
+                    "description": "Date when the archaeological site was discovered"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 174,
-      "question": "Is there a relationship between the presence of more than 10 visible anchor remains, stone structures, and a specific calculation involving the number of artifacts, water depth, and the likelihood of finding gold artifacts in underwater archaeological sites?",
-      "question_type": "general",
-      "difficulty": 2,
-      "target_col": "contains_gold",
-      
-      
-      "relevant_cols": [
-        "water_depth",
-        "number_of_artifacts",
-        "stone_structures_present",
-        "contains_gold",
-        "visible_anchor_remains"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 174,
+            "question": "Is there a relationship between the presence of more than 10 visible anchor remains, stone structures, and a specific calculation involving the number of artifacts, water depth, and the likelihood of finding gold artifacts in underwater archaeological sites?",
+            "question_type": "general",
+            "difficulty": 2,
+            "true_hypothesis": "Analysis of 1000 underwater archaeological sites revels that sites where there are more than 10 visible anchor remains and stone structures present, and (number of artifacts recovered cubed plus the depth of water minus 3 is greater than 500), are more likely to contain gold artifacts."
+        }
+    ]
 }

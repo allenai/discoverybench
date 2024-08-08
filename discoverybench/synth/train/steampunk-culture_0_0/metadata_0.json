@@ -1,118 +1,105 @@
 {
-  "id": 0,
-  "domain": "steampunk culture",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to retro-futuristic design, steam-powered technology, and Victorian aesthetics.",
-      "columns": [
+    "id": 0,
+    "domain": "steampunk culture",
+    "datasets": [
         {
-          "name": "years_in_subculture",
-          "description": "Number of years the participant has been involved in the steampunk subculture"
-        },
-        {
-          "name": "participant_id",
-          "description": "Unique identifier for each participant"
-        },
-        {
-          "name": "steampunk_literature_written",
-          "description": "Number of steampunk-themed literary works written by the participant each year"
-        },
-        {
-          "name": "steampunk_content_exposure",
-          "description": "The amount of exposure to steampunk-themed content in media, rated on a scale from 1 to 10"
-        },
-        {
-          "name": "has_steampunk_credit_card",
-          "description": "Indicates whether the participant has a steampunk-themed credit card"
-        },
-        {
-          "name": "employment_in_creative_field",
-          "description": "Whether the participant is employed in a creative field such as art, design, or entertainment"
-        },
-        {
-          "name": "age_range",
-          "description": "The age range of the participant."
-        },
-        {
-          "name": "num_of_themed_events_attended",
-          "description": "Number of steampunk-themed events attended in a year"
-        },
-        {
-          "name": "online_steampunk_discussion_frequency",
-          "description": "Frequency of discussions on online forums about steampunk topics per month"
-        },
-        {
-          "name": "spending_ratio",
-          "description": "Ratio of spending on themed clothing to regular clothing"
-        },
-        {
-          "name": "technology_fair_attendance",
-          "description": "Number of technology-related fairs the participant attends annually"
-        },
-        {
-          "name": "age_of_participant",
-          "description": "Age of the participant in years"
-        },
-        {
-          "name": "residence_type",
-          "description": "Type of area where the participant lives"
-        },
-        {
-          "name": "attends_steampunk_convention",
-          "description": "Indicates whether the participant attends an annual steampunk convention"
-        },
-        {
-          "name": "newsletter_subscription",
-          "description": "Whether the participant is subscribed to newsletters for upcoming steampunk events."
-        },
-        {
-          "name": "owns_steampunk_fashion_items",
-          "description": "Indicates whether the participant owns fashion items related to steampunk"
-        },
-        {
-          "name": "num_of_hobbies",
-          "description": "Number of hobbies the participant is actively involved in"
-        },
-        {
-          "name": "annual_spending_on_regular_clothing",
-          "description": "Annual spending on regular, non-themed clothing"
-        },
-        {
-          "name": "steampunk_social_media_engagement",
-          "description": "The participant's engagement percentile in steampunk-related social media groups."
-        },
-        {
-          "name": "subculture_involvement",
-          "description": "Type of subculture participant is involved in"
-        },
-        {
-          "name": "steampunk_art_created",
-          "description": "Number of steampunk-themed artworks created by the participant each year"
+            "name": "data.csv",
+            "description": "Related to retro-futuristic design, steam-powered technology, and Victorian aesthetics.",
+            "columns": [
+                {
+                    "name": "years_in_subculture",
+                    "description": "Number of years the participant has been involved in the steampunk subculture"
+                },
+                {
+                    "name": "participant_id",
+                    "description": "Unique identifier for each participant"
+                },
+                {
+                    "name": "steampunk_literature_written",
+                    "description": "Number of steampunk-themed literary works written by the participant each year"
+                },
+                {
+                    "name": "steampunk_content_exposure",
+                    "description": "The amount of exposure to steampunk-themed content in media, rated on a scale from 1 to 10"
+                },
+                {
+                    "name": "has_steampunk_credit_card",
+                    "description": "Indicates whether the participant has a steampunk-themed credit card"
+                },
+                {
+                    "name": "employment_in_creative_field",
+                    "description": "Whether the participant is employed in a creative field such as art, design, or entertainment"
+                },
+                {
+                    "name": "age_range",
+                    "description": "The age range of the participant."
+                },
+                {
+                    "name": "num_of_themed_events_attended",
+                    "description": "Number of steampunk-themed events attended in a year"
+                },
+                {
+                    "name": "online_steampunk_discussion_frequency",
+                    "description": "Frequency of discussions on online forums about steampunk topics per month"
+                },
+                {
+                    "name": "spending_ratio",
+                    "description": "Ratio of spending on themed clothing to regular clothing"
+                },
+                {
+                    "name": "technology_fair_attendance",
+                    "description": "Number of technology-related fairs the participant attends annually"
+                },
+                {
+                    "name": "age_of_participant",
+                    "description": "Age of the participant in years"
+                },
+                {
+                    "name": "residence_type",
+                    "description": "Type of area where the participant lives"
+                },
+                {
+                    "name": "attends_steampunk_convention",
+                    "description": "Indicates whether the participant attends an annual steampunk convention"
+                },
+                {
+                    "name": "newsletter_subscription",
+                    "description": "Whether the participant is subscribed to newsletters for upcoming steampunk events."
+                },
+                {
+                    "name": "owns_steampunk_fashion_items",
+                    "description": "Indicates whether the participant owns fashion items related to steampunk"
+                },
+                {
+                    "name": "num_of_hobbies",
+                    "description": "Number of hobbies the participant is actively involved in"
+                },
+                {
+                    "name": "annual_spending_on_regular_clothing",
+                    "description": "Annual spending on regular, non-themed clothing"
+                },
+                {
+                    "name": "steampunk_social_media_engagement",
+                    "description": "The participant's engagement percentile in steampunk-related social media groups."
+                },
+                {
+                    "name": "subculture_involvement",
+                    "description": "Type of subculture participant is involved in"
+                },
+                {
+                    "name": "steampunk_art_created",
+                    "description": "Number of steampunk-themed artworks created by the participant each year"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 470,
-      "question": "Is there a relationship between the amount of money spent on steampunk-themed clothing and accessories and the factors related to engagement with steampunk culture, such as owning a steampunk credit card, attending steampunk conventions, years in subculture, engagement in steampunk hobbies, a preference for creating steampunk literature over art, frequency of online steampunk discussions, and a specific spending ratio?",
-      "question_type": "general",
-      "difficulty": 4,
-      "target_col": "spending_ratio",
-      
-      
-      "relevant_cols": [
-        "annual_spending_on_regular_clothing",
-        "has_steampunk_credit_card",
-        "years_in_subculture",
-        "attends_steampunk_convention",
-        "online_steampunk_discussion_frequency",
-        "owns_steampunk_fashion_items",
-        "steampunk_literature_written",
-        "steampunk_art_created",
-        "spending_ratio"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 470,
+            "question": "Is there a relationship between the amount of money spent on steampunk-themed clothing and accessories and the factors related to engagement with steampunk culture, such as owning a steampunk credit card, attending steampunk conventions, years in subculture, engagement in steampunk hobbies, a preference for creating steampunk literature over art, frequency of online steampunk discussions, and a specific spending ratio?",
+            "question_type": "general",
+            "difficulty": 4,
+            "true_hypothesis": "Individuals who have owned a steampunk-themed credit card, attend steampunk conventions, engage in hobbies related to steampunk culture, have written more steampunk literature than created art, and have a frequency of online steampunk discussions that results in spending more than 10% of their monthly budget, and have been involved in the steampunk subculture for less than 3 years, spend an average of 20% more money on steampunk-themed clothing and accessories compared to their spending on regular, non-themed clothing."
+        }
+    ]
 }

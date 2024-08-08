@@ -1,201 +1,188 @@
 {
-  "id": 1,
-  "domain": "digital artistry",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to digital painting, graphics design, and visual effects.",
-      "columns": [
+    "id": 1,
+    "domain": "digital artistry",
+    "datasets": [
         {
-          "name": "collaboration_frequency",
-          "description": "Number of times the artist collaborates with others per year"
-        },
-        {
-          "name": "uses_advanced_digital_tools",
-          "description": "Whether the artist frequently uses advanced digital tools for creating artworks"
-        },
-        {
-          "name": "based_in_tech_hub",
-          "description": "Indicates if the artist is based in a region known for technological innovation"
-        },
-        {
-          "name": "years_active",
-          "description": "Number of years the artist has been active in digital art"
-        },
-        {
-          "name": "digital_tool_diversity",
-          "description": "Number of different digital tools used by the artist"
-        },
-        {
-          "name": "frequency_of_technology_training",
-          "description": "How often the artist attends training sessions on new digital art technologies per year"
-        },
-        {
-          "name": "international_contests_participated",
-          "description": "Number of international digital art contests the artist has participated in."
-        },
-        {
-          "name": "digital_art_revenue_percentage",
-          "description": "Percentage of total revenue that comes from digital art sales"
-        },
-        {
-          "name": "technology_platforms_used",
-          "description": "Number of different technology platforms the artist uses for digital art creation"
-        },
-        {
-          "name": "portfolio_updated_frequency",
-          "description": "How frequently the artist updates their digital portfolio, measured in updates per year"
-        },
-        {
-          "name": "award_wins",
-          "description": "Number of awards the artist has won in competitions"
-        },
-        {
-          "name": "formal_education_in_digital_art",
-          "description": "Whether the artist has received formal education specifically in digital art"
-        },
-        {
-          "name": "online_art_engagement",
-          "description": "Artist's engagement level on online art platforms, scaled from 0 (no engagement) to 1 (high engagement)"
-        },
-        {
-          "name": "formal_digital_art_education",
-          "description": "Indicates the level of formal education the artist has received in digital art techniques"
-        },
-        {
-          "name": "mentor_consultation_frequency",
-          "description": "Average number of times per month the artist consults with a mentor experienced in digital art"
-        },
-        {
-          "name": "online_community_engagement",
-          "description": "Level of engagement the artist has with online digital art communities, rated from low to high"
-        },
-        {
-          "name": "genres_covered",
-          "description": "Number of different genres the artist's work spans"
-        },
-        {
-          "name": "years_of_experience",
-          "description": "Number of years the artist has been actively creating digital art"
-        },
-        {
-          "name": "specialized_in_digital_painting",
-          "description": "Whether the artist is specialized in digital painting or not."
-        },
-        {
-          "name": "focus_on_digital_painting",
-          "description": "Whether the artist primarily focuses on digital painting"
-        },
-        {
-          "name": "artistic_tools_diversity",
-          "description": "Number of different artistic tools (software, hardware) used by the artist"
-        },
-        {
-          "name": "software_complexity_level",
-          "description": "The complexity level of software tools used by the artist, scaled from 1 to 10."
-        },
-        {
-          "name": "technical_training_level",
-          "description": "Represents the level of formal training the artist has received in digital art software, rated from no training (0) to expert training (10)."
-        },
-        {
-          "name": "focus_on_3D_modeling",
-          "description": "Indicates if the artist primarily focuses on 3D modeling in their digital artwork."
-        },
-        {
-          "name": "year_over_year_submission_increase",
-          "description": "Percentage increase in digital art submissions year over year"
-        },
-        {
-          "name": "high_end_equipment_ownership",
-          "description": "Whether the artist owns high-end digital art equipment, necessary for advanced digital art creation."
-        },
-        {
-          "name": "art_forum_participations",
-          "description": "Number of art forums the artist is active in"
-        },
-        {
-          "name": "participation_in_competitions",
-          "description": "Whether the artist participates in digital art competitions"
-        },
-        {
-          "name": "artworks_created",
-          "description": "Number of artworks created by the artist"
-        },
-        {
-          "name": "art_competitions_participated",
-          "description": "Number of digital art competitions the artist has participated in"
-        },
-        {
-          "name": "digital_to_traditional_ratio",
-          "description": "Ratio of digital artworks to traditional artworks created by the artist"
-        },
-        {
-          "name": "regular_competition_participant",
-          "description": "Whether the artist regularly participates in digital art competitions"
-        },
-        {
-          "name": "total_art_competitions",
-          "description": "Total number of digital art competitions the artist has participated in"
-        },
-        {
-          "name": "online_art_community_engagement",
-          "description": "Level of activity and participation an artist has in online art communities"
-        },
-        {
-          "name": "software_training_courses",
-          "description": "Number of specialized software training courses the artist has completed, related to digital artistry."
-        },
-        {
-          "name": "active_in_online_communities",
-          "description": "Whether the artist is active in online art communities"
-        },
-        {
-          "name": "featured_in_magazines",
-          "description": "Number of times the artist's work has been featured in digital art magazines"
-        },
-        {
-          "name": "genre_specialization",
-          "description": "Number of digital art genres the artist specializes in"
-        },
-        {
-          "name": "recent_tech_training_years",
-          "description": "The number of years since the artist last participated in a technological upgrade training session"
-        },
-        {
-          "name": "regional_exposure",
-          "description": "Number of different regions where the artist has held exhibitions or workshops"
-        },
-        {
-          "name": "active_in_tech_art_forums",
-          "description": "Indicates whether the artist frequently participates in online forums and communities focused on technology in art."
-        },
-        {
-          "name": "online_engagement_rate",
-          "description": "Percentage of online interactions per posted artwork"
+            "name": "data.csv",
+            "description": "Related to digital painting, graphics design, and visual effects.",
+            "columns": [
+                {
+                    "name": "collaboration_frequency",
+                    "description": "Number of times the artist collaborates with others per year"
+                },
+                {
+                    "name": "uses_advanced_digital_tools",
+                    "description": "Whether the artist frequently uses advanced digital tools for creating artworks"
+                },
+                {
+                    "name": "based_in_tech_hub",
+                    "description": "Indicates if the artist is based in a region known for technological innovation"
+                },
+                {
+                    "name": "years_active",
+                    "description": "Number of years the artist has been active in digital art"
+                },
+                {
+                    "name": "digital_tool_diversity",
+                    "description": "Number of different digital tools used by the artist"
+                },
+                {
+                    "name": "frequency_of_technology_training",
+                    "description": "How often the artist attends training sessions on new digital art technologies per year"
+                },
+                {
+                    "name": "international_contests_participated",
+                    "description": "Number of international digital art contests the artist has participated in."
+                },
+                {
+                    "name": "digital_art_revenue_percentage",
+                    "description": "Percentage of total revenue that comes from digital art sales"
+                },
+                {
+                    "name": "technology_platforms_used",
+                    "description": "Number of different technology platforms the artist uses for digital art creation"
+                },
+                {
+                    "name": "portfolio_updated_frequency",
+                    "description": "How frequently the artist updates their digital portfolio, measured in updates per year"
+                },
+                {
+                    "name": "award_wins",
+                    "description": "Number of awards the artist has won in competitions"
+                },
+                {
+                    "name": "formal_education_in_digital_art",
+                    "description": "Whether the artist has received formal education specifically in digital art"
+                },
+                {
+                    "name": "online_art_engagement",
+                    "description": "Artist's engagement level on online art platforms, scaled from 0 (no engagement) to 1 (high engagement)"
+                },
+                {
+                    "name": "formal_digital_art_education",
+                    "description": "Indicates the level of formal education the artist has received in digital art techniques"
+                },
+                {
+                    "name": "mentor_consultation_frequency",
+                    "description": "Average number of times per month the artist consults with a mentor experienced in digital art"
+                },
+                {
+                    "name": "online_community_engagement",
+                    "description": "Level of engagement the artist has with online digital art communities, rated from low to high"
+                },
+                {
+                    "name": "genres_covered",
+                    "description": "Number of different genres the artist's work spans"
+                },
+                {
+                    "name": "years_of_experience",
+                    "description": "Number of years the artist has been actively creating digital art"
+                },
+                {
+                    "name": "specialized_in_digital_painting",
+                    "description": "Whether the artist is specialized in digital painting or not."
+                },
+                {
+                    "name": "focus_on_digital_painting",
+                    "description": "Whether the artist primarily focuses on digital painting"
+                },
+                {
+                    "name": "artistic_tools_diversity",
+                    "description": "Number of different artistic tools (software, hardware) used by the artist"
+                },
+                {
+                    "name": "software_complexity_level",
+                    "description": "The complexity level of software tools used by the artist, scaled from 1 to 10."
+                },
+                {
+                    "name": "technical_training_level",
+                    "description": "Represents the level of formal training the artist has received in digital art software, rated from no training (0) to expert training (10)."
+                },
+                {
+                    "name": "focus_on_3D_modeling",
+                    "description": "Indicates if the artist primarily focuses on 3D modeling in their digital artwork."
+                },
+                {
+                    "name": "year_over_year_submission_increase",
+                    "description": "Percentage increase in digital art submissions year over year"
+                },
+                {
+                    "name": "high_end_equipment_ownership",
+                    "description": "Whether the artist owns high-end digital art equipment, necessary for advanced digital art creation."
+                },
+                {
+                    "name": "art_forum_participations",
+                    "description": "Number of art forums the artist is active in"
+                },
+                {
+                    "name": "participation_in_competitions",
+                    "description": "Whether the artist participates in digital art competitions"
+                },
+                {
+                    "name": "artworks_created",
+                    "description": "Number of artworks created by the artist"
+                },
+                {
+                    "name": "art_competitions_participated",
+                    "description": "Number of digital art competitions the artist has participated in"
+                },
+                {
+                    "name": "digital_to_traditional_ratio",
+                    "description": "Ratio of digital artworks to traditional artworks created by the artist"
+                },
+                {
+                    "name": "regular_competition_participant",
+                    "description": "Whether the artist regularly participates in digital art competitions"
+                },
+                {
+                    "name": "total_art_competitions",
+                    "description": "Total number of digital art competitions the artist has participated in"
+                },
+                {
+                    "name": "online_art_community_engagement",
+                    "description": "Level of activity and participation an artist has in online art communities"
+                },
+                {
+                    "name": "software_training_courses",
+                    "description": "Number of specialized software training courses the artist has completed, related to digital artistry."
+                },
+                {
+                    "name": "active_in_online_communities",
+                    "description": "Whether the artist is active in online art communities"
+                },
+                {
+                    "name": "featured_in_magazines",
+                    "description": "Number of times the artist's work has been featured in digital art magazines"
+                },
+                {
+                    "name": "genre_specialization",
+                    "description": "Number of digital art genres the artist specializes in"
+                },
+                {
+                    "name": "recent_tech_training_years",
+                    "description": "The number of years since the artist last participated in a technological upgrade training session"
+                },
+                {
+                    "name": "regional_exposure",
+                    "description": "Number of different regions where the artist has held exhibitions or workshops"
+                },
+                {
+                    "name": "active_in_tech_art_forums",
+                    "description": "Indicates whether the artist frequently participates in online forums and communities focused on technology in art."
+                },
+                {
+                    "name": "online_engagement_rate",
+                    "description": "Percentage of online interactions per posted artwork"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 731,
-      "question": "Is there a relationship between an artist's technical training level, participation in tech art forums, formal digital art education, location in tech hubs, engagement in online art communities, frequency of technology training, use of advanced digital tools, and digital to traditional ratio in the context of digital artistry?",
-      "question_type": "general",
-      "difficulty": 2,
-      "target_col": "digital_to_traditional_ratio",
-      
-      
-      "relevant_cols": [
-        "technical_training_level",
-        "active_in_tech_art_forums",
-        "formal_digital_art_education",
-        "based_in_tech_hub",
-        "online_art_community_engagement",
-        "frequency_of_technology_training",
-        "uses_advanced_digital_tools",
-        "digital_to_traditional_ratio"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 731,
+            "question": "Is there a relationship between an artist's technical training level, participation in tech art forums, formal digital art education, location in tech hubs, engagement in online art communities, frequency of technology training, use of advanced digital tools, and digital to traditional ratio in the context of digital artistry?",
+            "question_type": "general",
+            "difficulty": 2
+        }
+    ]
 }

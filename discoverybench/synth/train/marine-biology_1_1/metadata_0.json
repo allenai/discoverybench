@@ -1,104 +1,93 @@
 {
-  "id": 0,
-  "domain": "marine biology",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
-      "columns": [
+    "id": 0,
+    "domain": "marine biology",
+    "datasets": [
         {
-          "name": "marine_predator_density",
-          "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
-        },
-        {
-          "name": "shipping_route_presence",
-          "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
-        },
-        {
-          "name": "reef_is_protected",
-          "description": "Binary indicator of whether the reef is in a legally protected conservation area"
-        },
-        {
-          "name": "fishing_activity",
-          "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
-        },
-        {
-          "name": "seasonal_current_variation",
-          "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
-        },
-        {
-          "name": "water_clarity",
-          "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
-        },
-        {
-          "name": "ocean_depth",
-          "description": "Depth of the ocean at the reef location, measured in meters"
-        },
-        {
-          "name": "cloud_cover",
-          "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
-        },
-        {
-          "name": "sea_surface_temperature",
-          "description": "Average sea surface temperature near the reef, measured in degrees Celsius"
-        },
-        {
-          "name": "coral_biodiversity_percentile",
-          "description": "Percentile rank of coral reefs based on biodiversity"
-        },
-        {
-          "name": "coral_species_count",
-          "description": "Number of different coral species present"
-        },
-        {
-          "name": "daily_sunlight_hours",
-          "description": "Average number of hours of sunlight received per day at the location"
-        },
-        {
-          "name": "reef_proximity_to_land",
-          "description": "Proximity of the reef to the nearest landmass, measured in kilometers"
-        },
-        {
-          "name": "salinity_variation",
-          "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
-        },
-        {
-          "name": "reef_location",
-          "description": "Generalized location of the coral reef"
-        },
-        {
-          "name": "water_temperature",
-          "description": "Average water temperature near the coral reef in Celsius"
-        },
-        {
-          "name": "pollution_level",
-          "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
-        },
-        {
-          "name": "human_activity_score",
-          "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
+            "name": "data.csv",
+            "description": "Related to ocean ecosystems, marine creatures, and conservation efforts.",
+            "columns": [
+                {
+                    "name": "marine_predator_density",
+                    "description": "The estimated number of large marine predators per square kilometer in the surrounding water"
+                },
+                {
+                    "name": "shipping_route_presence",
+                    "description": "Indicates whether there is a major shipping route within 50 kilometers of the reef"
+                },
+                {
+                    "name": "reef_is_protected",
+                    "description": "Binary indicator of whether the reef is in a legally protected conservation area"
+                },
+                {
+                    "name": "fishing_activity",
+                    "description": "Level of human fishing activity near the reef, categorized as low, medium, high"
+                },
+                {
+                    "name": "seasonal_current_variation",
+                    "description": "Categorical rating of the seasonal variation in ocean currents near the reef"
+                },
+                {
+                    "name": "water_clarity",
+                    "description": "Clarity of the water at the marine location, based on turbidity and particulate matter, measured in NTU (Nephelometric Turbidity Units)"
+                },
+                {
+                    "name": "ocean_depth",
+                    "description": "Depth of the ocean at the reef location, measured in meters"
+                },
+                {
+                    "name": "cloud_cover",
+                    "description": "Percentage of the sky covered by clouds at the location, which can block sunlight"
+                },
+                {
+                    "name": "sea_surface_temperature",
+                    "description": "Average sea surface temperature near the reef, measured in degrees Celsius"
+                },
+                {
+                    "name": "coral_biodiversity_percentile",
+                    "description": "Percentile rank of coral reefs based on biodiversity"
+                },
+                {
+                    "name": "coral_species_count",
+                    "description": "Number of different coral species present"
+                },
+                {
+                    "name": "daily_sunlight_hours",
+                    "description": "Average number of hours of sunlight received per day at the location"
+                },
+                {
+                    "name": "reef_proximity_to_land",
+                    "description": "Proximity of the reef to the nearest landmass, measured in kilometers"
+                },
+                {
+                    "name": "salinity_variation",
+                    "description": "Yearly variation in salinity measured by the difference between maximum and minimum salinity levels in the area"
+                },
+                {
+                    "name": "reef_location",
+                    "description": "Generalized location of the coral reef"
+                },
+                {
+                    "name": "water_temperature",
+                    "description": "Average water temperature near the coral reef in Celsius"
+                },
+                {
+                    "name": "pollution_level",
+                    "description": "Categorized level of pollution near the reef, based on toxins and chemical measurements"
+                },
+                {
+                    "name": "human_activity_score",
+                    "description": "Score representing the level of human activity near the reef, based on factors such as fishing, boating, and pollution"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 565,
-      "question": "Is there a relationship between coral biodiversity percentile and fishing activity, pollution level, season current variation, sea surface temperature, reef proximity to land, and daily sunlight hours in marine areas?",
-      "question_type": "general",
-      "difficulty": 2,
-      "target_col": "coral_biodiversity_percentile",
-      
-      
-      "relevant_cols": [
-        "fishing_activity",
-        "pollution_level",
-        "seasonal_current_variation",
-        "sea_surface_temperature",
-        "reef_proximity_to_land",
-        "daily_sunlight_hours",
-        "coral_biodiversity_percentile"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 565,
+            "question": "Is there a relationship between coral biodiversity percentile and fishing activity, pollution level, season current variation, sea surface temperature, reef proximity to land, and daily sunlight hours in marine areas?",
+            "question_type": "general",
+            "difficulty": 2,
+            "true_hypothesis": "Coral reefs located in areas with low pollution levels are likely to have a coral biodiversity percentile calculated based on the level of pollution, seasonal current variation, sea surface temperature, reef proximity to land, daily sunlight hours, and fishing activity near the reef."
+        }
+    ]
 }

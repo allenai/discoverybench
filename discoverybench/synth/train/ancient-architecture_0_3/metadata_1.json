@@ -1,152 +1,145 @@
 {
-  "id": 1,
-  "domain": "ancient architecture",
-  "datasets": [
-    {
-      "name": "data.csv",
-      "description": "Related to historic buildings, architectural marvels, and ancient construction techniques.",
-      "columns": [
+    "id": 1,
+    "domain": "ancient architecture",
+    "datasets": [
         {
-          "name": "average_daily_sunlight_hours",
-          "description": "Average number of hours per day the location receives sunlight"
-        },
-        {
-          "name": "latitude",
-          "description": "Latitude of the building location, indicating distance from the equator"
-        },
-        {
-          "name": "daily_visitor_count",
-          "description": "Average number of visitors per day"
-        },
-        {
-          "name": "average_tourist_visits_per_year",
-          "description": "Average number of tourists visiting the structure per year"
-        },
-        {
-          "name": "height_meters",
-          "description": "Height of the structure in meters"
-        },
-        {
-          "name": "site_location_region",
-          "description": "The geographical region the site is located in, like 'Tropical', 'Temperate', or 'Arid'"
-        },
-        {
-          "name": "facade_complexity_index",
-          "description": "Score representing the complexity of geometric patterns and ornamental design on the structure's facade"
-        },
-        {
-          "name": "material_origin",
-          "description": "Indicates if the building materials were locally sourced"
-        },
-        {
-          "name": "average_wall_thickness",
-          "description": "Average thickness of the walls measured in centimeters"
-        },
-        {
-          "name": "material_durability_score",
-          "description": "Score representing the durability of the primary construction material, higher values indicate stronger materials"
-        },
-        {
-          "name": "in_historical_conservation_area",
-          "description": "Whether the structure is within a legally protected historical conservation area"
-        },
-        {
-          "name": "has_stone_foundation",
-          "description": "Indicates whether the building has a stone foundation or not"
-        },
-        {
-          "name": "ratio_of_clear_to_cloudy_days",
-          "description": "The ratio of clear days to cloudy days annually at the building's location"
-        },
-        {
-          "name": "modern_infrastructure",
-          "description": "Indicates whether the building is equipped with modern infrastructure such as electricity and plumbing."
-        },
-        {
-          "name": "durability_material_percentage",
-          "description": "Percentage of nearby ancient structures that utilize highly durable construction materials."
-        },
-        {
-          "name": "ceremonial_use",
-          "description": "Indicates if the structure was used for ceremonial purposes"
-        },
-        {
-          "name": "preservation_score",
-          "description": "A numeric score representing the state of the building's degradation, with lower scores indicating more erosion and higher scores indicating better preservation."
-        },
-        {
-          "name": "reliance_on_natural_lighting",
-          "description": "Whether the building design primarily relies on natural lighting for illumination and temperature regulation"
-        },
-        {
-          "name": "structural_complexity",
-          "description": "A numerical score representing the complexity of the building's architecture."
-        },
-        {
-          "name": "structure_id",
-          "description": "Unique identifier for each structure"
-        },
-        {
-          "name": "neighbor_inscription_percentage",
-          "description": "Percentage of nearby ancient structures that have foundational inscriptions."
-        },
-        {
-          "name": "urban_shadowing",
-          "description": "Binary indicator if the building is in an urban area with significant shadowing by other tall buildings"
-        },
-        {
-          "name": "construction_method",
-          "description": "Indicates the predominant technology used in construction, such as 'Stone masonry', 'Adobe', or 'Wood'."
-        },
-        {
-          "name": "preventive_measures",
-          "description": "Indicates if routine preventive measures against erosion and material degradation are applied"
-        },
-        {
-          "name": "local_construction_materials",
-          "description": "The primary material used in the building's construction, categorized by local availability."
-        },
-        {
-          "name": "restoration_presence",
-          "description": "Binary indicator of whether the nearby area has ongoing or recent restoration efforts."
-        },
-        {
-          "name": "average_age_of_neighbors",
-          "description": "Average age in years of the nearby structures."
-        },
-        {
-          "name": "construction_year",
-          "description": "Year the structure was constructed"
-        },
-        {
-          "name": "structure_age",
-          "description": "Age of the structure in years"
-        },
-        {
-          "name": "building_material_reflectivity",
-          "description": "Measure of how much sunlight the building's primary exterior materials can reflect"
-        },
-        {
-          "name": "climate_harshness_score",
-          "description": "A numerical representation of the harshness of the climate where the structure is located, with higher values indicating more severe weather conditions"
+            "name": "data.csv",
+            "description": "Related to historic buildings, architectural marvels, and ancient construction techniques.",
+            "columns": [
+                {
+                    "name": "average_daily_sunlight_hours",
+                    "description": "Average number of hours per day the location receives sunlight"
+                },
+                {
+                    "name": "latitude",
+                    "description": "Latitude of the building location, indicating distance from the equator"
+                },
+                {
+                    "name": "daily_visitor_count",
+                    "description": "Average number of visitors per day"
+                },
+                {
+                    "name": "average_tourist_visits_per_year",
+                    "description": "Average number of tourists visiting the structure per year"
+                },
+                {
+                    "name": "height_meters",
+                    "description": "Height of the structure in meters"
+                },
+                {
+                    "name": "site_location_region",
+                    "description": "The geographical region the site is located in, like 'Tropical', 'Temperate', or 'Arid'"
+                },
+                {
+                    "name": "facade_complexity_index",
+                    "description": "Score representing the complexity of geometric patterns and ornamental design on the structure's facade"
+                },
+                {
+                    "name": "material_origin",
+                    "description": "Indicates if the building materials were locally sourced"
+                },
+                {
+                    "name": "average_wall_thickness",
+                    "description": "Average thickness of the walls measured in centimeters"
+                },
+                {
+                    "name": "material_durability_score",
+                    "description": "Score representing the durability of the primary construction material, higher values indicate stronger materials"
+                },
+                {
+                    "name": "in_historical_conservation_area",
+                    "description": "Whether the structure is within a legally protected historical conservation area"
+                },
+                {
+                    "name": "has_stone_foundation",
+                    "description": "Indicates whether the building has a stone foundation or not"
+                },
+                {
+                    "name": "ratio_of_clear_to_cloudy_days",
+                    "description": "The ratio of clear days to cloudy days annually at the building's location"
+                },
+                {
+                    "name": "modern_infrastructure",
+                    "description": "Indicates whether the building is equipped with modern infrastructure such as electricity and plumbing."
+                },
+                {
+                    "name": "durability_material_percentage",
+                    "description": "Percentage of nearby ancient structures that utilize highly durable construction materials."
+                },
+                {
+                    "name": "ceremonial_use",
+                    "description": "Indicates if the structure was used for ceremonial purposes"
+                },
+                {
+                    "name": "preservation_score",
+                    "description": "A numeric score representing the state of the building's degradation, with lower scores indicating more erosion and higher scores indicating better preservation."
+                },
+                {
+                    "name": "reliance_on_natural_lighting",
+                    "description": "Whether the building design primarily relies on natural lighting for illumination and temperature regulation"
+                },
+                {
+                    "name": "structural_complexity",
+                    "description": "A numerical score representing the complexity of the building's architecture."
+                },
+                {
+                    "name": "structure_id",
+                    "description": "Unique identifier for each structure"
+                },
+                {
+                    "name": "neighbor_inscription_percentage",
+                    "description": "Percentage of nearby ancient structures that have foundational inscriptions."
+                },
+                {
+                    "name": "urban_shadowing",
+                    "description": "Binary indicator if the building is in an urban area with significant shadowing by other tall buildings"
+                },
+                {
+                    "name": "construction_method",
+                    "description": "Indicates the predominant technology used in construction, such as 'Stone masonry', 'Adobe', or 'Wood'."
+                },
+                {
+                    "name": "preventive_measures",
+                    "description": "Indicates if routine preventive measures against erosion and material degradation are applied"
+                },
+                {
+                    "name": "local_construction_materials",
+                    "description": "The primary material used in the building's construction, categorized by local availability."
+                },
+                {
+                    "name": "restoration_presence",
+                    "description": "Binary indicator of whether the nearby area has ongoing or recent restoration efforts."
+                },
+                {
+                    "name": "average_age_of_neighbors",
+                    "description": "Average age in years of the nearby structures."
+                },
+                {
+                    "name": "construction_year",
+                    "description": "Year the structure was constructed"
+                },
+                {
+                    "name": "structure_age",
+                    "description": "Age of the structure in years"
+                },
+                {
+                    "name": "building_material_reflectivity",
+                    "description": "Measure of how much sunlight the building's primary exterior materials can reflect"
+                },
+                {
+                    "name": "climate_harshness_score",
+                    "description": "A numerical representation of the harshness of the climate where the structure is located, with higher values indicating more severe weather conditions"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "queries": [
-    {
-      "qid": 111,
-      "question": "Is there a relationship between the construction method of ancient architecture and the average wall thickness along with the presence of a stone foundation?",
-      "question_type": "general",
-      "difficulty": 1,
-      "target_col": "construction_method",
-      
-      
-      "relevant_cols": [
-        "average_wall_thickness",
-        "has_stone_foundation",
-        "construction_method"
-      ]
-    }
-  ]
+    ],
+    "queries": [
+        {
+            "qid": 111,
+            "question": "Is there a relationship between the construction method of ancient architecture and the average wall thickness along with the presence of a stone foundation?",
+            "question_type": "general",
+            "difficulty": 1,
+            "true_hypothesis": "The construction method in the dataset is determined based on the average wall thickness and the presence of a stone foundation. Buildings with an average wall thickness greater than 100 and a stone foundation are classified as 'Stone masonry'. If the average wall thickness is greater than 50 but there is no stone foundation, the construction method is labeled as 'Adobe'. Otherwise, the construction method is identified as 'Wood'."
+        }
+    ]
 }

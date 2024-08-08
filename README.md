@@ -7,7 +7,7 @@
   
 ---
 
-Dataset and code for ["DiscoveryBench: Towards Data-Driven Discovery with Large Language Models"](#)
+Dataset and code for ["DiscoveryBench: Towards Data-Driven Discovery with Large Language Models"](https://arxiv.org/pdf/2407.01725v1)
 
 ---
 
@@ -16,7 +16,7 @@ Dataset and code for ["DiscoveryBench: Towards Data-Driven Discovery with Large 
 DiscoveryBench is designed to systematically assess current model capabilities in data-driven discovery tasks and provide a useful resource for improving them. Each DiscoveryBench task consists of a goal and dataset(s). Solving the task requires both statistical analysis and semantic reasoning. A faceted evaluation allows open-ended final answers to be rigorously evaluated.
 
 <p align="center">
-  <a href="[https://github.com/princeton-nlp/Llamao](https://github.com/allenai/discoverybench)">
+  <a href="[https://github.com/allenai/discoverybench](https://github.com/allenai/discoverybench)">
     <img src="assets/background-teaser.png" width="100%" alt="DiscoveryBench Background" />
   </a>
 </p>
@@ -76,14 +76,18 @@ Options:
 
 We welcome contributions to our repository of discovery agents. In case of any issues for the agents, evaluation, or any other bug, please follow [our issue templates](https://github.com/allenai/discoverybench/issues/new/choose). We would try to respond to as soon as possible. 
 
-Reach out to us at: [Bodhisattwa Prasad Majumder](https://www.majumderb.com) and [Harshit Surana](https://harshitsurana.com) (Email: {bodhi, harshits}@allenai.org).
+Reach out to us at: [Bodhisattwa Prasad Majumder](https://www.majumderb.com) and [Harshit Surana](https://harshitsurana.com) (Email: {bodhisattwam, harshits}@allenai.org).
 
 
 ## ✍️ Citation
 If you find our work helpful, please use the following citations.
 ```
-@inproceedings{
-TBA
+@article{majumder2024discoverybench,
+  author    = "Bodhisattwa Prasad Majumder, Harshit Surana, Dhruv Agarwal, Bhavana Dalvi Mishra, Abhijeetsingh Meena, Aryan Prakhar, Tirth Vora, Tushar Khot, Ashish Sabharwal, Peter Clark",
+  title     = "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models",
+  journal   = "arXiv",
+  year      = "2024",
 }
+
 ```
 
