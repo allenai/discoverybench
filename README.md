@@ -78,6 +78,10 @@ We welcome contributions to our repository of discovery agents. In case of any i
 
 Reach out to us at: [Bodhisattwa Prasad Majumder](https://www.majumderb.com) and [Harshit Surana](https://harshitsurana.com) (Email: {bodhisattwam, harshits}@allenai.org).
 
+## 🤗 Huggingface
+
+Explore DiscoveryBench at Huggingface's data viewer [huggingface.co/datasets/allenai/discoverybench](https://huggingface.co/datasets/allenai/discoverybench)
+
 
 ## ✍️ Citation
 If you find our work helpful, please use the following citations.
