@@ -3,6 +3,7 @@ import polars as pl
 import openai
 import pandas as pd
 from typing import Union, Tuple
+from itertools import product
 from dataclasses import dataclass
 import random
 from typing import Callable
@@ -16,87 +17,19 @@ import pdb
 from openai import OpenAI
 from flowmason import conduct, load_artifact_with_step_name, SingletonStep, MapReduceStep
 from collections import OrderedDict, Counter 
-from typing import List, Dict
+from typing import List, Dict, Optional
 import click
 from io import StringIO
 import json
 import os
 import dill
 
-from packages.constants import SCRATCH_DIR, MY_CACHE_DIR, MY_LOG_DIR
+from packages.library_learn import create_ll_prompt, step_write_leap_helper,\
+    step_extract_helper, step_prettyprint_helper, step_write_standard_abstraction
+from packages.constants import SCRATCH_DIR, MY_CACHE_DIR, MY_LOG_DIR, LEAP_CACHE_DIR, DB_ANALYSIS_FAILED, EMPTY_SC_ANSWER
+from packages.agent_dataclasses import ExperimentResult, FailedExperimentResult, CodeRequestPrompt, SynthResultPrompt, CodeExtractionException, CodeRetryException, LongPromptException, SelfConsistencyExperimentResult, FailedSelfConsistencyExperimentResult, ContrastiveProgramExample
 from packages.json_repair import repair_json
-
-@dataclass
-class CodeRequestPrompt:
-    prompt: str
-
-@dataclass
-class SynthResultPrompt:
-    prompt_template: Callable[[str], str]
-    is_code_req: bool
-
-@dataclass
-class ExperimentResult:
-    status: str
-    workflow: List[Dict]
-    num_prompt_tokens: int
-    num_response_tokens: int
-    answer: Union[str, float]
-    num_errors: int
-
-@dataclass
-class SelfConsistencyExperimentResult:
-    individual_runs: Tuple[ExperimentResult]
-    final_answer: str
-
-class CodeExtractionException(Exception):
-    def __init__(self, message, workflow_i, workflow):
-        super().__init__(message)
-        self.message = message
-        self.workflow_so_far = workflow
-
-# create an exception class CodeRetryException(Exception):
-class CodeRetryException(Exception):
-    def __init__(self, 
-                 workflow_so_far,
-                 workflow_i, message, prior_implementations, prior_tracebacks):
-        self.workflow_so_far = workflow_so_far
-        self.workflow_i = workflow_i
-        self.message = message
-        self.prior_implementations = prior_implementations
-        self.prior_tracebacks = prior_tracebacks
-
-class LongPromptException(Exception):
-    def __init__(self, 
-                 workflow_so_far,
-                 workflow_i, message
-                ):
-        self.workflow_so_far = workflow_so_far
-        self.workflow_i = workflow_i
-        self.message = message
-
-
-
-
-class FailedExperimentResult():
-    def __init__(self, failed_phase_i, 
-                 tracebacks, 
-                 fail_type: str, 
-                 implementation_attempts: List[str],
-                 workflow_so_far):
-
-
-        self.failed_phase_i = failed_phase_i
-        self.tracebacks = tracebacks  # when teh fail type is a code retry exception
-        self.implementation_attempts = implementation_attempts # when the fail type is a code retry exception
-        self.workflow_so_far = workflow_so_far # when failed_phase_i is 0, this will be empty
-        self.fail_type = fail_type
-        
-
-class ExtractJSONException(Exception):
-    def __init__(self, response_object, message):
-        self.response_object = response_object
-        self.message = message
+from packages.answer_extract_utils import extract_db_label, extract_db_rationale
 
 
 load_dotenv()
@@ -528,7 +461,10 @@ def process_code_step(history: List[Dict[str, str]],
         except Exception as e:
             sys.stdout = stdout
             # TODO: is there a way to get a stack trace? 
-            tb = traceback.format_exc()
+            try:
+                tb = traceback.format_exc()
+            except KeyError as ke:
+                tb = f"Exception during formatting traceback; complete traceback unavailable. Error message is: {e}"
             logger.info(f"An error occurred for attempt {attempt_num}: {tb}.")
             logger.info(f"extracted code for attempt {attempt_num}: {extracted_code}")
             tracebacks.append(tb)
@@ -567,11 +503,14 @@ def process_regular_prompt(history: List[Dict[str, str]],
 
 # TODO: need to modify this to return the right structure, so we can probe it.
 def process_workflow(system_prompt: str, 
-                     workflow: List): 
+                     workflow: List, 
+                     library_str: Optional[str] = None): 
     messages = [{"role": "system", "content": system_prompt}]
     execution_results = []
     workflow_results = []
     all_code_snippets = [] 
+    if library_str:
+        all_code_snippets.append(extract_code(library_str))
     for i in range(len(workflow)):
         workflow_step = workflow[i]
         if isinstance(workflow_step, CodeRequestPrompt):
@@ -680,7 +619,7 @@ def clear_dir(path: str):
     for fname in os.listdir(path):
         os.remove(f"{path}/{fname}")
 
-def generate_self_consistency_prompt(initial_q: str, final_answers: List[str]) -> str:
+def generate_self_consistency_prompt(final_answers: List[str]) -> str:
     final_answers_str = ""
     # add ====== Answer {i} ====== for each final answer
     # {final_answer i}
@@ -846,9 +785,11 @@ def build_experiment_result_db(execution_results, claim) -> ExperimentResult:
                             answer = claim,
                             num_errors=total_errors)
 
-def complete_pass_db(workflow, structure_type, floma_cache):
+def execute_pass_db(workflow, structure_type, floma_cache, 
+                    library_str: Optional[str] = None) -> ExperimentResult:
     try:
-        execution_results = process_workflow(retrieve_system_prompt(structure_type, floma_cache), workflow)
+        execution_results = process_workflow(retrieve_system_prompt(structure_type, floma_cache), workflow, 
+                                             library_str)
         clear_dir(f"scratch/{floma_cache}")
         answer = _extract_response_db(execution_results[-1]['response'])
         return build_experiment_result_db(execution_results, answer)
@@ -866,13 +807,33 @@ def complete_pass_db(workflow, structure_type, floma_cache):
                                     prior_implementations,
                                     workflow_so_far
                                     )
+    except LongPromptException as e:
+        logger.error(f"BadRequestError occurred: {e}.")
+        clear_dir(f"scratch/{floma_cache}")
+        return FailedExperimentResult(e.workflow_i,
+                                    [],
+                                    "long_prompt_exception",
+                                    [],
+                                    e.workflow_so_far
+                                        )
+    except CodeExtractionException as e:
+        logger.error(f"Error occurred during code extraction: {e}.")
+        clear_dir(f"scratch/{floma_cache}")
+        return FailedExperimentResult(e.workflow_i,
+                                    [],
+                                    "code_extraction_exception",
+                                    [],
+                                    e.workflow_so_far
+                                    )
+
         # print(f"Error occurred: {e}.")
         # ipdb.set_trace()
 
     # TODO: implement build_experiment_result and cache the result. 
     # return build_experiment_result(execution_results, answer_dict)
 
-def complete_pass_qrdata_db(workflow, structure_type):
+
+def complete_pass_qrdata(workflow, structure_type):
     try:
         execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
         clear_dir("scratch/flowmason_cache")
@@ -973,14 +934,14 @@ def analyze_qrdata(structure_type: bool, add_exploration_step: bool,
                 SynthResultPrompt(analysis_passback, False)
                 ] 
     if not self_consistency:
-        return complete_pass_qrdata_db(workflow, structure_type)
+        return complete_pass_qrdata(workflow, structure_type)
     else:
         SELF_CONSISTENCY_ITERS = 5
         final_analyses = []
         sc_runs = []
         for _ in range(SELF_CONSISTENCY_ITERS):
             logger.info(f"Starting self-consistency iteration {_}.")
-            experiment_result = complete_pass_qrdata_db(workflow, structure_type) # either ExperimentResult or FailedExperimentResult
+            experiment_result = complete_pass_qrdata(workflow, structure_type) # either ExperimentResult or FailedExperimentResult
             if hasattr(experiment_result, 'workflow'): # this is how you know it succeeded.
                 # execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
                 # final_analysis = execution_results[-1]['response']
@@ -998,7 +959,9 @@ def analyze_qrdata(structure_type: bool, add_exploration_step: bool,
 
 def step_evaluate_claim(experiment_result: Union[ExperimentResult, FailedExperimentResult], 
                         query: str,
-                        gold_hypothesis, **kwargs) -> str: 
+                        gold_hypothesis, 
+                        eval_all_samples: Optional[bool] = False,
+                        **kwargs) -> str: 
     print("At evaluation stage.") 
     if hasattr(experiment_result, 'answer'):
         predicted_answer = experiment_result.answer
@@ -1006,12 +969,70 @@ def step_evaluate_claim(experiment_result: Union[ExperimentResult, FailedExperim
         match_response = process_regular_prompt([], prompt)
         return match_response
     elif hasattr(experiment_result, 'final_answer'):
-        predicted_answer = experiment_result.final_answer
-        prompt = f"Consider the query: '{query}'. Then, Consider the following claim (C1):\n\n'{gold_hypothesis}'.\n\nThen, consider the analysis A1:\n\n'{predicted_answer}'\n\nDoes A1 support C1 (SUPP), partially support C1 (PRT_SUPP),  refute C1 (REFUTE), or not provide enough info (LACK_INFO)? Write your answer in the form of a json with two keys: label and rationale." 
-        match_response = process_regular_prompt([], prompt)
-        return match_response
+        if all([hasattr(x, 'failed_phase_i') for x in experiment_result.individual_runs]): # NOTE: we use hasattr because the isinstance is behaving weirdly.
+            ipdb.set_trace()
+        
+        if not eval_all_samples:
+            predicted_answer = _retrieve_sc_run_answer(experiment_result)
+            prompt = f"Consider the query: '{query}'. Then, Consider the following claim (C1):\n\n'{gold_hypothesis}'.\n\nThen, consider the analysis A1:\n\n'{predicted_answer}'\n\nDoes A1 support C1 (SUPP), partially support C1 (PRT_SUPP),  refute C1 (REFUTE), or not provide enough info (LACK_INFO)? Write your answer in the form of a json with two keys: label and rationale." 
+            match_response = process_regular_prompt([], prompt)
+            return match_response
+        elif eval_all_samples:
+            claims = []
+            completed_runs = [x for x in experiment_result.individual_runs] 
+            for run in completed_runs:
+                if hasattr(run, 'fail_type'):
+                    claims.append("The experiment failed, so the claim cannot be evaluated")
+                else:
+                    predicted_answer = run.answer
+                    prompt = f"Consider the query: '{query}'. Then, Consider the following claim (C1):\n\n'{gold_hypothesis}'.\n\nThen, consider the analysis A1:\n\n'{predicted_answer}'\n\nDoes A1 support C1 (SUPP), partially support C1 (PRT_SUPP),  refute C1 (REFUTE), or not provide enough info (LACK_INFO)? Write your answer in the form of a json with two keys: label and rationale." 
+                    claims.append(process_regular_prompt([], prompt))
+            return tuple(claims)
     elif hasattr(experiment_result, 'fail_type'):
         return "The experiment failed, so the claim cannot be evaluated."
+    elif hasattr(experiment_result, 'failed_runs'):
+        return "The experiment failed, so the claim cannot be evaluated."
+
+def complete_pass_db(dataset_path, query, 
+                     structure_type, generate_visual,
+                     add_exploration_step, self_consistency, 
+                     nl_workflow: Optional[str] = None, 
+                     library_str: Optional[str] = None,
+                     **kwargs):
+    hint_str = (" Consider using the following hint:\n\n" + f"{nl_workflow}\n\n") if nl_workflow else ""
+    if structure_type == 'dag':
+        exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
+            f"Now, how would you go about performing an analysis of the query '{query}' using a flowmason graph?" +\
+            hint_str +\
+            " In the final answer, please write down a scientific hypothesis in natural language" +\
+            " derived from the provided dataset, clearly stating the context of hypothesis (if any)" +\
+            " , variables chosen (if any) and relationship between those variables (if any). Include implementations" +\
+            " of any statistical significance tests (if applicable)." +\
+            (f"Consider using or adapting any of the following helper functions: {library_str}" if library_str else "")
+    elif structure_type == 'loose':
+        exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
+            f"Now, how would you go about performing an analysis of the query '{query}'?" +\
+            hint_str +\
+            " In the final answer, please write down a scientific hypothesis in natural language" +\
+            " derived from the provided dataset, clearly stating the context of hypothesis (if any)" +\
+            " , variables chosen (if any) and relationship between those variables (if any). Include implementations" +\
+            " of any statistical significance tests (if applicable)." +\
+            (f"Consider using or adapting any of the following helper functions: {library_str}" if library_str else "")
+    else:
+        raise ValueError("Unimplemented structure type.")
+
+    exploration_step = generate_exploration_prompt(dataset_path, query)
+    rev_second_prompt_template = lambda exec_result: f"The output of the previous code is:" +\
+        f"\n{exec_result}\n\nBased on this analysis output, what is your answer for the query '{query}'?" +\
+        f"Ground your answer in the context of the analysis (including any metrics and statistical significance tests)." +\
+        f"Keep your response short and to the point (1-3 sentences). Start your response with 'RESPONSE:'"
+    workflow = [
+                CodeRequestPrompt(exploration_step), 
+                SynthResultPrompt(exploration_passback, True), 
+                SynthResultPrompt(rev_second_prompt_template, False)
+                ]
+    return execute_pass_db(workflow, structure_type, "flowma_cache", library_str)
+
 # @click.command()
 # @click.argument('dataset_path')
 # @click.argument('query')
@@ -1026,6 +1047,8 @@ def analyze_db_dataset(dataset_path: str, query: str,
                     generate_visual: bool, 
                     add_exploration_step: bool, 
                     self_consistency: bool,
+                    generate_sc_answer: Optional[str] = True,
+                    library_str: Optional[str] = None,
                     **kwargs) -> Union[ExperimentResult, FailedExperimentResult, SelfConsistencyExperimentResult]:
     # qr_dataset =  
     # the workflow is a list of the form [str, Function[str] -> str, Function[str] -> str, ...]
@@ -1035,27 +1058,74 @@ def analyze_db_dataset(dataset_path: str, query: str,
     # if add_exploration_step:
     #     first_message = construct_first_message(dataset_path, query, structure_type, past_traces)
     if not self_consistency:
-        exploration_step = generate_exploration_prompt(dataset_path, query)
-        exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
-            f"Now, how would you go about performing an analysis of the query '{query}' using a flowmason graph?" +\
-            " In the final answer, please write down a scientific hypothesis in natural language" +\
-            " derived from the provided dataset, clearly stating the context of hypothesis (if any)" +\
-            " , variables chosen (if any) and relationship between those variables (if any). Include implementations" +\
-            " of any statistical significance tests (if applicable)." 
-        rev_second_prompt_template = lambda exec_result: f"The output of the previous code is:" +\
-            f"\n{exec_result}\n\nBased on this analysis output, what is your answer for the query '{query}'?" +\
-            f"Ground your answer in the context of the analysis (including any metrics and statistical significance tests)." +\
-            f"Keep your response short and to the point (1-3 sentences). Start your response with 'RESPONSE:'"
-        workflow = [
-                    CodeRequestPrompt(exploration_step), 
-                    SynthResultPrompt(exploration_passback, True), 
-                    SynthResultPrompt(rev_second_prompt_template, False)
-                    ]
-        return complete_pass_db(workflow, structure_type, "flowma_cache")
+        return complete_pass_db(dataset_path, query, structure_type, generate_visual, add_exploration_step, self_consistency, library_str=library_str, **kwargs)
     else:
-        first_message = construct_first_message(dataset_path, query, structure_type)
-        rev_second_prompt_template = lambda exec_result: f"The output of the previous code is:\n{exec_result}\n\nBased on this output, what is your scientific hypothesis?"
-        workflow = [CodeRequestPrompt(first_message), SynthResultPrompt(rev_second_prompt_template, False)] 
+        final_analyses = []
+        sc_runs = []
+        SELF_CONSISTENCY_ITERS = 5
+        for _ in range(SELF_CONSISTENCY_ITERS):
+            logger.info(f"Starting self-consistency iteration {_}.")
+            experiment_result = complete_pass_db(dataset_path, query, structure_type, generate_visual, add_exploration_step, self_consistency, library_str=library_str, **kwargs)
+            if hasattr(experiment_result, 'workflow'): # this is how you know it succeeded.
+                # execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
+                # final_analysis = execution_results[-1]['response']
+                analysis_representation = represent_analysis(experiment_result.workflow)
+                # answer_dict = _extract_json(execution_results[-1]['response'])
+                final_analyses.append(analysis_representation)
+            sc_runs.append(experiment_result)
+            logger.info(f"Completing self-consistency iteration {_}.")
+        assert len(sc_runs) == SELF_CONSISTENCY_ITERS
+        if not len(final_analyses) >= 1  and len(final_analyses) <= SELF_CONSISTENCY_ITERS:
+            logger.error(f"No successful runs with self-consistency after {SELF_CONSISTENCY_ITERS} attempts.")
+            return FailedSelfConsistencyExperimentResult(sc_runs)
+        self_consistency_prompt = generate_self_consistency_prompt(final_analyses)
+        if generate_sc_answer:
+            try:
+                sc_response = process_regular_prompt([], self_consistency_prompt)
+            except openai.BadRequestError as e:
+                # TODO: what should we do when the SC prompt is too long..?
+                print(f"Error occurred: {e}.")
+                ipdb.set_trace()
+                # assert that the error is about exceeding context length.
+                # assert "maximum context length" in e.message
+                # sc_response = process_regular_prompt([], generate_self_consistency_prompt(final_analyses[:-1]))
+        else:
+            return SelfConsistencyExperimentResult(tuple(sc_runs), EMPTY_SC_ANSWER)
+    # TODO: we don't account for {structure_type} in the function below.
+    # if structure_type == 'dag':
+    #     exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
+    #         f"Now, how would you go about performing an analysis of the query '{query}' using a flowmason graph?" +\
+    #         " In the final answer, please write down a scientific hypothesis in natural language" +\
+    #         " derived from the provided dataset, clearly stating the context of hypothesis (if any)" +\
+    #         " , variables chosen (if any) and relationship between those variables (if any). Include implementations" +\
+    #         " of any statistical significance tests (if applicable)." 
+    # elif structure_type == 'loose':
+    #     exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
+    #         f"Now, how would you go about performing an analysis of the query '{query}'?" +\
+    #         " In the final answer, please write down a scientific hypothesis in natural language" +\
+    #         " derived from the provided dataset, clearly stating the context of hypothesis (if any)" +\
+    #         " , variables chosen (if any) and relationship between those variables (if any). Include implementations" +\
+    #         " of any statistical significance tests (if applicable)."
+    # else:
+    #     raise ValueError("Unimplemented structure type.")
+
+    # if not self_consistency:
+    #     exploration_step = generate_exploration_prompt(dataset_path, query)
+    #     rev_second_prompt_template = lambda exec_result: f"The output of the previous code is:" +\
+    #         f"\n{exec_result}\n\nBased on this analysis output, what is your answer for the query '{query}'?" +\
+    #         f"Ground your answer in the context of the analysis (including any metrics and statistical significance tests)." +\
+    #         f"Keep your response short and to the point (1-3 sentences). Start your response with 'RESPONSE:'"
+    #     workflow = [
+    #                 CodeRequestPrompt(exploration_step), 
+    #                 SynthResultPrompt(exploration_passback, True), 
+    #                 SynthResultPrompt(rev_second_prompt_template, False)
+    #                 ]
+    #     return complete_pass_db(workflow, structure_type, "flowma_cache")
+    # else:
+    #     raise NotImplementedError("Self-consistency not implemented for database datasets.")
+    #     first_message = construct_first_message(dataset_path, query, structure_type)
+    #     rev_second_prompt_template = lambda exec_result: f"The output of the previous code is:\n{exec_result}\n\nBased on this output, what is your scientific hypothesis?"
+    #     workflow = [CodeRequestPrompt(first_message), SynthResultPrompt(rev_second_prompt_template, False)] 
 
     if not self_consistency:
         execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
@@ -1133,24 +1203,15 @@ def get_qr_data_split(use_test: bool,
 def _retrieve_individual_run_answer(workflow_results, index):
     return workflow_results[index].answer
 
-def _retrieve_sc_run_answer(sc_results, index):
-    sc_result = sc_results[index]
-    agent_response = sc_result.final_answer['agent_response']
+def _retrieve_sc_run_answer(sc_results):
+    agent_response = sc_results.final_answer['agent_response']
     try:
         # get the first integer in the response
         preferred_answer_i = int(re.search(r'\d+', agent_response).group())
     except ValueError:
         print(f"Error occurred: {agent_response}.")
         ipdb.set_trace()
-    if len(sc_result.individual_runs) == 10:
-        # set individual runs to every even number
-        individual_runs = sc_result.individual_runs[::2]
-        assert len(individual_runs) == 5
-    elif len(sc_result.individual_runs) == 5:
-        individual_runs = sc_result.individual_runs
-    else:
-        raise ValueError("Unimplemented number of individual runs.")
-    successful_runs = list(filter(lambda x: hasattr(x, 'answer'), sc_result.individual_runs))
+    successful_runs = list(filter(lambda x: hasattr(x, 'answer'), sc_results.individual_runs))
     prediction = successful_runs[preferred_answer_i].answer
     return prediction
 
@@ -1302,6 +1363,91 @@ def get_db_datasplit(use_test: bool) -> List[Tuple[str, str, str]]: # metadata p
     query_info = list(filter(lambda x: not x[0] == "immigration_offshoring_effect_on_employment", query_info))
     return query_info
 
+def construct_db_dataset_frame(path: str, 
+                               answer_key_path: str) -> pl.DataFrame:
+    # read all the metadata files 
+    # each metadata file has 1 workflow and 1 or more queries
+    # each query has a question, hypothesis, qid, and answer
+    # return a dataframe with the columns: project_name, metadata_version, query, qid, answer/hypothesis, and workflow
+    answer_key_frame = pl.read_csv(answer_key_path)
+    rows = []
+    project_name = os.path.basename(path)
+    is_test = True
+    for fname in filter(lambda x: x.endswith('json'), os.listdir(path)):
+        with open(f"{path}/{fname}", 'r') as file:
+            try:
+                metadata = json.load(file)
+            except json.JSONDecodeError as e:
+                print(f"Error occurred: {fname}.")
+                raise e
+            assert len(metadata['queries']) == 1
+            for query_dict in metadata['queries'][0]:
+                qid = query_dict['qid']
+                query = query_dict['question']
+                # hypothesis = query_dict['true_hypothesis']
+                workflow = metadata['workflow']
+                metadata_id = int(fname.split(".")[0].split("_")[1])
+                metadata_path = f"{path}/{fname}"
+                rows.append([project_name, metadata_id, query, qid, workflow, metadata_path, is_test])
+                is_test = not is_test # flip the value, so it's 50/50 train/test
+    frame = pl.DataFrame(rows, schema=['dataset', 
+                                       'metadataid', 
+                                       'query', 
+                                       'query_id', 
+                                       'workflow', 
+                                       'metadata_path', 
+                                       'is_test'])
+    # create a column analysis id which is just dataset  metadataid and query_id joined by underscores
+    frame = frame.with_columns([
+        pl.concat_str(
+            [
+                frame['dataset'],
+                frame['metadataid'],
+                frame['query_id']
+            ], 
+            separator = "_"
+        ).alias('analysis_id')
+    ])
+    frame = frame.join(answer_key_frame, on=['dataset', 'metadataid', 'query_id'])
+    return frame
+
+def step_provide_supervision_on_incorrect(experiment_result, evaluation, 
+                                          dataset_path: str, query: str, 
+                                          structure_type: str, 
+                                          generate_visual: bool, 
+                                          add_exploration_step: bool, 
+                                          self_consistency: bool,
+                                          workflow: str,
+                                          **kwargs):
+    if evaluation == "The experiment failed, so the claim cannot be evaluated.":
+        # workflow_hint_result = complete_pass_db(
+        #     dataset_path, query, 
+        #     structure_type, generate_visual, 
+        #     add_exploration_step, self_consistency,
+        #     nl_workflow=workflow
+        # )
+        workflow_hint_result = analyze_db_dataset(dataset_path, query,
+                                                    structure_type, generate_visual,
+                                                    add_exploration_step, self_consistency,
+                                                    nl_workflow=workflow)
+        return workflow_hint_result
+    else:
+        response = eval(evaluation['agent_response'])['label']
+        if response == "SUPP" or response == "PRT_SUPP":
+            return experiment_result
+        else:
+            # workflow_hint_result = complete_pass_db(
+            #     dataset_path, query, 
+            #     structure_type, generate_visual, 
+            #     add_exploration_step, self_consistency,
+            #     nl_workflow=workflow
+            # )
+            workflow_hint_result = analyze_db_dataset(dataset_path, query,
+                                                    structure_type, generate_visual,
+                                                    add_exploration_step, self_consistency,
+                                                    nl_workflow=workflow)
+            return workflow_hint_result
+
 @click.command()
 @click.option('--structure-type',
               type=click.Choice(['loose', 'functions', 'dag'], case_sensitive=False))
@@ -1366,11 +1512,118 @@ def compute_metrics_db(experiment_result_claims, **kwargs):
     print(pl.Series(evaluation_labels).value_counts())
 
     # print all of the analyses that were refuted
-    for i in range(len(experiment_result_claims)):
-        if evaluation_labels[i] == "REFUTE":
-            print(f"=====Refuted analysis {i}=====")
-            print(f"=====Claim=====")
-            print(experiment_result_claims[i][1])
+    # for i in range(len(experiment_result_claims)):
+    #     if evaluation_labels[i] == "REFUTE":
+    #         print(f"=====Refuted analysis {i}=====")
+    #         print(f"=====Claim=====")
+    #         print(experiment_result_claims[i][1])
+    # # print all of the analyses that were supported
+    # for i in range(len(experiment_result_claims)):
+    #     if evaluation_labels[i] == "SUPP":
+    #         print(f"=====Supported analysis {i}=====")
+    #         print(f"=====Claim=====")
+    #         print(experiment_result_claims[i][1])
+
+    # # print all of the analyses that were partially supported
+    # for i in range(len(experiment_result_claims)):
+    #     if evaluation_labels[i] == "PRT_SUPP":
+    #         print(f"=====Partially supported analysis {i}=====")
+    #         print(f"=====Claim=====")
+    #         print(experiment_result_claims[i][1])
+    
+    # # print all of the analyses that lacked information
+    # for i in range(len(experiment_result_claims)):
+    #     if evaluation_labels[i] == "LACK_INFO":
+    #         print(f"=====Analysis that lacked information {i}=====")
+    #         # print the query
+    #         print(f"=====Query=====")
+    #         print(experiment_result_claims[i][0])
+    #         print(f"=====Claim=====")
+    #         print(experiment_result_claims[i][1])
+
+def step_combine_analysis_with_evaluation(experiment_result: ExperimentResult, 
+                                         supervised_result: ExperimentResult,
+                                         claim_evaluation: Union[str, Dict[str, str]],
+                                         revised_evaluation: Union[str, Dict[str, str]],
+                                         **kwargs) -> List[Tuple[ExperimentResult, str]]:
+    if claim_evaluation == "The experiment failed, so the claim cannot be evaluated.":
+        original_eval_label = "FAIL"
+    else:
+        original_eval_label = eval(repair_json(claim_evaluation['agent_response']))['label']
+
+    if revised_evaluation == "The experiment failed, so the claim cannot be evaluated.":
+        revised_eval_label = "FAIL"
+    else:
+        revised_eval_label = eval(repair_json(revised_evaluation['agent_response']))['label']
+    
+    if original_eval_label == "SUPP" or original_eval_label == "PRT_SUPP":
+        return (experiment_result, claim_evaluation)
+    elif revised_eval_label == "SUPP" or revised_eval_label == "PRT_SUPP":
+        return (supervised_result, revised_evaluation)
+    else:
+        return (supervised_result, revised_evaluation)
+    
+def step_produce_contrastive_pairs(experiment_result: SelfConsistencyExperimentResult, 
+                                   claims: Tuple,
+                                   **kwargs) -> List[Tuple[ExperimentResult, ExperimentResult]]:
+
+    successful_runs = []
+    reason_fail_runs = []
+    execution_fail_runs = []
+    for i in range(len(experiment_result.individual_runs)):
+        run_result = experiment_result.individual_runs[i]
+        claim = claims[i]
+        if not (isinstance(claim, dict)) and claim.startswith("The experiment failed, so the claim cannot be evaluated"):
+            try:
+                execution_fail_runs.append((run_result, DB_ANALYSIS_FAILED, "FAIL", run_result.tracebacks[-1]))
+            except IndexError as e:
+                logger.error("Error on retrieving the last traceback for a failed run.")
+                ipdb.set_trace()
+            continue
+        label = eval(repair_json(claim['agent_response']))['label']
+        rationale = eval(repair_json(claim['agent_response']))['rationale']
+        analysis_output = run_result.workflow[-2]['execution_output']
+        if label == "SUPP" or label == "PRT_SUPP":
+            successful_runs.append((run_result, rationale, label, analysis_output))
+        else:
+            reason_fail_runs.append((run_result, rationale, label, analysis_output))
+    if len(successful_runs) == 0: 
+        return tuple([])
+    if any([run[2] == "SUPP" for run in successful_runs]):
+        successful_runs = list(filter(lambda x: x[2] == "SUPP", successful_runs)) 
+    succ_fail_pairs = product(successful_runs, reason_fail_runs)
+    contrast_examples = []
+    for pair in succ_fail_pairs:
+        succ_run, fail_run = pair
+        if fail_run[2] == "FAIL":
+            incorrect_program = fail_run[0].implementation_attempts[-1]
+        else:
+            incorrect_program = extract_code(fail_run[0].workflow[-2]['response'])
+        correct_program = extract_code(succ_run[0].workflow[-2]['response'])
+        correct_answer = succ_run[0].answer
+        correct_rationale = succ_run[1]
+        correct_output = succ_run[3]
+        incorrect_rationale = fail_run[1] 
+        incorrect_answer = fail_run[0].answer
+        incorrect_output = fail_run[3]
+        contrast_example = ContrastiveProgramExample(
+            correct_program,
+            correct_output,
+            correct_answer, 
+            correct_rationale,
+            incorrect_program,
+            incorrect_output,
+            incorrect_answer,
+            incorrect_rationale, 
+            incorrect_rationale == DB_ANALYSIS_FAILED
+        )
+        contrast_examples.append(contrast_example)
+    return tuple(contrast_examples)
+
+def step_combine_analysis_with_evaluation_test(experiment_result: Union[ExperimentResult, FailedExperimentResult], 
+                                               claim_evaluation: Union[str, Dict[str,str]], 
+                                               **kwargs):
+    return (experiment_result, claim_evaluation)
 
 @click.command()
 @click.option('--structure-type',
@@ -1408,7 +1661,7 @@ def execute_discovery_bench_map_dict(structure_type: bool,
     # TODO: need to implement the evaluation prompt.
     mr_dict['step_evaluate_claim'] = SingletonStep(step_evaluate_claim, {
         "experiment_result": 'step_complete_datapoint',
-        'version': '002'
+        'version': '004'
     })
     mr_dict['step_combine_analysis_with_evaluation'] = SingletonStep(combine_analysis_with_evaluation, {
         "experiment_result": 'step_complete_datapoint',
@@ -1432,16 +1685,102 @@ def execute_discovery_bench_map_dict(structure_type: bool,
         "experiment_result_claims": 'map_step_train',
         "version": "001", 
     })
-    conduct(MY_CACHE_DIR, discovery_bench_datapoint_dict, MY_LOG_DIR)
+    output_dict = conduct(MY_CACHE_DIR, discovery_bench_datapoint_dict, MY_LOG_DIR)
+    ipdb.set_trace()
+    # load the library str
+
     # discovery_bench_datapoint_dict['step_complete'] = SingletonStep()
 
+@click.command()
+@click.argument('dataset_path')
+@click.option('--structure-type',
+                type=click.Choice(['loose', 'functions', 'dag'], case_sensitive=False))
+@click.option('--add_exploration_step', is_flag=True, help='Have the agent first explore the univariate distributions of the dataset.')
+def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
+    frame = construct_db_dataset_frame(dataset_path, "db_unsplit/answer_key_real.csv")
+    train_frame = frame.filter(pl.col('is_test')==False)
+    test_frame = frame.filter(pl.col('is_test')==True)
 
+    ll_steps_dict = OrderedDict()
+
+    mapreduce_dict = OrderedDict()
+    mapreduce_dict['step_sample_analyses'] = SingletonStep(analyze_db_dataset, {  # generate N samples.
+        "version": "001",
+        'self_consistency': True, 
+        'generate_sc_answer': False
+    })
+    mapreduce_dict['step_evaluate_samples'] = SingletonStep(step_evaluate_claim, { # evaluate each sample for whether it is correct or not.  N entailment labels 
+        "experiment_result": 'step_sample_analyses',
+        'eval_all_samples': True,
+        'version': '001'
+    })
+    mapreduce_dict['step_contrastive_pairing'] = SingletonStep(step_produce_contrastive_pairs, { # cartesian product of correct and incorrect samples
+        'experiment_result': 'step_sample_analyses',
+        'claims': 'step_evaluate_samples', 
+        'version': '001'
+    })
+    mapreduce_dict['step_generate_leap_response'] = SingletonStep(step_write_leap_helper, { # assuming there's N-1 contrastive pairs, we generate N-1 subroutines/abstracted functions.
+        'contrastive_pairs': 'step_contrastive_pairing',
+        'version': '001'
+    })
+    mapreduce_dict['step_extract_leap_helper'] = SingletonStep(step_extract_helper, {
+        'leap_helpers': 'step_generate_leap_response',
+        'version': '001'
+    })
+    mapreduce_dict['step_generate_standard_helper'] = SingletonStep(step_write_standard_abstraction, {
+        'contrastive_pairs': 'step_contrastive_pairing',
+        'version': '001'
+    })
+    mapreduce_dict['step_extract_standard_helper'] = SingletonStep(step_extract_helper, {
+        'leap_helpers': 'step_generate_standard_helper',
+        'version': '001'
+    })
+    mapreduce_dict['step_prettyprint_helpers'] = SingletonStep(step_prettyprint_helper, {
+        'contrastive_pairs': 'step_contrastive_pairing',
+        'leap_response': 'step_generate_leap_response',
+        'leap_helper': 'step_extract_leap_helper',
+        'standard_helper': 'step_extract_standard_helper',
+        'dataset_path': dataset_path,
+        'version': '001'
+    })
+    ll_steps_dict['map_reduce_contrastive_program_generation'] = MapReduceStep(mapreduce_dict, {
+        "dataset_path": train_frame['metadata_path'].to_list(),
+        "query": train_frame['query'].to_list(),
+        'gold_hypothesis': train_frame['gold_hypo'].to_list(),
+        'analysis_id': train_frame['analysis_id'].to_list(),
+        'workflow': train_frame['workflow'].to_list()
+    },
+    {
+        'self_consistency': False, # NOTE: this is overriden for when we provide workflows. 
+        'structure_type': structure_type,
+        'add_exploration_step': add_exploration_step, 
+        'generate_visual': False,
+        'version': '001' 
+    }, list, 'analysis_id', [])
+    run_metadata = conduct(LEAP_CACHE_DIR, ll_steps_dict, MY_LOG_DIR)
+    leap_helpers = load_artifact_with_step_name(run_metadata, 'map_reduce_contrastive_program_generation')
+    leap_helpers = [leap_helper_tup for leap_helper_tup in leap_helpers if len(leap_helper_tup) > 0]
+    i = 0
+    for helper_tup in leap_helpers:
+        print(f"=====Helpers for {i}=====")
+        print(f"There are {len(helper_tup)} helpers.")
+        print(helper_tup[0])
+        i += 1
+    ipdb.set_trace()
+    # 1. What is the main reason behind why one sample is incorrect but the other incorrect?
+    # 2. Write a helper function that will help follow the reasoning of the correct program and thus avoid the incorrect program.
+
+    # mapreduce_dict['']
+
+    
 @click.group()
 def main():
     pass
 
 main.add_command(execute_qrdata_map_dict)
 main.add_command(execute_discovery_bench_map_dict)
+main.add_command(execute_library_learning)
+main.add_command(execute_leap)
 
 if __name__ == '__main__':
     main()
