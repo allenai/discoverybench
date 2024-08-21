@@ -2,7 +2,7 @@ import traceback
 import polars as pl
 import openai
 import pandas as pd
-from typing import Union, Tuple
+from typing import Union, Tuple, Iterable
 from itertools import product
 from dataclasses import dataclass
 import random
@@ -25,7 +25,8 @@ import os
 import dill
 
 from packages.library_learn import create_ll_prompt, step_write_leap_helper,\
-    step_extract_helper, step_prettyprint_helper, step_write_standard_abstraction
+    step_extract_helper, step_prettyprint_helper, step_write_standard_abstraction,\
+    step_describe_incorrect_programs, step_collect_abstractions, step_collect_programs
 from packages.constants import SCRATCH_DIR, MY_CACHE_DIR, MY_LOG_DIR, LEAP_CACHE_DIR, DB_ANALYSIS_FAILED, EMPTY_SC_ANSWER
 from packages.agent_dataclasses import ExperimentResult, FailedExperimentResult, CodeRequestPrompt, SynthResultPrompt, CodeExtractionException, CodeRetryException, LongPromptException, SelfConsistencyExperimentResult, FailedSelfConsistencyExperimentResult, ContrastiveProgramExample
 from packages.json_repair import repair_json
@@ -957,12 +958,29 @@ def analyze_qrdata(structure_type: bool, add_exploration_step: bool,
         ipdb.set_trace()
         return SelfConsistencyExperimentResult(tuple(sc_runs), sc_response)
 
+def step_evaluate_resampled_analysis(resampled_result: Union[ExperimentResult, FailedExperimentResult, int], 
+                                     query: str, 
+                                     gold_hypothesis: str,
+                                     eval_all_samples: Optional[bool] = False,
+                                     **kwargs) -> str:
+    if resampled_result == -1:
+        return "Not a resampled result."
+    else:
+        evaluation = step_evaluate_claim(
+            resampled_result,
+            query,
+            gold_hypothesis,
+            eval_all_samples,
+        )
+        return evaluation
+
 def step_evaluate_claim(experiment_result: Union[ExperimentResult, FailedExperimentResult], 
                         query: str,
                         gold_hypothesis, 
                         eval_all_samples: Optional[bool] = False,
-                        **kwargs) -> str: 
+                        **kwargs) -> Union[str, Iterable[str]]: 
     print("At evaluation stage.") 
+
     if hasattr(experiment_result, 'answer'):
         predicted_answer = experiment_result.answer
         prompt = f"Consider the query: '{query}'. Then, Consider the following claim (C1):\n\n'{gold_hypothesis}'.\n\nThen, consider the analysis A1:\n\n'{predicted_answer}'\n\nDoes A1 support C1 (SUPP), partially support C1 (PRT_SUPP),  refute C1 (REFUTE), or not provide enough info (LACK_INFO)? Write your answer in the form of a json with two keys: label and rationale." 
@@ -997,12 +1015,20 @@ def complete_pass_db(dataset_path, query,
                      structure_type, generate_visual,
                      add_exploration_step, self_consistency, 
                      nl_workflow: Optional[str] = None, 
+                     failure_memories: Optional[Iterable[str]] = None,
                      library_str: Optional[str] = None,
                      **kwargs):
-    hint_str = (" Consider using the following hint:\n\n" + f"{nl_workflow}\n\n") if nl_workflow else ""
+    if nl_workflow:
+        assert failure_memories is not None, ipdb.set_trace()
+        hint_str = (" Consider using the following hint instead:\n\n" + f"{nl_workflow}\n\n") if nl_workflow else ""
+        failure_memories_str = " Previous attempts at answering this query failed. Here are the previous attempts:\n" + "\n".join([f"{i}. {memory}" for i, memory in enumerate(failure_memories)]) if failure_memories else ""
+    else:
+        hint_str = ""
+        failure_memories_str = ""
     if structure_type == 'dag':
         exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
             f"Now, how would you go about performing an analysis of the query '{query}' using a flowmason graph?" +\
+            failure_memories_str +\
             hint_str +\
             " In the final answer, please write down a scientific hypothesis in natural language" +\
             " derived from the provided dataset, clearly stating the context of hypothesis (if any)" +\
@@ -1010,14 +1036,17 @@ def complete_pass_db(dataset_path, query,
             " of any statistical significance tests (if applicable)." +\
             (f"Consider using or adapting any of the following helper functions: {library_str}" if library_str else "")
     elif structure_type == 'loose':
+        # TODO: this is where you can consider adding the memory of the previous (failed) implementations
         exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
             f"Now, how would you go about performing an analysis of the query '{query}'?" +\
+            failure_memories_str +\
             hint_str +\
             " In the final answer, please write down a scientific hypothesis in natural language" +\
             " derived from the provided dataset, clearly stating the context of hypothesis (if any)" +\
             " , variables chosen (if any) and relationship between those variables (if any). Include implementations" +\
             " of any statistical significance tests (if applicable)." +\
-            (f"Consider using or adapting any of the following helper functions: {library_str}" if library_str else "")
+            (f"Consider using or adapting any of the following helper functions: {library_str}" if library_str else "") +\
+            f"to answer the query '{query}"
     else:
         raise ValueError("Unimplemented structure type.")
 
@@ -1411,42 +1440,26 @@ def construct_db_dataset_frame(path: str,
     frame = frame.join(answer_key_frame, on=['dataset', 'metadataid', 'query_id'])
     return frame
 
-def step_provide_supervision_on_incorrect(experiment_result, evaluation, 
+def step_provide_supervision_on_incorrect(
                                           dataset_path: str, query: str, 
+                                          failure_memories: Iterable[str],
                                           structure_type: str, 
                                           generate_visual: bool, 
                                           add_exploration_step: bool, 
                                           self_consistency: bool,
                                           workflow: str,
+                                          generate_sc_answer: bool,
                                           **kwargs):
-    if evaluation == "The experiment failed, so the claim cannot be evaluated.":
-        # workflow_hint_result = complete_pass_db(
-        #     dataset_path, query, 
-        #     structure_type, generate_visual, 
-        #     add_exploration_step, self_consistency,
-        #     nl_workflow=workflow
-        # )
-        workflow_hint_result = analyze_db_dataset(dataset_path, query,
-                                                    structure_type, generate_visual,
-                                                    add_exploration_step, self_consistency,
-                                                    nl_workflow=workflow)
-        return workflow_hint_result
+    if len(failure_memories) == 0:
+        return -1 
     else:
-        response = eval(evaluation['agent_response'])['label']
-        if response == "SUPP" or response == "PRT_SUPP":
-            return experiment_result
-        else:
-            # workflow_hint_result = complete_pass_db(
-            #     dataset_path, query, 
-            #     structure_type, generate_visual, 
-            #     add_exploration_step, self_consistency,
-            #     nl_workflow=workflow
-            # )
-            workflow_hint_result = analyze_db_dataset(dataset_path, query,
-                                                    structure_type, generate_visual,
-                                                    add_exploration_step, self_consistency,
-                                                    nl_workflow=workflow)
-            return workflow_hint_result
+        workflow_hint_result = analyze_db_dataset(dataset_path, query,
+                                                structure_type, generate_visual,
+                                                add_exploration_step, self_consistency,
+                                                generate_sc_answer=generate_sc_answer,
+                                                nl_workflow=workflow, 
+                                                failure_memories=failure_memories)
+        return workflow_hint_result
 
 @click.command()
 @click.option('--structure-type',
@@ -1714,35 +1727,50 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
         'eval_all_samples': True,
         'version': '001'
     })
-    mapreduce_dict['step_contrastive_pairing'] = SingletonStep(step_produce_contrastive_pairs, { # cartesian product of correct and incorrect samples
-        'experiment_result': 'step_sample_analyses',
-        'claims': 'step_evaluate_samples', 
+    mapreduce_dict['step_generate_abstraction_responses'] = SingletonStep(step_write_standard_abstraction, { 
+        'analysis_samples': 'step_sample_analyses',
+        'sample_labels': 'step_evaluate_samples',
         'version': '001'
     })
-    mapreduce_dict['step_generate_leap_response'] = SingletonStep(step_write_leap_helper, { # assuming there's N-1 contrastive pairs, we generate N-1 subroutines/abstracted functions.
-        'contrastive_pairs': 'step_contrastive_pairing',
+    # mapreduce_dict['step_generate_abstracted_programs'] = SingletonStep(step_generate_abstracted_programs, { # TODO: need to postprocess so that they are ready to be added to the library
+
+    # })
+    mapreduce_dict['step_generate_program_summaries_for_incorrect_samples'] = SingletonStep(step_describe_incorrect_programs, {
+        'analysis_samples': 'step_sample_analyses',
+        'sample_labels': 'step_evaluate_samples',
+        'version': '006'
+    })
+    # TODO: only for samples where all the questions were incorrect.
+    mapreduce_dict['step_resample_analyses_with_memory'] = SingletonStep(step_provide_supervision_on_incorrect, { 
+        'failure_memories': 'step_generate_program_summaries_for_incorrect_samples',
+        'self_consistency': True, 
+        'generate_sc_answer': False, 
         'version': '001'
     })
-    mapreduce_dict['step_extract_leap_helper'] = SingletonStep(step_extract_helper, {
-        'leap_helpers': 'step_generate_leap_response',
+    mapreduce_dict['step_evaluate_resampled_analyses'] = SingletonStep(step_evaluate_resampled_analysis, { # TODO: only for samples where all the questions were incorrect.
+        'resampled_result': 'step_resample_analyses_with_memory',
+        'eval_all_samples': True,
+        'version': '002'
+    })
+    mapreduce_dict['step_generate_abstractions_for_resamples'] = SingletonStep(step_write_standard_abstraction, {
+        'analysis_samples': 'step_resample_analyses_with_memory',
+        'sample_labels': 'step_evaluate_resampled_analyses',
         'version': '001'
     })
-    mapreduce_dict['step_generate_standard_helper'] = SingletonStep(step_write_standard_abstraction, {
-        'contrastive_pairs': 'step_contrastive_pairing',
-        'version': '001'
+    mapreduce_dict['step_collect_abstractions'] = SingletonStep(step_collect_abstractions, {
+        'first_try_abstractions': 'step_generate_abstraction_responses',
+        'resampled_abstractions': 'step_generate_abstractions_for_resamples',
+        'version': '003'
     })
-    mapreduce_dict['step_extract_standard_helper'] = SingletonStep(step_extract_helper, {
-        'leap_helpers': 'step_generate_standard_helper',
-        'version': '001'
-    })
-    mapreduce_dict['step_prettyprint_helpers'] = SingletonStep(step_prettyprint_helper, {
-        'contrastive_pairs': 'step_contrastive_pairing',
-        'leap_response': 'step_generate_leap_response',
-        'leap_helper': 'step_extract_leap_helper',
-        'standard_helper': 'step_extract_standard_helper',
-        'dataset_path': dataset_path,
-        'version': '001'
-    })
+    # generate helpers off of the corrected resampled analyses. 
+    # mapreduce_dict['step_prettyprint_helpers'] = SingletonStep(step_prettyprint_helper, {
+    #     'contrastive_pairs': 'step_contrastive_pairing',
+    #     'leap_response': 'step_generate_leap_response',
+    #     'leap_helper': 'step_extract_leap_helper',
+    #     'standard_helper': 'step_extract_standard_helper',
+    #     'dataset_path': dataset_path,
+    #     'version': '001'
+    # })
     ll_steps_dict['map_reduce_contrastive_program_generation'] = MapReduceStep(mapreduce_dict, {
         "dataset_path": train_frame['metadata_path'].to_list(),
         "query": train_frame['query'].to_list(),
@@ -1757,21 +1785,75 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
         'generate_visual': False,
         'version': '001' 
     }, list, 'analysis_id', [])
+    ll_steps_dict['collect_programs'] = SingletonStep(step_collect_programs, {
+        'all_programs': 'map_reduce_contrastive_program_generation',
+        'version': '007'
+    })
+    evaluation_mapreduce_dict = OrderedDict()
+    evaluation_mapreduce_dict['step_complete_pass_w_library'] = SingletonStep(analyze_db_dataset, { 
+        "version": "006",
+        'library_str': 'collect_programs'
+    })
+    evaluation_mapreduce_dict['step_evaluate_analysis_w_library'] = SingletonStep(step_evaluate_claim, {
+        "experiment_result": 'step_complete_pass_w_library',
+        'version': '001'
+    })
+    evaluation_mapreduce_dict['step_consolidate_results_w_library'] = SingletonStep(step_combine_analysis_with_evaluation_test, {
+        'experiment_result': 'step_complete_pass_w_library',
+        'claim_evaluation': 'step_evaluate_analysis_w_library',
+        'version': '001'
+    })
+    # ll_steps_dict['map_reduce_test_w_library'] = MapReduceStep(evaluation_mapreduce_dict, 
+    #     {
+    #         "query": test_frame['query'].to_list(),
+    #         'analysis_id': test_frame['analysis_id'].to_list(), 
+    #         "dataset_path": test_frame['metadata_path'].to_list(),
+    #         'gold_hypothesis': test_frame['gold_hypo'].to_list()
+    #     },
+    #     {
+    #         'self_consistency': False,
+    #         'structure_type': structure_type,
+    #         'add_exploration_step': add_exploration_step, 
+    #         'generate_visual': False,
+    #         'version': '002'
+    #     },  list, 'analysis_id', []
+    # )
+
+    evaluation_no_library_dict = OrderedDict()
+    evaluation_no_library_dict['step_complete_pass_no_library'] = SingletonStep(analyze_db_dataset, {
+        'version': '002',
+    })
+    evaluation_no_library_dict['step_evaluate_analysis_no_library'] = SingletonStep(step_evaluate_claim, {
+        "experiment_result": 'step_complete_pass_no_library',
+        'version': '001'
+    })
+    evaluation_no_library_dict['step_consolidate_results_no_library'] = SingletonStep(step_combine_analysis_with_evaluation_test, {
+        'experiment_result': 'step_complete_pass_no_library',
+        'claim_evaluation': 'step_evaluate_analysis_no_library',
+        'version': '001'
+    })
+    # ll_steps_dict['map_reduce_test_no_library'] = MapReduceStep(evaluation_no_library_dict,
+    #     {
+    #         "query": test_frame['query'].to_list(),
+    #         'analysis_id': test_frame['analysis_id'].to_list(), 
+    #         "dataset_path": test_frame['metadata_path'].to_list(),
+    #         'gold_hypothesis': test_frame['gold_hypo'].to_list()
+    #     },
+    #     {
+    #         'self_consistency': False,
+    #         'structure_type': structure_type,
+    #         'add_exploration_step': add_exploration_step, 
+    #         'generate_visual': False,
+    #         'version': '002'
+    #     },  list, 'analysis_id', []
+    # )
     run_metadata = conduct(LEAP_CACHE_DIR, ll_steps_dict, MY_LOG_DIR)
-    leap_helpers = load_artifact_with_step_name(run_metadata, 'map_reduce_contrastive_program_generation')
-    leap_helpers = [leap_helper_tup for leap_helper_tup in leap_helpers if len(leap_helper_tup) > 0]
-    i = 0
-    for helper_tup in leap_helpers:
-        print(f"=====Helpers for {i}=====")
-        print(f"There are {len(helper_tup)} helpers.")
-        print(helper_tup[0])
-        i += 1
+    library_str = load_artifact_with_step_name(run_metadata, 'collect_programs')
+    incorrect_program_summaries = load_artifact_with_step_name(run_metadata, 'map_reduce_test_w_library')
     ipdb.set_trace()
     # 1. What is the main reason behind why one sample is incorrect but the other incorrect?
     # 2. Write a helper function that will help follow the reasoning of the correct program and thus avoid the incorrect program.
-
     # mapreduce_dict['']
-
     
 @click.group()
 def main():
@@ -1779,8 +1861,8 @@ def main():
 
 main.add_command(execute_qrdata_map_dict)
 main.add_command(execute_discovery_bench_map_dict)
-main.add_command(execute_library_learning)
 main.add_command(execute_leap)
+# main.add_command(execute_library_learning)
 
 if __name__ == '__main__':
     main()
