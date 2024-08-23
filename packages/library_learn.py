@@ -1,3 +1,4 @@
+import re
 import ipdb
 import os
 import loguru
@@ -5,7 +6,7 @@ import ipdb
 from dotenv import load_dotenv
 from typing import List
 from openai import OpenAI
-from .agent_dataclasses import ExperimentResult, FailedExperimentResult, ContrastiveProgramExample, SelfConsistencyExperimentResult
+from .agent_dataclasses import ExperimentResult, FailedExperimentResult, ContrastiveProgramExample, SelfConsistencyExperimentResult, Program
 from .answer_extract_utils import extract_db_label, extract_code, extract_db_rationale
 from .json_repair import repair_json
 
@@ -93,7 +94,7 @@ def step_write_standard_abstraction(analysis_samples: SelfConsistencyExperimentR
             f"The correct answer is {gold_hypothesis}.\n\n" +\
             f"Here is a program that was written to answer the query:\n\n" +\
             f"{correct_program}\n\n" +\
-            f"Generate a helper function from this program that can be re-used for future queries and analyses about this dataset." +\
+            f"Generate one or more helper function from this program that can be re-used for future queries and analyses about this dataset." +\
             f"Put the function in a code block delineated by ```python and ```. You can add an example usage at the bottom of the block, but make sure it is commented out."
         response = client.chat.completions.create(
             model="gpt-4o",
@@ -335,5 +336,58 @@ def step_collect_abstractions(first_try_abstractions: Iterable[str],
 # def step_generate_abstracted_programs(: str, **kwargs):
 #     ipdb.set_trace()
 
+def _extract_function_signature(program):
+
+    # function_signature_regex = r"def\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*\(([^)]*)\):"
+    # function_signature_regex = r'def\s+([a-zA-Z_]\w*)\s*\(([^)]*)\)'
+    function_signature_regex = r'(def\s+[a-zA-Z_]\w*\s*\([^)]*\))'
+    first_sentence_regex = r'\"\"\"\n\s*(.+?)(?:\.|\n|$)'
+    function_signature = re.search(function_signature_regex, program).groups()
+    first_sentence = re.search(first_sentence_regex, program).groups()
+    function_signatures = []
+    for i in range(len(function_signature)):
+        function_signatures.append((function_signature[i], first_sentence[i]))
+    return function_signatures
+    # write a regex for extracting the first sentence of the docstring, for example
+    #
+    # def gender_disparity_in_wealth(dataframe, year, metric='median'):
+    #   """
+    #   Computes gender disparity in wealth for individuals ever incarcerated in the specified year.
+    #   
+    #   Args:
+    #     dataframe: pd.DataFrame
+    #     year: int
+    #     metric: str
+    #   """
+    # make sure to watch out for the indentation of the docstring.
+
+
+def format_program_descriptions(library_programs: Iterable[Program]):
+    return "\n".join([f"({i}) {program.signature}: {program.summary}" for i, program in enumerate(library_programs)])
+
+def parse_library_selection_response(query: str, library_programs: Iterable[Program], agent_selection_response: str):
+    json_response = eval(repair_json(agent_selection_response))
+    indices = json_response['indices']
+    program_str = "\n\n".join([library_programs[i].program for i in indices])
+    program_backticked = f"```\n{program_str}\n```"
+
+    elicit_prompt_str = "Here are the full definitions of the selected programs:\n\n" +\
+        f"{program_backticked}\n" +\
+        f"Now perform a statistically-principled analysis to answer the original query '{query}'" + \
+        f"optionally using the selected programs."
+    print(elicit_prompt_str)
+    return elicit_prompt_str 
+
 def step_collect_programs(all_programs: Iterable[str], **kwargs):
-    return "\n".join(all_programs)
+    programs = []
+    for program in all_programs:
+        if program == '':
+            logger.warning("Empty program")
+            continue
+        program_code = extract_code(program)
+        signature_tups = _extract_function_signature(program_code)
+        for signature, first_sentence in signature_tups:
+            programs.append(
+                Program(signature=signature, summary=first_sentence, program=program_code)
+            )
+    return programs
