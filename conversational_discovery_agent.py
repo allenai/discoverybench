@@ -1,5 +1,6 @@
 import traceback
 import polars as pl
+from functools import partial
 import openai
 import pandas as pd
 from typing import Union, Tuple, Iterable
@@ -26,9 +27,13 @@ import dill
 
 from packages.library_learn import create_ll_prompt, step_write_leap_helper,\
     step_extract_helper, step_prettyprint_helper, step_write_standard_abstraction,\
-    step_describe_incorrect_programs, step_collect_abstractions, step_collect_programs
+    step_describe_incorrect_programs, step_collect_abstractions, step_collect_programs,\
+    format_program_descriptions, parse_library_selection_response
 from packages.constants import SCRATCH_DIR, MY_CACHE_DIR, MY_LOG_DIR, LEAP_CACHE_DIR, DB_ANALYSIS_FAILED, EMPTY_SC_ANSWER
-from packages.agent_dataclasses import ExperimentResult, FailedExperimentResult, CodeRequestPrompt, SynthResultPrompt, CodeExtractionException, CodeRetryException, LongPromptException, SelfConsistencyExperimentResult, FailedSelfConsistencyExperimentResult, ContrastiveProgramExample
+from packages.agent_dataclasses import ExperimentResult, FailedExperimentResult, CodeRequestPrompt,\
+    SynthResultPrompt, CodeExtractionException, CodeRetryException, LongPromptException,\
+    SelfConsistencyExperimentResult, FailedSelfConsistencyExperimentResult, ContrastiveProgramExample,\
+    Program
 from packages.json_repair import repair_json
 from packages.answer_extract_utils import extract_db_label, extract_db_rationale
 
@@ -38,68 +43,6 @@ api_key = os.environ['THE_KEY']
 client = OpenAI(api_key=api_key)  # TODO: put this in an env instead.
 logger = loguru.logger
 
-def dag_system_prompt(floma_cache):
-    system_prompt = "You are a discovery agent who can execute a python code only once to answer a query based on one or more datasets. The datasets will be present in the current directory. Please write your code in the form of a `flowmason` directed acyclic graph: Here's an example of a flowmason graph:"
-    floma_example = f"""
-    ```
-    from flowmason import SingletonStep, conduct, load_artifact_with_step_name  # make sure to import flowmason definitions
-    from typing import Tuple
-    from collections import OrderedDict
-    CACHE_DIR="scratch/{floma_cache}"
-    LOG_DIR="discoveryagent_logs"
-
-    def _step_toy_fn(arg1: float, **kwargs) -> Tuple[float]: # all flowmason step functions must have **kwargs for supplying metadata
-        return (3.1 + arg1, 3.1 + arg1)
-    
-    def _step_intransitive_fn(**kwargs) -> float:
-        return 3.0
-
-    def _step_toy_fn_two(arg1: Tuple[float, float], **kwargs) -> float:
-        element1, element2 = arg1
-        return element1 + element2
-    
-    def _step_toy_fn_three(arg1: float, arg2: float, arg3: float, **kwargs) -> float:
-        return arg1 + arg2
-
-    step_dict = OrderedDict()
-    # NOTE: mutable objects (lists and dictionaries most commonly) cannot serve as arguments for flowmason steps (since they can't be pickled). Consider using tuples or json strings in those cases.
-    # If you must use a mutable object (e.g. list or dict) for a python function, write a different function that can be called by the flowmason step function.
-    step_dict['step_singleton'] = SingletonStep(_step_toy_fn, {{
-        'version': "001", # don't forget to supply version, it is a mandatory argument
-        'arg1': 2.9
-    }})
-    step_dict['step_intransitive'] = SingletonStep(_step_intransitive_fn, {{
-        'version': "001" # required even when there are no arguments
-    }})
-    step_dict['step_singleton_two'] = SingletonStep(_step_toy_fn_two, {{
-        'version': "001", 
-        'arg1': 'step_singleton' # this will supply the return value of the previous step as an argument for 'arg1'
-        # note that the return value of 'step_singleton' matches the type signature of arg1 for 'step_singleton_two'
-    }})
-    step_dict['step_singleton_three'] = SingletonStep(_step_toy_fn_three, {{
-        'version': "001",
-        'arg1': 'step_singleton',
-        'arg2': 'step_intransitive', 
-        'arg3': 3.0
-    }})
-
-    run_metadata = conduct(CACHE_DIR, step_dict, LOG_DIR) # this will run the flowmason graph, executing each step in order. It will substitute any step name parameters with the actual return values of the steps.
-    # NOTE: if the step function has a print statement, it will be printed to the console. 
-    # NOTE: if the step has no return statement, then loading an artifact will result in a FileNotFoundError. 
-    # NOTE: when supplying a step name as an argument, make sure that the step has already been defined in the step_dict (otherwise you will just be passing a string).
-    output_step_singleton_two = load_artifact_with_step_name(run_metadata, 'step_singleton_two')
-    print(output_step_singleton_two) # 18.0. Make sure to print. Simply writing the variable name will not print the output.
-    ``` 
-
-    Answer the questions in the format:
-
-    Observation: {{Full analysis plan in natural language}}.
-    Code: 
-    ```python
-    {{All code to act on observation.}}
-    ```
-    """
-    return system_prompt + floma_example
 
 def loose_system_prompt():
     system_prompt = "You are a discovery agent who can execute a python code only once to answer a query based on one or more datasets. The datasets will be present in the current directory." 
@@ -502,16 +445,18 @@ def process_regular_prompt(history: List[Dict[str, str]],
             'num_prompt_tokens': num_prompt_tokens,
             'num_response_tokens': num_response_tokens}
 
-# TODO: need to modify this to return the right structure, so we can probe it.
 def process_workflow(system_prompt: str, 
-                     workflow: List, 
-                     library_str: Optional[str] = None): 
+                     workflow: List): 
     messages = [{"role": "system", "content": system_prompt}]
     execution_results = []
     workflow_results = []
     all_code_snippets = [] 
-    if library_str:
-        all_code_snippets.append(extract_code(library_str))
+
+
+    # if library_programs:
+    #     all_code_snippets.append(
+    #         extract_code(library_programs)
+    #     )
     for i in range(len(workflow)):
         workflow_step = workflow[i]
         if isinstance(workflow_step, CodeRequestPrompt):
@@ -544,6 +489,10 @@ def process_workflow(system_prompt: str,
             )
         elif isinstance(workflow_step, SynthResultPrompt):
             prompt = workflow_step.prompt_template(execution_results[-1])
+            if workflow_step.has_code_provision:
+                all_code_snippets.append(
+                    extract_code(prompt)
+                )
             if workflow_step.is_code_req:
                 try:
                     result_dict = process_code_step(messages, prompt, i, "\n\n".join(all_code_snippets), num_retries=3)
@@ -593,6 +542,7 @@ def process_workflow(system_prompt: str,
                         "total_response_tokens": response_dict['num_response_tokens']
                     }
                 )
+                execution_results.append(response_dict['agent_response']) # TODO: need to check if this breaks anything.
         else:
             raise ValueError("Unimplemented workflow step.")
     return workflow_results
@@ -787,10 +737,9 @@ def build_experiment_result_db(execution_results, claim) -> ExperimentResult:
                             num_errors=total_errors)
 
 def execute_pass_db(workflow, structure_type, floma_cache, 
-                    library_str: Optional[str] = None) -> ExperimentResult:
+                    library_programs: Optional[Iterable[Program]] = None) -> ExperimentResult:
     try:
-        execution_results = process_workflow(retrieve_system_prompt(structure_type, floma_cache), workflow, 
-                                             library_str)
+        execution_results = process_workflow(retrieve_system_prompt(structure_type, floma_cache), workflow)
         clear_dir(f"scratch/{floma_cache}")
         answer = _extract_response_db(execution_results[-1]['response'])
         return build_experiment_result_db(execution_results, answer)
@@ -1016,7 +965,7 @@ def complete_pass_db(dataset_path, query,
                      add_exploration_step, self_consistency, 
                      nl_workflow: Optional[str] = None, 
                      failure_memories: Optional[Iterable[str]] = None,
-                     library_str: Optional[str] = None,
+                     library_programs: Optional[Iterable[Program]] = None,
                      **kwargs):
     if nl_workflow:
         assert failure_memories is not None, ipdb.set_trace()
@@ -1025,18 +974,9 @@ def complete_pass_db(dataset_path, query,
     else:
         hint_str = ""
         failure_memories_str = ""
-    if structure_type == 'dag':
-        exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
-            f"Now, how would you go about performing an analysis of the query '{query}' using a flowmason graph?" +\
-            failure_memories_str +\
-            hint_str +\
-            " In the final answer, please write down a scientific hypothesis in natural language" +\
-            " derived from the provided dataset, clearly stating the context of hypothesis (if any)" +\
-            " , variables chosen (if any) and relationship between those variables (if any). Include implementations" +\
-            " of any statistical significance tests (if applicable)." +\
-            (f"Consider using or adapting any of the following helper functions: {library_str}" if library_str else "")
-    elif structure_type == 'loose':
-        # TODO: this is where you can consider adding the memory of the previous (failed) implementations
+
+    if not library_programs:
+        # TODO: add another step here.
         exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
             f"Now, how would you go about performing an analysis of the query '{query}'?" +\
             failure_memories_str +\
@@ -1045,22 +985,38 @@ def complete_pass_db(dataset_path, query,
             " derived from the provided dataset, clearly stating the context of hypothesis (if any)" +\
             " , variables chosen (if any) and relationship between those variables (if any). Include implementations" +\
             " of any statistical significance tests (if applicable)." +\
-            (f"Consider using or adapting any of the following helper functions: {library_str}" if library_str else "") +\
+            (f"Consider using or adapting any of the following helper functions: {library_programs}" if library_programs else "") +\
             f"to answer the query '{query}"
+        exploration_step = generate_exploration_prompt(dataset_path, query)
+        rev_second_prompt_template = lambda exec_result: f"The output of the previous code is:" +\
+            f"\n{exec_result}\n\nBased on this analysis output, what is your answer for the query '{query}'?" +\
+            f"Ground your answer in the context of the analysis (including any metrics and statistical significance tests)." +\
+            f"Keep your response short and to the point (1-3 sentences). Start your response with 'RESPONSE:'"
+        workflow = [
+                    CodeRequestPrompt(exploration_step), 
+                    SynthResultPrompt(exploration_passback, True), 
+                    SynthResultPrompt(rev_second_prompt_template, False)
+                    ]
     else:
-        raise ValueError("Unimplemented structure type.")
-
-    exploration_step = generate_exploration_prompt(dataset_path, query)
-    rev_second_prompt_template = lambda exec_result: f"The output of the previous code is:" +\
-        f"\n{exec_result}\n\nBased on this analysis output, what is your answer for the query '{query}'?" +\
-        f"Ground your answer in the context of the analysis (including any metrics and statistical significance tests)." +\
-        f"Keep your response short and to the point (1-3 sentences). Start your response with 'RESPONSE:'"
-    workflow = [
-                CodeRequestPrompt(exploration_step), 
-                SynthResultPrompt(exploration_passback, True), 
-                SynthResultPrompt(rev_second_prompt_template, False)
-                ]
-    return execute_pass_db(workflow, structure_type, "flowma_cache", library_str)
+        exploration_step = generate_exploration_prompt(dataset_path, query)
+        exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
+            f"Now, considering the query '{query}'," +\
+            f"would you use or adapt any of the following helper functions?\n\n{format_program_descriptions(library_programs)}\n\n" +\
+            f"Return your response in the form of a JSON object with two keys: 'indices' and 'rationale'." + \
+                "The 'indices' key should contain a (possibly empty) list of the indices" + \
+                "of the helper functions you would use or adapt, and the 'rationale' key should contain a rationale for your choice."
+        analysis_interpretation_template = lambda exec_result: f"The output of the analysis is:" +\
+            f"\n{exec_result}\n\nBased on this analysis output, what is your answer for the query '{query}'?" +\
+            f"Ground your answer in the context of the analysis (including any metrics and statistical significance tests)." +\
+            f"Keep your response short and to the point (1-3 sentences). Start your response with 'RESPONSE:'"
+        workflow = [
+                    CodeRequestPrompt(exploration_step), # request agent to explore the dataframe
+                    SynthResultPrompt(exploration_passback, False),  # request agent to select library function(s)
+                    SynthResultPrompt(partial(parse_library_selection_response, query, library_programs), True, True),  # request agent to write the analysis 
+                    SynthResultPrompt(analysis_interpretation_template, False) # agent interprets the execution output from the analysis code
+                    ]
+    experiment_result = execute_pass_db(workflow, structure_type, "flowma_cache")
+    return experiment_result
 
 # @click.command()
 # @click.argument('dataset_path')
@@ -1077,7 +1033,7 @@ def analyze_db_dataset(dataset_path: str, query: str,
                     add_exploration_step: bool, 
                     self_consistency: bool,
                     generate_sc_answer: Optional[str] = True,
-                    library_str: Optional[str] = None,
+                    library_programs: Optional[Iterable[Program]] = None,
                     **kwargs) -> Union[ExperimentResult, FailedExperimentResult, SelfConsistencyExperimentResult]:
     # qr_dataset =  
     # the workflow is a list of the form [str, Function[str] -> str, Function[str] -> str, ...]
@@ -1087,14 +1043,14 @@ def analyze_db_dataset(dataset_path: str, query: str,
     # if add_exploration_step:
     #     first_message = construct_first_message(dataset_path, query, structure_type, past_traces)
     if not self_consistency:
-        return complete_pass_db(dataset_path, query, structure_type, generate_visual, add_exploration_step, self_consistency, library_str=library_str, **kwargs)
+        return complete_pass_db(dataset_path, query, structure_type, generate_visual, add_exploration_step, self_consistency, library_programs=library_programs, **kwargs)
     else:
         final_analyses = []
         sc_runs = []
         SELF_CONSISTENCY_ITERS = 5
         for _ in range(SELF_CONSISTENCY_ITERS):
             logger.info(f"Starting self-consistency iteration {_}.")
-            experiment_result = complete_pass_db(dataset_path, query, structure_type, generate_visual, add_exploration_step, self_consistency, library_str=library_str, **kwargs)
+            experiment_result = complete_pass_db(dataset_path, query, structure_type, generate_visual, add_exploration_step, self_consistency, library_programs=library_programs, **kwargs)
             if hasattr(experiment_result, 'workflow'): # this is how you know it succeeded.
                 # execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
                 # final_analysis = execution_results[-1]['response']
@@ -1713,9 +1669,7 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
     frame = construct_db_dataset_frame(dataset_path, "db_unsplit/answer_key_real.csv")
     train_frame = frame.filter(pl.col('is_test')==False)
     test_frame = frame.filter(pl.col('is_test')==True)
-
     ll_steps_dict = OrderedDict()
-
     mapreduce_dict = OrderedDict()
     mapreduce_dict['step_sample_analyses'] = SingletonStep(analyze_db_dataset, {  # generate N samples.
         "version": "001",
@@ -1762,15 +1716,6 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
         'resampled_abstractions': 'step_generate_abstractions_for_resamples',
         'version': '003'
     })
-    # generate helpers off of the corrected resampled analyses. 
-    # mapreduce_dict['step_prettyprint_helpers'] = SingletonStep(step_prettyprint_helper, {
-    #     'contrastive_pairs': 'step_contrastive_pairing',
-    #     'leap_response': 'step_generate_leap_response',
-    #     'leap_helper': 'step_extract_leap_helper',
-    #     'standard_helper': 'step_extract_standard_helper',
-    #     'dataset_path': dataset_path,
-    #     'version': '001'
-    # })
     ll_steps_dict['map_reduce_contrastive_program_generation'] = MapReduceStep(mapreduce_dict, {
         "dataset_path": train_frame['metadata_path'].to_list(),
         "query": train_frame['query'].to_list(),
@@ -1787,12 +1732,12 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
     }, list, 'analysis_id', [])
     ll_steps_dict['collect_programs'] = SingletonStep(step_collect_programs, {
         'all_programs': 'map_reduce_contrastive_program_generation',
-        'version': '007'
+        'version': '008'
     })
     evaluation_mapreduce_dict = OrderedDict()
     evaluation_mapreduce_dict['step_complete_pass_w_library'] = SingletonStep(analyze_db_dataset, { 
-        "version": "006",
-        'library_str': 'collect_programs'
+        "version": "009",
+        'library_programs': 'collect_programs'
     })
     evaluation_mapreduce_dict['step_evaluate_analysis_w_library'] = SingletonStep(step_evaluate_claim, {
         "experiment_result": 'step_complete_pass_w_library',
@@ -1803,21 +1748,21 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
         'claim_evaluation': 'step_evaluate_analysis_w_library',
         'version': '001'
     })
-    # ll_steps_dict['map_reduce_test_w_library'] = MapReduceStep(evaluation_mapreduce_dict, 
-    #     {
-    #         "query": test_frame['query'].to_list(),
-    #         'analysis_id': test_frame['analysis_id'].to_list(), 
-    #         "dataset_path": test_frame['metadata_path'].to_list(),
-    #         'gold_hypothesis': test_frame['gold_hypo'].to_list()
-    #     },
-    #     {
-    #         'self_consistency': False,
-    #         'structure_type': structure_type,
-    #         'add_exploration_step': add_exploration_step, 
-    #         'generate_visual': False,
-    #         'version': '002'
-    #     },  list, 'analysis_id', []
-    # )
+    ll_steps_dict['map_reduce_test_w_library'] = MapReduceStep(evaluation_mapreduce_dict, 
+        {
+            "query": test_frame['query'].to_list(),
+            'analysis_id': test_frame['analysis_id'].to_list(), 
+            "dataset_path": test_frame['metadata_path'].to_list(),
+            'gold_hypothesis': test_frame['gold_hypo'].to_list()
+        },
+        {
+            'self_consistency': False,
+            'structure_type': structure_type,
+            'add_exploration_step': add_exploration_step, 
+            'generate_visual': False,
+            'version': '002'
+        },  list, 'analysis_id', []
+    )
 
     evaluation_no_library_dict = OrderedDict()
     evaluation_no_library_dict['step_complete_pass_no_library'] = SingletonStep(analyze_db_dataset, {
@@ -1832,24 +1777,24 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
         'claim_evaluation': 'step_evaluate_analysis_no_library',
         'version': '001'
     })
-    # ll_steps_dict['map_reduce_test_no_library'] = MapReduceStep(evaluation_no_library_dict,
-    #     {
-    #         "query": test_frame['query'].to_list(),
-    #         'analysis_id': test_frame['analysis_id'].to_list(), 
-    #         "dataset_path": test_frame['metadata_path'].to_list(),
-    #         'gold_hypothesis': test_frame['gold_hypo'].to_list()
-    #     },
-    #     {
-    #         'self_consistency': False,
-    #         'structure_type': structure_type,
-    #         'add_exploration_step': add_exploration_step, 
-    #         'generate_visual': False,
-    #         'version': '002'
-    #     },  list, 'analysis_id', []
-    # )
+    ll_steps_dict['map_reduce_test_no_library'] = MapReduceStep(evaluation_no_library_dict,
+        {
+            "query": test_frame['query'].to_list(),
+            'analysis_id': test_frame['analysis_id'].to_list(), 
+            "dataset_path": test_frame['metadata_path'].to_list(),
+            'gold_hypothesis': test_frame['gold_hypo'].to_list()
+        },
+        {
+            'self_consistency': False,
+            'structure_type': structure_type,
+            'add_exploration_step': add_exploration_step, 
+            'generate_visual': False,
+            'version': '002'
+        },  list, 'analysis_id', []
+    )
     run_metadata = conduct(LEAP_CACHE_DIR, ll_steps_dict, MY_LOG_DIR)
     library_str = load_artifact_with_step_name(run_metadata, 'collect_programs')
-    incorrect_program_summaries = load_artifact_with_step_name(run_metadata, 'map_reduce_test_w_library')
+    incorrect_program_summaries = load_artifact_with_step_name(run_metadata, 'map_reduce_test_no_library')
     ipdb.set_trace()
     # 1. What is the main reason behind why one sample is incorrect but the other incorrect?
     # 2. Write a helper function that will help follow the reasoning of the correct program and thus avoid the incorrect program.
