@@ -2,7 +2,6 @@ import re
 import ipdb
 import os
 import loguru
-import ipdb
 from dotenv import load_dotenv
 from typing import List
 from openai import OpenAI
@@ -95,7 +94,7 @@ def step_write_standard_abstraction(analysis_samples: SelfConsistencyExperimentR
             f"Here is a program that was written to answer the query:\n\n" +\
             f"{correct_program}\n\n" +\
             f"Generate one or more helper function from this program that can be re-used for future queries and analyses about this dataset." +\
-            f"Put the function in a code block delineated by ```python and ```. You can add an example usage at the bottom of the block, but make sure it is commented out."
+            f"Put the function in a code block delineated by ```python and ```. Make sure to write a docstring. You can add an example usage at the bottom of the block, but make sure it is commented out."
         response = client.chat.completions.create(
             model="gpt-4o",
             messages=[{"role": "user", "content": prompt}],
@@ -282,24 +281,48 @@ def step_describe_incorrect_programs(analysis_samples: SelfConsistencyExperiment
         if extract_db_label(sample_labels[incorrect_indices[i]]) == 'FAIL':
             # TODO: figure this out
             analysis = analysis_samples.individual_runs[incorrect_indices[i]]
-            program = analysis.implementation_attempts[-1]
-            traceback = analysis.tracebacks[-1]
-            prompt = f"Consider the following query: {query}\n\n" +\
-                f"Here is a program that was written to answer the query:\n\n" +\
+            if analysis.fail_type == 'code_retry_exception':
+                program = analysis.implementation_attempts[-1]
+                traceback = analysis.tracebacks[-1]
+                prompt = f"Consider the following query: {query}\n\n" +\
+                    f"Here is a program that was written to answer the query:\n\n" +\
+                    f"{program}\n\n" +\
+                    f"However, the program failed to execute. Here is the traceback:\n\n" +\
+                    f"{traceback}\n\n" +\
+                    f"Please provide a 1-sentence summary of what the program does."
+                response = client.chat.completions.create(
+                    model="gpt-4o",
+                    messages=[{"role": "user", "content": prompt}],
+                    max_tokens=2000
+                )
+                response = response.choices[0].message.content
+                memory_trace = f"{response}\n" + \
+                    f"However, the program failed to execute, with the following traceback:\n\n" +\
+                    f"{traceback}"
+                memory_traces.append(memory_trace)
+            elif analysis.fail_type == 'code_extraction_exception':
+                program = extract_code(analysis.workflow_so_far[-1]['response'])
+                exec_output = analysis.workflow_so_far[-1]['execution_output']
+                agent_response = analysis.last_agent_response
+                prompt = f"Consider the following query: {query}\n\n" +\
+                f"Here is a program that was written to help answer the query:\n\n" +\
                 f"{program}\n\n" +\
-                f"However, the program failed to execute. Here is the traceback:\n\n" +\
-                f"{traceback}\n\n" +\
-                f"Please provide a 1-sentence summary of what the program does."
-            response = client.chat.completions.create(
-                model="gpt-4o",
-                messages=[{"role": "user", "content": prompt}],
-                max_tokens=2000
-            )
-            response = response.choices[0].message.content
-            memory_trace = f"{response}\n" + \
-                f"However, the program failed to execute, with the following traceback:\n\n" +\
-                f"{traceback}"
-            memory_traces.append(memory_trace)
+                f"The execution output was:\n\n" +\
+                f"{exec_output}\n\n" +\
+                f"However, the analyst provided the following response about this output, instead of completing the data analysis:\n\n" +\
+                f"{agent_response}\n\n" +\
+                f"Please provide a 1-sentence summary of what went wrong in the (incomplete) analysis."
+                print(prompt)
+                response = client.chat.completions.create(
+                    model="gpt-4o",
+                    messages=[{"role": "user", "content": prompt}],
+                    max_tokens=2000
+                )
+                response = response.choices[0].message.content
+                memory_trace = f"{response}\n" +\
+                    f"However, the program failed to execute, with the following traceback:\n\n" +\
+                    f"{traceback}"
+                memory_traces.append(memory_trace)
         elif extract_db_label(sample_labels[incorrect_indices[i]]) in ['LACK_INFO', 'REFUTE']:
             analysis = analysis_samples.individual_runs[incorrect_indices[i]].workflow[1]
             program = extract_code(analysis['response'])
@@ -325,69 +348,100 @@ def step_describe_incorrect_programs(analysis_samples: SelfConsistencyExperiment
 
 def step_collect_abstractions(first_try_abstractions: Iterable[str],
                               resampled_abstractions: Iterable[str],
+                              query: str,
                               **kwargs):
     # collect all the abstractions
     if len(first_try_abstractions) > 0:
-        return (first_try_abstractions[0])
+        return (first_try_abstractions[0], query, 'first_try')
     elif len(resampled_abstractions) > 0:
-        return (resampled_abstractions[0])
+        return (resampled_abstractions[0], query, 'resampled_with_supervision')
     else:
-        return ''
+        return ('', query)
 # def step_generate_abstracted_programs(: str, **kwargs):
 #     ipdb.set_trace()
 
-def _extract_function_signature(program):
+def segment_all_functions(all_program_str) -> List[str]:
+    programs = []
 
+    # Use a regex to find all functions in the string
+    function_pattern = re.compile(r'def\s+[a-zA-Z_]\w*\s*\(.*?\)\s*:\s*')
+    matches = list(function_pattern.finditer(all_program_str))
+
+    for i, match in enumerate(matches):
+        start = match.start()
+        if i + 1 < len(matches):
+            end = matches[i + 1].start()
+        else:
+            end = len(all_program_str)
+
+        programs.append(all_program_str[start:end])
+    return programs
+
+def _extract_function_signature(program):
     # function_signature_regex = r"def\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*\(([^)]*)\):"
     # function_signature_regex = r'def\s+([a-zA-Z_]\w*)\s*\(([^)]*)\)'
     function_signature_regex = r'(def\s+[a-zA-Z_]\w*\s*\([^)]*\))'
-    first_sentence_regex = r'\"\"\"\n\s*(.+?)(?:\.|\n|$)'
-    function_signature = re.search(function_signature_regex, program).groups()
-    first_sentence = re.search(first_sentence_regex, program).groups()
+    # first_sentence_regex = r'\"\"\"\n?\s*(.+?)(?:\.?|\n|$)'
+    # first_sentence_regex = r'\"\"\"\n\s*(.+?)(?:\.?\n|$)'
+    # first_sentence_regex = r'\"\"\"\n\s*(.+?)(?:\.?\n|$)'
+    first_sentence_regex = r'\"\"\"\s*(.+?)(?:\.?\s*\"\"\"|\n|$)'
+    # function_signatures = []
+    # programs = program.find("def ")
+    function_signature = re.search(function_signature_regex, program).groups()[0]
+    first_sentence = re.search(first_sentence_regex, program).groups()[0]
+    return (function_signature, first_sentence)
+    
+def extract_imports(all_program_str):
+    # find all the lines that start with 'import' or 'from' and return the lines
+    import_lines = []
+    for line in all_program_str.split("\n"):
+        if line.startswith("import") or line.startswith("from"):
+            import_lines.append(line)
+    return import_lines
+
+def extract_all_function_signatures(all_program_str):
+    programs = segment_all_functions(all_program_str)
     function_signatures = []
-    for i in range(len(function_signature)):
-        function_signatures.append((function_signature[i], first_sentence[i]))
+    for program in programs:
+        signature, first_sentence = _extract_function_signature(program)
+        function_signatures.append((signature, first_sentence, program))
     return function_signatures
-    # write a regex for extracting the first sentence of the docstring, for example
-    #
-    # def gender_disparity_in_wealth(dataframe, year, metric='median'):
-    #   """
-    #   Computes gender disparity in wealth for individuals ever incarcerated in the specified year.
-    #   
-    #   Args:
-    #     dataframe: pd.DataFrame
-    #     year: int
-    #     metric: str
-    #   """
-    # make sure to watch out for the indentation of the docstring.
 
 
 def format_program_descriptions(library_programs: Iterable[Program]):
-    return "\n".join([f"({i}) {program.signature}: {program.summary}" for i, program in enumerate(library_programs)])
+    program_descrption = "\n".join([f"({i}) {program.signature}: {program.summary} (source query: {program.query})" for i, program in enumerate(library_programs)])
+    return program_descrption
 
 def parse_library_selection_response(query: str, library_programs: Iterable[Program], agent_selection_response: str):
     json_response = eval(repair_json(agent_selection_response))
     indices = json_response['indices']
     program_str = "\n\n".join([library_programs[i].program for i in indices])
+    all_imports = []
+    for i in indices:
+        all_imports.extend(library_programs[i].imports)
+    all_imports = set(all_imports)
+    import_str = "\n".join(all_imports) + "\n\n"
+    program_str = import_str + program_str
     program_backticked = f"```\n{program_str}\n```"
-
     elicit_prompt_str = "Here are the full definitions of the selected programs:\n\n" +\
         f"{program_backticked}\n" +\
         f"Now perform a statistically-principled analysis to answer the original query '{query}'" + \
         f"optionally using the selected programs."
-    print(elicit_prompt_str)
     return elicit_prompt_str 
 
-def step_collect_programs(all_programs: Iterable[str], **kwargs):
+def step_collect_programs(all_programs: Iterable[str], **kwargs) -> List[Program]:
     programs = []
-    for program in all_programs:
+    ipdb.set_trace()
+    for program, query, _ in all_programs:
         if program == '':
             logger.warning("Empty program")
             continue
         program_code = extract_code(program)
-        signature_tups = _extract_function_signature(program_code)
-        for signature, first_sentence in signature_tups:
+        # signature_tups = _extract_function_signature(program_code)
+        imports = extract_imports(program_code)
+        signature_tups = extract_all_function_signatures(program_code)
+        for signature, first_sentence, subset_program in signature_tups:
             programs.append(
-                Program(signature=signature, summary=first_sentence, program=program_code)
+                Program(signature=signature, summary=first_sentence, program=subset_program, query=query, imports=imports)
             )
     return programs
