@@ -1,3 +1,4 @@
+import numpy as np
 import traceback
 import polars as pl
 from functools import partial
@@ -30,6 +31,7 @@ from packages.library_learn import create_ll_prompt, step_write_leap_helper,\
     step_describe_incorrect_programs, step_collect_abstractions, step_collect_programs,\
     format_program_descriptions, parse_library_selection_response
 from packages.constants import SCRATCH_DIR, MY_CACHE_DIR, MY_LOG_DIR, LEAP_CACHE_DIR, DB_ANALYSIS_FAILED, EMPTY_SC_ANSWER
+from packages.db_data_format import load_db_dataframe
 from packages.agent_dataclasses import ExperimentResult, FailedExperimentResult, CodeRequestPrompt,\
     SynthResultPrompt, CodeExtractionException, CodeRetryException, LongPromptException,\
     SelfConsistencyExperimentResult, FailedSelfConsistencyExperimentResult, ContrastiveProgramExample,\
@@ -197,7 +199,7 @@ def extract_code(response):
         response = response[response.index("```"): ]
     except ValueError:
         logger.error(f"``` backticks not found")
-        raise CodeExtractionException("``` backticks not found", "n/a", "n/a")
+        raise CodeExtractionException("``` backticks not found", "n/a", "n/a", response)
     if response.startswith("```python"):
         start = response.find("```python") + len("```python")
     elif response.startswith("``` python"):
@@ -394,7 +396,7 @@ def process_code_step(history: List[Dict[str, str]],
         try:
             extracted_code = extract_code(response)
         except CodeExtractionException:
-            raise CodeExtractionException(f"Code could not be extracted from the response:\n\n{response} .", -1, "n/a")
+            raise CodeExtractionException(f"Code could not be extracted from the response:\n\n{response} .", -1, "n/a", response)
         stdout = sys.stdout
         sys.stdout = StringIO()
         try:
@@ -469,7 +471,7 @@ def process_workflow(system_prompt: str,
             except CodeRetryException as e:
                 raise CodeRetryException(workflow_results, i, e.message, e.prior_implementations, e.prior_tracebacks)
             except CodeExtractionException as e:
-                raise CodeExtractionException(e.message, i, workflow_results)
+                raise CodeExtractionException(e.message, i, workflow_results, e.agent_response)
             extracted_code = extract_code(result_dict['agent_response']) # NOTE: Hopefully we don't get duplicate code snippets.
             messages.extend([
                 {"role": "user", "content": workflow_step.prompt},
@@ -503,7 +505,7 @@ def process_workflow(system_prompt: str,
                 except CodeRetryException as e:
                     raise CodeRetryException(workflow_results, i, e.message, e.prior_implementations, e.prior_tracebacks)
                 except CodeExtractionException as e:
-                    raise CodeExtractionException(e.message, i, workflow_results)
+                    raise CodeExtractionException(e.message, i, workflow_results, e.agent_response)
                 messages.extend([
                     {"role": "user", "content": prompt},
                     {"role": "assistant", "content": result_dict['agent_response']}
@@ -773,7 +775,8 @@ def execute_pass_db(workflow, structure_type, floma_cache,
                                     [],
                                     "code_extraction_exception",
                                     [],
-                                    e.workflow_so_far
+                                    e.workflow_so_far, 
+                                    e.agent_response
                                     )
 
         # print(f"Error occurred: {e}.")
@@ -1003,8 +1006,8 @@ def complete_pass_db(dataset_path, query,
             f"Now, considering the query '{query}'," +\
             f"would you use or adapt any of the following helper functions?\n\n{format_program_descriptions(library_programs)}\n\n" +\
             f"Return your response in the form of a JSON object with two keys: 'indices' and 'rationale'." + \
-                "The 'indices' key should contain a (possibly empty) list of the indices" + \
-                "of the helper functions you would use or adapt, and the 'rationale' key should contain a rationale for your choice."
+                "The 'indices' key should contain a list of the indices" + \
+                "of the helper functions you would use or adapt, and the 'rationale' key should contain a rationale for your choice." 
         analysis_interpretation_template = lambda exec_result: f"The output of the analysis is:" +\
             f"\n{exec_result}\n\nBased on this analysis output, what is your answer for the query '{query}'?" +\
             f"Ground your answer in the context of the analysis (including any metrics and statistical significance tests)." +\
@@ -1349,7 +1352,8 @@ def get_db_datasplit(use_test: bool) -> List[Tuple[str, str, str]]: # metadata p
     return query_info
 
 def construct_db_dataset_frame(path: str, 
-                               answer_key_path: str) -> pl.DataFrame:
+                               answer_key_path: str, 
+                               use_answer_key: Optional[bool] = True) -> pl.DataFrame:
     # read all the metadata files 
     # each metadata file has 1 workflow and 1 or more queries
     # each query has a question, hypothesis, qid, and answer
@@ -1357,7 +1361,6 @@ def construct_db_dataset_frame(path: str,
     answer_key_frame = pl.read_csv(answer_key_path)
     rows = []
     project_name = os.path.basename(path)
-    is_test = True
     for fname in filter(lambda x: x.endswith('json'), os.listdir(path)):
         with open(f"{path}/{fname}", 'r') as file:
             try:
@@ -1373,15 +1376,26 @@ def construct_db_dataset_frame(path: str,
                 workflow = metadata['workflow']
                 metadata_id = int(fname.split(".")[0].split("_")[1])
                 metadata_path = f"{path}/{fname}"
-                rows.append([project_name, metadata_id, query, qid, workflow, metadata_path, is_test])
-                is_test = not is_test # flip the value, so it's 50/50 train/test
+                rows.append([project_name, metadata_id, query, qid, workflow, metadata_path])
+                # TODO: randomly assign the `is_test` column.
     frame = pl.DataFrame(rows, schema=['dataset', 
                                        'metadataid', 
                                        'query', 
                                        'query_id', 
                                        'workflow', 
-                                       'metadata_path', 
-                                       'is_test'])
+                                       'metadata_path' 
+                                       ])
+    is_test_vec = np.ones(len(frame))
+    num_test_points = len(frame) // 2
+    is_test_vec[:num_test_points] = 0
+    rng = np.random.default_rng(seed=42) 
+    # seed = np.random.RandomState()
+    rng.shuffle(is_test_vec)
+    # convert the is_test_vec to a boolean column
+    is_test_vec = is_test_vec.astype(bool)
+    frame = frame.with_columns([
+        pl.Series(is_test_vec).alias('is_test')
+    ])
     # create a column analysis id which is just dataset  metadataid and query_id joined by underscores
     frame = frame.with_columns([
         pl.concat_str(
@@ -1594,6 +1608,22 @@ def step_combine_analysis_with_evaluation_test(experiment_result: Union[Experime
                                                **kwargs):
     return (experiment_result, claim_evaluation)
 
+def step_compute_metrics_table(num_train_queries: int, num_test_queries: int, 
+                               library_subroutines: Iterable[Tuple[str, str, str]],
+                               lib_test_experiment_results: Iterable[Tuple[ExperimentResult, Dict]], 
+                               no_lib_test_experiment_results: Iterable[Tuple[ExperimentResult, Dict]],
+                               **kwargs): 
+    num_correct_first_try = sum([s[-1] == 'first_try' for s in library_subroutines])
+    num_correct_with_supervision = sum([s[-1] == 'resample_with_supervision' for s in library_subroutines])
+    logger.info(f"Number of training examples correct on first round of samples: {num_correct_first_try}/{num_train_queries}")
+    logger.info(f"Number of training examples correct after resampling with supervision: {num_correct_with_supervision}/{num_train_queries}")
+
+    num_correct_lib = sum([extract_db_label(summary[1]) in ['PRT_SUPP', 'SUPP'] for summary in lib_test_experiment_results]) 
+    num_correct_no_lib = sum([extract_db_label(summary[1]) in ['PRT_SUPP', 'SUPP'] for summary in no_lib_test_experiment_results])
+    logger.info(f"Number of test examples correct with library: {num_correct_lib}/{num_test_queries}")
+    logger.info(f"Number of test examples correct without library: {num_correct_no_lib}/{num_test_queries}")
+    ipdb.set_trace()
+
 @click.command()
 @click.option('--structure-type',
               type=click.Choice(['loose', 'functions', 'dag'], case_sensitive=False))
@@ -1666,13 +1696,14 @@ def execute_discovery_bench_map_dict(structure_type: bool,
                 type=click.Choice(['loose', 'functions', 'dag'], case_sensitive=False))
 @click.option('--add_exploration_step', is_flag=True, help='Have the agent first explore the univariate distributions of the dataset.')
 def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
-    frame = construct_db_dataset_frame(dataset_path, "db_unsplit/answer_key_real.csv")
+    # frame = construct_db_dataset_frame(dataset_path, "db_unsplit/answer_key_real.csv")
+    frame = construct_db_dataset_frame(dataset_path, "db_unsplit/answer_key_nls_bmi.csv")
     train_frame = frame.filter(pl.col('is_test')==False)
     test_frame = frame.filter(pl.col('is_test')==True)
     ll_steps_dict = OrderedDict()
     mapreduce_dict = OrderedDict()
     mapreduce_dict['step_sample_analyses'] = SingletonStep(analyze_db_dataset, {  # generate N samples.
-        "version": "001",
+        "version": "002",
         'self_consistency': True, 
         'generate_sc_answer': False
     })
@@ -1684,7 +1715,7 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
     mapreduce_dict['step_generate_abstraction_responses'] = SingletonStep(step_write_standard_abstraction, { 
         'analysis_samples': 'step_sample_analyses',
         'sample_labels': 'step_evaluate_samples',
-        'version': '001'
+        'version': '003'
     })
     # mapreduce_dict['step_generate_abstracted_programs'] = SingletonStep(step_generate_abstracted_programs, { # TODO: need to postprocess so that they are ready to be added to the library
 
@@ -1709,12 +1740,12 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
     mapreduce_dict['step_generate_abstractions_for_resamples'] = SingletonStep(step_write_standard_abstraction, {
         'analysis_samples': 'step_resample_analyses_with_memory',
         'sample_labels': 'step_evaluate_resampled_analyses',
-        'version': '001'
+        'version': '002'
     })
     mapreduce_dict['step_collect_abstractions'] = SingletonStep(step_collect_abstractions, {
         'first_try_abstractions': 'step_generate_abstraction_responses',
         'resampled_abstractions': 'step_generate_abstractions_for_resamples',
-        'version': '003'
+        'version': '005'
     })
     ll_steps_dict['map_reduce_contrastive_program_generation'] = MapReduceStep(mapreduce_dict, {
         "dataset_path": train_frame['metadata_path'].to_list(),
@@ -1732,11 +1763,11 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
     }, list, 'analysis_id', [])
     ll_steps_dict['collect_programs'] = SingletonStep(step_collect_programs, {
         'all_programs': 'map_reduce_contrastive_program_generation',
-        'version': '008'
+        'version': '011'
     })
     evaluation_mapreduce_dict = OrderedDict()
     evaluation_mapreduce_dict['step_complete_pass_w_library'] = SingletonStep(analyze_db_dataset, { 
-        "version": "009",
+        "version": "012",
         'library_programs': 'collect_programs'
     })
     evaluation_mapreduce_dict['step_evaluate_analysis_w_library'] = SingletonStep(step_evaluate_claim, {
@@ -1763,7 +1794,6 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
             'version': '002'
         },  list, 'analysis_id', []
     )
-
     evaluation_no_library_dict = OrderedDict()
     evaluation_no_library_dict['step_complete_pass_no_library'] = SingletonStep(analyze_db_dataset, {
         'version': '002',
@@ -1792,21 +1822,42 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
             'version': '002'
         },  list, 'analysis_id', []
     )
+    ll_steps_dict['compute_table_metrics'] = SingletonStep(step_compute_metrics_table, {
+        'num_train_queries': len(train_frame),
+        'num_test_queries': len(test_frame),
+        'library_subroutines': 'map_reduce_contrastive_program_generation',
+        'lib_test_experiment_results': 'map_reduce_test_w_library',
+        'no_lib_test_experiment_results': 'map_reduce_test_no_library',
+        'version': '001'
+    })
     run_metadata = conduct(LEAP_CACHE_DIR, ll_steps_dict, MY_LOG_DIR)
-    library_str = load_artifact_with_step_name(run_metadata, 'collect_programs')
-    incorrect_program_summaries = load_artifact_with_step_name(run_metadata, 'map_reduce_test_no_library')
     ipdb.set_trace()
+    # TODO: print out the table of the results.
+    # incorrect_program_summaries = load_artifact_with_step_name(run_metadata, 'map_reduce_test_no_library')
     # 1. What is the main reason behind why one sample is incorrect but the other incorrect?
     # 2. Write a helper function that will help follow the reasoning of the correct program and thus avoid the incorrect program.
     # mapreduce_dict['']
     
+@click.command()
+@click.argument('dataset')
+def create_train_real_answer_key(dataset):
+    # dataset example: dataset=nls_bmi
+    # dataset = dataset.split("=")[1]
+    db_dataframe = load_db_dataframe(dataset)
+    db_dataframe.write_csv(f'db_unsplit/answer_key_{dataset}.csv')
+    # create a 
+    # there are four columns we have to add for each datapoint: dataset,metadataid,query_id,gold_hypo
+
+
 @click.group()
 def main():
     pass
 
+
 main.add_command(execute_qrdata_map_dict)
 main.add_command(execute_discovery_bench_map_dict)
 main.add_command(execute_leap)
+main.add_command(create_train_real_answer_key)
 # main.add_command(execute_library_learning)
 
 if __name__ == '__main__':
