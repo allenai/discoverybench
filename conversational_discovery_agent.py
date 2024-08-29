@@ -31,7 +31,8 @@ from packages.library_learn import create_ll_prompt, step_write_leap_helper,\
     step_extract_helper, step_prettyprint_helper, step_write_standard_abstraction,\
     step_describe_incorrect_programs, step_collect_abstractions, step_collect_programs,\
     format_program_descriptions, parse_library_selection_response
-from packages.constants import SCRATCH_DIR, MY_CACHE_DIR, MY_LOG_DIR, LEAP_CACHE_DIR, DB_ANALYSIS_FAILED, EMPTY_SC_ANSWER
+from packages.constants import SCRATCH_DIR, MY_CACHE_DIR, MY_LOG_DIR, LEAP_CACHE_DIR, DB_ANALYSIS_FAILED, EMPTY_SC_ANSWER, INDIVIDUAL_QUERY_DIR,\
+    INDIVIDUAL_Q_LOGS
 from packages.db_data_format import load_db_dataframe, generate_variable_exploration_prompt
 from packages.agent_dataclasses import ExperimentResult, FailedExperimentResult, CodeRequestPrompt,\
     SynthResultPrompt, CodeExtractionException, CodeRetryException, LongPromptException,\
@@ -1702,16 +1703,59 @@ def create_train_real_answer_key(dataset):
     # create a 
     # there are four columns we have to add for each datapoint: dataset,metadataid,query_id,gold_hypo
 
+@click.command()
+@click.argument('db_dataset')
+@click.argument('query')
+@click.argument('gold_hypothesis')
+def run_individual_sc_query(db_dataset, query, gold_hypothesis):
+    db_path = "db_unsplit"
+    dataset_path = f"{db_path}/{db_dataset}"
+    structure_type = 'loose'
+    add_exploration_step = False
+    step_dict = OrderedDict()
+    step_dict['step_sample_analyses'] = SingletonStep(analyze_db_dataset, {  # generate N samples.
+        'self_consistency': True, 
+        'generate_sc_answer': False,
+        'use_variable_filtered_exploration': True, 
+        'oai_model': 'gpt-4o', 
+        'query': query,
+        'dataset_path': dataset_path,
+        'structure_type': structure_type,
+        'add_exploration_step': add_exploration_step, 
+        'generate_visual': False,
+        'version': '002'
+    })
+    step_dict['step_evaluate_samples'] = SingletonStep(step_evaluate_claim, { # evaluate each sample for whether it is correct or not.  N entailment labels 
+        "experiment_result": 'step_sample_analyses',
+        'eval_all_samples': True,
+        'version': '001',
+        'query': query,
+        'gold_hypothesis': gold_hypothesis
+    })
+    step_dict['step_generate_abstraction_responses'] = SingletonStep(step_write_standard_abstraction, { 
+        'analysis_samples': 'step_sample_analyses',
+        'sample_labels': 'step_evaluate_samples',
+        'query': query,
+        'gold_hypothesis': gold_hypothesis,
+        'version': '001'
+    })
+    run_metadata = conduct(INDIVIDUAL_QUERY_DIR, step_dict, MY_LOG_DIR)
+    abstractions = load_artifact_with_step_name(run_metadata, 'step_generate_abstraction_responses')
+    labels = load_artifact_with_step_name(run_metadata, 'step_evaluate_samples')
+    ipdb.set_trace()
+    
 
 @click.group()
 def main():
     pass
 
 
+
 main.add_command(execute_qrdata_map_dict)
 main.add_command(execute_discovery_bench_map_dict)
 main.add_command(execute_leap)
 main.add_command(create_train_real_answer_key)
+main.add_command(run_individual_sc_query)
 # main.add_command(execute_library_learning)
 
 if __name__ == '__main__':
