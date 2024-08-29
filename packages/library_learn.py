@@ -1,3 +1,4 @@
+import dill
 import re
 import ipdb
 import os
@@ -5,7 +6,7 @@ import loguru
 from dotenv import load_dotenv
 from typing import List
 from openai import OpenAI
-from .agent_dataclasses import ExperimentResult, FailedExperimentResult, ContrastiveProgramExample, SelfConsistencyExperimentResult, Program
+from .agent_dataclasses import ExperimentResult, FailedExperimentResult, ContrastiveProgramExample, SelfConsistencyExperimentResult, Program, FailedSelfConsistencyExperimentResult
 from .answer_extract_utils import extract_db_label, extract_code, extract_db_rationale
 from .json_repair import repair_json
 
@@ -67,11 +68,13 @@ def step_write_leap_helper(contrastive_pairs: Iterable[ContrastiveProgramExample
     return tuple(responses) # TODO: delete the helpers that have the same function name
 
 # TODO: this has to be modified. 
-def step_write_standard_abstraction(analysis_samples: SelfConsistencyExperimentResult, 
+def step_write_standard_abstraction(analysis_samples: Union[SelfConsistencyExperimentResult, FailedSelfConsistencyExperimentResult], 
                                     sample_labels: Iterable[str],
                                     query: str, 
                                     gold_hypothesis: str,
                                     **kwargs):
+    if isinstance(analysis_samples, FailedSelfConsistencyExperimentResult):
+        return tuple([])
     if analysis_samples == -1:
         return tuple([])
     assert len(analysis_samples.individual_runs) == len(sample_labels)
@@ -263,7 +266,7 @@ def _extract_helpers(response):
             helpers.append(line)
     return '\n'.join(helpers)
 
-def step_describe_incorrect_programs(analysis_samples: SelfConsistencyExperimentResult,
+def step_describe_incorrect_programs(analysis_samples: Union[SelfConsistencyExperimentResult, FailedSelfConsistencyExperimentResult],
                                     sample_labels: Iterable[str],
                                     query: str,
                                      **kwargs) -> Iterable[str]:
@@ -277,10 +280,18 @@ def step_describe_incorrect_programs(analysis_samples: SelfConsistencyExperiment
         return tuple([])
     # TODO: what to do if there is a failure?
     memory_traces = []
+
+    if isinstance(analysis_samples, FailedSelfConsistencyExperimentResult):
+        individual_runs = analysis_samples.failed_runs
+    elif isinstance(analysis_samples, SelfConsistencyExperimentResult):
+        individual_runs = analysis_samples.individual_runs
+    else:
+        logger.error(f"Unrecognized type for analysis_samples: {type(analysis_samples)}")
+
     for i in range(len(incorrect_indices)):
         if extract_db_label(sample_labels[incorrect_indices[i]]) == 'FAIL':
             # TODO: figure this out
-            analysis = analysis_samples.individual_runs[incorrect_indices[i]]
+            analysis = individual_runs[incorrect_indices[i]]
             if analysis.fail_type == 'code_retry_exception':
                 program = analysis.implementation_attempts[-1]
                 traceback = analysis.tracebacks[-1]
@@ -324,7 +335,7 @@ def step_describe_incorrect_programs(analysis_samples: SelfConsistencyExperiment
                     f"{traceback}"
                 memory_traces.append(memory_trace)
         elif extract_db_label(sample_labels[incorrect_indices[i]]) in ['LACK_INFO', 'REFUTE']:
-            analysis = analysis_samples.individual_runs[incorrect_indices[i]].workflow[1]
+            analysis = individual_runs[incorrect_indices[i]].workflow[1]
             program = extract_code(analysis['response'])
             prompt =f"Consider the following query: {query}\n\n" +\
                 f"Here is a program that was written to answer the query:\n\n" +\
@@ -431,8 +442,12 @@ def parse_library_selection_response(query: str, library_programs: Iterable[Prog
 
 def step_collect_programs(all_programs: Iterable[str], **kwargs) -> List[Program]:
     programs = []
-    ipdb.set_trace()
-    for program, query, _ in all_programs:
+    for i in range(len(all_programs)):
+        if len(all_programs[i]) == 3:
+            program, query, _ = all_programs[i]
+        elif len(all_programs[i]) == 2:
+            program, query = all_programs[i] # None of the analyses, whether unsupervised or supervised, succeeded.
+
         if program == '':
             logger.warning("Empty program")
             continue
@@ -444,4 +459,63 @@ def step_collect_programs(all_programs: Iterable[str], **kwargs) -> List[Program
             programs.append(
                 Program(signature=signature, summary=first_sentence, program=subset_program, query=query, imports=imports)
             )
+    # print all of the programs
+    logger.info("Here are the programs:")
+    for program in programs:
+        print(program)
     return programs
+
+def measure_library_usage(dataset_programs: Iterable[Program], 
+                          library_experiments: Iterable[Tuple],
+                          no_library_experiments: Iterable[Tuple]) -> int:
+    num_queries = (len(library_experiments) // 3) - 1
+    def load_pkl(path):
+        with open(path, 'rb') as file:
+            return dill.load(file)
+    def get_selected_program_indices(response):
+        json_response = eval(repair_json(response))
+        indices = json_response['indices']
+        return indices
+    
+    def get_selected_function_names(selected_indices):
+        signatures = [dataset_programs[i].signature for i in selected_indices]
+        # get the function names only
+        function_names = [signature[4:signature.index('(')] for signature in signatures]
+        return function_names
+
+    total_occurrences = 0
+    for i in range(num_queries):#
+        query = library_experiments[i * 3][1]['kwargs']['query']
+        gold_hypothesis = library_experiments[i * 3][1]['kwargs']['gold_hypothesis']
+        analysis_obj = library_experiments[i * 3][1]['cache_path']
+        evaluation_obj = library_experiments[i * 3 + 1][1]['cache_path']
+        analysis = load_pkl(analysis_obj)
+        if isinstance(analysis, FailedExperimentResult):
+            continue
+        evaluation = extract_db_label(load_pkl(evaluation_obj))
+
+        no_lib_analysis_obj = no_library_experiments[i * 3][1]['cache_path']
+        no_lib_evaluation_obj = no_library_experiments[i * 3 + 1][1]['cache_path']
+        no_lib_analysis = load_pkl(no_lib_analysis_obj)
+
+        selected_program_indices = get_selected_program_indices(analysis.workflow[-3]['response'])
+        function_names = get_selected_function_names(selected_program_indices)
+
+        analysis_code = extract_code(analysis.workflow[-2]['response'])
+        analysis_code.count(function_names[1])
+        for function_name in function_names:
+            total_occurrences += analysis_code.count(function_name) - analysis_code.count(f"def {function_name}") # don't count the function definition
+
+        if evaluation in ['SUPP', 'PRT_SUPP']: 
+            try:
+                no_lib_evaluation = eval(repair_json(load_pkl(no_lib_evaluation_obj)['agent_response']))['label']
+                if no_lib_evaluation in ['FAIL', 'LACK_INFO', 'REFUTE']:
+                    logger.info(f"Divergent labels for {query}")
+            except TypeError as e:
+                continue
+                # ipdb.set_trace()
+        
+    ipdb.set_trace()
+        
+    return total_occurrences
+            

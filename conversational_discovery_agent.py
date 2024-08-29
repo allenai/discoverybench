@@ -1,3 +1,4 @@
+import dill
 import json
 import numpy as np
 import traceback
@@ -30,7 +31,7 @@ import dill
 from packages.library_learn import create_ll_prompt, step_write_leap_helper,\
     step_extract_helper, step_prettyprint_helper, step_write_standard_abstraction,\
     step_describe_incorrect_programs, step_collect_abstractions, step_collect_programs,\
-    format_program_descriptions, parse_library_selection_response
+    format_program_descriptions, parse_library_selection_response, measure_library_usage
 from packages.constants import SCRATCH_DIR, MY_CACHE_DIR, MY_LOG_DIR, LEAP_CACHE_DIR, DB_ANALYSIS_FAILED, EMPTY_SC_ANSWER, INDIVIDUAL_QUERY_DIR,\
     INDIVIDUAL_Q_LOGS
 from packages.db_data_format import load_db_dataframe, generate_variable_exploration_prompt
@@ -1454,7 +1455,6 @@ def step_compute_metrics_table(num_train_queries: int, num_test_queries: int,
                                **kwargs): 
     num_correct_first_try = sum([s[-1] == 'first_try' for s in library_subroutines])
     num_correct_with_supervision = sum([s[-1] == 'resampled_with_supervision' for s in library_subroutines])
-    ipdb.set_trace()
     logger.info(f"Number of training examples correct on first round of samples: {num_correct_first_try}/{num_train_queries}")
     logger.info(f"Number of training examples correct after resampling with supervision: {num_correct_with_supervision}/{num_train_queries}")
 
@@ -1467,6 +1467,9 @@ def step_compute_metrics_table(num_train_queries: int, num_test_queries: int,
     number_of_lack_info_no_lib = sum([extract_db_label(summary[1]) == 'FAIL' for summary in no_lib_test_experiment_results])
     logger.info(f"Number of examples that lacked information with library: {number_of_lack_info_lib}/{num_test_queries}")
     logger.info(f"Number of examples that lacked information without library: {number_of_lack_info_no_lib}/{num_test_queries}")
+
+
+
 
 @click.command()
 @click.option('--structure-type',
@@ -1614,6 +1617,7 @@ def execute_leap(dataset_path: str, structure_type: str,
     }, list, 'analysis_id', [])
     ll_steps_dict['collect_programs'] = SingletonStep(step_collect_programs, {
         'all_programs': 'map_reduce_contrastive_program_generation',
+        'dataset_path': dataset_path,
         'version': '011'
     })
     evaluation_mapreduce_dict = OrderedDict()
@@ -1686,7 +1690,14 @@ def execute_leap(dataset_path: str, structure_type: str,
         'version': '001'
     })
     run_metadata = conduct(LEAP_CACHE_DIR, ll_steps_dict, MY_LOG_DIR)
-    # program_summaries = load_artifact_with_step_name(run_metadata, 'map_reduce_contrastive_program_generation')
+    query_index = 0
+    def load_pkl(path):
+        with open(path, 'rb') as file:
+            return dill.load(file)
+    measure_library_usage(load_pkl(run_metadata[1][1]['cache_path']), 
+                          run_metadata[2][1],
+                          run_metadata[3][1])
+    program_summaries = load_artifact_with_step_name(run_metadata, 'collect_programs')
     # test_no_lib_examples = load_artifact_with_step_name(run_metadata, 'map_reduce_test_no_library')
     ipdb.set_trace()
     # 1. What is the main reason behind why one sample is incorrect but the other incorrect?

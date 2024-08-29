@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import List, Callable, Dict, Tuple, Union, Optional
+from typing import List, Callable, Dict, Tuple, Union, Optional, Iterable
 
 @dataclass
 class CodeRequestPrompt:
@@ -60,8 +60,6 @@ class FailedExperimentResult():
                  implementation_attempts: List[str],
                  workflow_so_far, 
                  last_agent_response: Optional[str] = None):
-
-
         self.failed_phase_i = failed_phase_i
         self.tracebacks = tracebacks  # when teh fail type is a code retry exception
         self.implementation_attempts = implementation_attempts # when the fail type is a code retry exception
@@ -73,7 +71,13 @@ class FailedSelfConsistencyExperimentResult():
     def __init__(self, failed_runs: List[FailedExperimentResult]):
         self.failed_runs = failed_runs
 
-        
+@dataclass
+class DBDataset():
+    num_datapoints: int
+    columns: Iterable[str]
+    column_explanations: Iterable[str]
+    column_datatypes: Iterable[str]
+    spreadsheet_path: str
 
 class ExtractJSONException(Exception):
     def __init__(self, response_object, message):
