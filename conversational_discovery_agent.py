@@ -1,3 +1,4 @@
+import json
 import numpy as np
 import traceback
 import polars as pl
@@ -31,11 +32,11 @@ from packages.library_learn import create_ll_prompt, step_write_leap_helper,\
     step_describe_incorrect_programs, step_collect_abstractions, step_collect_programs,\
     format_program_descriptions, parse_library_selection_response
 from packages.constants import SCRATCH_DIR, MY_CACHE_DIR, MY_LOG_DIR, LEAP_CACHE_DIR, DB_ANALYSIS_FAILED, EMPTY_SC_ANSWER
-from packages.db_data_format import load_db_dataframe
+from packages.db_data_format import load_db_dataframe, generate_variable_exploration_prompt
 from packages.agent_dataclasses import ExperimentResult, FailedExperimentResult, CodeRequestPrompt,\
     SynthResultPrompt, CodeExtractionException, CodeRetryException, LongPromptException,\
     SelfConsistencyExperimentResult, FailedSelfConsistencyExperimentResult, ContrastiveProgramExample,\
-    Program
+    Program, DBDataset
 from packages.json_repair import repair_json
 from packages.answer_extract_utils import extract_db_label, extract_db_rationale
 
@@ -59,9 +60,7 @@ def loose_system_prompt():
     return f"{system_prompt}\n" + format_prompt
 
 def retrieve_system_prompt(structure_type, floma_cache="flowmason_cache"):
-    if structure_type == 'dag':
-        return dag_system_prompt(floma_cache)
-    elif structure_type == 'loose':
+    if structure_type == 'loose':
         return loose_system_prompt()
     else:
         raise ValueError("unimplemented system prompt")
@@ -74,12 +73,22 @@ def get_column_descriptions(metadata_path):
     column_explanations = "\n".join([f"{column['name']}: {column['description']}" for column in columns])
     return column_explanations
 
-def get_csv_path(metadata_path):
+def get_column_description_dict(metadata_path) -> Dict[str, Iterable[Tuple[str, str]]]:
+    dataset_to_column_descriptions = []
+    with open(metadata_path, 'r') as file:
+        meta_dataset = json.load(file)
+        for dataset in meta_dataset['datasets']:
+            columns = eval(f"{dataset['datasets'][0]['columns']['raw']}") # List[Dict] contains 'name' and 'description' keys.
+            column_explanations = [(column['name'], column['description']) for column in columns]
+            dataset_to_column_descriptions[dataset['name']] = column_explanations
+    return dataset_to_column_descriptions 
+
+def get_csv_paths(metadata_path) -> List[str]:
     path = os.path.dirname(metadata_path)
     with open(metadata_path, 'r') as file:
         dataset = json.load(file)
-    datapath = f"{path}/{dataset['datasets'][0]['name']}" # path to the csv"
-    return datapath
+    datapaths = [f"{path}/{dataset['datasets'][i]['name']}" for i in range(len(dataset['datasets']))]
+    return datapaths
 
 def construct_first_message(dataset_path, 
                             query, 
@@ -88,8 +97,8 @@ def construct_first_message(dataset_path,
                             explore_first = False):
     # TODO load the columns dataset_description = f"Consider the dataset at {dataset_path}. It contains the following columns: {columns}."
     # get the path containing the dataset
-    column_explanations = get_column_descriptions(dataset_path)
-    csv_path = get_csv_path(dataset_path)
+    column_explanations = get_column_descriptions(dataset_path) # Dict[str, Iterable[Tuple[str, str]]]
+    csv_path = get_csv_paths(dataset_path) # List[str]
     query_expanded = f"'{query}'"
     query_expanded = query_expanded + f" Here are the explanations of the columns in the dataset:\n\n{column_explanations}\n"
     if structure_type == 'dag':
@@ -133,6 +142,8 @@ def generate_exploration_prompt(metadata_path, query):
           " Make sure to obtain summary statistics or view a few random samples (or both), rather than printing all of the data in a column (which may flood the console)." +\
           " Write some code to perform this exploration. Do not try to answer the question yet. Don't draw any plots and don't use df.info."
     return init_message
+
+            
 
 def qrdata_generate_exploration_prompt(qrdata_block: Dict):
     # the qrdata block is a dictionary containing the following:
@@ -259,87 +270,6 @@ def parse_floma_step_impls(code_block: str) -> List[str]:
         functions.append('\n'.join(current_function))
     return functions
 
-def parse_floma_dag(code_block) -> str: # extract the OrderedDict and return it as a string
-    # find the index of the line where an OrderedDict is defined. It wont' necessarily be called step_dict
-    start = code_block.find("OrderedDict()")
-    line_num = code_block.count("\n", 0, start)
-    # count the number of characters in the code block up to line_num
-    pre_dag_defn = "\n".join(code_block.split("\n")[:line_num])
-    start = len(pre_dag_defn)
-
-    # get the variable name of that OrderedDict
-    var_name = code_block.split("\n")[line_num].split("=")[0].strip()
-
-    # find the final assignment to the OrderedDict, represented by the variable name.
-    last_line_num = 0
-    curr_line = 0
-    for line in code_block.split("\n"):
-        if var_name in line and '=' in line:
-            last_line_num = curr_line
-        curr_line += 1
-            
-    final_assignment_position = len("\n".join(code_block.split("\n")[:last_line_num]))
-    # go to the end of that final assignment
-    end = code_block.find("})", final_assignment_position)
-    end = final_assignment_position
-    dag = code_block[start:end+1]
-    # remove any prefix newlines
-    dag = dag.lstrip()
-    # for any assignment statement lines, remove the leading whitespace
-    dag = '\n'.join([
-        line.lstrip() if ('=' in line or '})' in line) else line for line in dag.split('\n')
-    ])
-    # remove any standalone newlines
-    dag = dag.replace("\n\n", "\n").rstrip()
-    return dag
-
-def _store_successful_floma_dag(dataset_name: str, query: str, first_response: str):
-    floma_dag = parse_floma_dag(first_response) # str
-    floma_steps = parse_floma_step_impls(first_response) # List[str]
-    path = f"{SCRATCH_DIR}/{dataset_name}_db_traces"
-    if not os.path.exists(path):
-        os.makedirs(path)
-    # check if the query_dags.json file exists.
-    # if it does, then read it into memory and append the new floma_dag to it.
-    # if it doesn't, then create it and write the floma_dag to it.
-    # the file should be a json file with the following structure:
-    # [
-        #{
-#           "query": query,
-#           "floma_dag": floma_dag,
-#           "floma_steps": floma_steps
-        #} 
-    # ]
-    if os.path.exists(f"{path}/query_dags.json"):
-        with open(f"{path}/query_dags.json", 'r') as file:
-            data = json.load(file)
-        data.append({
-            "query": query,
-            "floma_dag": floma_dag,
-            "floma_steps": floma_steps
-        })
-        with open(f"{path}/query_dags.json", 'w') as file:
-            json.dump(data, file)
-    else:
-        with open(f"{path}/query_dags.json", 'w') as file:
-            json.dump([{
-                "query": query,
-                "floma_dag": floma_dag,
-                "floma_steps": floma_steps
-            }], file)
-    logger.info(f"Successfully stored the floma_dag for the query: {query} for the dataset: {dataset_name}")
-
-def retrieve_past_dags(dataset_name: str) -> List:
-    path = f"{SCRATCH_DIR}/{dataset_name}_db_traces"
-    if os.path.exists(f"{path}/query_dags.json"):
-        with open(f"{path}/query_dags.json") as f:
-            past_traces = json.load(f)
-        past_queries = [trace['query'] for trace in past_traces]
-        logger.info(f"Retrieved past queries for dataset: {dataset_name}. The past queries are: {past_queries}")
-        return past_traces
-    else:
-        return []
-
 def prompt_for_code_w_error_history(
         prior_implementations: List[str],
         prior_tracebacks: List[str],
@@ -365,7 +295,8 @@ def process_code_step(history: List[Dict[str, str]],
                             user_code_prompt, 
                             workflow_i: int,
                             current_code: str = "",
-                            num_retries = 3) -> str:
+                            num_retries = 3, 
+                            oai_model: str = "gpt-4") -> str:
     messages = history.copy()
 
     successful_execution = False
@@ -381,9 +312,9 @@ def process_code_step(history: List[Dict[str, str]],
                                                                                     user_code_prompt)})
         try:
             response = client.chat.completions.create(
-                model="gpt-4",
+                model=oai_model,
                 messages=messages,
-                max_tokens=2000
+                max_tokens=3000
             )
         except openai.BadRequestError as e:
             assert "Please reduce the length" in e.message or "string too long" in e.message, ipdb.set_trace()
@@ -436,7 +367,7 @@ def process_regular_prompt(history: List[Dict[str, str]],
     messages = history.copy()
     messages.append({"role": "user", "content": prompt})
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-4o",
         messages=messages,
         max_tokens=2000
     )
@@ -448,7 +379,8 @@ def process_regular_prompt(history: List[Dict[str, str]],
             'num_response_tokens': num_response_tokens}
 
 def process_workflow(system_prompt: str, 
-                     workflow: List): 
+                     workflow: List, 
+                     oai_model: str = "gpt-4") -> List[Dict]: 
     messages = [{"role": "system", "content": system_prompt}]
     execution_results = []
     workflow_results = []
@@ -463,7 +395,7 @@ def process_workflow(system_prompt: str,
         workflow_step = workflow[i]
         if isinstance(workflow_step, CodeRequestPrompt):
             try:
-                result_dict = process_code_step(messages, workflow_step.prompt, i, "\n\n".join(all_code_snippets), num_retries=3)
+                result_dict = process_code_step(messages, workflow_step.prompt, i, "\n\n".join(all_code_snippets), num_retries=3, oai_model=oai_model)
             except openai.BadRequestError as e:
                 raise LongPromptException(workflow_results, i, e.message, [], [])
             except openai.RateLimitError as e:
@@ -497,7 +429,7 @@ def process_workflow(system_prompt: str,
                 )
             if workflow_step.is_code_req:
                 try:
-                    result_dict = process_code_step(messages, prompt, i, "\n\n".join(all_code_snippets), num_retries=3)
+                    result_dict = process_code_step(messages, prompt, i, "\n\n".join(all_code_snippets), num_retries=3, oai_model=oai_model)
                 except openai.BadRequestError as e:
                     raise LongPromptException(workflow_results, i, e.message)
                 except openai.RateLimitError as e:
@@ -604,118 +536,6 @@ def _extract_response_db(response):
     response = response[response_index + len(response_kw):].strip()
     return response
 
-# def _extract_json(orig_response):
-#     # the response might be of the form 
-#     # ```json
-#     # {
-#     # ...
-#     # }
-#     # or just the json object itself.
-#     response = orig_response.replace("\n", "")
-#     final_response = response
-#     try:
-#         if response.startswith("`{"):
-#             response = response[1:-1]
-#             final_response = response
-#         elif "```" not in response:
-#             response = response.strip()
-#             assert response.startswith("{") and response.endswith("}"), ipdb.set_trace()
-#             final_response = response
-#         else:
-#             if response.startswith("```") and not response.endswith("```"): # see test case 2 for this function
-#                 response = response + "```"
-#             # find the second last occurrence of ``` in the response, since the last one is the closing backticks.
-#             # s[:s.rfind("b")].rfind("b")
-#             index = response.rfind("```", 0, response.rfind("```"))
-#             response = response[index:]
-#             ipdb.set_trace()
-#             if "=" in response[index:]:
-#                 index = response.find("{")
-#                 end_index = response.rfind("}")
-#                 final_response = response[index:end_index+1]
-#             if response.startswith("```json"):
-#                 start = response.find("```json") + len("```json")
-#                 if response.endswith("```"):
-#                     end = response.rfind("```")
-#                     end = response.find("```", start)
-#                 else:
-#                     end = response.find("}") + 1
-#                 final_response = response[start:end]
-#             elif response.startswith("```python"):
-#                 start = response.find("```python") + len("```python")
-#                 end = response.find("```", start)
-#                 final_response = response[start:end]
-#             elif response.startswith("```{"):
-#                 start = response.find("```") + len("```")
-#                 end = response.find("```", start)
-#                 final_response = response[start:end]
-#             else:
-#                 ipdb.set_trace()
-#     except Exception as e:
-#         logger.error(f"Error occurred: {e}.")
-#         # TODO: try printing the stacktrace?
-#         raise ExtractJSONException(response, "Error occurred during JSON extraction.")
-#     try:
-#         return eval(final_response)
-#     except Exception as e:
-#         logger.error(f"Error occurred: {e}.")
-#         ipdb.set_trace()
-#         raise ExtractJSONException(final_response, "Error occurred during eval call.")
-def _extract_json(orig_response):
-    try:
-        start = orig_response.find("{")
-        end = orig_response.rfind("}")
-        
-        if start == -1 or end == -1:
-            raise ExtractJSONException(orig_response, "JSON object not found in the response.")
-        
-        json_str = orig_response[start:end+1]
-        json_str = json_str.replace("\n", "").strip()
-        return eval(json_str)
-    
-    except Exception as e:
-        logger.error(f"Error occurred: {e}.")
-        raise ExtractJSONException(orig_response, "Error occurred during JSON extraction.")
-
-
-# def _extract_json(orig_response):
-#     response = orig_response.replace("\n", "").strip()
-    
-#     try:
-#         # Handle raw JSON string
-#         if response.startswith("{") and response.endswith("}"):
-#             final_response = response
-        
-#         # Handle JSON enclosed in triple backticks
-#         elif "```" in response:
-#             # Ensure closing backticks
-#             if response.startswith("```") and not response.endswith("```"):
-#                 response += "```"
-            
-#             # Extract content between the first and last triple backticks
-#             start_index = response.find("```")
-#             end_index = response.rfind("```")
-#             final_response = response[start_index + 3:end_index].strip()
-            
-#             # Remove language indicators if present (e.g., ```json)
-#             for lang in ["json", "python"]:
-#                 if final_response.startswith(lang):
-#                     final_response = final_response[len(lang):].strip()
-        
-#         # Handle JSON enclosed in single backticks
-#         elif response.startswith("`{") and response.endswith("}`"):
-#             final_response = response[1:-1]
-        
-#         else:
-#             raise ExtractJSONException(response, "Unable to extract JSON")
-        
-#         return json.loads(final_response)
-    
-#     except Exception as e:
-#         logger.error(f"Error occurred: {e}.")
-#         raise ExtractJSONException(response, "Error occurred during JSON extraction.")
-
-
 def build_experiment_result_qrdata(execution_results, answer_dict) -> ExperimentResult:
     total_prompt_tokens = sum([result['total_prompt_tokens'] for result in execution_results])
     total_response_tokens = sum([result['total_response_tokens'] for result in execution_results])
@@ -739,9 +559,10 @@ def build_experiment_result_db(execution_results, claim) -> ExperimentResult:
                             num_errors=total_errors)
 
 def execute_pass_db(workflow, structure_type, floma_cache, 
-                    library_programs: Optional[Iterable[Program]] = None) -> ExperimentResult:
+                    library_programs: Optional[Iterable[Program]] = None, 
+                    oai_model: str = "gpt-4") -> ExperimentResult:
     try:
-        execution_results = process_workflow(retrieve_system_prompt(structure_type, floma_cache), workflow)
+        execution_results = process_workflow(retrieve_system_prompt(structure_type, floma_cache), workflow, oai_model=oai_model)
         clear_dir(f"scratch/{floma_cache}")
         answer = _extract_response_db(execution_results[-1]['response'])
         return build_experiment_result_db(execution_results, answer)
@@ -969,6 +790,8 @@ def complete_pass_db(dataset_path, query,
                      nl_workflow: Optional[str] = None, 
                      failure_memories: Optional[Iterable[str]] = None,
                      library_programs: Optional[Iterable[Program]] = None,
+                     use_variable_filtered_exploration: Optional[bool] = False,
+                     oai_model: Optional[str] = "gpt-4",
                      **kwargs):
     if nl_workflow:
         assert failure_memories is not None, ipdb.set_trace()
@@ -990,18 +813,26 @@ def complete_pass_db(dataset_path, query,
             " of any statistical significance tests (if applicable)." +\
             (f"Consider using or adapting any of the following helper functions: {library_programs}" if library_programs else "") +\
             f"to answer the query '{query}"
-        exploration_step = generate_exploration_prompt(dataset_path, query)
         rev_second_prompt_template = lambda exec_result: f"The output of the previous code is:" +\
             f"\n{exec_result}\n\nBased on this analysis output, what is your answer for the query '{query}'?" +\
             f"Ground your answer in the context of the analysis (including any metrics and statistical significance tests)." +\
             f"Keep your response short and to the point (1-3 sentences). Start your response with 'RESPONSE:'"
+        if use_variable_filtered_exploration:
+            exploration_step = generate_variable_exploration_prompt(dataset_path, query)
+        else:
+            exploration_step = generate_exploration_prompt(dataset_path, query)
         workflow = [
                     CodeRequestPrompt(exploration_step), 
                     SynthResultPrompt(exploration_passback, True), 
                     SynthResultPrompt(rev_second_prompt_template, False)
                     ]
     else:
-        exploration_step = generate_exploration_prompt(dataset_path, query)
+        # TODO: fill this in.
+        # variable_selection_step = generate_variable_selection_prompt(dataset_path, query)
+        if use_variable_filtered_exploration:
+            exploration_step = generate_variable_exploration_prompt(dataset_path, query)
+        else:
+            exploration_step = generate_exploration_prompt(dataset_path, query)
         exploration_passback = lambda exploration_result: f"The output of the previous code is:\n{exploration_result}\n\n" +\
             f"Now, considering the query '{query}'," +\
             f"would you use or adapt any of the following helper functions?\n\n{format_program_descriptions(library_programs)}\n\n" +\
@@ -1013,12 +844,13 @@ def complete_pass_db(dataset_path, query,
             f"Ground your answer in the context of the analysis (including any metrics and statistical significance tests)." +\
             f"Keep your response short and to the point (1-3 sentences). Start your response with 'RESPONSE:'"
         workflow = [
-                    CodeRequestPrompt(exploration_step), # request agent to explore the dataframe
+                    CodeRequestPrompt(exploration_step),
                     SynthResultPrompt(exploration_passback, False),  # request agent to select library function(s)
                     SynthResultPrompt(partial(parse_library_selection_response, query, library_programs), True, True),  # request agent to write the analysis 
                     SynthResultPrompt(analysis_interpretation_template, False) # agent interprets the execution output from the analysis code
                     ]
-    experiment_result = execute_pass_db(workflow, structure_type, "flowma_cache")
+    # TODO: the library usage is encoded in the workflow, so we don't need it a an argument for execute_pass_db, I think.
+    experiment_result = execute_pass_db(workflow, structure_type, "flowma_cache", oai_model=oai_model)
     return experiment_result
 
 # @click.command()
@@ -1037,23 +869,25 @@ def analyze_db_dataset(dataset_path: str, query: str,
                     self_consistency: bool,
                     generate_sc_answer: Optional[str] = True,
                     library_programs: Optional[Iterable[Program]] = None,
+                    use_variable_filtered_exploration: bool = False,
+                    oai_model: Optional[str] = "gpt-4",
                     **kwargs) -> Union[ExperimentResult, FailedExperimentResult, SelfConsistencyExperimentResult]:
-    # qr_dataset =  
-    # the workflow is a list of the form [str, Function[str] -> str, Function[str] -> str, ...]
-    # past_traces = retrieve_past_dags(extract_dataset_name(dataset_path))
-    # identify the workflow to use:
-    # if past_traces and not add_exploration_step:
-    # if add_exploration_step:
-    #     first_message = construct_first_message(dataset_path, query, structure_type, past_traces)
     if not self_consistency:
-        return complete_pass_db(dataset_path, query, structure_type, generate_visual, add_exploration_step, self_consistency, library_programs=library_programs, **kwargs)
+        return complete_pass_db(dataset_path, query, structure_type, generate_visual, add_exploration_step, self_consistency, 
+                                use_variable_filtered_exploration=use_variable_filtered_exploration,
+                                library_programs=library_programs, oai_model=oai_model,
+                                **kwargs)
     else:
         final_analyses = []
         sc_runs = []
         SELF_CONSISTENCY_ITERS = 5
         for _ in range(SELF_CONSISTENCY_ITERS):
             logger.info(f"Starting self-consistency iteration {_}.")
-            experiment_result = complete_pass_db(dataset_path, query, structure_type, generate_visual, add_exploration_step, self_consistency, library_programs=library_programs, **kwargs)
+            experiment_result = complete_pass_db(dataset_path, query, structure_type, generate_visual, add_exploration_step, self_consistency, 
+                                                 library_programs=library_programs, 
+                                                 use_variable_filtered_exploration=use_variable_filtered_exploration,
+                                                 oai_model=oai_model,
+                                                 **kwargs)
             if hasattr(experiment_result, 'workflow'): # this is how you know it succeeded.
                 # execution_results = process_workflow(retrieve_system_prompt(structure_type), workflow)
                 # final_analysis = execution_results[-1]['response']
@@ -1419,6 +1253,8 @@ def step_provide_supervision_on_incorrect(
                                           self_consistency: bool,
                                           workflow: str,
                                           generate_sc_answer: bool,
+                                          use_variable_filtered_exploration: bool = False,
+                                          oai_model: str = "gpt-4",
                                           **kwargs):
     if len(failure_memories) == 0:
         return -1 
@@ -1428,7 +1264,9 @@ def step_provide_supervision_on_incorrect(
                                                 add_exploration_step, self_consistency,
                                                 generate_sc_answer=generate_sc_answer,
                                                 nl_workflow=workflow, 
-                                                failure_memories=failure_memories)
+                                                failure_memories=failure_memories, 
+                                                use_variable_filtered_exploration=use_variable_filtered_exploration,
+                                                oai_model=oai_model)
         return workflow_hint_result
 
 @click.command()
@@ -1614,15 +1452,20 @@ def step_compute_metrics_table(num_train_queries: int, num_test_queries: int,
                                no_lib_test_experiment_results: Iterable[Tuple[ExperimentResult, Dict]],
                                **kwargs): 
     num_correct_first_try = sum([s[-1] == 'first_try' for s in library_subroutines])
-    num_correct_with_supervision = sum([s[-1] == 'resample_with_supervision' for s in library_subroutines])
+    num_correct_with_supervision = sum([s[-1] == 'resampled_with_supervision' for s in library_subroutines])
+    ipdb.set_trace()
     logger.info(f"Number of training examples correct on first round of samples: {num_correct_first_try}/{num_train_queries}")
     logger.info(f"Number of training examples correct after resampling with supervision: {num_correct_with_supervision}/{num_train_queries}")
 
     num_correct_lib = sum([extract_db_label(summary[1]) in ['PRT_SUPP', 'SUPP'] for summary in lib_test_experiment_results]) 
-    num_correct_no_lib = sum([extract_db_label(summary[1]) in ['PRT_SUPP', 'SUPP'] for summary in no_lib_test_experiment_results])
+    num_correct_no_lib = sum([extract_db_label(summary[1]) in [ 'PRT_SUPP', 'SUPP'] for summary in no_lib_test_experiment_results])
     logger.info(f"Number of test examples correct with library: {num_correct_lib}/{num_test_queries}")
     logger.info(f"Number of test examples correct without library: {num_correct_no_lib}/{num_test_queries}")
-    ipdb.set_trace()
+
+    number_of_lack_info_lib = sum([extract_db_label(summary[1]) == 'FAIL' for summary in lib_test_experiment_results])
+    number_of_lack_info_no_lib = sum([extract_db_label(summary[1]) == 'FAIL' for summary in no_lib_test_experiment_results])
+    logger.info(f"Number of examples that lacked information with library: {number_of_lack_info_lib}/{num_test_queries}")
+    logger.info(f"Number of examples that lacked information without library: {number_of_lack_info_no_lib}/{num_test_queries}")
 
 @click.command()
 @click.option('--structure-type',
@@ -1695,17 +1538,26 @@ def execute_discovery_bench_map_dict(structure_type: bool,
 @click.option('--structure-type',
                 type=click.Choice(['loose', 'functions', 'dag'], case_sensitive=False))
 @click.option('--add_exploration_step', is_flag=True, help='Have the agent first explore the univariate distributions of the dataset.')
-def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
-    # frame = construct_db_dataset_frame(dataset_path, "db_unsplit/answer_key_real.csv")
-    frame = construct_db_dataset_frame(dataset_path, "db_unsplit/answer_key_nls_bmi.csv")
+@click.option('--use_variable_filtered_exploration', is_flag=True, help='Have the agent first explore the univariate distributions of the dataset.')
+@click.option('--oai_model', type=click.Choice(['gpt-4', 'gpt-4o']))
+@click.option('--answer_key_path', type=str, default="db_unsplit/answer_key_real.csv")
+def execute_leap(dataset_path: str, structure_type: str, 
+                use_variable_filtered_exploration: bool,
+                 add_exploration_step: bool,
+                 oai_model: str,
+                 answer_key_path: str):
+    frame = construct_db_dataset_frame(dataset_path, answer_key_path)
+    # frame = construct_db_dataset_frame(dataset_path, "db_unsplit/answer_key_nls_bmi.csv")
     train_frame = frame.filter(pl.col('is_test')==False)
     test_frame = frame.filter(pl.col('is_test')==True)
     ll_steps_dict = OrderedDict()
     mapreduce_dict = OrderedDict()
     mapreduce_dict['step_sample_analyses'] = SingletonStep(analyze_db_dataset, {  # generate N samples.
-        "version": "002",
+        "version": "004",
         'self_consistency': True, 
-        'generate_sc_answer': False
+        'generate_sc_answer': False,
+        'use_variable_filtered_exploration': use_variable_filtered_exploration, 
+        'oai_model': oai_model
     })
     mapreduce_dict['step_evaluate_samples'] = SingletonStep(step_evaluate_claim, { # evaluate each sample for whether it is correct or not.  N entailment labels 
         "experiment_result": 'step_sample_analyses',
@@ -1717,18 +1569,16 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
         'sample_labels': 'step_evaluate_samples',
         'version': '003'
     })
-    # mapreduce_dict['step_generate_abstracted_programs'] = SingletonStep(step_generate_abstracted_programs, { # TODO: need to postprocess so that they are ready to be added to the library
-
-    # })
     mapreduce_dict['step_generate_program_summaries_for_incorrect_samples'] = SingletonStep(step_describe_incorrect_programs, {
         'analysis_samples': 'step_sample_analyses',
         'sample_labels': 'step_evaluate_samples',
         'version': '006'
     })
-    # TODO: only for samples where all the questions were incorrect.
     mapreduce_dict['step_resample_analyses_with_memory'] = SingletonStep(step_provide_supervision_on_incorrect, { 
         'failure_memories': 'step_generate_program_summaries_for_incorrect_samples',
         'self_consistency': True, 
+        'oai_model': oai_model,
+        'use_variable_filtered_exploration': use_variable_filtered_exploration,
         'generate_sc_answer': False, 
         'version': '001'
     })
@@ -1740,7 +1590,7 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
     mapreduce_dict['step_generate_abstractions_for_resamples'] = SingletonStep(step_write_standard_abstraction, {
         'analysis_samples': 'step_resample_analyses_with_memory',
         'sample_labels': 'step_evaluate_resampled_analyses',
-        'version': '002'
+        'version': '003'
     })
     mapreduce_dict['step_collect_abstractions'] = SingletonStep(step_collect_abstractions, {
         'first_try_abstractions': 'step_generate_abstraction_responses',
@@ -1767,8 +1617,10 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
     })
     evaluation_mapreduce_dict = OrderedDict()
     evaluation_mapreduce_dict['step_complete_pass_w_library'] = SingletonStep(analyze_db_dataset, { 
-        "version": "012",
-        'library_programs': 'collect_programs'
+        "version": "013",
+        'library_programs': 'collect_programs',
+        'use_variable_filtered_exploration': use_variable_filtered_exploration,
+        'oai_model': oai_model
     })
     evaluation_mapreduce_dict['step_evaluate_analysis_w_library'] = SingletonStep(step_evaluate_claim, {
         "experiment_result": 'step_complete_pass_w_library',
@@ -1796,7 +1648,9 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
     )
     evaluation_no_library_dict = OrderedDict()
     evaluation_no_library_dict['step_complete_pass_no_library'] = SingletonStep(analyze_db_dataset, {
-        'version': '002',
+        'version': '003',
+        'use_variable_filtered_exploration': use_variable_filtered_exploration, 
+        'oai_model': oai_model
     })
     evaluation_no_library_dict['step_evaluate_analysis_no_library'] = SingletonStep(step_evaluate_claim, {
         "experiment_result": 'step_complete_pass_no_library',
@@ -1831,9 +1685,9 @@ def execute_leap(dataset_path: str, structure_type, add_exploration_step: bool):
         'version': '001'
     })
     run_metadata = conduct(LEAP_CACHE_DIR, ll_steps_dict, MY_LOG_DIR)
+    # program_summaries = load_artifact_with_step_name(run_metadata, 'map_reduce_contrastive_program_generation')
+    # test_no_lib_examples = load_artifact_with_step_name(run_metadata, 'map_reduce_test_no_library')
     ipdb.set_trace()
-    # TODO: print out the table of the results.
-    # incorrect_program_summaries = load_artifact_with_step_name(run_metadata, 'map_reduce_test_no_library')
     # 1. What is the main reason behind why one sample is incorrect but the other incorrect?
     # 2. Write a helper function that will help follow the reasoning of the correct program and thus avoid the incorrect program.
     # mapreduce_dict['']
