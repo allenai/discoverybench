@@ -502,7 +502,6 @@ def measure_library_usage(dataset_programs: Iterable[Program],
         function_names = get_selected_function_names(selected_program_indices)
 
         analysis_code = extract_code(analysis.workflow[-2]['response'])
-        analysis_code.count(function_names[1])
         for function_name in function_names:
             total_occurrences += analysis_code.count(function_name) - analysis_code.count(f"def {function_name}") # don't count the function definition
 
@@ -511,6 +510,7 @@ def measure_library_usage(dataset_programs: Iterable[Program],
                 no_lib_evaluation = eval(repair_json(load_pkl(no_lib_evaluation_obj)['agent_response']))['label']
                 if no_lib_evaluation in ['FAIL', 'LACK_INFO', 'REFUTE']:
                     logger.info(f"Divergent labels for {query}")
+                    ipdb.set_trace()
             except TypeError as e:
                 continue
                 # ipdb.set_trace()

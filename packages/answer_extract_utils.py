@@ -1,9 +1,13 @@
+import loguru
 import ipdb
 
 from .constants import DB_ANALYSIS_FAILED
 from typing import Dict, Union
 from .json_repair import repair_json
 
+from .agent_dataclasses import CodeExtractionException
+
+logger = loguru.logger
 def extract_db_label(claim_evaluation: Union[str, Dict[str, str]]):
     if isinstance(claim_evaluation, str) and claim_evaluation in DB_ANALYSIS_FAILED:
         return "FAIL"
@@ -31,7 +35,8 @@ def extract_code(response):
     try:
         response = response[response.index("```"): ]
     except ValueError:
-        logger.error(f"``` backticks not found")
+        ipdb.set_trace()
+        logger.error(f"``` backticks not found; response: {response}")
         raise CodeExtractionException("``` backticks not found", "n/a", "n/a")
     if response.startswith("```python"):
         start = response.find("```python") + len("```python")
