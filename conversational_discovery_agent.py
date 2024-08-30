@@ -19,7 +19,8 @@ from dotenv import load_dotenv
 import sys
 import pdb
 from openai import OpenAI
-from flowmason import conduct, load_artifact_with_step_name, SingletonStep, MapReduceStep
+from flowmason import conduct, load_artifact_with_step_name,\
+      SingletonStep, MapReduceStep, get_all_files_in_metadata
 from collections import OrderedDict, Counter 
 from typing import List, Dict, Optional
 import click
@@ -1690,15 +1691,16 @@ def execute_leap(dataset_path: str, structure_type: str,
         'version': '001'
     })
     run_metadata = conduct(LEAP_CACHE_DIR, ll_steps_dict, MY_LOG_DIR)
-    query_index = 0
-    def load_pkl(path):
-        with open(path, 'rb') as file:
-            return dill.load(file)
-    measure_library_usage(load_pkl(run_metadata[1][1]['cache_path']), 
-                          run_metadata[2][1],
-                          run_metadata[3][1])
-    program_summaries = load_artifact_with_step_name(run_metadata, 'collect_programs')
+    # query_index = 0
+    # def load_pkl(path):
+    #     with open(path, 'rb') as file:
+    #         return dill.load(file)
+    # measure_library_usage(load_pkl(run_metadata[1][1]['cache_path']), 
+    #                       run_metadata[2][1],
+    #                       run_metadata[3][1])
+    # program_summaries = load_artifact_with_step_name(run_metadata, 'collect_programs')
     # test_no_lib_examples = load_artifact_with_step_name(run_metadata, 'map_reduce_test_no_library')
+    get_all_files_in_metadata(run_metadata)
     ipdb.set_trace()
     # 1. What is the main reason behind why one sample is incorrect but the other incorrect?
     # 2. Write a helper function that will help follow the reasoning of the correct program and thus avoid the incorrect program.
@@ -1751,6 +1753,7 @@ def run_individual_sc_query(db_dataset, query, gold_hypothesis):
         'version': '001'
     })
     run_metadata = conduct(INDIVIDUAL_QUERY_DIR, step_dict, MY_LOG_DIR)
+    sampled_analyses = load_artifact_with_step_name(run_metadata, 'step_sample_analyses')
     abstractions = load_artifact_with_step_name(run_metadata, 'step_generate_abstraction_responses')
     labels = load_artifact_with_step_name(run_metadata, 'step_evaluate_samples')
     ipdb.set_trace()
