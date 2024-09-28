@@ -1,6 +1,6 @@
 import click
 import json
-from eval.eval import run_eval_gold_vs_gen_NL_hypo_workflow
+from eval.new_eval import run_eval_gold_vs_gen_NL_hypo_workflow
 
 
 def validate_query(ctx, param, query: str):

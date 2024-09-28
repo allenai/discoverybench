@@ -1,0 +1,1134 @@
+{
+    "query": "How strongly does BA degree completion vary with socioeconomic status?",
+    "HypoA": "Socioeconomic status (SES) is a significant predictor of BA degree completion. SES has a positive relationship with college degree completion with a coefficient of 0.4729.,",
+    "WorkflowA": "OLS Regression",
+    "HypoB": "The analysis of the relationship between socioeconomic status (SES) and BA degree completion using     logistic regression suggests that higher socioeconomic status is associated with an increased likelihood of completing     a BA degree. However, the model's limitations in predicting BA degree completions accurately indicate that SES alone     may not fully explain BA degree completion rates. The formulated hypothesis suggests that while there is a positive     relationship between SES and BA degree completion, additional factors not captured in this analysis likely influence     this outcome. Further research incorporating more variables and possibly more complex models is recommended to fully     understand the determinants of BA degree completion.",
+    "WorkflowB": "1. **Load the Dataset**: The dataset nls_ses_processed.csv was successfully loaded, providing an     overview of its structure, including relevant variables like SES and BA DEGREE COMPLETED.\n    2.**Data Exploration**: The dataset was explored to understand its structure, revealing no missing values in the key     variables of interest (SES and BA DEGREE COMPLETED) and providing summary statistics.\n    3. **Data Preprocessing**: It was determined that no extensive preprocessing was needed beyond the initial exploration,     as there were no missing values in the key variables.\n    4. **Statistical Analysis**: Logistic regression was performed to analyze the relationship between socioeconomic status     (SES) and BA degree completion (BA DEGREE COMPLETED). The analysis revealed a positive coefficient for SES,     suggesting an increase in the likelihood of completing a BA degree with higher socioeconomic status. However,     the models predictive performance was limited, particularly in predicting BA degree completions.\n    5. **Hypothesis Formulation**: Based on the statistical analysis, a hypothesis was formulated stating that while the     likelihood of completing a BA degree increases with higher socioeconomic status, SES alone may not be a sufficient     predictor of BA degree completion, indicating the need for further research incorporating additional variables.",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Socioeconomic status (SES) is a significant predictor of BA degree completion with a positive relationship.",
+                "context": "This dataset contains social background factors and academic resources at the time of secondary school graduation for the participants of the NLS.",
+                "variables": [
+                    "SES",
+                    "BA DEGREE COMPLETED"
+                ],
+                "relations": "Positive relationship with a coefficient of 0.4729",
+                "explanation": "The sub-hypothesis focuses on the connection between SES and BA degree completion as indicated by the correlation coefficient from the OLS Regression analysis."
+            }
+        ],
+        "full_hypo": "Socioeconomic status (SES) is a significant predictor of BA degree completion. SES has a positive relationship with college degree completion with a coefficient of 0.4729.,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Higher socioeconomic status is associated with an increased likelihood of completing a BA degree.",
+                "context": "The context of this study includes participants of the NLS that have data recorded on social background factors and academic resources at the time of secondary school graduation.",
+                "variables": [
+                    "SES",
+                    "BA DEGREE COMPLETED"
+                ],
+                "relations": "Positive relationship",
+                "explanation": "This sub-hypothesis is based on the logistic regression analysis indicating a positive coefficient between SES and the likelihood of completing a BA degree."
+            }
+        ],
+        "full_hypo": "The analysis of the relationship between socioeconomic status (SES) and BA degree completion using     logistic regression suggests that higher socioeconomic status is associated with an increased likelihood of completing     a BA degree. However, the model's limitations in predicting BA degree completions accurately indicate that SES alone     may not fully explain BA degree completion rates. The formulated hypothesis suggests that while there is a positive     relationship between SES and BA degree completion, additional factors not captured in this analysis likely influence     this outcome. Further research incorporating more variables and possibly more complex models is recommended to fully     understand the determinants of BA degree completion."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": 0
+    },
+    "gold_subh_covered": [
+        0
+    ],
+    "matched_gold_gen_subh_evals": {
+        "P0||G0": {
+            "query": "How strongly does BA degree completion vary with socioeconomic status?",
+            "HypoA": "Socioeconomic status (SES) is a significant predictor of BA degree completion. SES has a positive relationship with college degree completion with a coefficient of 0.4729.,",
+            "WorkflowA": "OLS Regression",
+            "HypoB": "The analysis of the relationship between socioeconomic status (SES) and BA degree completion using     logistic regression suggests that higher socioeconomic status is associated with an increased likelihood of completing     a BA degree. However, the model's limitations in predicting BA degree completions accurately indicate that SES alone     may not fully explain BA degree completion rates. The formulated hypothesis suggests that while there is a positive     relationship between SES and BA degree completion, additional factors not captured in this analysis likely influence     this outcome. Further research incorporating more variables and possibly more complex models is recommended to fully     understand the determinants of BA degree completion.",
+            "WorkflowB": "1. **Load the Dataset**: The dataset nls_ses_processed.csv was successfully loaded, providing an     overview of its structure, including relevant variables like SES and BA DEGREE COMPLETED.\n    2.**Data Exploration**: The dataset was explored to understand its structure, revealing no missing values in the key     variables of interest (SES and BA DEGREE COMPLETED) and providing summary statistics.\n    3. **Data Preprocessing**: It was determined that no extensive preprocessing was needed beyond the initial exploration,     as there were no missing values in the key variables.\n    4. **Statistical Analysis**: Logistic regression was performed to analyze the relationship between socioeconomic status     (SES) and BA degree completion (BA DEGREE COMPLETED). The analysis revealed a positive coefficient for SES,     suggesting an increase in the likelihood of completing a BA degree with higher socioeconomic status. However,     the models predictive performance was limited, particularly in predicting BA degree completions.\n    5. **Hypothesis Formulation**: Based on the statistical analysis, a hypothesis was formulated stating that while the     likelihood of completing a BA degree increases with higher socioeconomic status, SES alone may not be a sufficient     predictor of BA degree completion, indicating the need for further research incorporating additional variables.",
+            "var": {
+                "question": "        Question: For both HypoA and HypoB, what are the different variables found in the hypotheses?         Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"sizeA\": num of variables used in HypoA\n        \"sizeB\": num of variables used in HypoB\n        \"intersection\": num of variables common in HypoA and HypoB. Use *fuzzy matching* to determine intersection, accounting for paraphrases or slightly different surface forms\n        \"explanation\": a short text explanation about the variables\n        }}```\n        Answer:",
+                "answer": "{\n\"sizeA\": 2,\n\"sizeB\": 2,\n\"intersection\": 2,\n\"explanation\": \"Both HypoA and HypoB mention the same two variables: socioeconomic status (SES) and BA degree completion. Despite the different analytical approaches (OLS Regression for HypoA and Logistic Regression for HypoB), the core variables under investigation remain the same.\"\n}",
+                "score": {
+                    "p": 1.0,
+                    "r": 1.0,
+                    "f1": 1.0,
+                    "sizeA": 2,
+                    "sizeB": 2,
+                    "intersection": 2,
+                    "explanation": "Both HypoA and HypoB mention the same two variables: socioeconomic status (SES) and BA degree completion. Despite the different analytical approaches (OLS Regression for HypoA and Logistic Regression for HypoB), the core variables under investigation remain the same."
+                }
+            },
+            "rel": {
+                "question": "        Question: Does HypoB exhibit the same relation as HypoA?\n        Compare using following example hierarchy of relationships (based on specificity):         \"there exists a relationship\" > \"positive relationship\" > \"positive AND (linear OR quadratic)\" > \"positive AND linear\".\n        Options: A) very similar B) similar but general than HypoA C) different\n        Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"answer\": one of the options from A) very similar B) similar but general than HypoA C) different\n        \"explanation\": a short text explanation about the relationship comparison\n        }}```\n        Answer:",
+                "answer": "{\n\"answer\": \"B) similar but general than HypoA\",\n\"explanation\": \"Both HypoA and HypoB suggest a positive relationship between socioeconomic status (SES) and BA degree completion. However, HypoA specifies a positive relationship with a coefficient of 0.4729, implying a specific linear relationship, while HypoB suggests a positive relationship without specifying the nature of the relationship as linear or otherwise. Therefore, HypoB is more general than HypoA.\"\n}",
+                "score": 0.5
+            },
+            "context": {
+                "question": "Comapring: GoldH: Socioeconomic status (SES) is a significant predictor of BA degree completion with a positive relationship., GoldC: This dataset contains social background factors and academic resources at the time of secondary school graduation for the participants of the NLS.\nGenH: Higher socioeconomic status is associated with an increased likelihood of completing a BA degree., GenC: The context of this study includes participants of the NLS that have data recorded on social background factors and academic resources at the time of secondary school graduation.",
+                "answer": true,
+                "score": 1.0
+            },
+            "accuracy_score": 0.5
+        }
+    },
+    "recall_context": 1.0,
+    "mean_accuracy_score": 0.5,
+    "final_score": 0.5
+}{
+    "query": "How strongly does BA degree completion vary with socioeconomic status?",
+    "HypoA": "Socioeconomic status (SES) is a significant predictor of BA degree completion. SES has a positive relationship with college degree completion with a coefficient of 0.4729.,",
+    "WorkflowA": "OLS Regression",
+    "HypoB": "The analysis of the relationship between socioeconomic status (SES) and BA degree completion using     logistic regression suggests that higher socioeconomic status is associated with an increased likelihood of completing     a BA degree. However, the model's limitations in predicting BA degree completions accurately indicate that SES alone     may not fully explain BA degree completion rates. The formulated hypothesis suggests that while there is a positive     relationship between SES and BA degree completion, additional factors not captured in this analysis likely influence     this outcome. Further research incorporating more variables and possibly more complex models is recommended to fully     understand the determinants of BA degree completion.",
+    "WorkflowB": "1. **Load the Dataset**: The dataset nls_ses_processed.csv was successfully loaded, providing an     overview of its structure, including relevant variables like SES and BA DEGREE COMPLETED.\n    2.**Data Exploration**: The dataset was explored to understand its structure, revealing no missing values in the key     variables of interest (SES and BA DEGREE COMPLETED) and providing summary statistics.\n    3. **Data Preprocessing**: It was determined that no extensive preprocessing was needed beyond the initial exploration,     as there were no missing values in the key variables.\n    4. **Statistical Analysis**: Logistic regression was performed to analyze the relationship between socioeconomic status     (SES) and BA degree completion (BA DEGREE COMPLETED). The analysis revealed a positive coefficient for SES,     suggesting an increase in the likelihood of completing a BA degree with higher socioeconomic status. However,     the models predictive performance was limited, particularly in predicting BA degree completions.\n    5. **Hypothesis Formulation**: Based on the statistical analysis, a hypothesis was formulated stating that while the     likelihood of completing a BA degree increases with higher socioeconomic status, SES alone may not be a sufficient     predictor of BA degree completion, indicating the need for further research incorporating additional variables.",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Socioeconomic status (SES) is a significant predictor of BA degree completion. SES has a positive relationship with college degree completion with a coefficient of 0.4729.",
+                "context": "This dataset contains social background factors and academic resources at the time of secondary school graduation for the participants of the NLS.",
+                "variables": [
+                    "SES",
+                    "BA DEGREE COMPLETED"
+                ],
+                "relations": "Positive relationship with a coefficient of 0.4729"
+            }
+        ],
+        "full_hypo": "Socioeconomic status (SES) is a significant predictor of BA degree completion. SES has a positive relationship with college degree completion with a coefficient of 0.4729.,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Higher socioeconomic status is associated with an increased likelihood of completing a BA degree.",
+                "context": "The dataset consisting of social background factors and academic resources for NLS participants.",
+                "variables": [
+                    "SES",
+                    "BA DEGREE COMPLETED"
+                ],
+                "relations": "Positive relationship between SES and BA degree completion"
+            }
+        ],
+        "full_hypo": "The analysis of the relationship between socioeconomic status (SES) and BA degree completion using     logistic regression suggests that higher socioeconomic status is associated with an increased likelihood of completing     a BA degree. However, the model's limitations in predicting BA degree completions accurately indicate that SES alone     may not fully explain BA degree completion rates. The formulated hypothesis suggests that while there is a positive     relationship between SES and BA degree completion, additional factors not captured in this analysis likely influence     this outcome. Further research incorporating more variables and possibly more complex models is recommended to fully     understand the determinants of BA degree completion."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": 0
+    },
+    "gold_subh_covered": [
+        0
+    ],
+    "matched_gold_gen_subh_evals": {
+        "P0||G0": {
+            "query": "How strongly does BA degree completion vary with socioeconomic status?",
+            "HypoA": "Socioeconomic status (SES) is a significant predictor of BA degree completion. SES has a positive relationship with college degree completion with a coefficient of 0.4729.,",
+            "WorkflowA": "OLS Regression",
+            "HypoB": "The analysis of the relationship between socioeconomic status (SES) and BA degree completion using     logistic regression suggests that higher socioeconomic status is associated with an increased likelihood of completing     a BA degree. However, the model's limitations in predicting BA degree completions accurately indicate that SES alone     may not fully explain BA degree completion rates. The formulated hypothesis suggests that while there is a positive     relationship between SES and BA degree completion, additional factors not captured in this analysis likely influence     this outcome. Further research incorporating more variables and possibly more complex models is recommended to fully     understand the determinants of BA degree completion.",
+            "WorkflowB": "1. **Load the Dataset**: The dataset nls_ses_processed.csv was successfully loaded, providing an     overview of its structure, including relevant variables like SES and BA DEGREE COMPLETED.\n    2.**Data Exploration**: The dataset was explored to understand its structure, revealing no missing values in the key     variables of interest (SES and BA DEGREE COMPLETED) and providing summary statistics.\n    3. **Data Preprocessing**: It was determined that no extensive preprocessing was needed beyond the initial exploration,     as there were no missing values in the key variables.\n    4. **Statistical Analysis**: Logistic regression was performed to analyze the relationship between socioeconomic status     (SES) and BA degree completion (BA DEGREE COMPLETED). The analysis revealed a positive coefficient for SES,     suggesting an increase in the likelihood of completing a BA degree with higher socioeconomic status. However,     the models predictive performance was limited, particularly in predicting BA degree completions.\n    5. **Hypothesis Formulation**: Based on the statistical analysis, a hypothesis was formulated stating that while the     likelihood of completing a BA degree increases with higher socioeconomic status, SES alone may not be a sufficient     predictor of BA degree completion, indicating the need for further research incorporating additional variables.",
+            "var": {
+                "question": "        Question: For both HypoA and HypoB, what are the different variables found in the hypotheses?         Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"sizeA\": num of variables used in HypoA\n        \"sizeB\": num of variables used in HypoB\n        \"intersection\": num of variables common in HypoA and HypoB. Use *fuzzy matching* to determine intersection, accounting for paraphrases or slightly different surface forms\n        \"explanation\": a short text explanation about the variables\n        }}```\n        Answer:",
+                "answer": "{\n\"sizeA\": 2,\n\"sizeB\": 2,\n\"intersection\": 2,\n\"explanation\": \"Both HypoA and HypoB mention the same two variables: socioeconomic status (SES) and BA degree completion. Despite the different analytical approaches (OLS Regression in HypoA and Logistic Regression in HypoB), the core variables under investigation remain the same.\"\n}",
+                "score": {
+                    "p": 1.0,
+                    "r": 1.0,
+                    "f1": 1.0,
+                    "sizeA": 2,
+                    "sizeB": 2,
+                    "intersection": 2,
+                    "explanation": "Both HypoA and HypoB mention the same two variables: socioeconomic status (SES) and BA degree completion. Despite the different analytical approaches (OLS Regression in HypoA and Logistic Regression in HypoB), the core variables under investigation remain the same."
+                }
+            },
+            "rel": {
+                "question": "        Question: Does HypoB exhibit the same relation as HypoA?\n        Compare using following example hierarchy of relationships (based on specificity):         \"there exists a relationship\" > \"positive relationship\" > \"positive AND (linear OR quadratic)\" > \"positive AND linear\".\n        Options: A) very similar B) similar but general than HypoA C) different\n        Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"answer\": one of the options from A) very similar B) similar but general than HypoA C) different\n        \"explanation\": a short text explanation about the relationship comparison\n        }}```\n        Answer:",
+                "answer": "{\n\"answer\": \"B) similar but general than HypoA\",\n\"explanation\": \"Both HypoA and HypoB suggest a positive relationship between socioeconomic status (SES) and BA degree completion. However, HypoA specifies a positive linear relationship with a coefficient of 0.4729, indicating a specific linear model (OLS Regression). In contrast, HypoB suggests a positive relationship without specifying the nature (linear or otherwise) of the relationship and acknowledges the limitations of the model in capturing the complexity of BA degree completion (Logistic Regression). Therefore, HypoB presents a more general relationship than HypoA.\"\n}",
+                "score": 0.5
+            },
+            "context": {
+                "question": "Comapring: GoldH: Socioeconomic status (SES) is a significant predictor of BA degree completion. SES has a positive relationship with college degree completion with a coefficient of 0.4729., GoldC: This dataset contains social background factors and academic resources at the time of secondary school graduation for the participants of the NLS.\nGenH: Higher socioeconomic status is associated with an increased likelihood of completing a BA degree., GenC: The dataset consisting of social background factors and academic resources for NLS participants.",
+                "answer": true,
+                "score": 1.0
+            },
+            "accuracy_score": 0.5
+        }
+    },
+    "recall_context": 1.0,
+    "mean_accuracy_score": 0.5,
+    "final_score": 0.5
+}{
+    "query": "What was the percentage increase in median wealth among black females from 1985 to 1990?",
+    "HypoA": "The largest increases in median wealth from 1985 to 1990 were among black females, with a percentage increase of 1385.71%.,",
+    "WorkflowA": "Grouped the race and sex categories and calculated the percentage change in their median wealth.",
+    "HypoB": "The percentage increase in median wealth among black females from 1985 to 1990 is approximately 1385.71%. Scientific Hypothesis: In the context of the provided dataset, which includes race, sex, and wealth variables from the National Longitudinal Study of Youth's 1979 cohort, it is hypothesized that there is a significant increase in median wealth for black females from 1985 to 1990. This hypothesis is supported by the data showing an approximate 1385.71% increase in median wealth for this demographic over the five-year period. Further investigation would be required to determine the cause of this increase and its statistical significance, as well as its implications on social and economic factors affecting black females during that time.",
+    "WorkflowB": "1. Data Loading: Loaded the 'nls_incarceration_processed.csv' dataset using pandas from the specified path.\n2. Data Filtering: Filtered the dataset to include only records for black females.\n3. Median Wealth Calculation: Calculated the median wealth for black females for the years 1985 and 1990.\n4. Percentage Increase Calculation: Computed the percentage increase in median wealth from 1985 to 1990 for black females.",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "The largest increases in median wealth from 1985 to 1990 were among black females, with a percentage increase of 1385.71%.",
+                "context": "black females",
+                "variables": [
+                    "race",
+                    "sex",
+                    "composite_wealth_1985",
+                    "composite_wealth_1990"
+                ],
+                "relations": "percentage change in their median wealth from 1985 to 1990"
+            }
+        ],
+        "full_hypo": "The largest increases in median wealth from 1985 to 1990 were among black females, with a percentage increase of 1385.71%.,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "The percentage increase in median wealth among black females from 1985 to 1990 is approximately 1385.71%.",
+                "context": "among black females from 1985 to 1990",
+                "variables": [
+                    "race",
+                    "sex",
+                    "composite_wealth_1985",
+                    "composite_wealth_1990"
+                ],
+                "relations": "significant increase in median wealth"
+            }
+        ],
+        "full_hypo": "The percentage increase in median wealth among black females from 1985 to 1990 is approximately 1385.71%. Scientific Hypothesis: In the context of the provided dataset, which includes race, sex, and wealth variables from the National Longitudinal Study of Youth's 1979 cohort, it is hypothesized that there is a significant increase in median wealth for black females from 1985 to 1990. This hypothesis is supported by the data showing an approximate 1385.71% increase in median wealth for this demographic over the five-year period. Further investigation would be required to determine the cause of this increase and its statistical significance, as well as its implications on social and economic factors affecting black females during that time."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": 0
+    },
+    "gold_subh_covered": [
+        0
+    ],
+    "matched_gold_gen_subh_evals": {
+        "P0||G0": {
+            "query": "What was the percentage increase in median wealth among black females from 1985 to 1990?",
+            "HypoA": "The largest increases in median wealth from 1985 to 1990 were among black females, with a percentage increase of 1385.71%.,",
+            "WorkflowA": "Grouped the race and sex categories and calculated the percentage change in their median wealth.",
+            "HypoB": "The percentage increase in median wealth among black females from 1985 to 1990 is approximately 1385.71%. Scientific Hypothesis: In the context of the provided dataset, which includes race, sex, and wealth variables from the National Longitudinal Study of Youth's 1979 cohort, it is hypothesized that there is a significant increase in median wealth for black females from 1985 to 1990. This hypothesis is supported by the data showing an approximate 1385.71% increase in median wealth for this demographic over the five-year period. Further investigation would be required to determine the cause of this increase and its statistical significance, as well as its implications on social and economic factors affecting black females during that time.",
+            "WorkflowB": "1. Data Loading: Loaded the 'nls_incarceration_processed.csv' dataset using pandas from the specified path.\n2. Data Filtering: Filtered the dataset to include only records for black females.\n3. Median Wealth Calculation: Calculated the median wealth for black females for the years 1985 and 1990.\n4. Percentage Increase Calculation: Computed the percentage increase in median wealth from 1985 to 1990 for black females.",
+            "var": {
+                "question": "        Question: For both HypoA and HypoB, what are the different variables found in the hypotheses?         Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"sizeA\": num of variables used in HypoA\n        \"sizeB\": num of variables used in HypoB\n        \"intersection\": num of variables common in HypoA and HypoB. Use *fuzzy matching* to determine intersection, accounting for paraphrases or slightly different surface forms\n        \"explanation\": a short text explanation about the variables\n        }}```\n        Answer:",
+                "answer": "{\n\"sizeA\": 3,\n\"sizeB\": 3,\n\"intersection\": 3,\n\"explanation\": \"Both HypoA and HypoB mention the same variables: race (black females), median wealth, and the years (1985 and 1990).\"\n}",
+                "score": {
+                    "p": 1.0,
+                    "r": 1.0,
+                    "f1": 1.0,
+                    "sizeA": 3,
+                    "sizeB": 3,
+                    "intersection": 3,
+                    "explanation": "Both HypoA and HypoB mention the same variables: race (black females), median wealth, and the years (1985 and 1990)."
+                }
+            },
+            "rel": {
+                "question": "        Question: Does HypoB exhibit the same relation as HypoA?\n        Compare using following example hierarchy of relationships (based on specificity):         \"there exists a relationship\" > \"positive relationship\" > \"positive AND (linear OR quadratic)\" > \"positive AND linear\".\n        Options: A) very similar B) similar but general than HypoA C) different\n        Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"answer\": one of the options from A) very similar B) similar but general than HypoA C) different\n        \"explanation\": a short text explanation about the relationship comparison\n        }}```\n        Answer:",
+                "answer": "{\n\"answer\": \"A) very similar\",\n\"explanation\": \"Both HypoA and HypoB describe a specific positive relationship between time (1985 to 1990) and the median wealth among black females, quantified as a 1385.71% increase. Neither hypothesis specifies the nature of the relationship beyond it being positive and substantial.\"\n}",
+                "score": 1.0
+            },
+            "context": {
+                "question": "Comapring: GoldH: The largest increases in median wealth from 1985 to 1990 were among black females, with a percentage increase of 1385.71%., GoldC: black females\nGenH: The percentage increase in median wealth among black females from 1985 to 1990 is approximately 1385.71%., GenC: among black females from 1985 to 1990",
+                "answer": true,
+                "score": 1.0
+            },
+            "accuracy_score": 1.0
+        }
+    },
+    "recall_context": 1.0,
+    "mean_accuracy_score": 1.0,
+    "final_score": 1.0
+}{
+    "query": "In which country's labs were the majority of original studies in both Experimental Economics and Psychology conducted?",
+    "HypoA": "A significant proportion of original studies in both Experimental Economics (61.1%) and Psychology (69.1%) were conducted in labs located in the United States, while replication studies were more distributed across different locations (Experimental Economics: 22.2% US, 77.8% non-US; Psychology: 52.9% US, 47.1% non-US).,",
+    "WorkflowA": "1. Create a function describe_factor_function that takes a dataframe, variable and a default name and returns a dataframe\n2. Group the project.x variable, and count the number of occurences for each level and set it as a character.\n3. Convert the format into e.g. (n (45)%) and it remove the original count column (n)\n4. Reshape the data from a long format to a wide format, creating new columns for each project, with the values being the formatted count\nand percentage strings ('n (%)') for each level of the variable.\n5. Create a new column - Covariate, where the name is passed or its 'Var' and all the row values are empty strings\n6. Reorder the columns, putting the Covariate column first, followed by all other columns.\n\n7. For the second set of hypotheses (H10 - H20), it creates factor_covariates\n(Discipline, Max seniority of authors (O),\n    Max seniority of authors (R),\n    Type of compensation (O),\n    Type of compensation (R),\n    Type of subjects (O),\n    Type of subjects (R),\n    Country of original experiment,\n    Country of replication experiment,\n    Same language (O&R),\n    Same country (O&R),\n    Both conducted on/offline (O&R),\n    Same type of subjects (O&R),\n    Lab in the US (O),\n    Lab in the US (R))\n\n8. Generate a sequence of integers corresponding to the indices of elements in the vector continuous_covariates. \n9. Apply an anonymous function, function(i) {...}, to each integer in that sequence. Inside the function, factor_covariates[i] retrieves the name of a variable from the factor_covariates vector using the index i.\n10. Call the describe_factor_function and apply it to each element of the factor_covariates vector, passing the variable name and its corresponding name as arguments.\n11. lapply returns a list where each element is the data frame returned by describe_factor_function for each variable in factor_covariates.\n12. Use do.call that invokes the bind_rows function from the dplyr package, passing the list of data frames as its argument. The bind_rows function combines (row-binds) all the data frames in the list into a single data frame.\n13. Format all numeric columns by rounding the values to 2 significant digits and adding a thousands separator (')\n",
+    "HypoB": "In the domain of academic research comprising Experimental Economics and Psychology, the United States hosts the majority of labs where original studies are conducted compared to other countries. This could suggest a higher concentration of research infrastructure or funding availability in the United States within these fields.",
+    "WorkflowB": "",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "A significant proportion of original studies in both Experimental Economics (61.1%) and Psychology (69.1%) were conducted in labs located in the United States, while replication studies were more distributed across different locations (Experimental Economics: 22.2% US, 77.8% non-US; Psychology: 52.9% US, 47.1% non-US).",
+                "context": "original and replication studies in the fields of Experimental Economics and Psychology",
+                "variables": [
+                    "us_lab.o",
+                    "us_lab.r",
+                    "project.x"
+                ],
+                "relations": "proportion comparison between original and replication studies in terms of lab location within the US versus outside the US"
+            }
+        ],
+        "full_hypo": "A significant proportion of original studies in both Experimental Economics (61.1%) and Psychology (69.1%) were conducted in labs located in the United States, while replication studies were more distributed across different locations (Experimental Economics: 22.2% US, 77.8% non-US; Psychology: 52.9% US, 47.1% non-US).,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "In the domain of academic research comprising Experimental Economics and Psychology, the United States hosts the majority of labs where original studies are conducted compared to other countries.",
+                "context": "In academic research within the fields of Experimental Economics and Psychology.",
+                "variables": [
+                    "us_lab.o"
+                ],
+                "relations": "Majority count comparison between US-based labs and labs in other countries."
+            }
+        ],
+        "full_hypo": "In the domain of academic research comprising Experimental Economics and Psychology, the United States hosts the majority of labs where original studies are conducted compared to other countries. This could suggest a higher concentration of research infrastructure or funding availability in the United States within these fields."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": 0
+    },
+    "gold_subh_covered": [
+        0
+    ],
+    "matched_gold_gen_subh_evals": {
+        "P0||G0": {
+            "query": "In which country's labs were the majority of original studies in both Experimental Economics and Psychology conducted?",
+            "HypoA": "A significant proportion of original studies in both Experimental Economics (61.1%) and Psychology (69.1%) were conducted in labs located in the United States, while replication studies were more distributed across different locations (Experimental Economics: 22.2% US, 77.8% non-US; Psychology: 52.9% US, 47.1% non-US).,",
+            "WorkflowA": "1. Create a function describe_factor_function that takes a dataframe, variable and a default name and returns a dataframe\n2. Group the project.x variable, and count the number of occurences for each level and set it as a character.\n3. Convert the format into e.g. (n (45)%) and it remove the original count column (n)\n4. Reshape the data from a long format to a wide format, creating new columns for each project, with the values being the formatted count\nand percentage strings ('n (%)') for each level of the variable.\n5. Create a new column - Covariate, where the name is passed or its 'Var' and all the row values are empty strings\n6. Reorder the columns, putting the Covariate column first, followed by all other columns.\n\n7. For the second set of hypotheses (H10 - H20), it creates factor_covariates\n(Discipline, Max seniority of authors (O),\n    Max seniority of authors (R),\n    Type of compensation (O),\n    Type of compensation (R),\n    Type of subjects (O),\n    Type of subjects (R),\n    Country of original experiment,\n    Country of replication experiment,\n    Same language (O&R),\n    Same country (O&R),\n    Both conducted on/offline (O&R),\n    Same type of subjects (O&R),\n    Lab in the US (O),\n    Lab in the US (R))\n\n8. Generate a sequence of integers corresponding to the indices of elements in the vector continuous_covariates. \n9. Apply an anonymous function, function(i) {...}, to each integer in that sequence. Inside the function, factor_covariates[i] retrieves the name of a variable from the factor_covariates vector using the index i.\n10. Call the describe_factor_function and apply it to each element of the factor_covariates vector, passing the variable name and its corresponding name as arguments.\n11. lapply returns a list where each element is the data frame returned by describe_factor_function for each variable in factor_covariates.\n12. Use do.call that invokes the bind_rows function from the dplyr package, passing the list of data frames as its argument. The bind_rows function combines (row-binds) all the data frames in the list into a single data frame.\n13. Format all numeric columns by rounding the values to 2 significant digits and adding a thousands separator (')\n",
+            "HypoB": "In the domain of academic research comprising Experimental Economics and Psychology, the United States hosts the majority of labs where original studies are conducted compared to other countries. This could suggest a higher concentration of research infrastructure or funding availability in the United States within these fields.",
+            "WorkflowB": "",
+            "var": {
+                "question": "        Question: For both HypoA and HypoB, what are the different variables found in the hypotheses?         Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"sizeA\": num of variables used in HypoA\n        \"sizeB\": num of variables used in HypoB\n        \"intersection\": num of variables common in HypoA and HypoB. Use *fuzzy matching* to determine intersection, accounting for paraphrases or slightly different surface forms\n        \"explanation\": a short text explanation about the variables\n        }}```\n        Answer:",
+                "answer": "{\n\"sizeA\": 5,\n\"sizeB\": 1,\n\"intersection\": 1,\n\"explanation\": \"HypoA explicitly mentions variables such as the proportion of original studies, the fields of Experimental Economics and Psychology, the location of labs in the United States, and the distribution of replication studies across different locations. HypoB mentions the variable of the majority of labs hosting original studies in the United States. The intersection is the reference to the United States as the location for labs conducting original studies in both hypotheses.\"\n}",
+                "score": {
+                    "p": 1.0,
+                    "r": 0.2,
+                    "f1": 0.33333333333333337,
+                    "sizeA": 5,
+                    "sizeB": 1,
+                    "intersection": 1,
+                    "explanation": "HypoA explicitly mentions variables such as the proportion of original studies, the fields of Experimental Economics and Psychology, the location of labs in the United States, and the distribution of replication studies across different locations. HypoB mentions the variable of the majority of labs hosting original studies in the United States. The intersection is the reference to the United States as the location for labs conducting original studies in both hypotheses."
+                }
+            },
+            "rel": {
+                "question": "        Question: Does HypoB exhibit the same relation as HypoA?\n        Compare using following example hierarchy of relationships (based on specificity):         \"there exists a relationship\" > \"positive relationship\" > \"positive AND (linear OR quadratic)\" > \"positive AND linear\".\n        Options: A) very similar B) similar but general than HypoA C) different\n        Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"answer\": one of the options from A) very similar B) similar but general than HypoA C) different\n        \"explanation\": a short text explanation about the relationship comparison\n        }}```\n        Answer:",
+                "answer": "{\n\"answer\": \"B) similar but general than HypoA\",\n\"explanation\": \"HypoA specifies exact percentages for the distribution of original studies across countries, indicating a more specific relationship between the location of labs and the concentration of studies. HypoB states that the majority of labs are in the United States without providing specific figures, suggesting a general positive relationship between the United States and the location of research labs in the fields of Experimental Economics and Psychology.\"\n}",
+                "score": 0.5
+            },
+            "context": {
+                "question": "Comapring: GoldH: A significant proportion of original studies in both Experimental Economics (61.1%) and Psychology (69.1%) were conducted in labs located in the United States, while replication studies were more distributed across different locations (Experimental Economics: 22.2% US, 77.8% non-US; Psychology: 52.9% US, 47.1% non-US)., GoldC: original and replication studies in the fields of Experimental Economics and Psychology\nGenH: In the domain of academic research comprising Experimental Economics and Psychology, the United States hosts the majority of labs where original studies are conducted compared to other countries., GenC: In academic research within the fields of Experimental Economics and Psychology.",
+                "answer": true,
+                "score": 1.0
+            },
+            "accuracy_score": 0.16666666666666669
+        }
+    },
+    "recall_context": 1.0,
+    "mean_accuracy_score": 0.16666666666666669,
+    "final_score": 0.16666666666666669
+}{
+    "query": "What proportion of replication studies in Psychology were conducted online?",
+    "HypoA": "In Experimental Economics, all studies (both original and replication) were conducted in a lab setting (100%), while in Psychology, a small proportion of replication studies were also conducted online (8.8%),",
+    "WorkflowA": "## Initial Filtering\n\n1. import RP_data.csv (study data) and RProjects.csv (Replication Success Data)\n2. Filter the rows that contain the value \u00e2\u20ac\u02dcee\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dcrpp\u00e2\u20ac\u2122 and remove the rows that contain missing values in \u00e2\u20ac\u02dceffect_size.o\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dceffect_size.r\u00e2\u20ac\u2122.\n3. Create first and second author columns in the dataframe.\n4. Create a new dataframe named \u00e2\u20ac\u02dcRProjects_psychology_econ\u00e2\u20ac\u2122 by collecting the rows from RProjects data that has \u00e2\u20ac\u02dcExperimental Economics\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dcPsychology\u00e2\u20ac\u2122 as the project and create first and second author columns.\n5. Identify the ids where first author names match between RProjects_psychology_econ and RProjects data.\n\n## Create Unique Identifier to merge the two data\n\n1. Create a new column \u00e2\u20ac\u02dcid_in_data\u00e2\u20ac\u2122(unique identifiers are called covariate in R) in RProjects_psychology_econ that will act as a unique id, fill it with those ids from the previous step where the first author appears only once.\n2. Next, Identify cases with double ids.\n    1. Identify the cases where the first author appears more than once in RP_data by finding instances where the length of IDs associated with a first author is greater than 1 and refer them as double IDs.\n    2. Extract the corresponding second author names where the first author is in more than one study. Match this second author names with the second author names in RProjects_psychology_econ\n    3. If a match is found (indicating that the same first author with a different second author is present in both datasets) assign the corresponding unique IDs from RP_data to RProjects_psychology_econ. This ensures that each unique combination of first and second authors is correctly linked between the two datasets.\n3. Handling Replicated Studies: Identify the cases where the same study was replicated more than once based on the second author\u00e2\u20ac\u2122s name. Then associate these replicated studies with the corresponding first author names in RProjects_psychology_econ.\n4. Then match studies between RProjects_psychology_econ and RP_data based on their replication sample sizes by filtering the row where the first author appears in cases identified as having double IDs. Then extract the replication sample size (\u00e2\u20ac\u02dcnr\u00e2\u20ac\u2122) for these filtered rows. Match the replication sample size of the studies identified in \u00e2\u20ac\u02dcRProjects_psychology_econ\u00e2\u20ac\u2122 with the corresponding studies in \u00e2\u20ac\u02dcRP_data\u00e2\u20ac\u2122, within the threshold of 5. It aims to find the matching studies in \u00e2\u20ac\u02dcRP_data\u00e2\u20ac\u2122 based on their replication sample size. Then it assigns the matching id_in_data values from RP_data to RProjects_psychology_econ for cases where the replication sample sizes are similar.\n5. After updating the id_in_data column in RProjects_psychology_econ, this step merges RProjects_psychology_econ with RP_data based on the id_in_data column. It combines the datasets, ensuring that the relevant data from RP_data is included in RProjects_psychology_econ based on the matching id_in_data.\n\n## Post Joining\n\n1. After the merge, this part filters out rows from the merged dataset (RP_data_merged) where id_in_data is NA. These are likely cases where no matching data was found in RP_data. Then, it removes the first_author, second_author, and id_in_data columns, as they might not be needed for further analysis or may contain redundant information after merging. Filter RP_data_merged dataframe to remove rows where the study is P Bressan, D Stranieri and the value of the online.r column is 0.\n2. Modify the seniority.r column in the RP_data_merged dataframe and change any occurrence of Assistant to Assistant Professor. Create a new data frame not_complete_cases that contains only the rows from RP_data_merged where any of the remaining columns (after dropping the specified columns) have missing values or specific string values representing missing data.\n3. Filter out the rows from RP_data_merged where the study value corresponds to a study that has incomplete cases (missing values or specific string values representing missing data) based on the not_complete_cases data frame created in the previous step.\n\n## Function Inception and Analysis\n\n\n1. Create a function describe_factor_function that takes a dataframe, variable and a default name and returns a dataframe\n2. Group the project.x variable, and count the number of occurences for each level and set it as a character.\n3. Convert the format into e.g. (n (45)%) and it remove the original count column (n)\n4. Reshape the data from a long format to a wide format, creating new columns for each project, with the values being the formatted count\nand percentage strings ('n (%)') for each level of the variable.\n5. Create a new column - Covariate, where the name is passed or its 'Var' and all the row values are empty strings\n6. Reorder the columns, putting the Covariate column first, followed by all other columns.\n\n7. For the second set of hypotheses (H10 - H20), it creates factor_covariates\n(Discipline, Max seniority of authors (O),\n    Max seniority of authors (R),\n    Type of compensation (O),\n    Type of compensation (R),\n    Type of subjects (O),\n    Type of subjects (R),\n    Country of original experiment,\n    Country of replication experiment,\n    Same language (O&R),\n    Same country (O&R),\n    Both conducted on/offline (O&R),\n    Same type of subjects (O&R),\n    Lab in the US (O),\n    Lab in the US (R))\n\n8. Generate a sequence of integers corresponding to the indices of elements in the vector continuous_covariates. \n9. Apply an anonymous function, function(i) {...}, to each integer in that sequence. Inside the function, factor_covariates[i] retrieves the name of a variable from the factor_covariates vector using the index i.\n10. Call the describe_factor_function and apply it to each element of the factor_covariates vector, passing the variable name and its corresponding name as arguments.\n11. lapply returns a list where each element is the data frame returned by describe_factor_function for each variable in factor_covariates.\n12. Use do.call that invokes the bind_rows function from the dplyr package, passing the list of data frames as its argument. The bind_rows function combines (row-binds) all the data frames in the list into a single data frame.\n13. Format all numeric columns by rounding the values to 2 significant digits and adding a thousands separator (')",
+    "HypoB": "Based on the provided dataset, a scientific hypothesis could be that, in the context of replication studies within the Cognitive discipline, there is a low tendency to conduct these studies online, with only about 13.28% being conducted in such a manner. This suggests that the majority of replication studies in this field are still conducted in traditional settings. There is no statistical significance mentioned as this is a direct calculation of proportion.",
+    "WorkflowB": "1. Data Loading: Loaded the dataset 'meta-regression_study_data_heterogeneity_in_replication_projects.csv'.\n2. Initial Analysis: Attempted to filter for Psychology studies, but found that no such discipline category existed in the dataset.\n3. Discipline Verification: Checked the unique values in the 'discipline' column and found that it contained 'Economics', 'Social', and 'Cognitive', with no 'Psychology' category.\n4. Data Filtering: Filtered the dataset for Cognitive studies, assuming it includes Psychology studies.\n5. Proportion Calculation: Calculated the proportion of Cognitive discipline replication studies conducted online.",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "In Experimental Economics, all studies (both original and replication) were conducted in a lab setting (100%).",
+                "context": "Discipline: Experimental Economics.",
+                "variables": [
+                    "experiment_country.o",
+                    "experiment_country.r"
+                ],
+                "relations": "All studies conducted in a lab setting."
+            },
+            {
+                "text": "In Psychology, a small proportion of replication studies were also conducted online (8.8%).",
+                "context": "Discipline: Psychology.",
+                "variables": [
+                    "online.r"
+                ],
+                "relations": "A small proportion of studies conducted online."
+            }
+        ],
+        "full_hypo": "In Experimental Economics, all studies (both original and replication) were conducted in a lab setting (100%), while in Psychology, a small proportion of replication studies were also conducted online (8.8%),"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "in the context of replication studies within the Cognitive discipline, there is a low tendency to conduct these studies online, with only about 13.28% being conducted in such a manner.",
+                "context": "replication studies within the Cognitive discipline",
+                "variables": [
+                    "online.r",
+                    "discipline"
+                ],
+                "relations": "direct calculation of proportion of studies conducted online"
+            }
+        ],
+        "full_hypo": "Based on the provided dataset, a scientific hypothesis could be that, in the context of replication studies within the Cognitive discipline, there is a low tendency to conduct these studies online, with only about 13.28% being conducted in such a manner. This suggests that the majority of replication studies in this field are still conducted in traditional settings. There is no statistical significance mentioned as this is a direct calculation of proportion."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": -1
+    },
+    "gold_subh_covered": [],
+    "matched_gold_gen_subh_evals": {},
+    "recall_context": 0.0,
+    "mean_accuracy_score": 0.0,
+    "final_score": 0.0
+}{
+    "query": "What proportion of original studies in Experimental Economics were conducted in the United Kingdom?",
+    "HypoA": "The original studies in Experimental Economics were primarily conducted in the United States (61.1%), while the replication studies were more distributed across countries like Austria (27.8%), Germany (11.1%), Singapore (27.8%), the United Kingdom (11.1%), and the United States (22.2%).,",
+    "WorkflowA": "## Initial Filtering\n\n1. import RP_data.csv (study data) and RProjects.csv (Replication Success Data)\n2. Filter the rows that contain the value \u00e2\u20ac\u02dcee\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dcrpp\u00e2\u20ac\u2122 and remove the rows that contain missing values in \u00e2\u20ac\u02dceffect_size.o\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dceffect_size.r\u00e2\u20ac\u2122.\n3. Create first and second author columns in the dataframe.\n4. Create a new dataframe named \u00e2\u20ac\u02dcRProjects_psychology_econ\u00e2\u20ac\u2122 by collecting the rows from RProjects data that has \u00e2\u20ac\u02dcExperimental Economics\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dcPsychology\u00e2\u20ac\u2122 as the project and create first and second author columns.\n5. Identify the ids where first author names match between RProjects_psychology_econ and RProjects data.\n\n## Create Unique Identifier to merge the two data\n\n1. Create a new column \u00e2\u20ac\u02dcid_in_data\u00e2\u20ac\u2122(unique identifiers are called covariate in R) in RProjects_psychology_econ that will act as a unique id, fill it with those ids from the previous step where the first author appears only once.\n2. Next, Identify cases with double ids.\n    1. Identify the cases where the first author appears more than once in RP_data by finding instances where the length of IDs associated with a first author is greater than 1 and refer them as double IDs.\n    2. Extract the corresponding second author names where the first author is in more than one study. Match this second author names with the second author names in RProjects_psychology_econ\n    3. If a match is found (indicating that the same first author with a different second author is present in both datasets) assign the corresponding unique IDs from RP_data to RProjects_psychology_econ. This ensures that each unique combination of first and second authors is correctly linked between the two datasets.\n3. Handling Replicated Studies: Identify the cases where the same study was replicated more than once based on the second author\u00e2\u20ac\u2122s name. Then associate these replicated studies with the corresponding first author names in RProjects_psychology_econ.\n4. Then match studies between RProjects_psychology_econ and RP_data based on their replication sample sizes by filtering the row where the first author appears in cases identified as having double IDs. Then extract the replication sample size (\u00e2\u20ac\u02dcnr\u00e2\u20ac\u2122) for these filtered rows. Match the replication sample size of the studies identified in \u00e2\u20ac\u02dcRProjects_psychology_econ\u00e2\u20ac\u2122 with the corresponding studies in \u00e2\u20ac\u02dcRP_data\u00e2\u20ac\u2122, within the threshold of 5. It aims to find the matching studies in \u00e2\u20ac\u02dcRP_data\u00e2\u20ac\u2122 based on their replication sample size. Then it assigns the matching id_in_data values from RP_data to RProjects_psychology_econ for cases where the replication sample sizes are similar.\n5. After updating the id_in_data column in RProjects_psychology_econ, this step merges RProjects_psychology_econ with RP_data based on the id_in_data column. It combines the datasets, ensuring that the relevant data from RP_data is included in RProjects_psychology_econ based on the matching id_in_data.\n\n## Post Joining\n\n1. After the merge, this part filters out rows from the merged dataset (RP_data_merged) where id_in_data is NA. These are likely cases where no matching data was found in RP_data. Then, it removes the first_author, second_author, and id_in_data columns, as they might not be needed for further analysis or may contain redundant information after merging. Filter RP_data_merged dataframe to remove rows where the study is P Bressan, D Stranieri and the value of the online.r column is 0.\n2. Modify the seniority.r column in the RP_data_merged dataframe and change any occurrence of Assistant to Assistant Professor. Create a new data frame not_complete_cases that contains only the rows from RP_data_merged where any of the remaining columns (after dropping the specified columns) have missing values or specific string values representing missing data.\n3. Filter out the rows from RP_data_merged where the study value corresponds to a study that has incomplete cases (missing values or specific string values representing missing data) based on the not_complete_cases data frame created in the previous step.\n\n## Function Inception and Analysis\n\n\n1. Create a function describe_factor_function that takes a dataframe, variable and a default name and returns a dataframe\n2. Group the project.x variable, and count the number of occurences for each level and set it as a character.\n3. Convert the format into e.g. (n (45)%) and it remove the original count column (n)\n4. Reshape the data from a long format to a wide format, creating new columns for each project, with the values being the formatted count\nand percentage strings ('n (%)') for each level of the variable.\n5. Create a new column - Covariate, where the name is passed or its 'Var' and all the row values are empty strings\n6. Reorder the columns, putting the Covariate column first, followed by all other columns.\n\n7. For the second set of hypotheses (H10 - H20), it creates factor_covariates\n(Discipline, Max seniority of authors (O),\n    Max seniority of authors (R),\n    Type of compensation (O),\n    Type of compensation (R),\n    Type of subjects (O),\n    Type of subjects (R),\n    Country of original experiment,\n    Country of replication experiment,\n    Same language (O&R),\n    Same country (O&R),\n    Both conducted on/offline (O&R),\n    Same type of subjects (O&R),\n    Lab in the US (O),\n    Lab in the US (R))\n\n8. Generate a sequence of integers corresponding to the indices of elements in the vector continuous_covariates. \n9. Apply an anonymous function, function(i) {...}, to each integer in that sequence. Inside the function, factor_covariates[i] retrieves the name of a variable from the factor_covariates vector using the index i.\n10. Call the describe_factor_function and apply it to each element of the factor_covariates vector, passing the variable name and its corresponding name as arguments.\n11. lapply returns a list where each element is the data frame returned by describe_factor_function for each variable in factor_covariates.\n12. Use do.call that invokes the bind_rows function from the dplyr package, passing the list of data frames as its argument. The bind_rows function combines (row-binds) all the data frames in the list into a single data frame.\n13. Format all numeric columns by rounding the values to 2 significant digits and adding a thousands separator (')",
+    "HypoB": "Based on the provided dataset, we can hypothesize that there is a low propensity for conducting Experimental Economics studies in the United Kingdom, as evidenced by the fact that only about 5.56% of studies in this discipline were conducted there. This hypothesis suggests a potential geographic distribution in the field of Experimental Economics research that may warrant further investigation to understand the underlying causes of this distribution and its implications for the field. The statistical significance of this observation would require further analysis, including the total number of Experimental Economics studies conducted worldwide and the proportion conducted in other individual countries for comparison.",
+    "WorkflowB": "",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "The original studies in Experimental Economics were primarily conducted in the United States (61.1%), while the replication studies were more distributed across countries like Austria (27.8%), Germany (11.1%), Singapore (27.8%), the United Kingdom (11.1%), and the United States (22.2%).",
+                "context": "Original and replication studies in the field of Experimental Economics",
+                "variables": [
+                    "project",
+                    "experiment_country.o",
+                    "experiment_country.r"
+                ],
+                "relations": "The distribution of countries where original and replication studies were conducted shows a majority in the US for original studies, with replication studies being more geographically distributed."
+            }
+        ],
+        "full_hypo": "The original studies in Experimental Economics were primarily conducted in the United States (61.1%), while the replication studies were more distributed across countries like Austria (27.8%), Germany (11.1%), Singapore (27.8%), the United Kingdom (11.1%), and the United States (22.2%).,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "There is a low propensity for conducting Experimental Economics studies in the United Kingdom, measuring around 5.56% of studies in this discipline.",
+                "context": "geographic distribution of Experimental Economics research studies",
+                "variables": [
+                    "discipline",
+                    "experiment_country.o"
+                ],
+                "relations": "the percentage calculation of UK-based studies within the Experimental Economics discipline"
+            }
+        ],
+        "full_hypo": "Based on the provided dataset, we can hypothesize that there is a low propensity for conducting Experimental Economics studies in the United Kingdom, as evidenced by the fact that only about 5.56% of studies in this discipline were conducted there. This hypothesis suggests a potential geographic distribution in the field of Experimental Economics research that may warrant further investigation to understand the underlying causes of this distribution and its implications for the field. The statistical significance of this observation would require further analysis, including the total number of Experimental Economics studies conducted worldwide and the proportion conducted in other individual countries for comparison."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": -1
+    },
+    "gold_subh_covered": [],
+    "matched_gold_gen_subh_evals": {},
+    "recall_context": 0.0,
+    "mean_accuracy_score": 0.0,
+    "final_score": 0.0
+}{
+    "query": "In which century did house sizes and daggers significantly decrease simultaneously for the second time since the start of the observational data?",
+    "HypoA": "Around 1000 BCE, house sizes and daggers significantly decrease simultaneously the second time.",
+    "WorkflowA": "Time Series plot Symbolic Capital for CE -4100 to -499:\n\n1. Load the time series data.\n2. Select the timeframe that needs to be visualized -4100 CE to -499.\n3. Select instances with kde_all_mean not NaN.\n4. Find the indices of smallest and largest CE from the filtered data, these will be the start and end indices of the data that will be plotted.\n\n5. Create line plot of the data from start index to end index for HatchetSword_inter, Dagger_inter, HouseSize_inter and the sum of these features named as Summed Symbolic Capital.",
+    "HypoB": "Based on the 'capital_data' dataset, the second occurrence of a significant simultaneous decrease in house sizes ('Zhausgr') and daggers ('ZDolch') happened in the 10th century BCE. A scientific hypothesis derived from this finding could be that a societal or environmental factor during the 10th century BCE led to a reduction in the construction of large houses and the production or use of daggers. This could be indicative of a period of decline or change in cultural practices, economic conditions, or external pressures such as resource scarcity or conflict. Further investigation would be required to establish the cause and statistical significance of these changes.",
+    "WorkflowB": ":\n1. Data Loading: Loaded the 'time_series_data.csv' and 'capital.csv' datasets.\n2. Data Cleaning: Converted the 'ZDolch' and 'Zhausgr' columns in 'capital.csv' to numeric types and calculated the CE equivalent of BCE dates.\n3. Data Analysis: Calculated the differences in Z values between consecutive time points for daggers and house sizes in the 'capital_data' dataset to identify periods of decrease.\n4. Identifying Simultaneous Decreases: Found the second occurrence of a simultaneous decrease in house sizes and daggers in the 'capital_data' dataset, which occurred in the 10th century BCE.\n5. Verification: Attempted to verify the finding in the 'time_series_data' dataset, which did not show a simultaneous decrease for the same period, indicating possible discrepancies between the datasets or different scales of measurement.",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Around 1000 BCE, house sizes and daggers significantly decrease simultaneously the second time.",
+                "context": "Around the time period 1000 BCE.",
+                "variables": [
+                    "HouseSize_inter",
+                    "Dagger_inter"
+                ],
+                "relations": "Simultaneous significant decrease of house sizes and daggers."
+            }
+        ],
+        "full_hypo": "Around 1000 BCE, house sizes and daggers significantly decrease simultaneously the second time."
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Based on the 'capital_data' dataset, the second occurrence of a significant simultaneous decrease in house sizes ('Zhausgr') and daggers ('ZDolch') happened in the 10th century BCE.",
+                "context": "10th century BCE",
+                "variables": [
+                    "Zhausgr",
+                    "ZDolch"
+                ],
+                "relations": "Simultaneous decrease"
+            }
+        ],
+        "full_hypo": "Based on the 'capital_data' dataset, the second occurrence of a significant simultaneous decrease in house sizes ('Zhausgr') and daggers ('ZDolch') happened in the 10th century BCE. A scientific hypothesis derived from this finding could be that a societal or environmental factor during the 10th century BCE led to a reduction in the construction of large houses and the production or use of daggers. This could be indicative of a period of decline or change in cultural practices, economic conditions, or external pressures such as resource scarcity or conflict. Further investigation would be required to establish the cause and statistical significance of these changes."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": 0
+    },
+    "gold_subh_covered": [
+        0
+    ],
+    "matched_gold_gen_subh_evals": {
+        "P0||G0": {
+            "query": "In which century did house sizes and daggers significantly decrease simultaneously for the second time since the start of the observational data?",
+            "HypoA": "Around 1000 BCE, house sizes and daggers significantly decrease simultaneously the second time.",
+            "WorkflowA": "Time Series plot Symbolic Capital for CE -4100 to -499:\n\n1. Load the time series data.\n2. Select the timeframe that needs to be visualized -4100 CE to -499.\n3. Select instances with kde_all_mean not NaN.\n4. Find the indices of smallest and largest CE from the filtered data, these will be the start and end indices of the data that will be plotted.\n\n5. Create line plot of the data from start index to end index for HatchetSword_inter, Dagger_inter, HouseSize_inter and the sum of these features named as Summed Symbolic Capital.",
+            "HypoB": "Based on the 'capital_data' dataset, the second occurrence of a significant simultaneous decrease in house sizes ('Zhausgr') and daggers ('ZDolch') happened in the 10th century BCE. A scientific hypothesis derived from this finding could be that a societal or environmental factor during the 10th century BCE led to a reduction in the construction of large houses and the production or use of daggers. This could be indicative of a period of decline or change in cultural practices, economic conditions, or external pressures such as resource scarcity or conflict. Further investigation would be required to establish the cause and statistical significance of these changes.",
+            "WorkflowB": ":\n1. Data Loading: Loaded the 'time_series_data.csv' and 'capital.csv' datasets.\n2. Data Cleaning: Converted the 'ZDolch' and 'Zhausgr' columns in 'capital.csv' to numeric types and calculated the CE equivalent of BCE dates.\n3. Data Analysis: Calculated the differences in Z values between consecutive time points for daggers and house sizes in the 'capital_data' dataset to identify periods of decrease.\n4. Identifying Simultaneous Decreases: Found the second occurrence of a simultaneous decrease in house sizes and daggers in the 'capital_data' dataset, which occurred in the 10th century BCE.\n5. Verification: Attempted to verify the finding in the 'time_series_data' dataset, which did not show a simultaneous decrease for the same period, indicating possible discrepancies between the datasets or different scales of measurement.",
+            "var": {
+                "question": "        Question: For both HypoA and HypoB, what are the different variables found in the hypotheses?         Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"sizeA\": num of variables used in HypoA\n        \"sizeB\": num of variables used in HypoB\n        \"intersection\": num of variables common in HypoA and HypoB. Use *fuzzy matching* to determine intersection, accounting for paraphrases or slightly different surface forms\n        \"explanation\": a short text explanation about the variables\n        }}```\n        Answer:",
+                "answer": "{\n\"sizeA\": 2,\n\"sizeB\": 2,\n\"intersection\": 2,\n\"explanation\": \"Both HypoA and HypoB mention house sizes and daggers as the variables of interest. Despite different wording, they refer to the same concepts.\"\n}",
+                "score": {
+                    "p": 1.0,
+                    "r": 1.0,
+                    "f1": 1.0,
+                    "sizeA": 2,
+                    "sizeB": 2,
+                    "intersection": 2,
+                    "explanation": "Both HypoA and HypoB mention house sizes and daggers as the variables of interest. Despite different wording, they refer to the same concepts."
+                }
+            },
+            "rel": {
+                "question": "        Question: Does HypoB exhibit the same relation as HypoA?\n        Compare using following example hierarchy of relationships (based on specificity):         \"there exists a relationship\" > \"positive relationship\" > \"positive AND (linear OR quadratic)\" > \"positive AND linear\".\n        Options: A) very similar B) similar but general than HypoA C) different\n        Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"answer\": one of the options from A) very similar B) similar but general than HypoA C) different\n        \"explanation\": a short text explanation about the relationship comparison\n        }}```\n        Answer:",
+                "answer": "{\n\"answer\": \"A) very similar\",\n\"explanation\": \"Both HypoA and HypoB describe a simultaneous decrease in house sizes and daggers, which indicates a negative relationship between time and both variables. The specificity of the relationship in terms of direction (negative) is maintained in both hypotheses.\"\n}",
+                "score": 1.0
+            },
+            "context": {
+                "question": "Comapring: GoldH: Around 1000 BCE, house sizes and daggers significantly decrease simultaneously the second time., GoldC: Around the time period 1000 BCE.\nGenH: Based on the 'capital_data' dataset, the second occurrence of a significant simultaneous decrease in house sizes ('Zhausgr') and daggers ('ZDolch') happened in the 10th century BCE., GenC: 10th century BCE",
+                "answer": true,
+                "score": 1.0
+            },
+            "accuracy_score": 1.0
+        }
+    },
+    "recall_context": 1.0,
+    "mean_accuracy_score": 1.0,
+    "final_score": 1.0
+}{
+    "query": "In which century did the Depots peaked?",
+    "HypoA": "Around 1100 BCE, the Depots peaked.",
+    "WorkflowA": "Time Series plot Economic Capital for CE -4100 to -499:\n\n1. Load the time series data.\n2. Select the timeframe that needs to be visualized -4100 CE to -499.\n3. Select instances with kde_all_mean not NaN.\n4. Find the indices of smallest and largest CE from the filtered data, these will be the start and end indices of the data that will be plotted.\n\n5. Create line plot of the data from start index to end index for Depot_inter, Sickle_inter, AxesCelts_inter, MonumentSize_inter and the sum of these features named as Summed Economic Capital.",
+    "HypoB": "The peak of Depots in the 12th century BCE suggests a period of increased deposition activity, which could be indicative of heightened economic trade, accumulation of wealth, or ritual practices in the societies of that time. It is hypothesized that the observed peak represents a period of significant cultural or economic development, which led to an increase in the creation and deposition of valuable items.",
+    "WorkflowB": "1. Data Loading: Loaded the 'time_series_data.csv' dataset, which contains interpolated Z values for Depots.\n2. Data Inspection: Checked the 'CE' and 'Depot_inter' columns to confirm their presence and relevance to the query.\n3. Peak Analysis: Found the maximum value in the 'Depot_inter' column and determined the corresponding century in the 'CE' column.\n4. Century Calculation: Converted the year of the peak value to the nearest century, taking into account the BCE dating system.\n5. Final Interpretation: Interpreted the peak of Depots as an indicator of significant cultural or economic activity in the 12th century BCE.",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Around 1100 BCE, the Depots peaked.",
+                "context": "During the time period around 1100 BCE",
+                "variables": [
+                    "Depot",
+                    "Depot_inter"
+                ],
+                "relations": "Peaking of values in Depot related columns"
+            }
+        ],
+        "full_hypo": "Around 1100 BCE, the Depots peaked."
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "The peak of Depots in the 12th century BCE suggests a period of increased deposition activity, which could be indicative of heightened economic trade, accumulation of wealth, or ritual practices in the societies of that time. It is hypothesized that the observed peak represents a period of significant cultural or economic development, which led to an increase in the creation and deposition of valuable items.",
+                "context": "12th century BCE",
+                "variables": [
+                    "Depot_inter",
+                    "CE"
+                ],
+                "relations": "The peak in 'Depot_inter' indicates a period of increased deposition activity"
+            }
+        ],
+        "full_hypo": "The peak of Depots in the 12th century BCE suggests a period of increased deposition activity, which could be indicative of heightened economic trade, accumulation of wealth, or ritual practices in the societies of that time. It is hypothesized that the observed peak represents a period of significant cultural or economic development, which led to an increase in the creation and deposition of valuable items."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": 0
+    },
+    "gold_subh_covered": [
+        0
+    ],
+    "matched_gold_gen_subh_evals": {
+        "P0||G0": {
+            "query": "In which century did the Depots peaked?",
+            "HypoA": "Around 1100 BCE, the Depots peaked.",
+            "WorkflowA": "Time Series plot Economic Capital for CE -4100 to -499:\n\n1. Load the time series data.\n2. Select the timeframe that needs to be visualized -4100 CE to -499.\n3. Select instances with kde_all_mean not NaN.\n4. Find the indices of smallest and largest CE from the filtered data, these will be the start and end indices of the data that will be plotted.\n\n5. Create line plot of the data from start index to end index for Depot_inter, Sickle_inter, AxesCelts_inter, MonumentSize_inter and the sum of these features named as Summed Economic Capital.",
+            "HypoB": "The peak of Depots in the 12th century BCE suggests a period of increased deposition activity, which could be indicative of heightened economic trade, accumulation of wealth, or ritual practices in the societies of that time. It is hypothesized that the observed peak represents a period of significant cultural or economic development, which led to an increase in the creation and deposition of valuable items.",
+            "WorkflowB": "1. Data Loading: Loaded the 'time_series_data.csv' dataset, which contains interpolated Z values for Depots.\n2. Data Inspection: Checked the 'CE' and 'Depot_inter' columns to confirm their presence and relevance to the query.\n3. Peak Analysis: Found the maximum value in the 'Depot_inter' column and determined the corresponding century in the 'CE' column.\n4. Century Calculation: Converted the year of the peak value to the nearest century, taking into account the BCE dating system.\n5. Final Interpretation: Interpreted the peak of Depots as an indicator of significant cultural or economic activity in the 12th century BCE.",
+            "var": {
+                "question": "        Question: For both HypoA and HypoB, what are the different variables found in the hypotheses?         Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"sizeA\": num of variables used in HypoA\n        \"sizeB\": num of variables used in HypoB\n        \"intersection\": num of variables common in HypoA and HypoB. Use *fuzzy matching* to determine intersection, accounting for paraphrases or slightly different surface forms\n        \"explanation\": a short text explanation about the variables\n        }}```\n        Answer:",
+                "answer": "{\n\"sizeA\": 1,\n\"sizeB\": 1,\n\"intersection\": 1,\n\"explanation\": \"Both HypoA and HypoB mention 'Depots' as a variable, which refers to the Z values for Depot in the dataset. This is the only variable discussed in both hypotheses, hence the intersection is 1.\"\n}",
+                "score": {
+                    "p": 1.0,
+                    "r": 1.0,
+                    "f1": 1.0,
+                    "sizeA": 1,
+                    "sizeB": 1,
+                    "intersection": 1,
+                    "explanation": "Both HypoA and HypoB mention 'Depots' as a variable, which refers to the Z values for Depot in the dataset. This is the only variable discussed in both hypotheses, hence the intersection is 1."
+                }
+            },
+            "rel": {
+                "question": "        Question: Does HypoB exhibit the same relation as HypoA?\n        Compare using following example hierarchy of relationships (based on specificity):         \"there exists a relationship\" > \"positive relationship\" > \"positive AND (linear OR quadratic)\" > \"positive AND linear\".\n        Options: A) very similar B) similar but general than HypoA C) different\n        Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"answer\": one of the options from A) very similar B) similar but general than HypoA C) different\n        \"explanation\": a short text explanation about the relationship comparison\n        }}```\n        Answer:",
+                "answer": "{\n\"answer\": \"B) similar but general than HypoA\",\n\"explanation\": \"HypoA specifies a time point (around 1100 BCE) when the Depots peaked, indicating a specific positive relationship between time and the number of Depots. HypoB suggests a broader relationship, hypothesizing that the peak represents a period of significant cultural or economic development without specifying the nature of the relationship (e.g., linear, quadratic). Therefore, HypoB is similar to HypoA but is more general in terms of the relationship it describes.\"\n}",
+                "score": 0.5
+            },
+            "context": {
+                "question": "Comapring: GoldH: Around 1100 BCE, the Depots peaked., GoldC: During the time period around 1100 BCE\nGenH: The peak of Depots in the 12th century BCE suggests a period of increased deposition activity, which could be indicative of heightened economic trade, accumulation of wealth, or ritual practices in the societies of that time. It is hypothesized that the observed peak represents a period of significant cultural or economic development, which led to an increase in the creation and deposition of valuable items., GenC: 12th century BCE",
+                "answer": true,
+                "score": 1.0
+            },
+            "accuracy_score": 0.5
+        }
+    },
+    "recall_context": 1.0,
+    "mean_accuracy_score": 0.5,
+    "final_score": 0.5
+}{
+    "query": "In which domain do all original and replication studies use cash compensation for participants?",
+    "HypoA": "In Experimental Economics, all original and replication studies used cash compensation for participants.",
+    "WorkflowA": "## Initial Filtering\n\n1. import RP_data.csv (study data) and RProjects.csv (Replication Success Data)\n2. Filter the rows that contain the value \u00e2\u20ac\u02dcee\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dcrpp\u00e2\u20ac\u2122 and remove the rows that contain missing values in \u00e2\u20ac\u02dceffect_size.o\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dceffect_size.r\u00e2\u20ac\u2122.\n3. Create first and second author columns in the dataframe.\n4. Create a new dataframe named \u00e2\u20ac\u02dcRProjects_psychology_econ\u00e2\u20ac\u2122 by collecting the rows from RProjects data that has \u00e2\u20ac\u02dcExperimental Economics\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dcPsychology\u00e2\u20ac\u2122 as the project and create first and second author columns.\n5. Identify the ids where first author names match between RProjects_psychology_econ and RProjects data.\n\n## Create Unique Identifier to merge the two data\n\n1. Create a new column \u00e2\u20ac\u02dcid_in_data\u00e2\u20ac\u2122(unique identifiers are called covariate in R) in RProjects_psychology_econ that will act as a unique id, fill it with those ids from the previous step where the first author appears only once.\n2. Next, Identify cases with double ids.\n    1. Identify the cases where the first author appears more than once in RP_data by finding instances where the length of IDs associated with a first author is greater than 1 and refer them as double IDs.\n    2. Extract the corresponding second author names where the first author is in more than one study. Match this second author names with the second author names in RProjects_psychology_econ\n    3. If a match is found (indicating that the same first author with a different second author is present in both datasets) assign the corresponding unique IDs from RP_data to RProjects_psychology_econ. This ensures that each unique combination of first and second authors is correctly linked between the two datasets.\n3. Handling Replicated Studies: Identify the cases where the same study was replicated more than once based on the second author\u00e2\u20ac\u2122s name. Then associate these replicated studies with the corresponding first author names in RProjects_psychology_econ.\n4. Then match studies between RProjects_psychology_econ and RP_data based on their replication sample sizes by filtering the row where the first author appears in cases identified as having double IDs. Then extract the replication sample size (\u00e2\u20ac\u02dcnr\u00e2\u20ac\u2122) for these filtered rows. Match the replication sample size of the studies identified in \u00e2\u20ac\u02dcRProjects_psychology_econ\u00e2\u20ac\u2122 with the corresponding studies in \u00e2\u20ac\u02dcRP_data\u00e2\u20ac\u2122, within the threshold of 5. It aims to find the matching studies in \u00e2\u20ac\u02dcRP_data\u00e2\u20ac\u2122 based on their replication sample size. Then it assigns the matching id_in_data values from RP_data to RProjects_psychology_econ for cases where the replication sample sizes are similar.\n5. After updating the id_in_data column in RProjects_psychology_econ, this step merges RProjects_psychology_econ with RP_data based on the id_in_data column. It combines the datasets, ensuring that the relevant data from RP_data is included in RProjects_psychology_econ based on the matching id_in_data.\n\n## Post Joining\n\n1. After the merge, this part filters out rows from the merged dataset (RP_data_merged) where id_in_data is NA. These are likely cases where no matching data was found in RP_data. Then, it removes the first_author, second_author, and id_in_data columns, as they might not be needed for further analysis or may contain redundant information after merging. Filter RP_data_merged dataframe to remove rows where the study is P Bressan, D Stranieri and the value of the online.r column is 0.\n2. Modify the seniority.r column in the RP_data_merged dataframe and change any occurrence of Assistant to Assistant Professor. Create a new data frame not_complete_cases that contains only the rows from RP_data_merged where any of the remaining columns (after dropping the specified columns) have missing values or specific string values representing missing data.\n3. Filter out the rows from RP_data_merged where the study value corresponds to a study that has incomplete cases (missing values or specific string values representing missing data) based on the not_complete_cases data frame created in the previous step.\n\n## Function Inception and Analysis\n\n\n1. Create a function describe_factor_function that takes a dataframe, variable and a default name and returns a dataframe\n2. Group the project.x variable, and count the number of occurences for each level and set it as a character.\n3. Convert the format into e.g. (n (45)%) and it remove the original count column (n)\n4. Reshape the data from a long format to a wide format, creating new columns for each project, with the values being the formatted count\nand percentage strings ('n (%)') for each level of the variable.\n5. Create a new column - Covariate, where the name is passed or its 'Var' and all the row values are empty strings\n6. Reorder the columns, putting the Covariate column first, followed by all other columns.\n\n7. For the second set of hypotheses (H10 - H20), it creates factor_covariates\n(Discipline, Max seniority of authors (O),\n    Max seniority of authors (R),\n    Type of compensation (O),\n    Type of compensation (R),\n    Type of subjects (O),\n    Type of subjects (R),\n    Country of original experiment,\n    Country of replication experiment,\n    Same language (O&R),\n    Same country (O&R),\n    Both conducted on/offline (O&R),\n    Same type of subjects (O&R),\n    Lab in the US (O),\n    Lab in the US (R))\n\n8. Generate a sequence of integers corresponding to the indices of elements in the vector continuous_covariates. \n9. Apply an anonymous function, function(i) {...}, to each integer in that sequence. Inside the function, factor_covariates[i] retrieves the name of a variable from the factor_covariates vector using the index i.\n10. Call the describe_factor_function and apply it to each element of the factor_covariates vector, passing the variable name and its corresponding name as arguments.\n11. lapply returns a list where each element is the data frame returned by describe_factor_function for each variable in factor_covariates.\n12. Use do.call that invokes the bind_rows function from the dplyr package, passing the list of data frames as its argument. The bind_rows function combines (row-binds) all the data frames in the list into a single data frame.\n13. Format all numeric columns by rounding the values to 2 significant digits and adding a thousands separator (')",
+    "HypoB": "Based on the observation, it appears that cash compensation was used in original and replication studies across all three disciplines present in the dataset: Economics, Social, and Cognitive. Given this information, we can formulate a hypothesis:\nHypothesis: In the domain of academic research, when conducting both original studies and their respective replications, the use of cash compensation for participants is a common practice across various disciplines, including Economics, Social, and Cognitive sciences.\nThis hypothesis is based on the observed data that cash compensation was used in all the disciplines for both original and replication studies.",
+    "WorkflowB": ":\n1. Data Loading: Loaded the datasets meta-regression_study_data_heterogeneity_in_replication_projects.csv and meta-regression_replication_success_data_heterogeneity_in_replication_projects.csv using pandas.\n2. Data Filtering: Filtered the rows from the meta-regression_study_data_heterogeneity_in_replication_projects.csv dataset where both original and replication studies used cash compensation for participants.\n3. Discipline Analysis: Examined the 'discipline' column within the filtered rows to identify the unique disciplines where cash compensation was used.\n\nFINAL_ANSWER:\nIn which domain do all original and replication studies use cash compensation for participants? The original and replication studies across all three disciplines (Economics, Social, and Cognitive sciences) use cash compensation for participants.",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "In Experimental Economics, all original and replication studies used cash compensation for participants.",
+                "context": "Within the 'Experimental Economics' discipline",
+                "variables": [
+                    "discipline",
+                    "compensation.o",
+                    "compensation.r"
+                ],
+                "relations": "compensation in both original (O) and replication (R) studies is 'cash'"
+            }
+        ],
+        "full_hypo": "In Experimental Economics, all original and replication studies used cash compensation for participants."
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "In the domain of academic research, when conducting both original studies and their respective replications, the use of cash compensation for participants is a common practice across various disciplines, including Economics, Social, and Cognitive sciences.",
+                "context": "Original and replication studies across disciplines of Economics, Social, and Cognitive sciences.",
+                "variables": [
+                    "compensation.o",
+                    "compensation.r",
+                    "discipline"
+                ],
+                "relations": "Cash compensation is a common practice for participants in both original and replication studies across the mentioned disciplines."
+            }
+        ],
+        "full_hypo": "Based on the observation, it appears that cash compensation was used in original and replication studies across all three disciplines present in the dataset: Economics, Social, and Cognitive. Given this information, we can formulate a hypothesis:\nHypothesis: In the domain of academic research, when conducting both original studies and their respective replications, the use of cash compensation for participants is a common practice across various disciplines, including Economics, Social, and Cognitive sciences.\nThis hypothesis is based on the observed data that cash compensation was used in all the disciplines for both original and replication studies."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": -1
+    },
+    "gold_subh_covered": [],
+    "matched_gold_gen_subh_evals": {},
+    "recall_context": 0.0,
+    "mean_accuracy_score": 0.0,
+    "final_score": 0.0
+}{
+    "query": "Between 3400 BCE to 3000 BCE, how does the number of monuments and axes changes with elements of symbolic capital?",
+    "HypoA": "Between 3400 BCE to 3000 BCE, the number of monuments and axes increases along with symbolic capital",
+    "WorkflowA": "Compute correlation between single proxies of forms of capital and demography.\n\n1. Read a CSV file named capital.csv into a DataFrame called dfX.\n2. Exclude the first two rows and remove columns group and color. Invert the values of the BCE column.\n3. Set the index of the DataFrame to the BCE column.\n4. Select specific columns related to proxies and rename them for clarity.\n5. Add two new columns Demo14C and DemoVeg initialized with zeros.\n6. Define start and end bins for the loop based on BCE time periods.\n7. Loop through each time bin and calculate mean values for Demo14C and DemoVeg proxies.\n8. Normalize the values of Demo14C and DemoVeg using z-score normalization.\n\n9. Define start (st) and end (et) dates for time slices.\n10. Iterate over each time slice. Calculate correlation coefficients between various proxies within each time slice using Pearson correlation.\n11. Compute significance levels for the correlations using Pearson correlation's p-values. Adjust correlations involving DemoVeg proxy based on whether it contains NaN values or not.",
+    "HypoB": "The observed correlation values are both very close to 1, indicating a near-perfect positive linear relationship between the interpolated 'MonumentCount' and 'AxesCelts' from the 'time_series_data' dataset and the corresponding Z scores ('ZMonument' and 'ZBeil') from the 'capital_data' dataset. This suggests that as the Z scores for monuments and axes increase, which reflects an increase in symbolic capital, the actual interpolated count of monuments and axes also increases.\n\nBased on the analysis, we can form the following hypothesis:\n\nHypothesis: Between 3400 BCE and 3000 BCE, there is a strong positive relationship between the number of monuments and axes, which are indicators of symbolic capital. Specifically, as the elements of symbolic capital associated with monuments and axes increase, as measured by their Z scores, the actual counts of monuments and axes also increase.\n\nIt's important to note that while the correlation is very strong, this does not necessarily imply causation, and further research would be needed to establish any causal relationship.",
+    "WorkflowB": ":\n\n1. Data Loading: Loaded 'time_series_data.csv' and 'capital.csv' datasets from the provided paths.\n2. Data Inspection: Examined the first few rows of the datasets to understand their structure and relevant columns.\n3. Data Filtering: Filtered both datasets for the period between 3400 BCE to 3000 BCE based on the CE column in 'time_series_data' and converted BCE to CE in 'capital_data'.\n4. Data Cleaning: Converted Z values in 'capital_data' from string to float and interpolated missing values for 'MonumentCount' and 'AxesCelts' in 'time_series_data'.\n5. Data Merging: Combined the two datasets on the CE column to analyze the relationship between monuments and axes with elements of symbolic capital.\n6. Correlation Analysis: Calculated the correlation between the interpolated 'MonumentCount' and 'AxesCelts' and the Z scores 'ZMonument' and 'ZBeil' to understand their relationships.\n\nFINAL ANSWER:\n\nBetween 3400 BCE and 3000 BCE, the number of monuments and axes, which are indicators of symbolic capital, shows a strong positive relationship with elements of symbolic capital. As the Z scores for monuments and axes increase, indicating an increase in symbolic capital, the actual interpolated counts of monuments and axes also increase. This relationship is supported by a correlation near 1 for both monuments and axes with their respective Z scores. However, this analysis does not establish causation, and further research would be required to explore the causal dynamics of this relationship.",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Between 3400 BCE to 3000 BCE, the number of monuments and axes increases along with symbolic capital",
+                "context": "Between 3400 BCE to 3000 BCE",
+                "variables": [
+                    "MonumentCount",
+                    "AxesCelts",
+                    "ZAxtSchwert",
+                    "ZBeil",
+                    "ZMonument"
+                ],
+                "relations": "Increase in number of monuments and axes correlates with an increase in symbolic capital"
+            }
+        ],
+        "full_hypo": "Between 3400 BCE to 3000 BCE, the number of monuments and axes increases along with symbolic capital"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Hypothesis: Between 3400 BCE and 3000 BCE, there is a strong positive relationship between the number of monuments and axes, which are indicators of symbolic capital. Specifically, as the elements of symbolic capital associated with monuments and axes increase, as measured by their Z scores, the actual counts of monuments and axes also increase.",
+                "context": "Between 3400 BCE and 3000 BCE",
+                "variables": [
+                    "MonumentCount",
+                    "AxesCelts",
+                    "ZMonument",
+                    "ZBeil"
+                ],
+                "relations": "Strong positive linear relationship between 'MonumentCount' and 'ZMonument' and between 'AxesCelts' and 'ZBeil'"
+            }
+        ],
+        "full_hypo": "The observed correlation values are both very close to 1, indicating a near-perfect positive linear relationship between the interpolated 'MonumentCount' and 'AxesCelts' from the 'time_series_data' dataset and the corresponding Z scores ('ZMonument' and 'ZBeil') from the 'capital_data' dataset. This suggests that as the Z scores for monuments and axes increase, which reflects an increase in symbolic capital, the actual interpolated count of monuments and axes also increases.\n\nBased on the analysis, we can form the following hypothesis:\n\nHypothesis: Between 3400 BCE and 3000 BCE, there is a strong positive relationship between the number of monuments and axes, which are indicators of symbolic capital. Specifically, as the elements of symbolic capital associated with monuments and axes increase, as measured by their Z scores, the actual counts of monuments and axes also increase.\n\nIt's important to note that while the correlation is very strong, this does not necessarily imply causation, and further research would be needed to establish any causal relationship."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": 0
+    },
+    "gold_subh_covered": [
+        0
+    ],
+    "matched_gold_gen_subh_evals": {
+        "P0||G0": {
+            "query": "Between 3400 BCE to 3000 BCE, how does the number of monuments and axes changes with elements of symbolic capital?",
+            "HypoA": "Between 3400 BCE to 3000 BCE, the number of monuments and axes increases along with symbolic capital",
+            "WorkflowA": "Compute correlation between single proxies of forms of capital and demography.\n\n1. Read a CSV file named capital.csv into a DataFrame called dfX.\n2. Exclude the first two rows and remove columns group and color. Invert the values of the BCE column.\n3. Set the index of the DataFrame to the BCE column.\n4. Select specific columns related to proxies and rename them for clarity.\n5. Add two new columns Demo14C and DemoVeg initialized with zeros.\n6. Define start and end bins for the loop based on BCE time periods.\n7. Loop through each time bin and calculate mean values for Demo14C and DemoVeg proxies.\n8. Normalize the values of Demo14C and DemoVeg using z-score normalization.\n\n9. Define start (st) and end (et) dates for time slices.\n10. Iterate over each time slice. Calculate correlation coefficients between various proxies within each time slice using Pearson correlation.\n11. Compute significance levels for the correlations using Pearson correlation's p-values. Adjust correlations involving DemoVeg proxy based on whether it contains NaN values or not.",
+            "HypoB": "The observed correlation values are both very close to 1, indicating a near-perfect positive linear relationship between the interpolated 'MonumentCount' and 'AxesCelts' from the 'time_series_data' dataset and the corresponding Z scores ('ZMonument' and 'ZBeil') from the 'capital_data' dataset. This suggests that as the Z scores for monuments and axes increase, which reflects an increase in symbolic capital, the actual interpolated count of monuments and axes also increases.\n\nBased on the analysis, we can form the following hypothesis:\n\nHypothesis: Between 3400 BCE and 3000 BCE, there is a strong positive relationship between the number of monuments and axes, which are indicators of symbolic capital. Specifically, as the elements of symbolic capital associated with monuments and axes increase, as measured by their Z scores, the actual counts of monuments and axes also increase.\n\nIt's important to note that while the correlation is very strong, this does not necessarily imply causation, and further research would be needed to establish any causal relationship.",
+            "WorkflowB": ":\n\n1. Data Loading: Loaded 'time_series_data.csv' and 'capital.csv' datasets from the provided paths.\n2. Data Inspection: Examined the first few rows of the datasets to understand their structure and relevant columns.\n3. Data Filtering: Filtered both datasets for the period between 3400 BCE to 3000 BCE based on the CE column in 'time_series_data' and converted BCE to CE in 'capital_data'.\n4. Data Cleaning: Converted Z values in 'capital_data' from string to float and interpolated missing values for 'MonumentCount' and 'AxesCelts' in 'time_series_data'.\n5. Data Merging: Combined the two datasets on the CE column to analyze the relationship between monuments and axes with elements of symbolic capital.\n6. Correlation Analysis: Calculated the correlation between the interpolated 'MonumentCount' and 'AxesCelts' and the Z scores 'ZMonument' and 'ZBeil' to understand their relationships.\n\nFINAL ANSWER:\n\nBetween 3400 BCE and 3000 BCE, the number of monuments and axes, which are indicators of symbolic capital, shows a strong positive relationship with elements of symbolic capital. As the Z scores for monuments and axes increase, indicating an increase in symbolic capital, the actual interpolated counts of monuments and axes also increase. This relationship is supported by a correlation near 1 for both monuments and axes with their respective Z scores. However, this analysis does not establish causation, and further research would be required to explore the causal dynamics of this relationship.",
+            "var": {
+                "question": "        Question: For both HypoA and HypoB, what are the different variables found in the hypotheses?         Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"sizeA\": num of variables used in HypoA\n        \"sizeB\": num of variables used in HypoB\n        \"intersection\": num of variables common in HypoA and HypoB. Use *fuzzy matching* to determine intersection, accounting for paraphrases or slightly different surface forms\n        \"explanation\": a short text explanation about the variables\n        }}```\n        Answer:",
+                "answer": "{\n\"sizeA\": 2,\n\"sizeB\": 4,\n\"intersection\": 2,\n\"explanation\": \"HypoA mentions 'number of monuments' and 'axes' as variables. HypoB mentions 'interpolated MonumentCount', 'AxesCelts', 'ZMonument', and 'ZBeil'. The intersection is 2 because 'number of monuments' and 'interpolated MonumentCount' refer to the same variable, as do 'axes' and 'AxesCelts'.\"\n}",
+                "score": {
+                    "p": 0.5,
+                    "r": 1.0,
+                    "f1": 0.6666666666666666,
+                    "sizeA": 2,
+                    "sizeB": 4,
+                    "intersection": 2,
+                    "explanation": "HypoA mentions 'number of monuments' and 'axes' as variables. HypoB mentions 'interpolated MonumentCount', 'AxesCelts', 'ZMonument', and 'ZBeil'. The intersection is 2 because 'number of monuments' and 'interpolated MonumentCount' refer to the same variable, as do 'axes' and 'AxesCelts'."
+                }
+            },
+            "rel": {
+                "question": "        Question: Does HypoB exhibit the same relation as HypoA?\n        Compare using following example hierarchy of relationships (based on specificity):         \"there exists a relationship\" > \"positive relationship\" > \"positive AND (linear OR quadratic)\" > \"positive AND linear\".\n        Options: A) very similar B) similar but general than HypoA C) different\n        Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"answer\": one of the options from A) very similar B) similar but general than HypoA C) different\n        \"explanation\": a short text explanation about the relationship comparison\n        }}```\n        Answer:",
+                "answer": "{\n\"answer\": \"A) very similar\",\n\"explanation\": \"Both HypoA and HypoB describe a strong positive relationship between the number of monuments and axes and elements of symbolic capital between 3400 BCE and 3000 BCE. HypoA states that the number of monuments and axes increases along with symbolic capital, while HypoB specifies that there is a near-perfect positive linear relationship between the interpolated counts and Z scores of monuments and axes. Both hypotheses suggest a positive and linear relationship, making them very similar.\"\n}",
+                "score": 1.0
+            },
+            "context": {
+                "question": "Comapring: GoldH: Between 3400 BCE to 3000 BCE, the number of monuments and axes increases along with symbolic capital, GoldC: Between 3400 BCE to 3000 BCE\nGenH: Hypothesis: Between 3400 BCE and 3000 BCE, there is a strong positive relationship between the number of monuments and axes, which are indicators of symbolic capital. Specifically, as the elements of symbolic capital associated with monuments and axes increase, as measured by their Z scores, the actual counts of monuments and axes also increase., GenC: Between 3400 BCE and 3000 BCE",
+                "answer": true,
+                "score": 1.0
+            },
+            "accuracy_score": 0.6666666666666666
+        }
+    },
+    "recall_context": 1.0,
+    "mean_accuracy_score": 0.6666666666666666,
+    "final_score": 0.6666666666666666
+}{
+    "query": "In experimental economics, what is the average number of citations received by the original studies?",
+    "HypoA": "Original studies in Psychology tend to receive more citations compared to those in Experimental Economics (number of citations: Experimental Economics: 80, Psychology: 84), suggesting potential differences in the impact or visibility of research across disciplines.,",
+    "WorkflowA": "## Initial Filtering\n\n1. import RP_data.csv (study data) and RProjects.csv (Replication Success Data)\n2. Filter the rows that contain the value \u00e2\u20ac\u02dcee\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dcrpp\u00e2\u20ac\u2122 and remove the rows that contain missing values in \u00e2\u20ac\u02dceffect_size.o\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dceffect_size.r\u00e2\u20ac\u2122.\n3. Create first and second author columns in the dataframe.\n4. Create a new dataframe named \u00e2\u20ac\u02dcRProjects_psychology_econ\u00e2\u20ac\u2122 by collecting the rows from RProjects data that has \u00e2\u20ac\u02dcExperimental Economics\u00e2\u20ac\u2122 or \u00e2\u20ac\u02dcPsychology\u00e2\u20ac\u2122 as the project and create first and second author columns.\n5. Identify the ids where first author names match between RProjects_psychology_econ and RProjects data.\n\n## Create Unique Identifier to merge the two data\n\n1. Create a new column \u00e2\u20ac\u02dcid_in_data\u00e2\u20ac\u2122(unique identifiers are called covariate in R) in RProjects_psychology_econ that will act as a unique id, fill it with those ids from the previous step where the first author appears only once.\n2. Next, Identify cases with double ids.\n    1. Identify the cases where the first author appears more than once in RP_data by finding instances where the length of IDs associated with a first author is greater than 1 and refer them as double IDs.\n    2. Extract the corresponding second author names where the first author is in more than one study. Match this second author names with the second author names in RProjects_psychology_econ\n    3. If a match is found (indicating that the same first author with a different second author is present in both datasets) assign the corresponding unique IDs from RP_data to RProjects_psychology_econ. This ensures that each unique combination of first and second authors is correctly linked between the two datasets.\n3. Handling Replicated Studies: Identify the cases where the same study was replicated more than once based on the second author\u00e2\u20ac\u2122s name. Then associate these replicated studies with the corresponding first author names in RProjects_psychology_econ.\n4. Then match studies between RProjects_psychology_econ and RP_data based on their replication sample sizes by filtering the row where the first author appears in cases identified as having double IDs. Then extract the replication sample size (\u00e2\u20ac\u02dcnr\u00e2\u20ac\u2122) for these filtered rows. Match the replication sample size of the studies identified in \u00e2\u20ac\u02dcRProjects_psychology_econ\u00e2\u20ac\u2122 with the corresponding studies in \u00e2\u20ac\u02dcRP_data\u00e2\u20ac\u2122, within the threshold of 5. It aims to find the matching studies in \u00e2\u20ac\u02dcRP_data\u00e2\u20ac\u2122 based on their replication sample size. Then it assigns the matching id_in_data values from RP_data to RProjects_psychology_econ for cases where the replication sample sizes are similar.\n5. After updating the id_in_data column in RProjects_psychology_econ, this step merges RProjects_psychology_econ with RP_data based on the id_in_data column. It combines the datasets, ensuring that the relevant data from RP_data is included in RProjects_psychology_econ based on the matching id_in_data.\n\n## Post Joining\n\n1. After the merge, this part filters out rows from the merged dataset (RP_data_merged) where id_in_data is NA. These are likely cases where no matching data was found in RP_data. Then, it removes the first_author, second_author, and id_in_data columns, as they might not be needed for further analysis or may contain redundant information after merging. Filter RP_data_merged dataframe to remove rows where the study is P Bressan, D Stranieri and the value of the online.r column is 0.\n2. Modify the seniority.r column in the RP_data_merged dataframe and change any occurrence of Assistant to Assistant Professor. Create a new data frame not_complete_cases that contains only the rows from RP_data_merged where any of the remaining columns (after dropping the specified columns) have missing values or specific string values representing missing data.\n3. Filter out the rows from RP_data_merged where the study value corresponds to a study that has incomplete cases (missing values or specific string values representing missing data) based on the not_complete_cases data frame created in the previous step.\n\n## Function Inception and Analysis\n\n1. Create a describe_continuous_function that takes a dataframe, a variable and returns a dataframe\n2. Group the project.x column and rename it to Project and For each group(project), the function calculates the mean, minimum, and maximum values of the variable specified by the variable argument using the get() function..\n3. Summarize the data is reshaped from a long format to a wide format using pivot_wider().\n4. The column names for the new columns are taken from the project column, values are the ones just computed.\n5. Select the columns containing the average, minimum, and maximum values for the project named 'Experimental Economics', followed by all other columns in the data frame (everything()).\n\n6. For the first set of hypotheses (H1 - H9), create continuous covariates:\nnames(continuous_covariates) <-\n  c(p-value (O),\n    Effect estimate on Fisher-z scale (O),\n    Effect estimate on Fisher-z scale (R),\n    Power (O),\n    Planned power (R),\n    Original paper length (nb pages),\n    Nb citations (O),\n    Nb authors (O), Nb authors (R),\n    Avg author citations (O), Avg author citations (R),\n    Max author citations (O), Max author citations (R),\n    Ratio authors male (O), Ratio authors male (R))\n\n7. Generate a sequence of integers corresponding to the indices of elements in the vector continuous_covariates. \n8. Apply an anonymous function, function(i) {...}, to each integer in that sequence. Inside the function, continuous_covariates[i] retrieves the name of a variable from the continuous_covariates vector using the index i.\n9. Use do.call that invokes the bind_rows function from the dplyr package, passing the list of data frames as its argument. The bind_rows function combines (row-binds) all the data frames in the list into a single data frame.\n10. Format all numeric columns by rounding the values to 2 significant digits and adding a thousands separator (')",
+    "HypoB": "Hypothesis: In the field of experimental economics, original studies are expected to receive, on average, approximately 80 citations. This hypothesis is based on the average number of citations calculated from the dataset meta-regression_study_data_heterogeneity_in_replication_projects.csv.\nThe average number of citations received by the original studies in the field of experimental economics is approximately 80.28.",
+    "WorkflowB": "1. Data Loading: Loaded the dataset meta-regression_study_data_heterogeneity_in_replication_projects.csv using pandas in Python.\n2. Data Filtering: Filtered the dataset for rows where the 'discipline' column is equal to 'Economics'.\n3. Calculation: Calculated the average number of citations received by the original studies in the field of experimental economics.\n\nThe average number of citations received by the original studies in the field of experimental economics is approximately 80.28.",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Original studies in Psychology tend to receive more citations compared to those in Experimental Economics (number of citations: Experimental Economics: 80, Psychology: 84), suggesting potential differences in the impact or visibility of research across disciplines.",
+                "context": "The context compares original studies within the disciplines of Psychology and Experimental Economics.",
+                "variables": [
+                    "discipline",
+                    "citations"
+                ],
+                "relations": "The relation suggests a difference in the average number of citations received by original studies in Psychology versus those in Experimental Economics."
+            }
+        ],
+        "full_hypo": "Original studies in Psychology tend to receive more citations compared to those in Experimental Economics (number of citations: Experimental Economics: 80, Psychology: 84), suggesting potential differences in the impact or visibility of research across disciplines.,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "In the field of experimental economics, original studies are expected to receive, on average, approximately 80 citations.",
+                "context": "In the field of experimental economics",
+                "variables": [
+                    "citations",
+                    "discipline"
+                ],
+                "relations": "The discipline of experimental economics determines the average number of citations which is approximately 80.28."
+            }
+        ],
+        "full_hypo": "Hypothesis: In the field of experimental economics, original studies are expected to receive, on average, approximately 80 citations. This hypothesis is based on the average number of citations calculated from the dataset meta-regression_study_data_heterogeneity_in_replication_projects.csv.\nThe average number of citations received by the original studies in the field of experimental economics is approximately 80.28."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": -1
+    },
+    "gold_subh_covered": [],
+    "matched_gold_gen_subh_evals": {},
+    "recall_context": 0.0,
+    "mean_accuracy_score": 0.0,
+    "final_score": 0.0
+}{
+    "query": "In experimental economics, what is the average number of citations received by the original studies?",
+    "HypoA": "Original studies in Psychology tend to receive more citations compared to those in Experimental Economics (number of citations: Experimental Economics: 80, Psychology: 84), suggesting potential differences in the impact or visibility of research across disciplines.,",
+    "WorkflowA": "",
+    "HypoB": "Hypothesis: In the field of experimental economics, original studies are expected to receive, on average, approximately 80 citations. This hypothesis is based on the average number of citations calculated from the dataset meta-regression_study_data_heterogeneity_in_replication_projects.csv.\nThe average number of citations received by the original studies in the field of experimental economics is approximately 80.28.",
+    "WorkflowB": "",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Original studies in Psychology tend to receive more citations compared to those in Experimental Economics",
+                "context": "Comparison of citation impact is limited to the disciplines of Psychology and Experimental Economics.",
+                "variables": [
+                    "discipline",
+                    "citations"
+                ],
+                "relations": "Psychology discipline is associated with higher citation counts than Experimental Economics discipline."
+            }
+        ],
+        "full_hypo": "Original studies in Psychology tend to receive more citations compared to those in Experimental Economics (number of citations: Experimental Economics: 80, Psychology: 84), suggesting potential differences in the impact or visibility of research across disciplines.,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "In the field of experimental economics, original studies are expected to receive, on average, approximately 80 citations.",
+                "context": "in the field of experimental economics",
+                "variables": [
+                    "citations"
+                ],
+                "relations": "The average number of citations received by original studies is approximately 80."
+            }
+        ],
+        "full_hypo": "Hypothesis: In the field of experimental economics, original studies are expected to receive, on average, approximately 80 citations. This hypothesis is based on the average number of citations calculated from the dataset meta-regression_study_data_heterogeneity_in_replication_projects.csv.\nThe average number of citations received by the original studies in the field of experimental economics is approximately 80.28."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": -1
+    },
+    "gold_subh_covered": [],
+    "matched_gold_gen_subh_evals": {},
+    "recall_context": 0.0,
+    "mean_accuracy_score": 0.0,
+    "final_score": 0.0
+}{
+    "query": "The effect of which variable on BA degree completion decreases from 0.3636 to -0.2293 (while becoming insignifcant) when both race and academic characteristics are included in analysis?",
+    "HypoA": "The effect of SES on BA degree completion decreases from 0.3636  (significant) to  -0.2293 (insignificant) and effect of race on BA degree completion decreases from 0.5024  (significant) to 0.0923 (insignificant) when academic characteristics are considered.,",
+    "WorkflowA": "",
+    "HypoB": "Scientific Hypothesis:\nIn the context of predicting BA degree completion among participants of the NLS, the socioeconomic status (SES) of a respondent initially appears to have a positive effect on the likelihood of completing a BA degree. However, when additional variables such as race and academic characteristics (composite of ASVAB scores and percentile in class) are included in the analysis, the effect of SES not only decreases but also reverses direction and becomes insignificant. This suggests that the influence of socioeconomic status on educational attainment is complex and may be mediated by these additional factors, specifically race and academic preparedness.",
+    "WorkflowB": "",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "The effect of SES on BA degree completion decreases from 0.3636 (significant) to -0.2293 (insignificant) when academic characteristics are considered.",
+                "context": "in the context of academic characteristics being considered",
+                "variables": [
+                    "SES",
+                    "BA DEGREE COMPLETED",
+                    "ABILITY: COMPOSITE OF ASVAB SCORE",
+                    "PERCENTILE IN CLASS"
+                ],
+                "relations": "The relationship between SES and BA degree completion is modified when accounting for academic characteristics"
+            },
+            {
+                "text": "The effect of race on BA degree completion decreases from 0.5024 (significant) to 0.0923 (insignificant) when academic characteristics are considered.",
+                "context": "in the context of academic characteristics being considered",
+                "variables": [
+                    "SAMPLE_RACE",
+                    "BA DEGREE COMPLETED",
+                    "ABILITY: COMPOSITE OF ASVAB SCORE",
+                    "PERCENTILE IN CLASS"
+                ],
+                "relations": "The relationship between race and BA degree completion is modified when accounting for academic characteristics"
+            }
+        ],
+        "full_hypo": "The effect of SES on BA degree completion decreases from 0.3636  (significant) to  -0.2293 (insignificant) and effect of race on BA degree completion decreases from 0.5024  (significant) to 0.0923 (insignificant) when academic characteristics are considered.,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "In the context of predicting BA degree completion among participants of the NLS, the socioeconomic status (SES) of a respondent initially appears to have a positive effect on the likelihood of completing a BA degree.",
+                "context": " BA degree completion prediction among NLS participants",
+                "variables": [
+                    "SES",
+                    "BA DEGREE COMPLETED"
+                ],
+                "relations": "The SES has an initial positive effect on the likelihood of completing a BA degree."
+            },
+            {
+                "text": "However, when additional variables such as race and academic characteristics (composite of ASVAB scores and percentile in class) are included in the analysis, the effect of SES not only decreases but also reverses direction and becomes insignificant.",
+                "context": " BA degree completion prediction among NLS participants considering race and academic characteristics",
+                "variables": [
+                    "SES",
+                    "SAMPLE_RACE",
+                    "ABILITY: COMPOSITE OF ASVAB SCORE",
+                    "PERCENTILE IN CLASS",
+                    "BA DEGREE COMPLETED"
+                ],
+                "relations": "With other variables included, SES effect decreases, reverses, and becomes insignificant."
+            }
+        ],
+        "full_hypo": "Scientific Hypothesis:\nIn the context of predicting BA degree completion among participants of the NLS, the socioeconomic status (SES) of a respondent initially appears to have a positive effect on the likelihood of completing a BA degree. However, when additional variables such as race and academic characteristics (composite of ASVAB scores and percentile in class) are included in the analysis, the effect of SES not only decreases but also reverses direction and becomes insignificant. This suggests that the influence of socioeconomic status on educational attainment is complex and may be mediated by these additional factors, specifically race and academic preparedness."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": -1,
+        "1": 0
+    },
+    "gold_subh_covered": [
+        0
+    ],
+    "matched_gold_gen_subh_evals": {
+        "P1||G0": {
+            "query": "The effect of which variable on BA degree completion decreases from 0.3636 to -0.2293 (while becoming insignifcant) when both race and academic characteristics are included in analysis?",
+            "HypoA": "The effect of SES on BA degree completion decreases from 0.3636  (significant) to  -0.2293 (insignificant) and effect of race on BA degree completion decreases from 0.5024  (significant) to 0.0923 (insignificant) when academic characteristics are considered.,",
+            "WorkflowA": "",
+            "HypoB": "Scientific Hypothesis:\nIn the context of predicting BA degree completion among participants of the NLS, the socioeconomic status (SES) of a respondent initially appears to have a positive effect on the likelihood of completing a BA degree. However, when additional variables such as race and academic characteristics (composite of ASVAB scores and percentile in class) are included in the analysis, the effect of SES not only decreases but also reverses direction and becomes insignificant. This suggests that the influence of socioeconomic status on educational attainment is complex and may be mediated by these additional factors, specifically race and academic preparedness.",
+            "WorkflowB": "",
+            "var": {
+                "question": "        Question: For both HypoA and HypoB, what are the different variables found in the hypotheses?         Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"sizeA\": num of variables used in HypoA\n        \"sizeB\": num of variables used in HypoB\n        \"intersection\": num of variables common in HypoA and HypoB. Use *fuzzy matching* to determine intersection, accounting for paraphrases or slightly different surface forms\n        \"explanation\": a short text explanation about the variables\n        }}```\n        Answer:",
+                "answer": "{\n\"sizeA\": 3,\n\"sizeB\": 4,\n\"intersection\": 3,\n\"explanation\": \"HypoA mentions SES, race, and academic characteristics as variables. HypoB mentions SES, race, academic characteristics (specifically composite of ASVAB scores and percentile in class), and the likelihood of completing a BA degree. The common variables between HypoA and HypoB, determined through fuzzy matching, are SES, race, and academic characteristics.\"\n}",
+                "score": {
+                    "p": 0.75,
+                    "r": 1.0,
+                    "f1": 0.8571428571428571,
+                    "sizeA": 3,
+                    "sizeB": 4,
+                    "intersection": 3,
+                    "explanation": "HypoA mentions SES, race, and academic characteristics as variables. HypoB mentions SES, race, academic characteristics (specifically composite of ASVAB scores and percentile in class), and the likelihood of completing a BA degree. The common variables between HypoA and HypoB, determined through fuzzy matching, are SES, race, and academic characteristics."
+                }
+            },
+            "rel": {
+                "question": "        Question: Does HypoB exhibit the same relation as HypoA?\n        Compare using following example hierarchy of relationships (based on specificity):         \"there exists a relationship\" > \"positive relationship\" > \"positive AND (linear OR quadratic)\" > \"positive AND linear\".\n        Options: A) very similar B) similar but general than HypoA C) different\n        Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"answer\": one of the options from A) very similar B) similar but general than HypoA C) different\n        \"explanation\": a short text explanation about the relationship comparison\n        }}```\n        Answer:",
+                "answer": "{\n\"answer\": \"A) very similar\",\n\"explanation\": \"Both HypoA and HypoB describe a relationship where the effect of SES on BA degree completion decreases and becomes insignificant when race and academic characteristics are included in the analysis. HypoA quantifies the change in effect size, while HypoB provides a more detailed explanation of the relationship. Despite the difference in detail, the underlying relationship described is the same: a positive effect that becomes negative and insignificant with the inclusion of additional variables.\"\n}",
+                "score": 1.0
+            },
+            "context": {
+                "question": "Comapring: GoldH: The effect of SES on BA degree completion decreases from 0.3636 (significant) to -0.2293 (insignificant) when academic characteristics are considered., GoldC: in the context of academic characteristics being considered\nGenH: However, when additional variables such as race and academic characteristics (composite of ASVAB scores and percentile in class) are included in the analysis, the effect of SES not only decreases but also reverses direction and becomes insignificant., GenC:  BA degree completion prediction among NLS participants considering race and academic characteristics",
+                "answer": true,
+                "score": 1.0
+            },
+            "accuracy_score": 0.8571428571428571
+        }
+    },
+    "recall_context": 0.5,
+    "mean_accuracy_score": 0.42857142857142855,
+    "final_score": 0.21428571428571427
+}{
+    "query": "How did the wealth levels of individuals with a history of incarceration compare to those never incarcerated in 1996?",
+    "HypoA": "Individuals with a history of incarceration in 1996 have lower wealth levels compared to those never incarcerated,",
+    "WorkflowA": "",
+    "HypoB": "The t-test results show a t-statistic of approximately -9.72 and a p-value of 7.26e-20, which is much lower than the conventional alpha level of 0.05. This indicates that there is a statistically significant difference in the average wealth levels between individuals with a history of incarceration and those without in 1996. \n\nBased on these results, the scientific hypothesis can be formulated as follows: In 1996, individuals with a history of incarceration had significantly lower average wealth levels than those who were never incarcerated, as supported by the statistical significance found in the t-test.",
+    "WorkflowB": "",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Individuals with a history of incarceration in 1996 have lower wealth levels compared to those never incarcerated",
+                "context": "This dataset was created from the National Longitudinal Study of Youth's 1979 cohort to about the race, wealth, and incarceration status of the participants.",
+                "variables": [
+                    "ever_jailed",
+                    "composite_wealth_1996"
+                ],
+                "relations": "negative correlation between incarceration status in 1996 and wealth levels in the same year"
+            }
+        ],
+        "full_hypo": "Individuals with a history of incarceration in 1996 have lower wealth levels compared to those never incarcerated,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "In 1996, individuals with a history of incarceration had significantly lower average wealth levels than those who were never incarcerated, as supported by the statistical significance found in the t-test.",
+                "context": "Individuals in the National Longitudinal Study of Youth's 1979 cohort in the year 1996",
+                "variables": [
+                    "ever_jailed",
+                    "composite_wealth_1996"
+                ],
+                "relations": "Negative correlation between history of incarceration and average wealth levels"
+            }
+        ],
+        "full_hypo": "The t-test results show a t-statistic of approximately -9.72 and a p-value of 7.26e-20, which is much lower than the conventional alpha level of 0.05. This indicates that there is a statistically significant difference in the average wealth levels between individuals with a history of incarceration and those without in 1996. \n\nBased on these results, the scientific hypothesis can be formulated as follows: In 1996, individuals with a history of incarceration had significantly lower average wealth levels than those who were never incarcerated, as supported by the statistical significance found in the t-test."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": 0
+    },
+    "gold_subh_covered": [
+        0
+    ],
+    "matched_gold_gen_subh_evals": {
+        "P0||G0": {
+            "query": "How did the wealth levels of individuals with a history of incarceration compare to those never incarcerated in 1996?",
+            "HypoA": "Individuals with a history of incarceration in 1996 have lower wealth levels compared to those never incarcerated,",
+            "WorkflowA": "",
+            "HypoB": "The t-test results show a t-statistic of approximately -9.72 and a p-value of 7.26e-20, which is much lower than the conventional alpha level of 0.05. This indicates that there is a statistically significant difference in the average wealth levels between individuals with a history of incarceration and those without in 1996. \n\nBased on these results, the scientific hypothesis can be formulated as follows: In 1996, individuals with a history of incarceration had significantly lower average wealth levels than those who were never incarcerated, as supported by the statistical significance found in the t-test.",
+            "WorkflowB": "",
+            "var": {
+                "question": "        Question: For both HypoA and HypoB, what are the different variables found in the hypotheses?         Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"sizeA\": num of variables used in HypoA\n        \"sizeB\": num of variables used in HypoB\n        \"intersection\": num of variables common in HypoA and HypoB. Use *fuzzy matching* to determine intersection, accounting for paraphrases or slightly different surface forms\n        \"explanation\": a short text explanation about the variables\n        }}```\n        Answer:",
+                "answer": "{\n\"sizeA\": 2,\n\"sizeB\": 2,\n\"intersection\": 2,\n\"explanation\": \"Both HypoA and HypoB mention two variables: 'history of incarceration' and 'wealth levels in 1996'. Despite different wording, they refer to the same concepts.\"\n}",
+                "score": {
+                    "p": 1.0,
+                    "r": 1.0,
+                    "f1": 1.0,
+                    "sizeA": 2,
+                    "sizeB": 2,
+                    "intersection": 2,
+                    "explanation": "Both HypoA and HypoB mention two variables: 'history of incarceration' and 'wealth levels in 1996'. Despite different wording, they refer to the same concepts."
+                }
+            },
+            "rel": {
+                "question": "        Question: Does HypoB exhibit the same relation as HypoA?\n        Compare using following example hierarchy of relationships (based on specificity):         \"there exists a relationship\" > \"positive relationship\" > \"positive AND (linear OR quadratic)\" > \"positive AND linear\".\n        Options: A) very similar B) similar but general than HypoA C) different\n        Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"answer\": one of the options from A) very similar B) similar but general than HypoA C) different\n        \"explanation\": a short text explanation about the relationship comparison\n        }}```\n        Answer:",
+                "answer": "{\n\"answer\": \"A) very similar\",\n\"explanation\": \"Both HypoA and HypoB describe a negative relationship between incarceration history and wealth levels in 1996. HypoA states that individuals with a history of incarceration have lower wealth levels, while HypoB provides statistical evidence for a significant difference in average wealth levels, implying the same negative relationship.\"\n}",
+                "score": 1.0
+            },
+            "context": {
+                "question": "Comapring: GoldH: Individuals with a history of incarceration in 1996 have lower wealth levels compared to those never incarcerated, GoldC: This dataset was created from the National Longitudinal Study of Youth's 1979 cohort to about the race, wealth, and incarceration status of the participants.\nGenH: In 1996, individuals with a history of incarceration had significantly lower average wealth levels than those who were never incarcerated, as supported by the statistical significance found in the t-test., GenC: Individuals in the National Longitudinal Study of Youth's 1979 cohort in the year 1996",
+                "answer": true,
+                "score": 1.0
+            },
+            "accuracy_score": 1.0
+        }
+    },
+    "recall_context": 1.0,
+    "mean_accuracy_score": 1.0,
+    "final_score": 1.0
+}{
+    "query": "How does age influence the likelihood of withdrawing more money from savings than putting in?",
+    "HypoA": "Younger individuals are more likely to withdraw more money from savings than they had put in and with a negative coefficient between age and withdrawing more than putting into savings (-0.0422).,",
+    "WorkflowA": "",
+    "HypoB": "The scientific hypothesis derived from the analysis of the provided dataset is as follows: As the age of individuals in the NLSY79 dataset increases, the likelihood of withdrawing more money from savings than depositing decreases, and this relationship is statistically significant. The context of the hypothesis is the behavior of individuals in the context of their savings and the age variable chosen shows a statistically significant negative relationship with the likelihood of withdrawing more money from savings (DISSAVED).",
+    "WorkflowB": "",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Younger individuals are more likely to withdraw more money from savings than they had put in and with a negative coefficient between age and withdrawing more than putting into savings (-0.0422).",
+                "context": "the dataset is from the National Longitudinal Survey of Youth (NLSY79)",
+                "variables": [
+                    "AGE",
+                    "DISSAVED"
+                ],
+                "relations": "a negative correlation between AGE and DISSAVED"
+            }
+        ],
+        "full_hypo": "Younger individuals are more likely to withdraw more money from savings than they had put in and with a negative coefficient between age and withdrawing more than putting into savings (-0.0422).,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "As the age of individuals in the NLSY79 dataset increases, the likelihood of withdrawing more money from savings than depositing decreases, and this relationship is statistically significant.",
+                "context": "behavior of individuals in the context of their savings",
+                "variables": [
+                    "AGE",
+                    "DISSAVED"
+                ],
+                "relations": "statistically significant negative relationship"
+            }
+        ],
+        "full_hypo": "The scientific hypothesis derived from the analysis of the provided dataset is as follows: As the age of individuals in the NLSY79 dataset increases, the likelihood of withdrawing more money from savings than depositing decreases, and this relationship is statistically significant. The context of the hypothesis is the behavior of individuals in the context of their savings and the age variable chosen shows a statistically significant negative relationship with the likelihood of withdrawing more money from savings (DISSAVED)."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": -1
+    },
+    "gold_subh_covered": [],
+    "matched_gold_gen_subh_evals": {},
+    "recall_context": 0.0,
+    "mean_accuracy_score": 0.0,
+    "final_score": 0.0
+}{
+    "query": "What proportion of respondents mentioned that requirements in ML-enabled system projects are not documented at all, with a confidence interval of 16.917% (95% CI [16.632, 17.201]) after bootstrapping for statistical significance?",
+    "HypoA": "Almost 17% (16.917%, 95% CI [16.632, 17.201]) of respondents mentioned that requirements in ML-enabled system projects are not documented at all after bootstrapping for statistical significance.,",
+    "WorkflowA": "",
+    "HypoB": "In the context of requirements engineering for ML-enabled system projects, it is hypothesized that a significant proportion of respondents (approximately 59.42%) report that requirements are not documented at all, as indicated by the survey data. This hypothesis is supported by a 95% confidence interval of [53.62%, 65.22%], suggesting that there is a substantial issue with documentation practices in such projects.",
+    "WorkflowB": "",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Almost 17% (16.917%, 95% CI [16.632, 17.201]) of respondents mentioned that requirements in ML-enabled system projects are not documented at all after bootstrapping for statistical significance.",
+                "context": "ML-enabled system projects",
+                "variables": [
+                    "Q10_ML_Documentation_Not_Documented"
+                ],
+                "relations": "16.917% of respondents fall into the category of not documenting requirements in ML-enabled system projects"
+            }
+        ],
+        "full_hypo": "Almost 17% (16.917%, 95% CI [16.632, 17.201]) of respondents mentioned that requirements in ML-enabled system projects are not documented at all after bootstrapping for statistical significance.,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "In the context of requirements engineering for ML-enabled system projects, it is hypothesized that a significant proportion of respondents (approximately 59.42%) report that requirements are not documented at all, as indicated by the survey data.",
+                "context": "requirements engineering for ML-enabled system projects",
+                "variables": [
+                    "Q10_ML_Documentation_Not_Documented"
+                ],
+                "relations": "approximately 59.42% report 'not documented at all' with a 95% confidence interval of [53.62%, 65.22%]"
+            }
+        ],
+        "full_hypo": "In the context of requirements engineering for ML-enabled system projects, it is hypothesized that a significant proportion of respondents (approximately 59.42%) report that requirements are not documented at all, as indicated by the survey data. This hypothesis is supported by a 95% confidence interval of [53.62%, 65.22%], suggesting that there is a substantial issue with documentation practices in such projects."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": 0
+    },
+    "gold_subh_covered": [
+        0
+    ],
+    "matched_gold_gen_subh_evals": {
+        "P0||G0": {
+            "query": "What proportion of respondents mentioned that requirements in ML-enabled system projects are not documented at all, with a confidence interval of 16.917% (95% CI [16.632, 17.201]) after bootstrapping for statistical significance?",
+            "HypoA": "Almost 17% (16.917%, 95% CI [16.632, 17.201]) of respondents mentioned that requirements in ML-enabled system projects are not documented at all after bootstrapping for statistical significance.,",
+            "WorkflowA": "",
+            "HypoB": "In the context of requirements engineering for ML-enabled system projects, it is hypothesized that a significant proportion of respondents (approximately 59.42%) report that requirements are not documented at all, as indicated by the survey data. This hypothesis is supported by a 95% confidence interval of [53.62%, 65.22%], suggesting that there is a substantial issue with documentation practices in such projects.",
+            "WorkflowB": "",
+            "var": {
+                "question": "        Question: For both HypoA and HypoB, what are the different variables found in the hypotheses?         Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"sizeA\": num of variables used in HypoA\n        \"sizeB\": num of variables used in HypoB\n        \"intersection\": num of variables common in HypoA and HypoB. Use *fuzzy matching* to determine intersection, accounting for paraphrases or slightly different surface forms\n        \"explanation\": a short text explanation about the variables\n        }}```\n        Answer:",
+                "answer": "{\n\"sizeA\": 3,\n\"sizeB\": 3,\n\"intersection\": 3,\n\"explanation\": \"Both HypoA and HypoB mention the same three variables: the proportion of respondents, the documentation status of requirements in ML-enabled system projects, and the confidence interval. Despite different numerical values and phrasing, the core variables discussed are the same.\"\n}",
+                "score": {
+                    "p": 1.0,
+                    "r": 1.0,
+                    "f1": 1.0,
+                    "sizeA": 3,
+                    "sizeB": 3,
+                    "intersection": 3,
+                    "explanation": "Both HypoA and HypoB mention the same three variables: the proportion of respondents, the documentation status of requirements in ML-enabled system projects, and the confidence interval. Despite different numerical values and phrasing, the core variables discussed are the same."
+                }
+            },
+            "rel": {
+                "question": "        Question: Does HypoB exhibit the same relation as HypoA?\n        Compare using following example hierarchy of relationships (based on specificity):         \"there exists a relationship\" > \"positive relationship\" > \"positive AND (linear OR quadratic)\" > \"positive AND linear\".\n        Options: A) very similar B) similar but general than HypoA C) different\n        Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"answer\": one of the options from A) very similar B) similar but general than HypoA C) different\n        \"explanation\": a short text explanation about the relationship comparison\n        }}```\n        Answer:",
+                "answer": "{\n\"answer\": \"C) different\",\n\"explanation\": \"HypoA specifies an exact proportion (16.917%) with a precise confidence interval, indicating a specific positive relationship between the survey responses and the lack of documentation. HypoB, on the other hand, suggests a different proportion (approximately 59.42%) with its own confidence interval, which indicates a different positive relationship. The two hypotheses are not describing the same relationship due to the different proportions and confidence intervals.\"\n}",
+                "score": 0.0
+            },
+            "context": {
+                "question": "Comapring: GoldH: Almost 17% (16.917%, 95% CI [16.632, 17.201]) of respondents mentioned that requirements in ML-enabled system projects are not documented at all after bootstrapping for statistical significance., GoldC: ML-enabled system projects\nGenH: In the context of requirements engineering for ML-enabled system projects, it is hypothesized that a significant proportion of respondents (approximately 59.42%) report that requirements are not documented at all, as indicated by the survey data., GenC: requirements engineering for ML-enabled system projects",
+                "answer": true,
+                "score": 1.0
+            },
+            "accuracy_score": 0.0
+        }
+    },
+    "recall_context": 1.0,
+    "mean_accuracy_score": 0.0,
+    "final_score": 0.0
+}{
+    "query": "How did the wealth levels of individuals with a history of incarceration compare to those never incarcerated in 1996?",
+    "HypoA": "Individuals with a history of incarceration in 1996 have lower wealth levels compared to those never incarcerated,",
+    "WorkflowA": "",
+    "HypoB": "The t-test results show a t-statistic of approximately -9.72 and a p-value of 7.26e-20, which is much lower than the conventional alpha level of 0.05. This indicates, in 1996, individuals with a history of incarceration had significantly lower average wealth levels than those who were never incarcerated, as supported by the statistical significance found in the t-test.",
+    "WorkflowB": "",
+    "gold_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "Individuals with a history of incarceration in 1996 have lower wealth levels compared to those never incarcerated",
+                "context": "within the dataset scope",
+                "variables": [
+                    "ever_jailed",
+                    "composite_wealth_1996"
+                ],
+                "relations": "negative correlation between history of incarceration and wealth levels in 1996"
+            }
+        ],
+        "full_hypo": "Individuals with a history of incarceration in 1996 have lower wealth levels compared to those never incarcerated,"
+    },
+    "gen_sub_hypo": {
+        "sub_hypo": [
+            {
+                "text": "In 1996, individuals with a history of incarceration had significantly lower average wealth levels than those who were never incarcerated.",
+                "context": "National Longitudinal Study of Youth's 1979 cohort specific to the year 1996.",
+                "variables": [
+                    "ever_jailed",
+                    "composite_wealth_1996"
+                ],
+                "relations": "Individuals with ever_jailed = 1 have significantly lower composite_wealth_1996 than those with ever_jailed = 0, as indicated by a t-test."
+            }
+        ],
+        "full_hypo": "The t-test results show a t-statistic of approximately -9.72 and a p-value of 7.26e-20, which is much lower than the conventional alpha level of 0.05. This indicates, in 1996, individuals with a history of incarceration had significantly lower average wealth levels than those who were never incarcerated, as supported by the statistical significance found in the t-test."
+    },
+    "gen_subh_to_gold_subh": {
+        "0": 0
+    },
+    "gold_subh_covered": [
+        0
+    ],
+    "matched_gold_gen_subh_evals": {
+        "P0||G0": {
+            "query": "How did the wealth levels of individuals with a history of incarceration compare to those never incarcerated in 1996?",
+            "HypoA": "Individuals with a history of incarceration in 1996 have lower wealth levels compared to those never incarcerated,",
+            "WorkflowA": "",
+            "HypoB": "The t-test results show a t-statistic of approximately -9.72 and a p-value of 7.26e-20, which is much lower than the conventional alpha level of 0.05. This indicates, in 1996, individuals with a history of incarceration had significantly lower average wealth levels than those who were never incarcerated, as supported by the statistical significance found in the t-test.",
+            "WorkflowB": "",
+            "var": {
+                "question": "        Question: For both HypoA and HypoB, what are the different variables found in the hypotheses?         Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"sizeA\": num of variables used in HypoA\n        \"sizeB\": num of variables used in HypoB\n        \"intersection\": num of variables common in HypoA and HypoB. Use *fuzzy matching* to determine intersection, accounting for paraphrases or slightly different surface forms\n        \"explanation\": a short text explanation about the variables\n        }}```\n        Answer:",
+                "answer": "{\n\"sizeA\": 2,\n\"sizeB\": 3,\n\"intersection\": 2,\n\"explanation\": \"HypoA mentions 'history of incarceration' and 'wealth levels'. HypoB mentions 'history of incarceration', 'average wealth levels', and 'year 1996'. 'Wealth levels' and 'average wealth levels' are considered the same variable for the purpose of intersection.\"\n}",
+                "score": {
+                    "p": 0.6666666666666666,
+                    "r": 1.0,
+                    "f1": 0.8,
+                    "sizeA": 2,
+                    "sizeB": 3,
+                    "intersection": 2,
+                    "explanation": "HypoA mentions 'history of incarceration' and 'wealth levels'. HypoB mentions 'history of incarceration', 'average wealth levels', and 'year 1996'. 'Wealth levels' and 'average wealth levels' are considered the same variable for the purpose of intersection."
+                }
+            },
+            "rel": {
+                "question": "        Question: Does HypoB exhibit the same relation as HypoA?\n        Compare using following example hierarchy of relationships (based on specificity):         \"there exists a relationship\" > \"positive relationship\" > \"positive AND (linear OR quadratic)\" > \"positive AND linear\".\n        Options: A) very similar B) similar but general than HypoA C) different\n        Return your answer as a JSON object in the following format:\n        ```json\n        {{\n        \"answer\": one of the options from A) very similar B) similar but general than HypoA C) different\n        \"explanation\": a short text explanation about the relationship comparison\n        }}```\n        Answer:",
+                "answer": "{\n\"answer\": \"A) very similar\",\n\"explanation\": \"Both HypoA and HypoB describe a negative relationship between incarceration history and wealth levels in 1996. HypoA states that individuals with a history of incarceration have lower wealth levels, while HypoB provides statistical evidence for this claim. The relation in both hypotheses is negative, and HypoB adds statistical significance to the relationship already suggested by HypoA.\"\n}",
+                "score": 1.0
+            },
+            "context": {
+                "question": "Comapring: GoldH: Individuals with a history of incarceration in 1996 have lower wealth levels compared to those never incarcerated, GoldC: within the dataset scope\nGenH: In 1996, individuals with a history of incarceration had significantly lower average wealth levels than those who were never incarcerated., GenC: National Longitudinal Study of Youth's 1979 cohort specific to the year 1996.",
+                "answer": true,
+                "score": 1.0
+            },
+            "accuracy_score": 0.8
+        }
+    },
+    "recall_context": 1.0,
+    "mean_accuracy_score": 0.8,
+    "final_score": 0.8
+}
