@@ -13,7 +13,7 @@ from IPython import embed
 import pstats
 import cProfile
 
-from eval.lm_utils import run_chatgpt_query_multi_turn
+from lm_utils import run_chatgpt_query_multi_turn
 from utils.arguments import Arguments
 from utils.helpers import setup_logger, printj, round_sympy_expr, extract_variable, powerset, get_const_from_sympy, \
     safe_exp

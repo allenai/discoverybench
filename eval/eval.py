@@ -339,7 +339,7 @@ def run_eval_gold_vs_gen_NL_subhypo(query, gold_hypo, gold_workflow, gen_hypo, g
     return eval_rec
 
 
-def run_eval_gold_vs_gen_NL_hypo_workflow(query, gold_hypo, gold_workflow, gen_hypo, gen_workflow, dataset_meta, llm_used, dataset_type, use_column_metadata=True):
+def run_eval_gold_vs_gen_NL_hypo_workflow(query, gold_hypo, gold_workflow, gen_hypo, gen_workflow, dataset_meta, llm_used, dataset_type, use_column_metadata=True, divide_into_subhypo=True):
     # Input: Dataset Metadata, Query, Gold {Hg, Wg}, Predicted {Hp, Wp}
     # Output: eval_rec json includes final_score
 
